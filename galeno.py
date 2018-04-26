@@ -1,4 +1,4 @@
-from trytond.model import ModelView, ModelSQL, fields
+from trytond.model import ModelView, ModelSQL, fields, Unique
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.pool import Pool
@@ -92,12 +92,17 @@ class Patient(ModelSQL, ModelView):
     @classmethod
     def __setup__(cls):
         super(Patient, cls).__setup__()
+        t = cls.__table__()
         cls._error_messages.update({
                 'invalid_identifier': ('Invalid identifier "%(identifier)s" '
                     'on Patient "%(patient)s".'),
                 'invalid_phone': ('Invalid phone "%(phone)s" '
                     'on Patient "%(patient)s".'),
                 })
+        cls._sql_constraints += [
+            ('identifier_uniq', Unique(t, t.company, t.identifier),
+             'Identifier must be unique'),
+        ]
 
     @staticmethod
     def default_company():
@@ -133,18 +138,21 @@ class Patient(ModelSQL, ModelView):
         if self.country:
             return IDENTIFIERS.get(self.country.code, [])
 
-    @fields.depends('identifier_type', 'identifier')
+    @fields.depends('identifier_type', 'identifier', 'name')
     def on_change_with_identifier(self):
-        return compat_identifier(self.identifier_type, self.identifier)
+        if self.identifier_type and self.identifier:
+            compat = compat_identifier(self.identifier_type, self.identifier)
+            self.check_identifier()
+            return compat
 
     @fields.depends('phone', 'country')
     def on_change_with_phone(self):
-        if self.country:
+        if self.country and self.phone:
             return format_phone(self.phone, self.country.code)
 
     @fields.depends('emergency_phone', 'country')
     def on_change_with_emergency_phone(self):
-        if self.country:
+        if self.country and self.emergency_phone:
             return format_phone(self.emergency_phone, self.country.code)
 
     @classmethod
