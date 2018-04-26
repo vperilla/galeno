@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="name" tree_invisible="1"/>
+    <field name="lname"/>
+    <field name="fname"/>
+    <field name="email"/>
+    <field name="phone"/>
+    <field name="country"/>
+</tree>
