@@ -42,8 +42,8 @@
                 <group colspan="2" col="2" id="patient_main_4">
                     <label name="code"/>
                     <field name="code"/>
-                    <label name="age"/>
-                    <field name="age"/>
+                    <label name="age_char"/>
+                    <field name="age_char"/>
                     <label name="blood_type"/>
                     <field name="blood_type"/>
                     <label name="emergency_phone"/>

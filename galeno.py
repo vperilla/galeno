@@ -1,3 +1,5 @@
+import pendulum
+
 from trytond.model import ModelView, ModelSQL, fields, Unique
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
@@ -37,6 +39,7 @@ class Patient(ModelSQL, ModelView):
         })
     birthdate = fields.Date('Birthdate', required=True)
     age = fields.Function(fields.TimeDelta('Age'), 'on_change_with_age')
+    age_char = fields.Function(fields.Char('Age'), 'on_change_with_age_char')
     country = fields.Many2One('country.country', 'Country', required=True,
         states={
             'readonly': True,
@@ -129,9 +132,19 @@ class Patient(ModelSQL, ModelView):
 
     @fields.depends('birthdate')
     def on_change_with_age(self, name=None):
-        Date = Pool().get('ir.date')
-        diff = Date.today() - self.birthdate
-        return diff
+        if self.birthdate:
+            Date = Pool().get('ir.date')
+            diff = Date.today() - self.birthdate
+            return diff
+        return None
+
+    @fields.depends('birthdate')
+    def on_change_with_age_char(self, name=None):
+        if self.birthdate:
+            today = pendulum.today()
+            birthdate = pendulum.create(*(self.birthdate.timetuple()[:3]))
+            return today.diff(birthdate).in_words(locale='es')
+        return ''
 
     @fields.depends('country')
     def get_identifier_type(self):
