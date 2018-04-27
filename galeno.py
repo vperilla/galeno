@@ -2,10 +2,9 @@ from trytond.model import ModelView, ModelSQL, fields, Unique
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.pool import Pool
+import trytond.tools as tools
 
-from tools import (IDENTIFIERS, validate_identifier, compat_identifier,
-    format_phone, validate_phone, age_in_words, create_thumbnail)
-import trytond.tools as tryton_tools
+import galeno_tools
 
 __all__ = ['Patient']
 
@@ -31,6 +30,8 @@ class Patient(ModelSQL, ModelView):
         'get_identifier_type', 'Id. Type', required=True, sort=False)
     identifier = fields.Char('Identifier', required=True,
         help="Personal Identifier, Eg:CI/RUC")
+    thumbnail = fields.Function(fields.Binary('Photo'),
+        'on_change_with_thumbnail', setter='set_thumbnail')
     photo = fields.Binary('Photo', file_id='photo_id')
     photo_id = fields.Char('Photo ID',
         states={
@@ -133,17 +134,23 @@ class Patient(ModelSQL, ModelView):
         fname = self.fname and self.fname or ''
         self.name = '%s %s' % (lname, fname)
 
-    @fields.depends('gender', 'photo_id')
-    def on_change_gender(self):
-        if self.gender and not self.photo_id:
-            path = 'galeno/icons/%s_patient.png' % (self.gender)
-            self.photo = fields.Binary.cast(
-                tryton_tools.file_open(path, mode='rb').read())
-
-    @fields.depends('photo')
-    def on_change_photo(self):
+    @fields.depends('gender', 'photo')
+    def on_change_with_thumbnail(self, name=None):
+        photo = None
         if self.photo:
-            self.photo = create_thumbnail(self.photo)
+            photo = self.photo
+        else:
+            if self.gender:
+                path = 'galeno/icons/%s_patient.png' % (self.gender)
+                photo = fields.Binary.cast(
+                    tools.file_open(path, mode='rb').read())
+        return photo
+
+    @classmethod
+    def set_thumbnail(cls, patients, name, photo):
+        for patient in patients:
+            patient.photo = galeno_tools.create_thumbnail(photo)
+        cls.save(patients)
 
     @fields.depends('birthdate')
     def on_change_with_age(self, name=None):
@@ -158,50 +165,55 @@ class Patient(ModelSQL, ModelView):
         if self.birthdate:
             context = Transaction().context
             locale = context.get('language', 'en')
-            return age_in_words(self.birthdate, locale=locale)
+            return galeno_tools.age_in_words(self.birthdate, locale=locale)
         return ''
 
     @fields.depends('country')
     def get_identifier_type(self):
         if self.country:
-            return IDENTIFIERS.get(self.country.code, [])
+            return galeno_tools.IDENTIFIERS.get(self.country.code, [])
 
     @fields.depends('identifier_type', 'identifier', 'name')
     def on_change_with_identifier(self):
         if self.identifier_type and self.identifier:
-            compat = compat_identifier(self.identifier_type, self.identifier)
+            compat = galeno_tools.compat_identifier(
+                self.identifier_type, self.identifier)
             self.check_identifier()
             return compat
 
     @fields.depends('phone', 'country')
     def on_change_with_phone(self):
         if self.country and self.phone:
-            return format_phone(self.phone, self.country.code)
+            self.check_phones(['phone'])
+            return galeno_tools.format_phone(self.phone, self.country.code)
 
     @fields.depends('emergency_phone', 'country')
     def on_change_with_emergency_phone(self):
         if self.country and self.emergency_phone:
-            return format_phone(self.emergency_phone, self.country.code)
+            self.check_phones(['emergency_phone'])
+            return galeno_tools.format_phone(
+                self.emergency_phone, self.country.code)
 
     @classmethod
     def validate(cls, patients):
         super(Patient, cls).validate(patients)
         for patient in patients:
             patient.check_identifier()
+            patient.check_phones()
 
     def check_identifier(self):
-        valid = validate_identifier(self.identifier_type, self.identifier)
+        valid = galeno_tools.validate_identifier(
+            self.identifier_type, self.identifier)
         if not valid:
             self.raise_user_error('invalid_identifier', {
                 'identifier': self.identifier,
                 'patient': self.name,
                 })
 
-    def check_phones(self):
-        phones = ['phone', 'emergency_phone']
+    def check_phones(self, phones=['phone', 'emergency_phone']):
         for phone in phones:
             if getattr(self, phone):
-                valid_phone = validate_phone(
+                valid_phone = galeno_tools.validate_phone(
                     getattr(self, phone), self.country.code)
                 if not valid_phone:
                     self.raise_user_error('invalid_phone', {

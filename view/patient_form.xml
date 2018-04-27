@@ -2,8 +2,9 @@
 <form>
     <group id="patient_main_info" col="8">
         <group id="patient_main_1" colspan="2" col="2">
-            <field name="photo" colspan="2"
+            <field name="thumbnail" colspan="2"
                 height="150" width="150" widget="image"/>
+            <field name="photo" colspan="2" invisible="1"/>
         </group>
         <group id="patient_main_2" colspan="2" col="2">
             <label name="company"/>

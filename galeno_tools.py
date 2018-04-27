@@ -31,7 +31,7 @@ def compat_identifier(type_, identifier):
         pass
     try:
         return validator.compact(identifier)
-    except Exception() as e:
+    except Exception:
         pass
     return identifier
 
@@ -50,15 +50,15 @@ def validate_identifier(type_, identifier):
             return True
         else:
             return False
-    except Exception() as e:
+    except Exception:
         return False
 
 
 def format_phone(number, country_code):
     try:
         x = phonenumbers.parse(number, country_code)
-        return phonenumbers.format_number(x, PhoneNumberFormat.NATIONAL)
-    except Exception() as e:
+        number = phonenumbers.format_number(x, PhoneNumberFormat.NATIONAL)
+    except Exception:
         pass
     return number
 
@@ -66,9 +66,12 @@ def format_phone(number, country_code):
 def validate_phone(number, country_code):
     try:
         x = phonenumbers.parse(number, country_code)
-        return phonenumbers.is_valid_number(x)
-    except Exception() as e:
-        return False
+        valid = phonenumbers.is_valid_number(x)
+        if valid:
+            return True
+    except Exception:
+        pass
+    return False
 
 
 def age_in_words(start, end=None, locale='en'):
