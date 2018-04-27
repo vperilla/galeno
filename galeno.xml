@@ -1,6 +1,14 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+        <record model="ir.ui.icon" id="galeno_icon">
+            <field name="name">galeno-galeno</field>
+            <field name="path">icons/galeno.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="patient_icon">
+            <field name="name">galeno-patient</field>
+            <field name="path">icons/patient.svg</field>
+        </record>
         <record model="res.group" id="group_galeno_admin">
             <field name="name">Galeno Administrator</field>
         </record>
@@ -15,7 +23,8 @@
             <field name="user" ref="res.user_admin"/>
             <field name="group" ref="group_galeno_admin"/>
         </record>
-        <menuitem name="Galeno" id="menu_galeno" sequence="4"/>
+        <menuitem name="Galeno" id="menu_galeno" sequence="4"
+            icon="galeno-galeno"/>
         <record model="ir.ui.menu-res.group" id="menu_galeno_group_galeno">
             <field name="menu" ref="menu_galeno"/>
             <field name="group" ref="group_galeno"/>
@@ -47,7 +56,7 @@
             <field name="act_window" ref="act_patient_form"/>
         </record>
         <menuitem parent="menu_galeno" action="act_patient_form"
-            id="menu_patient_form" sequence="10"/>
+            id="menu_patient_form" sequence="10" icon="galeno-patient"/>
         <record model="ir.model.access" id="access_patient">
             <field name="model" search="[('model', '=', 'galeno.patient')]"/>
             <field name="perm_read" eval="False"/>

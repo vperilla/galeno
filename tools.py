@@ -1,7 +1,15 @@
+import pendulum
+
 import stdnum.ec.ci as ci
 import stdnum.ec.ruc as ruc
+
 import phonenumbers
 from phonenumbers import PhoneNumberFormat
+
+from io import BytesIO
+from PIL import Image
+
+from trytond.model import fields
 
 IDENTIFIERS = {
     'EC': [
@@ -61,3 +69,18 @@ def validate_phone(number, country_code):
         return phonenumbers.is_valid_number(x)
     except Exception() as e:
         return False
+
+
+def age_in_words(start, end=None, locale='en'):
+    if end is None:
+        end = pendulum.today().date()
+    period = pendulum.period(start, end)
+    return period.in_words(locale)
+
+
+def create_thumbnail(data, size=(250, 250)):
+    image = Image.open(BytesIO(data))
+    image.thumbnail(size, Image.ANTIALIAS)
+    result = BytesIO()
+    image.save(result, image.format)
+    return fields.Binary.cast(result.getvalue())

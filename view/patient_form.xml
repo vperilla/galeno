@@ -1,72 +1,67 @@
 <?xml version="1.0"?>
 <form>
-    <notebook>
-        <page id="patient_1_1" string="Patient Main information">
-            <group id="patient_main_info" col="8">
-                <group id="patient_main_1" colspan="2" col="2">
-                    <label name="photo" xalign="0" colspan="2"/>
-                    <field name="photo" colspan="2"
-                        height="150" width="150" widget="image"/>
-                </group>
-                <group id="patient_main_2" colspan="2" col="2">
-                      <label name="company"/>
-                      <field name="company"/>
-                      <field name="name" colspan="4"/>
-                      <label name="fname"/>
-                      <field name="fname"/>
-                      <label name="lname"/>
-                      <field name="lname"/>
-                      <label name="identifier_type"/>
-                      <field name="identifier_type"/>
-                      <label name="identifier"/>
-                      <field name="identifier"/>
-                      <label name="gender"/>
-                      <field name="gender"/>
-                      <label name="birthdate"/>
-                      <field name="birthdate"/>
-                </group>
-                <group colspan="2" col="2" id="patient_main_3">
-                      <label name="country"/>
-                      <field name="country"/>
-                      <label name="subdivision"/>
-                      <field name="subdivision"/>
-                      <label name="city"/>
-                      <field name="city"/>
-                      <label name="address"/>
-                      <field name="address"/>
-                      <label name="email"/>
-                      <field name="email"/>
-                      <label name="phone"/>
-                      <field name="phone"/>
-                </group>
-                <group colspan="2" col="2" id="patient_main_4">
-                    <label name="code"/>
-                    <field name="code"/>
-                    <label name="age_char"/>
-                    <field name="age_char"/>
-                    <label name="blood_type"/>
-                    <field name="blood_type"/>
-                    <label name="emergency_phone"/>
-                    <field name="emergency_phone"/>
-                    <label name="civil_status"/>
-                    <field name="civil_status"/>
-                    <label name="laterality"/>
-                    <field name="laterality"/>
-                </group>
-            </group>
-        </page>
-        <page id="patient_1_2" string="Patient Secondary Information">
-            <group id="patient_secondary" col="6">
+    <group id="patient_main_info" col="8">
+        <group id="patient_main_1" colspan="2" col="2">
+            <field name="photo" colspan="2"
+                height="150" width="150" widget="image"/>
+        </group>
+        <group id="patient_main_2" colspan="2" col="2">
+            <label name="company"/>
+            <field name="company"/>
+            <field name="name" colspan="4"/>
+            <label name="fname"/>
+            <field name="fname"/>
+            <label name="lname"/>
+            <field name="lname"/>
+            <label name="identifier_type"/>
+            <field name="identifier_type"/>
+            <label name="identifier"/>
+            <field name="identifier"/>
+            <label name="gender"/>
+            <field name="gender"/>
+        </group>
+        <group colspan="2" col="2" id="patient_main_3">
+            <label name="country"/>
+            <field name="country"/>
+            <label name="subdivision"/>
+            <field name="subdivision"/>
+            <label name="city"/>
+            <field name="city"/>
+            <label name="birthdate"/>
+            <field name="birthdate"/>
+            <label name="age_char"/>
+            <field name="age_char"/>
+        </group>
+        <group colspan="2" col="2" id="patient_main_4">
+            <label name="address"/>
+            <field name="address"/>
+            <label name="email"/>
+            <field name="email"/>
+            <label name="phone"/>
+            <field name="phone"/>
+            <label name="emergency_phone"/>
+            <field name="emergency_phone"/>
+            <label name="blood_type"/>
+            <field name="blood_type"/>
+        </group>
+    </group>
+    <notebook colspan="4">
+        <page id="patient_1" string="Patient Secondary Information">
+            <group id="patient_secondary" col="8">
+                <label name="code"/>
+                <field name="code"/>
+                <label name="civil_status"/>
+                <field name="civil_status"/>
                 <label name="education_level"/>
                 <field name="education_level"/>
+                <label name="laterality"/>
+                <field name="laterality"/>
                 <label name="religion"/>
                 <field name="religion"/>
                 <label name="archive_number"/>
                 <field name="archive_number"/>
             </group>
         </page>
-    </notebook>
-    <notebook colspan="4">
         <page id="page2" string="Page2">
         </page>
         <page id="page3" string="Page3">

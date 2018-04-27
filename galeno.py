@@ -1,12 +1,11 @@
-import pendulum
-
 from trytond.model import ModelView, ModelSQL, fields, Unique
 from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 
 from tools import (IDENTIFIERS, validate_identifier, compat_identifier,
-    format_phone, validate_phone)
+    format_phone, validate_phone, age_in_words, create_thumbnail)
+import trytond.tools as tryton_tools
 
 __all__ = ['Patient']
 
@@ -58,6 +57,7 @@ class Patient(ModelSQL, ModelView):
     phone = fields.Char('Phone', required=True)
     emergency_phone = fields.Char('Emerg. Phone', help="Emergency Phone")
     gender = fields.Selection([
+        (None, ''),
         ('male', 'Male'),
         ('female', 'Female')
     ], 'Gender', required=True)
@@ -113,10 +113,13 @@ class Patient(ModelSQL, ModelView):
 
     @classmethod
     def default_country(cls):
-        pool = Pool()
-        Country = pool.get('country.country')
-        ec, = Country.search(['code', '=', 'EC'])
-        return ec.id
+        context = Transaction().context
+        if context.get('country'):
+            pool = Pool()
+            Country = pool.get('country.country')
+            country = Country(context.get('country'))
+            return country.id
+        return None
 
     @fields.depends('lname', 'fname', 'name')
     def on_change_fname(self):
@@ -130,6 +133,18 @@ class Patient(ModelSQL, ModelView):
         fname = self.fname and self.fname or ''
         self.name = '%s %s' % (lname, fname)
 
+    @fields.depends('gender', 'photo_id')
+    def on_change_gender(self):
+        if self.gender and not self.photo_id:
+            path = 'galeno/icons/%s_patient.png' % (self.gender)
+            self.photo = fields.Binary.cast(
+                tryton_tools.file_open(path, mode='rb').read())
+
+    @fields.depends('photo')
+    def on_change_photo(self):
+        if self.photo:
+            self.photo = create_thumbnail(self.photo)
+
     @fields.depends('birthdate')
     def on_change_with_age(self, name=None):
         if self.birthdate:
@@ -141,9 +156,9 @@ class Patient(ModelSQL, ModelView):
     @fields.depends('birthdate')
     def on_change_with_age_char(self, name=None):
         if self.birthdate:
-            today = pendulum.today()
-            birthdate = pendulum.create(*(self.birthdate.timetuple()[:3]))
-            return today.diff(birthdate).in_words(locale='es')
+            context = Transaction().context
+            locale = context.get('language', 'en')
+            return age_in_words(self.birthdate, locale=locale)
         return ''
 
     @fields.depends('country')
