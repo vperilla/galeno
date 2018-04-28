@@ -30,8 +30,6 @@ class Patient(ModelSQL, ModelView):
         'get_identifier_type', 'Id. Type', required=True, sort=False)
     identifier = fields.Char('Identifier', required=True,
         help="Personal Identifier, Eg:CI/RUC")
-    thumbnail = fields.Function(fields.Binary('Photo'),
-        'on_change_with_thumbnail', setter='set_thumbnail')
     photo = fields.Binary('Photo', file_id='photo_id')
     photo_id = fields.Char('Photo ID',
         states={
@@ -100,8 +98,8 @@ class Patient(ModelSQL, ModelView):
         cls._error_messages.update({
                 'invalid_identifier': ('Invalid identifier "%(identifier)s" '
                     'on Patient "%(patient)s".'),
-                'invalid_phone': ('Invalid phone "%(phone)s" '
-                    'on Patient "%(patient)s".'),
+                'invalid_phone': ('Invalid phone "%(phone)s"'),
+                'invalid_email': ('Invalid email "%(email)s"'),
                 })
         cls._sql_constraints += [
             ('identifier_uniq', Unique(t, t.company, t.identifier),
@@ -134,23 +132,18 @@ class Patient(ModelSQL, ModelView):
         fname = self.fname and self.fname or ''
         self.name = '%s %s' % (lname, fname)
 
-    @fields.depends('gender', 'photo')
-    def on_change_with_thumbnail(self, name=None):
-        photo = None
-        if self.photo:
-            photo = self.photo
-        else:
-            if self.gender:
+    @fields.depends('gender', 'photo_id')
+    def on_change_gender(self):
+        if self.gender:
+            if not self.photo_id:
                 path = 'galeno/icons/%s_patient.png' % (self.gender)
-                photo = fields.Binary.cast(
+                self.photo = fields.Binary.cast(
                     tools.file_open(path, mode='rb').read())
-        return photo
 
-    @classmethod
-    def set_thumbnail(cls, patients, name, photo):
-        for patient in patients:
-            patient.photo = galeno_tools.create_thumbnail(photo)
-        cls.save(patients)
+    @fields.depends('photo')
+    def on_change_photo(self):
+        if self.photo:
+            self.photo = galeno_tools.create_thumbnail(self.photo)
 
     @fields.depends('birthdate')
     def on_change_with_age(self, name=None):
@@ -194,12 +187,20 @@ class Patient(ModelSQL, ModelView):
             return galeno_tools.format_phone(
                 self.emergency_phone, self.country.code)
 
+    @fields.depends('email')
+    def on_change_with_email(self):
+        if self.email:
+            mail_address = galeno_tools.format_mail_address(self.email)
+            self.check_email()
+            return mail_address
+
     @classmethod
     def validate(cls, patients):
         super(Patient, cls).validate(patients)
         for patient in patients:
             patient.check_identifier()
             patient.check_phones()
+            patient.check_email()
 
     def check_identifier(self):
         valid = galeno_tools.validate_identifier(
@@ -218,5 +219,11 @@ class Patient(ModelSQL, ModelView):
                 if not valid_phone:
                     self.raise_user_error('invalid_phone', {
                         'phone': getattr(self, phone),
-                        'patient': self.name,
                         })
+
+    def check_email(self):
+        valid = galeno_tools.validate_mail_address(self.email)
+        if not valid:
+            self.raise_user_error('invalid_email', {
+                'email': self.email,
+                })

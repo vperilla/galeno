@@ -9,6 +9,8 @@ from phonenumbers import PhoneNumberFormat
 from io import BytesIO
 from PIL import Image
 
+from email_validator import validate_email
+
 from trytond.model import fields
 
 IDENTIFIERS = {
@@ -69,6 +71,24 @@ def validate_phone(number, country_code):
         valid = phonenumbers.is_valid_number(x)
         if valid:
             return True
+    except Exception:
+        pass
+    return False
+
+
+def format_mail_address(email):
+    try:
+        v = validate_email(email)
+        email = v['email']
+    except Exception:
+        pass
+    return email
+
+
+def validate_mail_address(email):
+    try:
+        v = validate_email(email)
+        return True
     except Exception:
         pass
     return False
