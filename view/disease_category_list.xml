@@ -1,5 +1,4 @@
 <?xml version="1.0"?>
 <tree>
     <field name="name"/>
-    <field name="childs" tree_invisible="1"/>
 </tree>

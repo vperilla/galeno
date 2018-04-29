@@ -10,7 +10,7 @@ class PatientDisability(ModelSQL, ModelView):
 
     patient = fields.Many2One('galeno.patient', 'Patient', required=True,
         domain=[
-            ('id', If(Eval('context', {}).contains('company'), '=', '!='),
+            ('company', If(Eval('context', {}).contains('company'), '=', '!='),
                 Eval('context', {}).get('company', -1)),
             ])
     type_ = fields.Selection(
@@ -31,7 +31,7 @@ class PatientDisability(ModelSQL, ModelView):
         help='legal document that verifies the authenticity of the condition')
     percentage = fields.Float('Percentage', required=True,
         domain=[
-            ('percentage', '>', 0),
+            ('percentage', '>=', 0),
             ('percentage', '<=', 1),
         ])
     description = fields.Text('Description')

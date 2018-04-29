@@ -30,7 +30,7 @@
             <field name="group" ref="group_galeno"/>
         </record>
         <menuitem name="Galeno Administration" id="menu_galeno_admin" sequence="4"
-            icon="tryton-preferences"/>
+            parent="menu_galeno" icon="tryton-preferences"/>
         <record model="ir.ui.menu-res.group"
             id="menu_galeno_admin_group_galeno_admin">
             <field name="menu" ref="menu_galeno"/>

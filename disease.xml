@@ -9,11 +9,38 @@
             <field name="type">form</field>
             <field name="name">disease_category_form</field>
         </record>
+        <record model="ir.ui.view" id="disease_category_view_list">
+            <field name="model">galeno.disease.category</field>
+            <field name="type">tree</field>
+            <field name="name">disease_category_list</field>
+        </record>
         <record model="ir.ui.view" id="disease_category_view_tree">
             <field name="model">galeno.disease.category</field>
             <field name="type">tree</field>
+            <field name="field_childs">childs</field>
             <field name="name">disease_category_tree</field>
         </record>
+
+        <record model="ir.action.act_window" id="act_disease_category_tree">
+            <field name="name">Diseases categories</field>
+            <field name="res_model">galeno.disease.category</field>
+            <field name="domain" eval="[('parent', '=', None)]" pyson="1"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_disease_category_tree_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="disease_category_view_tree"/>
+            <field name="act_window" ref="act_disease_category_tree"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_disease_category_tree_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="disease_category_view_form"/>
+            <field name="act_window" ref="act_disease_category_tree"/>
+        </record>
+        <menuitem parent="menu_galeno_disease" action="act_disease_category_tree"
+            id="menu_disease_category_tree" sequence="10"/>
+
         <record model="ir.action.act_window" id="act_disease_category_form">
             <field name="name">Diseases categories</field>
             <field name="res_model">galeno.disease.category</field>
@@ -21,7 +48,7 @@
         <record model="ir.action.act_window.view"
             id="act_disease_category_form_view1">
             <field name="sequence" eval="10"/>
-            <field name="view" ref="disease_category_view_tree"/>
+            <field name="view" ref="disease_category_view_list"/>
             <field name="act_window" ref="act_disease_category_form"/>
         </record>
         <record model="ir.action.act_window.view"
@@ -30,7 +57,7 @@
             <field name="view" ref="disease_category_view_form"/>
             <field name="act_window" ref="act_disease_category_form"/>
         </record>
-        <menuitem parent="menu_galeno_disease" action="act_disease_category_form"
+        <menuitem parent="menu_disease_category_tree" action="act_disease_category_form"
             id="menu_disease_category_form" sequence="10"/>
         <record model="ir.model.access" id="access_disease_category">
             <field name="model"
