@@ -90,6 +90,15 @@ class Patient(ModelSQL, ModelView):
         ('university', 'University'),
         ('postgraduate', 'Postgraduate'),
     ], 'Education level', sort=False)
+    occupation = fields.Many2One('galeno.occupation', 'Occupation')
+    ethnic_group = fields.Many2One('galeno.ethnic.group', 'Ethnic Group')
+    disability = fields.Boolean('Disability')
+    disabilities = fields.One2Many(
+        'galeno.patient.disability', 'patient', 'Disabilities',
+        states={
+            'invisible': ~Eval('disability')
+        },
+        depends=['patient'])
 
     @classmethod
     def __setup__(cls):
@@ -193,6 +202,11 @@ class Patient(ModelSQL, ModelView):
             mail_address = galeno_tools.format_mail_address(self.email)
             self.check_email()
             return mail_address
+
+    @fields.depends('disability')
+    def on_change_disability(self):
+        if not self.disability:
+            self.disabilities = None
 
     @classmethod
     def validate(cls, patients):

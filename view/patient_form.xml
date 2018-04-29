@@ -46,7 +46,7 @@
         </group>
     </group>
     <notebook colspan="4">
-        <page id="patient_1" string="Patient Secondary Information">
+        <page id="patient_1" string="Secondary Information">
             <group id="patient_secondary" col="8">
                 <label name="code"/>
                 <field name="code"/>
@@ -60,6 +60,16 @@
                 <field name="religion"/>
                 <label name="archive_number"/>
                 <field name="archive_number"/>
+                <label name="occupation"/>
+                <field name="occupation"/>
+                <label name="ethnic_group"/>
+                <field name="ethnic_group"/>
+                <group id="disabilities" colspan="4" col="2">
+                    <label name="disability"/>
+                    <field name="disability"/>
+                    <field name="disabilities" colspan="2" mode="form,tree" 
+                        view_ids="galeno.patient_disability_view_form,galeno.patient_disability_view_tree"/>
+                </group>
             </group>
         </page>
         <page id="page2" string="Page2">

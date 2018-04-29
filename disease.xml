@@ -1,0 +1,143 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <menuitem parent="menu_galeno_admin"
+            id="menu_galeno_disease" name="Diseases" sequence="10"/>
+
+        <record model="ir.ui.view" id="disease_category_view_form">
+            <field name="model">galeno.disease.category</field>
+            <field name="type">form</field>
+            <field name="name">disease_category_form</field>
+        </record>
+        <record model="ir.ui.view" id="disease_category_view_tree">
+            <field name="model">galeno.disease.category</field>
+            <field name="type">tree</field>
+            <field name="name">disease_category_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_disease_category_form">
+            <field name="name">Diseases categories</field>
+            <field name="res_model">galeno.disease.category</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_disease_category_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="disease_category_view_tree"/>
+            <field name="act_window" ref="act_disease_category_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_disease_category_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="disease_category_view_form"/>
+            <field name="act_window" ref="act_disease_category_form"/>
+        </record>
+        <menuitem parent="menu_galeno_disease" action="act_disease_category_form"
+            id="menu_disease_category_form" sequence="10"/>
+        <record model="ir.model.access" id="access_disease_category">
+            <field name="model"
+                search="[('model', '=', 'galeno.disease.category')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_disease_category_admin">
+            <field name="model"
+                search="[('model', '=', 'galeno.disease.category')]"/>
+            <field name="group" ref="group_galeno_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.ui.view" id="disease_group_view_form">
+            <field name="model">galeno.disease.group</field>
+            <field name="type">form</field>
+            <field name="name">disease_group_form</field>
+        </record>
+        <record model="ir.ui.view" id="disease_group_view_tree">
+            <field name="model">galeno.disease.group</field>
+            <field name="type">tree</field>
+            <field name="name">disease_group_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_disease_group_form">
+            <field name="name">Diseases groups</field>
+            <field name="res_model">galeno.disease.group</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_disease_group_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="disease_group_view_tree"/>
+            <field name="act_window" ref="act_disease_group_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_disease_group_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="disease_group_view_form"/>
+            <field name="act_window" ref="act_disease_group_form"/>
+        </record>
+        <menuitem parent="menu_galeno_disease" action="act_disease_group_form"
+            id="menu_disease_group_form" sequence="10"/>
+        <record model="ir.model.access" id="access_disease_group">
+            <field name="model"
+                search="[('model', '=', 'galeno.disease.group')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_disease_group_admin">
+            <field name="model"
+                search="[('model', '=', 'galeno.disease.group')]"/>
+            <field name="group" ref="group_galeno_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.ui.view" id="disease_view_form">
+            <field name="model">galeno.disease</field>
+            <field name="type">form</field>
+            <field name="name">disease_form</field>
+        </record>
+        <record model="ir.ui.view" id="disease_view_tree">
+            <field name="model">galeno.disease</field>
+            <field name="type">tree</field>
+            <field name="name">disease_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_disease_form">
+            <field name="name">Diseases</field>
+            <field name="res_model">galeno.disease</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_disease_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="disease_view_tree"/>
+            <field name="act_window" ref="act_disease_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_disease_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="disease_view_form"/>
+            <field name="act_window" ref="act_disease_form"/>
+        </record>
+        <menuitem parent="menu_galeno_disease" action="act_disease_form"
+            id="menu_disease_form" sequence="10"/>
+        <record model="ir.model.access" id="access_disease">
+            <field name="model" search="[('model', '=', 'galeno.disease')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_disease_disease">
+            <field name="model" search="[('model', '=', 'galeno.disease')]"/>
+            <field name="group" ref="group_galeno_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+    </data>
+</tryton>

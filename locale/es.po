@@ -1,0 +1,2659 @@
+msgctxt "error:galeno.occupation:"
+msgid "CODE must be unique !"
+msgstr "¡CÓDIGO debe ser único!"
+
+msgctxt "error:galeno.occupation:"
+msgid "Name must be unique !"
+msgstr "¡El nombre debe ser único!"
+
+msgctxt "field:galeno.occupation,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.occupation,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:galeno.occupation,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:galeno.occupation,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.occupation,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.occupation,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.occupation,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.occupation,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "model:galeno.occupation,name:"
+msgid "Occupation"
+msgstr "Ocupación"
+
+msgctxt "model:galeno.occupation,name:occ1"
+msgid "Unemployed"
+msgstr "Desempleado"
+
+msgctxt "model:galeno.occupation,name:occ10"
+msgid "Ballerina"
+msgstr "Bailarina"
+
+msgctxt "model:galeno.occupation,name:occ100"
+msgid "Curator"
+msgstr "Curandero"
+
+msgctxt "model:galeno.occupation,name:occ101"
+msgid "Currier"
+msgstr "Mensajero"
+
+msgctxt "model:galeno.occupation,name:occ102"
+msgid "Custodian"
+msgstr "Guardia"
+
+msgctxt "model:galeno.occupation,name:occ103"
+msgid "Customs officer"
+msgstr "Aduanero"
+
+msgctxt "model:galeno.occupation,name:occ104"
+msgid "Cutler"
+msgstr "Cuchillero"
+
+msgctxt "model:galeno.occupation,name:occ105"
+msgid "Dancer"
+msgstr "Bailarín"
+
+msgctxt "model:galeno.occupation,name:occ106"
+msgid "Dance instructor"
+msgstr "Instructor de Baile"
+
+msgctxt "model:galeno.occupation,name:occ107"
+msgid "Database administrator (DBA)"
+msgstr "Administrador de base de datos (DBA)"
+
+msgctxt "model:galeno.occupation,name:occ108"
+msgid "Deputy (law enforcement)"
+msgstr "Diputado"
+
+msgctxt "model:galeno.occupation,name:occ109"
+msgid "Deputy (parliamentary)"
+msgstr "Diputado (parlamentario)"
+
+msgctxt "model:galeno.occupation,name:occ11"
+msgid "Bassist"
+msgstr "Bajista"
+
+msgctxt "model:galeno.occupation,name:occ110"
+msgid "Demographer"
+msgstr "Demógrafo"
+
+msgctxt "model:galeno.occupation,name:occ111"
+msgid "Demolitionist"
+msgstr "Demolicionista"
+
+msgctxt "model:galeno.occupation,name:occ112"
+msgid "Dentist"
+msgstr "Dentista"
+
+msgctxt "model:galeno.occupation,name:occ113"
+msgid "Dermatologist"
+msgstr "Dermatólogo"
+
+msgctxt "model:galeno.occupation,name:occ114"
+msgid "Designer"
+msgstr "Diseñador"
+
+msgctxt "model:galeno.occupation,name:occ115"
+msgid "Detective"
+msgstr "Detective"
+
+msgctxt "model:galeno.occupation,name:occ116"
+msgid "Diamantaire"
+msgstr "Lapidario de diamantes"
+
+msgctxt "model:galeno.occupation,name:occ117"
+msgid "Dictator"
+msgstr "Dictador"
+
+msgctxt "model:galeno.occupation,name:occ118"
+msgid "Dietician"
+msgstr "Dietista"
+
+msgctxt "model:galeno.occupation,name:occ119"
+msgid "Diplomat"
+msgstr "Diplomático"
+
+msgctxt "model:galeno.occupation,name:occ12"
+msgid "Boatswain"
+msgstr "Contramaestre"
+
+msgctxt "model:galeno.occupation,name:occ120"
+msgid "Director"
+msgstr "Director"
+
+msgctxt "model:galeno.occupation,name:occ121"
+msgid "Disc jockey"
+msgstr "Disc jockey"
+
+msgctxt "model:galeno.occupation,name:occ122"
+msgid "Dispatcher"
+msgstr "Transportista"
+
+msgctxt "model:galeno.occupation,name:occ123"
+msgid "Distiller"
+msgstr "Destilador"
+
+msgctxt "model:galeno.occupation,name:occ124"
+msgid "Diver"
+msgstr "Buzo"
+
+msgctxt "model:galeno.occupation,name:occ125"
+msgid "Dock labourer"
+msgstr "Trabajador de muelle"
+
+msgctxt "model:galeno.occupation,name:occ126"
+msgid "Documentalist"
+msgstr "Documentalista"
+
+msgctxt "model:galeno.occupation,name:occ127"
+msgid "Doctor (PhD)"
+msgstr "Doctor (Doctorado)"
+
+msgctxt "model:galeno.occupation,name:occ128"
+msgid "Doctor of Education"
+msgstr "Doctor en educación"
+
+msgctxt "model:galeno.occupation,name:occ129"
+msgid "Doctor (MD)"
+msgstr "Doctor (Médico)"
+
+msgctxt "model:galeno.occupation,name:occ13"
+msgid "Boilermaker"
+msgstr "Calderero"
+
+msgctxt "model:galeno.occupation,name:occ130"
+msgid "Doctor of Physical Therapy"
+msgstr "Doctor en Terapia física"
+
+msgctxt "model:galeno.occupation,name:occ131"
+msgid "Dog breeder"
+msgstr "Criador de perros"
+
+msgctxt "model:galeno.occupation,name:occ132"
+msgid "Dogcatcher"
+msgstr "Perrero"
+
+msgctxt "model:galeno.occupation,name:occ133"
+msgid "Dog walker"
+msgstr "Paseador de perros"
+
+msgctxt "model:galeno.occupation,name:occ134"
+msgid "Domestic worker"
+msgstr "Trabajador doméstico"
+
+msgctxt "model:galeno.occupation,name:occ135"
+msgid "Dominatrix"
+msgstr "Dominatriz"
+
+msgctxt "model:galeno.occupation,name:occ136"
+msgid "Donkey Trainer"
+msgstr "Entrenador de burros"
+
+msgctxt "model:galeno.occupation,name:occ137"
+msgid "Doorman"
+msgstr "Conserje"
+
+msgctxt "model:galeno.occupation,name:occ138"
+msgid "Draftsman"
+msgstr "Delineante"
+
+msgctxt "model:galeno.occupation,name:occ139"
+msgid "Dramatist"
+msgstr "Dramaturgo"
+
+msgctxt "model:galeno.occupation,name:occ14"
+msgid "Bookseller"
+msgstr "Librero"
+
+msgctxt "model:galeno.occupation,name:occ140"
+msgid "Dramaturg"
+msgstr "Dramaturgo"
+
+msgctxt "model:galeno.occupation,name:occ141"
+msgid "Draper"
+msgstr "Mayorista"
+
+msgctxt "model:galeno.occupation,name:occ142"
+msgid "Drayman"
+msgstr "Conductor de carro"
+
+msgctxt "model:galeno.occupation,name:occ143"
+msgid "Dressmaker"
+msgstr "Modista"
+
+msgctxt "model:galeno.occupation,name:occ144"
+msgid "Drill instructor"
+msgstr "Instructor militar"
+
+msgctxt "model:galeno.occupation,name:occ145"
+msgid "Driver"
+msgstr "Conductor"
+
+msgctxt "model:galeno.occupation,name:occ146"
+msgid "Drug dealer"
+msgstr "Traficante"
+
+msgctxt "model:galeno.occupation,name:occ147"
+msgid "Drummer"
+msgstr "Baterista"
+
+msgctxt "model:galeno.occupation,name:occ148"
+msgid "Drycooper"
+msgstr "Tonelero"
+
+msgctxt "model:galeno.occupation,name:occ149"
+msgid "Drywaller"
+msgstr "Yesero"
+
+msgctxt "model:galeno.occupation,name:occ15"
+msgid "Builder"
+msgstr "Constructor"
+
+msgctxt "model:galeno.occupation,name:occ150"
+msgid "Dustman"
+msgstr "Limpiador"
+
+msgctxt "model:galeno.occupation,name:occ151"
+msgid "Dyer"
+msgstr "Pintor"
+
+msgctxt "model:galeno.occupation,name:occ152"
+msgid "Ecologist"
+msgstr "Ecologista"
+
+msgctxt "model:galeno.occupation,name:occ153"
+msgid "Economist"
+msgstr "Economista"
+
+msgctxt "model:galeno.occupation,name:occ154"
+msgid "Editor"
+msgstr "Editor"
+
+msgctxt "model:galeno.occupation,name:occ155"
+msgid "Educationalist"
+msgstr "Educacionista"
+
+msgctxt "model:galeno.occupation,name:occ156"
+msgid "Educator"
+msgstr "Educador"
+
+msgctxt "model:galeno.occupation,name:occ157"
+msgid "Egyptologist"
+msgstr "Egiptólogo"
+
+msgctxt "model:galeno.occupation,name:occ158"
+msgid "Electrical engineer"
+msgstr "Ingeniero eléctrico"
+
+msgctxt "model:galeno.occupation,name:occ159"
+msgid "Electrician"
+msgstr "Electricista"
+
+msgctxt "model:galeno.occupation,name:occ16"
+msgid "Cab driver"
+msgstr "Taxista"
+
+msgctxt "model:galeno.occupation,name:occ160"
+msgid "Elevator Mechanic"
+msgstr "Ascensorista"
+
+msgctxt "model:galeno.occupation,name:occ161"
+msgid "Embalmer"
+msgstr "Embalsamador"
+
+msgctxt "model:galeno.occupation,name:occ162"
+msgid "Embryologist"
+msgstr "Embriólogo"
+
+msgctxt "model:galeno.occupation,name:occ163"
+msgid "Emergency Medical Technician (EMT)"
+msgstr "Técnico de emergencias médicas"
+
+msgctxt "model:galeno.occupation,name:occ164"
+msgid "Engine-driver"
+msgstr "Maquinista"
+
+msgctxt "model:galeno.occupation,name:occ165"
+msgid "Engineer"
+msgstr "Ingeniero"
+
+msgctxt "model:galeno.occupation,name:occ166"
+msgid "Engraver"
+msgstr "Grabador"
+
+msgctxt "model:galeno.occupation,name:occ167"
+msgid "Enologist"
+msgstr "Enólogo"
+
+msgctxt "model:galeno.occupation,name:occ168"
+msgid "Entertainer"
+msgstr "Animador"
+
+msgctxt "model:galeno.occupation,name:occ169"
+msgid "Entomologist"
+msgstr "Entomólogo"
+
+msgctxt "model:galeno.occupation,name:occ17"
+msgid "Cop"
+msgstr "Policía"
+
+msgctxt "model:galeno.occupation,name:occ170"
+msgid "Entrepreneur"
+msgstr "Empresario"
+
+msgctxt "model:galeno.occupation,name:occ171"
+msgid "Environmental scientist"
+msgstr "Científico ambiental"
+
+msgctxt "model:galeno.occupation,name:occ172"
+msgid "Ergonomist"
+msgstr "Ergonomista"
+
+msgctxt "model:galeno.occupation,name:occ173"
+msgid "Escort"
+msgstr "Escort"
+
+msgctxt "model:galeno.occupation,name:occ174"
+msgid "Estate Agent"
+msgstr "Agente inmobiliario"
+
+msgctxt "model:galeno.occupation,name:occ175"
+msgid "Esthetician"
+msgstr "Esteticista"
+
+msgctxt "model:galeno.occupation,name:occ176"
+msgid "Ethnologist"
+msgstr "Etnólogo"
+
+msgctxt "model:galeno.occupation,name:occ177"
+msgid "Ethologist"
+msgstr "Etólogo"
+
+msgctxt "model:galeno.occupation,name:occ178"
+msgid "Etymologist"
+msgstr "Etimologista"
+
+msgctxt "model:galeno.occupation,name:occ179"
+msgid "Evangelist"
+msgstr "Evangelista"
+
+msgctxt "model:galeno.occupation,name:occ18"
+msgid "Cabinet-maker"
+msgstr "Ebanista"
+
+msgctxt "model:galeno.occupation,name:occ180"
+msgid "Exchequer"
+msgstr "Tesorero"
+
+msgctxt "model:galeno.occupation,name:occ181"
+msgid "Executive"
+msgstr "Ejecutiva"
+
+msgctxt "model:galeno.occupation,name:occ182"
+msgid "Exotic dancer"
+msgstr "Bailarina exótica"
+
+msgctxt "model:galeno.occupation,name:occ183"
+msgid "Expressman"
+msgstr "Mensajero"
+
+msgctxt "model:galeno.occupation,name:occ184"
+msgid "Exterminator"
+msgstr "Exterminador"
+
+msgctxt "model:galeno.occupation,name:occ185"
+msgid "Extra"
+msgstr "Extra"
+
+msgctxt "model:galeno.occupation,name:occ186"
+msgid "Falconer"
+msgstr "Halconero"
+
+msgctxt "model:galeno.occupation,name:occ187"
+msgid "Farmer"
+msgstr "Granjero"
+
+msgctxt "model:galeno.occupation,name:occ188"
+msgid "Farrier"
+msgstr "Herrador"
+
+msgctxt "model:galeno.occupation,name:occ189"
+msgid "Fashion designer"
+msgstr "Diseñador de modas"
+
+msgctxt "model:galeno.occupation,name:occ19"
+msgid "Calligrapher"
+msgstr "Caligrafista"
+
+msgctxt "model:galeno.occupation,name:occ190"
+msgid "FBI Agent"
+msgstr "Agente FBI"
+
+msgctxt "model:galeno.occupation,name:occ191"
+msgid "Fellmonger"
+msgstr "Peletero"
+
+msgctxt "model:galeno.occupation,name:occ192"
+msgid "Fence"
+msgstr "Cerca"
+
+msgctxt "model:galeno.occupation,name:occ193"
+msgid "Ferryman"
+msgstr "Barquero"
+
+msgctxt "model:galeno.occupation,name:occ194"
+msgid "Film director"
+msgstr "Cineasta"
+
+msgctxt "model:galeno.occupation,name:occ195"
+msgid "Film producer"
+msgstr "Productor"
+
+msgctxt "model:galeno.occupation,name:occ196"
+msgid "Financial adviser"
+msgstr "Asesor financiero"
+
+msgctxt "model:galeno.occupation,name:occ197"
+msgid "Financial analyst"
+msgstr "Analista financiero"
+
+msgctxt "model:galeno.occupation,name:occ198"
+msgid "Financial manager"
+msgstr "Gerente de finanzas"
+
+msgctxt "model:galeno.occupation,name:occ199"
+msgid "Financial planner"
+msgstr "Planificador financiero"
+
+msgctxt "model:galeno.occupation,name:occ2"
+msgid "Administrator"
+msgstr "Administrador"
+
+msgctxt "model:galeno.occupation,name:occ20"
+msgid "Call girl"
+msgstr "Call girl"
+
+msgctxt "model:galeno.occupation,name:occ200"
+msgid "Financier"
+msgstr "Financiero"
+
+msgctxt "model:galeno.occupation,name:occ201"
+msgid "Fire marshal"
+msgstr "Departamento de bomberos"
+
+msgctxt "model:galeno.occupation,name:occ202"
+msgid "Fire officer"
+msgstr "Oficial de bomberos"
+
+msgctxt "model:galeno.occupation,name:occ203"
+msgid "Firefighter"
+msgstr "Bombero"
+
+msgctxt "model:galeno.occupation,name:occ204"
+msgid "First Mate"
+msgstr "Primer oficial"
+
+msgctxt "model:galeno.occupation,name:occ205"
+msgid "Fishmonger"
+msgstr "Pescadero"
+
+msgctxt "model:galeno.occupation,name:occ206"
+msgid "Fisherman"
+msgstr "Pescador"
+
+msgctxt "model:galeno.occupation,name:occ207"
+msgid "Fitter"
+msgstr "Montador"
+
+msgctxt "model:galeno.occupation,name:occ208"
+msgid "Flautist"
+msgstr "Flautista"
+
+msgctxt "model:galeno.occupation,name:occ209"
+msgid "Flavorist"
+msgstr "Químico de los alimentos"
+
+msgctxt "model:galeno.occupation,name:occ21"
+msgid "Cameraman"
+msgstr "Camarógrafo"
+
+msgctxt "model:galeno.occupation,name:occ211"
+msgid "Flight attendant"
+msgstr "Auxiliar de vuelo"
+
+msgctxt "model:galeno.occupation,name:occ212"
+msgid "Flight engineer"
+msgstr "Mecánico de velo"
+
+msgctxt "model:galeno.occupation,name:occ213"
+msgid "Flight instructor"
+msgstr "Instructor de vuelo"
+
+msgctxt "model:galeno.occupation,name:occ214"
+msgid "Floor manager"
+msgstr "Gerente de planta"
+
+msgctxt "model:galeno.occupation,name:occ215"
+msgid "Florist"
+msgstr "Florista"
+
+msgctxt "model:galeno.occupation,name:occ217"
+msgid "Flutist"
+msgstr "Flautista"
+
+msgctxt "model:galeno.occupation,name:occ218"
+msgid "Foreman"
+msgstr "Capataz"
+
+msgctxt "model:galeno.occupation,name:occ219"
+msgid "Forensic scientist"
+msgstr "Forense"
+
+msgctxt "model:galeno.occupation,name:occ22"
+msgid "Camp Counselor"
+msgstr "Consejero de campo"
+
+msgctxt "model:galeno.occupation,name:occ220"
+msgid "Fruiterer"
+msgstr "Frutero"
+
+msgctxt "model:galeno.occupation,name:occ221"
+msgid "Furrier"
+msgstr "Peletero"
+
+msgctxt "model:galeno.occupation,name:occ222"
+msgid "Gamekeeper"
+msgstr "Guardabosques"
+
+msgctxt "model:galeno.occupation,name:occ223"
+msgid "Game show host"
+msgstr "Presentador de programa de juegos"
+
+msgctxt "model:galeno.occupation,name:occ224"
+msgid "Game designer"
+msgstr "Diseñador de juegos"
+
+msgctxt "model:galeno.occupation,name:occ225"
+msgid "Garbage collector"
+msgstr "Basurero"
+
+msgctxt "model:galeno.occupation,name:occ226"
+msgid "Gardener"
+msgstr "Jardinero"
+
+msgctxt "model:galeno.occupation,name:occ227"
+msgid "Gate-keeper"
+msgstr "Portero"
+
+msgctxt "model:galeno.occupation,name:occ228"
+msgid "Gemcutter"
+msgstr "Tallador de gemas"
+
+msgctxt "model:galeno.occupation,name:occ229"
+msgid "Genealogist"
+msgstr "Genealogista"
+
+msgctxt "model:galeno.occupation,name:occ23"
+msgid "Car designer"
+msgstr "Diseñador de automóviles"
+
+msgctxt "model:galeno.occupation,name:occ230"
+msgid "General"
+msgstr "General"
+
+msgctxt "model:galeno.occupation,name:occ231"
+msgid "Geodesist"
+msgstr "Geodesta"
+
+msgctxt "model:galeno.occupation,name:occ232"
+msgid "Geographer"
+msgstr "Geógrafo"
+
+msgctxt "model:galeno.occupation,name:occ233"
+msgid "Geologist"
+msgstr "Geólogo"
+
+msgctxt "model:galeno.occupation,name:occ234"
+msgid "Geometer"
+msgstr "Geómetra"
+
+msgctxt "model:galeno.occupation,name:occ235"
+msgid "Geophysicist"
+msgstr "Geofísico"
+
+msgctxt "model:galeno.occupation,name:occ236"
+msgid "Government agent"
+msgstr "Agente del Gobierno"
+
+msgctxt "model:galeno.occupation,name:occ237"
+msgid "Governor"
+msgstr "Gobernador"
+
+msgctxt "model:galeno.occupation,name:occ238"
+msgid "Grammarian"
+msgstr "Filólogo"
+
+msgctxt "model:galeno.occupation,name:occ239"
+msgid "Graphic artist"
+msgstr "Artista gráfico"
+
+msgctxt "model:galeno.occupation,name:occ24"
+msgid "Cardiologist"
+msgstr "Cardiólogo"
+
+msgctxt "model:galeno.occupation,name:occ240"
+msgid "Gravedigger"
+msgstr "Sepulturero"
+
+msgctxt "model:galeno.occupation,name:occ241"
+msgid "Grenadier"
+msgstr "Granadero"
+
+msgctxt "model:galeno.occupation,name:occ242"
+msgid "Greengrocer"
+msgstr "Verdulero"
+
+msgctxt "model:galeno.occupation,name:occ243"
+msgid "Grocer"
+msgstr "Tendero"
+
+msgctxt "model:galeno.occupation,name:occ244"
+msgid "Guide"
+msgstr "Guía"
+
+msgctxt "model:galeno.occupation,name:occ245"
+msgid "Guitarist"
+msgstr "Guitarrista"
+
+msgctxt "model:galeno.occupation,name:occ246"
+msgid "Gunsmith"
+msgstr "Armero"
+
+msgctxt "model:galeno.occupation,name:occ247"
+msgid "Gynecologist"
+msgstr "Ginecólogo"
+
+msgctxt "model:galeno.occupation,name:occ248"
+msgid "Garrett"
+msgstr "Garret"
+
+msgctxt "model:galeno.occupation,name:occ249"
+msgid "Haberdasher"
+msgstr "Mercero"
+
+msgctxt "model:galeno.occupation,name:occ25"
+msgid "Carpenter"
+msgstr "Carpintero"
+
+msgctxt "model:galeno.occupation,name:occ250"
+msgid "Harpist"
+msgstr "Arpista"
+
+msgctxt "model:galeno.occupation,name:occ251"
+msgid "Hairdresser"
+msgstr "Peluquero"
+
+msgctxt "model:galeno.occupation,name:occ252"
+msgid "Handyman"
+msgstr "Manitas"
+
+msgctxt "model:galeno.occupation,name:occ253"
+msgid "Harbourmaster"
+msgstr "Capitán de Puerto"
+
+msgctxt "model:galeno.occupation,name:occ254"
+msgid "Harper"
+msgstr "Arpista"
+
+msgctxt "model:galeno.occupation,name:occ255"
+msgid "Hatter"
+msgstr "Sombrerero"
+
+msgctxt "model:galeno.occupation,name:occ256"
+msgid "Hayward"
+msgstr "Guardia"
+
+msgctxt "model:galeno.occupation,name:occ257"
+msgid "Headmaster"
+msgstr "Director"
+
+msgctxt "model:galeno.occupation,name:occ259"
+msgid "Herbalist"
+msgstr "Herbolario"
+
+msgctxt "model:galeno.occupation,name:occ26"
+msgid "Cartographer"
+msgstr "Cartógrafo"
+
+msgctxt "model:galeno.occupation,name:occ260"
+msgid "Herder"
+msgstr "Pastor"
+
+msgctxt "model:galeno.occupation,name:occ261"
+msgid "Historian"
+msgstr "Historiador"
+
+msgctxt "model:galeno.occupation,name:occ262"
+msgid "Historiographer"
+msgstr "Historiador"
+
+msgctxt "model:galeno.occupation,name:occ263"
+msgid "Hosier"
+msgstr "Calcetero"
+
+msgctxt "model:galeno.occupation,name:occ264"
+msgid "Horse trainer"
+msgstr "Entrenador de Caballos"
+
+msgctxt "model:galeno.occupation,name:occ265"
+msgid "Hotelier"
+msgstr "Hotelero"
+
+msgctxt "model:galeno.occupation,name:occ266"
+msgid "House painter"
+msgstr "Pintor de casas"
+
+msgctxt "model:galeno.occupation,name:occ267"
+msgid "Housewife"
+msgstr "Ama de casa"
+
+msgctxt "model:galeno.occupation,name:occ268"
+msgid "Hunter"
+msgstr "Cazador"
+
+msgctxt "model:galeno.occupation,name:occ269"
+msgid "Hydraulic engineer"
+msgstr "Ingeniero hidráulico"
+
+msgctxt "model:galeno.occupation,name:occ27"
+msgid "Cartoonist"
+msgstr "Dibujante"
+
+msgctxt "model:galeno.occupation,name:occ270"
+msgid "Illuminator"
+msgstr "Iluminador"
+
+msgctxt "model:galeno.occupation,name:occ271"
+msgid "Illusionist"
+msgstr "Ilusionista"
+
+msgctxt "model:galeno.occupation,name:occ272"
+msgid "Illustrator"
+msgstr "Ilustrador"
+
+msgctxt "model:galeno.occupation,name:occ273"
+msgid "Importer"
+msgstr "Importador"
+
+msgctxt "model:galeno.occupation,name:occ274"
+msgid "Industrial designer"
+msgstr "Diseñador industrial"
+
+msgctxt "model:galeno.occupation,name:occ275"
+msgid "Industrial engineer"
+msgstr "Ingeniero industrial"
+
+msgctxt "model:galeno.occupation,name:occ276"
+msgid "Industrialist"
+msgstr "Industrial"
+
+msgctxt "model:galeno.occupation,name:occ277"
+msgid "Infantryman"
+msgstr "Soldado de infantería"
+
+msgctxt "model:galeno.occupation,name:occ278"
+msgid "Information Architect"
+msgstr "Arquitecto de información"
+
+msgctxt "model:galeno.occupation,name:occ279"
+msgid "Information Technologist"
+msgstr "Tecnólogo de información"
+
+msgctxt "model:galeno.occupation,name:occ28"
+msgid "Cartwright"
+msgstr "Carretero"
+
+msgctxt "model:galeno.occupation,name:occ280"
+msgid "Inker"
+msgstr "Entintador"
+
+msgctxt "model:galeno.occupation,name:occ281"
+msgid "Innkeeper"
+msgstr "Mesonero"
+
+msgctxt "model:galeno.occupation,name:occ282"
+msgid "Instructor"
+msgstr "Instructor"
+
+msgctxt "model:galeno.occupation,name:occ283"
+msgid "Insurer"
+msgstr "Asegurador"
+
+msgctxt "model:galeno.occupation,name:occ284"
+msgid "Intelligence officer"
+msgstr "Oficial de inteligencia"
+
+msgctxt "model:galeno.occupation,name:occ285"
+msgid "Interior designer"
+msgstr "Decorador de interiores"
+
+msgctxt "model:galeno.occupation,name:occ286"
+msgid "Internist"
+msgstr "Internista (Médico)"
+
+msgctxt "model:galeno.occupation,name:occ287"
+msgid "Interpreter"
+msgstr "Intérprete"
+
+msgctxt "model:galeno.occupation,name:occ288"
+msgid "Interrogator"
+msgstr "Interrogador"
+
+msgctxt "model:galeno.occupation,name:occ289"
+msgid "Inventor"
+msgstr "Inventor"
+
+msgctxt "model:galeno.occupation,name:occ29"
+msgid "Cashier"
+msgstr "Cajero"
+
+msgctxt "model:galeno.occupation,name:occ290"
+msgid "Investigator"
+msgstr "Investigador"
+
+msgctxt "model:galeno.occupation,name:occ291"
+msgid "Investment analyst"
+msgstr "Analista de inversiones"
+
+msgctxt "model:galeno.occupation,name:occ292"
+msgid "Investment banker"
+msgstr "Banquero de inversiones"
+
+msgctxt "model:galeno.occupation,name:occ293"
+msgid "Investment broker"
+msgstr "Corredor de inversiones"
+
+msgctxt "model:galeno.occupation,name:occ294"
+msgid "Ironmonger"
+msgstr "Ferretero"
+
+msgctxt "model:galeno.occupation,name:occ295"
+msgid "Ironmaster"
+msgstr "Maestro herrero"
+
+msgctxt "model:galeno.occupation,name:occ296"
+msgid "Ironworker"
+msgstr "Herrero"
+
+msgctxt "model:galeno.occupation,name:occ297"
+msgid "Jailer"
+msgstr "Carcelero"
+
+msgctxt "model:galeno.occupation,name:occ298"
+msgid "Janitor"
+msgstr "Conserje"
+
+msgctxt "model:galeno.occupation,name:occ299"
+msgid "Jeweler"
+msgstr "Joyero"
+
+msgctxt "model:galeno.occupation,name:occ3"
+msgid "Agronomist"
+msgstr "Agrónomo"
+
+msgctxt "model:galeno.occupation,name:occ30"
+msgid "Celebrity"
+msgstr "Celebridad"
+
+msgctxt "model:galeno.occupation,name:occ300"
+msgid "Journalist"
+msgstr "Periodista"
+
+msgctxt "model:galeno.occupation,name:occ301"
+msgid "Jurist"
+msgstr "Jurista"
+
+msgctxt "model:galeno.occupation,name:occ302"
+msgid "Judge"
+msgstr "Juez"
+
+msgctxt "model:galeno.occupation,name:occ303"
+msgid "Kinesiologist"
+msgstr "Kinesiólogo"
+
+msgctxt "model:galeno.occupation,name:occ304"
+msgid "King"
+msgstr "Rey"
+
+msgctxt "model:galeno.occupation,name:occ305"
+msgid "Lab Assistant"
+msgstr "Ayudante de laboratorio"
+
+msgctxt "model:galeno.occupation,name:occ306"
+msgid "Laborer"
+msgstr "Peón"
+
+msgctxt "model:galeno.occupation,name:occ307"
+msgid "Landlord "
+msgstr "Terrateniente"
+
+msgctxt "model:galeno.occupation,name:occ308"
+msgid "Landscaper"
+msgstr "Paisajista"
+
+msgctxt "model:galeno.occupation,name:occ309"
+msgid "Lamplighter"
+msgstr "Farero"
+
+msgctxt "model:galeno.occupation,name:occ31"
+msgid "Cellist"
+msgstr "Violonchelista"
+
+msgctxt "model:galeno.occupation,name:occ310"
+msgid "Laundress"
+msgstr "Lavandero"
+
+msgctxt "model:galeno.occupation,name:occ311"
+msgid "Law enforcement agent"
+msgstr "Agente de aplicación de ley"
+
+msgctxt "model:galeno.occupation,name:occ312"
+msgid "Lawyer"
+msgstr "Abogado"
+
+msgctxt "model:galeno.occupation,name:occ313"
+msgid "Leadworker"
+msgstr "Trabajador del plomo"
+
+msgctxt "model:galeno.occupation,name:occ314"
+msgid "Leatherer"
+msgstr "Peletero"
+
+msgctxt "model:galeno.occupation,name:occ315"
+msgid "Lecturer"
+msgstr "Maestro"
+
+msgctxt "model:galeno.occupation,name:occ316"
+msgid "Level designer"
+msgstr "Diseñador de niveles"
+
+msgctxt "model:galeno.occupation,name:occ317"
+msgid "Librarian"
+msgstr "Bibliotecario"
+
+msgctxt "model:galeno.occupation,name:occ318"
+msgid "Library technical assistant"
+msgstr "Asistente de bibliotecario"
+
+msgctxt "model:galeno.occupation,name:occ319"
+msgid "Librettist"
+msgstr "Libretista"
+
+msgctxt "model:galeno.occupation,name:occ32"
+msgid "Censor"
+msgstr "Crítico"
+
+msgctxt "model:galeno.occupation,name:occ320"
+msgid "Lifeguard"
+msgstr "Socorrista"
+
+msgctxt "model:galeno.occupation,name:occ321"
+msgid "Lighthouse keeper"
+msgstr "Farero"
+
+msgctxt "model:galeno.occupation,name:occ322"
+msgid "Lighting technician"
+msgstr "Técnico de iluminación"
+
+msgctxt "model:galeno.occupation,name:occ323"
+msgid "Linesman"
+msgstr "Juez de línea"
+
+msgctxt "model:galeno.occupation,name:occ324"
+msgid "Linguist"
+msgstr "Lingüista"
+
+msgctxt "model:galeno.occupation,name:occ325"
+msgid "Loan officer"
+msgstr "Oficial de crédito"
+
+msgctxt "model:galeno.occupation,name:occ326"
+msgid "Lobbyist"
+msgstr "Lobbyist"
+
+msgctxt "model:galeno.occupation,name:occ327"
+msgid "Locksmith"
+msgstr "Cerrajero"
+
+msgctxt "model:galeno.occupation,name:occ328"
+msgid "Logistician"
+msgstr "Operador logístico"
+
+msgctxt "model:galeno.occupation,name:occ329"
+msgid "Lumberjack"
+msgstr "Leñador"
+
+msgctxt "model:galeno.occupation,name:occ33"
+msgid "CEO (Chief Executive Officer)"
+msgstr "CEO (Director Ejecutivo)"
+
+msgctxt "model:galeno.occupation,name:occ330"
+msgid "Lyricist"
+msgstr "Letrista"
+
+msgctxt "model:galeno.occupation,name:occ331"
+msgid "Magazine Editor"
+msgstr "Editor de revista"
+
+msgctxt "model:galeno.occupation,name:occ332"
+msgid "Magician"
+msgstr "Mago"
+
+msgctxt "model:galeno.occupation,name:occ333"
+msgid "Magistrate"
+msgstr "Magistrado"
+
+msgctxt "model:galeno.occupation,name:occ334"
+msgid "Maid"
+msgstr "Doncella"
+
+msgctxt "model:galeno.occupation,name:occ335"
+msgid "Mailman or Mail carrier"
+msgstr "Cartero"
+
+msgctxt "model:galeno.occupation,name:occ336"
+msgid "Make-up artist"
+msgstr "Maquillador artístico"
+
+msgctxt "model:galeno.occupation,name:occ337"
+msgid "Management consultant"
+msgstr "Consultor de gestión"
+
+msgctxt "model:galeno.occupation,name:occ338"
+msgid "Manager"
+msgstr "Gerente"
+
+msgctxt "model:galeno.occupation,name:occ339"
+msgid "Manicurist"
+msgstr "Manicuro"
+
+msgctxt "model:galeno.occupation,name:occ34"
+msgid "CFO (Chief Financial Officer)"
+msgstr "CFO (Director Financiero)"
+
+msgctxt "model:galeno.occupation,name:occ340"
+msgid "Manufacturer"
+msgstr "Fabricante"
+
+msgctxt "model:galeno.occupation,name:occ341"
+msgid "Marine"
+msgstr "Marino"
+
+msgctxt "model:galeno.occupation,name:occ342"
+msgid "Marketer"
+msgstr "Vendedor"
+
+msgctxt "model:galeno.occupation,name:occ343"
+msgid "Market gardener"
+msgstr "Jardinero de huerto"
+
+msgctxt "model:galeno.occupation,name:occ344"
+msgid "Martial artist"
+msgstr "Artes marciales"
+
+msgctxt "model:galeno.occupation,name:occ345"
+msgid "Mason"
+msgstr "Albañil"
+
+msgctxt "model:galeno.occupation,name:occ346"
+msgid "Massage therapist "
+msgstr "Masajista terapeutico"
+
+msgctxt "model:galeno.occupation,name:occ347"
+msgid "Master of Ceremony (MC)"
+msgstr "Maestro de Ceremonias (MC)"
+
+msgctxt "model:galeno.occupation,name:occ348"
+msgid "Matador"
+msgstr "Matador"
+
+msgctxt "model:galeno.occupation,name:occ349"
+msgid "Materials engineer"
+msgstr "Ingeniero de materiales"
+
+msgctxt "model:galeno.occupation,name:occ35"
+msgid "Chandler (candles)"
+msgstr " Velero (velas)"
+
+msgctxt "model:galeno.occupation,name:occ350"
+msgid "Materials scientist"
+msgstr "Científico de materiales"
+
+msgctxt "model:galeno.occupation,name:occ351"
+msgid "Mathematician"
+msgstr "Matemático"
+
+msgctxt "model:galeno.occupation,name:occ352"
+msgid "Matron"
+msgstr "Matrona"
+
+msgctxt "model:galeno.occupation,name:occ353"
+msgid "Mechanic"
+msgstr "Mecánico"
+
+msgctxt "model:galeno.occupation,name:occ354"
+msgid "Mechanical engineer"
+msgstr "Ingeniero mecánico"
+
+msgctxt "model:galeno.occupation,name:occ355"
+msgid "Mechanician"
+msgstr "Constructor"
+
+msgctxt "model:galeno.occupation,name:occ356"
+msgid "Mediator"
+msgstr "Mediador"
+
+msgctxt "model:galeno.occupation,name:occ357"
+msgid "Medic"
+msgstr "Médico"
+
+msgctxt "model:galeno.occupation,name:occ358"
+msgid "Medical biller"
+msgstr "Facturador médico"
+
+msgctxt "model:galeno.occupation,name:occ359"
+msgid "Medical Technologist"
+msgstr "Tecnólogo médico"
+
+msgctxt "model:galeno.occupation,name:occ36"
+msgid "Chapman"
+msgstr "Vendedor ambulante"
+
+msgctxt "model:galeno.occupation,name:occ360"
+msgid "Medical Transcriptionist"
+msgstr "Transcriptor médico"
+
+msgctxt "model:galeno.occupation,name:occ361"
+msgid "Mesmerist"
+msgstr "Hipnotizador"
+
+msgctxt "model:galeno.occupation,name:occ362"
+msgid "Messenger"
+msgstr "Mensajero"
+
+msgctxt "model:galeno.occupation,name:occ363"
+msgid "Meteorologist"
+msgstr "Meteorólogo"
+
+msgctxt "model:galeno.occupation,name:occ364"
+msgid "Microbiologist"
+msgstr "Microbiólogo"
+
+msgctxt "model:galeno.occupation,name:occ365"
+msgid "Midwife"
+msgstr "Comadrona"
+
+msgctxt "model:galeno.occupation,name:occ366"
+msgid "Milkman "
+msgstr "Lechero"
+
+msgctxt "model:galeno.occupation,name:occ367"
+msgid "Miller"
+msgstr "Fresador"
+
+msgctxt "model:galeno.occupation,name:occ368"
+msgid "Miner"
+msgstr "Minero"
+
+msgctxt "model:galeno.occupation,name:occ369"
+msgid "Model"
+msgstr "Modelo"
+
+msgctxt "model:galeno.occupation,name:occ37"
+msgid "Chauffeur"
+msgstr "Chófer"
+
+msgctxt "model:galeno.occupation,name:occ370"
+msgid "Modeller"
+msgstr "Modelador"
+
+msgctxt "model:galeno.occupation,name:occ372"
+msgid "Moldmaker"
+msgstr "Fabricante de moldes"
+
+msgctxt "model:galeno.occupation,name:occ373"
+msgid "Moneychanger"
+msgstr "Cambiador de divisas"
+
+msgctxt "model:galeno.occupation,name:occ374"
+msgid "Moneylender"
+msgstr "Prestamista"
+
+msgctxt "model:galeno.occupation,name:occ375"
+msgid "Monk"
+msgstr "Monje"
+
+msgctxt "model:galeno.occupation,name:occ376"
+msgid "Mortgage banker"
+msgstr "Banquero hipotecario"
+
+msgctxt "model:galeno.occupation,name:occ377"
+msgid "Mortgage broker"
+msgstr "Corredor de hipotecas"
+
+msgctxt "model:galeno.occupation,name:occ378"
+msgid "Mortician"
+msgstr "Funerario"
+
+msgctxt "model:galeno.occupation,name:occ379"
+msgid "Mountain rescuer"
+msgstr "Rescatador alpino"
+
+msgctxt "model:galeno.occupation,name:occ38"
+msgid "Cheerleader"
+msgstr "Animador"
+
+msgctxt "model:galeno.occupation,name:occ380"
+msgid "Mountaineer"
+msgstr "Alpinista"
+
+msgctxt "model:galeno.occupation,name:occ382"
+msgid "Muralist"
+msgstr "Muralista"
+
+msgctxt "model:galeno.occupation,name:occ383"
+msgid "Music Director"
+msgstr "Director de música"
+
+msgctxt "model:galeno.occupation,name:occ384"
+msgid "Musician"
+msgstr "Músico"
+
+msgctxt "model:galeno.occupation,name:occ385"
+msgid "Nanny"
+msgstr "Niñera"
+
+msgctxt "model:galeno.occupation,name:occ386"
+msgid "Navigator"
+msgstr "Navegante"
+
+msgctxt "model:galeno.occupation,name:occ388"
+msgid "Négociant"
+msgstr "Comerciante de vino"
+
+msgctxt "model:galeno.occupation,name:occ389"
+msgid "Negotiator"
+msgstr "Negociador"
+
+msgctxt "model:galeno.occupation,name:occ39"
+msgid "Cheesemaker"
+msgstr "Quesero"
+
+msgctxt "model:galeno.occupation,name:occ391"
+msgid "Neurosurgeon"
+msgstr "Neurocirujano"
+
+msgctxt "model:galeno.occupation,name:occ392"
+msgid "Newscaster"
+msgstr "Presentador de noticias"
+
+msgctxt "model:galeno.occupation,name:occ393"
+msgid "Notary"
+msgstr "Notario"
+
+msgctxt "model:galeno.occupation,name:occ394"
+msgid "Novelist"
+msgstr "Novelista"
+
+msgctxt "model:galeno.occupation,name:occ395"
+msgid "Nuclear Engineer"
+msgstr "Ingeniero nuclear"
+
+msgctxt "model:galeno.occupation,name:occ396"
+msgid "Numerologist"
+msgstr "Numerólogo"
+
+msgctxt "model:galeno.occupation,name:occ397"
+msgid "Numismatist"
+msgstr "Numismático"
+
+msgctxt "model:galeno.occupation,name:occ398"
+msgid "Nun"
+msgstr "Monja"
+
+msgctxt "model:galeno.occupation,name:occ399"
+msgid "Nurse"
+msgstr "Enfermero"
+
+msgctxt "model:galeno.occupation,name:occ4"
+msgid "Astronaut"
+msgstr "Astronauta"
+
+msgctxt "model:galeno.occupation,name:occ40"
+msgid "Chef "
+msgstr "Chef"
+
+msgctxt "model:galeno.occupation,name:occ400"
+msgid "Nursemaid"
+msgstr "Cuidadora"
+
+msgctxt "model:galeno.occupation,name:occ401"
+msgid "Oboist"
+msgstr "Oboísta"
+
+msgctxt "model:galeno.occupation,name:occ402"
+msgid "Obstetrician"
+msgstr "Obstetra"
+
+msgctxt "model:galeno.occupation,name:occ403"
+msgid "Occupational therapist"
+msgstr "Terapeuta ocupacional"
+
+msgctxt "model:galeno.occupation,name:occ404"
+msgid "Odontologist"
+msgstr "Odontólogo"
+
+msgctxt "model:galeno.occupation,name:occ405"
+msgid "Office Assistant"
+msgstr "Ayudante de oficina"
+
+msgctxt "model:galeno.occupation,name:occ406"
+msgid "Oncologist"
+msgstr "Oncólogo"
+
+msgctxt "model:galeno.occupation,name:occ407"
+msgid "Ontologist"
+msgstr "Ontólogo"
+
+msgctxt "model:galeno.occupation,name:occ408"
+msgid "Operator"
+msgstr "Telefonista"
+
+msgctxt "model:galeno.occupation,name:occ409"
+msgid "Ophthalmologist"
+msgstr "Oftalmólogo"
+
+msgctxt "model:galeno.occupation,name:occ41"
+msgid "Chemical Engineer"
+msgstr "Ingeniero químico"
+
+msgctxt "model:galeno.occupation,name:occ410"
+msgid "Optician"
+msgstr "Oculista"
+
+msgctxt "model:galeno.occupation,name:occ411"
+msgid "Oracle"
+msgstr "Oráculo"
+
+msgctxt "model:galeno.occupation,name:occ412"
+msgid "Ordinary Seaman"
+msgstr "Marinero"
+
+msgctxt "model:galeno.occupation,name:occ413"
+msgid "Organist"
+msgstr "Organista"
+
+msgctxt "model:galeno.occupation,name:occ414"
+msgid "Organizer"
+msgstr "Organizador"
+
+msgctxt "model:galeno.occupation,name:occ415"
+msgid "Ornithologist"
+msgstr "Ornitólogo"
+
+msgctxt "model:galeno.occupation,name:occ416"
+msgid "Orthodontist"
+msgstr "Ortodoncista"
+
+msgctxt "model:galeno.occupation,name:occ417"
+msgid "Orthopaedist"
+msgstr "Ortopedista"
+
+msgctxt "model:galeno.occupation,name:occ418"
+msgid "Ostler"
+msgstr "mozo de cuadra"
+
+msgctxt "model:galeno.occupation,name:occ419"
+msgid "Otorhinolaryngologist"
+msgstr "Otorrinolaringólogo"
+
+msgctxt "model:galeno.occupation,name:occ42"
+msgid "Chemical Technologist"
+msgstr "Técnico químico"
+
+msgctxt "model:galeno.occupation,name:occ420"
+msgid "Painter"
+msgstr "Pintor de brocha gorda"
+
+msgctxt "model:galeno.occupation,name:occ421"
+msgid "Paleontologist"
+msgstr "Paleontólogo"
+
+msgctxt "model:galeno.occupation,name:occ422"
+msgid "Parachute instructor"
+msgstr "Instructor de paracaidismo"
+
+msgctxt "model:galeno.occupation,name:occ423"
+msgid "Paralegal"
+msgstr "Asistente legal"
+
+msgctxt "model:galeno.occupation,name:occ424"
+msgid "Paramedic"
+msgstr "Paramédico"
+
+msgctxt "model:galeno.occupation,name:occ425"
+msgid "Park ranger"
+msgstr "Guardaparques"
+
+msgctxt "model:galeno.occupation,name:occ426"
+msgid "Patent attorney"
+msgstr "Abogado de patentes"
+
+msgctxt "model:galeno.occupation,name:occ427"
+msgid "Patent examiner"
+msgstr "Examinador de patentes"
+
+msgctxt "model:galeno.occupation,name:occ428"
+msgid "Pathologist"
+msgstr "Patólogo"
+
+msgctxt "model:galeno.occupation,name:occ429"
+msgid "Pawnbroker"
+msgstr "Prestamista"
+
+msgctxt "model:galeno.occupation,name:occ43"
+msgid "Chemist"
+msgstr "Químico"
+
+msgctxt "model:galeno.occupation,name:occ430"
+msgid "Peddler"
+msgstr "Vendedor ambulante"
+
+msgctxt "model:galeno.occupation,name:occ431"
+msgid "Pediatrician"
+msgstr "Pediatra"
+
+msgctxt "model:galeno.occupation,name:occ432"
+msgid "Pediatrist"
+msgstr "Pediatra"
+
+msgctxt "model:galeno.occupation,name:occ433"
+msgid "Pedologist (soil)"
+msgstr "Edafólogo (suelo)"
+
+msgctxt "model:galeno.occupation,name:occ434"
+msgid "Pedologist (children)"
+msgstr "Pedagogo"
+
+msgctxt "model:galeno.occupation,name:occ435"
+msgid "Percussionist"
+msgstr "Percusionista"
+
+msgctxt "model:galeno.occupation,name:occ436"
+msgid "Perfumer"
+msgstr "Perfumista"
+
+msgctxt "model:galeno.occupation,name:occ437"
+msgid "Personal Trainer"
+msgstr "Entrenador personal"
+
+msgctxt "model:galeno.occupation,name:occ438"
+msgid "Pharmacist"
+msgstr "Farmacéutico"
+
+msgctxt "model:galeno.occupation,name:occ439"
+msgid "Philanthropist"
+msgstr "Filántropo"
+
+msgctxt "model:galeno.occupation,name:occ44"
+msgid "Chief of Police"
+msgstr "Jefe de Policía"
+
+msgctxt "model:galeno.occupation,name:occ440"
+msgid "Philologist"
+msgstr "Filólogo"
+
+msgctxt "model:galeno.occupation,name:occ441"
+msgid "Photographer"
+msgstr "Fotógrafo"
+
+msgctxt "model:galeno.occupation,name:occ442"
+msgid "Physical Therapist"
+msgstr "Fisioterapeuta"
+
+msgctxt "model:galeno.occupation,name:occ443"
+msgid "Physician"
+msgstr "Médico"
+
+msgctxt "model:galeno.occupation,name:occ444"
+msgid "Physician Assistant"
+msgstr "Asistente médico"
+
+msgctxt "model:galeno.occupation,name:occ445"
+msgid "Physicist"
+msgstr "Físico"
+
+msgctxt "model:galeno.occupation,name:occ446"
+msgid "Physiognomist"
+msgstr "Fisonomista"
+
+msgctxt "model:galeno.occupation,name:occ447"
+msgid "Physiologist"
+msgstr "Fisiólogo"
+
+msgctxt "model:galeno.occupation,name:occ448"
+msgid "Physiotherapist"
+msgstr "Fisioterapeuta"
+
+msgctxt "model:galeno.occupation,name:occ449"
+msgid "Pianist"
+msgstr "Pianista"
+
+msgctxt "model:galeno.occupation,name:occ45"
+msgid "Chief Mate"
+msgstr "Oficial de primera"
+
+msgctxt "model:galeno.occupation,name:occ450"
+msgid "Piano tuner"
+msgstr "Afinador de pianos"
+
+msgctxt "model:galeno.occupation,name:occ451"
+msgid "Pilot"
+msgstr "Piloto"
+
+msgctxt "model:galeno.occupation,name:occ452"
+msgid "Pirate"
+msgstr "Pirata"
+
+msgctxt "model:galeno.occupation,name:occ453"
+msgid "Plastic surgeon"
+msgstr "Cirujano plástico"
+
+msgctxt "model:galeno.occupation,name:occ454"
+msgid "Playwright"
+msgstr "Dramaturgo"
+
+msgctxt "model:galeno.occupation,name:occ455"
+msgid "Plumber"
+msgstr "Fontanero"
+
+msgctxt "model:galeno.occupation,name:occ456"
+msgid "Poet"
+msgstr "Poeta"
+
+msgctxt "model:galeno.occupation,name:occ457"
+msgid "Police"
+msgstr "Policía"
+
+msgctxt "model:galeno.occupation,name:occ458"
+msgid "Policeman"
+msgstr "Policía (hombre)"
+
+msgctxt "model:galeno.occupation,name:occ459"
+msgid "Policewoman"
+msgstr "Policía (mujer)"
+
+msgctxt "model:galeno.occupation,name:occ46"
+msgid "Chimney-sweeper"
+msgstr "Deshollinador"
+
+msgctxt "model:galeno.occupation,name:occ460"
+msgid "Police officer"
+msgstr "Oficial de policía"
+
+msgctxt "model:galeno.occupation,name:occ461"
+msgid "Police inspector"
+msgstr "Inspector de policía"
+
+msgctxt "model:galeno.occupation,name:occ462"
+msgid "Political scientist"
+msgstr "Politólogo"
+
+msgctxt "model:galeno.occupation,name:occ463"
+msgid "Presenter"
+msgstr "Presentador"
+
+msgctxt "model:galeno.occupation,name:occ464"
+msgid "Press officer"
+msgstr "Jefe de prensa"
+
+msgctxt "model:galeno.occupation,name:occ465"
+msgid "Principal"
+msgstr "Principal"
+
+msgctxt "model:galeno.occupation,name:occ466"
+msgid "Printer"
+msgstr "Impresor"
+
+msgctxt "model:galeno.occupation,name:occ467"
+msgid "Private detective"
+msgstr "Detective privado"
+
+msgctxt "model:galeno.occupation,name:occ468"
+msgid "Proctologist"
+msgstr "Proctólogo"
+
+msgctxt "model:galeno.occupation,name:occ469"
+msgid "Professor"
+msgstr "Catedrático"
+
+msgctxt "model:galeno.occupation,name:occ47"
+msgid "Chiropodist"
+msgstr "Pedicuro"
+
+msgctxt "model:galeno.occupation,name:occ470"
+msgid "Professional dominant"
+msgstr "Profesional dominante"
+
+msgctxt "model:galeno.occupation,name:occ471"
+msgid "Programmer"
+msgstr "Programador"
+
+msgctxt "model:galeno.occupation,name:occ472"
+msgid "Project Manager"
+msgstr "Jefe de Proyecto"
+
+msgctxt "model:galeno.occupation,name:occ473"
+msgid "Proofreader"
+msgstr "Corrector de pruebas"
+
+msgctxt "model:galeno.occupation,name:occ474"
+msgid "Prostitute"
+msgstr "Prostituta"
+
+msgctxt "model:galeno.occupation,name:occ475"
+msgid "Psychiatrist"
+msgstr "Psiquiatra"
+
+msgctxt "model:galeno.occupation,name:occ476"
+msgid "Psychodramatist"
+msgstr "Psicodramatista"
+
+msgctxt "model:galeno.occupation,name:occ477"
+msgid "Psychologist"
+msgstr "Psicólogo"
+
+msgctxt "model:galeno.occupation,name:occ478"
+msgid "Public Relations Officer"
+msgstr "Relaciones Públicas"
+
+msgctxt "model:galeno.occupation,name:occ479"
+msgid "Public speaker"
+msgstr "Orador"
+
+msgctxt "model:galeno.occupation,name:occ48"
+msgid "Doctor of Chiropractic"
+msgstr "Quiropráctico"
+
+msgctxt "model:galeno.occupation,name:occ480"
+msgid "Publisher"
+msgstr "Editor"
+
+msgctxt "model:galeno.occupation,name:occ482"
+msgid "Radiologist"
+msgstr "Radiólogo"
+
+msgctxt "model:galeno.occupation,name:occ483"
+msgid "Radiographer"
+msgstr "Radiógrafo"
+
+msgctxt "model:galeno.occupation,name:occ484"
+msgid "Racing Driver"
+msgstr "Piloto de carreras"
+
+msgctxt "model:galeno.occupation,name:occ485"
+msgid "Real estate agent"
+msgstr "Agente de bienes raíces"
+
+msgctxt "model:galeno.occupation,name:occ486"
+msgid "Real estate broker"
+msgstr "Corredor de bienes raíces"
+
+msgctxt "model:galeno.occupation,name:occ487"
+msgid "Real estate investor"
+msgstr "Inversionista de bienes raíces"
+
+msgctxt "model:galeno.occupation,name:occ488"
+msgid "Real estate developer"
+msgstr "Desarrollador  de bienes raíces"
+
+msgctxt "model:galeno.occupation,name:occ489"
+msgid "Receptionist"
+msgstr "Recepcionista"
+
+msgctxt "model:galeno.occupation,name:occ49"
+msgid "Choreographer"
+msgstr "Coreógrafo"
+
+msgctxt "model:galeno.occupation,name:occ490"
+msgid "Record Producer"
+msgstr "Productor discográfico"
+
+msgctxt "model:galeno.occupation,name:occ491"
+msgid "Recording engineer"
+msgstr "Ingeniero de grabación"
+
+msgctxt "model:galeno.occupation,name:occ492"
+msgid "Referee"
+msgstr "Árbitro"
+
+msgctxt "model:galeno.occupation,name:occ493"
+msgid "Refuse collector"
+msgstr "Basurero"
+
+msgctxt "model:galeno.occupation,name:occ494"
+msgid "Registrar"
+msgstr "Registrador"
+
+msgctxt "model:galeno.occupation,name:occ495"
+msgid "Remedial teacher"
+msgstr "Profesor de apoyo"
+
+msgctxt "model:galeno.occupation,name:occ496"
+msgid "Reporter"
+msgstr "Reportero"
+
+msgctxt "model:galeno.occupation,name:occ497"
+msgid "Respiratory Therapist"
+msgstr "Terapeuta respiratorio"
+
+msgctxt "model:galeno.occupation,name:occ498"
+msgid "Restaurateur"
+msgstr "Restaurador"
+
+msgctxt "model:galeno.occupation,name:occ499"
+msgid "Retailer"
+msgstr "Minorista"
+
+msgctxt "model:galeno.occupation,name:occ5"
+msgid "Archaeologist"
+msgstr "Arqueólogo"
+
+msgctxt "model:galeno.occupation,name:occ50"
+msgid "Church usher"
+msgstr "Acomodador de la iglesia"
+
+msgctxt "model:galeno.occupation,name:occ501"
+msgid "Sailmaker"
+msgstr "Velero"
+
+msgctxt "model:galeno.occupation,name:occ502"
+msgid "Sailor"
+msgstr "Marinero"
+
+msgctxt "model:galeno.occupation,name:occ503"
+msgid "Salesperson"
+msgstr "Vendedor"
+
+msgctxt "model:galeno.occupation,name:occ504"
+msgid "Salaryman"
+msgstr "Ejecutivo asalariado"
+
+msgctxt "model:galeno.occupation,name:occ505"
+msgid "Saucier"
+msgstr "Cocinero de salsas"
+
+msgctxt "model:galeno.occupation,name:occ506"
+msgid "Saxophonist"
+msgstr "Saxofonista"
+
+msgctxt "model:galeno.occupation,name:occ507"
+msgid "Sawyer"
+msgstr "Aserrador"
+
+msgctxt "model:galeno.occupation,name:occ508"
+msgid "Scabbardmaker"
+msgstr "Fabricante de vainas"
+
+msgctxt "model:galeno.occupation,name:occ509"
+msgid "School-bus driver"
+msgstr "Conductor de transporte escolar"
+
+msgctxt "model:galeno.occupation,name:occ51"
+msgid "CIA Agent"
+msgstr "Agente de la CIA "
+
+msgctxt "model:galeno.occupation,name:occ510"
+msgid "School Principal"
+msgstr "Director de escuela"
+
+msgctxt "model:galeno.occupation,name:occ511"
+msgid "School superintendent"
+msgstr "Superintendente de escuela"
+
+msgctxt "model:galeno.occupation,name:occ512"
+msgid "Scientist"
+msgstr "Científico"
+
+msgctxt "model:galeno.occupation,name:occ513"
+msgid "Scout"
+msgstr "Explorador"
+
+msgctxt "model:galeno.occupation,name:occ514"
+msgid "Screenwriter"
+msgstr "Guionista"
+
+msgctxt "model:galeno.occupation,name:occ515"
+msgid "Scribe"
+msgstr "Escriba"
+
+msgctxt "model:galeno.occupation,name:occ516"
+msgid "Sculptor"
+msgstr "Escultor"
+
+msgctxt "model:galeno.occupation,name:occ517"
+msgid "Seamstress"
+msgstr "Costurero"
+
+msgctxt "model:galeno.occupation,name:occ518"
+msgid "Second Mate"
+msgstr "Segundo de a bordo"
+
+msgctxt "model:galeno.occupation,name:occ519"
+msgid "Secret service agent"
+msgstr "Agente del servicio secreto"
+
+msgctxt "model:galeno.occupation,name:occ52"
+msgid "Circuit preacher"
+msgstr "Predicador de circuito"
+
+msgctxt "model:galeno.occupation,name:occ520"
+msgid "Secretary"
+msgstr "Secretaria"
+
+msgctxt "model:galeno.occupation,name:occ521"
+msgid "Secretary general"
+msgstr "Secretario general"
+
+msgctxt "model:galeno.occupation,name:occ522"
+msgid "Servant"
+msgstr "Funcionario"
+
+msgctxt "model:galeno.occupation,name:occ523"
+msgid "Sexologist"
+msgstr "Sexólogo"
+
+msgctxt "model:galeno.occupation,name:occ524"
+msgid "Sexton"
+msgstr "Sacristán"
+
+msgctxt "model:galeno.occupation,name:occ525"
+msgid "Sex worker"
+msgstr "Trabajador sexual"
+
+msgctxt "model:galeno.occupation,name:occ526"
+msgid "Sheepshearer"
+msgstr "Esquilador"
+
+msgctxt "model:galeno.occupation,name:occ527"
+msgid "Shepherd"
+msgstr "Pastor"
+
+msgctxt "model:galeno.occupation,name:occ528"
+msgid "Shaman"
+msgstr "Chamán"
+
+msgctxt "model:galeno.occupation,name:occ529"
+msgid "Scott"
+msgstr "Scott"
+
+msgctxt "model:galeno.occupation,name:occ53"
+msgid "Civil servant"
+msgstr "Funcionario público"
+
+msgctxt "model:galeno.occupation,name:occ530"
+msgid "Sheriff"
+msgstr "Alguacil"
+
+msgctxt "model:galeno.occupation,name:occ531"
+msgid "Sheriff officer"
+msgstr "Oficial de alguacil"
+
+msgctxt "model:galeno.occupation,name:occ532"
+msgid "Shoemaker"
+msgstr "Zapatero"
+
+msgctxt "model:galeno.occupation,name:occ533"
+msgid "Singer"
+msgstr "Cantante"
+
+msgctxt "model:galeno.occupation,name:occ536"
+msgid "Social worker"
+msgstr "Trabajador social"
+
+msgctxt "model:galeno.occupation,name:occ537"
+msgid "Sociologists"
+msgstr "Sociólogo"
+
+msgctxt "model:galeno.occupation,name:occ538"
+msgid "Software architect"
+msgstr "Arquitecto de software"
+
+msgctxt "model:galeno.occupation,name:occ539"
+msgid "Software engineer"
+msgstr "Ingeniero de software"
+
+msgctxt "model:galeno.occupation,name:occ54"
+msgid "Civil engineer"
+msgstr "Ingeniero Civil"
+
+msgctxt "model:galeno.occupation,name:occ540"
+msgid "Software project manager"
+msgstr "Gestor de proyectos de software"
+
+msgctxt "model:galeno.occupation,name:occ541"
+msgid "Soil scientist"
+msgstr "Edafólogo"
+
+msgctxt "model:galeno.occupation,name:occ542"
+msgid "Soldier"
+msgstr "Soldado"
+
+msgctxt "model:galeno.occupation,name:occ543"
+msgid "Solicitor"
+msgstr "Procurador de tribunales"
+
+msgctxt "model:galeno.occupation,name:occ544"
+msgid "Sommelier"
+msgstr "Sommelier"
+
+msgctxt "model:galeno.occupation,name:occ545"
+msgid "Sound Engineer"
+msgstr "Ingeniero de sonido"
+
+msgctxt "model:galeno.occupation,name:occ546"
+msgid "Special agent"
+msgstr "Agente especial"
+
+msgctxt "model:galeno.occupation,name:occ547"
+msgid "Specialist"
+msgstr "Especialista"
+
+msgctxt "model:galeno.occupation,name:occ548"
+msgid "Speech therapist"
+msgstr "Logopeda"
+
+msgctxt "model:galeno.occupation,name:occ55"
+msgid "Clarinetist"
+msgstr "Clarinetista"
+
+msgctxt "model:galeno.occupation,name:occ550"
+msgid "Sports therapist"
+msgstr "Terapeuta deportivo"
+
+msgctxt "model:galeno.occupation,name:occ551"
+msgid "Stage designer"
+msgstr "Escenógrafo"
+
+msgctxt "model:galeno.occupation,name:occ552"
+msgid "Statistician"
+msgstr "Estadístico"
+
+msgctxt "model:galeno.occupation,name:occ553"
+msgid "Steward or stewardess"
+msgstr "Azafata/o"
+
+msgctxt "model:galeno.occupation,name:occ554"
+msgid "Stock broker"
+msgstr "Corredor de bolsa"
+
+msgctxt "model:galeno.occupation,name:occ555"
+msgid "Store Manager"
+msgstr "Gerente de local"
+
+msgctxt "model:galeno.occupation,name:occ556"
+msgid "Street artist"
+msgstr "Artista callejero"
+
+msgctxt "model:galeno.occupation,name:occ557"
+msgid "Street musician"
+msgstr "Músico callejero"
+
+msgctxt "model:galeno.occupation,name:occ558"
+msgid "Street vendor"
+msgstr "Vendedor callejero"
+
+msgctxt "model:galeno.occupation,name:occ559"
+msgid "Stringer"
+msgstr "Reportero"
+
+msgctxt "model:galeno.occupation,name:occ56"
+msgid "Cleaner"
+msgstr "Limpiador"
+
+msgctxt "model:galeno.occupation,name:occ560"
+msgid "Stripper"
+msgstr "Stripper"
+
+msgctxt "model:galeno.occupation,name:occ561"
+msgid "Structural engineers"
+msgstr "Ingeniero de Estructuras"
+
+msgctxt "model:galeno.occupation,name:occ562"
+msgid "Student"
+msgstr "Estudiante"
+
+msgctxt "model:galeno.occupation,name:occ564"
+msgid "Stunt coordinator"
+msgstr "Coordinador de doblaje"
+
+msgctxt "model:galeno.occupation,name:occ565"
+msgid "Stunt double"
+msgstr "Doble especialista"
+
+msgctxt "model:galeno.occupation,name:occ566"
+msgid "Stunt performer"
+msgstr "Actor de doblaje"
+
+msgctxt "model:galeno.occupation,name:occ568"
+msgid "Surgeon"
+msgstr "Cirujano"
+
+msgctxt "model:galeno.occupation,name:occ569"
+msgid "Surgical Technologist"
+msgstr "Técnico quirúrgico"
+
+msgctxt "model:galeno.occupation,name:occ57"
+msgid "Clerk"
+msgstr "Empleado"
+
+msgctxt "model:galeno.occupation,name:occ570"
+msgid "Surveyor"
+msgstr "Topógrafo"
+
+msgctxt "model:galeno.occupation,name:occ571"
+msgid "Swimmer"
+msgstr "Nadador"
+
+msgctxt "model:galeno.occupation,name:occ572"
+msgid "Switchboard operator"
+msgstr "Telefonista de centralita"
+
+msgctxt "model:galeno.occupation,name:occ573"
+msgid "System administrator"
+msgstr "Administrador de sistemas"
+
+msgctxt "model:galeno.occupation,name:occ574"
+msgid "Systems designer"
+msgstr "Diseñador de sistemas"
+
+msgctxt "model:galeno.occupation,name:occ575"
+msgid "Systems analyst"
+msgstr "Analista de sistemas"
+
+msgctxt "model:galeno.occupation,name:occ576"
+msgid "Tailor"
+msgstr "Sastre"
+
+msgctxt "model:galeno.occupation,name:occ578"
+msgid "Tapicer"
+msgstr "Tapicero"
+
+msgctxt "model:galeno.occupation,name:occ579"
+msgid "Tax Collector"
+msgstr "Recaudador de impuestos"
+
+msgctxt "model:galeno.occupation,name:occ58"
+msgid "Clockmaker"
+msgstr "Relojero"
+
+msgctxt "model:galeno.occupation,name:occ580"
+msgid "Taxidermist"
+msgstr "Taxidermista"
+
+msgctxt "model:galeno.occupation,name:occ581"
+msgid "Taxi-driver"
+msgstr "Taxista"
+
+msgctxt "model:galeno.occupation,name:occ582"
+msgid "Taxonomist"
+msgstr "Taxónomo"
+
+msgctxt "model:galeno.occupation,name:occ583"
+msgid "Tea lady"
+msgstr "tea lady"
+
+msgctxt "model:galeno.occupation,name:occ584"
+msgid "Teacher"
+msgstr "Profesor"
+
+msgctxt "model:galeno.occupation,name:occ585"
+msgid "Technician"
+msgstr "Técnico"
+
+msgctxt "model:galeno.occupation,name:occ586"
+msgid "Technologist"
+msgstr "Tecnólogo"
+
+msgctxt "model:galeno.occupation,name:occ587"
+msgid "Technical Writer"
+msgstr "Escrito técnico"
+
+msgctxt "model:galeno.occupation,name:occ588"
+msgid "Telegraphist"
+msgstr "Telegrafista"
+
+msgctxt "model:galeno.occupation,name:occ589"
+msgid "Telemarketer"
+msgstr "Telemarketer"
+
+msgctxt "model:galeno.occupation,name:occ59"
+msgid "Coach"
+msgstr "Entrenador"
+
+msgctxt "model:galeno.occupation,name:occ590"
+msgid "Telephone operator"
+msgstr "Operador telefónico"
+
+msgctxt "model:galeno.occupation,name:occ591"
+msgid "Tennis player"
+msgstr "Tenista"
+
+msgctxt "model:galeno.occupation,name:occ592"
+msgid "Test developer"
+msgstr "Desarrollador de test"
+
+msgctxt "model:galeno.occupation,name:occ593"
+msgid "Test pilot"
+msgstr "Piloto de pruebas"
+
+msgctxt "model:galeno.occupation,name:occ594"
+msgid "Thatcher"
+msgstr "Techador"
+
+msgctxt "model:galeno.occupation,name:occ595"
+msgid "Theatre director"
+msgstr "Director de teatro"
+
+msgctxt "model:galeno.occupation,name:occ596"
+msgid "Theologian"
+msgstr "Teólogo"
+
+msgctxt "model:galeno.occupation,name:occ597"
+msgid "Therapist"
+msgstr "Terapeuta"
+
+msgctxt "model:galeno.occupation,name:occ599"
+msgid "Tiler"
+msgstr "Alicatador"
+
+msgctxt "model:galeno.occupation,name:occ6"
+msgid "Architect"
+msgstr "Arquitecto"
+
+msgctxt "model:galeno.occupation,name:occ60"
+msgid "Coachman"
+msgstr "Cochero"
+
+msgctxt "model:galeno.occupation,name:occ600"
+msgid "Toolmaker"
+msgstr "Fabricante de herramientas"
+
+msgctxt "model:galeno.occupation,name:occ601"
+msgid "Trademark attorney"
+msgstr "Abogado de marcas"
+
+msgctxt "model:galeno.occupation,name:occ602"
+msgid "Trader"
+msgstr "Comerciante"
+
+msgctxt "model:galeno.occupation,name:occ603"
+msgid "Tradesman"
+msgstr "Proveedor"
+
+msgctxt "model:galeno.occupation,name:occ604"
+msgid "Trainer"
+msgstr "Entrenador"
+
+msgctxt "model:galeno.occupation,name:occ605"
+msgid "Transit planner"
+msgstr "Planificador de tránsito"
+
+msgctxt "model:galeno.occupation,name:occ606"
+msgid "Translator"
+msgstr "Traductor"
+
+msgctxt "model:galeno.occupation,name:occ607"
+msgid "Treasurer"
+msgstr "Tesorero"
+
+msgctxt "model:galeno.occupation,name:occ608"
+msgid "Trigonometrist"
+msgstr "Trigonometrista"
+
+msgctxt "model:galeno.occupation,name:occ609"
+msgid "Truck Driver"
+msgstr "Camionero"
+
+msgctxt "model:galeno.occupation,name:occ61"
+msgid "Coast guard"
+msgstr "Guardia costera"
+
+msgctxt "model:galeno.occupation,name:occ610"
+msgid "Tuner"
+msgstr "Afinador"
+
+msgctxt "model:galeno.occupation,name:occ611"
+msgid "Turner"
+msgstr "Tornero"
+
+msgctxt "model:galeno.occupation,name:occ612"
+msgid "Tutor"
+msgstr "Tutor"
+
+msgctxt "model:galeno.occupation,name:occ613"
+msgid "Tyler"
+msgstr "Portero"
+
+msgctxt "model:galeno.occupation,name:occ614"
+msgid "Undertaker"
+msgstr "Enterrador"
+
+msgctxt "model:galeno.occupation,name:occ615"
+msgid "Ufologist"
+msgstr "Ufólogo"
+
+msgctxt "model:galeno.occupation,name:occ616"
+msgid "Undercover agent"
+msgstr "Agente encubierto"
+
+msgctxt "model:galeno.occupation,name:occ617"
+msgid "Upholder"
+msgstr "Defensor"
+
+msgctxt "model:galeno.occupation,name:occ618"
+msgid "Upholsterer"
+msgstr "Tapicero"
+
+msgctxt "model:galeno.occupation,name:occ619"
+msgid "Urologist"
+msgstr "Urólogo"
+
+msgctxt "model:galeno.occupation,name:occ62"
+msgid "Cobbler"
+msgstr "Zapatero"
+
+msgctxt "model:galeno.occupation,name:occ620"
+msgid "Urban planner"
+msgstr "Urbanista"
+
+msgctxt "model:galeno.occupation,name:occ621"
+msgid "Usher"
+msgstr "Ujier"
+
+msgctxt "model:galeno.occupation,name:occ622"
+msgid "Valet"
+msgstr "Aparcacoches"
+
+msgctxt "model:galeno.occupation,name:occ623"
+msgid "Verger"
+msgstr "Sacristán"
+
+msgctxt "model:galeno.occupation,name:occ624"
+msgid "Veterinarian"
+msgstr "Veterinario"
+
+msgctxt "model:galeno.occupation,name:occ625"
+msgid "Vibraphonist"
+msgstr "Vibrafonista"
+
+msgctxt "model:galeno.occupation,name:occ626"
+msgid "Vicar"
+msgstr "Vicario"
+
+msgctxt "model:galeno.occupation,name:occ627"
+msgid "Video editor"
+msgstr "Editor de videos"
+
+msgctxt "model:galeno.occupation,name:occ628"
+msgid "Video game developer"
+msgstr "Desarrollador de videojuegos"
+
+msgctxt "model:galeno.occupation,name:occ629"
+msgid "Vintner"
+msgstr "Vinatero"
+
+msgctxt "model:galeno.occupation,name:occ63"
+msgid "Cognitive scientist"
+msgstr "Científico cognitivo"
+
+msgctxt "model:galeno.occupation,name:occ630"
+msgid "Violinist"
+msgstr "Violinista"
+
+msgctxt "model:galeno.occupation,name:occ631"
+msgid "Violist"
+msgstr "Violista"
+
+msgctxt "model:galeno.occupation,name:occ632"
+msgid "Vocalist"
+msgstr "Vocalista"
+
+msgctxt "model:galeno.occupation,name:occ633"
+msgid "Waiter"
+msgstr "Camarero"
+
+msgctxt "model:galeno.occupation,name:occ634"
+msgid "Warder"
+msgstr "Carcelero"
+
+msgctxt "model:galeno.occupation,name:occ635"
+msgid "Weaponsmith"
+msgstr "Armero"
+
+msgctxt "model:galeno.occupation,name:occ636"
+msgid "Weatherman"
+msgstr "Meteorólogo"
+
+msgctxt "model:galeno.occupation,name:occ637"
+msgid "Weaver"
+msgstr "Tejedor"
+
+msgctxt "model:galeno.occupation,name:occ638"
+msgid "Webmaster"
+msgstr "Webmaster"
+
+msgctxt "model:galeno.occupation,name:occ639"
+msgid "Web developer"
+msgstr "Desarrollador web"
+
+msgctxt "model:galeno.occupation,name:occ64"
+msgid "Columnist"
+msgstr "Columnista"
+
+msgctxt "model:galeno.occupation,name:occ640"
+msgid "Web designer"
+msgstr "Diseñador web"
+
+msgctxt "model:galeno.occupation,name:occ641"
+msgid "Welder"
+msgstr "Soldador"
+
+msgctxt "model:galeno.occupation,name:occ642"
+msgid "Wet nurse"
+msgstr "Nodriza"
+
+msgctxt "model:galeno.occupation,name:occ643"
+msgid "Woodcarver"
+msgstr "Tallador de madera"
+
+msgctxt "model:galeno.occupation,name:occ644"
+msgid "Wood cutter"
+msgstr "Leñador"
+
+msgctxt "model:galeno.occupation,name:occ645"
+msgid "Wrangler"
+msgstr "Vaquero"
+
+msgctxt "model:galeno.occupation,name:occ646"
+msgid "Winemaker"
+msgstr "Enólogo"
+
+msgctxt "model:galeno.occupation,name:occ647"
+msgid "Writer"
+msgstr "Escritor"
+
+msgctxt "model:galeno.occupation,name:occ648"
+msgid "Xylophonist"
+msgstr "Xilofonista"
+
+msgctxt "model:galeno.occupation,name:occ649"
+msgid "X-ray technician"
+msgstr "Técnico de Rayos X"
+
+msgctxt "model:galeno.occupation,name:occ65"
+msgid "Comedian"
+msgstr "Comediante"
+
+msgctxt "model:galeno.occupation,name:occ651"
+msgid "Youth worker"
+msgstr "Asesor juvenil"
+
+msgctxt "model:galeno.occupation,name:occ652"
+msgid "Zookeeper"
+msgstr "Trabajador de zoo"
+
+msgctxt "model:galeno.occupation,name:occ653"
+msgid "Zoologist"
+msgstr "Zoólogo"
+
+msgctxt "model:galeno.occupation,name:occ66"
+msgid "Compasssmith"
+msgstr "Fabricante de brújulas"
+
+msgctxt "model:galeno.occupation,name:occ67"
+msgid "Composer"
+msgstr "Compositor"
+
+msgctxt "model:galeno.occupation,name:occ68"
+msgid "Computer engineer"
+msgstr "Ingeniero informático"
+
+msgctxt "model:galeno.occupation,name:occ69"
+msgid "Computer programmer"
+msgstr "Programador informático"
+
+msgctxt "model:galeno.occupation,name:occ7"
+msgid "Auditor"
+msgstr "Auditor"
+
+msgctxt "model:galeno.occupation,name:occ70"
+msgid "Concierge"
+msgstr "Conserje"
+
+msgctxt "model:galeno.occupation,name:occ71"
+msgid "Conductor (music)"
+msgstr "Director de orquesta"
+
+msgctxt "model:galeno.occupation,name:occ72"
+msgid "Constable"
+msgstr "Condestable"
+
+msgctxt "model:galeno.occupation,name:occ73"
+msgid "Construction engineer"
+msgstr "Ingeniero constructor"
+
+msgctxt "model:galeno.occupation,name:occ74"
+msgid "Construction manager"
+msgstr "Administrador de obra"
+
+msgctxt "model:galeno.occupation,name:occ75"
+msgid "Construction worker"
+msgstr "Trabajador de la construcción"
+
+msgctxt "model:galeno.occupation,name:occ76"
+msgid "Consul"
+msgstr "Consul"
+
+msgctxt "model:galeno.occupation,name:occ77"
+msgid "Consultant"
+msgstr "Consultor"
+
+msgctxt "model:galeno.occupation,name:occ78"
+msgid "Contract Manager"
+msgstr "Administrador de contrato"
+
+msgctxt "model:galeno.occupation,name:occ79"
+msgid "Controller"
+msgstr "Inspector"
+
+msgctxt "model:galeno.occupation,name:occ8"
+msgid "Author"
+msgstr "Autor"
+
+msgctxt "model:galeno.occupation,name:occ80"
+msgid "Coroner"
+msgstr "Juez de instrucción"
+
+msgctxt "model:galeno.occupation,name:occ81"
+msgid "Corporate executive officer"
+msgstr "Director corporativo"
+
+msgctxt "model:galeno.occupation,name:occ82"
+msgid "Correctional Officer"
+msgstr "Carcelero"
+
+msgctxt "model:galeno.occupation,name:occ83"
+msgid "Corrector"
+msgstr "Corrector"
+
+msgctxt "model:galeno.occupation,name:occ84"
+msgid "Correspondent"
+msgstr "Corresponsal"
+
+msgctxt "model:galeno.occupation,name:occ85"
+msgid "Cosmetologist"
+msgstr "Cosmetólogo"
+
+msgctxt "model:galeno.occupation,name:occ86"
+msgid "Cosmonaut"
+msgstr "Cosmonauta"
+
+msgctxt "model:galeno.occupation,name:occ87"
+msgid "Costermonger"
+msgstr "Verdulero"
+
+msgctxt "model:galeno.occupation,name:occ88"
+msgid "Costume Designer"
+msgstr "Diseñador de ropa"
+
+msgctxt "model:galeno.occupation,name:occ89"
+msgid "Courier"
+msgstr "Mensajero"
+
+msgctxt "model:galeno.occupation,name:occ9"
+msgid "Artist"
+msgstr "Artista"
+
+msgctxt "model:galeno.occupation,name:occ90"
+msgid "Court jester"
+msgstr "Bufón de corte"
+
+msgctxt "model:galeno.occupation,name:occ91"
+msgid "Cowherd"
+msgstr "Vaquero"
+
+msgctxt "model:galeno.occupation,name:occ92"
+msgid "CPA (Certified Public Accountant)"
+msgstr "Contador Público"
+
+msgctxt "model:galeno.occupation,name:occ93"
+msgid "Craftsman "
+msgstr "Artesano"
+
+msgctxt "model:galeno.occupation,name:occ94"
+msgid "Creative engineering"
+msgstr "Ingeniero creativo"
+
+msgctxt "model:galeno.occupation,name:occ95"
+msgid "Crier"
+msgstr "Pregonero"
+
+msgctxt "model:galeno.occupation,name:occ96"
+msgid "Crofter"
+msgstr "Arrendatario"
+
+msgctxt "model:galeno.occupation,name:occ97"
+msgid "Cryptographer"
+msgstr "Criptógrafo"
+
+msgctxt "model:galeno.occupation,name:occ98"
+msgid "Cryptozoologist"
+msgstr "Criptozoólogo"
+
+msgctxt "model:galeno.occupation,name:occ99"
+msgid "Crystallographer"
+msgstr "Cristalógrafo"
+
+msgctxt "error:galeno.ethnic.group:"
+msgid "CODE must be unique !"
+msgstr "¡El CÓDIGO debe ser único!"
+
+msgctxt "error:galeno.ethnic.group:"
+msgid "Name must be unique !"
+msgstr "¡El nombre debe ser único!"
+
+msgctxt "field:galeno.ethnic.group,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.ethnic.group,create_date:"
+msgid "Create Date"
+msgstr "Fecha creación"
+
+msgctxt "field:galeno.ethnic.group,create_uid:"
+msgid "Create User"
+msgstr "Usuario creación"
+
+msgctxt "field:galeno.ethnic.group,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.ethnic.group,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.ethnic.group,rec_name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.ethnic.group,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.ethnic.group,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "model:galeno.ethnic.group,name:"
+msgid "Ethnicity"
+msgstr "Grupo étnico"
+
+msgctxt "model:galeno.ethnic.group,name:eth1"
+msgid "Black"
+msgstr "Negro"
+
+msgctxt "model:galeno.ethnic.group,name:eth2"
+msgid "Asian"
+msgstr "Asiático"
+
+msgctxt "model:galeno.ethnic.group,name:eth3"
+msgid "White"
+msgstr "Blanco"
+
+msgctxt "model:galeno.ethnic.group,name:eth4"
+msgid "Middle-East"
+msgstr "Oriente Medio"
+
+msgctxt "model:galeno.ethnic.group,name:eth5"
+msgid "Hispanic"
+msgstr "Hispánico"
+
+msgctxt "model:galeno.ethnic.group,name:eth6"
+msgid "African American"
+msgstr "Afroamericano"
+
+msgctxt "model:galeno.ethnic.group,name:eth7"
+msgid "Indian American"
+msgstr "Indio Americano"

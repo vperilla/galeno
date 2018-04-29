@@ -3,7 +3,11 @@
 
 from trytond.pool import Pool
 from . import user
-from . import galeno
+from . import occupation
+from . import ethnic_group
+from . import disease
+from . import patient
+from . import patient_disability
 
 __all__ = ['register']
 
@@ -11,7 +15,14 @@ __all__ = ['register']
 def register():
     Pool.register(
         user.User,
-        galeno.Patient,
+        occupation.Occupation,
+        ethnic_group.EthnicGroup,
+        disease.DiseaseCategory,
+        disease.DiseaseGroup,
+        disease.Disease,
+        disease.DiseaseMembers,
+        patient.Patient,
+        patient_disability.PatientDisability,
         module='galeno', type_='model')
     Pool.register(
         module='galeno', type_='wizard')

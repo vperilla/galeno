@@ -29,48 +29,12 @@
             <field name="menu" ref="menu_galeno"/>
             <field name="group" ref="group_galeno"/>
         </record>
-        <record model="ir.ui.view" id="patient_view_form">
-            <field name="model">galeno.patient</field>
-            <field name="type">form</field>
-            <field name="name">patient_form</field>
-        </record>
-        <record model="ir.ui.view" id="patient_view_tree">
-            <field name="model">galeno.patient</field>
-            <field name="type">tree</field>
-            <field name="name">patient_tree</field>
-        </record>
-        <record model="ir.action.act_window" id="act_patient_form">
-            <field name="name">Patients</field>
-            <field name="res_model">galeno.patient</field>
-        </record>
-        <record model="ir.action.act_window.view"
-            id="act_patient_form_view1">
-            <field name="sequence" eval="10"/>
-            <field name="view" ref="patient_view_tree"/>
-            <field name="act_window" ref="act_patient_form"/>
-        </record>
-        <record model="ir.action.act_window.view"
-            id="act_patient_form_view2">
-            <field name="sequence" eval="20"/>
-            <field name="view" ref="patient_view_form"/>
-            <field name="act_window" ref="act_patient_form"/>
-        </record>
-        <menuitem parent="menu_galeno" action="act_patient_form"
-            id="menu_patient_form" sequence="10" icon="galeno-patient"/>
-        <record model="ir.model.access" id="access_patient">
-            <field name="model" search="[('model', '=', 'galeno.patient')]"/>
-            <field name="perm_read" eval="False"/>
-            <field name="perm_write" eval="False"/>
-            <field name="perm_create" eval="False"/>
-            <field name="perm_delete" eval="False"/>
-        </record>
-        <record model="ir.model.access" id="access_patient_patient">
-            <field name="model" search="[('model', '=', 'galeno.patient')]"/>
-            <field name="group" ref="group_galeno"/>
-            <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="True"/>
-            <field name="perm_create" eval="True"/>
-            <field name="perm_delete" eval="True"/>
+        <menuitem name="Galeno Administration" id="menu_galeno_admin" sequence="4"
+            icon="tryton-preferences"/>
+        <record model="ir.ui.menu-res.group"
+            id="menu_galeno_admin_group_galeno_admin">
+            <field name="menu" ref="menu_galeno"/>
+            <field name="group" ref="group_galeno_admin"/>
         </record>
     </data>
 </tryton>

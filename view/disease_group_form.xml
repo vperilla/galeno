@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form>
+    <group id="disease_group_header">
+        <label name="name"/>
+        <field name="name"/>
+        <label name="code"/>
+        <field name="code"/>
+        <separator name="description" colspan="4"/>
+        <field name="description" colspan="4"/>
+        <separator string="Extra Information" colspan="4"
+            id="disease_groups_info"/>
+        <field name="information" colspan="4"/>
+    </group>
+    <group id="disease_groups">
+        <field name="diseases" colspan="4"/>
+    </group>
+</form>
