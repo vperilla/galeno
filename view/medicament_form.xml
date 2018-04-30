@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<form>
+    <group id="medicament_header">
+        <label name="code"/>
+        <field name="code"/>
+        <label name="company"/>
+        <field name="company"/>
+        <label name="name"/>
+        <field name="name" colspan="3"/>
+        <label name="composition"/>
+        <field name="composition" colspan="3"/>
+        <label name="laboratory"/>
+        <field name="laboratory"/>
+        <label name="presentation"/>
+        <field name="presentation"/>
+        <label name="type_"/>
+        <field name="type_"/>
+        <label name="sale_kind"/>
+        <field name="sale_kind"/>
+        <label name="release_date"/>
+        <field name="release_date"/>
+        <label name="expiration_date"/>
+        <field name="expiration_date"/>
+        <label name="administration_route"/>
+        <field name="administration_route"/>
+        <newline/>
+        <label name="notes"/>
+        <field name="notes" colspan="3"/>
+    </group>
+</form>

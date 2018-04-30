@@ -1,12 +1,12 @@
 from trytond.model import ModelView, ModelSQL, fields, Unique
-from trytond.pyson import Eval
+from trytond.pyson import Eval, If
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 import trytond.tools as tools
 
 import galeno_tools
 
-__all__ = ['Patient']
+__all__ = ['Patient', 'PatientDisability', 'PatientDisease']
 
 
 class Patient(ModelSQL, ModelView):
@@ -99,6 +99,11 @@ class Patient(ModelSQL, ModelView):
             'invisible': ~Eval('disability')
         },
         depends=['patient'])
+    diseases = fields.One2Many(
+        'galeno.patient.disease', 'patient', 'Diseases',
+        states={
+            'readonly': False,
+        })
 
     @classmethod
     def __setup__(cls):
@@ -128,6 +133,10 @@ class Patient(ModelSQL, ModelView):
             country = Country(context.get('country'))
             return country.id
         return None
+
+    @staticmethod
+    def default_disability():
+        return False
 
     @fields.depends('lname', 'fname', 'name')
     def on_change_fname(self):
@@ -241,3 +250,72 @@ class Patient(ModelSQL, ModelView):
             self.raise_user_error('invalid_email', {
                 'email': self.email,
                 })
+
+
+class PatientDisability(ModelSQL, ModelView):
+    'Patient Disability'
+    __name__ = 'galeno.patient.disability'
+
+    patient = fields.Many2One('galeno.patient', 'Patient', required=True,
+        domain=[
+            ('company', If(Eval('context', {}).contains('company'), '=', '!='),
+                Eval('context', {}).get('company', -1)),
+            ])
+    type_ = fields.Selection(
+        [
+            ('hearing', 'Hearing'),
+            ('physical', 'Physical'),
+            ('intellectual', 'Intellectual'),
+            ('language', 'Language'),
+            ('mental', 'Mental'),
+            ('psychological', 'Psycological'),
+            ('psychosocial', 'Psychosocial'),
+            ('visual', 'Visual'),
+            ('other', 'Other'),
+        ], 'Type', sort=False, required=True)
+    disease = fields.Many2One('galeno.disease', 'Disease', required=True)
+    start_date = fields.Date('Start date')
+    legal_reference = fields.Char('Legal reference',
+        help='legal document that verifies the authenticity of the condition')
+    percentage = fields.Float('Percentage', required=True,
+        domain=[
+            ('percentage', '>=', 0),
+            ('percentage', '<=', 1),
+        ])
+    description = fields.Text('Description')
+
+    @staticmethod
+    def default_percentage():
+        return 0
+
+
+class PatientDisease(ModelSQL, ModelView):
+    'PatientDisease'
+    __name__ = 'galeno.patient.disease'
+
+    patient = fields.Many2One(
+        'galeno.patient', 'Patient', ondelete='CASCADE', required=True)
+    disease = fields.Many2One(
+        'galeno.disease', 'Disease', ondelete='RESTRICT', required=True)
+    severity = fields.Selection([
+        ('mild', 'Mild'),
+        ('moderate', 'Moderate'),
+        ('severe', 'Severe'),
+    ], 'Severity', required=True, sort=False)
+    date = fields.Date('Date')
+    #  TODO: add evaluation
+    contagious = fields.Boolean('Contagious')
+    notes = fields.Text('Notes')
+
+    @staticmethod
+    def default_severity():
+        return 'mild'
+
+    @staticmethod
+    def default_date():
+        Date = Pool().get('ir.date')
+        return Date.today()
+
+    @staticmethod
+    def default_contagious():
+        return False

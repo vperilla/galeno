@@ -7,7 +7,7 @@ from . import occupation
 from . import ethnic_group
 from . import disease
 from . import patient
-from . import patient_disability
+from . import medicament
 
 __all__ = ['register']
 
@@ -22,7 +22,9 @@ def register():
         disease.Disease,
         disease.DiseaseMembers,
         patient.Patient,
-        patient_disability.PatientDisability,
+        patient.PatientDisability,
+        patient.PatientDisease,
+        medicament.Medicament,
         module='galeno', type_='model')
     Pool.register(
         module='galeno', type_='wizard')

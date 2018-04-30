@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="name"/>
+    <field name="laboratory"/>
+    <field name="composition"/>
+    <field name="presentation"/>
+    <field name="administration_route"/>
+    <field name="type_"/>
+    <field name="sale_kind"/>
+</tree>

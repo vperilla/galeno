@@ -64,15 +64,18 @@
                 <field name="occupation"/>
                 <label name="ethnic_group"/>
                 <field name="ethnic_group"/>
-                <group id="disabilities" colspan="4" col="2">
-                    <label name="disability"/>
-                    <field name="disability"/>
-                    <field name="disabilities" colspan="2" mode="form,tree" 
-                        view_ids="galeno.patient_disability_view_form,galeno.patient_disability_view_tree"/>
-                </group>
+                <newline/>
+                <label name="disability"/>
+                <field name="disability"/>
+                <newline/>
+                <field name="disabilities" colspan="8" mode="form,tree"
+                    view_ids="galeno.patient_disability_view_form,galeno.patient_disability_view_tree"/>
             </group>
         </page>
-        <page id="page2" string="Page2">
+        <page id="page2" string="Diseases">
+            <group id="group_diseases">
+                <field name="diseases"/>
+            </group>
         </page>
         <page id="page3" string="Page3">
         </page>

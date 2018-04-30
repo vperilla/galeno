@@ -98,6 +98,14 @@ class Disease(ModelSQL, ModelView):
 
     active = fields.Boolean('Active', select=True)
 
+    @classmethod
+    def __setup__(cls):
+        super(Disease, cls).__setup__()
+        t = cls.__table__()
+        cls._sql_constraints += [
+            ('code_uniq', Unique(t, t.code), 'Disease code must be unique'),
+        ]
+
     @staticmethod
     def default_active():
         return True
@@ -107,22 +115,16 @@ class Disease(ModelSQL, ModelView):
 
     @classmethod
     def search_rec_name(cls, name, clause):
-        if clause[1].startswith('!') or clause[1].startswith('not '):
+        _, operator, value = clause
+        if operator.startswith('!') or operator.startswith('not '):
             bool_op = 'AND'
         else:
             bool_op = 'OR'
-        return [bool_op,
-            ('code',) + tuple(clause[1:]),
-            ('name',) + tuple(clause[1:]),
+        domain = [bool_op,
+            ('number', operator, value),
+            ('reference', operator, value),
             ]
-
-    @classmethod
-    def __setup__(cls):
-        super(Disease, cls).__setup__()
-        t = cls.__table__()
-        cls._sql_constraints += [
-            ('code_uniq', Unique(t, t.code), 'Disease code must be unique'),
-        ]
+        return domain
 
 
 class DiseaseMembers(ModelSQL, ModelView):
