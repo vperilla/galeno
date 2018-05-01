@@ -6,7 +6,8 @@ import trytond.tools as tools
 
 import galeno_tools
 
-__all__ = ['Patient', 'PatientDisability', 'PatientDisease']
+__all__ = ['Patient', 'PatientDisability', 'PatientDisease', 'PatientVaccine',
+    'PatientActivity']
 
 
 class Patient(ModelSQL, ModelView):
@@ -104,6 +105,10 @@ class Patient(ModelSQL, ModelView):
         states={
             'readonly': False,
         })
+    vaccines = fields.One2Many('galeno.patient.vaccine', 'patient', 'Vaccines')
+    activities = fields.One2Many(
+        'galeno.patient.activity', 'patient', 'Activities',
+        help="List of sport activities")
 
     @classmethod
     def __setup__(cls):
@@ -290,7 +295,7 @@ class PatientDisability(ModelSQL, ModelView):
 
 
 class PatientDisease(ModelSQL, ModelView):
-    'PatientDisease'
+    'Patient Disease'
     __name__ = 'galeno.patient.disease'
 
     patient = fields.Many2One(
@@ -319,3 +324,62 @@ class PatientDisease(ModelSQL, ModelView):
     @staticmethod
     def default_contagious():
         return False
+
+
+class PatientVaccine(ModelSQL, ModelView):
+    'Patient Vaccine'
+    __name__ = 'galeno.patient.vaccine'
+
+    patient = fields.Many2One(
+        'galeno.patient', 'Patient', ondelete="CASCADE", required=True)
+    vaccine = fields.Many2One(
+        'galeno.vaccine', 'Vaccine', ondelete="RESTRICT", required=True)
+    dose = fields.Integer('Dose',
+        domain=[
+            ('dose', '>', 0),
+        ])
+    route = fields.Selection([
+        ('oral', 'Oral'),
+        ('intramuscular', 'Intramuscular'),
+        ('subcutaneous', 'Subcutaneous'),
+        ('intradermal', 'Intradermal'),
+        ('intranasal', 'Intranasal'),
+    ], 'Route administration', required=True, sort=False)
+    date = fields.Date('Date', required=True)
+    next_date = fields.Date('Next Date')
+    notes = fields.Text('Notes')
+
+    @classmethod
+    def __setup__(cls):
+        super(PatientVaccine, cls).__setup__()
+        t = cls.__table__()
+        cls._sql_constraints += [
+            ('vaccine_uniq', Unique(t, t.patient, t.vaccine, t.dose),
+             'Vaccine dose must be unique per patient'),
+        ]
+
+    @staticmethod
+    def default_dose():
+        return 1
+
+
+class PatientActivity(ModelSQL, ModelView):
+    'Patient Activity'
+    __name__ = 'galeno.patient.activity'
+
+    patient = fields.Many2One(
+        'galeno.patient', 'Patient', required=True, ondelete='CASCADE')
+    activity = fields.Char('Activity', required=True)
+    week_hours = fields.Integer('Week hours', required=True,
+        domain=[
+            ('week_hours', '>=', 1),
+            ('week_hours', '<=', 56),
+        ], help="Week time in hours, between 1 and 56")
+
+    @staticmethod
+    def default_week_hours():
+        return 1
+
+    def get_rec_name(self, name):
+        return "%s - %s - %s" % (
+            self.patient.rec_name, self.activity, self.week_hours)

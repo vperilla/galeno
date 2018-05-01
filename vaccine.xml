@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="vaccine_view_form">
+            <field name="model">galeno.vaccine</field>
+            <field name="type">form</field>
+            <field name="name">vaccine_form</field>
+        </record>
+        <record model="ir.ui.view" id="vaccine_view_tree">
+            <field name="model">galeno.vaccine</field>
+            <field name="type">tree</field>
+            <field name="name">vaccine_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_vaccine_form">
+            <field name="name">Vaccines</field>
+            <field name="res_model">galeno.vaccine</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_vaccine_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="vaccine_view_tree"/>
+            <field name="act_window" ref="act_vaccine_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_vaccine_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="vaccine_view_form"/>
+            <field name="act_window" ref="act_vaccine_form"/>
+        </record>
+        <menuitem parent="menu_galeno_admin" action="act_vaccine_form"
+            id="menu_vaccine_form" sequence="10" icon="galeno-vaccine"/>
+        <record model="ir.model.access" id="access_vaccine">
+            <field name="model" search="[('model', '=', 'galeno.vaccine')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_vaccine_vaccine">
+            <field name="model" search="[('model', '=', 'galeno.vaccine')]"/>
+            <field name="group" ref="group_galeno_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+    </data>
+</tryton>

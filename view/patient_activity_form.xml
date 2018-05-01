@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<form>
+    <group id="patient_activity">
+        <label name="patient"/>
+        <field name="patient"/>
+        <newline/>
+        <label name="activity"/>
+        <field name="activity"/>
+        <label name="week_hours"/>
+        <field name="week_hours"/>
+    </group>
+</form>

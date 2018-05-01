@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+        <!-- ICONS -->
         <record model="ir.ui.icon" id="galeno_icon">
             <field name="name">galeno-galeno</field>
             <field name="path">icons/galeno.svg</field>
@@ -9,12 +10,24 @@
             <field name="name">galeno-patient</field>
             <field name="path">icons/patient.svg</field>
         </record>
+        <record model="ir.ui.icon" id="medicament_icon">
+            <field name="name">galeno-medicament</field>
+            <field name="path">icons/medicament.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="patient_vaccine">
+            <field name="name">galeno-vaccine</field>
+            <field name="path">icons/vaccine.svg</field>
+        </record>
+
+        <!-- MAIN MENU -->
         <record model="res.group" id="group_galeno_admin">
             <field name="name">Galeno Administrator</field>
         </record>
         <record model="res.group" id="group_galeno">
             <field name="name">Galeno</field>
         </record>
+
+        <!-- GROUPS -->
         <record model="res.user-res.group" id="user_admin_group_galeno">
             <field name="user" ref="res.user_admin"/>
             <field name="group" ref="group_galeno"/>
@@ -29,7 +42,7 @@
             <field name="menu" ref="menu_galeno"/>
             <field name="group" ref="group_galeno"/>
         </record>
-        <menuitem name="Galeno Administration" id="menu_galeno_admin" sequence="4"
+        <menuitem name="Administration" id="menu_galeno_admin" sequence="4"
             parent="menu_galeno" icon="tryton-preferences"/>
         <record model="ir.ui.menu-res.group"
             id="menu_galeno_admin_group_galeno_admin">

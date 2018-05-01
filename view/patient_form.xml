@@ -72,12 +72,20 @@
                     view_ids="galeno.patient_disability_view_form,galeno.patient_disability_view_tree"/>
             </group>
         </page>
-        <page id="page2" string="Diseases">
+        <page id="patient_2" string="Diseases">
             <group id="group_diseases">
                 <field name="diseases"/>
             </group>
         </page>
-        <page id="page3" string="Page3">
+        <page id="patient_3" string="Medicament - Vaccine">
+            <field name="vaccines" colspan="4"/>
+        </page>
+        <page id="patient_4" string="Life style">
+            <notebook>
+                <page id="lifestyle-diet-exercise" string="Diet - Exercise">
+                    <field name="activities" colspan="4"/>
+                </page>
+            </notebook>
         </page>
     </notebook>
 </form>

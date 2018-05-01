@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<form>
+    <group id="patient_vaccine">
+        <label name="patient"/>
+        <field name="patient"/>
+        <newline/>
+        <label name="vaccine"/>
+        <field name="vaccine"/>
+        <label name="dose"/>
+        <field name="dose"/>
+        <label name="route"/>
+        <field name="route"/>
+        <newline/>
+        <label name="date"/>
+        <field name="date"/>
+        <label name="next_date"/>
+        <field name="next_date"/>
+        <label name="notes"/>
+        <field name="notes" colspan="3"/>
+    </group>
+</form>

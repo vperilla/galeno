@@ -102,5 +102,61 @@
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
+        <!-- PATIENT VACCINE -->
+        <record model="ir.ui.view" id="patient_vaccine_view_form">
+            <field name="model">galeno.patient.vaccine</field>
+            <field name="type">form</field>
+            <field name="name">patient_vaccine_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_vaccine_view_tree">
+            <field name="model">galeno.patient.vaccine</field>
+            <field name="type">tree</field>
+            <field name="name">patient_vaccine_tree</field>
+        </record>
+        <record model="ir.model.access" id="access_patient_vaccine">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.vaccine')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_patient_vaccine_galeno">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.vaccine')]"/>
+            <field name="group" ref="group_galeno"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <!-- PATIENT ACTIVITY -->
+        <record model="ir.ui.view" id="patient_activity_view_form">
+            <field name="model">galeno.patient.activity</field>
+            <field name="type">form</field>
+            <field name="name">patient_activity_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_activity_view_tree">
+            <field name="model">galeno.patient.activity</field>
+            <field name="type">tree</field>
+            <field name="name">patient_activity_tree</field>
+        </record>
+        <record model="ir.model.access" id="access_patient_activity">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.activity')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_patient_activity_galeno">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.activity')]"/>
+            <field name="group" ref="group_galeno"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
     </data>
 </tryton>
