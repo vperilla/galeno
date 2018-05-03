@@ -188,6 +188,7 @@ class Patient(ModelSQL, ModelView):
     def get_identifier_type(self):
         if self.country:
             return galeno_tools.IDENTIFIERS.get(self.country.code, [])
+        return []
 
     @fields.depends('identifier_type', 'identifier', 'name')
     def on_change_with_identifier(self):
