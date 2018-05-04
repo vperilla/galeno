@@ -1,5 +1,5 @@
 from trytond.model import ModelView, ModelSQL, fields, Unique
-from trytond.pyson import Eval, If
+from trytond.pyson import Bool, Eval, If
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 import trytond.tools as tools
@@ -7,7 +7,7 @@ import trytond.tools as tools
 import galeno_tools
 
 __all__ = ['Patient', 'PatientDisability', 'PatientDisease', 'PatientVaccine',
-    'PatientActivity']
+    'PatientActivity', 'PatientDrug']
 
 
 class Patient(ModelSQL, ModelView):
@@ -109,6 +109,35 @@ class Patient(ModelSQL, ModelView):
     activities = fields.One2Many(
         'galeno.patient.activity', 'patient', 'Activities',
         help="List of sport activities")
+    diet_type = fields.Selection(
+        [
+            ('omnivorous', 'Omnivorous'),
+            ('carnivorous', 'Carnivorous'),
+            ('vegetarian', 'Vegetarian')
+        ], 'Diet type', sort=False)
+    diet_type_note = fields.Text('Diet type note')
+    meals_number = fields.Integer('Meals per day',
+        domain=[
+            If(Bool(Eval('meals_number')),
+                ('meals_number', '>=', 1),
+               ())
+        ], help="Sleep hours per day")
+    coffe_consumption = fields.Boolean('Coffe consumtion')
+    sugar_consumption = fields.Boolean('Sugar consumtion')
+    salt_consumption = fields.Boolean('Salt consumtion')
+    feeding_notes = fields.Text('Feeding notes')
+    sleep_time = fields.Integer('Sleep time',
+        domain=[
+            If(Bool(Eval('sleep_time')),
+               [
+                   ('sleep_time', '>=', 1),
+                   ('sleep_time', '<=', 24)],
+               [()])
+        ], help="Sleep hours per day")
+    sleep_notes = fields.Text('Sleep notes')
+    drugs = fields.One2Many(
+        'galeno.patient.drug', 'patient', 'Drugs',
+        help="List of drug consumption")
 
     @classmethod
     def __setup__(cls):
@@ -384,3 +413,43 @@ class PatientActivity(ModelSQL, ModelView):
     def get_rec_name(self, name):
         return "%s - %s - %s" % (
             self.patient.rec_name, self.activity, self.week_hours)
+
+
+class PatientDrug(ModelSQL, ModelView):
+    'Patient Drug'
+    __name__ = 'galeno.patient.drug'
+
+    patient = fields.Many2One(
+        'galeno.patient', 'Patient', required=True, ondelete='CASCADE')
+    drug = fields.Many2One('galeno.drug', 'Drug', required=True)
+    consume = fields.Boolean('Consume')
+    consume_time = fields.Integer('Consume time',
+        states={
+            'invisible': ~Eval('consume'),
+        },
+        domain=[
+            If(Bool(Eval('consume')),
+               ('consume_time', '>=', 1),
+               ())
+        ], depends=['consume'], help="Time in months")
+    consume_amount = fields.Integer('Consume Amount',
+        states={
+            'invisible': ~Eval('consume'),
+        },
+        domain=[
+            If(Bool(Eval('consume')),
+               ('consume_amount', '>=', 1),
+               ())
+        ], depends=['consume'], help="Amount per week")
+    ex_consume = fields.Boolean('Ex consume')
+    abstinence_time = fields.Integer('Abstinence time',
+        states={
+            'invisible': ~Eval('ex_consume'),
+        },
+        domain=[
+            If(Bool(Eval('ex_consume')),
+               ('abstinence_time', '>=', 3),
+               ())
+        ], depends=['ex_consume'],
+        help="It is considered abstinence after three months")
+    notes = fields.Text('Notes')

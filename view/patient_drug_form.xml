@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<form>
+    <group id="patient_drug">
+        <label name="patient"/>
+        <field name="patient"/>
+        <label name="drug"/>
+        <field name="drug"/>
+        <label name="consume"/>
+        <field name="consume"/>
+        <newline/>
+        <label name="consume_time"/>
+        <field name="consume_time"/>
+        <label name="consume_amount"/>
+        <field name="consume_amount"/>
+        <newline/>
+        <label name="ex_consume"/>
+        <field name="ex_consume"/>
+        <label name="abstinence_time"/>
+        <field name="abstinence_time"/>
+        <separator name="notes" colspan="4"/>
+        <field name="notes" colspan="4"/>
+    </group>
+</form>

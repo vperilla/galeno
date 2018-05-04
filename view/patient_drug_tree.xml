@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="patient"/>
+    <field name="drug"/>
+    <field name="consume"/>
+    <field name="consume_time"/>
+    <field name="consume_amount"/>
+    <field name="ex_consume"/>
+    <field name="abstinence_time"/>
+</tree>

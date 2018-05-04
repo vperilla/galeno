@@ -81,11 +81,38 @@
             <field name="vaccines" colspan="4"/>
         </page>
         <page id="patient_4" string="Life style">
-            <notebook>
-                <page id="lifestyle-diet-exercise" string="Diet - Exercise">
+            <group id="lifestyle-1" string="Exercise - Sleep" colspan="4" expandable="1">
+                <group id="lifestyle-exercise" colspan="2">
                     <field name="activities" colspan="4"/>
-                </page>
-            </notebook>
+                </group>
+                <group id="lifestyle-sleep" string="Sleep information"
+                    colspan="2" expandable="1">
+                    <label name="sleep_time"/>
+                    <field name="sleep_time"/>
+                    <separator name="sleep_notes" colspan="4"/>
+                    <field name="sleep_notes" colspan="4"/>
+                </group>
+            </group>
+            <group id="lifestyle-diet" string="Diet" col="6" expandable="1"
+                colspan="4">
+                <label name="diet_type"/>
+                <field name="diet_type"/>
+                <label name="diet_type_note"/>
+                <field name="diet_type_note"/>
+                <label name="meals_number"/>
+                <field name="meals_number"/>
+                <label name="coffe_consumption"/>
+                <field name="coffe_consumption"/>
+                <label name="sugar_consumption"/>
+                <field name="sugar_consumption"/>
+                <label name="salt_consumption"/>
+                <field name="salt_consumption"/>
+                <separator name="feeding_notes" colspan="6"/>
+                <field name="feeding_notes" colspan="6"/>
+            </group>
+            <group id="lifestyle-drugs" string="Drugs" col="4" expandable="1">
+                <field name="drugs" colspan="4"/>
+            </group>
         </page>
     </notebook>
 </form>

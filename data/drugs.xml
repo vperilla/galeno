@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tryton>
+    <data>
+
+        <record model="galeno.drug" id="drug_tobacco">
+            <field name="name">Tabaco</field>
+            <field name="code">TOBACCO</field>
+            <field name="fill_required">True</field>
+        </record>
+        <record model="galeno.drug" id="drug_alcohol">
+            <field name="name">Alcohol</field>
+            <field name="code">ALCOHOL</field>
+            <field name="fill_required">True</field>
+        </record>
+
+    </data>
+</tryton>
