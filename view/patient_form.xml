@@ -64,6 +64,8 @@
                 <field name="laterality"/>
                 <label name="ethnic_group"/>
                 <field name="ethnic_group"/>
+                <label name="sexual_orientation"/>
+                <field name="sexual_orientation"/>
                 <newline/>
                 <label name="disability"/>
                 <field name="disability"/>
@@ -112,6 +114,16 @@
             </group>
             <group id="lifestyle-drugs" string="Drugs" col="4" expandable="1">
                 <field name="drugs" colspan="4"/>
+            </group>
+        </page>
+        <page id="patient_5" string="Sexualily">
+            <group id="sexuality-1" colspan="4">
+                <label name="sexual_active"/>
+                <field name="sexual_active"/>
+                <label name="relation_type"/>
+                <field name="relation_type"/>
+                <label name="intersex"/>
+                <field name="intersex"/>
             </group>
         </page>
     </notebook>

@@ -73,7 +73,7 @@ class Patient(ModelSQL, ModelView):
         ('left', 'Left'),
         ('right', 'Right'),
         ('ambidextrous', 'Ambidextrous'),
-    ], 'Laterality', required=True)
+    ], 'Laterality')
     blood_type = fields.Selection([
         ('a-', 'A -'),
         ('a+', 'A +'),
@@ -144,18 +144,22 @@ class Patient(ModelSQL, ModelView):
     intersex = fields.Boolean('Intersex')
     sexual_orientation = fields.Selection(
         [
-            (None, 'None'),
             ('gay', 'Gay'),
             ('lesbian', 'Lesbian'),
             ('straight', 'Straight'),
             ('unknown', 'Unknown'),
-        ], 'Sexual orientation')
+        ], 'Sexual orientation', sort=False)
     sexual_active = fields.Boolean('Sexual active')
     relation_type = fields.Selection(
         [
             (None, 'None'),
-            ('algo', 'Algo')
-        ], 'Algo')
+            ('monogamous', 'Monogamous'),
+            ('polygamous', 'Polygamous'),
+        ], 'Relation type',
+        states={
+            'invisible': ~Bool(Eval('sexual_active')),
+            'required': Bool(Eval('sexual_active')),
+        }, depends=['sexual_active'], sort=False)
 
     @classmethod
     def __setup__(cls):
@@ -188,6 +192,18 @@ class Patient(ModelSQL, ModelView):
 
     @staticmethod
     def default_disability():
+        return False
+
+    @staticmethod
+    def default_laterality():
+        return 'right'
+
+    @staticmethod
+    def default_sexual_orientation():
+        return 'straight'
+
+    @staticmethod
+    def default_sexual_active():
         return False
 
     @fields.depends('lname', 'fname', 'name')
@@ -353,7 +369,7 @@ class PatientDisability(ModelSQL, ModelView):
             ('visual', 'Visual'),
             ('other', 'Other'),
         ], 'Type', sort=False, required=True)
-    disease = fields.Many2One('galeno.disease', 'Disease', required=True)
+    disease = fields.Many2One('galeno.disease', 'Disease')
     start_date = fields.Date('Start date')
     legal_reference = fields.Char('Legal reference',
         help='legal document that verifies the authenticity of the condition')

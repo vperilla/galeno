@@ -111,7 +111,8 @@ class Disease(ModelSQL, ModelView):
         return True
 
     def get_rec_name(self, name):
-        return "%s : %s" % (self.code, self.name)
+        return "%s : %s - %s" % (
+            self.code, self.name, self.category and self.category.name or '')
 
     @classmethod
     def search_rec_name(cls, name, clause):
@@ -121,8 +122,9 @@ class Disease(ModelSQL, ModelView):
         else:
             bool_op = 'OR'
         domain = [bool_op,
-            ('number', operator, value),
-            ('reference', operator, value),
+            ('code', operator, value),
+            ('name', operator, value),
+            ('category.name', operator, value),
             ]
         return domain
 

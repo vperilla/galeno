@@ -3,16 +3,17 @@
     <group id="patient_disability">
         <label name="patient"/>
         <field name="patient"/>
+        <newline/>
         <label name="type_"/>
         <field name="type_"/>
+        <label name="percentage"/>
+        <field name="percentage" factor="100"/>
         <label name="disease"/>
-        <field name="disease"/>
+        <field name="disease" colspan="3"/>
         <label name="start_date"/>
         <field name="start_date"/>
         <label name="legal_reference"/>
         <field name="legal_reference"/>
-        <label name="percentage"/>
-        <field name="percentage" factor="100"/>
         <separator name="description" colspan="4"/>
         <field name="description" colspan="4"/>
     </group>
