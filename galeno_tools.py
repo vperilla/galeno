@@ -87,7 +87,7 @@ def format_mail_address(email):
 
 def validate_mail_address(email):
     try:
-        v = validate_email(email)
+        validate_email(email)
         return True
     except Exception:
         pass
@@ -103,7 +103,18 @@ def age_in_words(start, end=None, locale='en'):
 
 def create_thumbnail(data, size=(250, 250)):
     image = Image.open(BytesIO(data))
+    image_format = image.format
+    image_exif = image._getexif()
+    image_orientation = image_exif[274]
+
+    # Rotate depending on orientation.
+    if image_orientation == 3:
+        image = image.rotate(180)
+    if image_orientation == 6:
+        image = image.rotate(-90)
+    if image_orientation == 8:
+        image = image.rotate(90)
     image.thumbnail(size, Image.ANTIALIAS)
     result = BytesIO()
-    image.save(result, image.format)
+    image.save(result, image_format)
     return fields.Binary.cast(result.getvalue())

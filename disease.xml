@@ -22,7 +22,7 @@
         </record>
 
         <record model="ir.action.act_window" id="act_disease_category_tree">
-            <field name="name">Diseases categories</field>
+            <field name="name">Categories</field>
             <field name="res_model">galeno.disease.category</field>
             <field name="domain" eval="[('parent', '=', None)]" pyson="1"/>
         </record>
@@ -42,7 +42,7 @@
             id="menu_disease_category_tree" sequence="10"/>
 
         <record model="ir.action.act_window" id="act_disease_category_form">
-            <field name="name">Diseases categories</field>
+            <field name="name">Categories</field>
             <field name="res_model">galeno.disease.category</field>
         </record>
         <record model="ir.action.act_window.view"
@@ -88,7 +88,7 @@
             <field name="name">disease_group_tree</field>
         </record>
         <record model="ir.action.act_window" id="act_disease_group_form">
-            <field name="name">Diseases groups</field>
+            <field name="name">Groups</field>
             <field name="res_model">galeno.disease.group</field>
         </record>
         <record model="ir.action.act_window.view"

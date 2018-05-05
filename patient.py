@@ -19,7 +19,8 @@ class Patient(ModelSQL, ModelView):
             'invisible': True,
         })
     code = fields.Char('Code', readonly=True)
-    archive_number = fields.Char('Archive #')
+    archive_number = fields.Char('Archive #',
+        help="Physical folder number")
     fname = fields.Char('Names', required=True)
     lname = fields.Char('Surnames', required=True)
     name = fields.Char('Complete name', required=True,
@@ -74,20 +75,21 @@ class Patient(ModelSQL, ModelView):
         ('ambidextrous', 'Ambidextrous'),
     ], 'Laterality', required=True)
     blood_type = fields.Selection([
-        ('a-', 'a -'),
-        ('a+', 'a +'),
-        ('ab-', 'ab -'),
-        ('ab+', 'ab +'),
-        ('b-', 'b -'),
-        ('b+', 'b +'),
-        ('o-', 'o -'),
-        ('o+', 'o +'),
+        ('a-', 'A -'),
+        ('a+', 'A +'),
+        ('a-', 'AB -'),
+        ('ab+', 'AB +'),
+        ('b-', 'B -'),
+        ('b+', 'B +'),
+        ('o-', 'O -'),
+        ('o+', 'O +'),
     ], 'Blood Type', required=True)
     religion = fields.Char('Religion')
     education_level = fields.Selection([
         (None, 'Nothing'),
         ('primary', 'Primary'),
         ('secondary', 'Secondary'),
+        ('bachelor', 'Bachelor'),
         ('university', 'University'),
         ('postgraduate', 'Postgraduate'),
     ], 'Education level', sort=False)
@@ -111,6 +113,7 @@ class Patient(ModelSQL, ModelView):
         help="List of sport activities")
     diet_type = fields.Selection(
         [
+            (None, 'None'),
             ('omnivorous', 'Omnivorous'),
             ('carnivorous', 'Carnivorous'),
             ('vegetarian', 'Vegetarian')
@@ -138,6 +141,21 @@ class Patient(ModelSQL, ModelView):
     drugs = fields.One2Many(
         'galeno.patient.drug', 'patient', 'Drugs',
         help="List of drug consumption")
+    intersex = fields.Boolean('Intersex')
+    sexual_orientation = fields.Selection(
+        [
+            (None, 'None'),
+            ('gay', 'Gay'),
+            ('lesbian', 'Lesbian'),
+            ('straight', 'Straight'),
+            ('unknown', 'Unknown'),
+        ], 'Sexual orientation')
+    sexual_active = fields.Boolean('Sexual active')
+    relation_type = fields.Selection(
+        [
+            (None, 'None'),
+            ('algo', 'Algo')
+        ], 'Algo')
 
     @classmethod
     def __setup__(cls):
@@ -192,7 +210,7 @@ class Patient(ModelSQL, ModelView):
                 self.photo = fields.Binary.cast(
                     tools.file_open(path, mode='rb').read())
 
-    @fields.depends('photo')
+    @fields.depends('photo', 'gender', 'photo_id')
     def on_change_photo(self):
         if self.photo:
             self.photo = galeno_tools.create_thumbnail(self.photo)
@@ -253,6 +271,19 @@ class Patient(ModelSQL, ModelView):
             self.disabilities = None
 
     @classmethod
+    def search_rec_name(cls, name, clause):
+        _, operator, value = clause
+        if operator.startswith('!') or operator.startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+        domain = [bool_op,
+            ('name', operator, value),
+            ('identifier', operator, value),
+            ]
+        return domain
+
+    @classmethod
     def validate(cls, patients):
         super(Patient, cls).validate(patients)
         for patient in patients:
@@ -285,6 +316,20 @@ class Patient(ModelSQL, ModelView):
             self.raise_user_error('invalid_email', {
                 'email': self.email,
                 })
+
+    @classmethod
+    def create(cls, vlist):
+        pool = Pool()
+        Sequence = pool.get('ir.sequence')
+        Config = pool.get('galeno.configuration')
+
+        vlist = [x.copy() for x in vlist]
+        config = Config(1)
+        for values in vlist:
+            if values.get('code') is None:
+                values['code'] = Sequence.get_id(
+                        config.patient_sequence.id)
+        return super(Patient, cls).create(vlist)
 
 
 class PatientDisability(ModelSQL, ModelView):

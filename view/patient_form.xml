@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <form>
-    <group id="patient_main_info" col="8">
+    <group id="patient_main_info" string="General patient information" col="8">
         <group id="patient_main_1" colspan="2" col="2">
             <field name="photo" colspan="2"
                 height="150" width="150" widget="image"/>
@@ -54,14 +54,14 @@
                 <field name="civil_status"/>
                 <label name="education_level"/>
                 <field name="education_level"/>
-                <label name="laterality"/>
-                <field name="laterality"/>
+                <label name="occupation"/>
+                <field name="occupation"/>
                 <label name="religion"/>
                 <field name="religion"/>
                 <label name="archive_number"/>
                 <field name="archive_number"/>
-                <label name="occupation"/>
-                <field name="occupation"/>
+                <label name="laterality"/>
+                <field name="laterality"/>
                 <label name="ethnic_group"/>
                 <field name="ethnic_group"/>
                 <newline/>

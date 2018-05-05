@@ -1,6 +1,25 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+        <record model="ir.sequence.type" id="sequence_type_patient">
+            <field name="name">Patient</field>
+            <field name="code">galeno.patient</field>
+        </record>
+        <record model="ir.sequence.type-res.group"
+            id="sequence_type_patient_group_admin">
+            <field name="sequence_type" ref="sequence_type_patient"/>
+            <field name="group" ref="res.group_admin"/>
+        </record>
+        <record model="ir.sequence.type-res.group"
+            id="sequence_type_patient_group_galeno_admin">
+            <field name="sequence_type" ref="sequence_type_patient"/>
+            <field name="group" ref="group_galeno_admin"/>
+        </record>
+
+        <record model="ir.sequence" id="sequence_patient">
+            <field name="name">Patient</field>
+            <field name="code">galeno.patient</field>
+        </record>
         <!-- PATIENT -->
         <record model="ir.ui.view" id="patient_view_form">
             <field name="model">galeno.patient</field>

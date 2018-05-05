@@ -1,0 +1,223 @@
+parent;Name;number
+EC-A;Camilo Ponce Enriquez;1
+EC-A;Chordeleg ;2
+EC-A;Cuenca;3
+EC-A;El Pan;4
+EC-A;Giron;5
+EC-A;Guachapala;6
+EC-A;Gualaceo;7
+EC-A;Nabon;8
+EC-A;Oña;9
+EC-A;Paute;10
+EC-A;Pucara ;11
+EC-A;San Fernando;12
+EC-A;Santa Isabel;13
+EC-A;Sevilla De Oro;14
+EC-A;Sigsig;15
+EC-B;Caluma;1
+EC-B;Chillanes;2
+EC-B;Chimbo;3
+EC-B;Echeandia;4
+EC-B;Guaranda;5
+EC-B;Las Naves;6
+EC-B;San Miguel;7
+EC-C;Bolivar ;1
+EC-C;Espejo;2
+EC-C;Mira;3
+EC-C;Montufar;4
+EC-C;San Pedro De Huaca;5
+EC-C;Tulcan;6
+EC-F;Azogues;1
+EC-F;Biblian;2
+EC-F;Cañar ;3
+EC-F;Deleg;4
+EC-F;El Tambo;5
+EC-F;La Troncal;6
+EC-F;Suscal;7
+EC-H;Alausi;1
+EC-H;Chambo;2
+EC-H;Chunchi;3
+EC-H;Colta;4
+EC-H;Cumanda;5
+EC-H;Guamote;6
+EC-H;Guano;7
+EC-H;Pallatanga;8
+EC-X;La Mana;1
+EC-X;Latacunga;2
+EC-X;Pangua;3
+EC-X;Pujili;4
+EC-X;Salcedo;5
+EC-X;Saquicili;6
+EC-X;Sigchos;7
+EC-O;Arenillas;1
+EC-O;Atahualpa;2
+EC-O;Balsas;3
+EC-O;Chilla;4
+EC-O;El Guabo;5
+EC-O;Huaquillas;6
+EC-O;Las Lajas;7
+EC-O;Machala;8
+EC-O;Marcabeli;9
+EC-O;Pasaje;10
+EC-O;Piñas;11
+EC-O;Portovelo;12
+EC-O;Santa Rosa;13
+EC-O;Zaruma;14
+EC-E;Atacames;1
+EC-E;Eloy Alfaro;2
+EC-E;Esmeraldas;3
+EC-E;La Concordia;4
+EC-E;Muisne;5
+EC-E;Quininde;6
+EC-E;Rioverde;7
+EC-E;San Lorenzo;8
+EC-W;Isabela;1
+EC-W;San Cristobal;2
+EC-W;Santa Cruz;3
+EC-G;Alfredo Baquerizo Moreno (JUJAN);4
+EC-G;Balao;5
+EC-G;Balzar ;6
+EC-G;Colimes;7
+EC-G;Crnel. Marcelino Maridueña;8
+EC-G;Daule ;9
+EC-G;Duran;10
+EC-G;El Empalme;11
+EC-G;El Triunfo;12
+EC-G;Crnel. Antonio Elizalde;13
+EC-G;Guayaquil;14
+EC-G;Isidro Ayora;15
+EC-G;Lomas De Sartentillo;16
+EC-G;Milagro;17
+EC-G;Naranjal ;18
+EC-G;Naranjito;19
+EC-G;Nobol;20
+EC-G;Palestina;21
+EC-G;Pedro Carbo;22
+EC-G;Playas ;23
+EC-G;Salinas ( Salinas Cab. Cantonal);24
+EC-G;Salitre;25
+EC-G;Samborondon;26
+EC-G;San Jacinto De Yaguachi;27
+EC-G;Santa Lucia;28
+EC-G;Simon Bolivar;29
+EC-I;Antonio Ante;1
+EC-I;Cotacachi;2
+EC-I;Ibarra;3
+EC-I;Otavalo;4
+EC-I;Pimampiro;5
+EC-I;San Miguel De Urcuqui;6
+EC-L;Calvas ;1
+EC-L;Catamayo;2
+EC-L;Celica;3
+EC-L;Chaguarpamba;4
+EC-L;Espindola;5
+EC-L;Gonzanama;6
+EC-L;Loja;7
+EC-L;Macara;8
+EC-L;Olmedo;9
+EC-L;Paltas;10
+EC-L;Pindal;11
+EC-L;Puyango;12
+EC-L;Quilanga;13
+EC-L;Saraguro;14
+EC-L;Sozoranga;15
+EC-L;Zapotillo;16
+EC-R;Baba;1
+EC-R;Babahoyo;2
+EC-R;Buena Fe;3
+EC-R;Mocache;4
+EC-R;Montalvo;5
+EC-R;Palenque;6
+EC-R;Pueblo Viejo;7
+EC-R;Quevedo;8
+EC-R;Quinsaloma;9
+EC-R;Urdaneta;10
+EC-R;Valencia;11
+EC-R;Ventanas;12
+EC-R;Vinces;13
+EC-M;24 De Mayo;1
+EC-M;Bolivar;2
+EC-M;Chone;3
+EC-M;El Carmen;4
+EC-M;Flavio Alvaro;5
+EC-M;Jama;6
+EC-M;Jaramijo;7
+EC-M;Jipijapa;8
+EC-M;Jupin;9
+EC-M;Manta;10
+EC-M;Montecristi;11
+EC-M;Olmedo;12
+EC-M;Pajan;13
+EC-M;Pedernales;14
+EC-M;Pichincha;15
+EC-M;Portoviejo;16
+EC-M;Puerto Lopez;17
+EC-M;Rocafuerte;18
+EC-M;Santa Ana;19
+EC-M;San Vicente;20
+EC-M;Sucre;21
+EC-M;Tosagua;22
+EC-S;Gualaquiza;1
+EC-S;Huamboya;2
+EC-S;Limon Indanza;3
+EC-S;Logroño;4
+EC-S;Macas;5
+EC-S;Morona;6
+EC-S;Pablo Sexto;7
+EC-S;Palora;8
+EC-S;San Juan Bosco;9
+EC-S;Santiago;10
+EC-S;Sucua;11
+EC-S;Taisha;12
+EC-S;Tiwintza;13
+EC-N;Archidona;1
+EC-N;Carlos Julio Arosemena Tola;2
+EC-N;El Chaco;3
+EC-N;Quijos;4
+EC-N;Tena;5
+EC-D;Aguarico;1
+EC-D;La Joya De Los Sachas;2
+EC-D;Loreto;3
+EC-D;Puerto Francisco De Orellana;4
+EC-Y;Arajuno;1
+EC-Y;Mera;2
+EC-Y;Pastaza;3
+EC-Y;Santa Clara;4
+EC-P;Cayambe Mejia;1
+EC-P;Mejia;2
+EC-P;Pedro Moncayo;3
+EC-P;Pedro Vicente  Maldonado;4
+EC-P;Puerto Quito;5
+EC-P;Quito;6
+EC-P;Rumiñahui;7
+EC-P;San Miguel De Los Bancos;8
+EC-SE;La Libertad;1
+EC-SE;Salinas;2
+EC-SE;Santa Elena;3
+EC-SD;Santo Domingo De Los Tsachilas;1
+EC-U;Cascales;1
+EC-U;Cuyabeno;2
+EC-U;Gonzalo Pizarro;3
+EC-U;Lago Agrio;4
+EC-U;Nueva Loja;5
+EC-U;Putumayo;6
+EC-U;Shushufindi;6
+EC-U;Sucumbios;7
+EC-T;Ambato;1
+EC-T;Baños De Agua Santa;2
+EC-T;Cevallos;3
+EC-T;Mocha;4
+EC-T;Patate;5
+EC-T;Quero;6
+EC-T;San Pedro De Pelileo;7
+EC-T;Santiago De Pillaro;8
+EC-T;Tisaleo;9
+EC-Z;Centinela Del Condor;1
+EC-Z;Chinchipe;2
+EC-Z;El Pangui;3
+EC-Z;Nangaritza;4
+EC-Z;Palanda;5
+EC-Z;Paquisha;6
+EC-Z;Yacuambi;7
+EC-Z;Yantzaza;8
+EC-Z;Zamora;9
