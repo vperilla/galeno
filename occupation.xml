@@ -28,7 +28,7 @@
             <field name="act_window" ref="act_occupation_form"/>
         </record>
         <menuitem parent="menu_galeno_admin" action="act_occupation_form"
-            id="menu_occupation_form" sequence="10"/>
+            id="menu_occupation_form" icon="galeno-occupation" sequence="10"/>
         <record model="ir.model.access" id="access_occupation">
             <field name="model" search="[('model', '=', 'galeno.occupation')]"/>
             <field name="perm_read" eval="True"/>

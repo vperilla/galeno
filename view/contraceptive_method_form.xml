@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<form>
+    <group id="contraceptive_header">
+        <label name="gender"/>
+        <field name="gender"/>
+        <newline/>
+        <label name="name"/>
+        <field name="name" colspan="3"/>
+    </group>
+</form>

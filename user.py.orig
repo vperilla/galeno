@@ -12,8 +12,4 @@ class User:
 
     @classmethod
     def __setup__(cls):
-        super(User, cls).__setup__()
         cls._context_fields.insert(0, 'country')
-
-    def get_status_bar(self, name):
-        return self.name

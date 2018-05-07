@@ -13,7 +13,7 @@ __all__ = ['Patient', 'PatientDisability', 'PatientDisease', 'PatientVaccine',
 class Patient(ModelSQL, ModelView):
     'Patient'
     __name__ = 'galeno.patient'
-
+    # MAIN INFORMATION
     company = fields.Many2One('company.company', 'Company', required=True,
         states={
             'invisible': True,
@@ -62,6 +62,7 @@ class Patient(ModelSQL, ModelView):
         ('male', 'Male'),
         ('female', 'Female')
     ], 'Gender', required=True)
+    # SECONDARY INFORMATION
     civil_status = fields.Selection([
         ('single', 'Single'),
         ('married', 'Married'),
@@ -102,15 +103,16 @@ class Patient(ModelSQL, ModelView):
             'invisible': ~Eval('disability')
         },
         depends=['patient'])
+    # DISEASES
     diseases = fields.One2Many(
         'galeno.patient.disease', 'patient', 'Diseases',
         states={
             'readonly': False,
         })
+    # MEDICIDES - VACCINES
     vaccines = fields.One2Many('galeno.patient.vaccine', 'patient', 'Vaccines')
-    activities = fields.One2Many(
-        'galeno.patient.activity', 'patient', 'Activities',
-        help="List of sport activities")
+    # LIFESTYLE
+    # Diet
     diet_type = fields.Selection(
         [
             (None, 'None'),
@@ -121,26 +123,28 @@ class Patient(ModelSQL, ModelView):
     diet_type_note = fields.Text('Diet type note')
     meals_number = fields.Integer('Meals per day',
         domain=[
-            If(Bool(Eval('meals_number')),
-                ('meals_number', '>=', 1),
-               ())
+                ('meals_number', '>=', 0)
         ], help="Sleep hours per day")
     coffe_consumption = fields.Boolean('Coffe consumtion')
     sugar_consumption = fields.Boolean('Sugar consumtion')
     salt_consumption = fields.Boolean('Salt consumtion')
     feeding_notes = fields.Text('Feeding notes')
-    sleep_time = fields.Integer('Sleep time',
+    # Activities
+    activities = fields.One2Many(
+        'galeno.patient.activity', 'patient', 'Activities',
+        help="List of sport activities")
+    # Sleep
+    sleep_time = fields.Integer('Sleep time in hours',
         domain=[
-            If(Bool(Eval('sleep_time')),
-               [
-                   ('sleep_time', '>=', 1),
-                   ('sleep_time', '<=', 24)],
-               [()])
+            ('sleep_time', '>=', 0),
+            ('sleep_time', '<=', 24),
         ], help="Sleep hours per day")
+    sleep_in_day = fields.Boolean('Sleep in day')
     sleep_notes = fields.Text('Sleep notes')
     drugs = fields.One2Many(
         'galeno.patient.drug', 'patient', 'Drugs',
         help="List of drug consumption")
+    # SEXUALITY
     intersex = fields.Boolean('Intersex')
     sexual_orientation = fields.Selection(
         [
@@ -148,11 +152,11 @@ class Patient(ModelSQL, ModelView):
             ('lesbian', 'Lesbian'),
             ('straight', 'Straight'),
             ('unknown', 'Unknown'),
-        ], 'Sexual orientation', sort=False)
+        ], 'Sexual orientation', sort=False, required=True)
     sexual_active = fields.Boolean('Sexual active')
     relation_type = fields.Selection(
         [
-            (None, 'None'),
+            ('none', 'None'),
             ('monogamous', 'Monogamous'),
             ('polygamous', 'Polygamous'),
         ], 'Relation type',
@@ -160,6 +164,125 @@ class Patient(ModelSQL, ModelView):
             'invisible': ~Bool(Eval('sexual_active')),
             'required': Bool(Eval('sexual_active')),
         }, depends=['sexual_active'], sort=False)
+    sexual_security = fields.Selection(
+        [
+            ('safe', 'Safe'),
+            ('unsafe', 'Unsafe'),
+        ], 'Sexual security',
+        states={
+            'invisible': ~Bool(Eval('sexual_active')),
+            'required': Bool(Eval('sexual_active')),
+        }, help="Security of sexual practices")
+    contraceptive_method = fields.Many2One(
+        'galeno.contraceptive.method', 'Contraceptive method',
+        states={
+            'invisible': ~Bool(Eval('sexual_active')),
+        },
+        domain=[['OR',
+            ('gender', '=', Eval('gender')),
+            ('gender', '=', 'unisex')]
+        ], depends=['sexual_active', 'gender'])
+    sexual_notes = fields.Text('Sexual notes')
+    # BACKGROUNDS
+    # Reproductive
+    fertile = fields.Boolean('Fertile')
+    menopause_andropause = fields.Boolean('Menopause / Andropause')
+    menopause_andropause_age = fields.Integer('Menupause / Andropause age',
+        states={
+            'readonly': ~Bool(Eval('menopause_andropause')),
+            'required': Bool(Eval('menopause_andropause')),
+        },
+        domain=[
+            ('menopause_andropause_age', '>=', 0),
+        ], depends=['menopause_andropause'])
+    menarche = fields.Integer('Menarche age',
+        states={
+            'invisible': Eval('gender') != 'female',
+        },
+        domain=[
+            If(Eval('gender') == 'female',
+                ('menarche', '>=', 0),
+               ())
+        ], depends=['gender'], help="Age of first menstruation")
+    cycle_duration = fields.Integer('Cycle duration in days',
+        states={
+            'invisible': Eval('gender') != 'female',
+            'readonly': ~Bool(Eval('menarche')),
+        },
+        domain=[
+            If(Eval('gender') == 'female',
+                ('cycle_duration', '>=', 0),
+               ())
+        ], depends=['gender'], help="Cycle duration in days")
+    last_menstruation_date = fields.Date('Last menstruation date',
+        states={
+            'invisible': Eval('gender') != 'female',
+            'readonly': ~Bool(Eval('menarche')),
+        }, depends=['gender'])
+    pregnancies = fields.Integer('Pregnancies',
+        states={
+            'invisible': Eval('gender') != 'female',
+            'readonly': ~Bool(Eval('menarche')),
+        },
+        domain=[
+            If(Eval('gender') == 'female',
+                ('pregnancies', '>=', 0),
+               ())
+        ], depends=['gender'], help="Number of pregnancies of the patient")
+    normal_labor = fields.Integer('Normal labor',
+        states={
+            'invisible': ~(Eval('gender') == 'female'),
+            'readonly': ~Bool(Eval('pregnancies')),
+        },
+        domain=[
+            If(Eval('gender') == 'female',
+                ('normal_labor', '>=', 0),
+               ())
+        ], depends=['gender'])
+    caesarean_labor = fields.Integer('Caesarean labor',
+        states={
+            'invisible': ~(Eval('gender') == 'female'),
+            'readonly': ~Bool(Eval('pregnancies')),
+        },
+        domain=[
+            If(Eval('gender') == 'female',
+                ('caesarean_labor', '>=', 0),
+               ())
+        ], depends=['gender'])
+    alive_children = fields.Integer('Alive children',
+        states={
+            'invisible': ~(Eval('gender') == 'female'),
+            'readonly': ~Bool(Eval('pregnancies')),
+        },
+        domain=[
+            If(Eval('gender') == 'female',
+                ('alive_children', '>=', 0),
+               ())
+        ], depends=['gender'])
+    death_children = fields.Integer('Death children',
+        states={
+            'invisible': ~(Eval('gender') == 'female'),
+            'readonly': ~Bool(Eval('pregnancies')),
+        },
+        domain=[
+            If(Eval('gender') == 'female',
+                ('death_children', '>=', 0),
+               ())
+        ], depends=['gender'])
+    abortions = fields.Integer('Abortions',
+        states={
+            'invisible': ~(Eval('gender') == 'female'),
+            'readonly': ~Bool(Eval('pregnancies')),
+        },
+        domain=[
+            If(Eval('gender') == 'female',
+                ('abortions', '>=', 0),
+               ())
+        ], depends=['gender'])
+    actually_pregnant = fields.Boolean('Actually pregnant',
+        states={
+            'invisible': Eval('gender') != 'female',
+        }, depends=['gender'])
 
     @classmethod
     def __setup__(cls):
@@ -199,11 +322,43 @@ class Patient(ModelSQL, ModelView):
         return 'right'
 
     @staticmethod
+    def default_sleep_in_day():
+        return False
+
+    @staticmethod
     def default_sexual_orientation():
         return 'straight'
 
     @staticmethod
     def default_sexual_active():
+        return False
+
+    @staticmethod
+    def default_pregnancies():
+        return 0
+
+    @staticmethod
+    def default_normal_labor():
+        return 0
+
+    @staticmethod
+    def default_caesarean_labor():
+        return 0
+
+    @staticmethod
+    def default_alive_children():
+        return 0
+
+    @staticmethod
+    def default_death_children():
+        return 0
+
+    @staticmethod
+    def default_abortions():
+        return 0
+
+    @staticmethod
+    def default_actually_pregnant():
         return False
 
     @fields.depends('lname', 'fname', 'name')

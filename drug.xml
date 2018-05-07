@@ -28,7 +28,7 @@
             <field name="act_window" ref="act_drug_form"/>
         </record>
         <menuitem parent="menu_galeno_admin" action="act_drug_form"
-            id="menu_drug_form" sequence="10"/>
+            id="menu_drug_form" icon="galeno-drug" sequence="10"/>
         <record model="ir.model.access" id="access_drug">
             <field name="model" search="[('model', '=', 'galeno.drug')]"/>
             <field name="perm_read" eval="True"/>

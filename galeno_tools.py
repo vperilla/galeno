@@ -105,15 +105,16 @@ def create_thumbnail(data, size=(250, 250)):
     image = Image.open(BytesIO(data))
     image_format = image.format
     image_exif = image._getexif()
-    image_orientation = image_exif[274]
+    image_orientation = image_exif.get(274)
 
     # Rotate depending on orientation.
-    if image_orientation == 3:
-        image = image.rotate(180)
-    if image_orientation == 6:
-        image = image.rotate(-90)
-    if image_orientation == 8:
-        image = image.rotate(90)
+    if image_orientation:
+        if image_orientation == 3:
+            image = image.rotate(180)
+        elif image_orientation == 6:
+            image = image.rotate(-90)
+        elif image_orientation == 8:
+            image = image.rotate(90)
     image.thumbnail(size, Image.ANTIALIAS)
     result = BytesIO()
     image.save(result, image_format)

@@ -5,8 +5,8 @@ __all__ = ['BasicMixin']
 
 class BasicMixin(object):
 
-    name = fields.Char('Name', required=True, translate=True)
     code = fields.Char('Code', required=True)
+    name = fields.Char('Name', required=True, translate=True)
 
     @classmethod
     def __setup__(cls):

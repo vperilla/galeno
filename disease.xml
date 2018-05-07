@@ -58,7 +58,8 @@
             <field name="act_window" ref="act_disease_category_form"/>
         </record>
         <menuitem parent="menu_disease_category_tree" action="act_disease_category_form"
-            id="menu_disease_category_form" sequence="10"/>
+            id="menu_disease_category_form" icon="galeno-disease-category"
+            sequence="10"/>
         <record model="ir.model.access" id="access_disease_category">
             <field name="model"
                 search="[('model', '=', 'galeno.disease.category')]"/>
@@ -104,7 +105,7 @@
             <field name="act_window" ref="act_disease_group_form"/>
         </record>
         <menuitem parent="menu_galeno_disease" action="act_disease_group_form"
-            id="menu_disease_group_form" sequence="10"/>
+            id="menu_disease_group_form" icon="galeno-disease-group" sequence="10"/>
         <record model="ir.model.access" id="access_disease_group">
             <field name="model"
                 search="[('model', '=', 'galeno.disease.group')]"/>
@@ -150,7 +151,7 @@
             <field name="act_window" ref="act_disease_form"/>
         </record>
         <menuitem parent="menu_galeno_disease" action="act_disease_form"
-            id="menu_disease_form" sequence="10"/>
+            id="menu_disease_form" icon="galeno-disease" sequence="10"/>
         <record model="ir.model.access" id="access_disease">
             <field name="model" search="[('model', '=', 'galeno.disease')]"/>
             <field name="perm_read" eval="True"/>

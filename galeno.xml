@@ -6,6 +6,43 @@
             <field name="name">galeno-galeno</field>
             <field name="path">icons/galeno.svg</field>
         </record>
+        <record model="ir.ui.icon" id="galeno_admin_icon">
+            <field name="name">galeno-admin</field>
+            <field name="path">icons/galeno_admin.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="contraceptive_method_icon">
+            <field name="name">galeno-contraceptive-method</field>
+            <field name="path">icons/contraceptive_method.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="disability_icon">
+            <field name="name">galeno-disability</field>
+            <field name="path">icons/disability.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="disease_group_icon">
+            <field name="name">galeno-disease-group</field>
+            <field name="path">icons/disease_group.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="disease_category_icon">
+            <field name="name">galeno-disease-category</field>
+            <field name="path">icons/disease_category.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="disease_icon">
+            <field name="name">galeno-disease</field>
+            <field name="path">icons/disease.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="drup_icon">
+            <field name="name">galeno-drug</field>
+            <field name="path">icons/drug.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="ethnic_group_icon">
+            <field name="name">galeno-ethnic-group</field>
+            <field name="path">icons/ethnic_group.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="occupation_icon">
+            <field name="name">galeno-occupation</field>
+            <field name="path">icons/occupation.svg</field>
+        </record>
+
         <record model="ir.ui.icon" id="patient_icon">
             <field name="name">galeno-patient</field>
             <field name="path">icons/patient.svg</field>
@@ -43,7 +80,7 @@
             <field name="group" ref="group_galeno"/>
         </record>
         <menuitem name="Administration" id="menu_galeno_admin" sequence="4"
-            parent="menu_galeno" icon="tryton-preferences"/>
+            parent="menu_galeno" icon="galeno-admin"/>
         <record model="ir.ui.menu-res.group"
             id="menu_galeno_admin_group_galeno_admin">
             <field name="menu" ref="menu_galeno"/>

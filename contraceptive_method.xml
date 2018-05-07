@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <record model="ir.ui.view" id="contraceptive_method_view_form">
+            <field name="model">galeno.contraceptive.method</field>
+            <field name="type">form</field>
+            <field name="name">contraceptive_method_form</field>
+        </record>
+        <record model="ir.ui.view" id="contraceptive_method_view_tree">
+            <field name="model">galeno.contraceptive.method</field>
+            <field name="type">tree</field>
+            <field name="name">contraceptive_method_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_contraceptive_method_form">
+            <field name="name">Contraceptive Methods</field>
+            <field name="res_model">galeno.contraceptive.method</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_contraceptive_method_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="contraceptive_method_view_tree"/>
+            <field name="act_window" ref="act_contraceptive_method_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_contraceptive_method_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="contraceptive_method_view_form"/>
+            <field name="act_window" ref="act_contraceptive_method_form"/>
+        </record>
+        <menuitem parent="menu_galeno_admin" action="act_contraceptive_method_form"
+            id="menu_contraceptive_method_form" icon="galeno-contraceptive-method" 
+            sequence="10"/>
+        <record model="ir.model.access" id="access_contraceptive_method">
+            <field name="model" search="[('model', '=', 'galeno.contraceptive.method')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_galeno_contraceptive_method">
+            <field name="model" search="[('model', '=', 'galeno.contraceptive.method')]"/>
+            <field name="group" ref="group_galeno_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+    </data>
+</tryton>

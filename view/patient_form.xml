@@ -1,50 +1,55 @@
 <?xml version="1.0"?>
 <form>
-    <group id="patient_main_info" string="General patient information" col="8">
-        <group id="patient_main_1" colspan="2" col="2">
-            <field name="photo" colspan="2"
-                height="150" width="150" widget="image"/>
-        </group>
-        <group id="patient_main_2" colspan="2" col="2">
-            <label name="company"/>
-            <field name="company"/>
-            <field name="name" colspan="4"/>
-            <label name="fname"/>
-            <field name="fname"/>
-            <label name="lname"/>
-            <field name="lname"/>
-            <label name="identifier_type"/>
-            <field name="identifier_type"/>
-            <label name="identifier"/>
-            <field name="identifier"/>
-            <label name="gender"/>
-            <field name="gender"/>
-        </group>
-        <group colspan="2" col="2" id="patient_main_3">
-            <label name="country"/>
-            <field name="country"/>
-            <label name="subdivision"/>
-            <field name="subdivision"/>
-            <label name="city"/>
-            <field name="city"/>
-            <label name="birthdate"/>
-            <field name="birthdate"/>
-            <label name="age_char"/>
-            <field name="age_char"/>
-        </group>
-        <group colspan="2" col="2" id="patient_main_4">
-            <label name="blood_type"/>
-            <field name="blood_type"/>
-            <label name="address"/>
-            <field name="address"/>
-            <label name="email"/>
-            <field name="email"/>
-            <label name="phone"/>
-            <field name="phone"/>
-            <label name="emergency_phone"/>
-            <field name="emergency_phone"/>
-        </group>
-    </group>
+    <notebook>
+        <page id="main_1" string="General patient information">
+            <group id="patient_main_info" col="8">
+                <group id="patient_main_1"
+                    colspan="2" col="2">
+                    <field name="photo" colspan="2" height="150" width="150"
+                        widget="image"/>
+                </group>
+                <group id="patient_main_2" colspan="2" col="2">
+                    <label name="company"/>
+                    <field name="company"/>
+                    <field name="name" colspan="4"/>
+                    <label name="fname"/>
+                    <field name="fname"/>
+                    <label name="lname"/>
+                    <field name="lname"/>
+                    <label name="identifier_type"/>
+                    <field name="identifier_type"/>
+                    <label name="identifier"/>
+                    <field name="identifier"/>
+                    <label name="gender"/>
+                    <field name="gender"/>
+                </group>
+                <group colspan="2" col="2" id="patient_main_3">
+                    <label name="country"/>
+                    <field name="country"/>
+                    <label name="subdivision"/>
+                    <field name="subdivision"/>
+                    <label name="city"/>
+                    <field name="city"/>
+                    <label name="birthdate"/>
+                    <field name="birthdate"/>
+                    <label name="age_char"/>
+                    <field name="age_char"/>
+                </group>
+                <group colspan="2" col="2" id="patient_main_4">
+                    <label name="blood_type"/>
+                    <field name="blood_type"/>
+                    <label name="address"/>
+                    <field name="address"/>
+                    <label name="email"/>
+                    <field name="email"/>
+                    <label name="phone"/>
+                    <field name="phone"/>
+                    <label name="emergency_phone"/>
+                    <field name="emergency_phone"/>
+                </group>
+            </group>
+        </page>
+    </notebook>
     <notebook colspan="4">
         <page id="patient_1" string="Secondary Information">
             <group id="patient_secondary" col="8">
@@ -74,57 +79,108 @@
                     view_ids="galeno.patient_disability_view_form,galeno.patient_disability_view_tree"/>
             </group>
         </page>
-        <page id="patient_2" string="Diseases">
+        <page id="patient_2" string="Diseases" icon="galeno-disease">
             <group id="group_diseases">
                 <field name="diseases"/>
             </group>
         </page>
-        <page id="patient_3" string="Medicament - Vaccine">
+        <page id="patient_3" string="Medicament - Vaccine" icon="galeno-medicament">
             <field name="vaccines" colspan="4"/>
         </page>
         <page id="patient_4" string="Life style">
-            <group id="lifestyle-1" string="Exercise - Sleep" colspan="4" expandable="1">
-                <group id="lifestyle-exercise" colspan="2">
-                    <field name="activities" colspan="4"/>
-                </group>
-                <group id="lifestyle-sleep" string="Sleep information"
-                    colspan="2" expandable="1">
-                    <label name="sleep_time"/>
-                    <field name="sleep_time"/>
-                    <separator name="sleep_notes" colspan="4"/>
-                    <field name="sleep_notes" colspan="4"/>
-                </group>
-            </group>
-            <group id="lifestyle-diet" string="Diet" col="6" expandable="1"
-                colspan="4">
-                <label name="diet_type"/>
-                <field name="diet_type"/>
-                <label name="diet_type_note"/>
-                <field name="diet_type_note"/>
-                <label name="meals_number"/>
-                <field name="meals_number"/>
-                <label name="coffe_consumption"/>
-                <field name="coffe_consumption"/>
-                <label name="sugar_consumption"/>
-                <field name="sugar_consumption"/>
-                <label name="salt_consumption"/>
-                <field name="salt_consumption"/>
-                <separator name="feeding_notes" colspan="6"/>
-                <field name="feeding_notes" colspan="6"/>
-            </group>
-            <group id="lifestyle-drugs" string="Drugs" col="4" expandable="1">
-                <field name="drugs" colspan="4"/>
-            </group>
+            <notebook>
+                <page id="lifestyle_exercise" string="Sleep - Exercise">
+                    <group id="lifestyle-sleep" string="Sleep information"
+                        colspan="2">
+                        <label name="sleep_time"/>
+                        <field name="sleep_time"/>
+                        <label name="sleep_in_day"/>
+                        <field name="sleep_in_day"/>
+                        <separator name="sleep_notes" colspan="4"/>
+                        <field name="sleep_notes" colspan="4"/>
+                    </group>
+                    <group id="lifestyle-exercise" colspan="2">
+                        <field name="activities" colspan="4"/>
+                    </group>
+                </page>
+                <page id="lifestyle_diet" string="Diet">
+                    <group id="lifestyle-diet" col="6" colspan="4">
+                        <label name="diet_type"/>
+                        <field name="diet_type"/>
+                        <label name="diet_type_note"/>
+                        <field name="diet_type_note"/>
+                        <label name="meals_number"/>
+                        <field name="meals_number"/>
+                        <label name="coffe_consumption"/>
+                        <field name="coffe_consumption"/>
+                        <label name="sugar_consumption"/>
+                        <field name="sugar_consumption"/>
+                        <label name="salt_consumption"/>
+                        <field name="salt_consumption"/>
+                        <separator name="feeding_notes" colspan="6"/>
+                        <field name="feeding_notes" colspan="6"/>
+                    </group>
+                </page>
+                <page id="lifestyle_drugs" string="Drugs" icon="galeno-drug">
+                    <group id="lifestyle-drugs">
+                        <field name="drugs" colspan="4"/>
+                    </group>
+                </page>
+            </notebook>
         </page>
         <page id="patient_5" string="Sexualily">
-            <group id="sexuality-1" colspan="4">
+            <group id="sexuality-1" col="6">
                 <label name="sexual_active"/>
                 <field name="sexual_active"/>
-                <label name="relation_type"/>
-                <field name="relation_type"/>
                 <label name="intersex"/>
                 <field name="intersex"/>
+                <newline/>
+                <label name="relation_type"/>
+                <field name="relation_type"/>
+                <label name="sexual_security"/>
+                <field name="sexual_security"/>
+                <label name="contraceptive_method"/>
+                <field name="contraceptive_method"/>
+                <newline/>
+                <separator name="sexual_notes" colspan="6"/>
+                <field name="sexual_notes" colspan="6"/>
             </group>
+        </page>
+        <page id="patient_backgrounds" string="Backgrounds">
+            <notebook>
+                <page id="reproductive_backgrounds" string="Reproductive"
+                    col="6">
+                    <label name="fertile"/>
+                    <field name="fertile"/>
+                    <label name="menopause_andropause"/>
+                    <field name="menopause_andropause"/>
+                    <label name="menopause_andropause_age"/>
+                    <field name="menopause_andropause_age"/>
+                    <newline/>
+                    <label name="menarche"/>
+                    <field name="menarche"/>
+                    <label name="cycle_duration"/>
+                    <field name="cycle_duration"/>
+                    <label name="last_menstruation_date"/>
+                    <field name="last_menstruation_date"/>
+                    <newline/>
+                    <label name="pregnancies"/>
+                    <field name="pregnancies"/>
+                    <label name="normal_labor"/>
+                    <field name="normal_labor"/>
+                    <label name="caesarean_labor"/>
+                    <field name="caesarean_labor"/>
+                    <newline/>
+                    <label name="alive_children"/>
+                    <field name="alive_children"/>
+                    <label name="death_children"/>
+                    <field name="death_children"/>
+                    <label name="abortions"/>
+                    <field name="abortions"/>
+                    <label name="actually_pregnant"/>
+                    <field name="actually_pregnant"/>
+                </page>
+            </notebook>
         </page>
     </notebook>
 </form>

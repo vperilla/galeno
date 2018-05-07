@@ -28,7 +28,8 @@
             <field name="act_window" ref="act_ethnic_group_form"/>
         </record>
         <menuitem parent="menu_galeno_admin" action="act_ethnic_group_form"
-            id="menu_ethnic_group_form" sequence="10"/>
+            id="menu_ethnic_group_form" icon="galeno-ethnic-group"
+            sequence="10"/>
         <record model="ir.model.access" id="access_ethnic_group">
             <field name="model" search="[('model', '=', 'galeno.ethnic.group')]"/>
             <field name="perm_read" eval="True"/>
