@@ -2657,3 +2657,59 @@ msgstr "Afroamericano"
 msgctxt "model:galeno.ethnic.group,name:eth7"
 msgid "Indian American"
 msgstr "Indio Americano"
+
+msgctxt "model:galeno.contraceptive.method,name:cm1"
+msgid "Preservative"
+msgstr "Preservativo"
+
+msgctxt "model:galeno.contraceptive.method,name:cm2"
+msgid "Oral contraceptive"
+msgstr "Anticonceptivo oral"
+
+msgctxt "model:galeno.contraceptive.method,name:cm4"
+msgid "Vaginal ring"
+msgstr "Anillo vaginal"
+
+msgctxt "model:galeno.contraceptive.method,name:cm5"
+msgid "Transdermal patch"
+msgstr "Parche transdérmico"
+
+msgctxt "model:galeno.contraceptive.method,name:cm6"
+msgid "Inyectable progestins"
+msgstr "Progesterona inyectable"
+
+msgctxt "model:galeno.contraceptive.method,name:cm7"
+msgid "Diaphragm"
+msgstr "Diafragma"
+
+msgctxt "model:galeno.contraceptive.method,name:cm8"
+msgid "IUD"
+msgstr "DIU"
+
+msgctxt "model:galeno.contraceptive.method,name:cm9"
+msgid "Spermicides"
+msgstr "Espermicidas"
+
+msgctxt "model:galeno.contraceptive.method,name:cm10"
+msgid "Sponge"
+msgstr "Esponga"
+
+msgctxt "model:galeno.contraceptive.method,name:cm11"
+msgid "Female preservative"
+msgstr "Preservativo femenino"
+
+msgctxt "model:galeno.contraceptive.method,name:cm12"
+msgid "Coitus interruptus"
+msgstr "Coitus interruptus"
+
+msgctxt "model:galeno.contraceptive.method,name:cm13"
+msgid "Rhythm"
+msgstr "Ritmo"
+
+msgctxt "model:galeno.contraceptive.method,name:cm14"
+msgid "Subdermic implant"
+msgstr "Implante subdérmico"
+
+msgctxt "model:galeno.contraceptive.method,name:cm15"
+msgid "Sterilization"
+msgstr "Esterilización"

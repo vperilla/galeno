@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
 <form>
     <notebook>
-        <page id="main_1" string="General patient information">
+        <page id="main_1" string="General patient information"
+            icon="galeno-information">
             <group id="patient_main_info" col="8">
                 <group id="patient_main_1"
                     colspan="2" col="2">
@@ -51,7 +52,8 @@
         </page>
     </notebook>
     <notebook colspan="4">
-        <page id="patient_1" string="Secondary Information">
+        <page id="patient_1" string="Secondary Information"
+            icon="galeno-information">
             <group id="patient_secondary" col="8">
                 <label name="code"/>
                 <field name="code"/>
@@ -69,8 +71,6 @@
                 <field name="laterality"/>
                 <label name="ethnic_group"/>
                 <field name="ethnic_group"/>
-                <label name="sexual_orientation"/>
-                <field name="sexual_orientation"/>
                 <newline/>
                 <label name="disability"/>
                 <field name="disability"/>
@@ -87,9 +87,10 @@
         <page id="patient_3" string="Medicament - Vaccine" icon="galeno-medicament">
             <field name="vaccines" colspan="4"/>
         </page>
-        <page id="patient_4" string="Life style">
+        <page id="patient_4" string="Life style" icon="galeno-lifestyle">
             <notebook>
-                <page id="lifestyle_exercise" string="Sleep - Exercise">
+                <page id="lifestyle_exercise" string="Sleep - Exercise"
+                    icon="galeno-activity">
                     <group id="lifestyle-sleep" string="Sleep information"
                         colspan="2">
                         <label name="sleep_time"/>
@@ -103,7 +104,7 @@
                         <field name="activities" colspan="4"/>
                     </group>
                 </page>
-                <page id="lifestyle_diet" string="Diet">
+                <page id="lifestyle_diet" string="Diet" icon="galeno-diet">
                     <group id="lifestyle-diet" col="6" colspan="4">
                         <label name="diet_type"/>
                         <field name="diet_type"/>
@@ -128,13 +129,14 @@
                 </page>
             </notebook>
         </page>
-        <page id="patient_5" string="Sexualily">
+        <page id="patient_5" string="Sexualily" icon="galeno-sexuality">
             <group id="sexuality-1" col="6">
+                <label name="sexual_orientation"/>
+                <field name="sexual_orientation"/>
                 <label name="sexual_active"/>
                 <field name="sexual_active"/>
                 <label name="intersex"/>
                 <field name="intersex"/>
-                <newline/>
                 <label name="relation_type"/>
                 <field name="relation_type"/>
                 <label name="sexual_security"/>
@@ -146,10 +148,11 @@
                 <field name="sexual_notes" colspan="6"/>
             </group>
         </page>
-        <page id="patient_backgrounds" string="Backgrounds">
+        <page id="patient_backgrounds" string="Backgrounds"
+            icon="galeno-backgrounds">
             <notebook>
                 <page id="reproductive_backgrounds" string="Reproductive"
-                    col="6">
+                    col="6" icon="galeno-reproductive">
                     <label name="fertile"/>
                     <field name="fertile"/>
                     <label name="menopause_andropause"/>

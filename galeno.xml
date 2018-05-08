@@ -51,9 +51,37 @@
             <field name="name">galeno-medicament</field>
             <field name="path">icons/medicament.svg</field>
         </record>
-        <record model="ir.ui.icon" id="patient_vaccine">
+        <record model="ir.ui.icon" id="vaccine_icon">
             <field name="name">galeno-vaccine</field>
             <field name="path">icons/vaccine.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="activity_icon">
+            <field name="name">galeno-activity</field>
+            <field name="path">icons/activity.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="backgrounds_icon">
+            <field name="name">galeno-backgrounds</field>
+            <field name="path">icons/backgrounds.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="diet_icon">
+            <field name="name">galeno-diet</field>
+            <field name="path">icons/diet.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="information_icon">
+            <field name="name">galeno-information</field>
+            <field name="path">icons/information.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="lifestyle_icon">
+            <field name="name">galeno-lifestyle</field>
+            <field name="path">icons/lifestyle.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="reproductive_icon">
+            <field name="name">galeno-reproductive</field>
+            <field name="path">icons/reproductive.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="sexuality_icon">
+            <field name="name">galeno-sexuality</field>
+            <field name="path">icons/sexuality.svg</field>
         </record>
 
         <!-- MAIN MENU -->
