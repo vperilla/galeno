@@ -58,7 +58,6 @@ class Test(ModelSQL, ModelView):
 
     category = fields.Many2One(
         'galeno.test.category', 'Category', required=True)
-    code = fields.Char('Code', translate=True, required=True)
     name = fields.Char('Name', translate=True, required=True)
     gender = fields.Selection([
         ('male', 'Male'),
@@ -71,7 +70,6 @@ class Test(ModelSQL, ModelView):
         super(Test, cls).__setup__()
         t = cls.__table__()
         cls._sql_constraints = [
-            ('code_uniq', Unique(t, t.code), 'Test code must be unique'),
             ('name_uniq', Unique(t, t.name), 'Test name must be unique'),
             ]
         cls._order.insert(0, ('name', 'ASC'))
