@@ -3,8 +3,10 @@
     <group id="patient_drug">
         <label name="patient"/>
         <field name="patient"/>
+        <newline/>
         <label name="drug"/>
         <field name="drug"/>
+        <newline/>
         <label name="consume"/>
         <field name="consume"/>
         <newline/>

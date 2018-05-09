@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<form>
+    <group id="test_header">
+        <label name="category"/>
+        <field name="category"/>
+        <label name="gender"/>
+        <field name="gender"/>
+        <label name="code"/>
+        <field name="code"/>
+        <label name="name"/>
+        <field name="name"/>
+    </group>
+</form>

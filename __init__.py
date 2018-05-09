@@ -11,6 +11,7 @@ from . import medicament
 from . import vaccine
 from . import drug
 from . import contraceptive_method
+from . import test
 from . import patient
 from . import configuration
 
@@ -31,6 +32,8 @@ def register():
         vaccine.Vaccine,
         drug.Drug,
         contraceptive_method.ContraceptiveMethod,
+        test.TestCategory,
+        test.Test,
         patient.Patient,
         patient.PatientDisability,
         patient.PatientDisease,

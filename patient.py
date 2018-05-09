@@ -250,24 +250,12 @@ class Patient(ModelSQL, ModelView):
                ())
         ], depends=['gender'])
     alive_children = fields.Integer('Alive children',
-        states={
-            'invisible': ~(Eval('gender') == 'female'),
-            'readonly': ~Bool(Eval('pregnancies')),
-        },
         domain=[
-            If(Eval('gender') == 'female',
-                ('alive_children', '>=', 0),
-               ())
+            ('alive_children', '>=', 0),
         ], depends=['gender'])
     death_children = fields.Integer('Death children',
-        states={
-            'invisible': ~(Eval('gender') == 'female'),
-            'readonly': ~Bool(Eval('pregnancies')),
-        },
         domain=[
-            If(Eval('gender') == 'female',
-                ('death_children', '>=', 0),
-               ())
+            ('death_children', '>=', 0),
         ], depends=['gender'])
     abortions = fields.Integer('Abortions',
         states={
@@ -591,8 +579,9 @@ class PatientVaccine(ModelSQL, ModelView):
         ('intradermal', 'Intradermal'),
         ('intranasal', 'Intranasal'),
     ], 'Route administration', required=True, sort=False)
-    date = fields.Date('Date', required=True)
-    next_date = fields.Date('Next Date')
+    date = fields.Date('Date', required=True, help="Date of actual dosis")
+    age_char = fields.Function(fields.Char('Age'), 'on_change_with_age_char')
+    next_date = fields.Date('Next Date', help="Date of next dosis")
     notes = fields.Text('Notes')
 
     @classmethod
@@ -607,6 +596,15 @@ class PatientVaccine(ModelSQL, ModelView):
     @staticmethod
     def default_dose():
         return 1
+
+    @fields.depends('patient', 'date')
+    def on_change_with_age_char(self, name=None):
+        if self.date:
+            context = Transaction().context
+            locale = context.get('language', 'en')
+            return galeno_tools.age_in_words(
+                self.patient.birthdate, end=self.date, locale=locale)
+        return ''
 
 
 class PatientActivity(ModelSQL, ModelView):

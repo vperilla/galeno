@@ -15,6 +15,9 @@
         <field name="date"/>
         <label name="next_date"/>
         <field name="next_date"/>
+        <label name="age_char"/>
+        <field name="age_char"/>
+        <newline/>
         <label name="notes"/>
         <field name="notes" colspan="3"/>
     </group>

@@ -26,7 +26,7 @@ class DiseaseCategory(ModelSQL, ModelView):
         cls._sql_constraints = [
             ('name_parent_exclude',
                 Exclude(t, (t.name, Equal), (Coalesce(t.parent, -1), Equal)),
-                'The name of a party category must be unique by parent.'),
+                'The name of a disease category must be unique by parent.'),
             ('name_uniq', Unique(t, t.name), 'Category name must be unique'),
             ]
         cls._error_messages.update({

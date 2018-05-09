@@ -4,4 +4,6 @@
     <field name="vaccine"/>
     <field name="dose"/>
     <field name="date"/>
+    <field name="age_char"/>
+    <field name="next_date"/>
 </tree>

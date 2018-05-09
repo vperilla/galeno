@@ -42,7 +42,6 @@
             <field name="name">galeno-occupation</field>
             <field name="path">icons/occupation.svg</field>
         </record>
-
         <record model="ir.ui.icon" id="patient_icon">
             <field name="name">galeno-patient</field>
             <field name="path">icons/patient.svg</field>
@@ -82,6 +81,10 @@
         <record model="ir.ui.icon" id="sexuality_icon">
             <field name="name">galeno-sexuality</field>
             <field name="path">icons/sexuality.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="test_icon">
+            <field name="name">galeno-test</field>
+            <field name="path">icons/test.svg</field>
         </record>
 
         <!-- MAIN MENU -->
