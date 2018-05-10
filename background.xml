@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <!-- BACKGROUND MEDICAMENT -->
+        <record model="ir.ui.view" id="patient_background_medicament_view_form">
+            <field name="model">galeno.patient.background.medicament</field>
+            <field name="type">form</field>
+            <field name="name">background_medicament_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_background_medicament_view_tree">
+            <field name="model">galeno.patient.background.medicament</field>
+            <field name="type">tree</field>
+            <field name="name">background_medicament_tree</field>
+        </record>
+        <record model="ir.model.access" id="access_background_medicament">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.background.medicament')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_background_medicament_galeno">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.background.medicament')]"/>
+            <field name="group" ref="group_galeno"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <!-- BACKGROUND DISEASE -->
+        <record model="ir.ui.view" id="patient_background_disease_view_form">
+            <field name="model">galeno.patient.background.disease</field>
+            <field name="type">form</field>
+            <field name="name">background_disease_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_background_disease_view_tree">
+            <field name="model">galeno.patient.background.disease</field>
+            <field name="type">tree</field>
+            <field name="name">background_disease_tree</field>
+        </record>
+        <record model="ir.model.access" id="access_background_disease">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.background.disease')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_background_disease_galeno">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.background.disease')]"/>
+            <field name="group" ref="group_galeno"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <!-- BACKGROUND FAMILY -->
+        <record model="ir.ui.view" id="patient_background_family_view_form">
+            <field name="model">galeno.patient.background.family</field>
+            <field name="type">form</field>
+            <field name="name">background_family_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_background_family_view_tree">
+            <field name="model">galeno.patient.background.family</field>
+            <field name="type">tree</field>
+            <field name="name">background_family_tree</field>
+        </record>
+        <record model="ir.model.access" id="access_background_family">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.background.family')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_background_family_galeno">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.background.family')]"/>
+            <field name="group" ref="group_galeno"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <!-- BACKGROUND SURGERY -->
+        <record model="ir.ui.view" id="patient_background_surgery_view_form">
+            <field name="model">galeno.patient.background.surgery</field>
+            <field name="type">form</field>
+            <field name="name">background_surgery_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_background_surgery_view_tree">
+            <field name="model">galeno.patient.background.surgery</field>
+            <field name="type">tree</field>
+            <field name="name">background_surgery_tree</field>
+        </record>
+        <record model="ir.model.access" id="access_background_surgery">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.background.surgery')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_background_surgery_galeno">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.background.surgery')]"/>
+            <field name="group" ref="group_galeno"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+        <!-- BACKGROUND TEST -->
+        <record model="ir.ui.view" id="patient_background_test_view_form">
+            <field name="model">galeno.patient.background.test</field>
+            <field name="type">form</field>
+            <field name="name">background_test_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_background_test_view_tree">
+            <field name="model">galeno.patient.background.test</field>
+            <field name="type">tree</field>
+            <field name="name">background_test_tree</field>
+        </record>
+        <record model="ir.model.access" id="access_background_test">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.background.test')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_background_test_galeno">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.background.test')]"/>
+            <field name="group" ref="group_galeno"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+    </data>
+</tryton>

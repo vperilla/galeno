@@ -89,7 +89,7 @@
         </page>
         <page id="patient_4" string="Life style" icon="galeno-lifestyle">
             <notebook>
-                <page id="lifestyle_exercise" string="Sleep - Exercise"
+                <page id="lifestyle_exercise" string="Sleep - Activities"
                     icon="galeno-activity">
                     <group id="lifestyle-sleep" string="Sleep information"
                         colspan="2">
@@ -183,7 +183,29 @@
                     <label name="actually_pregnant"/>
                     <field name="actually_pregnant"/>
                 </page>
+                <page id="medicament_backgrounds" string="Medicaments"
+                    icon="galeno-medicament">
+                    <field name="background_medicaments" colspan="4"/>
+                </page>
+                <page id="disease_backgrounds" string="Diseases"
+                    icon="galeno-medicament">
+                    <field name="background_diseases" colspan="4"/>
+                </page>
+                <page id="family_backgrounds" string="Family"
+                    icon="galeno-family">
+                    <field name="background_family" colspan="4"/>
+                </page>
+                <page id="surgery_backgrounds" string="Surgeries"
+                    icon="galeno-surgery">
+                    <field name="background_surgeries" colspan="4"/>
+                </page>
+                <page id="test_backgrounds" string="Tests"
+                    icon="galeno-test">
+                    <field name="background_tests" colspan="4"/>
+                </page>
             </notebook>
+            <separator name="background_notes" colspan="4"/>
+            <field name="background_notes" colspan="4"/>
         </page>
     </notebook>
 </form>

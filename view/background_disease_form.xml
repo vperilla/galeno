@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<form>
+    <group id="background_disease_header">
+        <label name="patient"/>
+        <field name="patient"/>
+        <newline/>
+        <label name="disease"/>
+        <field name="disease"/>
+        <separator name="notes" colspan="4"/>
+        <field name="notes" colspan="4"/>
+    </group>
+</form>

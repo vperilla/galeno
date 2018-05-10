@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="patient"/>
+    <field name="test"/>
+    <field name="notes"/>
+</tree>

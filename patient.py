@@ -132,7 +132,7 @@ class Patient(ModelSQL, ModelView):
     # Activities
     activities = fields.One2Many(
         'galeno.patient.activity', 'patient', 'Activities',
-        help="List of sport activities")
+        help="List of activities: sports, extra works and other activities")
     # Sleep
     sleep_time = fields.Integer('Sleep time in hours',
         domain=[
@@ -271,6 +271,23 @@ class Patient(ModelSQL, ModelView):
         states={
             'invisible': Eval('gender') != 'female',
         }, depends=['gender'])
+    # BACKGROUNDS
+    background_medicaments = fields.One2Many(
+        'galeno.patient.background.medicament', 'patient',
+        'Background Medicaments')
+    background_diseases = fields.One2Many(
+        'galeno.patient.background.disease', 'patient',
+        'Background Diseases')
+    background_family = fields.One2Many(
+        'galeno.patient.background.family', 'patient',
+        'Background Family')
+    background_surgeries = fields.One2Many(
+        'galeno.patient.background.surgery', 'patient',
+        'Background Surgeries')
+    background_tests = fields.One2Many(
+        'galeno.patient.background.test', 'patient',
+        'Background Tests')
+    background_notes = fields.Text('Background Notes')
 
     @classmethod
     def __setup__(cls):

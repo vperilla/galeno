@@ -86,6 +86,14 @@
             <field name="name">galeno-test</field>
             <field name="path">icons/test.svg</field>
         </record>
+        <record model="ir.ui.icon" id="family_icon">
+            <field name="name">galeno-family</field>
+            <field name="path">icons/family.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="surgery_icon">
+            <field name="name">galeno-surgery</field>
+            <field name="path">icons/surgery.svg</field>
+        </record>
 
         <!-- MAIN MENU -->
         <record model="res.group" id="group_galeno_admin">

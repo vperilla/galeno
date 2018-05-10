@@ -13,6 +13,7 @@ from . import drug
 from . import contraceptive_method
 from . import test
 from . import patient
+from . import background
 from . import configuration
 
 __all__ = ['register']
@@ -40,6 +41,11 @@ def register():
         patient.PatientVaccine,
         patient.PatientActivity,
         patient.PatientDrug,
+        background.Medicament,
+        background.Disease,
+        background.Family,
+        background.Surgery,
+        background.Test,
         configuration.Configuration,
         module='galeno', type_='model')
     Pool.register(

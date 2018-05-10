@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<form>
+    <group id="background_medicament_header">
+        <label name="patient"/>
+        <field name="patient"/>
+        <label name="patient_gender"/>
+        <field name="patient_gender"/>
+        <newline/>
+        <label name="test"/>
+        <field name="test"/>
+        <separator name="notes" colspan="4"/>
+        <field name="notes" colspan="4"/>
+    </group>
+</form>
