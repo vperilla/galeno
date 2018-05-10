@@ -6,5 +6,7 @@
         <newline/>
         <label name="name"/>
         <field name="name" colspan="3"/>
+        <separator name="description" colspan="4"/>
+        <field name="description" colspan="4"/>
     </group>
 </form>

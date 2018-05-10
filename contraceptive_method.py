@@ -13,6 +13,7 @@ class ContraceptiveMethod(ModelSQL, ModelView):
             ('female', 'Female'),
             ('unisex', 'Unisex'),
     ], 'Gender', required=True)
+    description = fields.Text('Description')
 
     @classmethod
     def __setup__(cls):
