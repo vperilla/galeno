@@ -6,14 +6,6 @@
         <record model="ir.ui.view" id="test_category_view_list">
             <field name="model">galeno.test.category</field>
             <field name="type">tree</field>
-            <field name="priority" eval="10"/>
-            <field name="name">test_category_list</field>
-        </record>
-        <record model="ir.ui.view" id="test_category_view_tree">
-            <field name="model">galeno.test.category</field>
-            <field name="type">tree</field>
-            <field name="priority" eval="20"/>
-            <field name="field_childs">childs</field>
             <field name="name">test_category_tree</field>
         </record>
         <record model="ir.ui.view" id="test_category_view_form">
@@ -22,42 +14,23 @@
             <field name="name">test_category_form</field>
         </record>
 
-        <record model="ir.action.act_window" id="act_test_category_tree">
-            <field name="name">Test Categories</field>
-            <field name="res_model">galeno.test.category</field>
-            <field name="domain" eval="[('parent', '=', None)]" pyson="1"/>
-        </record>
-        <record model="ir.action.act_window.view" id="act_test_category_tree_view1">
-            <field name="sequence" eval="10"/>
-            <field name="view" ref="test_category_view_tree"/>
-            <field name="act_window" ref="act_test_category_tree"/>
-        </record>
-        <record model="ir.action.act_window.view" id="act_test_category_tree_view2">
-            <field name="sequence" eval="20"/>
-            <field name="view" ref="test_category_view_form"/>
-            <field name="act_window" ref="act_test_category_tree"/>
-        </record>
-
-        <menuitem parent="menu_test" sequence="100"
-            action="act_test_category_tree" id="menu_test_category_tree"/>
-
-        <record model="ir.action.act_window" id="act_test_category_list">
+        <record model="ir.action.act_window" id="act_test_category_form">
             <field name="name">Test categories</field>
             <field name="res_model">galeno.test.category</field>
         </record>
-        <record model="ir.action.act_window.view" id="act_test_category_list_view1">
+        <record model="ir.action.act_window.view" id="act_test_category_form_view1">
             <field name="sequence" eval="10"/>
             <field name="view" ref="test_category_view_list"/>
-            <field name="act_window" ref="act_test_category_list"/>
+            <field name="act_window" ref="act_test_category_form"/>
         </record>
-        <record model="ir.action.act_window.view" id="act_test_category_list_view2">
+        <record model="ir.action.act_window.view" id="act_test_category_form_view2">
             <field name="sequence" eval="20"/>
             <field name="view" ref="test_category_view_form"/>
-            <field name="act_window" ref="act_test_category_list"/>
+            <field name="act_window" ref="act_test_category_form"/>
         </record>
-        <menuitem parent="menu_test_category_tree"
-            sequence="10" id="menu_test_category_list"
-            action="act_test_category_list"/>
+        <menuitem parent="menu_test"
+            sequence="1" id="menu_test_category"
+            action="act_test_category_form"/>
 
         <record model="ir.model.access" id="access_test_category">
             <field name="model" search="[('model', '=', 'galeno.test.category')]"/>
@@ -102,7 +75,7 @@
             <field name="act_window" ref="act_test_form"/>
         </record>
         <menuitem parent="menu_test" action="act_test_form"
-            id="menu_test_form" icon="galeno-test" sequence="10"/>
+            id="menu_test_form" icon="galeno-test" sequence="2"/>
         <record model="ir.model.access" id="access_test">
             <field name="model" search="[('model', '=', 'galeno.test')]"/>
             <field name="perm_read" eval="True"/>

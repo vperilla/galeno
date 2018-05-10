@@ -4,14 +4,4 @@ this repository contains the full copyright notices and license terms. -->
 <form>
     <label name="name"/>
     <field name="name"/>
-    <label name="parent"/>
-    <field name="parent"/>
-    <group colspan="4" col="-1" id="checkboxes">
-        <!-- Add here some checkboxes ! -->
-    </group>
-    <notebook colspan="4">
-        <page string="Children" col="1" id="childs">
-            <field name="childs"/>
-        </page>
-    </notebook>
 </form>
