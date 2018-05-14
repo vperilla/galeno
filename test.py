@@ -42,3 +42,16 @@ class Test(ModelSQL, ModelView):
 
     def get_rec_name(self, name):
         return '%s / %s' % (self.category.rec_name, self.name)
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        _, operator, value = clause
+        if operator.startswith('!') or operator.startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+        domain = [bool_op,
+            ('name', operator, value),
+            ('category.name', operator, value),
+            ]
+        return domain

@@ -1,0 +1,91 @@
+<?xml version="1.0"?>
+<form>
+    <group id="patient_evaluation_header" col="8">
+        <label name="reason"/>
+        <field name="reason"/>
+        <label name="start_date"/>
+        <field name="start_date"/>
+        <label name="state"/>
+        <field name="state"/>
+        <label name="code"/>
+        <field name="code"/>
+        <label name="patient"/>
+        <field name="patient"/>
+        <label name="patient_gender"/>
+        <field name="patient_gender"/>
+        <label name="patient_age"/>
+        <field name="patient_age"/>
+        <label name="end_date"/>
+        <field name="end_date"/>
+    </group>
+    <group id="summary" colspan="8" col="4">
+        <separator name="summary" colspan="4"/>
+        <field name="summary" colspan="4"/>
+    </group>
+    <notebook>
+        <page id="evaluation_systems_organs" string="Systems - Organs">
+            <group id="main_so" colspan="4" col="6">
+                <group id="system_organs_main" colspan="6">
+                    <separator name="symptoms" colspan="6"/>
+                    <field name="symptoms" coslpan="6"/>
+                </group>
+                <group id="systems_organs_1" colspan="2" col="4">
+                    <separator name="so_respiratory" colspan="4"/>
+                    <field name="so_respiratory" colspan="4"/>
+                    <separator name="so_cardiovascular" colspan="4"/>
+                    <field name="so_cardiovascular" colspan="4"/>
+                    <separator name="so_digestive" colspan="4"/>
+                    <field name="so_digestive" colspan="4"/>
+                </group>
+                <group id="systems_organs_2" colspan="2" col="4">
+                    <separator name="so_nervous" colspan="4"/>
+                    <field name="so_nervous" colspan="4"/>
+                    <separator name="so_sense" colspan="4"/>
+                    <field name="so_sense" colspan="4"/>
+                    <separator name="so_endocrine" colspan="4"/>
+                    <field name="so_endocrine" colspan="4"/>
+                </group>
+                <group id="systems_organs_3" colspan="2" col="4">
+                    <separator name="so_skeletal_muscle" colspan="4"/>
+                    <field name="so_skeletal_muscle" colspan="4"/>
+                    <separator name="so_geninourinary" colspan="4"/>
+                    <field name="so_geninourinary" colspan="4"/>
+                    <separator name="so_hemolymphatic" colspan="4"/>
+                    <field name="so_hemolymphatic" colspan="4"/>
+                </group>
+            </group>
+        </page>
+        <page id="evaluation_vital_signs" string="Vital signs">
+            <group id="vital_signs" colspan="4" col="8">
+                <label name="systolic_pressure"/>
+                <field name="systolic_pressure"/>
+                <label name="diastolic_pressure"/>
+                <field name="diastolic_pressure"/>
+                <label name="heart_rate"/>
+                <field name="heart_rate"/>
+                <label name="breathing_rate"/>
+                <field name="breathing_rate"/>
+                <label name="temperature"/>
+                <field name="temperature"/>
+                <label name="weight"/>
+                <field name="weight"/>
+                <label name="heigth"/>
+                <field name="heigth"/>
+                <label name="bmi"/>
+                <field name="bmi"/>
+                <label name="oxygen_saturation"/>
+                <field name="oxygen_saturation"/>
+                <label name="hip"/>
+                <field name="hip"/>
+                <label name="waist"/>
+                <field name="waist"/>
+                <label name="whr"/>
+                <field name="whr"/>
+                <label name="malnutrition"/>
+                <field name="malnutrition"/>
+                <label name="dehydration"/>
+                <field name="dehydration"/>
+            </group>
+        </page>
+    </notebook>
+</form>

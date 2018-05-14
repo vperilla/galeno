@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <!-- PATIENT EVALUATION -->
+        <record model="ir.ui.view" id="patient_evaluation_view_form">
+            <field name="model">galeno.patient.evaluation</field>
+            <field name="type">form</field>
+            <field name="name">patient_evaluation_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_evaluation_view_tree">
+            <field name="model">galeno.patient.evaluation</field>
+            <field name="type">tree</field>
+            <field name="name">patient_evaluation_tree</field>
+        </record>
+        <record model="ir.ui.view" id="patient_evaluation_view_calendar">
+            <field name="model">galeno.patient.evaluation</field>
+            <field name="type">calendar</field>
+            <field name="name">patient_evaluation_calendar</field>
+        </record>
+        <record model="ir.action.act_window" id="act_patient_evaluation_form">
+            <field name="name">Evaluations</field>
+            <field name="res_model">galeno.patient.evaluation</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_patient_evaluation_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="patient_evaluation_view_tree"/>
+            <field name="act_window" ref="act_patient_evaluation_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_patient_evaluation_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="patient_evaluation_view_form"/>
+            <field name="act_window" ref="act_patient_evaluation_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_patient_evaluation_form_view3">
+            <field name="sequence" eval="30"/>
+            <field name="view" ref="patient_evaluation_view_calendar"/>
+            <field name="act_window" ref="act_patient_evaluation_form"/>
+        </record>
+        <menuitem parent="menu_galeno" action="act_patient_evaluation_form"
+            id="menu_patient_evaluation_form" sequence="20" icon="galeno-evaluation"/>
+        <record model="ir.model.access" id="access_evaluation">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_evaluation_galeno">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation')]"/>
+            <field name="group" ref="group_galeno"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+    </data>
+</tryton>

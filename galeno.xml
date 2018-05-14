@@ -94,6 +94,10 @@
             <field name="name">galeno-surgery</field>
             <field name="path">icons/surgery.svg</field>
         </record>
+        <record model="ir.ui.icon" id="evaluation_icon">
+            <field name="name">galeno-evaluation</field>
+            <field name="path">icons/evaluation.svg</field>
+        </record>
 
         <!-- MAIN MENU -->
         <record model="res.group" id="group_galeno_admin">
