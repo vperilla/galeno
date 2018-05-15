@@ -27,7 +27,7 @@
             <group id="main_so" colspan="4" col="6">
                 <group id="system_organs_main_1" colspan="6" col="6">
                     <separator name="symptoms" colspan="6"/>
-                    <field name="symptoms" coslpan="6"/>
+                    <field name="symptoms" colspan="6"/>
                 </group>
                 <group id="system_organs_main_2" colspan="6" col="6">
                     <separator name="so_respiratory" colspan="2"/>
