@@ -83,5 +83,111 @@
                 <field name="dehydration"/>
             </group>
         </page>
+        <page id="evaluation_regional_physical_exam" string="Regional Physical Exam">
+            <group id="rpe_main_1" colspan="4" col="12">
+                <group id="rpe_oropharynx" string="Oropharynx" colspan="2" col="4" expandable="1">
+                    <label name="rpe_oropharynx_lips"/>
+                    <field name="rpe_oropharynx_lips"/>
+                    <label name="rpe_oropharynx_tongue"/>
+                    <field name="rpe_oropharynx_tongue"/>
+                    <label name="rpe_oropharynx_pharynx"/>
+                    <field name="rpe_oropharynx_pharynx"/>
+                    <label name="rpe_oropharynx_tonsils"/>
+                    <field name="rpe_oropharynx_tonsils"/>
+                    <label name="rpe_oropharynx_teeth"/>
+                    <field name="rpe_oropharynx_teeth"/>
+                </group>
+                <group id="rpe_nose" string="Nose" colspan="2" col="2" expandable="1">
+                    <label name="rpe_nose_partition"/>
+                    <field name="rpe_nose_partition"/>
+                    <label name="rpe_nose_turbinates"/>
+                    <field name="rpe_nose_turbinates"/>
+                    <label name="rpe_nose_mocous"/>
+                    <field name="rpe_nose_mocous"/>
+                    <label name="rpe_nose_paranasal_sinuses"/>
+                    <field name="rpe_nose_paranasal_sinuses"/>
+                </group>
+                <group id="rpe_skin" string="Skin" colspan="2" col="2" expandable="1">
+                    <label name="rpe_skin_scars"/>
+                    <field name="rpe_skin_scars"/>
+                    <label name="rpe_skin_tatoo"/>
+                    <field name="rpe_skin_tatoo"/>
+                    <label name="rpe_skin_facer"/>
+                    <field name="rpe_skin_facer"/>
+                </group>
+                <group id="rpe_eyes" string="Eyes" colspan="2" col="2" expandable="1">
+                    <label name="rpe_eyes_conjunctive"/>
+                    <field name="rpe_eyes_conjunctive"/>
+                    <label name="rpe_eyes_pupils"/>
+                    <field name="rpe_eyes_pupils"/>
+                    <label name="rpe_eyes_motility"/>
+                    <field name="rpe_eyes_motility"/>
+                </group>
+                <group id="rpe_ear" string="Ear" colspan="2" col="2" expandable="1">
+                    <label name="rpe_ear_extern"/>
+                    <field name="rpe_ear_extern"/>
+                    <label name="rpe_ear_pavilion"/>
+                    <field name="rpe_ear_pavilion"/>
+                    <label name="rpe_ear_eardrums"/>
+                    <field name="rpe_ear_eardrums"/>
+                </group>
+                <group id="rpe_column" string="Column" colspan="2" col="2" expandable="1">
+                    <label name="rpe_column_flexibility"/>
+                    <field name="rpe_column_flexibility"/>
+                    <label name="rpe_column_deviation"/>
+                    <field name="rpe_column_deviation"/>
+                    <label name="rpe_column_pain"/>
+                    <field name="rpe_column_pain"/>
+                </group>
+            </group>
+            <group id="rpe_main_2" colspan="4" col="12">
+                <group id="rpe_chest" string="Chest" colspan="2" col="2" expandable="1">
+                    <label name="rpe_chest_mammary_glands"/>
+                    <field name="rpe_chest_mammary_glands"/>
+                    <label name="rpe_chest_heart"/>
+                    <field name="rpe_chest_heart"/>
+                    <label name="rpe_chest_lungs"/>
+                    <field name="rpe_chest_lungs"/>
+                    <label name="rpe_chest_ribs"/>
+                    <field name="rpe_chest_ribs"/>
+                </group>
+                <group id="rpe_limbs" string="Limbs" colspan="2" col="2" expandable="1">
+                    <label name="rpe_limbs_vascular"/>
+                    <field name="rpe_limbs_vascular"/>
+                    <label name="rpe_limbs_superior"/>
+                    <field name="rpe_limbs_superior"/>
+                    <label name="rpe_limbs_inferior"/>
+                    <field name="rpe_limbs_inferior"/>
+                </group>
+                <group id="rpe_neuro" string="Neurological" colspan="2" col="2" expandable="1">
+                    <label name="rpe_neuro_strength"/>
+                    <field name="rpe_neuro_strength"/>
+                    <label name="rpe_neuro_sensivity"/>
+                    <field name="rpe_neuro_sensivity"/>
+                    <label name="rpe_neuro_march"/>
+                    <field name="rpe_neuro_march"/>
+                </group>
+                <group id="rpe_abdomen" string="Abdomen" colspan="2" col="2" expandable="1">
+                    <label name="rpe_abdomen_viscera"/>
+                    <field name="rpe_abdomen_viscera"/>
+                    <label name="rpe_abdomen_adbominal_wall"/>
+                    <field name="rpe_abdomen_adbominal_wall"/>
+                </group>
+                <group id="rpe_neck" string="Neck" colspan="2" col="2" expandable="1">
+                    <label name="rpe_neck_thyroid"/>
+                    <field name="rpe_neck_thyroid"/>
+                    <label name="rpe_neck_mobility"/>
+                    <field name="rpe_neck_mobility"/>
+                </group>
+                <group id="rpe_pelvis" string="Pelvis" colspan="2" col="2" expandable="1">
+                    <label name="rpe_pelvis_pelvis"/>
+                    <field name="rpe_pelvis_pelvis"/>
+                    <label name="rpe_pelvis_genitals"/>
+                    <field name="rpe_pelvis_genitals"/>
+                </group>
+            </group>
+        </page>
     </notebook>
+    <separator name="rpe_notes" colspan="4"/>
+    <field name="rpe_notes" colspan="4"/>
 </form>
