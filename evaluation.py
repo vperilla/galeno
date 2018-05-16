@@ -37,7 +37,8 @@ class PatientEvaluation(ModelSQL, ModelView):
             ('progress', 'Progress'),
             ('done', 'Done'),
         ], 'State', readonly=True, required=True)
-    summary = fields.Text('Summary')
+    symptoms = fields.Text('Illness symptoms')
+    treatment = fields.Text('Treatment')
     # VITAL SIGNS
     systolic_pressure = fields.Float('Systolic Pressure',
         domain=[
@@ -106,7 +107,6 @@ class PatientEvaluation(ModelSQL, ModelView):
     malnutrition = fields.Boolean('Malnutrition')
     dehydration = fields.Boolean('Dehydration')
     # SYSTEMS - ORGANS
-    symptoms = fields.Text('Illness symptoms')
     so_respiratory = fields.Text('Respiratory')
     so_cardiovascular = fields.Text('Cardiovascular')
     so_digestive = fields.Text('Digestive')
@@ -155,6 +155,53 @@ class PatientEvaluation(ModelSQL, ModelView):
     rpe_neuro_sensivity = fields.Boolean('Sensivity')
     rpe_neuro_march = fields.Boolean('March')
     rpe_notes = fields.Text('Notes')
+    # MENTAL STATUS
+    ms_eye = fields.Selection(
+        [
+            ('1', 'No eye opening'),
+            ('2', 'Eye opening in response to pain stimulus'),
+            ('3', 'Eye opening to speech'),
+            ('4', 'Eyes opening spontaneously'),
+        ], 'Eye response', sort=False)
+    ms_verbal = fields.Selection(
+        [
+            ('1', 'No verbal response'),
+            ('2', 'Incomprehensible sounds'),
+            ('3', 'Inappropriate words'),
+            ('4', 'Confused'),
+            ('5', 'Oriented'),
+        ], 'Verbal response', sort=False)
+    ms_motor = fields.Selection(
+        [
+            ('1', 'No motor response'),
+            ('2', 'Decerebrate posturing'),
+            ('3', 'Decorticate posturing'),
+            ('4', 'Withdrawal from pain'),
+            ('5', 'Localizes to pain'),
+            ('6', 'Obeys commands'),
+        ], 'Motor response', sort=False)
+    ms_glasgow_score = fields.Function(
+        fields.Integer('Glasgow score'), 'on_change_with_ms_glasgow_score')
+    ms_violent_behavior = fields.Boolean('Violent behavior')
+    ms_orientation = fields.Boolean('Orientation')
+    ms_percetption_reality = fields.Boolean('Perception reality')
+    ms_abstraction = fields.Boolean('Abstraction')
+    ms_calc_skill = fields.Boolean('Calculation skills')
+    ms_mood = fields.Selection(
+        [
+            ('normal', 'Normal'),
+            ('sad', 'Sad'),
+            ('angry', 'Angry'),
+            ('happy', 'Happy'),
+            ('disgusted', 'Disgusted'),
+            ('euphoric', 'Euphoric'),
+            ('apathetic', 'Apathetic'),
+        ], 'Mood', sort=False)
+    ms_memory = fields.Boolean('Memory')
+    ms_discernment = fields.Boolean('Discernment')
+    ms_vocabulary = fields.Boolean('Vocabulary')
+    ms_object_recognition = fields.Boolean('Object recognition')
+    ms_notes = fields.Text('Notes')
 
     @staticmethod
     def default_state():
@@ -163,6 +210,10 @@ class PatientEvaluation(ModelSQL, ModelView):
     @staticmethod
     def default_start_date():
         return datetime.now()
+
+    @staticmethod
+    def default_mood():
+        return 'normal'
 
     @fields.depends('patient')
     def on_change_with_patient_gender(self, name=None):
@@ -190,3 +241,9 @@ class PatientEvaluation(ModelSQL, ModelView):
         if self.hip and self.waist:
             return Decimal(self.waist) / Decimal(self.hip)
         return 0
+
+    @fields.depends('ms_eye', 'ms_verbal', 'ms_motor')
+    def on_change_with_ms_glasgow_score(self, name=None):
+        if self.ms_eye and self.ms_verbal and self.ms_motor:
+            return int(self.ms_eye) + int(self.ms_verbal) + int(self.ms_motor)
+        return None

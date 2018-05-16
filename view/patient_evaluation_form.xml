@@ -18,16 +18,16 @@
         <label name="end_date"/>
         <field name="end_date"/>
     </group>
-    <group id="summary" colspan="8" col="4">
-        <separator name="summary" colspan="4"/>
-        <field name="summary" colspan="4"/>
+    <group id="summary_treatment" colspan="8" col="4">
+        <separator name="symptoms" colspan="4"/>
+        <field name="symptoms" colspan="4"/>
+        <separator name="treatment" colspan="4"/>
+        <field name="treatment" colspan="4"/>
     </group>
     <notebook>
         <page id="evaluation_systems_organs" string="Systems - Organs">
             <group id="main_so" colspan="4" col="6">
                 <group id="system_organs_main_1" colspan="6" col="6">
-                    <separator name="symptoms" colspan="6"/>
-                    <field name="symptoms" colspan="6"/>
                 </group>
                 <group id="system_organs_main_2" colspan="6" col="6">
                     <separator name="so_respiratory" colspan="2"/>
@@ -186,8 +186,43 @@
                     <field name="rpe_pelvis_genitals"/>
                 </group>
             </group>
+            <separator name="rpe_notes" colspan="4"/>
+            <field name="rpe_notes" colspan="4"/>
+        </page>
+        <page id="mental_status" string="Mental status">
+            <group id="mental_status" colspan="4" col="8">
+                <label name="ms_eye"/>
+                <field name="ms_eye"/>
+                <label name="ms_verbal"/>
+                <field name="ms_verbal"/>
+                <label name="ms_motor"/>
+                <field name="ms_motor"/>
+                <label name="ms_glasgow_score"/>
+                <field name="ms_glasgow_score"/>
+                <label name="ms_violent_behavior"/>
+                <field name="ms_violent_behavior"/>
+                <label name="ms_orientation"/>
+                <field name="ms_orientation"/>
+                <label name="ms_percetption_reality"/>
+                <field name="ms_percetption_reality"/>
+                <label name="ms_abstraction"/>
+                <field name="ms_abstraction"/>
+                <label name="ms_calc_skill"/>
+                <field name="ms_calc_skill"/>
+                <label name="ms_memory"/>
+                <field name="ms_memory"/>
+                <label name="ms_discernment"/>
+                <field name="ms_discernment"/>
+                <label name="ms_vocabulary"/>
+                <field name="ms_vocabulary"/>
+                <label name="ms_object_recognition"/>
+                <field name="ms_object_recognition"/>
+                <label name="ms_mood"/>
+                <field name="ms_mood"/>
+                <newline/>
+                <separator name="ms_notes" colspan="8"/>
+                <field name="ms_notes" colspan="8"/>
+            </group>
         </page>
     </notebook>
-    <separator name="rpe_notes" colspan="4"/>
-    <field name="rpe_notes" colspan="4"/>
 </form>
