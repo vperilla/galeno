@@ -180,8 +180,9 @@ class PatientEvaluation(ModelSQL, ModelView):
             ('5', 'Localizes to pain'),
             ('6', 'Obeys commands'),
         ], 'Motor response', sort=False)
-    ms_glasgow_score = fields.Function(
-        fields.Integer('Glasgow score'), 'on_change_with_ms_glasgow_score')
+    ms_glasgow_score = fields.Function(fields.Integer('Glasgow score',
+        help="Glasgow Score: < 9 severe, 9 -12 moderate, > 13 minor"),
+        'on_change_with_ms_glasgow_score')
     ms_violent_behavior = fields.Boolean('Violent behavior')
     ms_orientation = fields.Boolean('Orientation')
     ms_percetption_reality = fields.Boolean('Perception reality')
