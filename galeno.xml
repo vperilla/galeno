@@ -98,6 +98,22 @@
             <field name="name">galeno-evaluation</field>
             <field name="path">icons/evaluation.svg</field>
         </record>
+        <record model="ir.ui.icon" id="system_organ_icon">
+            <field name="name">galeno-system-organ</field>
+            <field name="path">icons/system_organ.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="vital_sign_icon">
+            <field name="name">galeno-vital-sign</field>
+            <field name="path">icons/vital_sign.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="rpe_icon">
+            <field name="name">galeno-rpe</field>
+            <field name="path">icons/rpe.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="mental_status_icon">
+            <field name="name">galeno-mental-status</field>
+            <field name="path">icons/mental_status.svg</field>
+        </record>
 
         <!-- MAIN MENU -->
         <record model="res.group" id="group_galeno_admin">

@@ -25,7 +25,8 @@
         <field name="treatment" colspan="4"/>
     </group>
     <notebook>
-        <page id="evaluation_systems_organs" string="Systems - Organs">
+        <page id="evaluation_systems_organs" string="Systems - Organs"
+            icon="galeno-system-organ">
             <group id="main_so" colspan="4" col="6">
                 <group id="system_organs_main_1" colspan="6" col="6">
                 </group>
@@ -51,7 +52,8 @@
                 </group>
             </group>
         </page>
-        <page id="evaluation_vital_signs" string="Vital signs">
+        <page id="evaluation_vital_signs" string="Vital signs"
+            icon="galeno-vital-sign">
             <group id="vital_signs" colspan="4" col="8">
                 <label name="systolic_pressure"/>
                 <field name="systolic_pressure"/>
@@ -83,7 +85,8 @@
                 <field name="dehydration"/>
             </group>
         </page>
-        <page id="evaluation_regional_physical_exam" string="Regional Physical Exam">
+        <page id="evaluation_regional_physical_exam" string="Regional Physical Exam"
+            icon="galeno-rpe">
             <group id="rpe_main_1" colspan="4" col="12">
                 <group id="rpe_oropharynx" string="Oropharynx" colspan="2" col="4" expandable="1">
                     <label name="rpe_oropharynx_lips"/>
@@ -189,7 +192,8 @@
             <separator name="rpe_notes" colspan="4"/>
             <field name="rpe_notes" colspan="4"/>
         </page>
-        <page id="mental_status" string="Mental status">
+        <page id="mental_status" string="Mental status"
+            icon="galeno-mental-status">
             <group id="mental_status" colspan="4" col="8">
                 <label name="ms_eye"/>
                 <field name="ms_eye"/>
@@ -224,7 +228,7 @@
                 <field name="ms_notes" colspan="8"/>
             </group>
         </page>
-        <page id="tests" string="Requested tests">
+        <page id="tests" string="Requested tests" icon="galeno-test">
             <group id="tests">
                 <field name="requested_tests" view_mode="tree,form"
                     view_ids="galeno.patient_evaluation_test_view_tree_simple,galeno.patient_evaluation_test_view_form" colspan="4"/>
