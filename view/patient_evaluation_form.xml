@@ -224,5 +224,11 @@
                 <field name="ms_notes" colspan="8"/>
             </group>
         </page>
+        <page id="tests" string="Requested tests">
+            <group id="tests">
+                <field name="requested_tests" view_mode="tree,form"
+                    view_ids="galeno.patient_evaluation_test_view_tree_simple,galeno.patient_evaluation_test_view_form" colspan="4"/>
+            </group>
+        </page>
     </notebook>
 </form>

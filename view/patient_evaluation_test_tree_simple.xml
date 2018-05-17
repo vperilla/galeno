@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="evaluation"/>
+    <field name="test"/>
+    <field name="with_result"/>
+    <field name="result_data"/>
+    <field name="result_notes"/>
+</tree>

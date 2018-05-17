@@ -58,5 +58,58 @@
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
+
+
+        <!-- PATIENT EVALUATION TEST -->
+        <record model="ir.ui.view" id="patient_evaluation_test_view_form">
+            <field name="model">galeno.patient.evaluation.test</field>
+            <field name="type">form</field>
+            <field name="name">patient_evaluation_test_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_evaluation_test_view_tree">
+            <field name="model">galeno.patient.evaluation.test</field>
+            <field name="type">tree</field>
+            <field name="name">patient_evaluation_test_tree</field>
+        </record>
+        <record model="ir.ui.view" id="patient_evaluation_test_view_tree_simple">
+            <field name="model">galeno.patient.evaluation.test</field>
+            <field name="type">tree</field>
+            <field name="name">patient_evaluation_test_tree_simple</field>
+        </record>
+        <record model="ir.action.act_window" id="act_patient_evaluation_test_form">
+            <field name="name">Requested tests</field>
+            <field name="res_model">galeno.patient.evaluation.test</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_patient_evaluation_test_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="patient_evaluation_test_view_tree"/>
+            <field name="act_window" ref="act_patient_evaluation_test_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_patient_evaluation_test_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="patient_evaluation_test_view_form"/>
+            <field name="act_window" ref="act_patient_evaluation_test_form"/>
+        </record>
+        <menuitem parent="menu_galeno" action="act_patient_evaluation_test_form"
+            id="menu_patient_evaluation_test_form" sequence="30" icon="galeno-test"/>
+        <record model="ir.model.access" id="access_evaluation_test">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation.test')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_evaluation_test_galeno">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation.test')]"/>
+            <field name="group" ref="group_galeno"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
     </data>
 </tryton>

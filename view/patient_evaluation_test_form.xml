@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<form>
+    <group id="evaluation_test_header">
+        <group id="eval_test_1" colspan="4">
+            <label name="evaluation"/>
+            <field name="evaluation"/>
+            <label name="patient"/>
+            <field name="patient"/>
+            <label name="patient_gender"/>
+            <field name="patient_gender"/>
+        </group>
+        <group id="eval_test_result" colspan="4" col="6">
+            <separator name="test" colspan="6"/>
+            <field name="test" colspan="6"/>
+            <separator name="reason" colspan="6"/>
+            <field name="reason" colspan="6"/>
+            <label name="with_result"/>
+            <field name="with_result"/>
+            <label name="result_date"/>
+            <field name="result_date"/>
+            <separator name="result_data"/>
+            <field name="result_data" filename_visible="1"/>
+            <separator name="result_notes" colspan="4"/>
+            <field name="result_notes" colspan="4"/>
+        </group>
+    </group>
+</form>

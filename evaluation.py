@@ -4,10 +4,12 @@ from decimal import Decimal
 from trytond.model import ModelView, ModelSQL, fields
 from trytond.pyson import Bool, Eval, If
 from trytond.transaction import Transaction
+from trytond.pool import Pool
+from trytond.tools import reduce_ids, grouped_slice
 
 import galeno_tools
 
-__all__ = ['PatientEvaluation']
+__all__ = ['PatientEvaluation', 'PatientEvaluationTest']
 
 
 class PatientEvaluation(ModelSQL, ModelView):
@@ -203,6 +205,12 @@ class PatientEvaluation(ModelSQL, ModelView):
     ms_vocabulary = fields.Boolean('Vocabulary')
     ms_object_recognition = fields.Boolean('Object recognition')
     ms_notes = fields.Text('Notes')
+    # REQUESTED TESTS
+    requested_tests = fields.One2Many(
+        'galeno.patient.evaluation.test', 'evaluation', 'Tests',
+        states={
+            'readonly': ~Eval('patient'),
+        })
 
     @staticmethod
     def default_state():
@@ -247,4 +255,74 @@ class PatientEvaluation(ModelSQL, ModelView):
     def on_change_with_ms_glasgow_score(self, name=None):
         if self.ms_eye and self.ms_verbal and self.ms_motor:
             return int(self.ms_eye) + int(self.ms_verbal) + int(self.ms_motor)
+        return None
+
+
+class PatientEvaluationTest(ModelSQL, ModelView):
+    'Patient Evaluation Test'
+    __name__ = 'galeno.patient.evaluation.test'
+
+    evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
+        ondelete='CASCADE', required=True)
+    patient = fields.Function(fields.Many2One('galeno.patient', 'Patient'),
+        'get_patient', searcher='search_patient')
+    patient_gender = fields.Function(
+        fields.Char('Patient gender',
+            states={
+                'invisible': True,
+            }), 'on_change_with_patient_gender')
+    test = fields.Many2One('galeno.test', 'Test',
+        domain=['OR',
+                ('gender', '=', Eval('patient_gender')),
+                ('gender', '=', 'unisex'),
+        ], depends=['patient_gender'], required=True)
+    reason = fields.Text('Reason', required=True)
+    with_result = fields.Boolean('With result')
+    result_date = fields.Date('Result Date',
+        states={
+            'readonly': ~Eval('with_result'),
+        })
+    result_notes = fields.Text('Result',
+        states={
+            'readonly': ~Eval('with_result'),
+        })
+    result_data = fields.Binary('Result data', file_id='file_id',
+        filename='filename', help="Load result data, Ex: image",
+        states={
+            'readonly': ~Eval('with_result'),
+        })
+    file_id = fields.Char('File ID')
+    filename = fields.Char('Filename')
+
+    @classmethod
+    def get_patient(cls, evaluation_tests, names):
+        pool = Pool()
+        cursor = Transaction().connection.cursor()
+        Evaluation = pool.get('galeno.patient.evaluation')
+        evaluation = Evaluation.__table__()
+        eval_test = cls.__table__()
+        patients = {}
+        eval_ids = [e.id for e in evaluation_tests]
+        for sub_ids in grouped_slice(eval_ids):
+            where = reduce_ids(eval_test.id, sub_ids)
+            query = eval_test.join(evaluation,
+                condition=evaluation.id == eval_test.evaluation
+            ).select(
+                eval_test.id,
+                evaluation.patient,
+                where=where)
+            cursor.execute(*query)
+            patients.update(cursor.fetchall())
+        return {
+            'patient': patients
+        }
+
+    @classmethod
+    def search_patient(cls, name, clause):
+        return [('evaluation.' + clause[0],) + tuple(clause[1:])]
+
+    @fields.depends('evaluation')
+    def on_change_with_patient_gender(self, name=None):
+        if self.evaluation:
+            return self.evaluation.patient.gender
         return None

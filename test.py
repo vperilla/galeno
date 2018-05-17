@@ -41,7 +41,7 @@ class Test(ModelSQL, ModelView):
         cls._order.insert(0, ('name', 'ASC'))
 
     def get_rec_name(self, name):
-        return '%s / %s' % (self.category.rec_name, self.name)
+        return '%s / %s' % (self.name, self.category.rec_name)
 
     @classmethod
     def search_rec_name(cls, name, clause):

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="evaluation"/>
+    <field name="patient"/>
+    <field name="test"/>
+    <field name="reason"/>
+    <field name="with_result"/>
+    <field name="result_date"/>
+    <field name="filename"/>
+    <field name="result_data"/>
+    <field name="result_notes"/>
+</tree>
