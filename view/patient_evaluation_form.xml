@@ -21,10 +21,14 @@
     <group id="summary_treatment" colspan="8" col="4">
         <separator name="symptoms" colspan="4"/>
         <field name="symptoms" colspan="4"/>
-        <separator name="treatment" colspan="4"/>
-        <field name="treatment" colspan="4"/>
     </group>
     <notebook>
+        <page id="evaluation_diagnosis" string="Diagnosis - Treatment">
+            <separator name="diagnostics" colspan="4"/>
+            <field name="diagnostics" colspan="4"/>
+            <separator name="treatment" colspan="4"/>
+            <field name="treatment" colspan="4"/>
+        </page>
         <page id="evaluation_systems_organs" string="Systems - Organs"
             icon="galeno-system-organ">
             <group id="main_so" colspan="4" col="6">

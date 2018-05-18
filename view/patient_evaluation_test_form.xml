@@ -4,6 +4,8 @@
         <group id="eval_test_1" colspan="4">
             <label name="evaluation"/>
             <field name="evaluation"/>
+            <label name="code"/>
+            <field name="code"/>
             <label name="patient"/>
             <field name="patient"/>
             <label name="patient_gender"/>
@@ -18,10 +20,10 @@
             <field name="with_result"/>
             <label name="result_date"/>
             <field name="result_date"/>
-            <separator name="result_data"/>
+            <label name="result_data"/>
             <field name="result_data" filename_visible="1"/>
-            <separator name="result_notes" colspan="4"/>
-            <field name="result_notes" colspan="4"/>
+            <separator name="result_notes" colspan="6"/>
+            <field name="result_notes" colspan="6"/>
         </group>
     </group>
 </form>

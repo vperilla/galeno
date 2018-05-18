@@ -13,3 +13,15 @@ class Configuration(ModelSingleton, ModelSQL, ModelView):
             ('company', 'in', [Eval('context', {}).get('company', -1), None]),
             ('code', '=', 'galeno.patient'),
             ])
+    evaluation_sequence = fields.Many2One(
+        'ir.sequence', "Evaluation Sequence", required=True,
+        domain=[
+            ('company', 'in', [Eval('context', {}).get('company', -1), None]),
+            ('code', '=', 'galeno.patient.evaluation'),
+            ])
+    request_test_sequence = fields.Many2One(
+        'ir.sequence', "Evaluation Request Test", required=True,
+        domain=[
+            ('company', 'in', [Eval('context', {}).get('company', -1), None]),
+            ('code', '=', 'galeno.patient.evaluation.test'),
+            ])

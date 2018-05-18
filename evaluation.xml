@@ -1,6 +1,44 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+        <record model="ir.sequence.type" id="sequence_type_patient_evaluation">
+            <field name="name">Patient Evaluation</field>
+            <field name="code">galeno.patient.evaluation</field>
+        </record>
+        <record model="ir.sequence.type-res.group"
+            id="sequence_type_patient_evaluation_group_admin">
+            <field name="sequence_type" ref="sequence_type_patient_evaluation"/>
+            <field name="group" ref="res.group_admin"/>
+        </record>
+        <record model="ir.sequence.type-res.group"
+            id="sequence_type_patient_evaluation_group_galeno_admin">
+            <field name="sequence_type" ref="sequence_type_patient_evaluation"/>
+            <field name="group" ref="group_galeno_admin"/>
+        </record>
+        <record model="ir.sequence" id="sequence_patient_evaluation">
+            <field name="name">Patient Evaluation</field>
+            <field name="code">galeno.patient.evaluation</field>
+        </record>
+
+        <record model="ir.sequence.type" id="sequence_type_patient_evaluation_test">
+            <field name="name">Patient Evaluation Test</field>
+            <field name="code">galeno.patient.evaluation.test</field>
+        </record>
+        <record model="ir.sequence.type-res.group"
+            id="sequence_type_patient_evaluation_test_group_admin">
+            <field name="sequence_type" ref="sequence_type_patient_evaluation_test"/>
+            <field name="group" ref="res.group_admin"/>
+        </record>
+        <record model="ir.sequence.type-res.group"
+            id="sequence_type_patient_evaluation_test_group_galeno_admin">
+            <field name="sequence_type" ref="sequence_type_patient_evaluation_test"/>
+            <field name="group" ref="group_galeno_admin"/>
+        </record>
+
+        <record model="ir.sequence" id="sequence_patient_evaluation_test">
+            <field name="name">Patient Evaluation Test</field>
+            <field name="code">galeno.patient.evaluation.test</field>
+        </record>
         <!-- PATIENT EVALUATION -->
         <record model="ir.ui.view" id="patient_evaluation_view_form">
             <field name="model">galeno.patient.evaluation</field>
@@ -110,6 +148,18 @@
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
+        </record>
+
+        <!-- PATIENT EVALUATION DIAGNOSIS -->
+        <record model="ir.ui.view" id="patient_evaluation_diagnosis_view_form">
+            <field name="model">galeno.patient.evaluation.diagnosis</field>
+            <field name="type">form</field>
+            <field name="name">patient_evaluation_diagnosis_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_evaluation_diagnosis_view_tree">
+            <field name="model">galeno.patient.evaluation.diagnosis</field>
+            <field name="type">tree</field>
+            <field name="name">patient_evaluation_diagnosis_tree</field>
         </record>
     </data>
 </tryton>

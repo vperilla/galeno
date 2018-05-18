@@ -9,12 +9,14 @@ from trytond.tools import reduce_ids, grouped_slice
 
 import galeno_tools
 
-__all__ = ['PatientEvaluation', 'PatientEvaluationTest']
+__all__ = ['PatientEvaluation', 'PatientEvaluationTest',
+    'PatientEvaluationDiagnosis']
 
 
 class PatientEvaluation(ModelSQL, ModelView):
     'Patient Evaluation'
     __name__ = 'galeno.patient.evaluation'
+    _rec_name = 'code'
 
     code = fields.Char('Code', readonly=True)
     start_date = fields.DateTime('Start Date', required=True)
@@ -40,6 +42,8 @@ class PatientEvaluation(ModelSQL, ModelView):
             ('done', 'Done'),
         ], 'State', readonly=True, required=True)
     symptoms = fields.Text('Illness symptoms')
+    diagnostics = fields.One2Many(
+        'galeno.patient.evaluation.diagnosis', 'evaluation', 'Diagnostics')
     treatment = fields.Text('Treatment')
     # VITAL SIGNS
     systolic_pressure = fields.Float('Systolic Pressure',
@@ -160,6 +164,7 @@ class PatientEvaluation(ModelSQL, ModelView):
     # MENTAL STATUS
     ms_eye = fields.Selection(
         [
+            (None, None),
             ('1', 'No eye opening'),
             ('2', 'Eye opening in response to pain stimulus'),
             ('3', 'Eye opening to speech'),
@@ -167,6 +172,7 @@ class PatientEvaluation(ModelSQL, ModelView):
         ], 'Eye response', sort=False)
     ms_verbal = fields.Selection(
         [
+            (None, None),
             ('1', 'No verbal response'),
             ('2', 'Incomprehensible sounds'),
             ('3', 'Inappropriate words'),
@@ -175,6 +181,7 @@ class PatientEvaluation(ModelSQL, ModelView):
         ], 'Verbal response', sort=False)
     ms_motor = fields.Selection(
         [
+            (None, None),
             ('1', 'No motor response'),
             ('2', 'Decerebrate posturing'),
             ('3', 'Decorticate posturing'),
@@ -221,7 +228,7 @@ class PatientEvaluation(ModelSQL, ModelView):
         return datetime.now()
 
     @staticmethod
-    def default_mood():
+    def default_ms_mood():
         return 'normal'
 
     @fields.depends('patient')
@@ -257,11 +264,27 @@ class PatientEvaluation(ModelSQL, ModelView):
             return int(self.ms_eye) + int(self.ms_verbal) + int(self.ms_motor)
         return None
 
+    @classmethod
+    def create(cls, vlist):
+        pool = Pool()
+        Sequence = pool.get('ir.sequence')
+        Config = pool.get('galeno.configuration')
+
+        vlist = [x.copy() for x in vlist]
+        config = Config(1)
+        for values in vlist:
+            if values.get('code') is None:
+                values['code'] = Sequence.get_id(
+                        config.evaluation_sequence.id)
+        return super(PatientEvaluation, cls).create(vlist)
+
 
 class PatientEvaluationTest(ModelSQL, ModelView):
     'Patient Evaluation Test'
     __name__ = 'galeno.patient.evaluation.test'
+    _rec_name = 'code'
 
+    code = fields.Char('Code', readonly=True)
     evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
         ondelete='CASCADE', required=True)
     patient = fields.Function(fields.Many2One('galeno.patient', 'Patient'),
@@ -276,7 +299,7 @@ class PatientEvaluationTest(ModelSQL, ModelView):
                 ('gender', '=', Eval('patient_gender')),
                 ('gender', '=', 'unisex'),
         ], depends=['patient_gender'], required=True)
-    reason = fields.Text('Reason', required=True)
+    reason = fields.Text('Reason')
     with_result = fields.Boolean('With result')
     result_date = fields.Date('Result Date',
         states={
@@ -326,3 +349,32 @@ class PatientEvaluationTest(ModelSQL, ModelView):
         if self.evaluation:
             return self.evaluation.patient.gender
         return None
+
+    @classmethod
+    def create(cls, vlist):
+        pool = Pool()
+        Sequence = pool.get('ir.sequence')
+        Config = pool.get('galeno.configuration')
+
+        vlist = [x.copy() for x in vlist]
+        config = Config(1)
+        for values in vlist:
+            if values.get('code') is None:
+                values['code'] = Sequence.get_id(
+                        config.request_test_sequence.id)
+        return super(PatientEvaluationTest, cls).create(vlist)
+
+
+class PatientEvaluationDiagnosis(ModelSQL, ModelView):
+    'Patient Evaluation Diagnosis'
+    __name__ = 'galeno.patient.evaluation.diagnosis'
+
+    evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
+        ondelete='CASCADE', required=True)
+    disease = fields.Many2One('galeno.disease', 'Disease', required=True)
+    type_ = fields.Selection(
+        [
+            ('presumptive', 'Presumptive'),
+            ('definitive', 'Definitive'),
+        ], 'Type')
+    notes = fields.Text('Notes')

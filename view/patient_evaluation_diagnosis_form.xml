@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<form>
+    <group id="evaluation_diagnosis_header">
+        <group id="eval_diagnosis_1" colspan="4">
+            <label name="evaluation"/>
+            <field name="evaluation"/>
+            <newline/>
+            <label name="disease"/>
+            <field name="disease"/>
+            <label name="type_"/>
+            <field name="type_"/>
+            <separator name="notes" colspan="4"/>
+            <field name="notes" colspan="4"/>
+        </group>
+    </group>
+</form>

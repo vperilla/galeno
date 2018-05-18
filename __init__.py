@@ -49,6 +49,7 @@ def register():
         background.Test,
         evaluation.PatientEvaluation,
         evaluation.PatientEvaluationTest,
+        evaluation.PatientEvaluationDiagnosis,
         configuration.Configuration,
         module='galeno', type_='model')
     Pool.register(
