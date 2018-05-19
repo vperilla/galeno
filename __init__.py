@@ -37,6 +37,7 @@ def register():
         test.TestCategory,
         test.Test,
         patient.Patient,
+        patient.PatientPhoto,
         patient.PatientDisability,
         patient.PatientDisease,
         patient.PatientVaccine,

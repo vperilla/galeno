@@ -6,8 +6,8 @@ import trytond.tools as tools
 
 import galeno_tools
 
-__all__ = ['Patient', 'PatientDisability', 'PatientDisease', 'PatientVaccine',
-    'PatientActivity', 'PatientDrug']
+__all__ = ['Patient', 'PatientPhoto', 'PatientDisability', 'PatientDisease',
+    'PatientVaccine', 'PatientActivity', 'PatientDrug']
 
 
 class Patient(ModelSQL, ModelView):
@@ -32,11 +32,8 @@ class Patient(ModelSQL, ModelView):
         'get_identifier_type', 'Id. Type', required=True, sort=False)
     identifier = fields.Char('Identifier', required=True,
         help="Personal Identifier, Eg:CI/RUC")
-    photo = fields.Binary('Photo', file_id='photo_id')
-    photo_id = fields.Char('Photo ID',
-        states={
-            'invisible': True,
-        })
+    photo = fields.Function(
+        fields.Binary('Photo'), 'get_photo', setter='set_photo')
     birthdate = fields.Date('Birthdate', required=True)
     age = fields.Function(fields.TimeDelta('Age'), 'on_change_with_age')
     age_char = fields.Function(fields.Char('Age'), 'on_change_with_age_char')
@@ -122,7 +119,8 @@ class Patient(ModelSQL, ModelView):
         ], 'Diet type', sort=False)
     diet_type_note = fields.Text('Diet type note')
     meals_number = fields.Integer('Meals per day',
-        domain=[
+        domain=['OR',
+                ('meals_number', '=', None),
                 ('meals_number', '>=', 0)
         ], help="Sleep hours per day")
     coffe_consumption = fields.Boolean('Coffe consumtion')
@@ -135,9 +133,12 @@ class Patient(ModelSQL, ModelView):
         help="List of activities: sports, extra works and other activities")
     # Sleep
     sleep_time = fields.Integer('Sleep time in hours',
-        domain=[
-            ('sleep_time', '>=', 0),
-            ('sleep_time', '<=', 24),
+        domain=['OR',
+            ('sleep_time', '=', None),
+            [
+                ('sleep_time', '>=', 0),
+                ('sleep_time', '<=', 24)
+            ]
         ], help="Sleep hours per day")
     sleep_in_day = fields.Boolean('Sleep in day')
     sleep_notes = fields.Text('Sleep notes')
@@ -156,7 +157,7 @@ class Patient(ModelSQL, ModelView):
     sexual_active = fields.Boolean('Sexual active')
     relation_type = fields.Selection(
         [
-            ('none', 'None'),
+            (None, ''),
             ('monogamous', 'Monogamous'),
             ('polygamous', 'Polygamous'),
         ], 'Relation type',
@@ -166,6 +167,7 @@ class Patient(ModelSQL, ModelView):
         }, depends=['sexual_active'], sort=False)
     sexual_security = fields.Selection(
         [
+            (None, ''),
             ('safe', 'Safe'),
             ('unsafe', 'Unsafe'),
         ], 'Sexual security',
@@ -193,7 +195,9 @@ class Patient(ModelSQL, ModelView):
             'required': Bool(Eval('menopause_andropause')),
         },
         domain=[
-            ('menopause_andropause_age', '>=', 0),
+            If(Bool(Eval('menopause_andropause')),
+                ('menopause_andropause_age', '>=', 0),
+               ())
         ], depends=['menopause_andropause'])
     menarche = fields.Integer('Menarche age',
         states={
@@ -250,11 +254,13 @@ class Patient(ModelSQL, ModelView):
                ())
         ], depends=['gender'])
     alive_children = fields.Integer('Alive children',
-        domain=[
+        domain=['OR',
+            ('alive_children', '=', None),
             ('alive_children', '>=', 0),
-        ], depends=['gender'])
+        ])
     death_children = fields.Integer('Death children',
-        domain=[
+        domain=['OR',
+            ('death_children', '=', None),
             ('death_children', '>=', 0),
         ], depends=['gender'])
     abortions = fields.Integer('Abortions',
@@ -378,18 +384,39 @@ class Patient(ModelSQL, ModelView):
         fname = self.fname and self.fname or ''
         self.name = '%s %s' % (lname, fname)
 
-    @fields.depends('gender', 'photo_id')
-    def on_change_gender(self):
-        if self.gender:
-            if not self.photo_id:
-                path = 'galeno/icons/%s_patient.png' % (self.gender)
-                self.photo = fields.Binary.cast(
+    @classmethod
+    def get_photo(cls, patients, names):
+        pool = Pool()
+        PatientPhoto = pool.get('galeno.patient.photo')
+        photos = {}
+        for patient in patients:
+            photo = PatientPhoto.search([('patient', '=', patient.id)])
+            if photo:
+                photos[patient.id] = photo[0].photo
+            else:
+                path = 'galeno/icons/%s_patient.png' % (patient.gender)
+                photos[patient.id] = fields.Binary.cast(
                     tools.file_open(path, mode='rb').read())
+        return {'photo': photos}
 
-    @fields.depends('photo', 'gender', 'photo_id')
-    def on_change_photo(self):
-        if self.photo:
-            self.photo = galeno_tools.create_thumbnail(self.photo)
+    @classmethod
+    def set_photo(cls, patients, name, data):
+        pool = Pool()
+        PatientPhoto = pool.get('galeno.patient.photo')
+        for patient in patients:
+            photo = PatientPhoto.search([('patient', '=', patient.id)])
+            if data:
+                thumbnail = galeno_tools.create_thumbnail(data)
+                if photo:
+                    photo = photo[0]
+                    photo.photo = thumbnail
+                else:
+                    photo = PatientPhoto()
+                    photo.patient = patient
+                    photo.photo = thumbnail
+                photo.save()
+            else:
+                PatientPhoto.delete(photo)
 
     @fields.depends('birthdate')
     def on_change_with_age(self, name=None):
@@ -506,6 +533,15 @@ class Patient(ModelSQL, ModelView):
                 values['code'] = Sequence.get_id(
                         config.patient_sequence.id)
         return super(Patient, cls).create(vlist)
+
+
+class PatientPhoto(ModelSQL):
+    'Patient Photo'
+    __name__ = 'galeno.patient.photo'
+
+    patient = fields.Many2One('galeno.patient', 'Patient', required=True)
+    photo = fields.Binary('Photo', file_id='photo_id')
+    photo_id = fields.Char('Photo ID')
 
 
 class PatientDisability(ModelSQL, ModelView):
