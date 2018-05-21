@@ -150,6 +150,8 @@
         </page>
         <page id="patient_backgrounds" string="Backgrounds"
             icon="galeno-backgrounds">
+            <separator name="background_notes" colspan="4"/>
+            <field name="background_notes" colspan="4"/>
             <notebook>
                 <page id="reproductive_backgrounds" string="Reproductive"
                     col="6" icon="galeno-reproductive">
@@ -204,8 +206,6 @@
                     <field name="background_tests" colspan="4"/>
                 </page>
             </notebook>
-            <separator name="background_notes" colspan="4"/>
-            <field name="background_notes" colspan="4"/>
         </page>
     </notebook>
 </form>

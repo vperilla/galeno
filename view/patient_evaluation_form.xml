@@ -234,7 +234,7 @@
         </page>
         <page id="tests" string="Requested tests" icon="galeno-test">
             <group id="tests">
-                <field name="requested_tests" view_mode="tree,form"
+                <field name="requested_tests" mode="tree,form"
                     view_ids="galeno.patient_evaluation_test_view_tree_simple,galeno.patient_evaluation_test_view_form" colspan="4"/>
             </group>
         </page>

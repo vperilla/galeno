@@ -1,0 +1,15 @@
+<xml version="1.0" encoding="utf-8" xmlns:py="http://genshi.edgewall.org/">
+<tryton>
+    <data skiptest="1" noupdate="1">
+        <py:for each="city in cities">
+            <record model="country.subdivision" id="${city['number']}">
+                <field name="name">${city['name']}</field>
+                <field name="code">${city['code']}</field>
+                <field name="type">city</field>
+                <field name="parent" ref="${city['parent']}"/>
+                <field name="country" ref="${city['country']}"/>
+        </record>
+        </py:for>
+    </data>
+</tryton>
+</xml>

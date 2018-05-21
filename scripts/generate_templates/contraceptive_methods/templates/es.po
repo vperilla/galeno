@@ -1,0 +1,10 @@
+{% for contraceptive in contraceptives %}
+msgctxt "field:galeno.contraceptive,name:contraceptive_${contraceptive['number']}"
+msgid "${contraceptive['name']}"
+msgstr "${contraceptive['name_es']}"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_${contraceptive['number']}"
+msgid "${contraceptive['description']}"
+msgstr "${contraceptive['description_es']}"
+
+{% end %}

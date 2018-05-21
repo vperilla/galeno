@@ -1,0 +1,285 @@
+code;name;parent
+1;I Enfermedades infecciosas y parasitarias;
+2;II Tumores [neoplasias];
+3;III Enfermedades de la sangre y de los órganos hematopoyéticos, y ciertos trastornos que afectan el mecanismo de la inmunidad ;
+4;IV Enfermedades endocrinas, nutricionales y metabólicas;
+5;V Trastornos mentales y del comportamiento;
+6;VI Enfermedades del sistema nervioso;
+7;VII Enfermedades del ojo y sus anexos;
+8;VIII Enfermedades del o¡do y de la apófisis mastoides;
+9;IX Enfermedades del sistema circulatorio;
+10;X Enfermedades del sistema respiratorio;
+11;XI Enfermedades del sistema digestivo;
+12;XII Enfermedades de la piel y del tejido subcutáneo;
+13;XIII Enfermedades del sistema osteomuscular y del tejido conjuntivo;
+14;XIV Enfermedades del sistema genitourinario;
+15;XV Embarazo, parto y puerperio;
+16;XVI Ciertas afecciones originadas en el periodo perinatal;
+17;XVII Malformaciones congénitas, deformidades y anomalías cromosómicas;
+18;XVIII Síntomas, signos y hallazgos anormales clínicos y de laboratorio, no clasificados en otra parte;
+19;XIX Traumatismos, envenenamientos y algunas otras consecuencias de causa externa;
+20;XX Causas externas de morbilidad y de mortalidad;
+21;XXI Factores que influyen en el estado de salud y contacto con los servicios de salud;
+22;XXII Códigos para situaciones especiales;
+23;(A00-A09) Enfermedades intestinales infecciosas;1
+24;(A15-A19) Tuberculosis;1
+25;(A20-A28) Ciertas enfermedades zoonósicas bacterianas;1
+26;(A30-A49) Otras enfermedades bacterianas;1
+27;(A50-A64) Infecciones con un modo de transmisión predominantemente sexual;1
+28;(A65-A69) Enfermedades infecciosas transmitidas por espiroquetas;1
+29;(A70-A74) Otras enfermedades causadas por chlamydiae;1
+30;(A75-A79) Rickettsiosis;1
+31;(A80-A89) Infecciones virales del sistema nervioso central;1
+32;(A90-A991) Fiebres virales y fiebres virales hemorrágicas vectorizadas por Artrópodos;1
+33;(B00-B09) Infecciones virales caracterizadas por lesiones de la piel y membranas mucosas;1
+34;(B15-B19) Hepatitis vírica;1
+35;(B20-B24) Enfermedades causadas por el Virus de la inmunodeficiencia humana (VIH);1
+36;(B25-B34) Otras Enfermedades virales;1
+37;(B35-B49) Micosis;1
+38;(B50-B64) Enfermedades protozoarias;1
+39;(B65-B83) Helmintiasis;1
+40;(B85-B89) Pediculosis, acariasis y otras infecciones;1
+41;(B90-B94) Secuelas de enfermedades infecciosas y parasitarias;1
+42;(B95-B97) Agentes bacterianos, virales y otros agentes infecciosos;1
+43;(B99) Otras Enfermedades infecciosas;1
+44;(C00-C14) Tumores malignos del labio, de la cavidad bucal y de la faringe;2
+45;(C15-C26) Tumores malignos de los órganos digestivos;2
+46;(C30-C39) Tumores malignos del sistema respiratorio y de órganos anexos;2
+47;(C40-C41) Tumores malignos de otros huesos y cartílagos;2
+48;(C43-C44) Melanoma y otros tumores malignos de la piel;2
+49;(C45-C49) Tumores malignos de los tejidos mesoteliales y de los tejidos blandos;2
+50;(C50-C50) Tumor maligno de la mama;2
+51;(C51-C58) Tumores malignos de los órganos sexuales femeninos;2
+52;(C60-C63) [Tumores malignos de los órganos sexuales masculinos;2
+53;(C64-C68) Tumores malignos del sistema urinario;2
+54;(C69-C72) Tumores malignos del ojo y sistema nervioso;2
+55;(C73-C75) Tumores malignos de la glándula tiroides y de otras gándulas endocrinas;2
+56;(C76-C80) Tumores malignos de sitios mal definidos, secundarios y de sitios no especificados;2
+57;(C81-C96) Tumores malignos del tejido linfático, de los órganos hematopoyéticos y de tejidos afines;2
+58;(C97-C97) Tumores malignos (primarios) de sitios múltiples independientes;2
+59;(D00-D09) Carcinomas in  situ;2
+60;(D10-D36) Neoplasias Benignas;2
+61;(D37-D48) Tumores de comportamiento incierto o desconocido;2
+62;(D50-D53) Anemias nutricionales;3
+63;(D55-D59) Anemias hemolíticas;3
+64;(D60-D64) Anemias aplásicas y otras anemias;3
+65;(D65-D69) Defectos de la coagulación, púrpura y otras afecciones hemorrágicas;3
+66;(D70-D77) Otras enfermedades de la sangre y de los órganos hematopoyeticos;3
+67;(D80-D89) Ciertos trastornos que afectan el mecanismo de la inmunidad;3
+68;(E00-E07) Enfermedades de la glándula tiroides;4
+69;(E10-E14) Diabetes mellitus;4
+70;(E15-E16) Otros desórdenes de la regulación de la glucosa y secreción interna pancreática;4
+71;(E20-E35) Otras enfermedades de las glándulas endocrinas;4
+72;(E40-E46) Desnutrición;4
+73;(E50-E64) Otras carencias nutricionales;4
+74;(E65-E68) Obesidad y otros tipos de hiperalimentación;4
+75;(E70-E90) Trastornos del metabolismo;4
+76;(F00-F09) Trastornos mentales orgánicos, incluidos los sintomáticos;5
+77;(F10-F19) Trastornos mentales y de comportamiento debidos al consumo de psicotrópicos;5
+78;(F20-F29) Esquizofrenia, trastorno esquizotípico y trastornos de ideas delirantes;5
+79;(F30-F39) Trastornos del ánimo (afectivos);5
+80;(F40-F49) Trastornos neuróticos, secundarios a situaciones estresantes y somatomorfos;5
+81;(F50-F59) Trastornos del comportamiento asociados a disfunciones fisiológicas y a factores somáticos;5
+82;(F60-F69) Trastornos de la personalidad y del comportamiento del adulto;5
+83;(F70-F79) Retraso mental;5
+84;(F80-F89) Trastornos del desarrollo psicológico;5
+85;(F90-F98) Trastornos del comportamiento y de las emociones de comienzo habitual en la infancia y adolescencia;5
+86;(F99) Trastornos mentales sin especificar;5
+87;(G00-G09) Enfermedades inflamatorias del sistema nervioso central;6
+88;(G10-G13) Atrofias sistémicas con afección primaria del sistema nervioso central;6
+89;(G20-G26) Patología extrapiramidal y del movimiento;6
+90;(G30-G32) Otras enfermedades degenerativas del sistema nervioso;6
+91;(G35-G37) Enfermedades desmielinizantes del sistema nervioso central;6
+92;(G40-G47) Patología episódica o paroxística;6
+93;(G50-G59) Patologías del nervio, la raíz medular y los plexos nerviosos;6
+94;(G60-G64) Polineuropatías y otras patologías del sistema nervioso periférico;6
+95;(G70-G73) Patología de la unión neuromuscular y el músculo;6
+96;(G80-G83) Parálisis cerebral y otros síndromes paralíticos;6
+97;(G90-G99) Otras patologías del sistema nervioso;6
+98;(H00-H06) Trastornos del párpado, de la glándula lagrimal y la órbita ocular;7
+99;(H10-H13) Trastornos de conjuntiva;7
+100;(H15-H22) Trastornos de la esclerótica y de la córnea, iris y cuerpo ciliar;7
+101;(H25-H28) Trastornos de lentes;7
+102;(H30-H36) Trastornos del coroides y la retina;7
+103;(H40-H42) Glaucomas;7
+104;(H43-H45) Trastornos del humor vítreo y del globo ocular;7
+105;(H46-H48) Trastornos del nervio óptico y los campos visuales;7
+106;(H49-H52) Trastorno de los músculos oculares, de los movimientos binoculares, de la acomodación y la refracción;7
+107;(H53-H54) Alteraciones visuales y ceguera;7
+108;(H55-H59) Otros trastornos del ojo y anexos;7
+109;(H60-H62) Enfermedades del oído externo;8
+110;(H65-H75) Enfermedades del oído medio y del mastoide;8
+111;(H80-H83) Enfermedades del oído interno;8
+112;(H90-H95) Otros trastornos del oído;8
+113;(I00-I02) Fiebre reumática aguda;9
+114;(I05-I09) Cardiopatías reumáticas crónicas;9
+115;(I10-I15) Enfermedades hipertensivas;9
+116;(I20-I25) Enfermedades cardíacas isquémicas;9
+117;(I26-I28) Enfermedad cardíaca pulmonar y enfermedades de la circulación pulmonar;9
+118;(I30-I52) Otras formas de cardiopatía;9
+119;(I60-I69) Enfermedades cerebrovasculares;9
+120;(I70-I79) Enfermedades de arterias, arteriolas y capilares;9
+121;(I80-I89) Enfermedades de vena, vasos linfáticos y nodos linfáticos, no clasificadas en otra parte;9
+122;(I95-I99) Otros trastornos del sistema circulatorio y trastornos sin especificar;9
+123;(J00-J06) Infecciones respiratorias superiores agudas;10
+124;(J10-J18) Gripe y Neumonía;10
+125;(J20-J22) Enfermedades respiratorias inferiores agudas;10
+126;(J30-J39) Otras enfermedades del tracto respiratorio superior;10
+127;(J40-J47) Enfermedades respiratorias inferiores cronicas;10
+128;(J60-J70) Enfermedades del pulmón debidas a agentes externos;10
+129;(J80-J84) Otras enfermedades respiratorias principalmente afectando al intersticio;10
+130;(J85-J86) Condiciones supurativas y necróticas del tracto respiratorio inferior;10
+131;(J90-J94) Otras enfermedades de la pleura;10
+132;(J95-J99) Otras enfermedades del sistema respiratorio;10
+133;(K00-K14) Enfermedades de la cavidad oral, las glándulas salivales y las mandíbulas;11
+134;(K20-K31) Enfermedades del esófago, estómago y del duodeno;11
+135;(K35-K38) Enfermedades del apéndice;11
+136;(K40-K46) Hernias abdominales;11
+137;(K50-K52) Enteritis y colitis no infecciosas;11
+138;(K55-K63) Otras enfermedades de los intestinos;11
+139;(K65-K67) Enfermedades del peritoneo;11
+140;(K70-K77) Enfermedades del hígado;11
+141;(K80-K87) Trastornos de la vesícula biliar, del tracto biliar y del páncreas;11
+142;(K90-K93) Otras enfermedades del sistema digestivo;11
+143;(L00-L08) Infecciones de la piel y los tejidos subcutáneos;12
+144;(L10-L14) Trastornos bullosos;12
+145;(L20-L30) Dermatitis y eczema;12
+146;(L40-L45) Trastornos papuloescamosos;12
+147;(L50-L54) Urticaria y eritema;12
+148;(L55-L59) Trastornos de la piel y los tejidos subcutáneos relacionados con la radiación;12
+149;(L60-L75) Trastornos de los apéndices de la piel;12
+150;(L80-L99) Otros trastornos de la piel y los tejidos subcutáneos;12
+151;(M00-M03) Artropatías;13
+152;(M05-M14) Poliartropatías Inflamatorias;13
+153;(M15-M19) Artrosis;13
+154;(M20-M25) Otros trastornos articulares;13
+155;(M30-M36) Trastornos sistémicos del tejido conjuntivo;13
+156;(M40-M43) Dorsopatías deformantes;13
+157;(M45-M49) Espondilopatías;13
+158;(M50-M54) Otras dorsopatías;13
+159;(M60-M63) Trastornos musculares;13
+160;(M65-M68) Trastornos de los tendones y de la sinovial;13
+161;(M70-M79) Otros trastornos de tejidos blandos;13
+162;(M80-M85) Trastornos de la densidad y de la estructura ósea;13
+163;(M86-M90) Otras osteopatías;13
+164;(M91-M94) Condropatías;13
+165;(M95-M99) Otras enfermedades del sistema músculoesquelético y de las articulaciones;13
+166;(N00-N08) Enfermedades glomerulares;14
+167;(N10-N16) Enfermedades túbulointersticiales;14
+168;(N17-N19) Insuficiencia renal;14
+169;(N20-N23) Urolitiasis;14
+170;(N25-N29) Otras enfermedades del riñón y de los uréteres;14
+171;(N30-N39) Otras enfermedades del sistema urinario;14
+172;(N40-N51) Enfermedades del aparato genital masculino;14
+173;(N60-N64) Enfermedades de la mama;14
+174;(N70-N77) Enfermedades agudas los órganos reproductores femenino;14
+175;(N80-N98) Enfermedades no agudas de los órganos reproductores femeninos;14
+176;(N99) Otros trastornos del sistema genitourinario;14
+177;(O00-O08) Embarazo que termina en aborto;15
+178;(O10-O16) Edema, proteinura e hipertensión en el embarazo, el parto y el puerperio;15
+179;(O20-O29) Otras enfermedades de la madre que pueden afectar al feto‎;15
+180;(O30-O48) Atención materna relacionada con el feto y la cavidad amniótica y con posibles problemas del parto;15
+181;(O60-O75) Complicaciones del embarazo y del parto;15
+182;(O80-O84) Parto;15
+183;(O85-O92) Complicaciones después del parto durante el puerperio;15
+184;(O95-O99) Otras enfermedades obstétricas;15
+185;(P00-P04) Feto y recién nacido afectado por factores maternos y complicaciones del embarazo y parto;16
+186;(P05-P08) Trastornos relacionados con la duración de la gestación y crecimiento fetal;16
+187;(P10-P15) Trauma durante el parto;16
+188;(P20-P29) Trastornos respiratorios y cardíacos durante el periodo perinatal;16
+189;(P35-P39) Infecciones específicas al periodo perinatal;16
+190;(P50-P61) Hemorrágicas y trastornos hematológicos del feto and recién nacido;16
+191;(P70-P74) Trastornos endocrinos transitorias del feto y del recién nacido;16
+192;(P75-P78) Enfermedades del sistema digestivo del feto y del recién nacido;16
+193;(P80-P83) Enfermedades de la piel y de la regulación de la temperatura;16
+194;(P90-P96) Otros trastornos del feto y del recién nacido;16
+195;(Q00-Q09) Enfermedades congénitas del sistema nervioso;17
+196;(Q10-Q18) Enfermedades congénitas de los ojos, cara y cuello;17
+197;(Q20-Q28) Enfermedades congénitas del sistema circulatorio;17
+198;(Q30-Q34) Enfermedades congénitas del aparato respiratorio;17
+199;(Q35-Q37) Malformaciones de labios, boca y paladar;17
+200;(Q38-Q45) Otras malformaciones del tracto digestivo;17
+201;(Q50-Q56) Malformaciones de los órganos genitales;17
+202;(Q60-Q64) Malformaciones de los órganos urinarios;17
+203;(Q65-Q79) Malformaciones y deformaciones congénitas del sistema osteomuscular;17
+204;(Q80-Q89) Otras malformaciones congénitas;17
+205;(Q90-Q99) Anormalidades cromosómicas no clasificadas en otra parte;17
+206;(R00-R09) Síntomas y signos que revelan una enfermedad circulatoria o respiratoria;18
+207;(R10-R19) Síntomas y signos de enfermedades digestivas y desórdenes abdominales;18
+208;(R20-R23) Síntomas y signos de enfermedades de la piel y del tejido subcutáneo;18
+209;(R25-R29) Síntomas y signos de enfermedades relacionadas con el sistema nervioso y musculoesquelético;18
+210;(R30-R39) Síntomas de enfermedades urinarias;18
+211;(R40-R46) Síntomas y signos que involucran el conocimiento la percepción, el estado emocional y la conducta;18
+212;(R47-R49) Síntomas de enfermedades que afectan la voz y el habla;18
+213;(R50-R69) Síntomas y signos generales;18
+214;(R70-R79) Valores anormales de los parámetros sanguíneos sin otro diagnóstico;18
+215;(R80-R82) Valores anormales de los parámetros urinarios sin otro diagnóstico;18
+216;(R83-R89) Valores anormales de otras pruebas clínicas sin otro diagnóstico;18
+217;(R90-R94) Hallazgos anormales por imagen sin otro diagnóstico;18
+218;(R95-R99) Otros trastornos mal definidos y causas de mortalidad;18
+219;(S00-S09) Traumatismos de la cabeza;19
+220;(S10-S19) Traumatismos de cuello;19
+221;(S20-S29) Traumatismos de tórax;19
+222;(S30-S39) Traumatismo del abdomen, área lumbosacra y pelvis;19
+223;(S40-S49) Traumatismos de los hombros y brazos;19
+224;(S50-S59) Traumatismos del codo y del antebrazo;19
+225;(S60-S69) Traumatismos en muñecas y manos;19
+226;(S70-S79) Traumatismos en cadera y muslos;19
+227;(S80-S89) Traumatismos en rodillas y piernas;19
+228;(S90-S99) Traumatismos en tobillos y pies;19
+229;(T00-T07) Lesiones múltiples;19
+230;(T08-T14) Lesiones no clasificadas en cabeza, cuello y otras partes;19
+231;(T15-T19) Cuerpos extraños con entrada natural en alguna parte del cuerpo;19
+232;(T20-T25) Quemaduras y corrosiones en superficie corporal externa específica;19
+233;(T26-T28) Quemaduras y corrosiones limitadas al ojo y órganos internos;19
+234;(T29-T32) Quemaduras y corrosiones múltiples y no específicas;19
+235;(T33-T35) Congelaciones;19
+236;(T36-T50) Envenenamiento por drogas, medicamentos y sustancias biológicas;19
+237;(T51-T65) Intoxicaciones pos sustancias no medicinales;19
+238;(T66-T78) Lesiones por otras causas externas;19
+239;(T79) Complicaciones traumáticas tempranas;19
+240;(T80-T88) Complicaciones quirúrgicas no clasificadas en otro lugar;19
+241;(T90-T98) Sequelas de heridas, de envenenamiento u otras consecuencias de causas externas;19
+242;(V01-V09) Peatón herido en accidente de transporte;20
+243;(V10-V19) Ciclista herido en accidente de transporte;20
+244;(V20-V29) Motociclista herido en accidente de transporte;20
+245;(V30-V39) Ocupante de vehículo de motor de tres ruedas herido en accidente de transporte;20
+246;(V40-V49) Ocupante de automóvil herido en accidente de transporte;20
+247;(V50-V59) Ocupante de caminoneta o furgoneta herido en accidente de transporte;20
+248;(V60-V69) Ocupante de vehículo pesado herido en accidente de transporte;20
+249;(V70-V79) Ocupante de autobús herido en accidente de transporte;20
+250;(V80-V89) Otros accidentes de transporte terrestre;20
+251;(V90-V94) Accidentes de transporte por agua;20
+252;(V95-V97) Accidentes de transporte aéreo y espacial;20
+253;(V98-V99) Otros accidentes de transporte y los no especificados;20
+254;(W00-W19) Caídas;20
+255;(W20-W49) Exposición a fuerzas mecanicas inanimadas;20
+256;(W50-W64) Exposición a fuerzas mecánicas animadas;20
+257;(W65-W74) Ahogamiento y sumersión accidental;20
+258;(W75-W84) Otros accidentes que obstruyen la respiración;20
+259;(W85-W99)  Exposición a la corriente eléctrica radiación y temperatura y presión del aire ambientales extremas;20
+260;(X00-X09) Exposición al fuego humo y llamas;20
+261;(X10-X19) Contacto con calor y sustancias calientes;20
+262;(X20-X29) Contacto con animales y plantas venenosas;20
+263;(X30-X39) Exposición a fuerzas de la naturaleza;20
+264;(X40-X49) Envenenamiento accidental por, y exposición a sustancias nocivas;20
+265;(X50-X57) Exceso de esfuerzo, viajes y privación;20
+266;(X58-X59) Exposición accidental a otros factores y a los no especificados;20
+267;(X60-X84) Lesiones autoinfligidas intencionalmente;20
+268;(X85-Y09) Asalto;20
+269;(Y10-Y34)Eventos de intención no determinada;20
+270;(Y35-Y36) Intervención legal y operaciones de guerra;20
+271;(Y40-Y59) Efectos secundarios de los medicamentos;20
+272;(Y60-Y69) Incidentes ocurridos al paciente durante la atención médica y quirúrgica;20
+273;(Y70-Y82) Dispositivos médicos de diagnóstico y de uso terapéutico asociados con incidentes adversos;20
+274;(Y83-Y84) Reacción anormal del paciente o complicación posterior al procedimiento médico, sin mención de incidente en el momento de efectuar el procedimiento;20
+275;(Y85-Y89) Secuelas causantes de mortalidad y morbilidad;20
+276;(Y90-Y98) Alcoholismo y otros factores causantes de mortalidad y morbilidad;20
+277;(Z00-Z13) Exámenes en personas que no muestran problemas de salud;21
+278;(Z20-Z29) Exámenes en personas potencialmente expuestas a enfermedades infecciosas o parasitarias;21
+279;(Z30-Z39) Atención médica para la reproducción;21
+280;(Z40-Z54) Personas candidatas a operaciones quirúrgicas;21
+281;(Z55-Z65) Personas con problemas potenciales psíquicos o psicosociales;21
+282;(Z70-Z76) Consultas;21
+283;(Z80-Z99) Historias;21
+284;(U00-U49) Asignación provisional de nuevas enfermedades de etiología incierta;22

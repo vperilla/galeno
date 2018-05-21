@@ -1,0 +1,138 @@
+
+msgctxt "field:galeno.vaccine,name:vaccine_1"
+msgid "BCG"
+msgstr "BCG"
+
+msgctxt "field:galeno.vaccine,description:vaccine_1"
+msgid "1 Dose"
+msgstr "1 Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_2"
+msgid "Vaccine against Hepatitis B"
+msgstr "Vacuna contra la Hepatitis B"
+
+msgctxt "field:galeno.vaccine,description:vaccine_2"
+msgid "4 doses, 1 dose: for children whose mothers are HBsAg positive."
+msgstr " 4 dosis
+ 1 dosis: para niños cuyas madres son HBsAg positivas."
+
+msgctxt "field:galeno.vaccine,name:vaccine_3"
+msgid "Vaccine against mumps, measles and rubella (MMR)"
+msgstr "Vacuna contra paperas, sarampión y rubéola (MMR)"
+
+msgctxt "field:galeno.vaccine,description:vaccine_3"
+msgid "2 Doses"
+msgstr "2 Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_4"
+msgid "Vaccine against hemophilic influenza type b"
+msgstr "Vacuna contra la influenza hemofílica tipo b"
+
+msgctxt "field:galeno.vaccine,description:vaccine_4"
+msgid "3 Doses"
+msgstr "3 Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_5"
+msgid "Vaccine against meningococcal meningitis"
+msgstr "vacuna contra la meningitis meningocócica"
+
+msgctxt "field:galeno.vaccine,description:vaccine_5"
+msgid "3 Doses"
+msgstr "3 Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_6"
+msgid "Vaccine against pneumococcus"
+msgstr "vacuna conta el neumococo"
+
+msgctxt "field:galeno.vaccine,description:vaccine_6"
+msgid "3 Doses"
+msgstr "3 Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_7"
+msgid "Vaccine against human papillomavirus"
+msgstr "Vacuna contra el virus del papiloma humano"
+
+msgctxt "field:galeno.vaccine,description:vaccine_7"
+msgid "2 Doses"
+msgstr "2 Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_8"
+msgid "Polio vaccine (oral poliomyelitis)"
+msgstr "vacuna contra la polio (poliomielitis oral)"
+
+msgctxt "field:galeno.vaccine,description:vaccine_8"
+msgid "3 Doses"
+msgstr "3 Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_9"
+msgid "Varicella vaccine"
+msgstr "Vacuna contra la varicela."
+
+msgctxt "field:galeno.vaccine,description:vaccine_9"
+msgid "2 Doses"
+msgstr "2 Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_10"
+msgid "Vaccine against rotavirus"
+msgstr "vacuna contra rotavirus"
+
+msgctxt "field:galeno.vaccine,description:vaccine_10"
+msgid "3 Doses"
+msgstr "3 Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_11"
+msgid "Anti influenza"
+msgstr "Anti-influenza"
+
+msgctxt "field:galeno.vaccine,description:vaccine_11"
+msgid "2 Doses"
+msgstr "2 Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_12"
+msgid "Vaccine against Hepatitis A"
+msgstr "Vacuna contra la Hepatitis A"
+
+msgctxt "field:galeno.vaccine,description:vaccine_12"
+msgid "Two doses, separated by a minimum interval of 6 months."
+msgstr "Dos dosis, separadas por un intervalo mínimo de 6 meses."
+
+msgctxt "field:galeno.vaccine,name:vaccine_13"
+msgid "Diphtheria, Tetanus, Whooping Cough (DTPa) vaccine"
+msgstr "Vacuna Diphteria, Tétanos, Tos Ferina (DPTa)"
+
+msgctxt "field:galeno.vaccine,description:vaccine_13"
+msgid "3 Doses"
+msgstr "3 Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_14"
+msgid "Vaccine against diphtheria, tetanus and whooping cough (Tdpa – VPI)"
+msgstr "Vacuna contra la difteria, el tétanos y la tos ferina (Tdpa - VPI)"
+
+msgctxt "field:galeno.vaccine,description:vaccine_14"
+msgid "1 Doses"
+msgstr "1 Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_15"
+msgid "Vaccine against diphtheria, tetanus and whooping cough (Tdpa)"
+msgstr "Vacuna contra la difteria, el tétanos y la tos ferina (Tdpa)"
+
+msgctxt "field:galeno.vaccine,description:vaccine_15"
+msgid "1 Doses"
+msgstr "1 Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_16"
+msgid "Vaccine against meningococcal meningitis (MenC / MenACWY)"
+msgstr "Vacuna contra la meningitis meningocócica (MenC / MenACWY)"
+
+msgctxt "field:galeno.vaccine,description:vaccine_16"
+msgid "3  Doses"
+msgstr "3  Dosis."
+
+msgctxt "field:galeno.vaccine,name:vaccine_17"
+msgid "Vaccine against meningococcal meningitis B (MenB)"
+msgstr "Vacuna contra la meningitis meningocócica B (MenB)"
+
+msgctxt "field:galeno.vaccine,description:vaccine_17"
+msgid "3 Doses"
+msgstr "3 Dosis."
+

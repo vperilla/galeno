@@ -1,0 +1,241 @@
+
+msgctxt "field:galeno.test,name:test_1"
+msgid "Uric acid."
+msgstr "Acido Urico."
+
+msgctxt "field:galeno.test,name:test_2"
+msgid "Febrile Agrutinations."
+msgstr "Agrutinaciones Febriles."
+
+msgctxt "field:galeno.test,name:test_3"
+msgid "Albumin."
+msgstr "Albumina."
+
+msgctxt "field:galeno.test,name:test_4"
+msgid "Amylase."
+msgstr "Amilasa."
+
+msgctxt "field:galeno.test,name:test_5"
+msgid "Asto."
+msgstr "Asto."
+
+msgctxt "field:galeno.test,name:test_6"
+msgid "Direct bilirubin."
+msgstr "Bilirrubina Directa."
+
+msgctxt "field:galeno.test,name:test_7"
+msgid "Total bilirubin."
+msgstr "Bilirrubina Total."
+
+msgctxt "field:galeno.test,name:test_8"
+msgid "Hematic Biometry"
+msgstr "Biometría Hemática."
+
+msgctxt "field:galeno.test,name:test_9"
+msgid "Cell L.E."
+msgstr "Célula L.E."
+
+msgctxt "field:galeno.test,name:test_10"
+msgid "Cholesterol DL."
+msgstr "Colesterol DL."
+
+msgctxt "field:galeno.test,name:test_11"
+msgid "HDL cholesterol"
+msgstr "Colesterol  HDL"
+
+msgctxt "field:galeno.test,name:test_12"
+msgid "Total cholesterol."
+msgstr "Colesterol Total."
+
+msgctxt "field:galeno.test,name:test_13"
+msgid "Colposcopy"
+msgstr "Colposcopía."
+
+msgctxt "field:galeno.test,name:test_14"
+msgid "Spine ."
+msgstr "Columna vertebral ."
+
+msgctxt "field:galeno.test,name:test_15"
+msgid "Direct Coombs."
+msgstr "Coombs Directo."
+
+msgctxt "field:galeno.test,name:test_16"
+msgid "Indirect Coombs."
+msgstr "Coombs Indirecto."
+
+msgctxt "field:galeno.test,name:test_17"
+msgid "Coproparasitic"
+msgstr "Coproparasitario."
+
+msgctxt "field:galeno.test,name:test_18"
+msgid "Serial Copro."
+msgstr "Copro Seriado."
+
+msgctxt "field:galeno.test,name:test_19"
+msgid "Creatinine"
+msgstr "Creatinina."
+
+msgctxt "field:galeno.test,name:test_20"
+msgid "Culture-Antibiogram."
+msgstr "Cultivo-Antibiograma."
+
+msgctxt "field:galeno.test,name:test_21"
+msgid "Drepanocytes"
+msgstr "Drepanocitos."
+
+msgctxt "field:galeno.test,name:test_22"
+msgid "Eco Breast."
+msgstr "Eco Mamario.						"
+
+msgctxt "field:galeno.test,name:test_23"
+msgid "Element and Microscopic."
+msgstr "Elementar y Microscópico."
+
+msgctxt "field:galeno.test,name:test_24"
+msgid "Acid Phosphatase."
+msgstr "Fosfatasa Acida."
+
+msgctxt "field:galeno.test,name:test_25"
+msgid " Alkaline phosphatase."
+msgstr " Fosfatasa Alcalina."
+
+msgctxt "field:galeno.test,name:test_26"
+msgid "Cool."
+msgstr "Fresco."
+
+msgctxt "field:galeno.test,name:test_27"
+msgid "Globulin."
+msgstr "Globulina."
+
+msgctxt "field:galeno.test,name:test_28"
+msgid "Fasting blood glucose."
+msgstr "Glucosa en ayunas."
+
+msgctxt "field:galeno.test,name:test_29"
+msgid "Glucose Post Prandial 2 hours."
+msgstr "Glucosa Post Prandial 2horas."
+
+msgctxt "field:galeno.test,name:test_30"
+msgid "Fresh Drop"
+msgstr "Gota Fresca."
+
+msgctxt "field:galeno.test,name:test_31"
+msgid "GRAM."
+msgstr "GRAM."
+
+msgctxt "field:galeno.test,name:test_32"
+msgid "Blood type."
+msgstr "Grupo Sanguíneo."
+
+msgctxt "field:galeno.test,name:test_33"
+msgid "Hematozoon"
+msgstr "Hematozoario."
+
+msgctxt "field:galeno.test,name:test_34"
+msgid "Complete blood count."
+msgstr "Hemograma completo."
+
+msgctxt "field:galeno.test,name:test_35"
+msgid "Serico iron"
+msgstr "Hierro Serico."
+
+msgctxt "field:galeno.test,name:test_36"
+msgid "Mushrooms."
+msgstr "Hongos."
+
+msgctxt "field:galeno.test,name:test_37"
+msgid "Hematic Indices."
+msgstr "Indices Hemáticos."
+
+msgctxt "field:galeno.test,name:test_38"
+msgid "Research of Polymorphs."
+msgstr "Investigación de Polimorfos."
+
+msgctxt "field:galeno.test,name:test_39"
+msgid "Rotavirus research."
+msgstr "Investigación de Rotavirus."
+
+msgctxt "field:galeno.test,name:test_40"
+msgid "Latex."
+msgstr "Latex."
+
+msgctxt "field:galeno.test,name:test_41"
+msgid "Mammography."
+msgstr "Mamografía."
+
+msgctxt "field:galeno.test,name:test_42"
+msgid "Platelets."
+msgstr "Plaquetas."
+
+msgctxt "field:galeno.test,name:test_43"
+msgid "Total protein."
+msgstr "Proteína Total."
+
+msgctxt "field:galeno.test,name:test_44"
+msgid "Pregnancy test."
+msgstr "Prueba de Embarazo."
+
+msgctxt "field:galeno.test,name:test_45"
+msgid "Reticulocytes"
+msgstr "Reticulocitos."
+
+msgctxt "field:galeno.test,name:test_46"
+msgid "Hidden blood."
+msgstr "Sangre Oculta."
+
+msgctxt "field:galeno.test,name:test_47"
+msgid "Coagulation time."
+msgstr "Tiempo de Coagulación."
+
+msgctxt "field:galeno.test,name:test_48"
+msgid "Prothrombin time (TP)"
+msgstr "Tiempo de Protrombina (TP)"
+
+msgctxt "field:galeno.test,name:test_49"
+msgid "Sangria time."
+msgstr "Tiempo de  Sangría."
+
+msgctxt "field:galeno.test,name:test_50"
+msgid "Tomography of the skull."
+msgstr "Tomografía de cráneo."
+
+msgctxt "field:galeno.test,name:test_51"
+msgid "Sinus tomography."
+msgstr "Tomografía de senos paranasales."
+
+msgctxt "field:galeno.test,name:test_52"
+msgid "Thorax and abdomen"
+msgstr "Tórax y abdomen ."
+
+msgctxt "field:galeno.test,name:test_53"
+msgid "Oxalacetic Transaminase (Ast)."
+msgstr "Transaminasa Oxalacética (Ast)."
+
+msgctxt "field:galeno.test,name:test_54"
+msgid "Pyruvic transaminase (ALT)."
+msgstr "Transaminasa Pirúvica (ALT)."
+
+msgctxt "field:galeno.test,name:test_55"
+msgid "Triglycerides."
+msgstr "Triglicéridos."
+
+msgctxt "field:galeno.test,name:test_56"
+msgid "T. Partial thromboplastin (TTP)"
+msgstr "T. Tromboplastina Parcial (TTP)"
+
+msgctxt "field:galeno.test,name:test_57"
+msgid "Urea."
+msgstr "Urea."
+
+msgctxt "field:galeno.test,name:test_58"
+msgid "Complete Uruanálisis."
+msgstr "Uruanálisis Completo."
+
+msgctxt "field:galeno.test,name:test_59"
+msgid "VDRL"
+msgstr "VDRL"
+
+msgctxt "field:galeno.test,name:test_60"
+msgid "ZIEHL"
+msgstr "ZIEHL"
+

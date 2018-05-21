@@ -1,0 +1,19 @@
+number;name;description;name;description
+1;BCG;1 Dose;BCG;1 Dosis.
+2;Vaccine against Hepatitis B;4 doses, 1 dose: for children whose mothers are HBsAg positive.;Vacuna contra la Hepatitis B;" 4 dosis
+ 1 dosis: para niños cuyas madres son HBsAg positivas."
+3;Vaccine against mumps, measles and rubella (MMR);2 Doses;Vacuna contra paperas, sarampión y rubéola (MMR);2 Dosis.
+4;Vaccine against hemophilic influenza type b;3 Doses;Vacuna contra la influenza hemofílica tipo b;3 Dosis.
+5;Vaccine against meningococcal meningitis;3 Doses;vacuna contra la meningitis meningocócica;3 Dosis.
+6;Vaccine against pneumococcus;3 Doses;vacuna conta el neumococo;3 Dosis.
+7;Vaccine against human papillomavirus;2 Doses;Vacuna contra el virus del papiloma humano;2 Dosis.
+8;Polio vaccine (oral poliomyelitis);3 Doses;vacuna contra la polio (poliomielitis oral);3 Dosis.
+9;Varicella vaccine;2 Doses;Vacuna contra la varicela.;2 Dosis.
+10;Vaccine against rotavirus;3 Doses;vacuna contra rotavirus;3 Dosis.
+11;Anti influenza;2 Doses;Anti-influenza;2 Dosis.
+12;Vaccine against Hepatitis A;Two doses, separated by a minimum interval of 6 months.;Vacuna contra la Hepatitis A;Dos dosis, separadas por un intervalo mínimo de 6 meses.
+13;Diphtheria, Tetanus, Whooping Cough (DTPa) vaccine;3 Doses;Vacuna Diphteria, Tétanos, Tos Ferina (DPTa);3 Dosis.
+14;Vaccine against diphtheria, tetanus and whooping cough (Tdpa – VPI);1 Doses;Vacuna contra la difteria, el tétanos y la tos ferina (Tdpa - VPI);1 Dosis.
+15;Vaccine against diphtheria, tetanus and whooping cough (Tdpa);1 Doses;Vacuna contra la difteria, el tétanos y la tos ferina (Tdpa);1 Dosis.
+16;Vaccine against meningococcal meningitis (MenC / MenACWY);3  Doses;Vacuna contra la meningitis meningocócica (MenC / MenACWY);3  Dosis.
+17;Vaccine against meningococcal meningitis B (MenB);3 Doses;Vacuna contra la meningitis meningocócica B (MenB);3 Dosis.

@@ -1,0 +1,5 @@
+{% for test in tests %}
+msgctxt "field:galeno.test,name:test_${test['number']}"
+msgid "${test['name']}"
+msgstr "${test['name_es']}"
+{% end %}

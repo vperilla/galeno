@@ -1,18 +1,12 @@
-from sql.conditionals import Coalesce
-from sql.operators import Equal
-
-from trytond.model import ModelView, ModelSQL, fields, Unique, Exclude
+from trytond.model import ModelView, ModelSQL, fields, tree, Unique
 
 __all__ = ['DiseaseCategory', 'DiseaseGroup', 'Disease', 'DiseaseMembers']
 
-SEPARATOR = ' / '
 
-
-class DiseaseCategory(ModelSQL, ModelView):
+class DiseaseCategory(tree(separator=' / '), ModelSQL, ModelView):
     'Disease Categories'
     __name__ = 'galeno.disease.category'
 
-    code = fields.Char('Code', required=True)
     name = fields.Char('Name', required=True, translate=True)
     parent = fields.Many2One(
         'galeno.disease.category', 'Parent')
@@ -22,34 +16,7 @@ class DiseaseCategory(ModelSQL, ModelView):
     @classmethod
     def __setup__(cls):
         super(DiseaseCategory, cls).__setup__()
-        t = cls.__table__()
-        cls._sql_constraints = [
-            ('name_parent_exclude',
-                Exclude(t, (t.name, Equal), (Coalesce(t.parent, -1), Equal)),
-                'The name of a disease category must be unique by parent.'),
-            ('name_uniq', Unique(t, t.name), 'Category name must be unique'),
-            ]
-        cls._error_messages.update({
-            'wrong_name': ('Invalid category name "%%s": You can not use '
-                '"%s" in name field.' % SEPARATOR),
-            })
         cls._order.insert(0, ('name', 'ASC'))
-
-    @classmethod
-    def validate(cls, categories):
-        super(DiseaseCategory, cls).validate(categories)
-        cls.check_recursion(categories, rec_name='name')
-        for category in categories:
-            category.check_name()
-
-    def check_name(self):
-        if SEPARATOR in self.name:
-            self.raise_user_error('wrong_name', (self.name,))
-
-    def get_rec_name(self, name):
-        if self.parent:
-            return self.parent.get_rec_name(name) + SEPARATOR + self.name
-        return self.name
 
 
 class DiseaseGroup(ModelSQL, ModelView):

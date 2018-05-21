@@ -54,10 +54,7 @@ class Family(ModelSQL, ModelView):
         'galeno.patient', 'Patient', required=True, ondelete='RESTRICT')
     relationship = fields.Char('Relationship', required=True,
         help="Mother, Father, Uncle, etc.")
-    disease = fields.Many2One('galeno.disease', 'Disease', required=True,
-        domain=[
-            ('code', 'like', 'Z8%'),
-        ])
+    disease = fields.Many2One('galeno.disease', 'Disease', required=True)
     notes = fields.Text('Notes')
 
     @classmethod

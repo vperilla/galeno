@@ -114,10 +114,10 @@ def create_thumbnail(data, size=(250, 250)):
         if image_orientation == 3:
             image = image.rotate(180)
         elif image_orientation == 6:
-            image = image.rotate(-90)
+            image = image.rotate(-90, expand=1)
         elif image_orientation == 8:
-            image = image.rotate(90)
-    image.thumbnail(size, Image.ANTIALIAS)
+            image = image.rotate(90, expand=1)
     result = BytesIO()
+    image.thumbnail(size, Image.ANTIALIAS)
     image.save(result, image_format)
     return fields.Binary.cast(result.getvalue())

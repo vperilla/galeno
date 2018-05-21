@@ -158,6 +158,7 @@ class Patient(ModelSQL, ModelView):
     relation_type = fields.Selection(
         [
             (None, ''),
+            ('none', 'None'),
             ('monogamous', 'Monogamous'),
             ('polygamous', 'Polygamous'),
         ], 'Relation type',
@@ -566,7 +567,6 @@ class PatientDisability(ModelSQL, ModelView):
             ('other', 'Other'),
         ], 'Type', sort=False, required=True)
     disease = fields.Many2One('galeno.disease', 'Disease')
-    start_date = fields.Date('Start date')
     legal_reference = fields.Char('Legal reference',
         help='legal document that verifies the authenticity of the condition')
     percentage = fields.Float('Percentage', required=True,

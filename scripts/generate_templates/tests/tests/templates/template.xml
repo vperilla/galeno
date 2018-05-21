@@ -1,0 +1,13 @@
+<xml version="1.0" encoding="utf-8" xmlns:py="http://genshi.edgewall.org/">
+<tryton>
+    <data skiptest="1" noupdate="1">
+        <py:for each="test in tests">
+        <record model="galeno.test" id="test_${test['number']}">
+            <field name="name">${test['name']}</field>
+            <field name="gender">${test['gender']}</field>
+            <field name="parent" ref="category_test_${test['category']}"/>
+        </record>
+        </py:for>
+    </data>
+</tryton>
+</xml>

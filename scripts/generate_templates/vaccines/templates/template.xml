@@ -1,0 +1,13 @@
+<xml version="1.0" encoding="utf-8" xmlns:py="http://genshi.edgewall.org/">
+<tryton>
+    <data skiptest="1" noupdate="1">
+        <py:for each="vaccine in vaccines">
+        <record model="galeno.vaccine" id="vaccine_${vaccine['number']}">
+            <field name="code">${vaccine['code']}</field>
+            <field name="name">${vaccine['name']}</field>
+            <field name="description">${vaccine['description']}</field>
+        </record>
+        </py:for>
+    </data>
+</tryton>
+</xml>

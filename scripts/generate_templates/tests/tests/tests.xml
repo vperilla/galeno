@@ -1,0 +1,306 @@
+<xml version="1.0" encoding="utf-8">
+<tryton>
+    <data skiptest="1" noupdate="1">
+        <record model="galeno.test" id="test_1">
+            <field name="name">Uric acid.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_2">
+            <field name="name">Febrile Agrutinations.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_5"/>
+        </record>
+        <record model="galeno.test" id="test_3">
+            <field name="name">Albumin.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_4">
+            <field name="name">Amylase.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_5">
+            <field name="name">Asto.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_5"/>
+        </record>
+        <record model="galeno.test" id="test_6">
+            <field name="name">Direct bilirubin.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_7">
+            <field name="name">Total bilirubin.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_8">
+            <field name="name">Hematic Biometry</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_9">
+            <field name="name">Cell L.E.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_10">
+            <field name="name">Cholesterol DL.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_11">
+            <field name="name">HDL cholesterol</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_12">
+            <field name="name">Total cholesterol.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_13">
+            <field name="name">Colposcopy</field>
+            <field name="gender">female</field>
+            <field name="parent" ref="category_test_8"/>
+        </record>
+        <record model="galeno.test" id="test_14">
+            <field name="name">Spine .</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_9"/>
+        </record>
+        <record model="galeno.test" id="test_15">
+            <field name="name">Direct Coombs.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_16">
+            <field name="name">Indirect Coombs.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_17">
+            <field name="name">Coproparasitic</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_2"/>
+        </record>
+        <record model="galeno.test" id="test_18">
+            <field name="name">Serial Copro.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_2"/>
+        </record>
+        <record model="galeno.test" id="test_19">
+            <field name="name">Creatinine</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_20">
+            <field name="name">Culture-Antibiogram.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_1"/>
+        </record>
+        <record model="galeno.test" id="test_21">
+            <field name="name">Drepanocytes</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_22">
+            <field name="name">Eco Breast.</field>
+            <field name="gender">female</field>
+            <field name="parent" ref="category_test_7"/>
+        </record>
+        <record model="galeno.test" id="test_23">
+            <field name="name">Element and Microscopic.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_6"/>
+        </record>
+        <record model="galeno.test" id="test_24">
+            <field name="name">Acid Phosphatase.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_25">
+            <field name="name"> Alkaline phosphatase.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_26">
+            <field name="name">Cool.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_1"/>
+        </record>
+        <record model="galeno.test" id="test_27">
+            <field name="name">Globulin.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_28">
+            <field name="name">Fasting blood glucose.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_29">
+            <field name="name">Glucose Post Prandial 2 hours.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_30">
+            <field name="name">Fresh Drop</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_6"/>
+        </record>
+        <record model="galeno.test" id="test_31">
+            <field name="name">GRAM.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_1"/>
+        </record>
+        <record model="galeno.test" id="test_32">
+            <field name="name">Blood type.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_33">
+            <field name="name">Hematozoon</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_34">
+            <field name="name">Complete blood count.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_35">
+            <field name="name">Serico iron</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_36">
+            <field name="name">Mushrooms.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_1"/>
+        </record>
+        <record model="galeno.test" id="test_37">
+            <field name="name">Hematic Indices.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_38">
+            <field name="name">Research of Polymorphs.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_2"/>
+        </record>
+        <record model="galeno.test" id="test_39">
+            <field name="name">Rotavirus research.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_2"/>
+        </record>
+        <record model="galeno.test" id="test_40">
+            <field name="name">Latex.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_5"/>
+        </record>
+        <record model="galeno.test" id="test_41">
+            <field name="name">Mammography.</field>
+            <field name="gender">female</field>
+            <field name="parent" ref="category_test_11"/>
+        </record>
+        <record model="galeno.test" id="test_42">
+            <field name="name">Platelets.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_43">
+            <field name="name">Total protein.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_44">
+            <field name="name">Pregnancy test.</field>
+            <field name="gender">female</field>
+            <field name="parent" ref="category_test_6"/>
+        </record>
+        <record model="galeno.test" id="test_45">
+            <field name="name">Reticulocytes</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_46">
+            <field name="name">Hidden blood.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_2"/>
+        </record>
+        <record model="galeno.test" id="test_47">
+            <field name="name">Coagulation time.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_48">
+            <field name="name">Prothrombin time (TP)</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_49">
+            <field name="name">Sangria time.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_50">
+            <field name="name">Tomography of the skull.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_9"/>
+        </record>
+        <record model="galeno.test" id="test_51">
+            <field name="name">Sinus tomography.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_12"/>
+        </record>
+        <record model="galeno.test" id="test_52">
+            <field name="name">Thorax and abdomen</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_9"/>
+        </record>
+        <record model="galeno.test" id="test_53">
+            <field name="name">Oxalacetic Transaminase (Ast).</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_54">
+            <field name="name">Pyruvic transaminase (ALT).</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_55">
+            <field name="name">Triglycerides.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_56">
+            <field name="name">T. Partial thromboplastin (TTP)</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_3"/>
+        </record>
+        <record model="galeno.test" id="test_57">
+            <field name="name">Urea.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_4"/>
+        </record>
+        <record model="galeno.test" id="test_58">
+            <field name="name">Complete Uruanálisis.</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_6"/>
+        </record>
+        <record model="galeno.test" id="test_59">
+            <field name="name">VDRL</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_5"/>
+        </record>
+        <record model="galeno.test" id="test_60">
+            <field name="name">ZIEHL</field>
+            <field name="gender">unisex</field>
+            <field name="parent" ref="category_test_1"/>
+        </record>
+    </data>
+</tryton>
+</xml>

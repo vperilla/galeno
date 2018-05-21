@@ -1,0 +1,18 @@
+number;code;name;description
+1;BCG;BCG;1 Dose
+2;Hepatitis B;Vaccine against Hepatitis B;4 doses, 1 dose: for children whose mothers are HBsAg positive.
+3;(MMR);Vaccine against mumps, measles and rubella (MMR);2 Doses
+4;Hemophilic type b;Vaccine against hemophilic influenza type b;3 Doses
+5;Meningococcal Meningitis;Vaccine against meningococcal meningitis;3 Doses
+6;Pneumococcus;Vaccine against pneumococcus;3 Doses
+7;Human papilloma;Vaccine against human papillomavirus;2 Doses
+8;OPV;Polio vaccine (oral poliomyelitis);3 Doses
+9;Varicella;Varicella vaccine;2 Doses
+10;Rotavirus;Vaccine against rotavirus;3 Doses
+11;Anti-influenza;Anti influenza;2 Doses
+12;Hepatitis A;Vaccine against Hepatitis A;Two doses, separated by a minimum interval of 6 months.
+13;DPTa 3;Diphtheria, Tetanus, Whooping Cough (DTPa) vaccine;3 Doses
+14;Tdpa - VPI;Vaccine against diphtheria, tetanus and whooping cough (Tdpa – VPI);1 Doses
+15;Tdpa 1;Vaccine against diphtheria, tetanus and whooping cough (Tdpa);1 Doses
+16;MenC / MenACWY;Vaccine against meningococcal meningitis (MenC / MenACWY);3  Doses
+17;MenB;Vaccine against meningococcal meningitis B (MenB);3 Doses

@@ -1,0 +1,152 @@
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_1"
+msgid "Combined oral contraception"
+msgstr "Anticoncepción oral  combinada"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_1"
+msgid "Contraceptive methods that consist of taking a daily tablet that contains two hormones, progestogen and estrogen."
+msgstr "Métodos anticonceptivos que consisten en la toma de una tableta diaria que contiene dos hormonas, progestágeno y estrógeno."
+
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_2"
+msgid "Combined injectable contraception"
+msgstr "Anticoncepción inyectable  combinada"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_2"
+msgid "Contraceptive methods that consist of the administration of a monthly injection that contains two hormones, progestogen and estrogen."
+msgstr "Métodos anticonceptivos que consisten en la administración de una inyección mensual que contiene dos hormonas, progestágeno y estrógeno."
+
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_3"
+msgid "Transdermal contraception"
+msgstr "Anticoncepción  transdérmica"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_3"
+msgid "Contraceptive methods that consist in the administration of a patch that contains two hormones: progestogen and estrogen."
+msgstr "Métodos anticonceptivos que consisten en la administración de un parche que contiene dos hormonas: progestágeno y estrógeno."
+
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_4"
+msgid "Progestin-only oral contraception"
+msgstr "Anticoncepción oral que  solo contiene progestina"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_4"
+msgid "Contraceptive method consisting of taking a daily tablet containing a single hormone: progestogen:
+ - Levonorgestrel
+- Desogestrel
+- Linestrenol
+They are also called minipill"
+msgstr "Método anticonceptivo que consiste en la toma de una tableta diaria que contiene una sola hormona: progestágeno:
+- Levonorgestrel
+- Desogestrel
+- Linestrenol
+Se las llama también minipíldora"
+
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_5"
+msgid "Injectable contraception based on progestin alone."
+msgstr "Anticoncepción inyectable  a base de progestina sola."
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_5"
+msgid "Contraceptive method consisting of intramuscular gluteal or deltoid injection of a quarterly vial containing a progestogen deposit: Medroxyprogesterone acetate 150 mg."
+msgstr "Método anticonceptivo que consiste en la inyección intramuscular glútea o deltoidea de una ampolla trimestral que contiene un progestágeno de depósito: Acetato de Medroxiprogesterona 150 mg."
+
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_6"
+msgid "Subdermal implants"
+msgstr "Implantes subdérmicos"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_6"
+msgid "Contraceptive methods consisting of the subdermal placement of 1, 2 or 6 cartridges or non-biodegradable plastic cylindrical capsules containing a progestogen deposit: etonorgestrel (ENG) or levonorgestrel (LNG) that is progressively released for 3 to 5 years respectively, which is its time of use."
+msgstr "Métodos anticonceptivos que consisten en la colocación subdérmica de 1, 2 o 6 cartuchos o cápsulas cilíndricas plásticas no biodegradables que contienen un progestágeno de depósito: etonorgestrel (ENG) o levonorgestrel (LNG) que se libera progresivamente durante 3 a 5 años respectivamente, que es su tiempo de uso."
+
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_7"
+msgid "Emergency contraception"
+msgstr "Anticoncepción de  emergencia"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_7"
+msgid "Emergency contraceptive method that women can use within 5 days after a sexual intercourse without contraceptive protection in order to avoid an unplanned pregnancy. It should be used exclusively as an emergency method and not as a regular form of contraception. Emergency contraception is approved by the World Health Organization (WHO), the International Family Planning Federation (IPPF) and the Food and Drug Administration (FDA)."
+msgstr "Método anticonceptivo de emergencia que pueden utilizar las mujeres en los 5 días siguientes a una relación sexual sin protección anticonceptiva con el fin de evitar un embarazo no planificado.
+Debe usarse exclusivamente como método de emergencia y no como una forma regular de anticoncepción. La anticoncepción de emergencia está aprobada por la Organización Mundial de la Salud (OMS), la Federación internacional  de Planificación de la familia (IPPF) y la Food and Drug Administration (FDA)."
+
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_8"
+msgid "Copper intrauterine device (IUD)"
+msgstr "Dispositivo intrauterino de  cobre (DIU)"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_8"
+msgid "It is a contraceptive made of T-shaped polyethylene, with 2 flexible horizontal arms. It has around it copper wire with a surface of 380 mm2. It is inserted vaginally through the cervix and placed at the level of the fundus of the uterus. This procedure must be done by a qualified provider.
+It has 2 polyethylene guide wires that remain at the level of the vagina for control and extraction. Its use can be for 10 years."
+msgstr "Es un anticonceptivo fabricado de polietileno en forma de T, con 2 brazos horizontales flexibles. Posee alrededor suyo alambre de cobre con una superficie de 380 mm2. Se lo inserta por vía vaginal a través del cérvix y se lo 
+coloca a nivel del fondo del útero. Este procedimiento lo debe realizar un proveedor calificado.
+Posee 2 hilos guía también de polietileno que quedan a nivel de vagina para su control y su  extracción.  Su uso puede ser por 10 años."
+
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_9"
+msgid "Levonorgestrel-releasing intrauterine device (IUD-LNG)"
+msgstr "Dispositivo intrauterino  liberador de levonorgestrel (DIU-LNG)"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_9"
+msgid "Contraceptive method of polyethylene in the form of T, with the ability to continuously release a hormonal component (levonorgestrel 20ug / day). As in the Cu-IUD, two wires are attached to the end that is close to the external cervical os. Its use can be for 5 years."
+msgstr "Método anticonceptivo de polietileno en forma de T, con la capacidad de liberar en forma continua un componente hormonal (levonorgestrel 20ug/día).
+Igual que en el DIU-Cu, dos hilos se unen al extremo que queda cerca al orificio cervical externo. Su uso puede ser por 5 años."
+
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_10"
+msgid "Male condom"
+msgstr "Condón masculino"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_10"
+msgid "Barrier method that prevents contact between semen and vaginal mucosa. The only method that also protects against sexually transmitted infections. Another technical name can be a condom. Cover or cover of latex that is placed on the erect penis of man."
+msgstr "Método de barrera que impide el contacto entre el semen y la mucosa vaginal. Único método que también protege contra infecciones de transmisión sexual.
+Otra denominación técnica puede ser preservativo. Funda o cubierta de látex que se coloca sobre el pene erecto del hombre."
+
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_11"
+msgid "Breastfeeding method (MELA"
+msgstr "Método de lactancia  materna (MELA"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_11"
+msgid "It is a temporary family planning method, based on exclusive breastfeeding in which the woman must comply with 3 conditions:
+- Breastfeeding at free demand, day and night, without the use of formulas or breast milk substitutes
+- Amenorrhea
+- Newborn under 6 months"
+msgstr "Es un método de planificación familiar temporal, basado en la lactancia exclusiva en el que la mujer debe cumplir obligatoriamente con 3 condiciones:
+- Lactancia materna a libre demanda, de día y de noche, sin uso de fórmulas o sucedáneos de leche materna
+- Amenorrea
+- Recién nacido/a menor de 6 meses"
+
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_12"
+msgid "Fertile female period (rhythm)"
+msgstr "Período fértil femenino (ritmo)"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_12"
+msgid "To determine the female fertile period there are 2 methods:
+- Use of the calendar, determine the fertile days based on the menstrual cycle.
+- Use of the signs and symptoms of the fertile period, such as: cervical mucus and basal body temperature (CB T)"
+msgstr "Para determinar el período fértil femenino existen 2 métodos:
+- Uso del calendario, determinan los días fértiles en base al ciclo menstrual.
+- Uso de los signos y síntomas del período fértil, como son: moco cervical y temperatura corporal basal (T CB)"
+
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_13"
+msgid "Tubal ligation salpingoclasm, or salpingoligadura"
+msgstr "Ligadura de trompas  salpingoclasia, o  salpingoligadura"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_13"
+msgid "Surgical intervention in which female surgical contraception is performed through the section, cut and bilateral ligature of the fallopian tubes. It can be done postpartum, transcesarean or in the intergenesic interval."
+msgstr "Intervención quirúrgica en la cual se realiza anticoncepción quirúrgica femenina mediante la sección, corte y ligadura bilateral de las Trompas de Falopio. 
+Puede realizarse posparto, transcesárea o en el intervalo intergenésico."
+
+
+msgctxt "field:galeno.contraceptive,name:contraceptive_14"
+msgid "Vasectomy"
+msgstr "Vasectomía"
+
+msgctxt "field:galeno.contraceptive,description:contraceptive_14"
+msgid "Surgical intervention in which male surgical contraception is performed by sectioning, cutting and bilateral ligation of the vas deferens."
+msgstr "Intervención quirúrgica en la cual se realiza anticoncepción quirúrgica masculina mediante la sección, corte y ligadura bilateral de los conductos deferentes."
+
+

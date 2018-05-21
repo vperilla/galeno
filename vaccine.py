@@ -8,17 +8,16 @@ class Vaccine(ModelSQL, ModelView):
     'Vaccine'
     __name__ = 'galeno.vaccine'
 
-    company = fields.Many2One('company.company', 'Company', required=True)
     code = fields.Char('Code', required=True)
-    name = fields.Char('Name', required=True)
-    description = fields.Text('Description')
+    name = fields.Char('Name', required=True, translate=True)
+    description = fields.Text('Description', translate=True)
 
     @classmethod
     def __setup__(cls):
         super(Vaccine, cls).__setup__()
         t = cls.__table__()
         cls._sql_constraints += [
-            ('code_uniq', Unique(t, t.company, t.code), 'Code must be unique'),
+            ('code_uniq', Unique(t, t.code), 'Code must be unique'),
         ]
 
     @staticmethod

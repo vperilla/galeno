@@ -1,0 +1,20 @@
+code;name;description;information
+INFECTIOUS;INFECCIOSAS;Infectious diseases;
+RESP;RESPIRATORIA;Respiratory - Pulmonary Diseases;
+HEART;CORAZÓN;Diseases of the Heart. CAD, CHF, valvulopathies, arrhythmias.. ;
+VASCULAR;VASCULAR;Disorders of the Circulatory System;
+GASTRO;GASTROINTESTINAL;Diseases related to the Digestive track and accesory organs;
+ALLERGIC;ALÉRGICA;Hypersensitivity reactions to environmental - external antigens;
+AUTOIMMUNE;AUTOINMUNE;Reactions to self antigens;
+CONNECTIVE;TEJIDO CONECTIVO y MUSCULOESQUELÉTICO;Disorders of the connective tissue and MSDs;
+GENITOURINARY;GENITOURINARIO;Renal, Urologic and Male reproductive disorders;
+NEOPLASIC;NEOPLÁSICAS;Neoplasic disorders, both benign and malignant;
+METABOLIC;METABÓLICO;Metabolic and endocrine disorders;
+PSYCHIATRIC;PSIQUIÁTRICO;Psychiatric disorders;
+NEUROLOGIC;NEUROLÓGICOS;Neurological disorders;
+PEDIATRIC;PEDIÁTRICA;Disorders related to pediatric population;
+NUTRITION;NUTRICIÓN;Nutritional disorders;
+SOCIAL;SOCIAL Y FAMILIA;Diseases related to socio-economic and family environments;
+VIOLENCE;VIOLENCIA;Assault, sex crimes, bullying and other psychological or physical violence;
+GYNOBS;GINECOLOGÍA y OBSTETRICIA;Women and pregnancies related disorders;
+NOTIFIABLE;NOTIFICACIÓN OBLIGATORIA;The disease is subject to mandatory notification to the authorities;
