@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <form>
     <group id="basic_header">
-        <label name="name"/>
-        <field name="name"/>
         <label name="code"/>
         <field name="code"/>
+        <label name="name"/>
+        <field name="name"/>
     </group>
 </form>

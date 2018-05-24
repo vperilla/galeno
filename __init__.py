@@ -7,6 +7,7 @@ from . import country
 from . import occupation
 from . import ethnic_group
 from . import disease
+from . import procedure
 from . import medicament
 from . import vaccine
 from . import drug
@@ -30,6 +31,7 @@ def register():
         disease.DiseaseGroup,
         disease.Disease,
         disease.DiseaseMembers,
+        procedure.Procedure,
         medicament.Medicament,
         vaccine.Vaccine,
         drug.Drug,
@@ -51,6 +53,7 @@ def register():
         evaluation.PatientEvaluation,
         evaluation.PatientEvaluationTest,
         evaluation.PatientEvaluationDiagnosis,
+        evaluation.PatientEvaluationProcedure,
         configuration.Configuration,
         module='galeno', type_='model')
     Pool.register(

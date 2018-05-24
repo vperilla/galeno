@@ -14,6 +14,7 @@ class Patient(ModelSQL, ModelView):
     'Patient'
     __name__ = 'galeno.patient'
     # MAIN INFORMATION
+    algo = fields.Char('Algo')
     company = fields.Many2One('company.company', 'Company', required=True,
         states={
             'invisible': True,

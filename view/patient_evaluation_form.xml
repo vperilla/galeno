@@ -24,8 +24,12 @@
     </group>
     <notebook>
         <page id="evaluation_diagnosis" string="Diagnosis - Treatment">
-            <separator name="diagnostics" colspan="4"/>
-            <field name="diagnostics" colspan="4"/>
+            <group id="diagnostics" colspan="2" col="4">
+                <field name="diagnostics" colspan="4"/>
+            </group>
+            <group id="procedures" colspan="2" col="4">
+                <field name="procedures" colspan="4"/>
+            </group>
             <separator name="treatment" colspan="4"/>
             <field name="treatment" colspan="4"/>
         </page>

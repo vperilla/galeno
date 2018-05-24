@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<form>
+    <group id="evaluation_procedure_header">
+        <group id="eval_procedure_1" colspan="4">
+            <label name="evaluation"/>
+            <field name="evaluation"/>
+            <newline/>
+            <separator name="procedure"/>
+            <field name="procedure" colspan="4"/>
+            <separator name="notes" colspan="4"/>
+            <field name="notes" colspan="4"/>
+        </group>
+    </group>
+</form>

@@ -30,6 +30,10 @@
             <field name="name">galeno-disease</field>
             <field name="path">icons/disease.svg</field>
         </record>
+        <record model="ir.ui.icon" id="procedure_icon">
+            <field name="name">galeno-procedure</field>
+            <field name="path">icons/procedure.svg</field>
+        </record>
         <record model="ir.ui.icon" id="drup_icon">
             <field name="name">galeno-drug</field>
             <field name="path">icons/drug.svg</field>

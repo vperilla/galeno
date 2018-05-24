@@ -161,5 +161,16 @@
             <field name="type">tree</field>
             <field name="name">patient_evaluation_diagnosis_tree</field>
         </record>
+        <!-- PATIENT EVALUATION PROCEDURE -->
+        <record model="ir.ui.view" id="patient_evaluation_procedure_view_form">
+            <field name="model">galeno.patient.evaluation.procedure</field>
+            <field name="type">form</field>
+            <field name="name">patient_evaluation_procedure_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_evaluation_procedure_view_tree">
+            <field name="model">galeno.patient.evaluation.procedure</field>
+            <field name="type">tree</field>
+            <field name="name">patient_evaluation_procedure_tree</field>
+        </record>
     </data>
 </tryton>

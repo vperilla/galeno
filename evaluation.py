@@ -10,7 +10,7 @@ from trytond.tools import reduce_ids, grouped_slice
 import galeno_tools
 
 __all__ = ['PatientEvaluation', 'PatientEvaluationTest',
-    'PatientEvaluationDiagnosis']
+    'PatientEvaluationDiagnosis', 'PatientEvaluationProcedure']
 
 
 class PatientEvaluation(ModelSQL, ModelView):
@@ -44,6 +44,8 @@ class PatientEvaluation(ModelSQL, ModelView):
     symptoms = fields.Text('Illness symptoms')
     diagnostics = fields.One2Many(
         'galeno.patient.evaluation.diagnosis', 'evaluation', 'Diagnostics')
+    procedures = fields.One2Many(
+        'galeno.patient.evaluation.procedure', 'evaluation', 'Procedures')
     treatment = fields.Text('Treatment')
     # VITAL SIGNS
     systolic_pressure = fields.Float('Systolic Pressure',
@@ -377,4 +379,14 @@ class PatientEvaluationDiagnosis(ModelSQL, ModelView):
             ('presumptive', 'Presumptive'),
             ('definitive', 'Definitive'),
         ], 'Type')
+    notes = fields.Text('Notes')
+
+
+class PatientEvaluationProcedure(ModelSQL, ModelView):
+    'Patient Evaluation Procedure'
+    __name__ = 'galeno.patient.evaluation.procedure'
+
+    evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
+        ondelete='CASCADE', required=True)
+    procedure = fields.Many2One('galeno.procedure', 'Procedure', required=True)
     notes = fields.Text('Notes')
