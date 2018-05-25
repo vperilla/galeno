@@ -1,5 +1,0 @@
-{% for category in categories %}
-msgctxt "field:galeno.category,name:category_test_${category['number']}"
-msgid "${category['name']}"
-msgstr "${category['name_es']}"
-{% end %}

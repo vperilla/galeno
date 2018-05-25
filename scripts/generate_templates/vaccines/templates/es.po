@@ -1,9 +1,0 @@
-{% for vaccine in vaccines %}
-msgctxt "field:galeno.vaccine,name:vaccine_${vaccine['number']}"
-msgid "${vaccine['name']}"
-msgstr "${vaccine['name_es']}"
-
-msgctxt "field:galeno.vaccine,description:vaccine_${vaccine['number']}"
-msgid "${vaccine['description']}"
-msgstr "${vaccine['description_es']}"
-{% end %}
