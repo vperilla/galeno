@@ -1,12 +1,10 @@
 <?xml version="1.0"?>
 <form>
-    <group id="patient_evaluation_header" col="8">
+    <group id="patient_evaluation_header" colspan="4" col="6">
         <label name="reason"/>
         <field name="reason"/>
         <label name="start_date"/>
         <field name="start_date"/>
-        <label name="state"/>
-        <field name="state"/>
         <label name="code"/>
         <field name="code"/>
         <label name="patient"/>
@@ -15,8 +13,14 @@
         <field name="patient_gender"/>
         <label name="patient_age"/>
         <field name="patient_age"/>
+    </group>
+    <group id="state_buttons" colspan="4" col="-1">
+        <label name="state"/>
+        <field name="state"/>
         <label name="end_date"/>
         <field name="end_date"/>
+        <button name="finish" icon="tryton-ok"/>
+        <button name="cancel" icon="tryton-cancel"/>
     </group>
     <group id="summary_treatment" colspan="8" col="4">
         <separator name="symptoms" colspan="4"/>

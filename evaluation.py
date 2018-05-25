@@ -1,7 +1,7 @@
 from datetime import datetime
 from decimal import Decimal
 
-from trytond.model import ModelView, ModelSQL, fields
+from trytond.model import Workflow, ModelView, ModelSQL, fields
 from trytond.pyson import Bool, Eval, If
 from trytond.transaction import Transaction
 from trytond.pool import Pool
@@ -12,16 +12,22 @@ __all__ = ['PatientEvaluation', 'PatientEvaluationTest',
     'PatientEvaluationDiagnosis', 'PatientEvaluationProcedure']
 
 
-class PatientEvaluation(ModelSQL, ModelView):
+class PatientEvaluation(Workflow, ModelSQL, ModelView):
     'Patient Evaluation'
     __name__ = 'galeno.patient.evaluation'
     _rec_name = 'code'
 
     code = fields.Char('Code', readonly=True)
-    start_date = fields.DateTime('Start Date', required=True)
+    start_date = fields.DateTime('Start Date', required=True,
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     end_date = fields.DateTime('End Date', readonly=True)
     patient = fields.Many2One(
-        'galeno.patient', 'Patient', required=True, ondelete='RESTRICT')
+        'galeno.patient', 'Patient', required=True, ondelete='RESTRICT',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     patient_gender = fields.Function(
         fields.Selection([
             ('male', 'Male'),
@@ -34,67 +40,107 @@ class PatientEvaluation(ModelSQL, ModelView):
             ('disease', 'Disease'),
             ('tracing', 'Tracing'),
             ('routine', 'Routine Exploration')
-        ], 'Reason', required=True, sort=False)
+        ], 'Reason',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'], required=True, sort=False)
     state = fields.Selection(
         [
-            ('progress', 'Progress'),
-            ('done', 'Done'),
+            ('initial', 'Initiated'),
+            ('finish', 'Finished'),
+            ('cancel', 'Canceled'),
         ], 'State', readonly=True, required=True)
-    symptoms = fields.Text('Illness symptoms')
+    symptoms = fields.Text('Illness symptoms',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     diagnostics = fields.One2Many(
-        'galeno.patient.evaluation.diagnosis', 'evaluation', 'Diagnostics')
+        'galeno.patient.evaluation.diagnosis', 'evaluation', 'Diagnostics',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     procedures = fields.One2Many(
-        'galeno.patient.evaluation.procedure', 'evaluation', 'Procedures')
-    treatment = fields.Text('Treatment')
+        'galeno.patient.evaluation.procedure', 'evaluation', 'Procedures',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    treatment = fields.Text('Treatment',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     # VITAL SIGNS
     systolic_pressure = fields.Float('Systolic Pressure',
         domain=[
             If(Bool(Eval('systolic_pressure')),
                ('systolic_pressure', '>', 0),
                ())
-        ])
+        ],
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     diastolic_pressure = fields.Float('Diastlic Pressure',
         domain=[
             If(Bool(Eval('diastolic_pressure')),
                ('diastolic_pressure', '>', 0),
                ())
-        ])
+        ],
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     temperature = fields.Float('Temperature',
         domain=[
             If(Bool(Eval('temperature')),
                ('temperature', '>', 0),
                ())
-        ], help="% Celcius")
+        ],
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'], help="% Celcius")
     heart_rate = fields.Float('Heart rate',
         domain=[
             If(Bool(Eval('heart_rate')),
                ('heart_rate', '>', 0),
                ())
-        ])
+        ],
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     breathing_rate = fields.Float('Breathing rate',
         domain=[
             If(Bool(Eval('breathing_rate')),
                ('breathing_rate', '>', 0),
                ())
-        ])
+        ],
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     oxygen_saturation = fields.Float('Oxygen saturation',
         domain=[
             If(Bool(Eval('oxygen_saturation')),
                ('oxygen_saturation', '>', 0),
                ())
-        ], help="% O2")
+        ],
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'], help="% O2")
     weight = fields.Float('Weight',
         domain=[
             If(Bool(Eval('weight')),
                ('weight', '>', 0),
                ())
-        ], help="Weight in Kg")
+        ],
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'], help="Weight in Kg")
     heigth = fields.Float('Heigth',
         domain=[
             If(Bool(Eval('heigth')),
                ('heigth', '>', 0),
                ())
-        ], help="Heigth in cm")
+        ],
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'], help="Heigth in cm")
     bmi = fields.Function(
         fields.Float('BMI', digits=(16, 2)), 'on_change_with_bmi')
     hip = fields.Float('Hip',
@@ -102,66 +148,219 @@ class PatientEvaluation(ModelSQL, ModelView):
             If(Bool(Eval('hip')),
                ('hip', '>', 0),
                ())
-        ], help="in cm")
+        ],
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'], help="in cm")
     waist = fields.Float('Waist',
         domain=[
             If(Bool(Eval('waist')),
                ('waist', '>', 0),
                ())
-        ], help="in cm")
+        ],
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'], help="in cm")
     whr = fields.Function(
         fields.Float('WHR', digits=(16, 2)), 'on_change_with_whr')
-    malnutrition = fields.Boolean('Malnutrition')
-    dehydration = fields.Boolean('Dehydration')
+    malnutrition = fields.Boolean('Malnutrition',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    dehydration = fields.Boolean('Dehydration',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     # SYSTEMS - ORGANS
-    so_respiratory = fields.Text('Respiratory')
-    so_cardiovascular = fields.Text('Cardiovascular')
-    so_digestive = fields.Text('Digestive')
-    so_nervous = fields.Text('Nervous')
-    so_sense = fields.Text('Sense')
-    so_endocrine = fields.Text('Endocrine')
-    so_skeletal_muscle = fields.Text('Skeletal - muscle')
-    so_geninourinary = fields.Text('Genitourinary')
-    so_hemolymphatic = fields.Text('Hemolymphatic')
+    so_respiratory = fields.Text('Respiratory',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    so_cardiovascular = fields.Text('Cardiovascular',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    so_digestive = fields.Text('Digestive',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    so_nervous = fields.Text('Nervous',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    so_sense = fields.Text('Sense',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    so_endocrine = fields.Text('Endocrine',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    so_skeletal_muscle = fields.Text('Skeletal - muscle',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    so_geninourinary = fields.Text('Genitourinary',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    so_hemolymphatic = fields.Text('Hemolymphatic',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     # REGIONAL PHYSICAL EXAMINATION
-    rpe_skin_scars = fields.Boolean('Scars')
-    rpe_skin_tatoo = fields.Boolean('Tatoo')
-    rpe_skin_facer = fields.Boolean('Skin Facer')
-    rpe_eyes_conjunctive = fields.Boolean('Conjunctive')
-    rpe_eyes_pupils = fields.Boolean('Pupils')
-    rpe_eyes_motility = fields.Boolean('Motility')
-    rpe_ear_extern = fields.Boolean('Extern')
-    rpe_ear_pavilion = fields.Boolean('Pavilion')
-    rpe_ear_eardrums = fields.Boolean('Eardrums')
-    rpe_oropharynx_lips = fields.Boolean('Lips')
-    rpe_oropharynx_tongue = fields.Boolean('Tongue')
-    rpe_oropharynx_pharynx = fields.Boolean('Pharynx')
-    rpe_oropharynx_tonsils = fields.Boolean('Tonsils')
-    rpe_oropharynx_teeth = fields.Boolean('Teeth')
-    rpe_nose_partition = fields.Boolean('Partition')
-    rpe_nose_turbinates = fields.Boolean('Turbinates')
-    rpe_nose_mocous = fields.Boolean('Mocous')
-    rpe_nose_paranasal_sinuses = fields.Boolean('Paranasal sinuses')
-    rpe_neck_thyroid = fields.Boolean('Tyroid masses')
-    rpe_neck_mobility = fields.Boolean('Mobility')
-    rpe_chest_mammary_glands = fields.Boolean('Mammary glands')
-    rpe_chest_heart = fields.Boolean('Heart')
-    rpe_chest_lungs = fields.Boolean('Lungs')
-    rpe_chest_ribs = fields.Boolean('Ribs')
-    rpe_abdomen_viscera = fields.Boolean('Viscera')
-    rpe_abdomen_adbominal_wall = fields.Boolean('Abdominal wall')
-    rpe_column_flexibility = fields.Boolean('Flexibility')
-    rpe_column_deviation = fields.Boolean('Deviation')
-    rpe_column_pain = fields.Boolean('Pain')
-    rpe_pelvis_pelvis = fields.Boolean('Pelvis')
-    rpe_pelvis_genitals = fields.Boolean('Genitals')
-    rpe_limbs_vascular = fields.Boolean('Vascular')
-    rpe_limbs_superior = fields.Boolean('Superior limbs')
-    rpe_limbs_inferior = fields.Boolean('Inferior limbs')
-    rpe_neuro_strength = fields.Boolean('Strength')
-    rpe_neuro_sensivity = fields.Boolean('Sensivity')
-    rpe_neuro_march = fields.Boolean('March')
-    rpe_notes = fields.Text('Notes')
+    rpe_skin_scars = fields.Boolean('Scars',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_skin_tatoo = fields.Boolean('Tatoo',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_skin_facer = fields.Boolean('Skin Facer',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_eyes_conjunctive = fields.Boolean('Conjunctive',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_eyes_pupils = fields.Boolean('Pupils',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_eyes_motility = fields.Boolean('Motility',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_ear_extern = fields.Boolean('Extern',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_ear_pavilion = fields.Boolean('Pavilion',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_ear_eardrums = fields.Boolean('Eardrums',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_oropharynx_lips = fields.Boolean('Lips',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_oropharynx_tongue = fields.Boolean('Tongue',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_oropharynx_pharynx = fields.Boolean('Pharynx',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_oropharynx_tonsils = fields.Boolean('Tonsils',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_oropharynx_teeth = fields.Boolean('Teeth',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_nose_partition = fields.Boolean('Partition',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_nose_turbinates = fields.Boolean('Turbinates',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_nose_mocous = fields.Boolean('Mocous',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_nose_paranasal_sinuses = fields.Boolean('Paranasal sinuses',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_neck_thyroid = fields.Boolean('Tyroid masses',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_neck_mobility = fields.Boolean('Mobility',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_chest_mammary_glands = fields.Boolean('Mammary glands',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_chest_heart = fields.Boolean('Heart',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_chest_lungs = fields.Boolean('Lungs',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_chest_ribs = fields.Boolean('Ribs',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_abdomen_viscera = fields.Boolean('Viscera',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_abdomen_adbominal_wall = fields.Boolean('Abdominal wall',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_column_flexibility = fields.Boolean('Flexibility',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_column_deviation = fields.Boolean('Deviation',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_column_pain = fields.Boolean('Pain',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_pelvis_pelvis = fields.Boolean('Pelvis',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_pelvis_genitals = fields.Boolean('Genitals',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_limbs_vascular = fields.Boolean('Vascular',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_limbs_superior = fields.Boolean('Superior limbs',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_limbs_inferior = fields.Boolean('Inferior limbs',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_neuro_strength = fields.Boolean('Strength',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_neuro_sensivity = fields.Boolean('Sensivity',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_neuro_march = fields.Boolean('March',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    rpe_notes = fields.Text('Notes',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     # MENTAL STATUS
     ms_eye = fields.Selection(
         [
@@ -170,7 +369,10 @@ class PatientEvaluation(ModelSQL, ModelView):
             ('2', 'Eye opening in response to pain stimulus'),
             ('3', 'Eye opening to speech'),
             ('4', 'Eyes opening spontaneously'),
-        ], 'Eye response', sort=False)
+        ], 'Eye response', sort=False,
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     ms_verbal = fields.Selection(
         [
             (None, None),
@@ -179,7 +381,10 @@ class PatientEvaluation(ModelSQL, ModelView):
             ('3', 'Inappropriate words'),
             ('4', 'Confused'),
             ('5', 'Oriented'),
-        ], 'Verbal response', sort=False)
+        ], 'Verbal response', sort=False,
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     ms_motor = fields.Selection(
         [
             (None, None),
@@ -189,15 +394,33 @@ class PatientEvaluation(ModelSQL, ModelView):
             ('4', 'Withdrawal from pain'),
             ('5', 'Localizes to pain'),
             ('6', 'Obeys commands'),
-        ], 'Motor response', sort=False)
+        ], 'Motor response', sort=False,
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     ms_glasgow_score = fields.Function(fields.Integer('Glasgow score',
         help="Glasgow Score: < 9 severe, 9 -12 moderate, > 13 minor"),
         'on_change_with_ms_glasgow_score')
-    ms_violent_behavior = fields.Boolean('Violent behavior')
-    ms_orientation = fields.Boolean('Orientation')
-    ms_percetption_reality = fields.Boolean('Perception reality')
-    ms_abstraction = fields.Boolean('Abstraction')
-    ms_calc_skill = fields.Boolean('Calculation skills')
+    ms_violent_behavior = fields.Boolean('Violent behavior',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    ms_orientation = fields.Boolean('Orientation',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    ms_percetption_reality = fields.Boolean('Perception reality',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    ms_abstraction = fields.Boolean('Abstraction',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    ms_calc_skill = fields.Boolean('Calculation skills',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     ms_mood = fields.Selection(
         [
             ('normal', 'Normal'),
@@ -207,22 +430,63 @@ class PatientEvaluation(ModelSQL, ModelView):
             ('disgusted', 'Disgusted'),
             ('euphoric', 'Euphoric'),
             ('apathetic', 'Apathetic'),
-        ], 'Mood', sort=False)
-    ms_memory = fields.Boolean('Memory')
-    ms_discernment = fields.Boolean('Discernment')
-    ms_vocabulary = fields.Boolean('Vocabulary')
-    ms_object_recognition = fields.Boolean('Object recognition')
-    ms_notes = fields.Text('Notes')
+        ], 'Mood', sort=False,
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    ms_memory = fields.Boolean('Memory',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    ms_discernment = fields.Boolean('Discernment',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    ms_vocabulary = fields.Boolean('Vocabulary',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    ms_object_recognition = fields.Boolean('Object recognition',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
+    ms_notes = fields.Text('Notes',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        }, depends=['state'])
     # REQUESTED TESTS
     requested_tests = fields.One2Many(
         'galeno.patient.evaluation.test', 'evaluation', 'Tests',
         states={
-            'readonly': ~Eval('patient'),
+            'readonly': ~Bool(Eval('patient')) | ~Eval('state').in_(
+                ['initial']),
         })
+
+    @classmethod
+    def __setup__(cls):
+        super(PatientEvaluation, cls).__setup__()
+        cls._order = [
+            ('start_date', 'DESC'),
+            ('id', 'DESC'),
+            ]
+        cls._transitions |= set((
+                ('initial', 'finish'),
+                ('initial', 'cancel'),
+                ))
+        cls._buttons.update({
+                'cancel': {
+                    'invisible': ~Eval('state').in_(['initial']),
+                    'depends': ['state'],
+                    },
+                'finish': {
+                    'invisible': ~Eval('state').in_(['initial']),
+                    'depends': ['state'],
+                    },
+                })
 
     @staticmethod
     def default_state():
-        return 'progress'
+        return 'initial'
 
     @staticmethod
     def default_start_date():
@@ -279,6 +543,22 @@ class PatientEvaluation(ModelSQL, ModelView):
             ('patient',) + tuple(clause[1:]),
             ]
         return domain
+
+    @classmethod
+    @ModelView.button
+    @Workflow.transition('finish')
+    def finish(cls, evaluations):
+        for evaluation in evaluations:
+            evaluation.end_date = datetime.now()
+        cls.save(evaluations)
+
+    @classmethod
+    @ModelView.button
+    @Workflow.transition('cancel')
+    def cancel(cls, evaluations):
+        for evaluation in evaluations:
+            evaluation.end_date = datetime.now()
+        cls.save(evaluations)
 
     @classmethod
     def create(cls, vlist):

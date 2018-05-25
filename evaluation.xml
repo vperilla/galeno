@@ -77,6 +77,38 @@
             <field name="view" ref="patient_evaluation_view_calendar"/>
             <field name="act_window" ref="act_patient_evaluation_form"/>
         </record>
+        <record model="ir.action.act_window.domain"
+            id="act_patient_evaluation_form_domain_initial">
+            <field name="name">Initiated</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" eval="[('state', '=', 'initial')]" pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_patient_evaluation_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_patient_evaluation_form_domain_finish">
+            <field name="name">Finished</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" eval="[('state', '=', 'finish')]" pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_patient_evaluation_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_patient_evaluation_form_domain_cancel">
+            <field name="name">Canceled</field>
+            <field name="sequence" eval="10"/>
+            <field name="domain" eval="[('state', '=', 'cancel')]" pyson="1"/>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_patient_evaluation_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
+            id="act_patient_evaluation_form_domain_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="9999"/>
+            <field name="domain"></field>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_patient_evaluation_form"/>
+        </record>
         <menuitem parent="menu_galeno" action="act_patient_evaluation_form"
             id="menu_patient_evaluation_form" sequence="20" icon="galeno-evaluation"/>
         <record model="ir.model.access" id="access_evaluation">
@@ -95,6 +127,28 @@
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
+        </record>
+        <record model="ir.model.button" id="evaluation_cancel_button">
+            <field name="name">cancel</field>
+            <field name="string">Cancel</field>
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="evaluation_cancel_button_group_galeno">
+            <field name="button" ref="evaluation_cancel_button"/>
+            <field name="group" ref="group_galeno"/>
+        </record>
+        <record model="ir.model.button" id="evaluation_finish_button">
+            <field name="name">finish</field>
+            <field name="string">Finish</field>
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="evaluation_finish_button_group_galeno">
+            <field name="button" ref="evaluation_finish_button"/>
+            <field name="group" ref="group_galeno"/>
         </record>
 
 
