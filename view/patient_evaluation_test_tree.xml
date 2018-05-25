@@ -2,7 +2,6 @@
 <tree>
     <field name="code"/>
     <field name="evaluation"/>
-    <field name="patient"/>
     <field name="test"/>
     <field name="reason"/>
     <field name="with_result"/>

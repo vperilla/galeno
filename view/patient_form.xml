@@ -10,11 +10,8 @@
                         widget="image"/>
                 </group>
                 <group id="patient_main_2" colspan="2" col="2">
-                    <label name="algo"/>
-                    <field name="algo"/>
                     <label name="company"/>
                     <field name="company"/>
-                    <field name="name" colspan="4"/>
                     <label name="fname"/>
                     <field name="fname"/>
                     <label name="lname"/>

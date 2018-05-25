@@ -14,7 +14,6 @@ class Patient(ModelSQL, ModelView):
     'Patient'
     __name__ = 'galeno.patient'
     # MAIN INFORMATION
-    algo = fields.Char('Algo')
     company = fields.Many2One('company.company', 'Company', required=True,
         states={
             'invisible': True,
@@ -24,11 +23,6 @@ class Patient(ModelSQL, ModelView):
         help="Physical folder number")
     fname = fields.Char('Names', required=True)
     lname = fields.Char('Surnames', required=True)
-    name = fields.Char('Complete name', required=True,
-        states={
-            'invisible': True,
-            'readonly': True,
-        })
     identifier_type = fields.Selection(
         'get_identifier_type', 'Id. Type', required=True, sort=False)
     identifier = fields.Char('Identifier', required=True,
@@ -311,6 +305,8 @@ class Patient(ModelSQL, ModelView):
             ('identifier_uniq', Unique(t, t.company, t.identifier),
              'Identifier must be unique'),
         ]
+        cls._order.insert(0, ('lname', 'ASC'))
+        cls._order.insert(1, ('fname', 'ASC'))
 
     @staticmethod
     def default_company():
@@ -373,18 +369,6 @@ class Patient(ModelSQL, ModelView):
     @staticmethod
     def default_actually_pregnant():
         return False
-
-    @fields.depends('lname', 'fname', 'name')
-    def on_change_fname(self):
-        lname = self.lname and self.lname or ''
-        fname = self.fname and self.fname or ''
-        self.name = '%s %s' % (lname, fname)
-
-    @fields.depends('lname', 'fname', 'name')
-    def on_change_lname(self):
-        lname = self.lname and self.lname or ''
-        fname = self.fname and self.fname or ''
-        self.name = '%s %s' % (lname, fname)
 
     @classmethod
     def get_photo(cls, patients, names):
@@ -475,16 +459,18 @@ class Patient(ModelSQL, ModelView):
         if not self.disability:
             self.disabilities = None
 
+    def get_rec_name(self, name):
+        return "%s %s" % (self.fname, self.lname)
+
     @classmethod
     def search_rec_name(cls, name, clause):
-        _, operator, value = clause
-        if operator.startswith('!') or operator.startswith('not '):
+        if clause[1].startswith('!') or clause[1].startswith('not '):
             bool_op = 'AND'
         else:
             bool_op = 'OR'
         domain = [bool_op,
-            ('name', operator, value),
-            ('identifier', operator, value),
+            ('fname',) + tuple(clause[1:]),
+            ('lname',) + tuple(clause[1:]),
             ]
         return domain
 
@@ -532,8 +518,7 @@ class Patient(ModelSQL, ModelView):
         config = Config(1)
         for values in vlist:
             if values.get('code') is None:
-                values['code'] = Sequence.get_id(
-                        config.patient_sequence.id)
+                values['code'] = Sequence.get_id(config.patient_sequence.id)
         return super(Patient, cls).create(vlist)
 
 

@@ -6,8 +6,6 @@
             <field name="evaluation"/>
             <label name="code"/>
             <field name="code"/>
-            <label name="patient"/>
-            <field name="patient"/>
             <label name="patient_gender"/>
             <field name="patient_gender"/>
         </group>

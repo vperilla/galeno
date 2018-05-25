@@ -5,7 +5,6 @@ from trytond.model import ModelView, ModelSQL, fields
 from trytond.pyson import Bool, Eval, If
 from trytond.transaction import Transaction
 from trytond.pool import Pool
-from trytond.tools import reduce_ids, grouped_slice
 
 import galeno_tools
 
@@ -266,6 +265,21 @@ class PatientEvaluation(ModelSQL, ModelView):
             return int(self.ms_eye) + int(self.ms_verbal) + int(self.ms_motor)
         return None
 
+    def get_rec_name(self, name):
+        return "%s - %s" % (self.code, self.patient.rec_name)
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        if clause[1].startswith('!') or clause[1].startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+        domain = [bool_op,
+            ('code',) + tuple(clause[1:]),
+            ('patient',) + tuple(clause[1:]),
+            ]
+        return domain
+
     @classmethod
     def create(cls, vlist):
         pool = Pool()
@@ -289,8 +303,6 @@ class PatientEvaluationTest(ModelSQL, ModelView):
     code = fields.Char('Code', readonly=True)
     evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
         ondelete='CASCADE', required=True)
-    patient = fields.Function(fields.Many2One('galeno.patient', 'Patient'),
-        'get_patient', searcher='search_patient')
     patient_gender = fields.Function(
         fields.Char('Patient gender',
             states={
@@ -319,38 +331,26 @@ class PatientEvaluationTest(ModelSQL, ModelView):
     file_id = fields.Char('File ID')
     filename = fields.Char('Filename')
 
-    @classmethod
-    def get_patient(cls, evaluation_tests, names):
-        pool = Pool()
-        cursor = Transaction().connection.cursor()
-        Evaluation = pool.get('galeno.patient.evaluation')
-        evaluation = Evaluation.__table__()
-        eval_test = cls.__table__()
-        patients = {}
-        eval_ids = [e.id for e in evaluation_tests]
-        for sub_ids in grouped_slice(eval_ids):
-            where = reduce_ids(eval_test.id, sub_ids)
-            query = eval_test.join(evaluation,
-                condition=evaluation.id == eval_test.evaluation
-            ).select(
-                eval_test.id,
-                evaluation.patient,
-                where=where)
-            cursor.execute(*query)
-            patients.update(cursor.fetchall())
-        return {
-            'patient': patients
-        }
-
-    @classmethod
-    def search_patient(cls, name, clause):
-        return [('evaluation.' + clause[0],) + tuple(clause[1:])]
-
     @fields.depends('evaluation')
     def on_change_with_patient_gender(self, name=None):
         if self.evaluation:
             return self.evaluation.patient.gender
         return None
+
+    def get_rec_name(self, name):
+        return "%s - %s" % (self.code, self.evaluation.patient.rec_name)
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        if clause[1].startswith('!') or clause[1].startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+        domain = [bool_op,
+            ('code',) + tuple(clause[1:]),
+            ('evaluation',) + tuple(clause[1:]),
+            ]
+        return domain
 
     @classmethod
     def create(cls, vlist):

@@ -93,9 +93,12 @@
                 <field name="dehydration"/>
             </group>
         </page>
-        <page id="evaluation_regional_physical_exam" string="Regional Physical Exam"
+        <page id="rpe_exam" string="Regional Physical Exam"
             icon="galeno-rpe">
+            <separator name="rpe_notes" colspan="4"/>
+            <field name="rpe_notes" colspan="4"/>
             <group id="rpe_main_1" colspan="4" col="12">
+                <separator id="help_rpe" string="Mark any of these examination items in case of finding some type of patholoty" colspan="12"/>
                 <group id="rpe_oropharynx" string="Oropharynx" colspan="2" col="4" expandable="1">
                     <label name="rpe_oropharynx_lips"/>
                     <field name="rpe_oropharynx_lips"/>
@@ -197,8 +200,6 @@
                     <field name="rpe_pelvis_genitals"/>
                 </group>
             </group>
-            <separator name="rpe_notes" colspan="4"/>
-            <field name="rpe_notes" colspan="4"/>
         </page>
         <page id="mental_status" string="Mental status"
             icon="galeno-mental-status">
