@@ -2,9 +2,11 @@
 # this repository contains the full copyright notices and license terms.
 
 from trytond.pool import Pool
-from . import user
 from . import country
 from . import occupation
+from . import speciality
+from . import professional
+from . import user
 from . import ethnic_group
 from . import disease
 from . import procedure
@@ -23,9 +25,11 @@ __all__ = ['register']
 
 def register():
     Pool.register(
-        user.User,
         country.Subdivision,
         occupation.Occupation,
+        speciality.Speciality,
+        professional.Professional,
+        user.User,
         ethnic_group.EthnicGroup,
         disease.DiseaseCategory,
         disease.DiseaseGroup,

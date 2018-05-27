@@ -4,6 +4,7 @@
            position="after">
         <label name="country"/>
         <field name="country"/>
-        <newline/>
+        <label name="professional"/>
+        <field name="professional"/>
     </xpath>
 </data>

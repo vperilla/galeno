@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<form>
+    <group id="professional_header">
+        <label name="active"/>
+        <field name="active"/>
+        <newline/>
+        <label name="name"/>
+        <field name="name"/>
+        <label name="prefix"/>
+        <field name="prefix"/>
+        <label name="speciality"/>
+        <field name="speciality"/>
+        <label name="medical_identifier"/>
+        <field name="medical_identifier"/>
+    </group>
+</form>

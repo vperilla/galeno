@@ -1,10 +1,10 @@
-from trytond.model import ModelView, ModelSQL, fields
+from trytond.model import ModelView, ModelSQL, fields, DeactivableMixin
 from trytond.transaction import Transaction
 
 __all__ = ['Medicament']
 
 
-class Medicament(ModelSQL, ModelView):
+class Medicament(DeactivableMixin, ModelSQL, ModelView):
     'Medicament'
     __name__ = 'galeno.medicament'
 

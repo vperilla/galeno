@@ -7,7 +7,7 @@
             <field name="name">configuration_form</field>
         </record>
         <record model="ir.action.act_window" id="act_galeno_configuration_form">
-            <field name="name">Galeno Configuration</field>
+            <field name="name">Configuration</field>
             <field name="res_model">galeno.configuration</field>
         </record>
         <record model="ir.action.act_window.view"

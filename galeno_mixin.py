@@ -16,3 +16,4 @@ class BasicMixin(object):
             ('name_uniq', Unique(t, t.name), 'Name must be unique !'),
             ('code_uniq', Unique(t, t.code), 'CODE must be unique !'),
         ]
+        cls._order.insert(0, ('name', 'ASC'))

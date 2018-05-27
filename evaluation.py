@@ -17,6 +17,14 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
     __name__ = 'galeno.patient.evaluation'
     _rec_name = 'code'
 
+    professional = fields.Many2One('galeno.professional', 'Professional',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+        },
+        domain=[
+            ('id', If(Eval('context', {}).contains('professional'), '=', '!='),
+                Eval('context', {}).get('professional', -1)),
+        ], depends=['state'], required=True, select=True)
     code = fields.Char('Code', readonly=True)
     start_date = fields.DateTime('Start Date', required=True,
         states={
@@ -27,7 +35,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         'galeno.patient', 'Patient', required=True, ondelete='RESTRICT',
         states={
             'readonly': ~Eval('state').in_(['initial']),
-        }, depends=['state'])
+        }, depends=['state'], select=True)
     patient_gender = fields.Function(
         fields.Selection([
             ('male', 'Male'),
@@ -495,6 +503,10 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
     @staticmethod
     def default_ms_mood():
         return 'normal'
+
+    @staticmethod
+    def default_professional():
+        return Transaction().context.get('professional')
 
     @fields.depends('patient')
     def on_change_with_patient_gender(self, name=None):
