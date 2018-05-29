@@ -1,9 +1,11 @@
 from trytond.model import ModelView, ModelSQL, fields, tree, Unique
 
+from .galeno_mixin import CoreMixin
+
 __all__ = ['DiseaseCategory', 'DiseaseGroup', 'Disease', 'DiseaseMembers']
 
 
-class DiseaseCategory(tree(separator=' / '), ModelSQL, ModelView):
+class DiseaseCategory(CoreMixin, tree(separator=' / '), ModelSQL, ModelView):
     'Disease Categories'
     __name__ = 'galeno.disease.category'
 
@@ -19,7 +21,7 @@ class DiseaseCategory(tree(separator=' / '), ModelSQL, ModelView):
         cls._order.insert(0, ('name', 'ASC'))
 
 
-class DiseaseGroup(ModelSQL, ModelView):
+class DiseaseGroup(CoreMixin, ModelSQL, ModelView):
     'Disease Group'
     __name__ = 'galeno.disease.group'
 
@@ -40,7 +42,7 @@ class DiseaseGroup(ModelSQL, ModelView):
         ]
 
 
-class Disease(ModelSQL, ModelView):
+class Disease(CoreMixin, ModelSQL, ModelView):
     'Disease ICD10'
     __name__ = 'galeno.disease'
 

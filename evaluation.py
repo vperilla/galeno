@@ -15,7 +15,6 @@ __all__ = ['PatientEvaluation', 'PatientEvaluationTest',
 class PatientEvaluation(Workflow, ModelSQL, ModelView):
     'Patient Evaluation'
     __name__ = 'galeno.patient.evaluation'
-    _rec_name = 'code'
 
     professional = fields.Many2One('galeno.professional', 'Professional',
         states={
@@ -495,6 +494,10 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
     @staticmethod
     def default_state():
         return 'initial'
+
+    @staticmethod
+    def default_reason():
+        return 'disease'
 
     @staticmethod
     def default_start_date():

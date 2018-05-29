@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="patient"/>
+    <field name="professional" tree_invisible="1"/>
+    <field name="state"/>
+    <field name="date"/>
+    <field name="evaluation"/>
+</tree>

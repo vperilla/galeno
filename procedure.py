@@ -1,9 +1,11 @@
 from trytond.model import ModelView, ModelSQL, fields, Unique
 
+from .galeno_mixin import CoreMixin
+
 __all__ = ['Procedure']
 
 
-class Procedure(ModelSQL, ModelView):
+class Procedure(CoreMixin, ModelSQL, ModelView):
     'Procedure'
     __name__ = 'galeno.procedure'
 

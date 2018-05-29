@@ -1,7 +1,8 @@
-from trytond.model import ModelView, ModelSQL, fields, DeactivableMixin
+from trytond.model import (ModelView, ModelSQL, fields, DeactivableMixin,
+    Unique)
 from trytond.transaction import Transaction
 
-__all__ = ['Medicament']
+__all__ = ['Medicament', 'MedicamentDoseUnits', 'MedicamentFrequency']
 
 
 class Medicament(DeactivableMixin, ModelSQL, ModelView):
@@ -50,3 +51,42 @@ class Medicament(DeactivableMixin, ModelSQL, ModelView):
             ('composition', operator, value),
             ]
         return domain
+
+
+class MedicamentDoseUnits(ModelSQL, ModelView):
+    'Dose Unit'
+    __name__ = 'galeno.medicament.dose.unit'
+
+    name = fields.Char('Unit', required=True, select=True, translate=True)
+    description = fields.Char('Description', translate=True)
+
+    @classmethod
+    def __setup__(cls):
+        super(MedicamentDoseUnits, cls).__setup__()
+        t = cls.__table__()
+
+        cls._sql_constraints = [
+            ('name_uniq', Unique(t, t.name), 'Name must be unique !'),
+        ]
+
+
+class MedicamentFrequency(ModelSQL, ModelView):
+    'Medicament Frequency'
+    __name__ = 'galeno.medicament.frequency'
+
+    code = fields.Char('Code', required=True)
+    name = fields.Char(
+        'Frequency', required=True, select=True, translate=True,
+        help='Common frequency name')
+    abbreviation = fields.Char(
+        'Abbreviation',
+        help='Dosage abbreviation, such as tid in the US or tds in the UK')
+
+    @classmethod
+    def __setup__(cls):
+        super(MedicamentFrequency, cls).__setup__()
+        t = cls.__table__()
+        cls._sql_constraints = [
+            ('name_uniq', Unique(t, t.name), 'Name must be unique !'),
+            ('code_uniq', Unique(t, t.code), 'Code must be unique !'),
+        ]
