@@ -75,7 +75,7 @@
         </record>
         <menuitem parent="menu_medicament_admin" action="act_medicament_dose_unit_form"
             id="menu_medicament_dose_unit_form" sequence="10"/>
-        <record model="ir.model.access" id="access_medicament">
+        <record model="ir.model.access" id="access_medicament_dose_unit">
             <field name="model" search="[('model', '=', 'galeno.medicament.dose.unit')]"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
@@ -92,18 +92,18 @@
         </record>
 
         <record model="ir.ui.view" id="medicament_frequency_view_form">
-            <field name="model">medicament.frequency</field>
+            <field name="model">galeno.medicament.frequency</field>
             <field name="type">form</field>
             <field name="name">medicament_frequency_form</field>
         </record>
         <record model="ir.ui.view" id="medicament_frequency_view_tree">
-            <field name="model">medicament.frequency</field>
+            <field name="model">galeno.medicament.frequency</field>
             <field name="type">tree</field>
             <field name="name">medicament_frequency_tree</field>
         </record>
         <record model="ir.action.act_window" id="act_medicament_frequency_form">
             <field name="name">Medicament Frequency</field>
-            <field name="res_model">medicament.frequency</field>
+            <field name="res_model">galeno.medicament.frequency</field>
         </record>
         <record model="ir.action.act_window.view"
             id="act_medicament_frequency_form_view1">
@@ -119,15 +119,15 @@
         </record>
         <menuitem parent="menu_medicament_admin" action="act_medicament_frequency_form"
             id="menu_medicament_frequency_form" sequence="10"/>
-        <record model="ir.model.access" id="access_medicament">
-            <field name="model" search="[('model', '=', 'medicament.frequency')]"/>
+        <record model="ir.model.access" id="access_medicament_frequency">
+            <field name="model" search="[('model', '=', 'galeno.medicament.frequency')]"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="False"/>
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
         <record model="ir.model.access" id="access_medicament_frequency_medicament">
-            <field name="model" search="[('model', '=', 'medicament.frequency')]"/>
+            <field name="model" search="[('model', '=', 'galeno.medicament.frequency')]"/>
             <field name="group" ref="group_galeno_admin"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>

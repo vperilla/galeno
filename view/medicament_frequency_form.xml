@@ -6,7 +6,7 @@
         <newline/>
         <label name="name"/>
         <field name="name"/>
-        <field name="abreviation"/>
-        <field name="abreviation"/>
+        <label name="abbreviation"/>
+        <field name="abbreviation"/>
     </group>
 </form>

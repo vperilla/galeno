@@ -12,7 +12,7 @@
             <field name="name">basic_tree</field>
         </record>
         <record model="ir.action.act_window" id="act_speciality_form">
-            <field name="name">Specilities</field>
+            <field name="name">Specialities</field>
             <field name="res_model">galeno.speciality</field>
         </record>
         <record model="ir.action.act_window.view"

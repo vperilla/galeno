@@ -3,7 +3,7 @@ from trytond.pyson import Eval, If
 from trytond.pool import Pool
 from trytond.transaction import Transaction
 
-__all__ = ['PatientPrescription']
+__all__ = ['PatientPrescription', 'PatientPrescriptionLine']
 
 
 class PatientPrescription(Workflow, ModelSQL, ModelView):
@@ -23,6 +23,7 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
         [
             ('draft', 'Draft'),
             ('done', 'Done'),
+            ('cancel', 'Cancel'),
         ], 'State', readonly=True, required=True)
     patient = fields.Many2One(
         'galeno.patient', 'Patient', required=True, ondelete='RESTRICT',
@@ -39,11 +40,33 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['draft']),
         }, depends=['state'])
-    lines = fields.One2Many2('galeno.patient.prescription.line',
+    lines = fields.One2Many('galeno.patient.prescription.line',
         'prescription', 'Prescription',
         states={
             'readonly': ~Eval('state').in_(['draft']),
         }, depends=['state'])
+
+    @classmethod
+    def __setup__(cls):
+        super(PatientPrescription, cls).__setup__()
+        cls._order = [
+            ('date', 'DESC'),
+            ]
+        cls._transitions |= set((
+                ('draft', 'done'),
+                ('draft', 'cancel'),
+                ('done', 'cancel'),
+                ))
+        cls._buttons.update({
+                'cancel': {
+                    'invisible': Eval('state').in_(['cancel']),
+                    'depends': ['state'],
+                    },
+                'done': {
+                    'invisible': ~Eval('state').in_(['draft']),
+                    'depends': ['state'],
+                    },
+                })
 
     @staticmethod
     def default_state():
@@ -51,11 +74,27 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
 
     @staticmethod
     def default_date():
-        return Pool.get('ir.date').today()
+        return Pool().get('ir.date').today()
 
     @staticmethod
     def default_professional():
         return Transaction().context.get('professional')
+
+    @classmethod
+    @ModelView.button
+    @Workflow.transition('done')
+    def done(cls, prescriptions):
+        pool = Pool()
+        Date = pool.get('ir.date')
+        for prescription in prescriptions:
+            prescription.date = Date.today()
+        cls.save(prescriptions)
+
+    @classmethod
+    @ModelView.button
+    @Workflow.transition('cancel')
+    def cancel(cls, prescriptions):
+        pass
 
 
 class PatientPrescriptionLine(ModelSQL, ModelView):
@@ -73,3 +112,12 @@ class PatientPrescriptionLine(ModelSQL, ModelView):
         'galeno.medicament.dose.unit', 'Dose Unit', required=True)
     frequency = fields.Many2One(
         'galeno.medicament.frequency', 'Frequency', required=True)
+
+    @fields.depends('medicament')
+    def on_change_medicament(self):
+        if self.medicament:
+            self.description = self.medicament.name
+            self.active_component = self.medicament.composition
+        else:
+            self.description = None
+            self.active_component = None

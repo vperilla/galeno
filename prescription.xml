@@ -41,7 +41,7 @@
         </record>
         <menuitem parent="menu_galeno" action="act_patient_prescription_form"
             id="menu_patient_prescription_form" sequence="20" icon="galeno-evaluation"/>
-        <record model="ir.model.access" id="access_evaluation">
+        <record model="ir.model.access" id="access_prescription">
             <field name="model"
                 search="[('model', '=', 'galeno.patient.prescription')]"/>
             <field name="perm_read" eval="False"/>
@@ -49,7 +49,7 @@
             <field name="perm_create" eval="False"/>
             <field name="perm_delete" eval="False"/>
         </record>
-        <record model="ir.model.access" id="access_evaluation_galeno">
+        <record model="ir.model.access" id="access_prescription_galeno">
             <field name="model"
                 search="[('model', '=', 'galeno.patient.prescription')]"/>
             <field name="group" ref="group_galeno"/>
@@ -65,8 +65,19 @@
                 search="[('model', '=', 'galeno.patient.prescription')]"/>
         </record>
         <record model="ir.model.button-res.group"
-            id="evaluation_finish_button_group_galeno">
+            id="prescription_done_button_group_galeno">
             <field name="button" ref="prescription_done_button"/>
+            <field name="group" ref="group_galeno"/>
+        </record>
+        <record model="ir.model.button" id="prescription_cancel_button">
+            <field name="name">cancel</field>
+            <field name="string">Cancel</field>
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.prescription')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="prescription_cancel_button_group_galeno">
+            <field name="button" ref="prescription_cancel_button"/>
             <field name="group" ref="group_galeno"/>
         </record>
 

@@ -2,7 +2,7 @@ from trytond.model import (ModelView, ModelSQL, fields, DeactivableMixin,
     Unique)
 from trytond.transaction import Transaction
 
-__all__ = ['Medicament', 'MedicamentDoseUnits', 'MedicamentFrequency']
+__all__ = ['Medicament', 'MedicamentDoseUnit', 'MedicamentFrequency']
 
 
 class Medicament(DeactivableMixin, ModelSQL, ModelView):
@@ -53,7 +53,7 @@ class Medicament(DeactivableMixin, ModelSQL, ModelView):
         return domain
 
 
-class MedicamentDoseUnits(ModelSQL, ModelView):
+class MedicamentDoseUnit(ModelSQL, ModelView):
     'Dose Unit'
     __name__ = 'galeno.medicament.dose.unit'
 
@@ -62,7 +62,7 @@ class MedicamentDoseUnits(ModelSQL, ModelView):
 
     @classmethod
     def __setup__(cls):
-        super(MedicamentDoseUnits, cls).__setup__()
+        super(MedicamentDoseUnit, cls).__setup__()
         t = cls.__table__()
 
         cls._sql_constraints = [
@@ -90,3 +90,18 @@ class MedicamentFrequency(ModelSQL, ModelView):
             ('name_uniq', Unique(t, t.name), 'Name must be unique !'),
             ('code_uniq', Unique(t, t.code), 'Code must be unique !'),
         ]
+
+    def get_rec_name(self, name):
+        return "%s - %s" % (self.abbreviation, self.name)
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        if clause[1].startswith('!') or clause[1].startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+        domain = [bool_op,
+            ('name',) + tuple(clause[1:]),
+            ('abbreviation',) + tuple(clause[1:]),
+            ]
+        return domain
