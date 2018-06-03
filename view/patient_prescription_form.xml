@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <form>
     <group id="patient_prescription_header" colspan="4">
-        <label name="professional"/>
-        <field name="professional"/>
+        <label name="professional" invisible="1"/>
+        <field name="professional" invisible="1"/>
         <newline/>
         <label name="patient"/>
         <field name="patient"/>
@@ -15,14 +15,14 @@
         <button name="cancel" icon="tryton-cancel"/>
         <button name="done" icon="tryton-ok"/>
     </group>
-    <group id="summary_prescription" colspan="4" col="4">
-        <separator name="notes" colspan="4"/>
-        <field name="notes" colspan="4"/>
-    </group>
     <notebook>
         <page id="prescription_lines" string="Prescription detail">
             <group id="prescription_lines" colspan="4" col="4">
                 <field name="lines" colspan="4"/>
+            </group>
+            <group id="summary_prescription" colspan="4" col="4">
+                <separator name="notes" colspan="4"/>
+                <field name="notes" colspan="4"/>
             </group>
         </page>
     </notebook>

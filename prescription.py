@@ -1,6 +1,7 @@
+from datetime import datetime
+
 from trytond.model import Workflow, ModelView, ModelSQL, fields
 from trytond.pyson import Eval, If
-from trytond.pool import Pool
 from trytond.transaction import Transaction
 
 __all__ = ['PatientPrescription', 'PatientPrescriptionLine']
@@ -32,7 +33,7 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
         }, depends=['state'], select=True)
     evaluation = fields.Many2One(
         'galeno.patient.evaluation', 'Evaluation', readonly=True)
-    date = fields.Date('Date', required=True,
+    date = fields.DateTime('Date', required=True,
         states={
             'readonly': ~Eval('state').in_(['draft']),
         }, depends=['state'])
@@ -74,7 +75,7 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
 
     @staticmethod
     def default_date():
-        return Pool().get('ir.date').today()
+        return datetime.now()
 
     @staticmethod
     def default_professional():
@@ -84,10 +85,8 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
     @ModelView.button
     @Workflow.transition('done')
     def done(cls, prescriptions):
-        pool = Pool()
-        Date = pool.get('ir.date')
         for prescription in prescriptions:
-            prescription.date = Date.today()
+            prescription.date = datetime.now()
         cls.save(prescriptions)
 
     @classmethod
@@ -103,21 +102,53 @@ class PatientPrescriptionLine(ModelSQL, ModelView):
 
     prescription = fields.Many2One(
         'galeno.patient.prescription', 'Prescription', required=True)
-    medicament = fields.Many2One('galeno.medicament', 'Medicament')
-    description = fields.Char('Description', required=True)
-    active_component = fields.Char('Active Commponent', required=True)
-    quantity = fields.Numeric('Quantity', digits=(16, 2))
-    dose = fields.Numeric('Dose', digits=(16, 2))
+    prescription_state = fields.Function(
+        fields.Selection([
+            ('draft', 'Draft'),
+            ('done', 'Done'),
+            ('cancel', 'Cancel'),
+        ], 'Prescription State', states={'invisible': True}),
+        'on_change_with_prescription_state')
+    medicament = fields.Many2One('galeno.medicament', 'Medicament',
+        states={
+            'readonly': ~Eval('prescription_state').in_(['draft']),
+        }, depends=['prescription_state'])
+    active_component = fields.Char('Active Commponent', required=True,
+        states={
+            'readonly': ~Eval('prescription_state').in_(['draft']),
+        }, depends=['prescription_state'])
+    quantity = fields.Numeric('Quantity', digits=(16, 2),
+        states={
+            'readonly': ~Eval('prescription_state').in_(['draft']),
+        }, depends=['prescription_state'])
+    dose = fields.Numeric('Dose', digits=(16, 2),
+        states={
+            'readonly': ~Eval('prescription_state').in_(['draft']),
+        }, depends=['prescription_state'])
     dose_unit = fields.Many2One(
-        'galeno.medicament.dose.unit', 'Dose Unit', required=True)
+        'galeno.medicament.dose.unit', 'Dose Unit', required=True,
+        states={
+            'readonly': ~Eval('prescription_state').in_(['draft']),
+        }, depends=['prescription_state'])
     frequency = fields.Many2One(
-        'galeno.medicament.frequency', 'Frequency', required=True)
+        'galeno.medicament.frequency', 'Frequency', required=True,
+        states={
+            'readonly': ~Eval('prescription_state').in_(['draft']),
+        }, depends=['prescription_state'])
+    duration = fields.Char('Duration',
+        states={
+            'readonly': ~Eval('prescription_state').in_(['draft']),
+        }, depends=['prescription_state'])
 
     @fields.depends('medicament')
     def on_change_medicament(self):
         if self.medicament:
-            self.description = self.medicament.name
             self.active_component = self.medicament.composition
         else:
-            self.description = None
             self.active_component = None
+
+    @fields.depends('prescription', '_parent_prescription.state')
+    def on_change_with_prescription_state(self, name=None):
+        if self.prescription:
+            return self.prescription.state
+        return None

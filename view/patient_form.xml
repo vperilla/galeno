@@ -70,10 +70,6 @@
                 <field name="laterality"/>
                 <label name="ethnic_group"/>
                 <field name="ethnic_group"/>
-                <newline/>
-                <label name="disability"/>
-                <field name="disability"/>
-                <newline/>
                 <field name="disabilities" colspan="8" mode="form,tree"
                     view_ids="galeno.patient_disability_view_form,galeno.patient_disability_view_tree"/>
             </group>

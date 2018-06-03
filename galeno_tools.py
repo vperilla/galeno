@@ -107,7 +107,8 @@ def create_thumbnail(data, size=(250, 250)):
     image_orientation = None
     if hasattr(image, '_getexif'):
         image_exif = image._getexif()
-        image_orientation = image_exif.get(274)
+        if image_exif:
+            image_orientation = image_exif.get(274)
 
     # Rotate depending on orientation.
     if image_orientation:

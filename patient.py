@@ -1,8 +1,10 @@
+from collections import defaultdict
+
 from trytond.model import ModelView, ModelSQL, fields, Unique
 from trytond.pyson import Bool, Eval, If
 from trytond.transaction import Transaction
 from trytond.pool import Pool
-import trytond.tools as tools
+from trytond.tools import grouped_slice, reduce_ids, file_open
 
 import galeno_tools
 
@@ -88,12 +90,10 @@ class Patient(ModelSQL, ModelView):
     ], 'Education level', sort=False)
     occupation = fields.Many2One('galeno.occupation', 'Occupation')
     ethnic_group = fields.Many2One('galeno.ethnic.group', 'Ethnic Group')
-    disability = fields.Boolean('Disability')
+    disability = fields.Function(fields.Boolean('Disability'),
+        'get_disability', searcher='search_disability')
     disabilities = fields.One2Many(
         'galeno.patient.disability', 'patient', 'Disabilities',
-        states={
-            'invisible': ~Eval('disability')
-        },
         depends=['patient'])
     # DISEASES
     diseases = fields.One2Many(
@@ -158,7 +158,7 @@ class Patient(ModelSQL, ModelView):
             ('polygamous', 'Polygamous'),
         ], 'Relation type',
         states={
-            'invisible': ~Bool(Eval('sexual_active')),
+            'readonly': ~Bool(Eval('sexual_active')),
             'required': Bool(Eval('sexual_active')),
         }, depends=['sexual_active'], sort=False)
     sexual_security = fields.Selection(
@@ -168,13 +168,13 @@ class Patient(ModelSQL, ModelView):
             ('unsafe', 'Unsafe'),
         ], 'Sexual security',
         states={
-            'invisible': ~Bool(Eval('sexual_active')),
+            'readonly': ~Bool(Eval('sexual_active')),
             'required': Bool(Eval('sexual_active')),
         }, help="Security of sexual practices")
     contraceptive_method = fields.Many2One(
         'galeno.contraceptive.method', 'Contraceptive method',
         states={
-            'invisible': ~Bool(Eval('sexual_active')),
+            'readonly': ~Bool(Eval('sexual_active')),
         },
         domain=[['OR',
             ('gender', '=', Eval('gender')),
@@ -323,10 +323,6 @@ class Patient(ModelSQL, ModelView):
         return None
 
     @staticmethod
-    def default_disability():
-        return False
-
-    @staticmethod
     def default_laterality():
         return 'right'
 
@@ -382,7 +378,7 @@ class Patient(ModelSQL, ModelView):
             else:
                 path = 'galeno/icons/%s_patient.png' % (patient.gender)
                 photos[patient.id] = fields.Binary.cast(
-                    tools.file_open(path, mode='rb').read())
+                    file_open(path, mode='rb').read())
         return {'photo': photos}
 
     @classmethod
@@ -454,10 +450,35 @@ class Patient(ModelSQL, ModelView):
             self.check_email()
             return mail_address
 
-    @fields.depends('disability')
-    def on_change_disability(self):
-        if not self.disability:
-            self.disabilities = None
+    @classmethod
+    def get_disability(cls, patients, name):
+        pool = Pool()
+        patient = cls.__table__()
+        Disability = pool.get('galeno.patient.disability')
+        disability = Disability.__table__()
+        cursor = Transaction().connection.cursor()
+        result = defaultdict(lambda: False)
+        ids = [p.id for p in patients]
+        for sub_ids in grouped_slice(ids):
+            red_sql = reduce_ids(patient.id, sub_ids)
+            query = patient.join(disability,
+                condition=patient.id == disability.patient
+            ).select(
+                patient.id,
+                where=red_sql)
+            cursor.execute(*query)
+            for patient_id, in cursor.fetchall():
+                result[patient_id] = True
+        return result
+
+    @classmethod
+    def search_disability(cls, name, clause):
+        pool = Pool()
+        Disability = pool.get('galeno.patient.disability')
+        disability = Disability.__table__()
+        query = disability.select(disability.patient)
+        operator = 'in' if clause[2] else 'not in'
+        return [('id', operator, query)]
 
     def get_rec_name(self, name):
         return "%s %s" % (self.fname, self.lname)
@@ -526,7 +547,8 @@ class PatientPhoto(ModelSQL):
     'Patient Photo'
     __name__ = 'galeno.patient.photo'
 
-    patient = fields.Many2One('galeno.patient', 'Patient', required=True)
+    patient = fields.Many2One(
+        'galeno.patient', 'Patient', required=True, ondelete='CASCADE')
     photo = fields.Binary('Photo', file_id='photo_id')
     photo_id = fields.Char('Photo ID')
 
@@ -539,7 +561,7 @@ class PatientDisability(ModelSQL, ModelView):
         domain=[
             ('company', If(Eval('context', {}).contains('company'), '=', '!='),
                 Eval('context', {}).get('company', -1)),
-            ])
+            ], ondelete='CASCADE')
     type_ = fields.Selection(
         [
             ('hearing', 'Hearing'),

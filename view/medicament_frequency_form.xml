@@ -1,12 +1,7 @@
 <?xml version="1.0"?>
 <form>
     <group id="frequency_header">
-        <label name="code"/>
-        <field name="code"/>
-        <newline/>
         <label name="name"/>
         <field name="name"/>
-        <label name="abbreviation"/>
-        <field name="abbreviation"/>
     </group>
 </form>

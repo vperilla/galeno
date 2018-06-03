@@ -74,13 +74,8 @@ class MedicamentFrequency(ModelSQL, ModelView):
     'Medicament Frequency'
     __name__ = 'galeno.medicament.frequency'
 
-    code = fields.Char('Code', required=True)
-    name = fields.Char(
-        'Frequency', required=True, select=True, translate=True,
+    name = fields.Char('Frequency', required=True, select=True, translate=True,
         help='Common frequency name')
-    abbreviation = fields.Char(
-        'Abbreviation',
-        help='Dosage abbreviation, such as tid in the US or tds in the UK')
 
     @classmethod
     def __setup__(cls):
@@ -88,20 +83,4 @@ class MedicamentFrequency(ModelSQL, ModelView):
         t = cls.__table__()
         cls._sql_constraints = [
             ('name_uniq', Unique(t, t.name), 'Name must be unique !'),
-            ('code_uniq', Unique(t, t.code), 'Code must be unique !'),
         ]
-
-    def get_rec_name(self, name):
-        return "%s - %s" % (self.abbreviation, self.name)
-
-    @classmethod
-    def search_rec_name(cls, name, clause):
-        if clause[1].startswith('!') or clause[1].startswith('not '):
-            bool_op = 'AND'
-        else:
-            bool_op = 'OR'
-        domain = [bool_op,
-            ('name',) + tuple(clause[1:]),
-            ('abbreviation',) + tuple(clause[1:]),
-            ]
-        return domain

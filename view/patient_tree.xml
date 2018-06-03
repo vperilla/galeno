@@ -6,5 +6,5 @@
     <field name="email"/>
     <field name="phone"/>
     <field name="country"/>
-    <field name="disability" tree_invisible="1"/>
+    <field name="disability"/>
 </tree>
