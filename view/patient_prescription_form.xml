@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <form>
     <group id="patient_prescription_header" colspan="4">
-        <label name="professional" invisible="1"/>
-        <field name="professional" invisible="1"/>
+        <label name="professional"/>
+        <field name="professional"/>
         <newline/>
         <label name="patient"/>
         <field name="patient"/>

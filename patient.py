@@ -93,8 +93,7 @@ class Patient(ModelSQL, ModelView):
     disability = fields.Function(fields.Boolean('Disability'),
         'get_disability', searcher='search_disability')
     disabilities = fields.One2Many(
-        'galeno.patient.disability', 'patient', 'Disabilities',
-        depends=['patient'])
+        'galeno.patient.disability', 'patient', 'Disabilities')
     # DISEASES
     diseases = fields.One2Many(
         'galeno.patient.disease', 'patient', 'Diseases',

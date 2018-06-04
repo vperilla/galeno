@@ -15,6 +15,7 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
     professional = fields.Many2One('galeno.professional', 'Professional',
         states={
             'readonly': ~Eval('state').in_(['draft']),
+            'invisible': True,
         },
         domain=[
             ('id', If(Eval('context', {}).contains('professional'), '=', '!='),
