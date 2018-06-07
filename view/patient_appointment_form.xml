@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<form>
+    <group id="basic_header">
+        <label name="code"/>
+        <field name="code"/>
+        <label name="date"/>
+        <field name="date"/>
+        <group id="buttons" colspan="4" col="-1">
+            <label name="state"/>
+            <field name="state"/>
+            <button name="patient_cancel"/>
+            <button name="professional_cancel"/>
+            <button name="done"/>
+        </group>
+        <label name="professional"/>
+        <field name="professional"/>
+        <label name="patient"/>
+        <field name="patient"/>
+        <separator name="notes" colspan="4"/>
+        <field name="notes" colspan="4"/>
+    </group>
+</form>

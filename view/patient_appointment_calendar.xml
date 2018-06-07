@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<calendar dtstart="date">
+    <field name="code"/>
+    <field name="patient"/>
+    <field name="state"/>
+</calendar>
