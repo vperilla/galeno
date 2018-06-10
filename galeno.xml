@@ -2,6 +2,18 @@
 <tryton>
     <data>
         <!-- ICONS -->
+        <record model="ir.ui.icon" id="khaki">
+            <field name="name">khaki</field>
+            <field name="path">icons/khaki.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="lightgreen">
+            <field name="name">lightgreen</field>
+            <field name="path">icons/lightgreen.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="lightcoral">
+            <field name="name">lightcoral</field>
+            <field name="path">icons/lightcoral.svg</field>
+        </record>
         <record model="ir.ui.icon" id="galeno_icon">
             <field name="name">galeno-galeno</field>
             <field name="path">icons/galeno.svg</field>
@@ -117,6 +129,10 @@
         <record model="ir.ui.icon" id="mental_status_icon">
             <field name="name">galeno-mental-status</field>
             <field name="path">icons/mental_status.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="prescription_icon">
+            <field name="name">galeno-prescription</field>
+            <field name="path">icons/prescription.svg</field>
         </record>
 
         <!-- MAIN MENU -->

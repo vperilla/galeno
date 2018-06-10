@@ -1,6 +1,9 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+        <menuitem name="Appointments" parent="menu_galeno"
+            id="menu_patient_appointment" sequence="100"/>
+
         <record model="ir.sequence.type" id="sequence_type_patient_appointment">
             <field name="name">Patient Appointment</field>
             <field name="code">galeno.patient.appointment</field>
@@ -52,7 +55,7 @@
             <field name="view" ref="patient_appointment_view_form"/>
             <field name="act_window" ref="act_patient_appointment_form"/>
         </record>
-        <menuitem parent="menu_galeno" action="act_patient_appointment_form"
+        <menuitem parent="menu_patient_appointment" action="act_patient_appointment_form"
             id="menu_patient_appointment_form" sequence="100" icon="tryton-list"/>
 
         <record model="ir.action.act_window" id="act_patient_appointment_calendar">
@@ -71,7 +74,7 @@
             <field name="view" ref="patient_appointment_view_form"/>
             <field name="act_window" ref="act_patient_appointment_calendar"/>
         </record>
-        <menuitem parent="menu_galeno" action="act_patient_appointment_calendar"
+        <menuitem parent="menu_patient_appointment" action="act_patient_appointment_calendar"
             id="menu_patient_appointment_calendar" sequence="110" icon="tryton-calendar"/>
 
         <record model="ir.model.access" id="access_appointment">
@@ -113,15 +116,15 @@
             <field name="button" ref="appointment_professional_cancel_button"/>
             <field name="group" ref="group_galeno"/>
         </record>
-        <record model="ir.model.button" id="appointment_done_button">
-            <field name="name">done</field>
+        <record model="ir.model.button" id="appointment_accomplished_button">
+            <field name="name">accomplished</field>
             <field name="string">Accomplished</field>
             <field name="model"
                 search="[('model', '=', 'galeno.patient.appointment')]"/>
         </record>
         <record model="ir.model.button-res.group"
-            id="appointment_done_button_group_galeno">
-            <field name="button" ref="appointment_done_button"/>
+            id="appointment_accomplished_button_group_galeno">
+            <field name="button" ref="appointment_accomplished_button"/>
             <field name="group" ref="group_galeno"/>
         </record>
 

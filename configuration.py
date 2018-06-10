@@ -4,7 +4,7 @@ from trytond.pool import Pool
 from trytond.modules.company.model import (
     CompanyMultiValueMixin, CompanyValueMixin)
 
-__all__ = ['Configuration']
+__all__ = ['Configuration', 'ConfigurationSequence']
 
 
 class Configuration(

@@ -16,7 +16,7 @@ from . import drug
 from . import contraceptive_method
 from . import patient
 from . import patient_background
-from . import patient_appoinment
+from . import patient_appointment
 from . import patient_evaluation
 from . import patient_test
 from . import patient_prescription
@@ -57,7 +57,7 @@ def register():
         patient_background.Disease,
         patient_background.Family,
         patient_background.Surgery,
-        patient_appoinment.PatientAppoinment,
+        patient_appointment.PatientAppointment,
         patient_evaluation.PatientEvaluation,
         patient_evaluation.PatientEvaluationTest,
         patient_evaluation.PatientEvaluationDiagnosis,
@@ -66,6 +66,7 @@ def register():
         patient_prescription.PatientPrescription,
         patient_prescription.PatientPrescriptionLine,
         configuration.Configuration,
+        configuration.ConfigurationSequence,
         module='galeno', type_='model')
     Pool.register(
         module='galeno', type_='wizard')

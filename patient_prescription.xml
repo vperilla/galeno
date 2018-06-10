@@ -40,7 +40,7 @@
             <field name="act_window" ref="act_patient_prescription_form"/>
         </record>
         <menuitem parent="menu_galeno" action="act_patient_prescription_form"
-            id="menu_patient_prescription_form" sequence="20" icon="galeno-evaluation"/>
+            id="menu_patient_prescription_form" sequence="20" icon="galeno-prescription"/>
         <record model="ir.model.access" id="access_prescription">
             <field name="model"
                 search="[('model', '=', 'galeno.patient.prescription')]"/>

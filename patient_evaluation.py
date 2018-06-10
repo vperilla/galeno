@@ -8,6 +8,12 @@ from trytond.pool import Pool
 
 import galeno_tools
 
+_colors = {
+    'initial': 'khaki',
+    'finish': 'lightgreen',
+    'cancel': 'lightcoral',
+}
+
 __all__ = ['PatientEvaluation', 'PatientEvaluationTest',
     'PatientEvaluationDiagnosis', 'PatientEvaluationProcedure']
 
@@ -57,6 +63,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
             ('finish', 'Finished'),
             ('cancel', 'Canceled'),
         ], 'State', readonly=True, required=True)
+    color = fields.Function(fields.Char('color'), 'on_change_with_color')
     symptoms = fields.Text('Illness symptoms',
         states={
             'readonly': ~Eval('state').in_(['initial']),
@@ -510,6 +517,10 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
     @staticmethod
     def default_professional():
         return Transaction().context.get('professional')
+
+    @fields.depends('state')
+    def on_change_with_color(self, name=None):
+        return _colors.get(self.state)
 
     @fields.depends('patient')
     def on_change_with_patient_gender(self, name=None):

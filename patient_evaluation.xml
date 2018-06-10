@@ -50,11 +50,6 @@
             <field name="type">tree</field>
             <field name="name">patient_evaluation_tree</field>
         </record>
-        <record model="ir.ui.view" id="patient_evaluation_view_calendar">
-            <field name="model">galeno.patient.evaluation</field>
-            <field name="type">calendar</field>
-            <field name="name">patient_evaluation_calendar</field>
-        </record>
         <record model="ir.action.act_window" id="act_patient_evaluation_form">
             <field name="name">Evaluations</field>
             <field name="res_model">galeno.patient.evaluation</field>
@@ -69,12 +64,6 @@
             id="act_patient_evaluation_form_view2">
             <field name="sequence" eval="20"/>
             <field name="view" ref="patient_evaluation_view_form"/>
-            <field name="act_window" ref="act_patient_evaluation_form"/>
-        </record>
-        <record model="ir.action.act_window.view"
-            id="act_patient_evaluation_form_view3">
-            <field name="sequence" eval="30"/>
-            <field name="view" ref="patient_evaluation_view_calendar"/>
             <field name="act_window" ref="act_patient_evaluation_form"/>
         </record>
         <record model="ir.action.act_window.domain"

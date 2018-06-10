@@ -5,6 +5,13 @@ from trytond.pyson import Eval, If
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 
+_colors = {
+    'scheduled': 'khaki',
+    'accomplished': 'lightgreen',
+    'patient_cancel': 'lightcoral',
+    'professional_cancel': 'lightcoral',
+}
+
 __all__ = ['PatientAppointment']
 
 
@@ -37,6 +44,7 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             ('patient_cancel', 'Canceled by patient'),
             ('professional_cancel', 'Canceled by Doctor'),
         ], 'State', readonly=True, required=True)
+    color = fields.Function(fields.Char('color'), 'on_change_with_color')
     notes = fields.Text('Notes',
         states={
             'readonly': ~Eval('state').in_(['scheduled']),
@@ -50,7 +58,7 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             ('id', 'DESC'),
             ]
         cls._transitions |= set((
-                ('scheduled', 'done'),
+                ('scheduled', 'accomplished'),
                 ('scheduled', 'patient_cancel'),
                 ('scheduled', 'professional_cancel'),
                 ))
@@ -63,7 +71,7 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
                     'invisible': ~Eval('state').in_(['scheduled']),
                     'depends': ['state'],
                     },
-                'done': {
+                'accomplished': {
                     'invisible': ~Eval('state').in_(['scheduled']),
                     'depends': ['state'],
                     },
@@ -81,10 +89,14 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
     def default_professional():
         return Transaction().context.get('professional')
 
+    @fields.depends('state')
+    def on_change_with_color(self, name=None):
+        return _colors.get(self.state)
+
     @classmethod
     @ModelView.button
-    @Workflow.transition('done')
-    def done(cls, appointments):
+    @Workflow.transition('accomplished')
+    def accomplished(cls, appointments):
         pass
 
     @classmethod

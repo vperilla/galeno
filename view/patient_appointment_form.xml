@@ -10,7 +10,7 @@
             <field name="state"/>
             <button name="patient_cancel"/>
             <button name="professional_cancel"/>
-            <button name="done"/>
+            <button name="accomplished"/>
         </group>
         <label name="professional"/>
         <field name="professional"/>

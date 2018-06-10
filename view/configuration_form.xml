@@ -8,4 +8,6 @@ this repository contains the full copyright notices and license terms. -->
     <field name="evaluation_sequence"/>
     <label name="request_test_sequence"/>
     <field name="request_test_sequence"/>
+    <label name="appointment_sequence"/>
+    <field name="appointment_sequence"/>
 </form>
