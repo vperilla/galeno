@@ -1,10 +1,12 @@
+from datetime import timedelta
+
 from trytond.model import ModelView, ModelSQL, ModelSingleton, fields
 from trytond.pyson import Eval
 from trytond.pool import Pool
 from trytond.modules.company.model import (
     CompanyMultiValueMixin, CompanyValueMixin)
 
-__all__ = ['Configuration', 'ConfigurationSequence']
+__all__ = ['Configuration', 'ConfigurationSequence', 'ConfigurationDuration']
 
 
 class Configuration(
@@ -35,6 +37,8 @@ class Configuration(
             ('company', 'in', [Eval('context', {}).get('company', -1), None]),
             ('code', '=', 'galeno.patient.evaluation.test'),
             ]))
+    appointment_duration = fields.MultiValue(
+        fields.TimeDelta('Appointment Duration', required=True))
 
     @classmethod
     def multivalue_model(cls, field):
@@ -42,6 +46,8 @@ class Configuration(
         if field in ['patient_sequence', 'appointment_sequence',
                 'evaluation_sequence', 'request_test_sequence']:
             return pool.get('galeno.configuration.sequence')
+        elif field in ['appointment_duration']:
+            return pool.get('galeno.configuration.duration')
         return super(Configuration, cls).multivalue_model(field)
 
     @classmethod
@@ -63,6 +69,11 @@ class Configuration(
     def default_request_test_sequence(cls, **pattern):
         return cls.multivalue_model(
             'request_test_sequence').default_request_test_sequence()
+
+    @classmethod
+    def default_appointment_duration(cls, **pattern):
+        return cls.multivalue_model(
+            'appointment_duration').default_appointment_duration()
 
 
 class ConfigurationSequence(ModelSQL, CompanyValueMixin):
@@ -133,3 +144,15 @@ class ConfigurationSequence(ModelSQL, CompanyValueMixin):
                 'galeno', 'sequence_patient_evaluation_test')
         except KeyError:
             return None
+
+
+class ConfigurationDuration(ModelSQL, CompanyValueMixin):
+    "Galeno Configuration Duration"
+    __name__ = 'galeno.configuration.duration'
+
+    appointment_duration = fields.TimeDelta(
+        'Appointment Duration', required=True)
+
+    @staticmethod
+    def default_appointment_duration():
+        return timedelta(minutes=30)

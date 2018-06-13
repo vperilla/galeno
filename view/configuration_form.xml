@@ -10,4 +10,6 @@ this repository contains the full copyright notices and license terms. -->
     <field name="request_test_sequence"/>
     <label name="appointment_sequence"/>
     <field name="appointment_sequence"/>
+    <label name="appointment_duration"/>
+    <field name="appointment_duration"/>
 </form>

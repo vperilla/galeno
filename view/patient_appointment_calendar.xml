@@ -1,6 +1,4 @@
 <?xml version="1.0"?>
-<calendar dtstart="date" dtend="date" background_color="color">
-    <field name="code"/>
+<calendar dtstart="start_date" dtend="end_date" background_color="color">
     <field name="patient"/>
-    <field name="state"/>
 </calendar>

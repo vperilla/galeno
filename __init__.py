@@ -67,6 +67,7 @@ def register():
         patient_prescription.PatientPrescriptionLine,
         configuration.Configuration,
         configuration.ConfigurationSequence,
+        configuration.ConfigurationDuration,
         module='galeno', type_='model')
     Pool.register(
         module='galeno', type_='wizard')

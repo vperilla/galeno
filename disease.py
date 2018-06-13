@@ -9,6 +9,7 @@ class DiseaseCategory(CoreMixin, tree(separator=' / '), ModelSQL, ModelView):
     'Disease Categories'
     __name__ = 'galeno.disease.category'
 
+    code = fields.Char('Code', required=True)
     name = fields.Char('Name', required=True, translate=True)
     parent = fields.Many2One(
         'galeno.disease.category', 'Parent')

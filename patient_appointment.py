@@ -1,16 +1,12 @@
 from datetime import datetime
 
+from sql.conditionals import Case
+
 from trytond.model import Workflow, ModelView, ModelSQL, fields
 from trytond.pyson import Eval, If
 from trytond.transaction import Transaction
 from trytond.pool import Pool
-
-_colors = {
-    'scheduled': 'khaki',
-    'accomplished': 'lightgreen',
-    'patient_cancel': 'lightcoral',
-    'professional_cancel': 'lightcoral',
-}
+from trytond.tools import reduce_ids, grouped_slice
 
 __all__ = ['PatientAppointment']
 
@@ -28,7 +24,11 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             ('id', If(Eval('context', {}).contains('professional'), '=', '!='),
                 Eval('context', {}).get('professional', -1)),
         ], depends=['state'], required=True, select=True)
-    date = fields.DateTime('Start Date', required=True,
+    start_date = fields.DateTime('Start Date', required=True,
+        states={
+            'readonly': ~Eval('state').in_(['scheduled']),
+        }, depends=['state'])
+    end_date = fields.DateTime('End Date', required=True,
         states={
             'readonly': ~Eval('state').in_(['scheduled']),
         }, depends=['state'])
@@ -44,7 +44,7 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             ('patient_cancel', 'Canceled by patient'),
             ('professional_cancel', 'Canceled by Doctor'),
         ], 'State', readonly=True, required=True)
-    color = fields.Function(fields.Char('color'), 'on_change_with_color')
+    color = fields.Function(fields.Char('color'), 'get_color')
     notes = fields.Text('Notes',
         states={
             'readonly': ~Eval('state').in_(['scheduled']),
@@ -54,7 +54,7 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
     def __setup__(cls):
         super(PatientAppointment, cls).__setup__()
         cls._order = [
-            ('date', 'DESC'),
+            ('start_date', 'DESC'),
             ('id', 'DESC'),
             ]
         cls._transitions |= set((
@@ -82,16 +82,41 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         return 'scheduled'
 
     @staticmethod
-    def default_date():
+    def default_start_date():
         return datetime.now()
 
     @staticmethod
     def default_professional():
         return Transaction().context.get('professional')
 
-    @fields.depends('state')
-    def on_change_with_color(self, name=None):
-        return _colors.get(self.state)
+    @classmethod
+    def get_color(cls, appointments, name):
+        cursor = Transaction().connection.cursor()
+        table = cls.__table__()
+        result = {}
+
+        ids = [a.id for a in appointments]
+        for sub_ids in grouped_slice(ids):
+            red_sql = reduce_ids(table.id, sub_ids)
+            query = table.select(
+                table.id,
+                Case(
+                    (table.state == 'scheduled', 'khaki'),
+                    (table.state == 'accomplished', 'lightgreen'),
+                    else_='lightcoral'),
+                where=red_sql,
+            )
+            cursor.execute(*query)
+            result.update(dict(cursor.fetchall()))
+        return result
+
+    @fields.depends('start_date', 'end_date')
+    def on_change_start_date(self):
+        pool = Pool()
+        Configuration = pool.get('galeno.configuration')
+        config = Configuration(1)
+        if self.start_date:
+            self.end_date = self.start_date + config.appointment_duration
 
     @classmethod
     @ModelView.button

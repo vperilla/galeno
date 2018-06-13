@@ -1,18 +1,15 @@
 from datetime import datetime
 from decimal import Decimal
 
+from sql.conditionals import Case
+
 from trytond.model import Workflow, ModelView, ModelSQL, fields
 from trytond.pyson import Bool, Eval, If
 from trytond.transaction import Transaction
 from trytond.pool import Pool
+from trytond.tools import reduce_ids, grouped_slice
 
 import galeno_tools
-
-_colors = {
-    'initial': 'khaki',
-    'finish': 'lightgreen',
-    'cancel': 'lightcoral',
-}
 
 __all__ = ['PatientEvaluation', 'PatientEvaluationTest',
     'PatientEvaluationDiagnosis', 'PatientEvaluationProcedure']
@@ -63,7 +60,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
             ('finish', 'Finished'),
             ('cancel', 'Canceled'),
         ], 'State', readonly=True, required=True)
-    color = fields.Function(fields.Char('color'), 'on_change_with_color')
+    color = fields.Function(fields.Char('color'), 'get_color')
     symptoms = fields.Text('Illness symptoms',
         states={
             'readonly': ~Eval('state').in_(['initial']),
@@ -518,9 +515,26 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
     def default_professional():
         return Transaction().context.get('professional')
 
-    @fields.depends('state')
-    def on_change_with_color(self, name=None):
-        return _colors.get(self.state)
+    @classmethod
+    def get_color(cls, evaluations, name):
+        cursor = Transaction().connection.cursor()
+        table = cls.__table__()
+        result = {}
+
+        ids = [e.id for e in evaluations]
+        for sub_ids in grouped_slice(ids):
+            red_sql = reduce_ids(table.id, sub_ids)
+            query = table.select(
+                table.id,
+                Case(
+                    (table.state == 'initial', 'khaki'),
+                    (table.state == 'finish', 'lightgreen'),
+                    else_='lightcoral'),
+                where=red_sql,
+            )
+            cursor.execute(*query)
+            result.update(dict(cursor.fetchall()))
+        return result
 
     @fields.depends('patient')
     def on_change_with_patient_gender(self, name=None):
