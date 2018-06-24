@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
-<tree>
+<tree editable="bottom">
     <field name="prescription"/>
     <field name="medicament"/>
     <field name="active_component" tree_invisible="1"/>
-    <field name="quantity"/>
-    <field name="dose_unit"/>
+    <field name="quantity" width="125"/>
+    <field name="dose_unit" width="125"/>
     <field name="frequency"/>
-    <field name="duration"/>
+    <field name="duration" width="150"/>
 </tree>

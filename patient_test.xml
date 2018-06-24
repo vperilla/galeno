@@ -2,7 +2,7 @@
 <tryton>
     <data>
         <menuitem parent="menu_galeno_admin" sequence="100"
-            id="menu_test" name="Test"/>
+            id="menu_test" name="Test" icon="galeno-folder"/>
         <record model="ir.ui.view" id="test_category_view_list">
             <field name="model">galeno.test.category</field>
             <field name="type">tree</field>
@@ -29,7 +29,7 @@
             <field name="act_window" ref="act_test_category_form"/>
         </record>
         <menuitem parent="menu_test"
-            sequence="1" id="menu_test_category"
+            sequence="1" id="menu_test_category" icon="galeno-list"
             action="act_test_category_form"/>
 
         <record model="ir.model.access" id="access_test_category">

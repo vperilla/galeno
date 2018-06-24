@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <tree>
-    <field name="code"/>
+    <field name="code" width="125"/>
     <field name="evaluation"/>
-    <field name="test"/>
+    <field name="test" width="400"/>
     <field name="with_result"/>
     <field name="result_date" tree_invisible="1"/>
     <field name="result_notes"/>

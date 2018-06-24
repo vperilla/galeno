@@ -28,7 +28,7 @@
             <field name="act_window" ref="act_speciality_form"/>
         </record>
         <menuitem parent="menu_galeno_admin" action="act_speciality_form"
-            id="menu_speciality_form" sequence="50"/>
+            id="menu_speciality_form" sequence="50" icon="galeno-list"/>
         <record model="ir.model.access" id="access_speciality">
             <field name="model" search="[('model', '=', 'galeno.speciality')]"/>
             <field name="perm_read" eval="True"/>

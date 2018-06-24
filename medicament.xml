@@ -74,7 +74,8 @@
             <field name="act_window" ref="act_medicament_dose_unit_form"/>
         </record>
         <menuitem parent="menu_medicament_admin" action="act_medicament_dose_unit_form"
-            id="menu_medicament_dose_unit_form" sequence="10"/>
+            id="menu_medicament_dose_unit_form" sequence="10"
+            icon="galeno-medicament-dose"/>
         <record model="ir.model.access" id="access_medicament_dose_unit">
             <field name="model" search="[('model', '=', 'galeno.medicament.dose.unit')]"/>
             <field name="perm_read" eval="True"/>
@@ -118,7 +119,8 @@
             <field name="act_window" ref="act_medicament_frequency_form"/>
         </record>
         <menuitem parent="menu_medicament_admin" action="act_medicament_frequency_form"
-            id="menu_medicament_frequency_form" sequence="10"/>
+            id="menu_medicament_frequency_form" sequence="10"
+            icon="galeno-medicament-frequency"/>
         <record model="ir.model.access" id="access_medicament_frequency">
             <field name="model" search="[('model', '=', 'galeno.medicament.frequency')]"/>
             <field name="perm_read" eval="True"/>

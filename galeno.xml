@@ -22,6 +22,30 @@
             <field name="name">galeno-admin</field>
             <field name="path">icons/galeno_admin.svg</field>
         </record>
+        <record model="ir.ui.icon" id="galeno_config_icon">
+            <field name="name">galeno-config</field>
+            <field name="path">icons/galeno_config.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="folder_icon">
+            <field name="name">galeno-folder</field>
+            <field name="path">icons/folder.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="list_icon">
+            <field name="name">galeno-list</field>
+            <field name="path">icons/list.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="tree_icon">
+            <field name="name">galeno-tree</field>
+            <field name="path">icons/tree.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="wizard_icon">
+            <field name="name">galeno-wizard</field>
+            <field name="path">icons/wizard.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="diagnosis_icon">
+            <field name="name">galeno-diagnosis</field>
+            <field name="path">icons/diagnosis.svg</field>
+        </record>
         <record model="ir.ui.icon" id="contraceptive_method_icon">
             <field name="name">galeno-contraceptive-method</field>
             <field name="path">icons/contraceptive_method.svg</field>
@@ -65,6 +89,14 @@
         <record model="ir.ui.icon" id="medicament_icon">
             <field name="name">galeno-medicament</field>
             <field name="path">icons/medicament.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="medicament_frequency_icon">
+            <field name="name">galeno-medicament-frequency</field>
+            <field name="path">icons/medicament_frequency.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="medicament_dose_icon">
+            <field name="name">galeno-medicament-dose</field>
+            <field name="path">icons/medicament_dose.svg</field>
         </record>
         <record model="ir.ui.icon" id="vaccine_icon">
             <field name="name">galeno-vaccine</field>
@@ -133,6 +165,10 @@
         <record model="ir.ui.icon" id="prescription_icon">
             <field name="name">galeno-prescription</field>
             <field name="path">icons/prescription.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="appointment_icon">
+            <field name="name">galeno-appointment</field>
+            <field name="path">icons/appointment.svg</field>
         </record>
 
         <!-- MAIN MENU -->

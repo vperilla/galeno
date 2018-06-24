@@ -2,7 +2,7 @@
 <tryton>
     <data>
         <menuitem name="Appointments" parent="menu_galeno"
-            id="menu_patient_appointment" sequence="100"/>
+            id="menu_patient_appointment" sequence="100" icon="galeno-folder"/>
 
         <record model="ir.sequence.type" id="sequence_type_patient_appointment">
             <field name="name">Patient Appointment</field>
@@ -40,7 +40,7 @@
             <field name="name">patient_appointment_calendar</field>
         </record>
         <record model="ir.action.act_window" id="act_patient_appointment_form">
-            <field name="name">Appointments List</field>
+            <field name="name">List of appointments</field>
             <field name="res_model">galeno.patient.appointment</field>
         </record>
         <record model="ir.action.act_window.view"
@@ -56,10 +56,10 @@
             <field name="act_window" ref="act_patient_appointment_form"/>
         </record>
         <menuitem parent="menu_patient_appointment" action="act_patient_appointment_form"
-            id="menu_patient_appointment_form" sequence="100" icon="tryton-list"/>
+            id="menu_patient_appointment_form" sequence="100" icon="galeno-list"/>
 
         <record model="ir.action.act_window" id="act_patient_appointment_calendar">
-            <field name="name">Appointments Calendar</field>
+            <field name="name">Calendar of appointments</field>
             <field name="res_model">galeno.patient.appointment</field>
         </record>
         <record model="ir.action.act_window.view"
@@ -75,7 +75,7 @@
             <field name="act_window" ref="act_patient_appointment_calendar"/>
         </record>
         <menuitem parent="menu_patient_appointment" action="act_patient_appointment_calendar"
-            id="menu_patient_appointment_calendar" sequence="110" icon="tryton-calendar"/>
+            id="menu_patient_appointment_calendar" sequence="110" icon="galeno-appointment"/>
 
         <record model="ir.model.access" id="access_appointment">
             <field name="model"
@@ -96,7 +96,7 @@
         </record>
         <record model="ir.model.button" id="appointment_patient_cancel_button">
             <field name="name">patient_cancel</field>
-            <field name="string">Cancel by Patient</field>
+            <field name="string">Patient Cancel</field>
             <field name="model"
                 search="[('model', '=', 'galeno.patient.appointment')]"/>
         </record>
@@ -107,7 +107,7 @@
         </record>
         <record model="ir.model.button" id="appointment_professional_cancel_button">
             <field name="name">professional_cancel</field>
-            <field name="string">Cancel by Doctor</field>
+            <field name="string">Doctor Cancel</field>
             <field name="model"
                 search="[('model', '=', 'galeno.patient.appointment')]"/>
         </record>

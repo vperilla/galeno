@@ -1,6 +1,18 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+        <!-- PATIENT PRESCRIPTION LINE -->
+        <record model="ir.ui.view" id="patient_prescription_line_view_form">
+            <field name="model">galeno.patient.prescription.line</field>
+            <field name="type">form</field>
+            <field name="name">patient_prescription_line_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_prescription_line_view_tree">
+            <field name="model">galeno.patient.prescription.line</field>
+            <field name="type">tree</field>
+            <field name="name">patient_prescription_line_tree</field>
+        </record>
+
         <!-- PRESCRIPTION -->
         <record model="ir.ui.view" id="patient_prescription_view_form">
             <field name="model">galeno.patient.prescription</field>
@@ -11,11 +23,6 @@
             <field name="model">galeno.patient.prescription</field>
             <field name="type">tree</field>
             <field name="name">patient_prescription_tree</field>
-        </record>
-        <record model="ir.ui.view" id="patient_prescription_view_calendar">
-            <field name="model">galeno.patient.prescription</field>
-            <field name="type">calendar</field>
-            <field name="name">patient_prescription_calendar</field>
         </record>
         <record model="ir.action.act_window" id="act_patient_prescription_form">
             <field name="name">Prescriptions</field>
@@ -31,12 +38,6 @@
             id="act_patient_prescription_form_view2">
             <field name="sequence" eval="20"/>
             <field name="view" ref="patient_prescription_view_form"/>
-            <field name="act_window" ref="act_patient_prescription_form"/>
-        </record>
-        <record model="ir.action.act_window.view"
-            id="act_patient_prescription_form_view3">
-            <field name="sequence" eval="30"/>
-            <field name="view" ref="patient_prescription_view_calendar"/>
             <field name="act_window" ref="act_patient_prescription_form"/>
         </record>
         <menuitem parent="menu_galeno" action="act_patient_prescription_form"
@@ -79,18 +80,6 @@
             id="prescription_cancel_button_group_galeno">
             <field name="button" ref="prescription_cancel_button"/>
             <field name="group" ref="group_galeno"/>
-        </record>
-
-        <!-- PATIENT PRESCRIPTION LINE -->
-        <record model="ir.ui.view" id="patient_prescription_line_view_form">
-            <field name="model">galeno.patient.prescription.line</field>
-            <field name="type">form</field>
-            <field name="name">patient_prescription_line_form</field>
-        </record>
-        <record model="ir.ui.view" id="patient_prescription_line_view_tree">
-            <field name="model">galeno.patient.prescription.line</field>
-            <field name="type">tree</field>
-            <field name="name">patient_prescription_line_tree</field>
         </record>
     </data>
 </tryton>

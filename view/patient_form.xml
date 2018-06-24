@@ -1,55 +1,50 @@
 <?xml version="1.0"?>
 <form>
-    <notebook>
-        <page id="main_1" string="General patient information"
-            icon="galeno-information">
-            <group id="patient_main_info" col="8">
-                <group id="patient_main_1"
-                    colspan="2" col="2">
-                    <field name="photo" colspan="2" height="150" width="150"
-                        widget="image"/>
-                </group>
-                <group id="patient_main_2" colspan="2" col="2">
-                    <label name="company"/>
-                    <field name="company"/>
-                    <label name="fname"/>
-                    <field name="fname"/>
-                    <label name="lname"/>
-                    <field name="lname"/>
-                    <label name="identifier_type"/>
-                    <field name="identifier_type"/>
-                    <label name="identifier"/>
-                    <field name="identifier"/>
-                    <label name="gender"/>
-                    <field name="gender"/>
-                </group>
-                <group colspan="2" col="2" id="patient_main_3">
-                    <label name="country"/>
-                    <field name="country"/>
-                    <label name="subdivision"/>
-                    <field name="subdivision"/>
-                    <label name="city"/>
-                    <field name="city"/>
-                    <label name="birthdate"/>
-                    <field name="birthdate"/>
-                    <label name="age_char"/>
-                    <field name="age_char"/>
-                </group>
-                <group colspan="2" col="2" id="patient_main_4">
-                    <label name="blood_type"/>
-                    <field name="blood_type"/>
-                    <label name="address"/>
-                    <field name="address"/>
-                    <label name="email"/>
-                    <field name="email"/>
-                    <label name="phone"/>
-                    <field name="phone"/>
-                    <label name="emergency_phone"/>
-                    <field name="emergency_phone"/>
-                </group>
-            </group>
-        </page>
-    </notebook>
+    <group id="patient_main_info" col="8">
+        <group id="patient_main_1"
+            colspan="2" col="2">
+            <field name="photo" colspan="2" height="150" width="150"
+                widget="image"/>
+        </group>
+        <group id="patient_main_2" colspan="2" col="2">
+            <label name="company"/>
+            <field name="company"/>
+            <label name="fname"/>
+            <field name="fname"/>
+            <label name="lname"/>
+            <field name="lname"/>
+            <label name="identifier_type"/>
+            <field name="identifier_type"/>
+            <label name="identifier"/>
+            <field name="identifier"/>
+            <label name="gender"/>
+            <field name="gender"/>
+        </group>
+        <group colspan="2" col="2" id="patient_main_3">
+            <label name="country"/>
+            <field name="country"/>
+            <label name="subdivision"/>
+            <field name="subdivision"/>
+            <label name="city"/>
+            <field name="city"/>
+            <label name="birthdate"/>
+            <field name="birthdate"/>
+            <label name="age_char"/>
+            <field name="age_char"/>
+        </group>
+        <group colspan="2" col="2" id="patient_main_4">
+            <label name="blood_type"/>
+            <field name="blood_type"/>
+            <label name="address"/>
+            <field name="address"/>
+            <label name="email"/>
+            <field name="email"/>
+            <label name="phone"/>
+            <field name="phone"/>
+            <label name="emergency_phone"/>
+            <field name="emergency_phone"/>
+        </group>
+    </group>
     <notebook colspan="4">
         <page id="patient_1" string="Secondary Information"
             icon="galeno-information">
@@ -185,7 +180,7 @@
                     <field name="background_medicaments" colspan="4"/>
                 </page>
                 <page id="disease_backgrounds" string="Diseases"
-                    icon="galeno-medicament">
+                    icon="galeno-disease">
                     <field name="background_diseases" colspan="4"/>
                 </page>
                 <page id="family_backgrounds" string="Family"

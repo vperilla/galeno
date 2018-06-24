@@ -2,6 +2,6 @@
 <tree>
     <field name="evaluation"/>
     <field name="disease"/>
-    <field name="type_"/>
+    <field name="type_" width="125"/>
     <field name="notes"/>
 </tree>

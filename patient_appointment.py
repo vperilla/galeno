@@ -65,14 +65,17 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         cls._buttons.update({
                 'patient_cancel': {
                     'invisible': ~Eval('state').in_(['scheduled']),
+                    'icon': 'tryton-cancel',
                     'depends': ['state'],
                     },
                 'professional_cancel': {
                     'invisible': ~Eval('state').in_(['scheduled']),
+                    'icon': 'tryton-cancel',
                     'depends': ['state'],
                     },
                 'accomplished': {
                     'invisible': ~Eval('state').in_(['scheduled']),
+                    'icon': 'tryton-ok',
                     'depends': ['state'],
                     },
                 })

@@ -26,14 +26,14 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="107.42646"
+     inkscape:cx="-13.056282"
      inkscape:cy="258.93264"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="false"
-     inkscape:window-width="2485"
-     inkscape:window-height="1399"
-     inkscape:window-x="75"
+     inkscape:window-width="2560"
+     inkscape:window-height="1347"
+     inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1" />
   <metadata
@@ -54,33 +54,24 @@
      id="layer1"
      transform="translate(0,-197)">
     <g
-       id="g834"
-       transform="matrix(3.7764813,0,0,3.7764813,131.61116,-466.74815)">
+       transform="matrix(1.8949741,0,0,1.8949741,4.66074,201.62677)"
+       id="g8"
+       style="fill:#2780e3;fill-opacity:1">
       <path
-         d="m -11.961237,196.35792 c 0.438856,0.84349 0.403931,1.82104 -0.06773,2.59644 -0.472017,0.77611 -1.315156,1.28129 -2.258484,1.28129 h -14.904511 c -0.943328,0 -1.78682,-0.50518 -2.258483,-1.28129 -0.473781,-0.7754 -0.473781,-1.75295 -0.06738,-2.59644 l 5.764389,-10.62144 v -6.30555 c 0,-0.60748 0.474133,-1.11301 1.080205,-1.11301 h 5.866695 c 0.606778,0 1.113014,0.50553 1.113014,1.11301 v 6.30555 l 5.732286,10.62144"
-         style="fill:#6a6c6c;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:0.03527778"
-         id="path246"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+         d="m 44.5,0.6 c -1.1,0 -1.9,0.9 -1.9,1.9 v 13 H 31.4 v 3.9 h 11.1 v 24 h -39 c -1.1,0 -1.9,0.9 -1.9,1.9 0,1 0.9,1.9 1.9,1.9 h 40.9 c 1.1,0 1.9,-0.9 1.9,-1.9 V 2.6 c 0.1,-1.1 -0.8,-2 -1.8,-2 z"
+         id="path2"
+         style="fill:#2780e3;fill-opacity:1" />
       <path
-         d="m -20.763042,191.94079 v 0 c -0.538692,0 -0.942975,0.40463 -0.942975,0.91016 0,0.50659 0.404283,0.94404 0.942975,0.94404 0.506941,0 0.911225,-0.43745 0.911225,-0.94404 0,-0.50553 -0.404284,-0.91016 -0.911225,-0.91016 v 0"
-         style="fill:#18bc9c;fill-opacity:0.98431373;fill-rule:nonzero;stroke:none;stroke-width:0.03527778"
-         id="path248"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+         d="m 6.8,7.4 h 1.7 v 14.8 h 19 V 7.4 h 1.7 c 1.1,0 1.9,-0.9 1.9,-1.9 0,-1 -0.9,-1.9 -1.9,-1.9 h -3.7 -15 -3.7 c -1.1,0 -1.9,0.9 -1.9,1.9 0,1 0.8,1.9 1.9,1.9 z"
+         id="path4"
+         style="fill:#2780e3;fill-opacity:1" />
       <path
-         d="m -23.425457,186.34291 v 0 c -0.506236,0 -0.910872,0.40499 -0.910872,0.91087 0,0.53905 0.404636,0.94368 0.910872,0.94368 0.539397,0 0.943328,-0.40463 0.943328,-0.94368 0,-0.50588 -0.403931,-0.91087 -0.943328,-0.91087 v 0"
-         style="fill:#18bc9c;fill-opacity:0.98431373;fill-rule:nonzero;stroke:none;stroke-width:0.03527778"
-         id="path250"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m -23.425457,189.5807 v 0 c -0.810683,0 -1.484489,0.67381 -1.484489,1.48343 0,0.87666 0.673806,1.5173 1.484489,1.5173 0.875947,0 1.517297,-0.64064 1.517297,-1.5173 0,-0.80962 -0.64135,-1.48343 -1.517297,-1.48343 v 0"
-         style="fill:#18bc9c;fill-opacity:0.98431373;fill-rule:nonzero;stroke:none;stroke-width:0.03527778"
-         id="path252"
-         inkscape:connector-curvature="0" />
-      <path
-         d="m -14.726662,197.33652 v 0 c 0.169686,-0.33796 0.202142,-0.74259 0,-1.0795 l -1.045633,-1.92193 c -0.301978,-0.50624 -0.978253,-0.70838 -1.48202,-0.40499 -0.910872,0.50588 -1.889125,0.87736 -2.934758,0.91052 -1.956153,0.10125 -4.114448,-1.58503 -6.068484,-1.75331 -0.439208,-0.0339 -0.811036,0.16828 -1.045633,0.5394 l -1.449564,2.63031 c -0.202141,0.33691 -0.202141,0.74154 0,1.0795 0.202142,0.30304 0.538692,0.50518 0.943328,0.50518 h 12.139789 c 0.403931,0 0.740833,-0.20214 0.942975,-0.50518 v 0"
-         style="fill:#18bc9c;fill-opacity:0.98431373;fill-rule:nonzero;stroke:none;stroke-width:0.03527778"
-         id="path254"
-         inkscape:connector-curvature="0" />
+         inkscape:connector-curvature="0"
+         d="m 8.5,30.2 c 0,5.1 4.2,9.3 9.3,9.3 h 0.3 c 5.1,0 9.3,-4.2 9.3,-9.3 v -4 h -19 v 4 z"
+         id="path6"
+         style="fill:#2780e3;fill-opacity:1" />
     </g>
   </g>
 </svg>

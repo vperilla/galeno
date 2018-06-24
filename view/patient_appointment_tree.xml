@@ -6,4 +6,7 @@
     <field name="start_date" widget="date"/>
     <field name="start_date" widget="time"/>
     <field name="state"/>
+    <button name="patient_cancel"/>
+    <button name="professional_cancel"/>
+    <button name="accomplished"/>
 </tree>

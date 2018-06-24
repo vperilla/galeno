@@ -16,10 +16,10 @@
             <button name="professional_cancel"/>
             <button name="accomplished"/>
         </group>
-        <label name="professional"/>
-        <field name="professional"/>
         <label name="patient"/>
         <field name="patient"/>
+        <label name="professional"/>
+        <field name="professional"/>
         <separator name="notes" colspan="4"/>
         <field name="notes" colspan="4"/>
     </group>

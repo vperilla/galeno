@@ -18,6 +18,6 @@
         </record>
         <menuitem parent="menu_galeno_admin"
             action="act_galeno_configuration_form" sequence="1"
-            id="menu_galeno_configuration" icon="tryton-preferences"/>
+            id="menu_galeno_configuration" icon="galeno-config"/>
     </data>
 </tryton>
