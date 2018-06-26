@@ -1,4 +1,5 @@
-from datetime import datetime
+from pytz import timezone, utc
+from datetime import datetime, timedelta
 
 from sql.conditionals import Case
 
@@ -8,6 +9,8 @@ from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.tools import reduce_ids, grouped_slice
 
+import galeno_tools
+
 __all__ = ['PatientAppointment']
 
 
@@ -15,7 +18,10 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
     'Patient Appointment'
     __name__ = 'galeno.patient.appointment'
 
-    code = fields.Char('Code', readonly=True)
+    company = fields.Many2One('company.company', 'Company', required=True,
+        states={
+            'invisible': True,
+        })
     professional = fields.Many2One('galeno.professional', 'Professional',
         states={
             'readonly': ~Eval('state').in_(['scheduled']),
@@ -57,6 +63,10 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             ('start_date', 'DESC'),
             ('id', 'DESC'),
             ]
+        cls._error_messages.update({
+                'appointments_overlap': ('"%(first)s" and "%(second)s" '
+                    'appointments overlap.'),
+                })
         cls._transitions |= set((
                 ('scheduled', 'accomplished'),
                 ('scheduled', 'patient_cancel'),
@@ -79,6 +89,10 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
                     'depends': ['state'],
                     },
                 })
+
+    @staticmethod
+    def default_company():
+        return Transaction().context.get('company')
 
     @staticmethod
     def default_state():
@@ -113,12 +127,29 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             result.update(dict(cursor.fetchall()))
         return result
 
-    @fields.depends('start_date', 'end_date')
+    @fields.depends('company', 'start_date', 'end_date', 'professional')
     def on_change_start_date(self):
         pool = Pool()
         Configuration = pool.get('galeno.configuration')
         config = Configuration(1)
-        if self.start_date:
+        if self.start_date and self.professional:
+            tz = timezone(self.company.timezone)
+            local_dt = utc.localize(
+                self.start_date, is_dst=None).astimezone(tz)
+            if not local_dt.hour:
+                start_date = datetime(*(self.start_date.date().timetuple()[:6]))
+                next_date = start_date + timedelta(days=1)
+                appointments_of_day = self.__class__.search([
+                    ('start_date', '>=', start_date),
+                    ('end_date', '<=', next_date),
+                    ('professional', '=', self.professional)
+                ], order=[('start_date', 'DESC')], limit=1)
+                if appointments_of_day:
+                    self.start_date = appointments_of_day[0].end_date
+                else:
+                    initial_time = config.attention_start
+                    self.start_date = self.start_date + timedelta(
+                        hours=initial_time.hour, minutes=initial_time.minute)
             self.end_date = self.start_date + config.appointment_duration
 
     @classmethod
@@ -140,7 +171,9 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         pass
 
     def get_rec_name(self, name):
-        return "%s - %s" % (self.code, self.patient.rec_name)
+        local_date = galeno_tools.format_datetime(
+            self.start_date, self.company.timezone)
+        return "%s - %s" % (self.patient.rec_name, local_date)
 
     @classmethod
     def search_rec_name(cls, name, clause):
@@ -149,21 +182,36 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         else:
             bool_op = 'OR'
         domain = [bool_op,
-            ('code',) + tuple(clause[1:]),
             ('patient',) + tuple(clause[1:]),
             ]
         return domain
 
     @classmethod
-    def create(cls, vlist):
-        pool = Pool()
-        Sequence = pool.get('ir.sequence')
-        Config = pool.get('galeno.configuration')
+    def validate(cls, appointments):
+        super(PatientAppointment, cls).validate(appointments)
+        for appointment in appointments:
+            appointment.check_dates()
 
-        vlist = [x.copy() for x in vlist]
-        config = Config(1)
-        for values in vlist:
-            if values.get('code') is None:
-                values['code'] = Sequence.get_id(
-                        config.appointment_sequence.id)
-        return super(PatientAppointment, cls).create(vlist)
+    def check_dates(self):
+        cursor = Transaction().connection.cursor()
+        table = self.__table__()
+        cursor.execute(*table.select(table.id,
+                where=(((table.start_date < self.start_date)
+                        & (table.end_date > self.start_date))
+                    | ((table.start_date < self.end_date)
+                        & (table.end_date > self.end_date))
+                    | ((table.start_date > self.start_date)
+                        & (table.end_date < self.end_date))
+                    | ((table.start_date == self.start_date)
+                       & (table.end_date == self.end_date)))
+                & (table.professional == self.professional.id)
+                & (table.company == self.company.id)
+                & (table.state == 'scheduled')
+                & (table.id != self.id)))
+        appointment_id = cursor.fetchone()
+        if appointment_id:
+            overlapping_appointment = self.__class__(appointment_id[0])
+            self.raise_user_error('appointments_overlap', {
+                    'first': self.rec_name,
+                    'second': overlapping_appointment.rec_name,
+                    })

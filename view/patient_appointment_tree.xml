@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <tree>
-    <field name="code" icon="color"/>
+    <field name="company" tree_invisible="1"/>
     <field name="patient"/>
     <field name="professional"/>
     <field name="start_date" widget="date"/>
     <field name="start_date" widget="time"/>
-    <field name="state"/>
+    <field name="state" icon="color"/>
     <button name="patient_cancel"/>
     <button name="professional_cancel"/>
     <button name="accomplished"/>

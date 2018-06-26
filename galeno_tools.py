@@ -1,4 +1,5 @@
 import pendulum
+import pytz
 
 import stdnum.ec.ci as ci
 import stdnum.ec.ruc as ruc
@@ -122,3 +123,10 @@ def create_thumbnail(data, size=(250, 250)):
     image.thumbnail(size, Image.ANTIALIAS)
     image.save(result, image_format)
     return fields.Binary.cast(result.getvalue())
+
+
+def format_datetime(value, timezone='UTC', time_format='%x %X %Z'):
+    if timezone not in pytz.all_timezones:
+        timezone = 'UTC'
+    tz = pytz.timezone(timezone)
+    return pytz.UTC.localize(value).astimezone(tz).strftime(time_format)
