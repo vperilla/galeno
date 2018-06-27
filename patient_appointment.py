@@ -9,7 +9,7 @@ from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.tools import reduce_ids, grouped_slice
 
-import galeno_tools
+from . import galeno_tools
 
 __all__ = ['PatientAppointment']
 
@@ -66,6 +66,8 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         cls._error_messages.update({
                 'appointments_overlap': ('"%(first)s" and "%(second)s" '
                     'appointments overlap.'),
+                'accomplished_date_error': ('A future appointment can\'t be '
+                    'accomplished.'),
                 })
         cls._transitions |= set((
                 ('scheduled', 'accomplished'),
@@ -156,7 +158,9 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
     @ModelView.button
     @Workflow.transition('accomplished')
     def accomplished(cls, appointments):
-        pass
+        for appointment in appointments:
+            if appointment.start_date > datetime.now():
+                cls.raise_user_error('accomplished_date_error')
 
     @classmethod
     @ModelView.button

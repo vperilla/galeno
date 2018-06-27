@@ -90,6 +90,32 @@
             <field name="model">galeno.patient,-1</field>
             <field name="action" ref="act_patient_requested_tests"/>
         </record>
+        <record model="ir.action.act_window" id="act_patient_appointments">
+            <field name="name">Appointments</field>
+            <field name="res_model">galeno.patient.appointment</field>
+            <field name="domain"
+                eval="[If(Eval('active_ids', []) == [Eval('active_id')], ('patient', '=', Eval('active_id')), ('patient', 'in', Eval('active_ids')))]"
+                pyson="1"/>
+        </record>
+        <record model="ir.action.keyword"
+                id="act_open_appointments_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">galeno.patient,-1</field>
+            <field name="action" ref="act_patient_appointments"/>
+        </record>
+        <record model="ir.action.act_window" id="act_patient_prescriptions">
+            <field name="name">Prescriptions</field>
+            <field name="res_model">galeno.patient.prescription</field>
+            <field name="domain"
+                eval="[If(Eval('active_ids', []) == [Eval('active_id')], ('patient', '=', Eval('active_id')), ('patient', 'in', Eval('active_ids')))]"
+                pyson="1"/>
+        </record>
+        <record model="ir.action.keyword"
+                id="act_open_prescriptions_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">galeno.patient,-1</field>
+            <field name="action" ref="act_patient_prescriptions"/>
+        </record>
 
         <!-- PATIENT DISABILITY -->
         <record model="ir.ui.view" id="patient_disability_view_form">

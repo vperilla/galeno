@@ -4,7 +4,7 @@
     <field name="patient"/>
     <field name="professional"/>
     <field name="start_date" widget="date"/>
-    <field name="start_date" widget="time"/>
+    <field name="start_date" widget="time" string="Hour"/>
     <field name="state" icon="color"/>
     <button name="patient_cancel"/>
     <button name="professional_cancel"/>

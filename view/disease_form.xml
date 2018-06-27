@@ -2,7 +2,7 @@
 <form>
     <notebook>
         <page string="Main" id="disease_main">
-            <group colspan="4" col="8" id="disease_header">
+            <group colspan="4" col="4" id="disease_header">
                 <label name="name"/>
                 <field name="name"/>
                 <label name="code"/>

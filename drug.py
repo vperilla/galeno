@@ -1,5 +1,5 @@
 from trytond.model import ModelView, ModelSQL, fields
-from galeno_mixin import BasicMixin
+from .galeno_mixin import BasicMixin
 
 __all__ = ['Drug']
 

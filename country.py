@@ -3,8 +3,7 @@ from trytond.pool import PoolMeta
 __all__ = ['Subdivision']
 
 
-class Subdivision:
-    __metaclass__ = PoolMeta
+class Subdivision(metaclass=PoolMeta):
     __name__ = 'country.subdivision'
 
     @classmethod

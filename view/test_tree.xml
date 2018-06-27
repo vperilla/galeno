@@ -2,5 +2,5 @@
 <tree>
     <field name="category"/>
     <field name="name"/>
-    <field name="gender"/>
+    <field name="gender" width="125"/>
 </tree>

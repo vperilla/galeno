@@ -4,8 +4,7 @@ from trytond.pool import PoolMeta
 __all__ = ['User']
 
 
-class User:
-    __metaclass__ = PoolMeta
+class User(metaclass=PoolMeta):
     __name__ = 'res.user'
 
     country = fields.Many2One('country.country', 'Country')

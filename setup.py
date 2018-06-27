@@ -1,15 +1,12 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # This file is part of Tryton.  The COPYRIGHT file at the top level of
 # this repository contains the full copyright notices and license terms.
 
-from setuptools import setup, find_packages
-import re
-import os
 import io
-try:
-    from configparser import ConfigParser
-except ImportError:
-    from ConfigParser import ConfigParser
+import os
+import re
+from configparser import ConfigParser
+from setuptools import setup
 
 
 def read(fname):
@@ -26,6 +23,7 @@ def get_require_version(name):
     require %= (name, major_version, minor_version,
         major_version, minor_version + 1)
     return require
+
 
 config = ConfigParser()
 config.readfp(open('tryton.cfg'))
@@ -53,35 +51,34 @@ requires = [
     'Pillow >= 5.1.0',
     'email-validator >= 1.0.3',
 ]
-
 for dep in info.get('depends', []):
     if not re.match(r'(ir|res)(\W|$)', dep):
         requires.append(get_require_version('trytond_%s' % dep))
 requires.append(get_require_version('trytond'))
 
-tests_require = []
+tests_require = [get_require_version('proteus')]
 dependency_links = []
 if minor_version % 2:
     dependency_links.append('https://trydevpi.tryton.org/')
 
 setup(name=name,
     version=version,
-    description='',
+    description='Tryton module for EHR',
     long_description=read('README'),
     author='Diego Abad A.',
     author_email='dabada83@gmail.com',
-    url='http://www.galeno.ec',
+    url='http://www.galeno.io',
     download_url=download_url,
-    keywords='',
+    keywords='tryton galeno medical',
     package_dir={'trytond.modules.galeno': '.'},
-    packages=(
-        ['trytond.modules.galeno'] +
-        ['trytond.modules.galeno.%s' % p for p in find_packages()]
-        ),
+    packages=[
+        'trytond.modules.galeno',
+        'trytond.modules.galeno.tests',
+        ],
     package_data={
         'trytond.modules.galeno': (info.get('xml', [])
-            + ['tryton.cfg', 'view/*.xml', 'locale/*.po', '*.fodt',
-                'icons/*.svg', 'tests/*.rst']),
+            + ['tryton.cfg', 'view/*.xml', 'locale/*.po', 'tests/*.rst',
+                '*.fodt', 'icons/*.svg']),
         },
     classifiers=[
         'Development Status :: 5 - Production/Stable',
@@ -108,7 +105,6 @@ setup(name=name,
         'Natural Language :: Slovenian',
         'Natural Language :: Spanish',
         'Operating System :: OS Independent',
-        'Programming Language :: Python :: 2.7',
         'Programming Language :: Python :: 3.4',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
@@ -117,6 +113,7 @@ setup(name=name,
         'Topic :: Office/Business',
         ],
     license='GPL-3',
+    python_requires='>=3.4',
     install_requires=requires,
     dependency_links=dependency_links,
     zip_safe=False,
@@ -127,5 +124,4 @@ setup(name=name,
     test_suite='tests',
     test_loader='trytond.test_loader:Loader',
     tests_require=tests_require,
-    use_2to3=True,
     )

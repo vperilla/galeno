@@ -9,7 +9,7 @@ from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.tools import reduce_ids, grouped_slice
 
-import galeno_tools
+from . import galeno_tools
 
 __all__ = ['PatientEvaluation', 'PatientEvaluationTest',
     'PatientEvaluationDiagnosis', 'PatientEvaluationProcedure']

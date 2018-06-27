@@ -6,7 +6,7 @@ from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.tools import grouped_slice, reduce_ids, file_open
 
-import galeno_tools
+from . import galeno_tools
 
 __all__ = ['Patient', 'PatientPhoto', 'PatientDisability', 'PatientDisease',
     'PatientVaccine', 'PatientActivity', 'PatientDrug']
@@ -199,7 +199,7 @@ class Patient(ModelSQL, ModelView):
             'invisible': Eval('gender') != 'female',
         },
         domain=[
-            If(Eval('gender') == 'female',
+            If((Eval('gender') == 'female') & Bool(Eval('menarche_age')),
                 ('menarche', '>=', 0),
                ())
         ], depends=['gender'], help="Age of first menstruation")
@@ -209,7 +209,7 @@ class Patient(ModelSQL, ModelView):
             'readonly': ~Bool(Eval('menarche')),
         },
         domain=[
-            If(Eval('gender') == 'female',
+            If((Eval('gender') == 'female') & Bool(Eval('menarche')),
                 ('cycle_duration', '>=', 0),
                ())
         ], depends=['gender'], help="Cycle duration in days")

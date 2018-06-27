@@ -5,6 +5,6 @@
     <field name="professional" tree_invisible="1"/>
     <field name="state"/>
     <field name="start_date" widget="date"/>
-    <field name="start_date" widget="time"/>
+    <field name="start_date" widget="time" string="Hour"/>
     <field name="reason"/>
 </tree>
