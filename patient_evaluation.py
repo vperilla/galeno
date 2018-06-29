@@ -89,7 +89,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
-    diastolic_pressure = fields.Float('Diastlic Pressure',
+    diastolic_pressure = fields.Float('Diastolic Pressure',
         domain=[
             If(Bool(Eval('diastolic_pressure')),
                ('diastolic_pressure', '>', 0),

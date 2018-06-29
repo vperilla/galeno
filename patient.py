@@ -60,7 +60,7 @@ class Patient(ModelSQL, ModelView):
     civil_status = fields.Selection([
         ('single', 'Single'),
         ('married', 'Married'),
-        ('windowed', 'Windowed'),
+        ('widowed', 'Widowed'),
         ('divorced', 'Divorced'),
         ('concubinage', 'Concubinage'),
     ], 'Civil Status', required=True)
@@ -95,12 +95,16 @@ class Patient(ModelSQL, ModelView):
     disabilities = fields.One2Many(
         'galeno.patient.disability', 'patient', 'Disabilities')
     # DISEASES
-    diseases = fields.One2Many(
-        'galeno.patient.disease', 'patient', 'Diseases',
-        states={
-            'readonly': False,
-        })
+    diseases = fields.Function(
+        fields.One2Many('galeno.patient.evaluation.diagnosis', None,
+            'Diseases'), 'get_diseases')
+    procedures = fields.Function(
+        fields.One2Many('galeno.patient.evaluation.procedure', None,
+            'Procedures'), 'get_procedures')
     # MEDICIDES - VACCINES
+    medicaments = fields.Function(
+        fields.One2Many('galeno.patient.prescription.line', None,
+            'Medicaments'), 'get_medicaments')
     vaccines = fields.One2Many('galeno.patient.vaccine', 'patient', 'Vaccines')
     # LIFESTYLE
     # Diet
@@ -468,6 +472,90 @@ class Patient(ModelSQL, ModelView):
             cursor.execute(*query)
             for patient_id, in cursor.fetchall():
                 result[patient_id] = True
+        return result
+
+    @classmethod
+    def get_diseases(cls, patients, name):
+        pool = Pool()
+        patient = cls.__table__()
+        Evaluation = pool.get('galeno.patient.evaluation')
+        Diagnosis = pool.get('galeno.patient.evaluation.diagnosis')
+        evaluation = Evaluation.__table__()
+        diagnosis = Diagnosis.__table__()
+        cursor = Transaction().connection.cursor()
+
+        result = defaultdict(lambda: [])
+        ids = [p.id for p in patients]
+        for sub_ids in grouped_slice(ids):
+            red_sql = reduce_ids(patient.id, sub_ids)
+            query = patient.join(evaluation,
+                condition=patient.id == evaluation.patient
+            ).join(diagnosis,
+                condition=evaluation.id == diagnosis.evaluation
+            ).select(
+                patient.id,
+                diagnosis.id,
+                where=red_sql & (evaluation.state == 'finish')
+            )
+            cursor.execute(*query)
+            for patient_id, diagnosis_id in cursor.fetchall():
+                result[patient_id].append(diagnosis_id)
+        return result
+
+    @classmethod
+    def get_procedures(cls, patients, name):
+        pool = Pool()
+        patient = cls.__table__()
+        Evaluation = pool.get('galeno.patient.evaluation')
+        Procedure = pool.get('galeno.patient.evaluation.procedure')
+        evaluation = Evaluation.__table__()
+        procedure = Procedure.__table__()
+        cursor = Transaction().connection.cursor()
+
+        result = defaultdict(lambda: [])
+        ids = [p.id for p in patients]
+        for sub_ids in grouped_slice(ids):
+            red_sql = reduce_ids(patient.id, sub_ids)
+            query = patient.join(evaluation,
+                condition=patient.id == evaluation.patient
+            ).join(procedure,
+                condition=evaluation.id == procedure.evaluation
+            ).select(
+                patient.id,
+                procedure.id,
+                where=red_sql & (evaluation.state == 'finish')
+            )
+            cursor.execute(*query)
+            for patient_id, procedure_id in cursor.fetchall():
+                result[patient_id].append(procedure_id)
+        return result
+
+    @classmethod
+    def get_medicaments(cls, patients, name):
+        pool = Pool()
+        patient = cls.__table__()
+        Prescription = pool.get('galeno.patient.prescription')
+        PrescriptionLine = pool.get('galeno.patient.prescription.line')
+        prescription = Prescription.__table__()
+        prescription_line = PrescriptionLine.__table__()
+        cursor = Transaction().connection.cursor()
+
+        result = defaultdict(lambda: [])
+        ids = [p.id for p in patients]
+        for sub_ids in grouped_slice(ids):
+            red_sql = reduce_ids(patient.id, sub_ids)
+            query = patient.join(prescription,
+                condition=patient.id == prescription.patient
+            ).join(prescription_line,
+                condition=prescription.id == prescription_line.prescription
+            ).select(
+                patient.id,
+                prescription_line.id,
+                where=red_sql & (prescription.state == 'done')
+            )
+            cursor.execute(*query)
+            for patient_id, procedure_id in cursor.fetchall():
+                result[patient_id].append(procedure_id)
         return result
 
     @classmethod

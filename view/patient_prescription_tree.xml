@@ -3,7 +3,7 @@
     <field name="patient"/>
     <field name="professional" tree_invisible="1"/>
     <field name="state"/>
-    <field name="date" widget="date"/>
-    <field name="date" widget="time" string="Hour"/>
+    <field name="date" widget="date" width="100"/>
+    <field name="date" widget="time" string="Hour" width="100"/>
     <field name="evaluation"/>
 </tree>

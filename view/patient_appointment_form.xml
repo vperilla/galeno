@@ -13,9 +13,9 @@
         <group id="buttons" colspan="4" col="-1">
             <label name="state"/>
             <field name="state"/>
+            <button name="accomplished"/>
             <button name="patient_cancel"/>
             <button name="professional_cancel"/>
-            <button name="accomplished"/>
         </group>
         <label name="patient"/>
         <field name="patient"/>

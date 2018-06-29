@@ -3,10 +3,7 @@
     <field name="company" tree_invisible="1"/>
     <field name="patient"/>
     <field name="professional"/>
-    <field name="start_date" widget="date"/>
-    <field name="start_date" widget="time" string="Hour"/>
+    <field name="start_date" widget="date" width="100"/>
+    <field name="start_date" widget="time" string="Hour" width="100"/>
     <field name="state" icon="color"/>
-    <button name="patient_cancel"/>
-    <button name="professional_cancel"/>
-    <button name="accomplished"/>
 </tree>

@@ -2,9 +2,9 @@
 <tree>
     <field name="lname"/>
     <field name="fname"/>
-    <field name="identifier"/>
+    <field name="identifier" width="125"/>
     <field name="email"/>
-    <field name="phone"/>
-    <field name="country"/>
+    <field name="phone" width="125"/>
+    <field name="country" width="125"/>
     <field name="disability"/>
 </tree>

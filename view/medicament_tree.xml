@@ -2,9 +2,9 @@
 <tree>
     <field name="name"/>
     <field name="laboratory"/>
-    <field name="composition"/>
+    <field name="composition" tree_invisible="1"/>
     <field name="presentation"/>
-    <field name="administration_route"/>
-    <field name="type_"/>
-    <field name="sale_kind"/>
+    <field name="administration_route" width="125"/>
+    <field name="type_" width="100"/>
+    <field name="sale_kind" tree_invisible="1"/>
 </tree>

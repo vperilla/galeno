@@ -101,8 +101,8 @@ class PatientPrescriptionLine(ModelSQL, ModelView):
     'Patient Prescription Line'
     __name__ = 'galeno.patient.prescription.line'
 
-    prescription = fields.Many2One(
-        'galeno.patient.prescription', 'Prescription', required=True)
+    prescription = fields.Many2One('galeno.patient.prescription',
+        'Prescription', required=True, readonly=True)
     prescription_state = fields.Function(
         fields.Selection([
             ('draft', 'Draft'),

@@ -70,11 +70,17 @@
             </group>
         </page>
         <page id="patient_2" string="Diseases" icon="galeno-disease">
-            <group id="group_diseases">
-                <field name="diseases"/>
+            <group id="group_diseases" colspan="4">
+                <field name="diseases" colspan="4"/>
+            </group>
+        </page>
+        <page id="patient_procedures" string="Procedures" icon="galeno-procedure">
+            <group id="group_procedures" colspan="4">
+                <field name="procedures" colspan="4"/>
             </group>
         </page>
         <page id="patient_3" string="Medicament - Vaccine" icon="galeno-medicament">
+            <field name="medicaments" colspan="4"/>
             <field name="vaccines" colspan="4"/>
         </page>
         <page id="patient_4" string="Life style" icon="galeno-lifestyle">
