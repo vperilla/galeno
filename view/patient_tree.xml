@@ -6,5 +6,4 @@
     <field name="email"/>
     <field name="phone" width="125"/>
     <field name="country" width="125"/>
-    <field name="disability"/>
 </tree>

@@ -1,13 +1,14 @@
 <?xml version="1.0"?>
 <form>
     <group id="patient_prescription_header" colspan="4">
-        <label name="professional"/>
-        <field name="professional"/>
-        <newline/>
-        <label name="patient"/>
-        <field name="patient"/>
         <label name="date"/>
         <field name="date"/>
+        <label name="professional"/>
+        <field name="professional"/>
+        <label name="patient"/>
+        <field name="patient"/>
+        <label name="code"/>
+        <field name="code"/>
     </group>
     <group id="state_buttons" colspan="4" col="-1">
         <label name="state"/>

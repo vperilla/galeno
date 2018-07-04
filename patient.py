@@ -8,8 +8,8 @@ from trytond.tools import grouped_slice, reduce_ids, file_open
 
 from . import galeno_tools
 
-__all__ = ['Patient', 'PatientPhoto', 'PatientDisability', 'PatientDisease',
-    'PatientVaccine', 'PatientActivity', 'PatientDrug']
+__all__ = ['Patient', 'PatientPhoto', 'PatientDisability', 'PatientVaccine',
+    'PatientActivity', 'PatientDrug']
 
 
 class Patient(ModelSQL, ModelView):
@@ -674,38 +674,6 @@ class PatientDisability(ModelSQL, ModelView):
     @staticmethod
     def default_percentage():
         return 0
-
-
-class PatientDisease(ModelSQL, ModelView):
-    'Patient Disease'
-    __name__ = 'galeno.patient.disease'
-
-    patient = fields.Many2One(
-        'galeno.patient', 'Patient', ondelete='CASCADE', required=True)
-    disease = fields.Many2One(
-        'galeno.disease', 'Disease', ondelete='RESTRICT', required=True)
-    severity = fields.Selection([
-        ('mild', 'Mild'),
-        ('moderate', 'Moderate'),
-        ('severe', 'Severe'),
-    ], 'Severity', required=True, sort=False)
-    date = fields.Date('Date')
-    #  TODO: add evaluation
-    contagious = fields.Boolean('Contagious')
-    notes = fields.Text('Notes')
-
-    @staticmethod
-    def default_severity():
-        return 'mild'
-
-    @staticmethod
-    def default_date():
-        Date = Pool().get('ir.date')
-        return Date.today()
-
-    @staticmethod
-    def default_contagious():
-        return False
 
 
 class PatientVaccine(ModelSQL, ModelView):

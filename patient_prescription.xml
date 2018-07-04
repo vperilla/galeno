@@ -1,6 +1,25 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
+        <record model="ir.sequence.type" id="sequence_type_patient_prescription">
+            <field name="name">Patient Prescription</field>
+            <field name="code">galeno.patient.prescription</field>
+        </record>
+        <record model="ir.sequence.type-res.group"
+            id="sequence_type_patient_prescription_group_admin">
+            <field name="sequence_type" ref="sequence_type_patient_prescription"/>
+            <field name="group" ref="res.group_admin"/>
+        </record>
+        <record model="ir.sequence.type-res.group"
+            id="sequence_type_patient_prescription_group_galeno_admin">
+            <field name="sequence_type" ref="sequence_type_patient_prescription"/>
+            <field name="group" ref="group_galeno_admin"/>
+        </record>
+        <record model="ir.sequence" id="sequence_patient_prescription">
+            <field name="name">Patient Prescription</field>
+            <field name="code">galeno.patient.prescription</field>
+        </record>
+
         <!-- PATIENT PRESCRIPTION LINE -->
         <record model="ir.ui.view" id="patient_prescription_line_view_form">
             <field name="model">galeno.patient.prescription.line</field>
@@ -62,6 +81,7 @@
         <record model="ir.model.button" id="prescription_done_button">
             <field name="name">done</field>
             <field name="string">Done</field>
+            <field name="confirm">Are you sure?</field>
             <field name="model"
                 search="[('model', '=', 'galeno.patient.prescription')]"/>
         </record>
@@ -73,6 +93,7 @@
         <record model="ir.model.button" id="prescription_cancel_button">
             <field name="name">cancel</field>
             <field name="string">Cancel</field>
+            <field name="confirm">Are you sure?</field>
             <field name="model"
                 search="[('model', '=', 'galeno.patient.prescription')]"/>
         </record>

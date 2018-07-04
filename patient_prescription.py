@@ -1,8 +1,9 @@
 from datetime import datetime
 
 from trytond.model import Workflow, ModelView, ModelSQL, fields
-from trytond.pyson import Eval, If
+from trytond.pyson import Eval, If, Bool
 from trytond.transaction import Transaction
+from trytond.pool import Pool
 
 __all__ = ['PatientPrescription', 'PatientPrescriptionLine']
 
@@ -10,17 +11,17 @@ __all__ = ['PatientPrescription', 'PatientPrescriptionLine']
 class PatientPrescription(Workflow, ModelSQL, ModelView):
     'Patient Prescription'
     __name__ = 'galeno.patient.prescription'
-    _history = True
 
     professional = fields.Many2One('galeno.professional', 'Professional',
         states={
             'readonly': ~Eval('state').in_(['draft']),
-            'invisible': True,
         },
         domain=[
-            ('id', If(Eval('context', {}).contains('professional'), '=', '!='),
+            ('id', If(
+                Bool(Eval('context', {}).get('professional', None)), '=', '!='),
                 Eval('context', {}).get('professional', -1)),
         ], depends=['state'], required=True, select=True)
+    code = fields.Char('Code', readonly=True)
     state = fields.Selection(
         [
             ('draft', 'Draft'),
@@ -95,6 +96,34 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
     @Workflow.transition('cancel')
     def cancel(cls, prescriptions):
         pass
+
+    def get_rec_name(self, name):
+        return "%s - %s" % (self.code, self.date)
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        if clause[1].startswith('!') or clause[1].startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+        domain = [bool_op,
+            ('code',) + tuple(clause[1:]),
+            ]
+        return domain
+
+    @classmethod
+    def create(cls, vlist):
+        pool = Pool()
+        Sequence = pool.get('ir.sequence')
+        Config = pool.get('galeno.configuration')
+
+        vlist = [x.copy() for x in vlist]
+        config = Config(1)
+        for values in vlist:
+            if values.get('code') is None:
+                values['code'] = Sequence.get_id(
+                        config.prescription_sequence.id)
+        return super(PatientPrescription, cls).create(vlist)
 
 
 class PatientPrescriptionLine(ModelSQL, ModelView):

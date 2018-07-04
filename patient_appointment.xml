@@ -4,25 +4,6 @@
         <menuitem name="Appointments" parent="menu_galeno"
             id="menu_patient_appointment" sequence="100" icon="galeno-folder"/>
 
-        <record model="ir.sequence.type" id="sequence_type_patient_appointment">
-            <field name="name">Patient Appointment</field>
-            <field name="code">galeno.patient.appointment</field>
-        </record>
-        <record model="ir.sequence.type-res.group"
-            id="sequence_type_patient_appointment_group_admin">
-            <field name="sequence_type" ref="sequence_type_patient_appointment"/>
-            <field name="group" ref="res.group_admin"/>
-        </record>
-        <record model="ir.sequence.type-res.group"
-            id="sequence_type_patient_appointment_group_galeno_admin">
-            <field name="sequence_type" ref="sequence_type_patient_appointment"/>
-            <field name="group" ref="group_galeno_admin"/>
-        </record>
-        <record model="ir.sequence" id="sequence_patient_appointment">
-            <field name="name">Patient Appointment</field>
-            <field name="code">galeno.patient.appointment</field>
-        </record>
-
         <!-- PATIENT APPOINMENT -->
         <record model="ir.ui.view" id="patient_appointment_view_form">
             <field name="model">galeno.patient.appointment</field>
@@ -94,9 +75,19 @@
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
+        <record model="ir.model.access" id="access_appointment_assistant">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.appointment')]"/>
+            <field name="group" ref="group_galeno_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
         <record model="ir.model.button" id="appointment_patient_cancel_button">
             <field name="name">patient_cancel</field>
             <field name="string">Patient Cancel</field>
+            <field name="confirm">Are you sure?</field>
             <field name="model"
                 search="[('model', '=', 'galeno.patient.appointment')]"/>
         </record>
@@ -108,6 +99,7 @@
         <record model="ir.model.button" id="appointment_professional_cancel_button">
             <field name="name">professional_cancel</field>
             <field name="string">Doctor Cancel</field>
+            <field name="confirm">Are you sure?</field>
             <field name="model"
                 search="[('model', '=', 'galeno.patient.appointment')]"/>
         </record>
@@ -119,6 +111,7 @@
         <record model="ir.model.button" id="appointment_accomplished_button">
             <field name="name">accomplished</field>
             <field name="string">Accomplished</field>
+            <field name="confirm">Are you sure?</field>
             <field name="model"
                 search="[('model', '=', 'galeno.patient.appointment')]"/>
         </record>

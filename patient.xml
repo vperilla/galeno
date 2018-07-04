@@ -64,6 +64,14 @@
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
+        <record model="ir.model.access" id="access_patient_assistant">
+            <field name="model" search="[('model', '=', 'galeno.patient')]"/>
+            <field name="group" ref="group_galeno_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
         <record model="ir.action.act_window" id="act_patient_evaluations">
             <field name="name">Evaluations</field>
             <field name="res_model">galeno.patient.evaluation</field>
@@ -139,34 +147,6 @@
         <record model="ir.model.access" id="access_disability_galeno">
             <field name="model"
                 search="[('model', '=', 'galeno.patient.disability')]"/>
-            <field name="group" ref="group_galeno"/>
-            <field name="perm_read" eval="True"/>
-            <field name="perm_write" eval="True"/>
-            <field name="perm_create" eval="True"/>
-            <field name="perm_delete" eval="True"/>
-        </record>
-        <!-- PATIENT DISEASE -->
-        <record model="ir.ui.view" id="patient_disease_view_form">
-            <field name="model">galeno.patient.disease</field>
-            <field name="type">form</field>
-            <field name="name">patient_disease_form</field>
-        </record>
-        <record model="ir.ui.view" id="patient_disease_view_tree">
-            <field name="model">galeno.patient.disease</field>
-            <field name="type">tree</field>
-            <field name="name">patient_disease_tree</field>
-        </record>
-        <record model="ir.model.access" id="access_patient_disease">
-            <field name="model"
-                search="[('model', '=', 'galeno.patient.disease')]"/>
-            <field name="perm_read" eval="False"/>
-            <field name="perm_write" eval="False"/>
-            <field name="perm_create" eval="False"/>
-            <field name="perm_delete" eval="False"/>
-        </record>
-        <record model="ir.model.access" id="access_patient_disease_galeno">
-            <field name="model"
-                search="[('model', '=', 'galeno.patient.disease')]"/>
             <field name="group" ref="group_galeno"/>
             <field name="perm_read" eval="True"/>
             <field name="perm_write" eval="True"/>

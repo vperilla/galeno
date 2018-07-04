@@ -117,9 +117,19 @@
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
+        <record model="ir.model.access" id="access_evaluation_assistant">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation')]"/>
+            <field name="group" ref="group_galeno_assistant"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
         <record model="ir.model.button" id="evaluation_cancel_button">
             <field name="name">cancel</field>
             <field name="string">Cancel</field>
+            <field name="confirm">Are you sure?</field>
             <field name="model"
                 search="[('model', '=', 'galeno.patient.evaluation')]"/>
         </record>
@@ -131,6 +141,7 @@
         <record model="ir.model.button" id="evaluation_finish_button">
             <field name="name">finish</field>
             <field name="string">Finish</field>
+            <field name="confirm">Are you sure?</field>
             <field name="model"
                 search="[('model', '=', 'galeno.patient.evaluation')]"/>
         </record>
@@ -204,6 +215,24 @@
             <field name="type">tree</field>
             <field name="name">patient_evaluation_diagnosis_tree</field>
         </record>
+        <record model="ir.model.access" id="access_evaluation_diagnosis">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation.diagnosis')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_evaluation_diagnosis_galeno">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation.diagnosis')]"/>
+            <field name="group" ref="group_galeno"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
         <!-- PATIENT EVALUATION PROCEDURE -->
         <record model="ir.ui.view" id="patient_evaluation_procedure_view_form">
             <field name="model">galeno.patient.evaluation.procedure</field>
@@ -214,6 +243,23 @@
             <field name="model">galeno.patient.evaluation.procedure</field>
             <field name="type">tree</field>
             <field name="name">patient_evaluation_procedure_tree</field>
+        </record>
+        <record model="ir.model.access" id="access_evaluation_procedure">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation.procedure')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_evaluation_procedure_galeno">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation.procedure')]"/>
+            <field name="group" ref="group_galeno"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
         </record>
     </data>
 </tryton>

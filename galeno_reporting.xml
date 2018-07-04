@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <menuitem parent="menu_galeno" id="menu_galeno_reporting"
+            sequence="500" name="Reporting" icon="galeno-folder"/>
+
+        <record model="ir.ui.view" id="report_evaluation_context_view_form">
+            <field name="model">galeno.report.evaluation.context</field>
+            <field name="type">form</field>
+            <field name="name">report_evaluation_context_form</field>
+        </record>
+
+        <record model="ir.ui.view" id="report_evaluation_view_graph">
+            <field name="model">galeno.report.evaluation</field>
+            <field name="type">graph</field>
+            <field name="name">report_evaluation_graph</field>
+        </record>
+        <record model="ir.ui.view" id="report_evaluation_view_tree">
+            <field name="model">galeno.report.evaluation</field>
+            <field name="type">tree</field>
+            <field name="name">report_evaluation_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_report_evaluation">
+            <field name="name">Evaluation Report</field>
+            <field name="res_model">galeno.report.evaluation</field>
+            <field name="context_model">galeno.report.evaluation.context</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_report_evaluation_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="report_evaluation_view_graph"/>
+            <field name="act_window" ref="act_report_evaluation"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_report_evaluation_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="report_evaluation_view_tree"/>
+            <field name="act_window" ref="act_report_evaluation"/>
+        </record>
+        <menuitem parent="menu_galeno_reporting" action="act_report_evaluation"
+            id="menu_galeno_report_evaluation" sequence="10" icon="galeno-report"/>
+    </data>
+</tryton>

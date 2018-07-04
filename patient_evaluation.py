@@ -24,7 +24,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
             'readonly': ~Eval('state').in_(['initial']),
         },
         domain=[
-            ('id', If(Eval('context', {}).contains('professional'), '=', '!='),
+            ('id', If(Bool(Eval('context', {}).get('professional')), '=', '!='),
                 Eval('context', {}).get('professional', -1)),
         ], depends=['state'], required=True, select=True)
     code = fields.Char('Code', readonly=True)
@@ -693,13 +693,66 @@ class PatientEvaluationDiagnosis(ModelSQL, ModelView):
 
     evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
         ondelete='CASCADE', required=True)
-    disease = fields.Many2One('galeno.disease', 'Disease', required=True)
+    evaluation_state = fields.Function(
+        fields.Selection([
+            ('initial', 'Initiated'),
+            ('finish', 'Finished'),
+            ('cancel', 'Canceled'),
+        ], 'Evaluation State',
+            states={
+                'invisible': True,
+            }), 'on_change_with_evaluation_state')
+    disease = fields.Many2One('galeno.disease', 'Disease', required=True,
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
     type_ = fields.Selection(
         [
             ('presumptive', 'Presumptive'),
             ('definitive', 'Definitive'),
-        ], 'Type')
-    notes = fields.Text('Notes')
+        ], 'Type',
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
+    date = fields.Date('Date',
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
+    severity = fields.Selection([
+        ('mild', 'Mild'),
+        ('moderate', 'Moderate'),
+        ('severe', 'Severe'),
+    ], 'Severity', required=True, sort=False,
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
+    contagious = fields.Boolean('Contagious',
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
+    notes = fields.Text('Notes',
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
+
+    @staticmethod
+    def default_severity():
+        return 'mild'
+
+    @staticmethod
+    def default_contagious():
+        return False
+
+    @staticmethod
+    def default_date():
+        Date = Pool().get('ir.date')
+        return Date.today()
+
+    @fields.depends('evaluation', '_parent_evaluation.state')
+    def on_change_with_evaluation_state(self, name=None):
+        if self.evaluation:
+            return self.evaluation.state
+        return None
 
 
 class PatientEvaluationProcedure(ModelSQL, ModelView):

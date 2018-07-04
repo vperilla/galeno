@@ -25,6 +25,12 @@ class Configuration(
             ('company', 'in', [Eval('context', {}).get('company', -1), None]),
             ('code', '=', 'galeno.patient.evaluation'),
             ]))
+    prescription_sequence = fields.MultiValue(fields.Many2One(
+        'ir.sequence', "Prescription Sequence", required=True,
+        domain=[
+            ('company', 'in', [Eval('context', {}).get('company', -1), None]),
+            ('code', '=', 'galeno.patient.prescription'),
+            ]))
     request_test_sequence = fields.MultiValue(fields.Many2One(
         'ir.sequence', "Evaluation Request Test", required=True,
         domain=[
@@ -42,7 +48,7 @@ class Configuration(
     def multivalue_model(cls, field):
         pool = Pool()
         if field in ['patient_sequence', 'evaluation_sequence',
-                'request_test_sequence']:
+                'prescription_sequence', 'request_test_sequence']:
             return pool.get('galeno.configuration.sequence')
         elif field in ['attention_start', 'attention_end',
                 'appointment_duration']:
@@ -58,6 +64,11 @@ class Configuration(
     def default_evaluation_sequence(cls, **pattern):
         return cls.multivalue_model(
             'evaluation_sequence').default_evaluation_sequence()
+
+    @classmethod
+    def default_prescription_sequence(cls, **pattern):
+        return cls.multivalue_model(
+            'prescription_sequence').default_prescription_sequence()
 
     @classmethod
     def default_request_test_sequence(cls, **pattern):
@@ -87,6 +98,13 @@ class ConfigurationSequence(ModelSQL, CompanyValueMixin):
             ('code', '=', 'galeno.patient.evaluation'),
             ],
         depends=['company'])
+    prescription_sequence = fields.Many2One(
+        'ir.sequence', "Evaluation Sequence", required=True,
+        domain=[
+            ('company', 'in', [Eval('company', -1), None]),
+            ('code', '=', 'galeno.patient.prescription'),
+            ],
+        depends=['company'])
     request_test_sequence = fields.Many2One(
         'ir.sequence', "Request Test Sequence", required=True,
         domain=[
@@ -110,6 +128,15 @@ class ConfigurationSequence(ModelSQL, CompanyValueMixin):
         ModelData = pool.get('ir.model.data')
         try:
             return ModelData.get_id('galeno', 'sequence_patient_evaluation')
+        except KeyError:
+            return None
+
+    @classmethod
+    def default_prescription_sequence(cls):
+        pool = Pool()
+        ModelData = pool.get('ir.model.data')
+        try:
+            return ModelData.get_id('galeno', 'sequence_patient_prescription')
         except KeyError:
             return None
 

@@ -1,0 +1,3673 @@
+#
+msgid ""
+msgstr "Content-Type: text/plain; charset=utf-8\n"
+
+msgctxt "error:galeno.contraceptive.method:"
+msgid "Name must be unique per gender!"
+msgstr "Nombre debe ser único por género"
+
+msgctxt "error:galeno.disease.category:"
+msgid "Can not modified \"%(record)s\" because is part  of core."
+msgstr ""
+"\"%(record)s\" no puede ser modificado por ser parte del núcleo del sistema"
+
+msgctxt "error:galeno.disease.group:"
+msgid "Can not modified \"%(record)s\" because is part  of core."
+msgstr ""
+"\"%(record)s\" no puede ser modificado por ser parte del núcleo del sistema"
+
+msgctxt "error:galeno.disease.group:"
+msgid "Disease Group code must be unique"
+msgstr "Código de enfermedad debe ser único"
+
+msgctxt "error:galeno.disease:"
+msgid "Can not modified \"%(record)s\" because is part  of core."
+msgstr ""
+"\"%(record)s\" no puede ser modificado por ser parte del núcleo del sistema"
+
+msgctxt "error:galeno.disease:"
+msgid "Disease code must be unique"
+msgstr "Código de enfermedad debe ser único"
+
+msgctxt "error:galeno.drug:"
+msgid "CODE must be unique !"
+msgstr "¡El CÓDIGO debe ser único!"
+
+msgctxt "error:galeno.drug:"
+msgid "Name must be unique !"
+msgstr "¡El nombre debe ser único!"
+
+msgctxt "error:galeno.ethnic.group:"
+msgid "CODE must be unique !"
+msgstr "¡El CÓDIGO debe ser único!"
+
+msgctxt "error:galeno.ethnic.group:"
+msgid "Name must be unique !"
+msgstr "¡El nombre debe ser único!"
+
+msgctxt "error:galeno.medicament.dose.unit:"
+msgid "Name must be unique !"
+msgstr "¡El nombre debe ser único!"
+
+msgctxt "error:galeno.medicament.frequency:"
+msgid "Name must be unique !"
+msgstr "¡El nombre debe ser único!"
+
+msgctxt "error:galeno.occupation:"
+msgid "CODE must be unique !"
+msgstr "¡El CÓDIGO debe ser único!"
+
+msgctxt "error:galeno.occupation:"
+msgid "Name must be unique !"
+msgstr "¡El nombre debe ser único!"
+
+msgctxt "error:galeno.patient.appointment:"
+msgid "\"%(first)s\" and \"%(second)s\" appointments overlap."
+msgstr "\"%(first)s\" and \"%(second)s\" citas solapadas."
+
+msgctxt "error:galeno.patient.appointment:"
+msgid "A future appointment can't be accomplished."
+msgstr "Una cita futura no puede ser realizada."
+
+msgctxt "error:galeno.patient.background.disease:"
+msgid "Disease must be unique"
+msgstr "Enfermedad debe ser única"
+
+msgctxt "error:galeno.patient.background.family:"
+msgid "Disease per relation must be unique"
+msgstr "Enfermedad familiar debe ser única"
+
+msgctxt "error:galeno.patient.background.medicament:"
+msgid "Medicament must be unique"
+msgstr "Medicamento debe ser único"
+
+msgctxt "error:galeno.patient.vaccine:"
+msgid "Vaccine dose must be unique per patient"
+msgstr "Dósis de vacuna debe ser única por paciente"
+
+msgctxt "error:galeno.patient:"
+msgid "Identifier must be unique"
+msgstr "Identificador debe ser único"
+
+msgctxt "error:galeno.patient:"
+msgid "Invalid email \"%(email)s\""
+msgstr "Email inválido \"%(email)s\""
+
+msgctxt "error:galeno.patient:"
+msgid "Invalid identifier \"%(identifier)s\" on Patient \"%(patient)s\"."
+msgstr "Identificador inválido \"%(identifier)s\" en paciente \"%(patient)s\"."
+
+msgctxt "error:galeno.patient:"
+msgid "Invalid phone \"%(phone)s\""
+msgstr "Teléfono inválido \"%(phone)s\""
+
+msgctxt "error:galeno.procedure:"
+msgid "Can not modified \"%(record)s\" because is part  of core."
+msgstr ""
+"\"%(record)s\" no puede ser modificado por ser parte del núcleo del sistema"
+
+msgctxt "error:galeno.procedure:"
+msgid "Procedure code must be unique"
+msgstr "Código de procedimiento debe ser único"
+
+msgctxt "error:galeno.speciality:"
+msgid "CODE must be unique !"
+msgstr "¡El código debe ser único!"
+
+msgctxt "error:galeno.speciality:"
+msgid "Name must be unique !"
+msgstr "¡El nombre debe ser único!"
+
+msgctxt "error:galeno.test.category:"
+msgid "Category name must be unique"
+msgstr "Nombre de categoría debe ser único"
+
+msgctxt "error:galeno.test:"
+msgid "Test name must be unique"
+msgstr "Nombre del exámen debe ser único"
+
+msgctxt "error:galeno.vaccine:"
+msgid "Code must be unique"
+msgstr "Código debe ser único"
+
+msgctxt "field:galeno.configuration,appointment_duration:"
+msgid "Appointment Duration"
+msgstr "Duración de cita"
+
+msgctxt "field:galeno.configuration,appointment_sequence:"
+msgid "Appointment Sequence"
+msgstr "Secuencia de Citas"
+
+msgctxt "field:galeno.configuration,attention_end:"
+msgid "Attention End"
+msgstr "Atención termina a las"
+
+msgctxt "field:galeno.configuration,attention_start:"
+msgid "Attention Start"
+msgstr "Atención inicia a las"
+
+msgctxt "field:galeno.configuration,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.configuration,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.configuration,evaluation_sequence:"
+msgid "Evaluation Sequence"
+msgstr "Secuencia de evaluación"
+
+msgctxt "field:galeno.configuration,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.configuration,patient_sequence:"
+msgid "Patient Sequence"
+msgstr "Secuenca Paciente"
+
+msgctxt "field:galeno.configuration,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.configuration,request_test_sequence:"
+msgid "Evaluation Request Test"
+msgstr "Exámenes solicitados"
+
+msgctxt "field:galeno.configuration,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.configuration,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.configuration.duration,appointment_duration:"
+msgid "Appointment Duration"
+msgstr "Duración cita"
+
+msgctxt "field:galeno.configuration.duration,attention_end:"
+msgid "Attention End"
+msgstr "Atención termina a las"
+
+msgctxt "field:galeno.configuration.duration,attention_start:"
+msgid "Attention Start"
+msgstr "Atención inicia a las"
+
+msgctxt "field:galeno.configuration.duration,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:galeno.configuration.duration,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.configuration.duration,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.configuration.duration,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.configuration.duration,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.configuration.duration,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.configuration.duration,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.configuration.sequence,appointment_sequence:"
+msgid "Appointment Sequence"
+msgstr "Secuencia de citas"
+
+msgctxt "field:galeno.configuration.sequence,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:galeno.configuration.sequence,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.configuration.sequence,create_uid:"
+msgid "Create User"
+msgstr "Calendario de citas"
+
+msgctxt "field:galeno.configuration.sequence,evaluation_sequence:"
+msgid "Evaluation Sequence"
+msgstr "Secuencia de evaluaciones"
+
+msgctxt "field:galeno.configuration.sequence,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.configuration.sequence,patient_sequence:"
+msgid "Patient Sequence"
+msgstr "Secuencia de Paciente"
+
+msgctxt "field:galeno.configuration.sequence,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.configuration.sequence,request_test_sequence:"
+msgid "Request Test Sequence"
+msgstr "Secuencia de solicitud de exámenes"
+
+msgctxt "field:galeno.configuration.sequence,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.configuration.sequence,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.contraceptive.method,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.contraceptive.method,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.contraceptive.method,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:galeno.contraceptive.method,gender:"
+msgid "Gender"
+msgstr ""
+
+msgctxt "field:galeno.contraceptive.method,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.contraceptive.method,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.contraceptive.method,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.contraceptive.method,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.contraceptive.method,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.disease,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:galeno.disease,category:"
+msgid "Main Category"
+msgstr "Categoría principal"
+
+msgctxt "field:galeno.disease,chromosome:"
+msgid "Affected Chromosome"
+msgstr "Cromosoma afectado"
+
+msgctxt "field:galeno.disease,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.disease,core:"
+msgid "Core"
+msgstr "Núcleo"
+
+msgctxt "field:galeno.disease,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.disease,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.disease,gene:"
+msgid "Gene"
+msgstr "Gen"
+
+msgctxt "field:galeno.disease,groups:"
+msgid "Groups"
+msgstr "Grupos"
+
+msgctxt "field:galeno.disease,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.disease,information:"
+msgid "Extra Info"
+msgstr "Información extra"
+
+msgctxt "field:galeno.disease,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.disease,protein:"
+msgid "Protein involved"
+msgstr "Proteína involucrada"
+
+msgctxt "field:galeno.disease,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.disease,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.disease,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.disease.category,childs:"
+msgid "Children"
+msgstr "Hijos"
+
+msgctxt "field:galeno.disease.category,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.disease.category,core:"
+msgid "Core"
+msgstr "Núcleo"
+
+msgctxt "field:galeno.disease.category,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.disease.category,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.disease.category,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.disease.category,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.disease.category,parent:"
+msgid "Parent"
+msgstr "Padre"
+
+msgctxt "field:galeno.disease.category,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.disease.category,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.disease.category,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.disease.group,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.disease.group,core:"
+msgid "Core"
+msgstr "Núcleo"
+
+msgctxt "field:galeno.disease.group,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.disease.group,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.disease.group,description:"
+msgid "Short description"
+msgstr "Descripción corta"
+
+msgctxt "field:galeno.disease.group,diseases:"
+msgid "Diseases"
+msgstr "Enfermedades"
+
+msgctxt "field:galeno.disease.group,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.disease.group,information:"
+msgid "Detailed information"
+msgstr "Información detallada"
+
+msgctxt "field:galeno.disease.group,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.disease.group,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.disease.group,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.disease.group,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.disease.group.member,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.disease.group.member,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.disease.group.member,disease:"
+msgid "Disease"
+msgstr "Enfermedad"
+
+msgctxt "field:galeno.disease.group.member,group:"
+msgid "Group"
+msgstr "Grupo"
+
+msgctxt "field:galeno.disease.group.member,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.disease.group.member,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.disease.group.member,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.disease.group.member,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.drug,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.drug,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.drug,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.drug,fill_required:"
+msgid "Fill required"
+msgstr "Requerido llenar"
+
+msgctxt "field:galeno.drug,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.drug,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.drug,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.drug,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.drug,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.ethnic.group,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.ethnic.group,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.ethnic.group,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.ethnic.group,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.ethnic.group,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.ethnic.group,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.ethnic.group,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.ethnic.group,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.medicament,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:galeno.medicament,administration_route:"
+msgid "Administration route"
+msgstr "Ruta de administración"
+
+msgctxt "field:galeno.medicament,code:"
+msgid "Code - Registration number"
+msgstr "Código - Nro. de registro"
+
+msgctxt "field:galeno.medicament,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:galeno.medicament,composition:"
+msgid "Composition"
+msgstr "Composición"
+
+msgctxt "field:galeno.medicament,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.medicament,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.medicament,expiration_date:"
+msgid "Expiration date"
+msgstr "Fecha expiración"
+
+msgctxt "field:galeno.medicament,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.medicament,laboratory:"
+msgid "Laboratory name"
+msgstr "Laboratorio"
+
+msgctxt "field:galeno.medicament,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.medicament,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.medicament,presentation:"
+msgid "Presentation"
+msgstr "Presentación"
+
+msgctxt "field:galeno.medicament,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.medicament,release_date:"
+msgid "Release date"
+msgstr "Fecha lanzamiento"
+
+msgctxt "field:galeno.medicament,sale_kind:"
+msgid "Sale kind"
+msgstr "Tipo de venta"
+
+msgctxt "field:galeno.medicament,type_:"
+msgid "Type"
+msgstr "Tipo"
+
+msgctxt "field:galeno.medicament,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.medicament,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.medicament.dose.unit,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.medicament.dose.unit,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.medicament.dose.unit,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:galeno.medicament.dose.unit,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.medicament.dose.unit,name:"
+msgid "Unit"
+msgstr "Unidad"
+
+msgctxt "field:galeno.medicament.dose.unit,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.medicament.dose.unit,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.medicament.dose.unit,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.medicament.frequency,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.medicament.frequency,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.medicament.frequency,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.medicament.frequency,name:"
+msgid "Frequency"
+msgstr "Frecuencia"
+
+msgctxt "field:galeno.medicament.frequency,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.medicament.frequency,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.medicament.frequency,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.occupation,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.occupation,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.occupation,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.occupation,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.occupation,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.occupation,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.occupation,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.occupation,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient,abortions:"
+msgid "Abortions"
+msgstr "Abortos"
+
+msgctxt "field:galeno.patient,activities:"
+msgid "Activities"
+msgstr "Actividades"
+
+msgctxt "field:galeno.patient,actually_pregnant:"
+msgid "Actually pregnant"
+msgstr "Actualmente embarazada"
+
+msgctxt "field:galeno.patient,address:"
+msgid "Address"
+msgstr "Dirección"
+
+msgctxt "field:galeno.patient,age:"
+msgid "Age"
+msgstr "Edad"
+
+msgctxt "field:galeno.patient,age_char:"
+msgid "Age"
+msgstr "Edad"
+
+msgctxt "field:galeno.patient,alive_children:"
+msgid "Alive children"
+msgstr "Hijos vivos"
+
+msgctxt "field:galeno.patient,archive_number:"
+msgid "Archive #"
+msgstr "# Archivo"
+
+msgctxt "field:galeno.patient,background_diseases:"
+msgid "Background Diseases"
+msgstr "Antecedentes enfermedades"
+
+msgctxt "field:galeno.patient,background_family:"
+msgid "Background Family"
+msgstr "Antecedentes familiares"
+
+msgctxt "field:galeno.patient,background_medicaments:"
+msgid "Background Medicaments"
+msgstr "Antecedentes medicamentos"
+
+msgctxt "field:galeno.patient,background_notes:"
+msgid "Background Notes"
+msgstr "Notas de antecedentes"
+
+msgctxt "field:galeno.patient,background_surgeries:"
+msgid "Background Surgeries"
+msgstr "Antecedentes cirugías"
+
+msgctxt "field:galeno.patient,background_tests:"
+msgid "Background Tests"
+msgstr "Antecedentes exámenes"
+
+msgctxt "field:galeno.patient,birthdate:"
+msgid "Birthdate"
+msgstr "Fecha nacimiento"
+
+msgctxt "field:galeno.patient,blood_type:"
+msgid "Blood Type"
+msgstr "Tipo de sangre"
+
+msgctxt "field:galeno.patient,caesarean_labor:"
+msgid "Caesarean labor"
+msgstr "Labor de cesárea"
+
+msgctxt "field:galeno.patient,city:"
+msgid "City"
+msgstr "Ciudad"
+
+msgctxt "field:galeno.patient,civil_status:"
+msgid "Civil Status"
+msgstr "Estado civil"
+
+msgctxt "field:galeno.patient,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.patient,coffe_consumption:"
+msgid "Coffe consumtion"
+msgstr "Consumo de café"
+
+msgctxt "field:galeno.patient,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:galeno.patient,contraceptive_method:"
+msgid "Contraceptive method"
+msgstr "Método anticonceptivo"
+
+msgctxt "field:galeno.patient,country:"
+msgid "Country"
+msgstr "País"
+
+msgctxt "field:galeno.patient,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient,cycle_duration:"
+msgid "Cycle duration in days"
+msgstr "Duración del ciclo en días"
+
+msgctxt "field:galeno.patient,death_children:"
+msgid "Death children"
+msgstr "Hijos muertos"
+
+msgctxt "field:galeno.patient,diet_type:"
+msgid "Diet type"
+msgstr "Tipo dieta"
+
+msgctxt "field:galeno.patient,diet_type_note:"
+msgid "Diet type note"
+msgstr "Nota de tipo de dieta"
+
+msgctxt "field:galeno.patient,disabilities:"
+msgid "Disabilities"
+msgstr "Discapacidades"
+
+msgctxt "field:galeno.patient,disability:"
+msgid "Disability"
+msgstr "Discapacidad"
+
+msgctxt "field:galeno.patient,diseases:"
+msgid "Diseases"
+msgstr "Enfermedades"
+
+msgctxt "field:galeno.patient,drugs:"
+msgid "Drugs"
+msgstr "Drogas"
+
+msgctxt "field:galeno.patient,education_level:"
+msgid "Education level"
+msgstr "Nivel de educación"
+
+msgctxt "field:galeno.patient,email:"
+msgid "e-mail"
+msgstr "e-mail"
+
+msgctxt "field:galeno.patient,emergency_phone:"
+msgid "Emerg. Phone"
+msgstr "Telf. Emergencia"
+
+msgctxt "field:galeno.patient,ethnic_group:"
+msgid "Ethnic Group"
+msgstr "Grupo étnico"
+
+msgctxt "field:galeno.patient,feeding_notes:"
+msgid "Feeding notes"
+msgstr "Notas alimentación"
+
+msgctxt "field:galeno.patient,fertile:"
+msgid "Fertile"
+msgstr "Fértil"
+
+msgctxt "field:galeno.patient,fname:"
+msgid "Names"
+msgstr "Nombres"
+
+msgctxt "field:galeno.patient,gender:"
+msgid "Gender"
+msgstr "Género"
+
+msgctxt "field:galeno.patient,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient,identifier:"
+msgid "Identifier"
+msgstr "Identificador"
+
+msgctxt "field:galeno.patient,identifier_type:"
+msgid "Id. Type"
+msgstr "Identificación"
+
+msgctxt "field:galeno.patient,intersex:"
+msgid "Intersex"
+msgstr "Intersexual"
+
+msgctxt "field:galeno.patient,last_menstruation_date:"
+msgid "Last menstruation date"
+msgstr "Fecha de última menstruación"
+
+msgctxt "field:galeno.patient,laterality:"
+msgid "Laterality"
+msgstr "Lateralidad"
+
+msgctxt "field:galeno.patient,lname:"
+msgid "Surnames"
+msgstr "Apellidos"
+
+msgctxt "field:galeno.patient,meals_number:"
+msgid "Meals per day"
+msgstr "Comidas por día"
+
+msgctxt "field:galeno.patient,menarche:"
+msgid "Menarche age"
+msgstr "Edad de menarquía"
+
+msgctxt "field:galeno.patient,menopause_andropause:"
+msgid "Menopause / Andropause"
+msgstr "Menopausia /  Andropausia"
+
+msgctxt "field:galeno.patient,menopause_andropause_age:"
+msgid "Menupause / Andropause age"
+msgstr "Edad de menopausia / andropausia"
+
+msgctxt "field:galeno.patient,normal_labor:"
+msgid "Normal labor"
+msgstr "Parto normal"
+
+msgctxt "field:galeno.patient,occupation:"
+msgid "Occupation"
+msgstr "Ocupación"
+
+msgctxt "field:galeno.patient,phone:"
+msgid "Phone"
+msgstr "Teléfono"
+
+msgctxt "field:galeno.patient,photo:"
+msgid "Photo"
+msgstr "Foto"
+
+msgctxt "field:galeno.patient,pregnancies:"
+msgid "Pregnancies"
+msgstr "Embarazos"
+
+msgctxt "field:galeno.patient,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient,relation_type:"
+msgid "Relation type"
+msgstr "Tipo de relación"
+
+msgctxt "field:galeno.patient,religion:"
+msgid "Religion"
+msgstr "Religión"
+
+msgctxt "field:galeno.patient,salt_consumption:"
+msgid "Salt consumtion"
+msgstr "Consumo de sal"
+
+msgctxt "field:galeno.patient,sexual_active:"
+msgid "Sexual active"
+msgstr "Sexualmente acitvo"
+
+msgctxt "field:galeno.patient,sexual_notes:"
+msgid "Sexual notes"
+msgstr "Notas sexualidad"
+
+msgctxt "field:galeno.patient,sexual_orientation:"
+msgid "Sexual orientation"
+msgstr "Orientación sexual"
+
+msgctxt "field:galeno.patient,sexual_security:"
+msgid "Sexual security"
+msgstr "Seguridad sexual"
+
+msgctxt "field:galeno.patient,sleep_in_day:"
+msgid "Sleep in day"
+msgstr "Sueño en el día"
+
+msgctxt "field:galeno.patient,sleep_notes:"
+msgid "Sleep notes"
+msgstr "Notas de sueño"
+
+msgctxt "field:galeno.patient,sleep_time:"
+msgid "Sleep time in hours"
+msgstr "Tiempo de sueño en horas"
+
+msgctxt "field:galeno.patient,subdivision:"
+msgid "Subdivision"
+msgstr "Provincia"
+
+msgctxt "field:galeno.patient,sugar_consumption:"
+msgid "Sugar consumtion"
+msgstr "Consumo de azúcar"
+
+msgctxt "field:galeno.patient,vaccines:"
+msgid "Vaccines"
+msgstr "Vacunas"
+
+msgctxt "field:galeno.patient,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.activity,activity:"
+msgid "Activity"
+msgstr "Actividad"
+
+msgctxt "field:galeno.patient.activity,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.activity,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.activity,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.activity,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.activity,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.activity,week_hours:"
+msgid "Week hours"
+msgstr "Horas a la semana"
+
+msgctxt "field:galeno.patient.activity,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.activity,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.appointment,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.patient.appointment,color:"
+msgid "color"
+msgstr ""
+
+msgctxt "field:galeno.patient.appointment,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:galeno.patient.appointment,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.appointment,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.appointment,end_date:"
+msgid "End Date"
+msgstr "Fecha finalización"
+
+msgctxt "field:galeno.patient.appointment,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.appointment,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.appointment,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.appointment,professional:"
+msgid "Professional"
+msgstr "Doctor"
+
+msgctxt "field:galeno.patient.appointment,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.appointment,start_date:"
+msgid "Start Date"
+msgstr "Fecha Inicio"
+
+msgctxt "field:galeno.patient.appointment,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:galeno.patient.appointment,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.appointment,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.background.disease,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.background.disease,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.background.disease,disease:"
+msgid "Disease"
+msgstr "Enfermedad"
+
+msgctxt "field:galeno.patient.background.disease,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.background.disease,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.background.disease,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.background.disease,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.background.disease,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.background.disease,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.background.family,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.background.family,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.background.family,disease:"
+msgid "Disease"
+msgstr "Enfermedad"
+
+msgctxt "field:galeno.patient.background.family,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.background.family,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.background.family,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.background.family,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.background.family,relationship:"
+msgid "Relationship"
+msgstr "Relación"
+
+msgctxt "field:galeno.patient.background.family,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.background.family,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.background.medicament,amount:"
+msgid "Amount per week"
+msgstr "Cantidad por semana"
+
+msgctxt "field:galeno.patient.background.medicament,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.background.medicament,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.background.medicament,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.background.medicament,medicament:"
+msgid "Medicament"
+msgstr ""
+
+msgctxt "field:galeno.patient.background.medicament,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.background.medicament,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.background.medicament,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.background.medicament,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.background.medicament,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.background.surgery,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.background.surgery,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.background.surgery,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.background.surgery,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.background.surgery,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.background.surgery,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.background.surgery,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.background.surgery,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.background.test,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.background.test,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.background.test,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.background.test,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.background.test,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.background.test,patient_gender:"
+msgid "Patient gender"
+msgstr "Género del paciente"
+
+msgctxt "field:galeno.patient.background.test,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.background.test,test:"
+msgid "Test"
+msgstr "Examen"
+
+msgctxt "field:galeno.patient.background.test,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.background.test,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.disability,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.disability,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.disability,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:galeno.patient.disability,disease:"
+msgid "Disease"
+msgstr "Enfermedad"
+
+msgctxt "field:galeno.patient.disability,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.disability,legal_reference:"
+msgid "Legal reference"
+msgstr "Nro. carnet."
+
+msgctxt "field:galeno.patient.disability,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.disability,percentage:"
+msgid "Percentage"
+msgstr "Porcentaje"
+
+msgctxt "field:galeno.patient.disability,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.disability,type_:"
+msgid "Type"
+msgstr "Tipo"
+
+msgctxt "field:galeno.patient.disability,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.disability,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.disease,contagious:"
+msgid "Contagious"
+msgstr "Contagiosa"
+
+msgctxt "field:galeno.patient.disease,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.disease,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.disease,date:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "field:galeno.patient.disease,disease:"
+msgid "Disease"
+msgstr "Enfermedad"
+
+msgctxt "field:galeno.patient.disease,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.disease,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.disease,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.disease,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.disease,severity:"
+msgid "Severity"
+msgstr "Severidad"
+
+msgctxt "field:galeno.patient.disease,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.disease,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.drug,abstinence_time:"
+msgid "Abstinence time"
+msgstr "Tiempo de abstinencia"
+
+msgctxt "field:galeno.patient.drug,consume:"
+msgid "Consume"
+msgstr "Consumo"
+
+msgctxt "field:galeno.patient.drug,consume_amount:"
+msgid "Consume Amount"
+msgstr "Cantidad de consumo"
+
+msgctxt "field:galeno.patient.drug,consume_time:"
+msgid "Consume time"
+msgstr "Tiempo de consumo"
+
+msgctxt "field:galeno.patient.drug,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.drug,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.drug,drug:"
+msgid "Drug"
+msgstr ""
+
+msgctxt "field:galeno.patient.drug,ex_consume:"
+msgid "Ex consume"
+msgstr "Ex consumidor"
+
+msgctxt "field:galeno.patient.drug,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.drug,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.drug,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.drug,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.drug,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.drug,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.evaluation,bmi:"
+msgid "BMI"
+msgstr ""
+
+msgctxt "field:galeno.patient.evaluation,breathing_rate:"
+msgid "Breathing rate"
+msgstr "Frecuencia respiratoria"
+
+msgctxt "field:galeno.patient.evaluation,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.patient.evaluation,color:"
+msgid "color"
+msgstr "Color"
+
+msgctxt "field:galeno.patient.evaluation,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.evaluation,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.evaluation,dehydration:"
+msgid "Dehydration"
+msgstr "Deshidratación"
+
+msgctxt "field:galeno.patient.evaluation,diagnostics:"
+msgid "Diagnostics"
+msgstr "Diagnósticos"
+
+msgctxt "field:galeno.patient.evaluation,diastolic_pressure:"
+msgid "Diastolic Pressure"
+msgstr "Presión Diastólica"
+
+msgctxt "field:galeno.patient.evaluation,end_date:"
+msgid "End Date"
+msgstr "Fecha finalización"
+
+msgctxt "field:galeno.patient.evaluation,heart_rate:"
+msgid "Heart rate"
+msgstr "Ritmo cardiaco"
+
+msgctxt "field:galeno.patient.evaluation,heigth:"
+msgid "Heigth"
+msgstr "Altura"
+
+msgctxt "field:galeno.patient.evaluation,hip:"
+msgid "Hip"
+msgstr "Cadera"
+
+msgctxt "field:galeno.patient.evaluation,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.evaluation,malnutrition:"
+msgid "Malnutrition"
+msgstr "Desnutrición"
+
+msgctxt "field:galeno.patient.evaluation,ms_abstraction:"
+msgid "Abstraction"
+msgstr "Abstracción"
+
+msgctxt "field:galeno.patient.evaluation,ms_calc_skill:"
+msgid "Calculation skills"
+msgstr "Habilidades de cálculo"
+
+msgctxt "field:galeno.patient.evaluation,ms_discernment:"
+msgid "Discernment"
+msgstr "Discernimiento"
+
+msgctxt "field:galeno.patient.evaluation,ms_eye:"
+msgid "Eye response"
+msgstr "Respuesta ocular"
+
+msgctxt "field:galeno.patient.evaluation,ms_glasgow_score:"
+msgid "Glasgow score"
+msgstr "Puntage de Glasgow"
+
+msgctxt "field:galeno.patient.evaluation,ms_memory:"
+msgid "Memory"
+msgstr "Memoria"
+
+msgctxt "field:galeno.patient.evaluation,ms_mood:"
+msgid "Mood"
+msgstr "Estado anímico"
+
+msgctxt "field:galeno.patient.evaluation,ms_motor:"
+msgid "Motor response"
+msgstr "Respuesta motora"
+
+msgctxt "field:galeno.patient.evaluation,ms_notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.evaluation,ms_object_recognition:"
+msgid "Object recognition"
+msgstr "Reconoce objetos"
+
+msgctxt "field:galeno.patient.evaluation,ms_orientation:"
+msgid "Orientation"
+msgstr "Orientación"
+
+msgctxt "field:galeno.patient.evaluation,ms_percetption_reality:"
+msgid "Perception reality"
+msgstr "Percepción de la realidad"
+
+msgctxt "field:galeno.patient.evaluation,ms_verbal:"
+msgid "Verbal response"
+msgstr "Respuesta verbal"
+
+msgctxt "field:galeno.patient.evaluation,ms_violent_behavior:"
+msgid "Violent behavior"
+msgstr "Comportamiento violento"
+
+msgctxt "field:galeno.patient.evaluation,ms_vocabulary:"
+msgid "Vocabulary"
+msgstr "Vocabulario"
+
+msgctxt "field:galeno.patient.evaluation,oxygen_saturation:"
+msgid "Oxygen saturation"
+msgstr "Saturación oxígeno"
+
+msgctxt "field:galeno.patient.evaluation,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.evaluation,patient_age:"
+msgid "Age"
+msgstr "Edad"
+
+msgctxt "field:galeno.patient.evaluation,patient_gender:"
+msgid "Gender"
+msgstr "Género"
+
+msgctxt "field:galeno.patient.evaluation,procedures:"
+msgid "Procedures"
+msgstr "Procedimientos"
+
+msgctxt "field:galeno.patient.evaluation,professional:"
+msgid "Professional"
+msgstr "Doctor"
+
+msgctxt "field:galeno.patient.evaluation,reason:"
+msgid "Reason"
+msgstr "Razón"
+
+msgctxt "field:galeno.patient.evaluation,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.evaluation,requested_tests:"
+msgid "Tests"
+msgstr "Exámenes"
+
+msgctxt "field:galeno.patient.evaluation,rpe_abdomen_adbominal_wall:"
+msgid "Abdominal wall"
+msgstr "Pared abdominal"
+
+msgctxt "field:galeno.patient.evaluation,rpe_abdomen_viscera:"
+msgid "Viscera"
+msgstr "Vísceras"
+
+msgctxt "field:galeno.patient.evaluation,rpe_chest_heart:"
+msgid "Heart"
+msgstr "Corazón"
+
+msgctxt "field:galeno.patient.evaluation,rpe_chest_lungs:"
+msgid "Lungs"
+msgstr "Pulmones"
+
+msgctxt "field:galeno.patient.evaluation,rpe_chest_mammary_glands:"
+msgid "Mammary glands"
+msgstr "Glándulas mamarias"
+
+msgctxt "field:galeno.patient.evaluation,rpe_chest_ribs:"
+msgid "Ribs"
+msgstr "Costillas"
+
+msgctxt "field:galeno.patient.evaluation,rpe_column_deviation:"
+msgid "Deviation"
+msgstr "Desviación"
+
+msgctxt "field:galeno.patient.evaluation,rpe_column_flexibility:"
+msgid "Flexibility"
+msgstr "Flexibilidad"
+
+msgctxt "field:galeno.patient.evaluation,rpe_column_pain:"
+msgid "Pain"
+msgstr "Dolor"
+
+msgctxt "field:galeno.patient.evaluation,rpe_ear_eardrums:"
+msgid "Eardrums"
+msgstr "Tímpanos"
+
+msgctxt "field:galeno.patient.evaluation,rpe_ear_extern:"
+msgid "Extern"
+msgstr "Oído externo"
+
+msgctxt "field:galeno.patient.evaluation,rpe_ear_pavilion:"
+msgid "Pavilion"
+msgstr "Pabellón"
+
+msgctxt "field:galeno.patient.evaluation,rpe_eyes_conjunctive:"
+msgid "Conjunctive"
+msgstr "Conjuntiva"
+
+msgctxt "field:galeno.patient.evaluation,rpe_eyes_motility:"
+msgid "Motility"
+msgstr "Motilidad"
+
+msgctxt "field:galeno.patient.evaluation,rpe_eyes_pupils:"
+msgid "Pupils"
+msgstr "Pupilas"
+
+msgctxt "field:galeno.patient.evaluation,rpe_limbs_inferior:"
+msgid "Inferior limbs"
+msgstr "Extremidades inferiores"
+
+msgctxt "field:galeno.patient.evaluation,rpe_limbs_superior:"
+msgid "Superior limbs"
+msgstr "Extremidades superiores"
+
+msgctxt "field:galeno.patient.evaluation,rpe_limbs_vascular:"
+msgid "Vascular"
+msgstr "Vascular"
+
+msgctxt "field:galeno.patient.evaluation,rpe_neck_mobility:"
+msgid "Mobility"
+msgstr "Movilidad"
+
+msgctxt "field:galeno.patient.evaluation,rpe_neck_thyroid:"
+msgid "Tyroid masses"
+msgstr "Masas en la tiroides"
+
+msgctxt "field:galeno.patient.evaluation,rpe_neuro_march:"
+msgid "March"
+msgstr "Marcha"
+
+msgctxt "field:galeno.patient.evaluation,rpe_neuro_sensivity:"
+msgid "Sensivity"
+msgstr "Sensibilidad"
+
+msgctxt "field:galeno.patient.evaluation,rpe_neuro_strength:"
+msgid "Strength"
+msgstr "Fuerza"
+
+msgctxt "field:galeno.patient.evaluation,rpe_nose_mocous:"
+msgid "Mocous"
+msgstr "Mucosa"
+
+msgctxt "field:galeno.patient.evaluation,rpe_nose_paranasal_sinuses:"
+msgid "Paranasal sinuses"
+msgstr "Senos paranasales"
+
+msgctxt "field:galeno.patient.evaluation,rpe_nose_partition:"
+msgid "Partition"
+msgstr "Partición"
+
+msgctxt "field:galeno.patient.evaluation,rpe_nose_turbinates:"
+msgid "Turbinates"
+msgstr "Cornetes"
+
+msgctxt "field:galeno.patient.evaluation,rpe_notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.evaluation,rpe_oropharynx_lips:"
+msgid "Lips"
+msgstr "Labios"
+
+msgctxt "field:galeno.patient.evaluation,rpe_oropharynx_pharynx:"
+msgid "Pharynx"
+msgstr "Faringe"
+
+msgctxt "field:galeno.patient.evaluation,rpe_oropharynx_teeth:"
+msgid "Teeth"
+msgstr "Dientes"
+
+msgctxt "field:galeno.patient.evaluation,rpe_oropharynx_tongue:"
+msgid "Tongue"
+msgstr "Lengua"
+
+msgctxt "field:galeno.patient.evaluation,rpe_oropharynx_tonsils:"
+msgid "Tonsils"
+msgstr "Amígdalas"
+
+msgctxt "field:galeno.patient.evaluation,rpe_pelvis_genitals:"
+msgid "Genitals"
+msgstr "Genitales"
+
+msgctxt "field:galeno.patient.evaluation,rpe_pelvis_pelvis:"
+msgid "Pelvis"
+msgstr "Pelvis"
+
+msgctxt "field:galeno.patient.evaluation,rpe_skin_facer:"
+msgid "Skin Facer"
+msgstr "Melanoma"
+
+msgctxt "field:galeno.patient.evaluation,rpe_skin_scars:"
+msgid "Scars"
+msgstr "Cicatrices"
+
+msgctxt "field:galeno.patient.evaluation,rpe_skin_tatoo:"
+msgid "Tatoo"
+msgstr "Tatuaje"
+
+msgctxt "field:galeno.patient.evaluation,so_cardiovascular:"
+msgid "Cardiovascular"
+msgstr ""
+
+msgctxt "field:galeno.patient.evaluation,so_digestive:"
+msgid "Digestive"
+msgstr "Digestivo"
+
+msgctxt "field:galeno.patient.evaluation,so_endocrine:"
+msgid "Endocrine"
+msgstr "Endócrino"
+
+msgctxt "field:galeno.patient.evaluation,so_geninourinary:"
+msgid "Genitourinary"
+msgstr "Genitourinario"
+
+msgctxt "field:galeno.patient.evaluation,so_hemolymphatic:"
+msgid "Hemolymphatic"
+msgstr "Hemolinfático"
+
+msgctxt "field:galeno.patient.evaluation,so_nervous:"
+msgid "Nervous"
+msgstr "Nervioso"
+
+msgctxt "field:galeno.patient.evaluation,so_respiratory:"
+msgid "Respiratory"
+msgstr "Respiratoria"
+
+msgctxt "field:galeno.patient.evaluation,so_sense:"
+msgid "Sense"
+msgstr "Sensibilidad"
+
+msgctxt "field:galeno.patient.evaluation,so_skeletal_muscle:"
+msgid "Skeletal - muscle"
+msgstr "Músculo - Esquelético"
+
+msgctxt "field:galeno.patient.evaluation,start_date:"
+msgid "Start Date"
+msgstr "Fecha Inicio"
+
+msgctxt "field:galeno.patient.evaluation,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:galeno.patient.evaluation,symptoms:"
+msgid "Illness symptoms"
+msgstr "Síntomas"
+
+msgctxt "field:galeno.patient.evaluation,systolic_pressure:"
+msgid "Systolic Pressure"
+msgstr "Presión sistólica"
+
+msgctxt "field:galeno.patient.evaluation,temperature:"
+msgid "Temperature"
+msgstr "Temperatura"
+
+msgctxt "field:galeno.patient.evaluation,treatment:"
+msgid "Treatment"
+msgstr "Tratamiento"
+
+msgctxt "field:galeno.patient.evaluation,waist:"
+msgid "Waist"
+msgstr "Cintura"
+
+msgctxt "field:galeno.patient.evaluation,weight:"
+msgid "Weight"
+msgstr ""
+
+msgctxt "field:galeno.patient.evaluation,whr:"
+msgid "WHR"
+msgstr ""
+
+msgctxt "field:galeno.patient.evaluation,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.evaluation,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.evaluation.diagnosis,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.evaluation.diagnosis,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.evaluation.diagnosis,disease:"
+msgid "Disease"
+msgstr "Enfermedad"
+
+msgctxt "field:galeno.patient.evaluation.diagnosis,evaluation:"
+msgid "Evaluation"
+msgstr ""
+
+msgctxt "field:galeno.patient.evaluation.diagnosis,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.evaluation.diagnosis,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.evaluation.diagnosis,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.evaluation.diagnosis,type_:"
+msgid "Type"
+msgstr "Tipo"
+
+msgctxt "field:galeno.patient.evaluation.diagnosis,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.evaluation.diagnosis,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.evaluation.procedure,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.evaluation.procedure,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.evaluation.procedure,evaluation:"
+msgid "Evaluation"
+msgstr "Evaluación"
+
+msgctxt "field:galeno.patient.evaluation.procedure,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.evaluation.procedure,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.evaluation.procedure,procedure:"
+msgid "Procedure"
+msgstr "Procedimiento"
+
+msgctxt "field:galeno.patient.evaluation.procedure,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.evaluation.procedure,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.evaluation.procedure,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.evaluation.test,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.patient.evaluation.test,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.evaluation.test,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.evaluation.test,evaluation:"
+msgid "Evaluation"
+msgstr "Evaluación"
+
+msgctxt "field:galeno.patient.evaluation.test,file_id:"
+msgid "File ID"
+msgstr "Identificador del fichero"
+
+msgctxt "field:galeno.patient.evaluation.test,filename:"
+msgid "Filename"
+msgstr "Nombre de archivo"
+
+msgctxt "field:galeno.patient.evaluation.test,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.evaluation.test,patient_gender:"
+msgid "Patient gender"
+msgstr "Género del paciente"
+
+msgctxt "field:galeno.patient.evaluation.test,reason:"
+msgid "Reason"
+msgstr "Razón"
+
+msgctxt "field:galeno.patient.evaluation.test,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.evaluation.test,result_data:"
+msgid "Result data"
+msgstr "Archivo resultado"
+
+msgctxt "field:galeno.patient.evaluation.test,result_date:"
+msgid "Result Date"
+msgstr "Fecha de resultado"
+
+msgctxt "field:galeno.patient.evaluation.test,result_notes:"
+msgid "Result"
+msgstr "Resultado"
+
+msgctxt "field:galeno.patient.evaluation.test,test:"
+msgid "Test"
+msgstr "Examen"
+
+msgctxt "field:galeno.patient.evaluation.test,with_result:"
+msgid "With result"
+msgstr "Con resultados"
+
+msgctxt "field:galeno.patient.evaluation.test,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.evaluation.test,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.photo,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.photo,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.photo,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.photo,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.photo,photo:"
+msgid "Photo"
+msgstr "Foto"
+
+msgctxt "field:galeno.patient.photo,photo_id:"
+msgid "Photo ID"
+msgstr "Foto ID"
+
+msgctxt "field:galeno.patient.photo,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.photo,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.photo,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.prescription,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.prescription,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.prescription,date:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "field:galeno.patient.prescription,evaluation:"
+msgid "Evaluation"
+msgstr "Evaluación"
+
+msgctxt "field:galeno.patient.prescription,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.prescription,lines:"
+msgid "Prescription"
+msgstr "Prescripción"
+
+msgctxt "field:galeno.patient.prescription,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.prescription,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.prescription,professional:"
+msgid "Professional"
+msgstr "Doctor"
+
+msgctxt "field:galeno.patient.prescription,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.prescription,state:"
+msgid "State"
+msgstr "Estado"
+
+msgctxt "field:galeno.patient.prescription,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.prescription,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.prescription.line,active_component:"
+msgid "Active Commponent"
+msgstr "Componente activo"
+
+msgctxt "field:galeno.patient.prescription.line,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.prescription.line,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.prescription.line,dose:"
+msgid "Dose"
+msgstr "Dosis"
+
+msgctxt "field:galeno.patient.prescription.line,dose_unit:"
+msgid "Dose Unit"
+msgstr "Unidad dosis"
+
+msgctxt "field:galeno.patient.prescription.line,duration:"
+msgid "Duration"
+msgstr "Duración"
+
+msgctxt "field:galeno.patient.prescription.line,frequency:"
+msgid "Frequency"
+msgstr "Frecuencia"
+
+msgctxt "field:galeno.patient.prescription.line,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.prescription.line,medicament:"
+msgid "Medicament"
+msgstr "Medicamento"
+
+msgctxt "field:galeno.patient.prescription.line,prescription:"
+msgid "Prescription"
+msgstr ""
+
+msgctxt "field:galeno.patient.prescription.line,prescription_state:"
+msgid "Prescription State"
+msgstr "Estado de prescripción"
+
+msgctxt "field:galeno.patient.prescription.line,quantity:"
+msgid "Quantity"
+msgstr "Cantidad"
+
+msgctxt "field:galeno.patient.prescription.line,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.prescription.line,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.prescription.line,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.vaccine,age_char:"
+msgid "Age"
+msgstr "Edad"
+
+msgctxt "field:galeno.patient.vaccine,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.patient.vaccine,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.vaccine,date:"
+msgid "Date"
+msgstr "Fecha"
+
+msgctxt "field:galeno.patient.vaccine,dose:"
+msgid "Dose"
+msgstr "Dosis"
+
+msgctxt "field:galeno.patient.vaccine,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.vaccine,next_date:"
+msgid "Next Date"
+msgstr "Siguiente fecha"
+
+msgctxt "field:galeno.patient.vaccine,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.vaccine,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.patient.vaccine,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.vaccine,route:"
+msgid "Route administration"
+msgstr "Ruta de administración"
+
+msgctxt "field:galeno.patient.vaccine,vaccine:"
+msgid "Vaccine"
+msgstr "Vacuna"
+
+msgctxt "field:galeno.patient.vaccine,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.patient.vaccine,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.procedure,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.procedure,core:"
+msgid "Core"
+msgstr "Núcleo"
+
+msgctxt "field:galeno.procedure,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.procedure,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.procedure,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.procedure,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.procedure,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.procedure,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.procedure,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.professional,active:"
+msgid "Active"
+msgstr "Activo"
+
+msgctxt "field:galeno.professional,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.professional,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.professional,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.professional,medical_identifier:"
+msgid "Medical Identifier"
+msgstr "Identificador de Médico"
+
+msgctxt "field:galeno.professional,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.professional,prefix:"
+msgid "Prefix"
+msgstr "Prefijo"
+
+msgctxt "field:galeno.professional,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.professional,speciality:"
+msgid "Speciality"
+msgstr "Especialidad"
+
+msgctxt "field:galeno.professional,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.professional,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.speciality,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.speciality,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.speciality,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.speciality,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.speciality,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.speciality,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.speciality,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.speciality,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.test,category:"
+msgid "Category"
+msgstr "Categoría"
+
+msgctxt "field:galeno.test,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.test,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.test,gender:"
+msgid "Gender"
+msgstr "Género"
+
+msgctxt "field:galeno.test,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.test,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.test,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.test,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.test,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.test.category,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.test.category,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.test.category,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.test.category,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.test.category,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.test.category,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.test.category,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.vaccine,code:"
+msgid "Code"
+msgstr "Código"
+
+msgctxt "field:galeno.vaccine,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.vaccine,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.vaccine,description:"
+msgid "Description"
+msgstr "Descripción"
+
+msgctxt "field:galeno.vaccine,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.vaccine,name:"
+msgid "Name"
+msgstr "Nombre"
+
+msgctxt "field:galeno.vaccine,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.vaccine,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.vaccine,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:res.user,country:"
+msgid "Country"
+msgstr "País"
+
+msgctxt "field:res.user,professional:"
+msgid "Professional"
+msgstr "Doctor"
+
+msgctxt "help:galeno.disease,category:"
+msgid ""
+"Select the main category for this disease This is usually associated to the "
+"standard. For instance, the chapter on the ICD-10 will be the main category "
+"for de disease"
+msgstr ""
+"Select the main category for this disease This is usually associated to the "
+"standard. For instance, the chapter on the ICD-10 will be the main category "
+"for de disease"
+
+msgctxt "help:galeno.disease,chromosome:"
+msgid "chromosome number"
+msgstr "Número de cromosoma"
+
+msgctxt "help:galeno.disease,code:"
+msgid "Disease code (eg, ICD-10)"
+msgstr "Código enfermedad (ej. ICD-10)"
+
+msgctxt "help:galeno.disease,gene:"
+msgid "Name of the gene(s) affected"
+msgstr "Nombre del gen(es) afectado(s)"
+
+msgctxt "help:galeno.disease,groups:"
+msgid ""
+"Specify the groups this pathology belongs. Some automated processes act upon"
+" the code of the group"
+msgstr ""
+"Especifique los grupos a los que pertenece esta patología. Algunos procesos "
+"automatizados actúan según el código del grupo"
+
+msgctxt "help:galeno.disease,protein:"
+msgid "Name of the protein(s) affected"
+msgstr "Nombre de la proteína(s) afectadas"
+
+msgctxt "help:galeno.medicament,active:"
+msgid "Uncheck to exclude from future use."
+msgstr "Desmarcar para eliminar el uso del registro en el futuro."
+
+msgctxt "help:galeno.medicament,code:"
+msgid "Sanitary registration number"
+msgstr "Número de registro sanitario"
+
+msgctxt "help:galeno.medicament,composition:"
+msgid "Active principle"
+msgstr "Principo activo"
+
+msgctxt "help:galeno.medicament,sale_kind:"
+msgid "Free or under prescription"
+msgstr "Libre o bajo receta médica"
+
+msgctxt "help:galeno.medicament,type_:"
+msgid "Generic or Brand"
+msgstr "Genérico o Marca"
+
+msgctxt "help:galeno.medicament.frequency,name:"
+msgid "Common frequency name"
+msgstr ""
+
+msgctxt "help:galeno.patient,activities:"
+msgid "List of activities: sports, extra works and other activities"
+msgstr "Lista de actividades: deportes, otras actividades extra laborales"
+
+msgctxt "help:galeno.patient,archive_number:"
+msgid "Physical folder number"
+msgstr "Número de carpeta física"
+
+msgctxt "help:galeno.patient,cycle_duration:"
+msgid "Cycle duration in days"
+msgstr "Duración del ciclo en días"
+
+msgctxt "help:galeno.patient,drugs:"
+msgid "List of drug consumption"
+msgstr "Lista de consumo de drogas"
+
+msgctxt "help:galeno.patient,emergency_phone:"
+msgid "Emergency Phone"
+msgstr "Teléfono de emergencia"
+
+msgctxt "help:galeno.patient,identifier:"
+msgid "Personal Identifier, Eg:CI/RUC"
+msgstr "Identificador, ej. CI/RUC"
+
+msgctxt "help:galeno.patient,meals_number:"
+msgid "Sleep hours per day"
+msgstr "Horas de sueño por día"
+
+msgctxt "help:galeno.patient,menarche:"
+msgid "Age of first menstruation"
+msgstr "Edad de primera menstruación"
+
+msgctxt "help:galeno.patient,pregnancies:"
+msgid "Number of pregnancies of the patient"
+msgstr "Número de embarazos de la paciente"
+
+msgctxt "help:galeno.patient,sexual_security:"
+msgid "Security of sexual practices"
+msgstr ""
+
+msgctxt "help:galeno.patient,sleep_time:"
+msgid "Sleep hours per day"
+msgstr "Horas sueño por día"
+
+msgctxt "help:galeno.patient.activity,week_hours:"
+msgid "Week time in hours, between 1 and 56"
+msgstr "Tiempo semanal en horas, entre 1 y 56"
+
+msgctxt "help:galeno.patient.background.family,relationship:"
+msgid "Mother, Father, Uncle, etc."
+msgstr "Madre, Padre, Tío, etc."
+
+msgctxt "help:galeno.patient.background.medicament,amount:"
+msgid "Ex. 8 pills per week"
+msgstr "Ej. 8 píldoras por semana"
+
+msgctxt "help:galeno.patient.disability,legal_reference:"
+msgid "legal document that verifies the authenticity of the condition"
+msgstr "Documento que certifica la autenticiadad de la condición de salud."
+
+msgctxt "help:galeno.patient.drug,abstinence_time:"
+msgid "It is considered abstinence after three months"
+msgstr "Se considera abstinencia después de tres meses"
+
+msgctxt "help:galeno.patient.drug,consume_amount:"
+msgid "Amount per week"
+msgstr "Cantidad por semana"
+
+msgctxt "help:galeno.patient.drug,consume_time:"
+msgid "Time in months"
+msgstr "Tiempo en meses"
+
+msgctxt "help:galeno.patient.evaluation,heigth:"
+msgid "Heigth in cm"
+msgstr "Altura en cm"
+
+msgctxt "help:galeno.patient.evaluation,hip:"
+msgid "in cm"
+msgstr "en cm"
+
+msgctxt "help:galeno.patient.evaluation,ms_glasgow_score:"
+msgid "Glasgow Score: < 9 severe, 9 -12 moderate, > 13 minor"
+msgstr "Glasgow: < 9 severo, 9 -12 moderado, > 13 menor"
+
+msgctxt "help:galeno.patient.evaluation,oxygen_saturation:"
+msgid "% O2"
+msgstr ""
+
+msgctxt "help:galeno.patient.evaluation,temperature:"
+msgid "% Celcius"
+msgstr ""
+
+msgctxt "help:galeno.patient.evaluation,waist:"
+msgid "in cm"
+msgstr "en cm"
+
+msgctxt "help:galeno.patient.evaluation,weight:"
+msgid "Weight in Kg"
+msgstr "Peso en Kg"
+
+msgctxt "help:galeno.patient.evaluation.test,result_data:"
+msgid "Load result data, Ex: image"
+msgstr "Cargar datos de resultados, Ej. imagen"
+
+msgctxt "help:galeno.patient.vaccine,date:"
+msgid "Date of actual dosis"
+msgstr "Fecha de la dosis actual"
+
+msgctxt "help:galeno.patient.vaccine,next_date:"
+msgid "Date of next dosis"
+msgstr "Fecha de la siguiente dosis"
+
+msgctxt "help:galeno.professional,active:"
+msgid "Uncheck to exclude from future use."
+msgstr "Desmarcar para eliminar el uso del registro en el futuro."
+
+msgctxt "help:galeno.professional,prefix:"
+msgid "Ex: Mr., Mrs, etc"
+msgstr "Ej. Sr. Sra, etc"
+
+msgctxt "model:galeno.configuration,name:"
+msgid "Galeno Configuration"
+msgstr "Configuración"
+
+msgctxt "model:galeno.configuration.duration,name:"
+msgid "Galeno Configuration Duration"
+msgstr "Configuración duraciones"
+
+msgctxt "model:galeno.configuration.sequence,name:"
+msgid "Galeno Configuration Sequence"
+msgstr "Configuración de secuencias"
+
+msgctxt "model:galeno.contraceptive.method,name:"
+msgid "Occupation"
+msgstr "Ocupación"
+
+msgctxt "model:galeno.disease,name:"
+msgid "Disease ICD10"
+msgstr "Enfermedad ICD10"
+
+msgctxt "model:galeno.disease.category,name:"
+msgid "Disease Categories"
+msgstr "Categorías de enfermedades"
+
+msgctxt "model:galeno.disease.group,name:"
+msgid "Disease Group"
+msgstr "Grupo de enfermedades"
+
+msgctxt "model:galeno.disease.group.member,name:"
+msgid "Disease group members"
+msgstr "Miembros"
+
+msgctxt "model:galeno.drug,name:"
+msgid "Drug"
+msgstr "Drogas"
+
+msgctxt "model:galeno.ethnic.group,name:"
+msgid "Ethnic Group"
+msgstr "Grupo étnico"
+
+msgctxt "model:galeno.medicament,name:"
+msgid "Medicament"
+msgstr "Medicamento"
+
+msgctxt "model:galeno.medicament.dose.unit,name:"
+msgid "Dose Unit"
+msgstr "Unidad de dosis"
+
+msgctxt "model:galeno.medicament.frequency,name:"
+msgid "Medicament Frequency"
+msgstr "Frecuencia de medicamentos"
+
+msgctxt "model:galeno.occupation,name:"
+msgid "Occupation"
+msgstr "Ocupación"
+
+msgctxt "model:galeno.patient,name:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "model:galeno.patient.activity,name:"
+msgid "Patient Activity"
+msgstr "Actividad del paciente"
+
+msgctxt "model:galeno.patient.appointment,name:"
+msgid "Patient Appointment"
+msgstr "Cita de paciente"
+
+msgctxt "model:galeno.patient.background.disease,name:"
+msgid "Galeno Disease Background"
+msgstr "Antecedentes enfermedades"
+
+msgctxt "model:galeno.patient.background.family,name:"
+msgid "Galeno Family Background"
+msgstr "Antecedentes familiares"
+
+msgctxt "model:galeno.patient.background.medicament,name:"
+msgid "Galeno Medicament Background"
+msgstr "Antecedentes medicamentos"
+
+msgctxt "model:galeno.patient.background.surgery,name:"
+msgid "Galeno Surgery Background"
+msgstr "Antecedentes cirugías"
+
+msgctxt "model:galeno.patient.background.test,name:"
+msgid "Galeno Test Background"
+msgstr "Antecedentes de exámentes"
+
+msgctxt "model:galeno.patient.disability,name:"
+msgid "Patient Disability"
+msgstr "Discapacidad de paciente"
+
+msgctxt "model:galeno.patient.disease,name:"
+msgid "Patient Disease"
+msgstr "Enfermedad de Paciente"
+
+msgctxt "model:galeno.patient.drug,name:"
+msgid "Patient Drug"
+msgstr "Droga del paciente"
+
+msgctxt "model:galeno.patient.evaluation,name:"
+msgid "Patient Evaluation"
+msgstr "Evaluación de paciente"
+
+msgctxt "model:galeno.patient.evaluation.diagnosis,name:"
+msgid "Patient Evaluation Diagnosis"
+msgstr "Diagnístico de evaluación"
+
+msgctxt "model:galeno.patient.evaluation.procedure,name:"
+msgid "Patient Evaluation Procedure"
+msgstr "Procedimientos realizados al paciente"
+
+msgctxt "model:galeno.patient.evaluation.test,name:"
+msgid "Patient Evaluation Test"
+msgstr "Exámen solicitado"
+
+msgctxt "model:galeno.patient.photo,name:"
+msgid "Patient Photo"
+msgstr "Foto del paciente"
+
+msgctxt "model:galeno.patient.prescription,name:"
+msgid "Patient Prescription"
+msgstr "Prescripción de paciente"
+
+msgctxt "model:galeno.patient.prescription.line,name:"
+msgid "Patient Prescription Line"
+msgstr "Línea de prescipción"
+
+msgctxt "model:galeno.patient.vaccine,name:"
+msgid "Patient Vaccine"
+msgstr "Vacunas de paciente"
+
+msgctxt "model:galeno.procedure,name:"
+msgid "Procedure"
+msgstr "Procedimiento"
+
+msgctxt "model:galeno.professional,name:"
+msgid "Professional"
+msgstr "Doctor"
+
+msgctxt "model:galeno.speciality,name:"
+msgid "Speciality"
+msgstr "Especialidad"
+
+msgctxt "model:galeno.test,name:"
+msgid "Galeno Test"
+msgstr "Exámen"
+
+msgctxt "model:galeno.test.category,name:"
+msgid "Test Category"
+msgstr "Categoría de examen"
+
+msgctxt "model:galeno.vaccine,name:"
+msgid "Vaccine"
+msgstr "Vacuna"
+
+msgctxt "model:ir.action,name:act_contraceptive_method_form"
+msgid "Contraceptives"
+msgstr "Anticonceptivos"
+
+msgctxt "model:ir.action,name:act_disease_category_form"
+msgid "Categories"
+msgstr "Categorías de tercero"
+
+msgctxt "model:ir.action,name:act_disease_category_tree"
+msgid "Categories"
+msgstr "Categorias"
+
+msgctxt "model:ir.action,name:act_disease_form"
+msgid "Diseases"
+msgstr "Enfermedades"
+
+msgctxt "model:ir.action,name:act_disease_group_form"
+msgid "Groups"
+msgstr "Grupos"
+
+msgctxt "model:ir.action,name:act_drug_form"
+msgid "Drugs"
+msgstr "Drogas"
+
+msgctxt "model:ir.action,name:act_ethnic_group_form"
+msgid "Ethnic Groups"
+msgstr "Grupos étnicos"
+
+msgctxt "model:ir.action,name:act_galeno_configuration_form"
+msgid "Configuration"
+msgstr "Configuración"
+
+msgctxt "model:ir.action,name:act_medicament_dose_unit_form"
+msgid "Dose Units"
+msgstr "Unidades de dosis"
+
+msgctxt "model:ir.action,name:act_medicament_form"
+msgid "Medicaments"
+msgstr "Medicamentos"
+
+msgctxt "model:ir.action,name:act_medicament_frequency_form"
+msgid "Medicament Frequency"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_occupation_form"
+msgid "Occupations"
+msgstr "Ocupaciones"
+
+msgctxt "model:ir.action,name:act_patient_appointment_calendar"
+msgid "Appointments Calendar"
+msgstr "Calendario de citas"
+
+msgctxt "model:ir.action,name:act_patient_appointment_form"
+msgid "Appointments List"
+msgstr "Lista de citas"
+
+msgctxt "model:ir.action,name:act_patient_appointments"
+msgid "Appointments"
+msgstr "Citas"
+
+msgctxt "model:ir.action,name:act_patient_evaluation_form"
+msgid "Evaluations"
+msgstr "Evaluaciones"
+
+msgctxt "model:ir.action,name:act_patient_evaluation_test_form"
+msgid "Requested tests"
+msgstr "Exámenes solicitados"
+
+msgctxt "model:ir.action,name:act_patient_evaluations"
+msgid "Evaluations"
+msgstr ""
+
+msgctxt "model:ir.action,name:act_patient_form"
+msgid "Patients"
+msgstr "Pacientes"
+
+msgctxt "model:ir.action,name:act_patient_prescription_form"
+msgid "Prescriptions"
+msgstr "Prescripciones"
+
+msgctxt "model:ir.action,name:act_patient_prescriptions"
+msgid "Prescriptions"
+msgstr "Prescripciones"
+
+msgctxt "model:ir.action,name:act_patient_requested_tests"
+msgid "Requested Tests"
+msgstr "Exámenes solicitados"
+
+msgctxt "model:ir.action,name:act_procedure_form"
+msgid "Procedures"
+msgstr "Procedimientos"
+
+msgctxt "model:ir.action,name:act_professional_form"
+msgid "Professional"
+msgstr "Doctor"
+
+msgctxt "model:ir.action,name:act_speciality_form"
+msgid "Specialities"
+msgstr "Especialidades"
+
+msgctxt "model:ir.action,name:act_test_category_form"
+msgid "Test categories"
+msgstr "Categorías de exámenes"
+
+msgctxt "model:ir.action,name:act_test_form"
+msgid "Tests"
+msgstr "Exámenes"
+
+msgctxt "model:ir.action,name:act_vaccine_form"
+msgid "Vaccines"
+msgstr "Vacunas"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_patient_evaluation_form_domain_all"
+msgid "All"
+msgstr "Todo"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_patient_evaluation_form_domain_cancel"
+msgid "Canceled"
+msgstr "Cancelada"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_patient_evaluation_form_domain_finish"
+msgid "Finished"
+msgstr "Finalizada"
+
+msgctxt ""
+"model:ir.action.act_window.domain,name:act_patient_evaluation_form_domain_initial"
+msgid "Initiated"
+msgstr "Iniciada"
+
+msgctxt "model:ir.model.button,string:appointment_accomplished_button"
+msgid "Accomplished"
+msgstr "Realizado"
+
+msgctxt "model:ir.model.button,string:appointment_patient_cancel_button"
+msgid "Patient Cancel"
+msgstr "Cancelado por Paciente"
+
+msgctxt "model:ir.model.button,string:appointment_professional_cancel_button"
+msgid "Doctor Cancel"
+msgstr "Cancelado por Doctor"
+
+msgctxt "model:ir.model.button,string:evaluation_cancel_button"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "model:ir.model.button,string:evaluation_finish_button"
+msgid "Finish"
+msgstr "Finalizar"
+
+msgctxt "model:ir.model.button,string:prescription_cancel_button"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "model:ir.model.button,string:prescription_done_button"
+msgid "Done"
+msgstr "Finalizado"
+
+msgctxt "model:ir.sequence,name:sequence_patient"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "model:ir.sequence,name:sequence_patient_appointment"
+msgid "Patient Appointment"
+msgstr "Cita de paciente"
+
+msgctxt "model:ir.sequence,name:sequence_patient_evaluation"
+msgid "Patient Evaluation"
+msgstr "Evaluación de paciente"
+
+msgctxt "model:ir.sequence,name:sequence_patient_evaluation_test"
+msgid "Patient Evaluation Test"
+msgstr "Exámen solicitado"
+
+msgctxt "model:ir.sequence.type,name:sequence_type_patient"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "model:ir.sequence.type,name:sequence_type_patient_appointment"
+msgid "Patient Appointment"
+msgstr "Cita de paciente"
+
+msgctxt "model:ir.sequence.type,name:sequence_type_patient_evaluation"
+msgid "Patient Evaluation"
+msgstr "Evaluación de paciente"
+
+msgctxt "model:ir.sequence.type,name:sequence_type_patient_evaluation_test"
+msgid "Patient Evaluation Test"
+msgstr "Examen solicidado"
+
+msgctxt "model:ir.ui.menu,name:menu_contraceptive_method_form"
+msgid "Contraceptives"
+msgstr "Anticonceptivos"
+
+msgctxt "model:ir.ui.menu,name:menu_disease_category_form"
+msgid "Categories"
+msgstr "Categorías de tercero"
+
+msgctxt "model:ir.ui.menu,name:menu_disease_category_tree"
+msgid "Categories"
+msgstr "Categorías de tercero"
+
+msgctxt "model:ir.ui.menu,name:menu_disease_form"
+msgid "Diseases"
+msgstr "Enfermedades"
+
+msgctxt "model:ir.ui.menu,name:menu_disease_group_form"
+msgid "Groups"
+msgstr "Grupos"
+
+msgctxt "model:ir.ui.menu,name:menu_drug_form"
+msgid "Drugs"
+msgstr "Drogas"
+
+msgctxt "model:ir.ui.menu,name:menu_ethnic_group_form"
+msgid "Ethnic Groups"
+msgstr "Grupos étnicos"
+
+msgctxt "model:ir.ui.menu,name:menu_galeno"
+msgid "Galeno"
+msgstr "Galeno"
+
+msgctxt "model:ir.ui.menu,name:menu_galeno_admin"
+msgid "Administration"
+msgstr "Administración"
+
+msgctxt "model:ir.ui.menu,name:menu_galeno_configuration"
+msgid "Configuration"
+msgstr "Configuración"
+
+msgctxt "model:ir.ui.menu,name:menu_galeno_disease"
+msgid "Diseases"
+msgstr "Enfermedades"
+
+msgctxt "model:ir.ui.menu,name:menu_medicament_admin"
+msgid "Medicaments"
+msgstr "Medicamentos"
+
+msgctxt "model:ir.ui.menu,name:menu_medicament_dose_unit_form"
+msgid "Dose Units"
+msgstr "Unidades de dosis"
+
+msgctxt "model:ir.ui.menu,name:menu_medicament_form"
+msgid "Medicaments"
+msgstr "Medicamentos"
+
+msgctxt "model:ir.ui.menu,name:menu_medicament_frequency_form"
+msgid "Medicament Frequency"
+msgstr "Frecuencia medicamentos"
+
+msgctxt "model:ir.ui.menu,name:menu_occupation_form"
+msgid "Occupations"
+msgstr "Ocupaciones"
+
+msgctxt "model:ir.ui.menu,name:menu_patient_appointment"
+msgid "Appointments"
+msgstr "Citas"
+
+msgctxt "model:ir.ui.menu,name:menu_patient_appointment_calendar"
+msgid "Appointments Calendar"
+msgstr "Calendario de citas"
+
+msgctxt "model:ir.ui.menu,name:menu_patient_appointment_form"
+msgid "Appointments List"
+msgstr "Lista de citas"
+
+msgctxt "model:ir.ui.menu,name:menu_patient_evaluation_form"
+msgid "Evaluations"
+msgstr "Evaluaciones"
+
+msgctxt "model:ir.ui.menu,name:menu_patient_evaluation_test_form"
+msgid "Requested tests"
+msgstr "Exámenes solicitados"
+
+msgctxt "model:ir.ui.menu,name:menu_patient_form"
+msgid "Patients"
+msgstr "Pacientes"
+
+msgctxt "model:ir.ui.menu,name:menu_patient_prescription_form"
+msgid "Prescriptions"
+msgstr "Prescripciones"
+
+msgctxt "model:ir.ui.menu,name:menu_procedure_form"
+msgid "Procedures"
+msgstr "Procedimientos"
+
+msgctxt "model:ir.ui.menu,name:menu_professional_form"
+msgid "Professional"
+msgstr "Doctor"
+
+msgctxt "model:ir.ui.menu,name:menu_speciality_form"
+msgid "Specialities"
+msgstr "Especialidades"
+
+msgctxt "model:ir.ui.menu,name:menu_test"
+msgid "Test"
+msgstr "Exámen"
+
+msgctxt "model:ir.ui.menu,name:menu_test_category"
+msgid "Test categories"
+msgstr "Categorías de exámenes"
+
+msgctxt "model:ir.ui.menu,name:menu_test_form"
+msgid "Tests"
+msgstr "Exámenes"
+
+msgctxt "model:ir.ui.menu,name:menu_vaccine_form"
+msgid "Vaccines"
+msgstr "Vacunas"
+
+msgctxt "model:res.group,name:group_galeno"
+msgid "Galeno"
+msgstr ""
+
+msgctxt "model:res.group,name:group_galeno_admin"
+msgid "Galeno Administrator"
+msgstr "Administrador"
+
+msgctxt "selection:galeno.contraceptive.method,gender:"
+msgid "Female"
+msgstr "Femenino"
+
+msgctxt "selection:galeno.contraceptive.method,gender:"
+msgid "Male"
+msgstr "Masculino"
+
+msgctxt "selection:galeno.contraceptive.method,gender:"
+msgid "Unisex"
+msgstr "Unisex"
+
+msgctxt "selection:galeno.patient,blood_type:"
+msgid "A +"
+msgstr ""
+
+msgctxt "selection:galeno.patient,blood_type:"
+msgid "A -"
+msgstr ""
+
+msgctxt "selection:galeno.patient,blood_type:"
+msgid "AB +"
+msgstr ""
+
+msgctxt "selection:galeno.patient,blood_type:"
+msgid "AB -"
+msgstr ""
+
+msgctxt "selection:galeno.patient,blood_type:"
+msgid "B +"
+msgstr ""
+
+msgctxt "selection:galeno.patient,blood_type:"
+msgid "B -"
+msgstr ""
+
+msgctxt "selection:galeno.patient,blood_type:"
+msgid "O +"
+msgstr ""
+
+msgctxt "selection:galeno.patient,blood_type:"
+msgid "O -"
+msgstr ""
+
+msgctxt "selection:galeno.patient,civil_status:"
+msgid "Concubinage"
+msgstr "Unión libre"
+
+msgctxt "selection:galeno.patient,civil_status:"
+msgid "Divorced"
+msgstr "Divorciado(a)"
+
+msgctxt "selection:galeno.patient,civil_status:"
+msgid "Married"
+msgstr "Casado(a)"
+
+msgctxt "selection:galeno.patient,civil_status:"
+msgid "Single"
+msgstr "Soltero(a)"
+
+msgctxt "selection:galeno.patient,civil_status:"
+msgid "Widowed"
+msgstr "Viudo(a)"
+
+msgctxt "selection:galeno.patient,diet_type:"
+msgid "Carnivorous"
+msgstr "Carnívoro"
+
+msgctxt "selection:galeno.patient,diet_type:"
+msgid "None"
+msgstr "Ninguna"
+
+msgctxt "selection:galeno.patient,diet_type:"
+msgid "Omnivorous"
+msgstr "Omnívoro"
+
+msgctxt "selection:galeno.patient,diet_type:"
+msgid "Vegetarian"
+msgstr "Vegetariano"
+
+msgctxt "selection:galeno.patient,education_level:"
+msgid "Bachelor"
+msgstr "Bachiller"
+
+msgctxt "selection:galeno.patient,education_level:"
+msgid "Nothing"
+msgstr "Ninguno"
+
+msgctxt "selection:galeno.patient,education_level:"
+msgid "Postgraduate"
+msgstr "Postgrado"
+
+msgctxt "selection:galeno.patient,education_level:"
+msgid "Primary"
+msgstr "Primaria"
+
+msgctxt "selection:galeno.patient,education_level:"
+msgid "Secondary"
+msgstr "Secundaria"
+
+msgctxt "selection:galeno.patient,education_level:"
+msgid "University"
+msgstr "Universitario"
+
+msgctxt "selection:galeno.patient,gender:"
+msgid ""
+msgstr ""
+
+msgctxt "selection:galeno.patient,gender:"
+msgid "Female"
+msgstr "Femenino"
+
+msgctxt "selection:galeno.patient,gender:"
+msgid "Male"
+msgstr "Masculino"
+
+msgctxt "selection:galeno.patient,laterality:"
+msgid "Ambidextrous"
+msgstr "Ambidiestro"
+
+msgctxt "selection:galeno.patient,laterality:"
+msgid "Left"
+msgstr "Izquierdo"
+
+msgctxt "selection:galeno.patient,laterality:"
+msgid "Right"
+msgstr "Derecha"
+
+msgctxt "selection:galeno.patient,relation_type:"
+msgid ""
+msgstr ""
+
+msgctxt "selection:galeno.patient,relation_type:"
+msgid "Monogamous"
+msgstr "Monógamo"
+
+msgctxt "selection:galeno.patient,relation_type:"
+msgid "None"
+msgstr "Ninguna"
+
+msgctxt "selection:galeno.patient,relation_type:"
+msgid "Polygamous"
+msgstr "Polígamo"
+
+msgctxt "selection:galeno.patient,sexual_orientation:"
+msgid "Gay"
+msgstr "Homosexual"
+
+msgctxt "selection:galeno.patient,sexual_orientation:"
+msgid "Lesbian"
+msgstr "Lesbiana"
+
+msgctxt "selection:galeno.patient,sexual_orientation:"
+msgid "Straight"
+msgstr "Heterosexual"
+
+msgctxt "selection:galeno.patient,sexual_orientation:"
+msgid "Unknown"
+msgstr "Desconocido"
+
+msgctxt "selection:galeno.patient,sexual_security:"
+msgid ""
+msgstr ""
+
+msgctxt "selection:galeno.patient,sexual_security:"
+msgid "Safe"
+msgstr "Segura"
+
+msgctxt "selection:galeno.patient,sexual_security:"
+msgid "Unsafe"
+msgstr "Inseguro"
+
+msgctxt "selection:galeno.patient.appointment,state:"
+msgid "Accomplished"
+msgstr "Realizada"
+
+msgctxt "selection:galeno.patient.appointment,state:"
+msgid "Canceled by Doctor"
+msgstr "Cancelado por Doctor"
+
+msgctxt "selection:galeno.patient.appointment,state:"
+msgid "Canceled by patient"
+msgstr "Cancelado por paciente"
+
+msgctxt "selection:galeno.patient.appointment,state:"
+msgid "Scheduled"
+msgstr "Programada"
+
+msgctxt "selection:galeno.patient.disability,type_:"
+msgid "Hearing"
+msgstr "Auditivaa"
+
+msgctxt "selection:galeno.patient.disability,type_:"
+msgid "Intellectual"
+msgstr "Intelectual"
+
+msgctxt "selection:galeno.patient.disability,type_:"
+msgid "Language"
+msgstr "Idioma"
+
+msgctxt "selection:galeno.patient.disability,type_:"
+msgid "Mental"
+msgstr "Mental"
+
+msgctxt "selection:galeno.patient.disability,type_:"
+msgid "Other"
+msgstr "Otro"
+
+msgctxt "selection:galeno.patient.disability,type_:"
+msgid "Physical"
+msgstr "Física"
+
+msgctxt "selection:galeno.patient.disability,type_:"
+msgid "Psychosocial"
+msgstr "Psicosocial"
+
+msgctxt "selection:galeno.patient.disability,type_:"
+msgid "Psycological"
+msgstr "Psicológica"
+
+msgctxt "selection:galeno.patient.disability,type_:"
+msgid "Visual"
+msgstr "Visual"
+
+msgctxt "selection:galeno.patient.disease,severity:"
+msgid "Mild"
+msgstr "Leve"
+
+msgctxt "selection:galeno.patient.disease,severity:"
+msgid "Moderate"
+msgstr "Moderado"
+
+msgctxt "selection:galeno.patient.disease,severity:"
+msgid "Severe"
+msgstr "Severa"
+
+msgctxt "selection:galeno.patient.evaluation,ms_eye:"
+msgid ""
+msgstr ""
+
+msgctxt "selection:galeno.patient.evaluation,ms_eye:"
+msgid "Eye opening in response to pain stimulus"
+msgstr "Abre los ojos en respuesta a estímulos dolorosos"
+
+msgctxt "selection:galeno.patient.evaluation,ms_eye:"
+msgid "Eye opening to speech"
+msgstr "Abre los ojos al abrarle"
+
+msgctxt "selection:galeno.patient.evaluation,ms_eye:"
+msgid "Eyes opening spontaneously"
+msgstr "Abre los ojos espontáneamente"
+
+msgctxt "selection:galeno.patient.evaluation,ms_eye:"
+msgid "No eye opening"
+msgstr "No abre los ojos"
+
+msgctxt "selection:galeno.patient.evaluation,ms_mood:"
+msgid "Angry"
+msgstr "Enojado"
+
+msgctxt "selection:galeno.patient.evaluation,ms_mood:"
+msgid "Apathetic"
+msgstr "Apático"
+
+msgctxt "selection:galeno.patient.evaluation,ms_mood:"
+msgid "Disgusted"
+msgstr "Disgustado"
+
+msgctxt "selection:galeno.patient.evaluation,ms_mood:"
+msgid "Euphoric"
+msgstr "Eufórico"
+
+msgctxt "selection:galeno.patient.evaluation,ms_mood:"
+msgid "Happy"
+msgstr "Feliz"
+
+msgctxt "selection:galeno.patient.evaluation,ms_mood:"
+msgid "Normal"
+msgstr "Normal"
+
+msgctxt "selection:galeno.patient.evaluation,ms_mood:"
+msgid "Sad"
+msgstr "Triste"
+
+msgctxt "selection:galeno.patient.evaluation,ms_motor:"
+msgid ""
+msgstr ""
+
+msgctxt "selection:galeno.patient.evaluation,ms_motor:"
+msgid "Decerebrate posturing"
+msgstr "Postura de descerebración"
+
+msgctxt "selection:galeno.patient.evaluation,ms_motor:"
+msgid "Decorticate posturing"
+msgstr "Postura decorticante"
+
+msgctxt "selection:galeno.patient.evaluation,ms_motor:"
+msgid "Localizes to pain"
+msgstr "Localizado al dolor"
+
+msgctxt "selection:galeno.patient.evaluation,ms_motor:"
+msgid "No motor response"
+msgstr "Sin respuesta motora"
+
+msgctxt "selection:galeno.patient.evaluation,ms_motor:"
+msgid "Obeys commands"
+msgstr "Obedece órdenes"
+
+msgctxt "selection:galeno.patient.evaluation,ms_motor:"
+msgid "Withdrawal from pain"
+msgstr "Retiro del dolor"
+
+msgctxt "selection:galeno.patient.evaluation,ms_verbal:"
+msgid ""
+msgstr ""
+
+msgctxt "selection:galeno.patient.evaluation,ms_verbal:"
+msgid "Confused"
+msgstr "Confundido"
+
+msgctxt "selection:galeno.patient.evaluation,ms_verbal:"
+msgid "Inappropriate words"
+msgstr "Palabras inapropiadas"
+
+msgctxt "selection:galeno.patient.evaluation,ms_verbal:"
+msgid "Incomprehensible sounds"
+msgstr "Sonidos incomprensibles"
+
+msgctxt "selection:galeno.patient.evaluation,ms_verbal:"
+msgid "No verbal response"
+msgstr "Sin respuesta verbal"
+
+msgctxt "selection:galeno.patient.evaluation,ms_verbal:"
+msgid "Oriented"
+msgstr "Orientado"
+
+msgctxt "selection:galeno.patient.evaluation,patient_gender:"
+msgid "Female"
+msgstr "Femenino"
+
+msgctxt "selection:galeno.patient.evaluation,patient_gender:"
+msgid "Male"
+msgstr "Masculino"
+
+msgctxt "selection:galeno.patient.evaluation,reason:"
+msgid "Disease"
+msgstr "Enfermedad"
+
+msgctxt "selection:galeno.patient.evaluation,reason:"
+msgid "Routine Exploration"
+msgstr "Exploración de rutina"
+
+msgctxt "selection:galeno.patient.evaluation,reason:"
+msgid "Tracing"
+msgstr "Seguimiento"
+
+msgctxt "selection:galeno.patient.evaluation,state:"
+msgid "Canceled"
+msgstr "Cancelada"
+
+msgctxt "selection:galeno.patient.evaluation,state:"
+msgid "Finished"
+msgstr "Terminada"
+
+msgctxt "selection:galeno.patient.evaluation,state:"
+msgid "Initiated"
+msgstr "Iniciada"
+
+msgctxt "selection:galeno.patient.evaluation.diagnosis,type_:"
+msgid "Definitive"
+msgstr "Definitivo"
+
+msgctxt "selection:galeno.patient.evaluation.diagnosis,type_:"
+msgid "Presumptive"
+msgstr "Presuntivo"
+
+msgctxt "selection:galeno.patient.prescription,state:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "selection:galeno.patient.prescription,state:"
+msgid "Done"
+msgstr "Finalizado"
+
+msgctxt "selection:galeno.patient.prescription,state:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "selection:galeno.patient.prescription.line,prescription_state:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "selection:galeno.patient.prescription.line,prescription_state:"
+msgid "Done"
+msgstr "Finalizado"
+
+msgctxt "selection:galeno.patient.prescription.line,prescription_state:"
+msgid "Draft"
+msgstr "Borrador"
+
+msgctxt "selection:galeno.patient.vaccine,route:"
+msgid "Intradermal"
+msgstr "Intradermal"
+
+msgctxt "selection:galeno.patient.vaccine,route:"
+msgid "Intramuscular"
+msgstr "Intramuscular"
+
+msgctxt "selection:galeno.patient.vaccine,route:"
+msgid "Intranasal"
+msgstr "Intranasal"
+
+msgctxt "selection:galeno.patient.vaccine,route:"
+msgid "Oral"
+msgstr "Oral"
+
+msgctxt "selection:galeno.patient.vaccine,route:"
+msgid "Subcutaneous"
+msgstr "Subcutáneo"
+
+msgctxt "selection:galeno.test,gender:"
+msgid "Female"
+msgstr "Femenino"
+
+msgctxt "selection:galeno.test,gender:"
+msgid "Male"
+msgstr "Masculino"
+
+msgctxt "selection:galeno.test,gender:"
+msgid "Unisex"
+msgstr "Unisex"
+
+msgctxt "view:galeno.disease.group:"
+msgid "Extra Information"
+msgstr "Información extra"
+
+msgctxt "view:galeno.disease:"
+msgid "Extra Information"
+msgstr "Información extra"
+
+msgctxt "view:galeno.disease:"
+msgid "Genetics"
+msgstr "Genética"
+
+msgctxt "view:galeno.disease:"
+msgid "Main"
+msgstr "Principal"
+
+msgctxt "view:galeno.patient.appointment:"
+msgid "Hour"
+msgstr "Hora"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Abdomen"
+msgstr "Abdomen"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Chest"
+msgstr "Pecho"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Column"
+msgstr "Columna"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Diagnosis - Treatment"
+msgstr "Diagnóstico - Tratamiento"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Ear"
+msgstr "Oído"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Eyes"
+msgstr "Ojos"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Hour"
+msgstr "Hora"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Limbs"
+msgstr "Extremidades"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid ""
+"Mark any of these examination items in case of finding some type of "
+"patholoty"
+msgstr ""
+"Marcar cualquiera de estos puntos en caso de encontrar algún tipo de "
+"patología"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Mental status"
+msgstr "Estado mental"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Neck"
+msgstr "Cuello"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Neurological"
+msgstr "Neurológica"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Nose"
+msgstr "Nariz"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Oropharynx"
+msgstr "Orofaringe"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Pelvis"
+msgstr "Pelvis"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Regional Physical Exam"
+msgstr "Examen físico regional"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Requested tests"
+msgstr "Exámenes solicitados"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Skin"
+msgstr "Piel"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Systems - Organs"
+msgstr "Sistemas - Órganos"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Vital signs"
+msgstr "Signos vitales"
+
+msgctxt "view:galeno.patient.prescription:"
+msgid "Hour"
+msgstr "Hora"
+
+msgctxt "view:galeno.patient.prescription:"
+msgid "Prescription detail"
+msgstr "Detalle de prescripción"
+
+msgctxt "view:galeno.patient:"
+msgid "Backgrounds"
+msgstr "Antecedentes"
+
+msgctxt "view:galeno.patient:"
+msgid "Diet"
+msgstr "Dieta"
+
+msgctxt "view:galeno.patient:"
+msgid "Diseases"
+msgstr "Enfermedades"
+
+msgctxt "view:galeno.patient:"
+msgid "Drugs"
+msgstr "Drogas"
+
+msgctxt "view:galeno.patient:"
+msgid "Family"
+msgstr "Familia"
+
+msgctxt "view:galeno.patient:"
+msgid "Life style"
+msgstr "Estilo de vida"
+
+msgctxt "view:galeno.patient:"
+msgid "Medicament - Vaccine"
+msgstr "Medicamentos - Vacunas"
+
+msgctxt "view:galeno.patient:"
+msgid "Medicaments"
+msgstr "Medicamentos"
+
+msgctxt "view:galeno.patient:"
+msgid "Reproductive"
+msgstr "Reproductiva"
+
+msgctxt "view:galeno.patient:"
+msgid "Secondary Information"
+msgstr "Información Secundaria"
+
+msgctxt "view:galeno.patient:"
+msgid "Sexualily"
+msgstr "Sexualidad"
+
+msgctxt "view:galeno.patient:"
+msgid "Sleep - Activities"
+msgstr "Sueño - Actividades"
+
+msgctxt "view:galeno.patient:"
+msgid "Sleep information"
+msgstr "Información de sueño"
+
+msgctxt "view:galeno.patient:"
+msgid "Surgeries"
+msgstr "Cirugías"
+
+msgctxt "view:galeno.patient:"
+msgid "Tests"
+msgstr "Exámenes"

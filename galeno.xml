@@ -18,6 +18,10 @@
             <field name="name">galeno-galeno</field>
             <field name="path">icons/galeno.svg</field>
         </record>
+        <record model="ir.ui.icon" id="doctor_icon">
+            <field name="name">galeno-doctor</field>
+            <field name="path">icons/doctor.svg</field>
+        </record>
         <record model="ir.ui.icon" id="galeno_admin_icon">
             <field name="name">galeno-admin</field>
             <field name="path">icons/galeno_admin.svg</field>
@@ -170,6 +174,10 @@
             <field name="name">galeno-appointment</field>
             <field name="path">icons/appointment.svg</field>
         </record>
+        <record model="ir.ui.icon" id="report_icon">
+            <field name="name">galeno-report</field>
+            <field name="path">icons/report.svg</field>
+        </record>
 
         <!-- MAIN MENU -->
         <record model="res.group" id="group_galeno_admin">
@@ -177,6 +185,9 @@
         </record>
         <record model="res.group" id="group_galeno">
             <field name="name">Galeno</field>
+        </record>
+        <record model="res.group" id="group_galeno_assistant">
+            <field name="name">Assistant</field>
         </record>
 
         <!-- GROUPS -->

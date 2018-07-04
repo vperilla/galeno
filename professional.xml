@@ -28,7 +28,7 @@
             <field name="act_window" ref="act_professional_form"/>
         </record>
         <menuitem parent="menu_galeno_admin" action="act_professional_form"
-            id="menu_professional_form" sequence="50" icon="galeno-galeno"/>
+            id="menu_professional_form" sequence="50" icon="galeno-doctor"/>
         <record model="ir.model.access" id="access_professional">
             <field name="model" search="[('model', '=', 'galeno.professional')]"/>
             <field name="perm_read" eval="True"/>

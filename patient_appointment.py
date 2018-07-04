@@ -4,7 +4,7 @@ from datetime import datetime, timedelta
 from sql.conditionals import Case
 
 from trytond.model import Workflow, ModelView, ModelSQL, fields
-from trytond.pyson import Eval, If
+from trytond.pyson import Eval, If, Bool
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.tools import reduce_ids, grouped_slice
@@ -27,7 +27,8 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             'readonly': ~Eval('state').in_(['scheduled']),
         },
         domain=[
-            ('id', If(Eval('context', {}).contains('professional'), '=', '!='),
+            ('id', If(Bool(
+                Eval('context', {}).get('professional', None)), '=', '!='),
                 Eval('context', {}).get('professional', -1)),
         ], depends=['state'], required=True, select=True)
     start_date = fields.DateTime('Start Date', required=True,
@@ -68,6 +69,8 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
                     'appointments overlap.'),
                 'accomplished_date_error': ('A future appointment can\'t be '
                     'accomplished.'),
+                'modify_date_appointment': ('You can modify dates only on'
+                    'scheduled appointments. Error: "%(appointment)s"')
                 })
         cls._transitions |= set((
                 ('scheduled', 'accomplished'),
@@ -177,7 +180,7 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
     def get_rec_name(self, name):
         local_date = galeno_tools.format_datetime(
             self.start_date, self.company.timezone)
-        return "%s - %s" % (self.patient.rec_name, local_date)
+        return "%s - %s" % (local_date, self.patient.rec_name)
 
     @classmethod
     def search_rec_name(cls, name, clause):
@@ -219,3 +222,15 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
                     'first': self.rec_name,
                     'second': overlapping_appointment.rec_name,
                     })
+
+    @classmethod
+    def write(cls, *args):
+        actions = iter(args)
+        for appointments, values in zip(actions, actions):
+            if 'start_date' in values or 'end_date' in values:
+                for appointment in appointments:
+                    if appointment.state != 'scheduled':
+                        cls.raise_user_error('modify_date_appointment', {
+                            'appointment': appointment.rec_name,
+                        })
+        super(PatientAppointment, cls).write(*args)
