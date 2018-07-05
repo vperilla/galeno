@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree>
+    <field name="state" icon="color" width="200"/>
+    <field name="start_date" widget="time" string="Start Hour" width="100"/>
+    <field name="end_date" widget="time" string="End Hour" width="100"/>
+    <field name="patient"/>
+</tree>

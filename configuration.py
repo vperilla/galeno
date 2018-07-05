@@ -155,8 +155,8 @@ class ConfigurationDuration(ModelSQL, CompanyValueMixin):
     "Galeno Configuration Duration"
     __name__ = 'galeno.configuration.duration'
 
-    attention_start = fields.Time('Attention Start', required=True)
-    attention_end = fields.Time('Attention End', required=True)
+    attention_start = fields.Time('Attention Start')
+    attention_end = fields.Time('Attention End')
     appointment_duration = fields.TimeDelta(
         'Appointment Duration', required=True)
 

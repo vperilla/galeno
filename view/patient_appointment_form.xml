@@ -23,5 +23,7 @@
         <field name="professional"/>
         <separator name="notes" colspan="4"/>
         <field name="notes" colspan="4"/>
+        <field name="appointments_of_day" colspan="4"
+            view_ids="galeno.patient_appointment_simple_view_tree"/>
     </group>
 </form>

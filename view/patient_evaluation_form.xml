@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<form>
+<form cursor="patient">
     <group id="patient_evaluation_header" colspan="4" col="8">
         <label name="reason"/>
         <field name="reason"/>

@@ -56,6 +56,9 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['scheduled']),
         }, depends=['state'])
+    appointments_of_day = fields.Function(
+        fields.One2Many('galeno.patient.appointment', None,
+            'Appointments of day'), 'on_change_with_appointments_of_day')
 
     @classmethod
     def __setup__(cls):
@@ -156,6 +159,22 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
                     self.start_date = self.start_date + timedelta(
                         hours=initial_time.hour, minutes=initial_time.minute)
             self.end_date = self.start_date + config.appointment_duration
+        else:
+            self.end_date = None
+
+    @fields.depends('company', 'start_date', 'professional')
+    def on_change_with_appointments_of_day(self, name=None):
+        if self.start_date:
+            start_date = datetime(*(self.start_date.date().timetuple()[:6]))
+            next_date = start_date + timedelta(days=1)
+            appointments_of_day = self.__class__.search([
+                ('start_date', '>=', start_date),
+                ('end_date', '<=', next_date),
+                ('professional', '=', self.professional)
+            ], order=[('start_date', 'ASC')])
+            if appointments_of_day:
+                return [app.id for app in appointments_of_day]
+        return []
 
     @classmethod
     @ModelView.button

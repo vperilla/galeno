@@ -10,6 +10,11 @@
             <field name="type">form</field>
             <field name="name">patient_appointment_form</field>
         </record>
+        <record model="ir.ui.view" id="patient_appointment_simple_view_tree">
+            <field name="model">galeno.patient.appointment</field>
+            <field name="type">tree</field>
+            <field name="name">patient_appointment_simple_tree</field>
+        </record>
         <record model="ir.ui.view" id="patient_appointment_view_tree">
             <field name="model">galeno.patient.appointment</field>
             <field name="type">tree</field>
