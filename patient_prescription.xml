@@ -102,5 +102,16 @@
             <field name="button" ref="prescription_cancel_button"/>
             <field name="group" ref="group_galeno"/>
         </record>
+        <record model="ir.model.button" id="prescription_draft_button">
+            <field name="name">draft</field>
+            <field name="string">Draft</field>
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.prescription')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="prescription_draft_button_group_galeno">
+            <field name="button" ref="prescription_draft_button"/>
+            <field name="group" ref="group_galeno"/>
+        </record>
     </data>
 </tryton>

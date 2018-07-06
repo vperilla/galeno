@@ -15,6 +15,7 @@
         <field name="state"/>
         <button name="done" icon="tryton-ok"/>
         <button name="cancel" icon="tryton-cancel"/>
+        <button name="draft" icon="tryton-go-previous"/>
     </group>
     <notebook>
         <page id="prescription_lines" string="Prescription detail">

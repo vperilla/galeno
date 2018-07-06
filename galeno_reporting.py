@@ -18,10 +18,6 @@ class QueryContext(object):
     professional_ = fields.Many2One('galeno.professional', 'Professional')
     patient_ = fields.Many2One('galeno.patient', 'Patient')
 
-    @staticmethod
-    def default_period():
-        return 'month'
-
 
 class ReportEvaluationContext(QueryContext, ModelView):
     "Evaluation Context Model"

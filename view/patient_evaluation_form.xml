@@ -23,6 +23,7 @@
         <field name="state"/>
         <button name="finish" icon="tryton-ok"/>
         <button name="cancel" icon="tryton-cancel"/>
+        <button name="initial" icon="tryton-go-previous"/>
     </group>
     <group id="summary_treatment" colspan="8" col="4">
         <separator name="symptoms" colspan="4"/>

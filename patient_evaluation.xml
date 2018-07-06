@@ -150,6 +150,17 @@
             <field name="button" ref="evaluation_finish_button"/>
             <field name="group" ref="group_galeno"/>
         </record>
+        <record model="ir.model.button" id="evaluation_initial_button">
+            <field name="name">initial</field>
+            <field name="string">Initial</field>
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="evaluation_initial_button_group_galeno">
+            <field name="button" ref="evaluation_initial_button"/>
+            <field name="group" ref="group_galeno"/>
+        </record>
 
 
         <!-- PATIENT EVALUATION TEST -->

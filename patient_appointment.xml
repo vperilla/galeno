@@ -125,6 +125,17 @@
             <field name="button" ref="appointment_accomplished_button"/>
             <field name="group" ref="group_galeno"/>
         </record>
+        <record model="ir.model.button" id="appointment_scheduled_button">
+            <field name="name">scheduled</field>
+            <field name="string">To Scheduled</field>
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.appointment')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="appointment_scheduled_button_group_galeno">
+            <field name="button" ref="appointment_scheduled_button"/>
+            <field name="group" ref="group_galeno"/>
+        </record>
 
     </data>
 </tryton>

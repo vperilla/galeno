@@ -79,6 +79,9 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
                 ('scheduled', 'accomplished'),
                 ('scheduled', 'patient_cancel'),
                 ('scheduled', 'professional_cancel'),
+                ('patient_cancel', 'scheduled'),
+                ('professional_cancel', 'scheduled'),
+                ('accomplished', 'scheduled'),
                 ))
         cls._buttons.update({
                 'patient_cancel': {
@@ -94,6 +97,11 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
                 'accomplished': {
                     'invisible': ~Eval('state').in_(['scheduled']),
                     'icon': 'tryton-ok',
+                    'depends': ['state'],
+                    },
+                'scheduled': {
+                    'invisible': Eval('state').in_(['scheduled']),
+                    'icon': 'tryton-go-previous',
                     'depends': ['state'],
                     },
                 })
@@ -175,6 +183,12 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             if appointments_of_day:
                 return [app.id for app in appointments_of_day]
         return []
+
+    @classmethod
+    @ModelView.button
+    @Workflow.transition('scheduled')
+    def scheduled(cls, appointments):
+        pass
 
     @classmethod
     @ModelView.button

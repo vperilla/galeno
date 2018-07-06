@@ -16,6 +16,7 @@
             <button name="accomplished"/>
             <button name="patient_cancel"/>
             <button name="professional_cancel"/>
+            <button name="scheduled"/>
         </group>
         <label name="patient"/>
         <field name="patient"/>

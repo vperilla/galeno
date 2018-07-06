@@ -483,6 +483,8 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         cls._transitions |= set((
                 ('initial', 'finish'),
                 ('initial', 'cancel'),
+                ('finish', 'initial'),
+                ('cancel', 'initial'),
                 ))
         cls._buttons.update({
                 'cancel': {
@@ -491,6 +493,10 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
                     },
                 'finish': {
                     'invisible': ~Eval('state').in_(['initial']),
+                    'depends': ['state'],
+                    },
+                'initial': {
+                    'invisible': Eval('state').in_(['initial']),
                     'depends': ['state'],
                     },
                 })
@@ -583,6 +589,12 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
             ('patient',) + tuple(clause[1:]),
             ]
         return domain
+
+    @classmethod
+    @ModelView.button
+    @Workflow.transition('initial')
+    def initial(cls, evaluations):
+        pass
 
     @classmethod
     @ModelView.button

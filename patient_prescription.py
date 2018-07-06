@@ -59,6 +59,8 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
                 ('draft', 'done'),
                 ('draft', 'cancel'),
                 ('done', 'cancel'),
+                ('cancel', 'draft'),
+                ('done', 'draft'),
                 ))
         cls._buttons.update({
                 'cancel': {
@@ -67,6 +69,10 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
                     },
                 'done': {
                     'invisible': ~Eval('state').in_(['draft']),
+                    'depends': ['state'],
+                    },
+                'draft': {
+                    'invisible': Eval('state').in_(['draft']),
                     'depends': ['state'],
                     },
                 })
@@ -82,6 +88,12 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
     @staticmethod
     def default_professional():
         return Transaction().context.get('professional')
+
+    @classmethod
+    @ModelView.button
+    @Workflow.transition('draft')
+    def draft(cls, prescriptions):
+        pass
 
     @classmethod
     @ModelView.button

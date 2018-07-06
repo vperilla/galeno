@@ -203,7 +203,7 @@ class Patient(ModelSQL, ModelView):
             'invisible': Eval('gender') != 'female',
         },
         domain=[
-            If((Eval('gender') == 'female') & Bool(Eval('menarche_age')),
+            If((Eval('gender') == 'female') & Bool(Eval('menarche')),
                 ('menarche', '>=', 0),
                ())
         ], depends=['gender'], help="Age of first menstruation")
@@ -216,7 +216,7 @@ class Patient(ModelSQL, ModelView):
             If((Eval('gender') == 'female') & Bool(Eval('menarche')),
                 ('cycle_duration', '>=', 0),
                ())
-        ], depends=['gender'], help="Cycle duration in days")
+        ], depends=['gender', 'menarche'], help="Cycle duration in days")
     last_menstruation_date = fields.Date('Last menstruation date',
         states={
             'invisible': Eval('gender') != 'female',
