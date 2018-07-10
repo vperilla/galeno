@@ -58,13 +58,12 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
         cls._transitions |= set((
                 ('draft', 'done'),
                 ('draft', 'cancel'),
-                ('done', 'cancel'),
                 ('cancel', 'draft'),
                 ('done', 'draft'),
                 ))
         cls._buttons.update({
                 'cancel': {
-                    'invisible': Eval('state').in_(['cancel']),
+                    'invisible': ~Eval('state').in_(['draft']),
                     'depends': ['state'],
                     },
                 'done': {

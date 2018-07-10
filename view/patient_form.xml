@@ -1,10 +1,11 @@
 <?xml version="1.0"?>
 <form>
-    <group id="patient_main_info" col="8">
-        <group id="patient_main_1"
-            colspan="2" col="2">
+    <group id="patient_main_info" col="6">
+        <group id="patient_main_1" colspan="2" col="2">
             <field name="photo" colspan="2" height="150" width="150"
                 widget="image"/>
+            <label name="code"/>
+            <field name="code"/>
         </group>
         <group id="patient_main_2" colspan="2" col="2">
             <label name="company"/>
@@ -32,39 +33,36 @@
             <label name="age_char"/>
             <field name="age_char"/>
         </group>
-        <group colspan="2" col="2" id="patient_main_4">
-            <label name="blood_type"/>
-            <field name="blood_type"/>
-            <label name="address"/>
-            <field name="address"/>
-            <label name="email"/>
-            <field name="email"/>
-            <label name="phone"/>
-            <field name="phone"/>
-            <label name="emergency_phone"/>
-            <field name="emergency_phone"/>
-        </group>
     </group>
     <notebook colspan="4">
         <page id="patient_1" string="Secondary Information"
             icon="galeno-information">
-            <group id="patient_secondary" col="8">
-                <label name="code"/>
-                <field name="code"/>
+            <group id="patient_secondary_1" colspan="4" col="6">
+                <label name="blood_type"/>
+                <field name="blood_type"/>
                 <label name="civil_status"/>
                 <field name="civil_status"/>
                 <label name="education_level"/>
                 <field name="education_level"/>
+                <label name="email"/>
+                <field name="email"/>
+                <label name="phone"/>
+                <field name="phone"/>
+                <label name="emergency_phone"/>
+                <field name="emergency_phone"/>
                 <label name="occupation"/>
                 <field name="occupation"/>
                 <label name="religion"/>
                 <field name="religion"/>
-                <label name="archive_number"/>
-                <field name="archive_number"/>
-                <label name="laterality"/>
-                <field name="laterality"/>
                 <label name="ethnic_group"/>
                 <field name="ethnic_group"/>
+                <label name="laterality"/>
+                <field name="laterality"/>
+                <label name="archive_number"/>
+                <field name="archive_number"/>
+                <newline/>
+                <label name="address"/>
+                <field name="address" colspan="5"/>
                 <field name="disabilities" colspan="8" mode="form,tree"
                     view_ids="galeno.patient_disability_view_form,galeno.patient_disability_view_tree"/>
             </group>

@@ -1846,6 +1846,10 @@ msgctxt "field:galeno.patient.evaluation,write_uid:"
 msgid "Write User"
 msgstr "Usuario modificación"
 
+msgctxt "field:galeno.patient.evaluation.diagnosis,contagious:"
+msgid "Contagious"
+msgstr "Contagiosa"
+
 msgctxt "field:galeno.patient.evaluation.diagnosis,create_date:"
 msgid "Create Date"
 msgstr "Fecha de creación"
@@ -1873,6 +1877,10 @@ msgstr "Notas"
 msgctxt "field:galeno.patient.evaluation.diagnosis,rec_name:"
 msgid "Record Name"
 msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.evaluation.diagnosis,severity:"
+msgid "Severity"
+msgstr "Severidad"
 
 msgctxt "field:galeno.patient.evaluation.diagnosis,type_:"
 msgid "Type"
@@ -2900,6 +2908,10 @@ msgctxt "model:ir.model.button,string:evaluation_finish_button"
 msgid "Finish"
 msgstr "Finalizar"
 
+msgctxt "model:ir.model.button,string:evaluation_initial_button"
+msgid "Initial"
+msgstr "Inicial"
+
 msgctxt "model:ir.model.button,string:prescription_cancel_button"
 msgid "Cancel"
 msgstr "Cancelar"
@@ -2908,13 +2920,13 @@ msgctxt "model:ir.model.button,string:prescription_done_button"
 msgid "Done"
 msgstr "Finalizado"
 
+msgctxt "model:ir.sequence,name:"
+msgid "Patient Appointment"
+msgstr "Cita de paciente"
+
 msgctxt "model:ir.sequence,name:sequence_patient"
 msgid "Patient"
 msgstr "Paciente"
-
-msgctxt "model:ir.sequence,name:sequence_patient_appointment"
-msgid "Patient Appointment"
-msgstr "Cita de paciente"
 
 msgctxt "model:ir.sequence,name:sequence_patient_evaluation"
 msgid "Patient Evaluation"
@@ -2924,13 +2936,13 @@ msgctxt "model:ir.sequence,name:sequence_patient_evaluation_test"
 msgid "Patient Evaluation Test"
 msgstr "Exámen solicitado"
 
+msgctxt "model:ir.sequence.type,name:"
+msgid "Patient Appointment"
+msgstr "Cita de paciente"
+
 msgctxt "model:ir.sequence.type,name:sequence_type_patient"
 msgid "Patient"
 msgstr "Paciente"
-
-msgctxt "model:ir.sequence.type,name:sequence_type_patient_appointment"
-msgid "Patient Appointment"
-msgstr "Cita de paciente"
 
 msgctxt "model:ir.sequence.type,name:sequence_type_patient_evaluation"
 msgid "Patient Evaluation"
@@ -3314,7 +3326,7 @@ msgstr "Abre los ojos en respuesta a estímulos dolorosos"
 
 msgctxt "selection:galeno.patient.evaluation,ms_eye:"
 msgid "Eye opening to speech"
-msgstr "Abre los ojos al abrarle"
+msgstr "Abre los ojos por estímulo verbal"
 
 msgctxt "selection:galeno.patient.evaluation,ms_eye:"
 msgid "Eyes opening spontaneously"
@@ -3358,15 +3370,15 @@ msgstr ""
 
 msgctxt "selection:galeno.patient.evaluation,ms_motor:"
 msgid "Decerebrate posturing"
-msgstr "Postura de descerebración"
+msgstr "Extensión por estímulo doloroso (postura de descerebración)"
 
 msgctxt "selection:galeno.patient.evaluation,ms_motor:"
 msgid "Decorticate posturing"
-msgstr "Postura decorticante"
+msgstr "Flexión anormal por estímulo doloroso (postura decorticante)"
 
 msgctxt "selection:galeno.patient.evaluation,ms_motor:"
 msgid "Localizes to pain"
-msgstr "Localizado al dolor"
+msgstr "Localiza el estímulo doloroso"
 
 msgctxt "selection:galeno.patient.evaluation,ms_motor:"
 msgid "No motor response"
@@ -3378,7 +3390,7 @@ msgstr "Obedece órdenes"
 
 msgctxt "selection:galeno.patient.evaluation,ms_motor:"
 msgid "Withdrawal from pain"
-msgstr "Retiro del dolor"
+msgstr "Flexión/ Retiro por estímulo doloroso"
 
 msgctxt "selection:galeno.patient.evaluation,ms_verbal:"
 msgid ""
@@ -3386,7 +3398,7 @@ msgstr ""
 
 msgctxt "selection:galeno.patient.evaluation,ms_verbal:"
 msgid "Confused"
-msgstr "Confundido"
+msgstr "Confuso, desorientado"
 
 msgctxt "selection:galeno.patient.evaluation,ms_verbal:"
 msgid "Inappropriate words"
@@ -3402,7 +3414,7 @@ msgstr "Sin respuesta verbal"
 
 msgctxt "selection:galeno.patient.evaluation,ms_verbal:"
 msgid "Oriented"
-msgstr "Orientado"
+msgstr "Orientado, conversa normalmente"
 
 msgctxt "selection:galeno.patient.evaluation,patient_gender:"
 msgid "Female"
@@ -3435,6 +3447,18 @@ msgstr "Terminada"
 msgctxt "selection:galeno.patient.evaluation,state:"
 msgid "Initiated"
 msgstr "Iniciada"
+
+msgctxt "selection:galeno.patient.evaluation.diagnosis,severity:"
+msgid "Mild"
+msgstr "Leve"
+
+msgctxt "selection:galeno.patient.evaluation.diagnosis,severity:"
+msgid "Moderate"
+msgstr "Moderado"
+
+msgctxt "selection:galeno.patient.evaluation.diagnosis,severity:"
+msgid "Severe"
+msgstr "Severa"
 
 msgctxt "selection:galeno.patient.evaluation.diagnosis,type_:"
 msgid "Definitive"

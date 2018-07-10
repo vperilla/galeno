@@ -722,7 +722,7 @@ class PatientEvaluationDiagnosis(ModelSQL, ModelView):
         [
             ('presumptive', 'Presumptive'),
             ('definitive', 'Definitive'),
-        ], 'Type',
+        ], 'Type', required=True,
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
         }, depends=['evaluation_state'])
