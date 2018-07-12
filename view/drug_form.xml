@@ -5,7 +5,5 @@
         <field name="name"/>
         <label name="code"/>
         <field name="code"/>
-        <label name="fill_required"/>
-        <field name="fill_required"/>
     </group>
 </form>

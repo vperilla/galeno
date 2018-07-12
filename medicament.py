@@ -13,13 +13,11 @@ class Medicament(DeactivableMixin, ModelSQL, ModelView):
     code = fields.Char(
         'Code - Registration number', help='Sanitary registration number')
     name = fields.Char('Name', required=True)
-    release_date = fields.DateTime('Release date')
-    expiration_date = fields.DateTime('Expiration date')
     laboratory = fields.Char('Laboratory name')
     presentation = fields.Char('Presentation')
     type_ = fields.Char('Type', help="Generic or Brand")
     sale_kind = fields.Char(
-        'Sale kind', required=True, help="Free or under prescription")
+        'Sale kind', help="Free or under prescription")
     administration_route = fields.Char('Administration route')
     composition = fields.Text('Composition', required=True,
         help="Active principle")
@@ -30,14 +28,6 @@ class Medicament(DeactivableMixin, ModelSQL, ModelView):
     @staticmethod
     def default_company():
         return Transaction().context.get('company')
-
-    @staticmethod
-    def default_type_():
-        return 'generic'
-
-    @staticmethod
-    def default_sale_kind():
-        return 'free'
 
     @classmethod
     def search_rec_name(cls, name, clause):

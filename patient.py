@@ -49,7 +49,8 @@ class Patient(ModelSQL, ModelView):
         ], depends=['subdivision'])
     address = fields.Char('Address', required=True)
     email = fields.Char('e-mail', required=True)
-    phone = fields.Char('Phone', required=True)
+    phone = fields.Char('Phone', required=True,
+        help="Phone with zone code, e.g. 072816912")
     emergency_phone = fields.Char('Emerg. Phone', help="Emergency Phone")
     gender = fields.Selection([
         (None, ''),
@@ -340,6 +341,10 @@ class Patient(ModelSQL, ModelView):
     @staticmethod
     def default_sexual_active():
         return False
+
+    @staticmethod
+    def default_cycle_duration():
+        return 0
 
     @staticmethod
     def default_pregnancies():

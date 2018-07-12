@@ -35,7 +35,7 @@
         </group>
     </group>
     <notebook colspan="4">
-        <page id="patient_1" string="Secondary Information"
+        <page id="patient_secundary" string="Secondary Information"
             icon="galeno-information">
             <group id="patient_secondary_1" colspan="4" col="6">
                 <label name="blood_type"/>
@@ -67,21 +67,66 @@
                     view_ids="galeno.patient_disability_view_form,galeno.patient_disability_view_tree"/>
             </group>
         </page>
-        <page id="patient_2" string="Diseases" icon="galeno-disease">
-            <group id="group_diseases" colspan="4">
-                <field name="diseases" colspan="4"/>
-            </group>
+        <page id="patient_backgrounds" string="Backgrounds"
+            icon="galeno-backgrounds">
+            <separator name="background_notes" colspan="4"/>
+            <field name="background_notes" colspan="4"/>
+            <notebook>
+                <page id="reproductive_backgrounds" string="Reproductive"
+                    col="6" icon="galeno-reproductive">
+                    <label name="fertile"/>
+                    <field name="fertile"/>
+                    <label name="menopause_andropause"/>
+                    <field name="menopause_andropause"/>
+                    <label name="menopause_andropause_age"/>
+                    <field name="menopause_andropause_age"/>
+                    <newline/>
+                    <label name="menarche"/>
+                    <field name="menarche"/>
+                    <label name="cycle_duration"/>
+                    <field name="cycle_duration"/>
+                    <label name="last_menstruation_date"/>
+                    <field name="last_menstruation_date"/>
+                    <newline/>
+                    <label name="pregnancies"/>
+                    <field name="pregnancies"/>
+                    <label name="normal_labor"/>
+                    <field name="normal_labor"/>
+                    <label name="caesarean_labor"/>
+                    <field name="caesarean_labor"/>
+                    <newline/>
+                    <label name="alive_children"/>
+                    <field name="alive_children"/>
+                    <label name="death_children"/>
+                    <field name="death_children"/>
+                    <label name="abortions"/>
+                    <field name="abortions"/>
+                    <label name="actually_pregnant"/>
+                    <field name="actually_pregnant"/>
+                </page>
+                <page id="disease_backgrounds" string="Diseases"
+                    icon="galeno-disease">
+                    <field name="background_diseases" colspan="4"/>
+                </page>
+                <page id="medicament_backgrounds" string="Medicaments"
+                    icon="galeno-medicament">
+                    <field name="background_medicaments" colspan="4"/>
+                </page>
+                <page id="surgery_backgrounds" string="Surgeries"
+                    icon="galeno-surgery">
+                    <field name="background_surgeries" colspan="4"/>
+                </page>
+                <page id="family_backgrounds" string="Family"
+                    icon="galeno-family">
+                    <field name="background_family" colspan="4"/>
+                </page>
+                <page id="test_backgrounds" string="Tests"
+                    icon="galeno-test">
+                    <field name="background_tests" colspan="4"/>
+                </page>
+            </notebook>
         </page>
-        <page id="patient_procedures" string="Procedures" icon="galeno-procedure">
-            <group id="group_procedures" colspan="4">
-                <field name="procedures" colspan="4"/>
-            </group>
-        </page>
-        <page id="patient_3" string="Medicament - Vaccine" icon="galeno-medicament">
-            <field name="medicaments" colspan="4"/>
-            <field name="vaccines" colspan="4"/>
-        </page>
-        <page id="patient_4" string="Life style" icon="galeno-lifestyle">
+        <page id="patient_lifestyle" string="Life style" icon="galeno-lifestyle">
             <notebook>
                 <page id="lifestyle_exercise" string="Sleep - Activities"
                     icon="galeno-activity">
@@ -123,7 +168,7 @@
                 </page>
             </notebook>
         </page>
-        <page id="patient_5" string="Sexualily" icon="galeno-sexuality">
+        <page id="patient_sexuality" string="Sexualily" icon="galeno-sexuality">
             <group id="sexuality-1" col="6">
                 <label name="sexual_orientation"/>
                 <field name="sexual_orientation"/>
@@ -142,64 +187,25 @@
                 <field name="sexual_notes" colspan="6"/>
             </group>
         </page>
-        <page id="patient_backgrounds" string="Backgrounds"
-            icon="galeno-backgrounds">
-            <separator name="background_notes" colspan="4"/>
-            <field name="background_notes" colspan="4"/>
-            <notebook>
-                <page id="reproductive_backgrounds" string="Reproductive"
-                    col="6" icon="galeno-reproductive">
-                    <label name="fertile"/>
-                    <field name="fertile"/>
-                    <label name="menopause_andropause"/>
-                    <field name="menopause_andropause"/>
-                    <label name="menopause_andropause_age"/>
-                    <field name="menopause_andropause_age"/>
-                    <newline/>
-                    <label name="menarche"/>
-                    <field name="menarche"/>
-                    <label name="cycle_duration"/>
-                    <field name="cycle_duration"/>
-                    <label name="last_menstruation_date"/>
-                    <field name="last_menstruation_date"/>
-                    <newline/>
-                    <label name="pregnancies"/>
-                    <field name="pregnancies"/>
-                    <label name="normal_labor"/>
-                    <field name="normal_labor"/>
-                    <label name="caesarean_labor"/>
-                    <field name="caesarean_labor"/>
-                    <newline/>
-                    <label name="alive_children"/>
-                    <field name="alive_children"/>
-                    <label name="death_children"/>
-                    <field name="death_children"/>
-                    <label name="abortions"/>
-                    <field name="abortions"/>
-                    <label name="actually_pregnant"/>
-                    <field name="actually_pregnant"/>
-                </page>
-                <page id="medicament_backgrounds" string="Medicaments"
-                    icon="galeno-medicament">
-                    <field name="background_medicaments" colspan="4"/>
-                </page>
-                <page id="disease_backgrounds" string="Diseases"
-                    icon="galeno-disease">
-                    <field name="background_diseases" colspan="4"/>
-                </page>
-                <page id="family_backgrounds" string="Family"
-                    icon="galeno-family">
-                    <field name="background_family" colspan="4"/>
-                </page>
-                <page id="surgery_backgrounds" string="Surgeries"
-                    icon="galeno-surgery">
-                    <field name="background_surgeries" colspan="4"/>
-                </page>
-                <page id="test_backgrounds" string="Tests"
-                    icon="galeno-test">
-                    <field name="background_tests" colspan="4"/>
-                </page>
-            </notebook>
+        <page id="patient_diseases" string="Diseases" icon="galeno-disease">
+            <group id="group_diseases" colspan="4">
+                <separator id="diseases_separator" colspan="4"
+                    string="Diseases listed below are filled automatically with the information from the evaluations."/>
+                <field name="diseases" colspan="4"/>
+            </group>
+        </page>
+        <page id="patient_procedures" string="Procedures" icon="galeno-procedure">
+            <group id="group_procedures" colspan="4">
+                <separator id="procedures_separator" colspan="4"
+                    string="Procedures listed below are filled automatically with the information from the evaluations."/>
+                <field name="procedures" colspan="4"/>
+            </group>
+        </page>
+        <page id="patient_3" string="Medicament - Vaccine" icon="galeno-medicament">
+            <separator id="medicaments_separator" colspan="4"
+                string="Medicaments listed below are filled automatically with the information from the evaluations."/>
+            <field name="medicaments" colspan="4"/>
+            <field name="vaccines" colspan="4"/>
         </page>
     </notebook>
 </form>

@@ -10,8 +10,10 @@
             <field name="patient_gender"/>
         </group>
         <group id="eval_test_result" colspan="4" col="6">
-            <separator name="test" colspan="6"/>
-            <field name="test" colspan="6"/>
+            <label name="test" colspan="1"/>
+            <field name="test" colspan="2"/>
+            <label name="request_date" colspan="1"/>
+            <field name="request_date" colspan="2"/>
             <separator name="reason" colspan="6"/>
             <field name="reason" colspan="6"/>
             <label name="with_result"/>

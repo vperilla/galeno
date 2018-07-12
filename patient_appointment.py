@@ -40,7 +40,7 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             'readonly': ~Eval('state').in_(['scheduled']),
         }, depends=['state'])
     patient = fields.Many2One(
-        'galeno.patient', 'Patient', required=True, ondelete='RESTRICT',
+        'galeno.patient', 'Patient', ondelete='RESTRICT',
         states={
             'readonly': ~Eval('state').in_(['scheduled']),
         }, depends=['state'], select=True)
@@ -70,8 +70,10 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         cls._error_messages.update({
                 'appointments_overlap': ('"%(first)s" and "%(second)s" '
                     'appointments overlap.'),
-                'accomplished_date_error': ('A future appointment can\'t be '
+                'accomplished_future_error': ('A future appointment can\'t be '
                     'accomplished.'),
+                'scheduled_past_error': ('You can\'t scheduled on a past '
+                    'date.'),
                 'modify_date_appointment': ('You can modify dates only on'
                     'scheduled appointments. Error: "%(appointment)s"')
                 })
@@ -196,7 +198,7 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
     def accomplished(cls, appointments):
         for appointment in appointments:
             if appointment.start_date > datetime.now():
-                cls.raise_user_error('accomplished_date_error')
+                cls.raise_user_error('accomplished_future_error')
 
     @classmethod
     @ModelView.button
@@ -233,6 +235,11 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             appointment.check_dates()
 
     def check_dates(self):
+        now = datetime.now()
+        if self.start_date < now:
+            self.raise_user_error('scheduled_past_error', {
+                'appointment': self.rec_name,
+            })
         cursor = Transaction().connection.cursor()
         table = self.__table__()
         cursor.execute(*table.select(table.id,

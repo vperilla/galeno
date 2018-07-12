@@ -153,24 +153,15 @@ class PatientPrescriptionLine(ModelSQL, ModelView):
     medicament = fields.Many2One('galeno.medicament', 'Medicament',
         states={
             'readonly': ~Eval('prescription_state').in_(['draft']),
-        }, depends=['prescription_state'])
+        }, depends=['prescription_state'], required=True)
     active_component = fields.Char('Active Commponent', required=True,
         states={
             'readonly': ~Eval('prescription_state').in_(['draft']),
         }, depends=['prescription_state'])
-    quantity = fields.Numeric('Quantity', digits=(16, 2),
+    quantity = fields.Char('Quantity',
         states={
             'readonly': ~Eval('prescription_state').in_(['draft']),
-        }, depends=['prescription_state'])
-    dose = fields.Numeric('Dose', digits=(16, 2),
-        states={
-            'readonly': ~Eval('prescription_state').in_(['draft']),
-        }, depends=['prescription_state'])
-    dose_unit = fields.Many2One(
-        'galeno.medicament.dose.unit', 'Dose Unit', required=True,
-        states={
-            'readonly': ~Eval('prescription_state').in_(['draft']),
-        }, depends=['prescription_state'])
+        }, depends=['prescription_state'], required=True)
     frequency = fields.Many2One(
         'galeno.medicament.frequency', 'Frequency', required=True,
         states={

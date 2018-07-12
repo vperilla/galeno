@@ -4,6 +4,8 @@
         <group id="eval_procedure_1" colspan="4">
             <label name="evaluation"/>
             <field name="evaluation"/>
+            <label name="date"/>
+            <field name="date"/>
             <newline/>
             <separator name="procedure"/>
             <field name="procedure" colspan="4"/>

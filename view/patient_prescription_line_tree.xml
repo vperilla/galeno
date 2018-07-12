@@ -4,7 +4,6 @@
     <field name="medicament"/>
     <field name="active_component" tree_invisible="1"/>
     <field name="quantity" width="125"/>
-    <field name="dose_unit" width="125"/>
     <field name="frequency"/>
     <field name="duration" width="150"/>
 </tree>

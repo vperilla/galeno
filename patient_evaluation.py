@@ -14,6 +14,12 @@ from . import galeno_tools
 __all__ = ['PatientEvaluation', 'PatientEvaluationTest',
     'PatientEvaluationDiagnosis', 'PatientEvaluationProcedure']
 
+_STATES = [
+    ('initial', 'Initiated'),
+    ('finish', 'Finished'),
+    ('cancel', 'Canceled'),
+]
+
 
 class PatientEvaluation(Workflow, ModelSQL, ModelView):
     'Patient Evaluation'
@@ -54,12 +60,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'], required=True, sort=False)
-    state = fields.Selection(
-        [
-            ('initial', 'Initiated'),
-            ('finish', 'Finished'),
-            ('cancel', 'Canceled'),
-        ], 'State', readonly=True, required=True)
+    state = fields.Selection(_STATES, 'State', readonly=True, required=True)
     color = fields.Function(fields.Char('color'), 'get_color')
     symptoms = fields.Text('Illness symptoms',
         states={
@@ -634,39 +635,72 @@ class PatientEvaluationTest(ModelSQL, ModelView):
 
     code = fields.Char('Code', readonly=True)
     evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
-        ondelete='CASCADE', required=True)
+        ondelete='CASCADE', required=True,
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
+    evaluation_state = fields.Function(
+        fields.Selection(_STATES, 'Evaluation state'),
+        'on_change_with_evaluation_state')
     patient_gender = fields.Function(
         fields.Char('Patient gender',
             states={
                 'invisible': True,
             }), 'on_change_with_patient_gender')
     test = fields.Many2One('galeno.test', 'Test',
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        },
         domain=['OR',
                 ('gender', '=', Eval('patient_gender')),
                 ('gender', '=', 'unisex'),
-        ], depends=['patient_gender'], required=True)
-    reason = fields.Text('Reason')
-    with_result = fields.Boolean('With result')
+        ], depends=['patient_gender', 'evaluation_state'], required=True)
+    request_date = fields.Date('Request Date',
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
+    reason = fields.Text('Reason',
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
+    with_result = fields.Boolean('With result',
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
     result_date = fields.Date('Result Date',
         states={
-            'readonly': ~Eval('with_result'),
-        })
+            'readonly': ~Eval('with_result') | ~Eval(
+                'evaluation_state').in_(['initial']),
+        }, depends=['with_result', 'evaluation_state'])
     result_notes = fields.Text('Result',
         states={
-            'readonly': ~Eval('with_result'),
-        })
+            'readonly': ~Eval('with_result') | ~Eval(
+                'evaluation_state').in_(['initial']),
+        }, depends=['with_result', 'evaluation_state'])
     result_data = fields.Binary('Result data', file_id='file_id',
         filename='filename', help="Load result data, Ex: image",
         states={
-            'readonly': ~Eval('with_result'),
-        })
+            'readonly': ~Eval('with_result') | ~Eval(
+                'evaluation_state').in_(['initial']),
+        }, depends=['with_result', 'evaluation_state'])
     file_id = fields.Char('File ID')
     filename = fields.Char('Filename')
+
+    @staticmethod
+    def default_request_date():
+        Date = Pool().get('ir.date')
+        return Date.today()
 
     @fields.depends('evaluation')
     def on_change_with_patient_gender(self, name=None):
         if self.evaluation:
             return self.evaluation.patient.gender
+        return None
+
+    @fields.depends('evaluation', '_parent_evaluation.state')
+    def on_change_with_evaluation_state(self, name=None):
+        if self.evaluation:
+            return self.evaluation.state
         return None
 
     def get_rec_name(self, name):
@@ -706,14 +740,8 @@ class PatientEvaluationDiagnosis(ModelSQL, ModelView):
     evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
         ondelete='CASCADE', required=True)
     evaluation_state = fields.Function(
-        fields.Selection([
-            ('initial', 'Initiated'),
-            ('finish', 'Finished'),
-            ('cancel', 'Canceled'),
-        ], 'Evaluation State',
-            states={
-                'invisible': True,
-            }), 'on_change_with_evaluation_state')
+        fields.Selection(_STATES, 'Evaluation State'),
+        'on_change_with_evaluation_state')
     disease = fields.Many2One('galeno.disease', 'Disease', required=True,
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
@@ -773,5 +801,24 @@ class PatientEvaluationProcedure(ModelSQL, ModelView):
 
     evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
         ondelete='CASCADE', required=True)
-    procedure = fields.Many2One('galeno.procedure', 'Procedure', required=True)
-    notes = fields.Text('Notes')
+    evaluation_state = fields.Function(
+        fields.Selection(_STATES, 'Evaluation State'),
+        'on_change_with_evaluation_state')
+    procedure = fields.Many2One('galeno.procedure', 'Procedure', required=True,
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
+    date = fields.Date('Date', required=True,
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
+    notes = fields.Text('Notes',
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
+
+    @fields.depends('evaluation', '_parent_evaluation.state')
+    def on_change_with_evaluation_state(self, name=None):
+        if self.evaluation:
+            return self.evaluation.state
+        return None

@@ -17,10 +17,6 @@
         <field name="type_"/>
         <label name="sale_kind"/>
         <field name="sale_kind"/>
-        <label name="release_date"/>
-        <field name="release_date"/>
-        <label name="expiration_date"/>
-        <field name="expiration_date"/>
         <label name="administration_route"/>
         <field name="administration_route"/>
         <newline/>

@@ -13,8 +13,8 @@ class Medicament(ModelSQL, ModelView):
         'galeno.patient', 'Patient', required=True, ondelete='RESTRICT')
     medicament = fields.Many2One(
         'galeno.medicament', 'Medicament', required=True, ondelete='RESTRICT')
-    amount = fields.Integer('Amount per week', required=True,
-        help="Ex. 8 pills per week")
+    quantity = fields.Char('Amount', required=True,
+        help="Ex. 8 pills per day")
     notes = fields.Text('Notes')
 
     @classmethod

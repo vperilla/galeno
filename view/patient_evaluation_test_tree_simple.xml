@@ -3,6 +3,7 @@
     <field name="code" width="125"/>
     <field name="evaluation"/>
     <field name="test"/>
+    <field name="request_date" width="125"/>
     <field name="with_result"/>
     <field name="result_notes"/>
 </tree>

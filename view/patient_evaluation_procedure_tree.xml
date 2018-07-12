@@ -2,5 +2,6 @@
 <tree>
     <field name="evaluation"/>
     <field name="procedure"/>
+    <field name="date" width="125"/>
     <field name="notes"/>
 </tree>
