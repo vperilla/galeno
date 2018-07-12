@@ -6,8 +6,8 @@
         <newline/>
         <label name="medicament"/>
         <field name="medicament"/>
-        <label name="amount"/>
-        <field name="amount"/>
+        <label name="quantity"/>
+        <field name="quantity"/>
         <separator name="notes" colspan="4"/>
         <field name="notes" colspan="4"/>
     </group>

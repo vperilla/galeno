@@ -2,6 +2,6 @@
 <tree>
     <field name="patient"/>
     <field name="medicament"/>
-    <field name="amount"/>
+    <field name="quantity"/>
     <field name="notes"/>
 </tree>
