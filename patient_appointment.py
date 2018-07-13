@@ -190,7 +190,12 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
     @ModelView.button
     @Workflow.transition('scheduled')
     def scheduled(cls, appointments):
-        pass
+        for appointment in appointments:
+            now = datetime.now()
+            if appointment.start_date < now:
+                cls.raise_user_error('scheduled_past_error', {
+                    'appointment': appointment.rec_name,
+                })
 
     @classmethod
     @ModelView.button
@@ -238,11 +243,6 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             appointment.check_dates()
 
     def check_dates(self):
-        now = datetime.now()
-        if self.start_date < now:
-            self.raise_user_error('scheduled_past_error', {
-                'appointment': self.rec_name,
-            })
         cursor = Transaction().connection.cursor()
         table = self.__table__()
         cursor.execute(*table.select(table.id,

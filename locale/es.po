@@ -74,10 +74,12 @@ msgid ""
 "You can modify dates only onscheduled appointments. Error: "
 "\"%(appointment)s\""
 msgstr ""
+"Se pueden modificar fechas solo en citas programadas. Error: "
+"\"%(appointment)s\""
 
 msgctxt "error:galeno.patient.appointment:"
 msgid "You can't scheduled on a past date."
-msgstr ""
+msgstr "No puede programar una cita con fecha anterior"
 
 msgctxt "error:galeno.patient.background.disease:"
 msgid "Disease must be unique"
@@ -142,7 +144,7 @@ msgstr "Código debe ser único"
 
 msgctxt "error:ir.attachment:"
 msgid "Max size for attachments is 5MB, your attachment size has %(size)sMB"
-msgstr ""
+msgstr "El tamaño máximo para los adjuntos es de 5MB."
 
 msgctxt "field:galeno.configuration,appointment_duration:"
 msgid "Appointment Duration"
@@ -292,7 +294,6 @@ msgctxt "field:galeno.contraceptive.method,description:"
 msgid "Description"
 msgstr "Descripción"
 
-#, fuzzy
 msgctxt "field:galeno.contraceptive.method,gender:"
 msgid "Gender"
 msgstr "Género"
@@ -1071,9 +1072,8 @@ msgstr "Usuario modificación"
 
 msgctxt "field:galeno.patient.appointment,appointments_of_day:"
 msgid "Appointments of day"
-msgstr ""
+msgstr "Citas del día"
 
-#, fuzzy
 msgctxt "field:galeno.patient.appointment,color:"
 msgid "color"
 msgstr "Color"
@@ -1836,7 +1836,7 @@ msgstr "Evaluación"
 
 msgctxt "field:galeno.patient.evaluation.diagnosis,evaluation_state:"
 msgid "Evaluation State"
-msgstr ""
+msgstr "Estado de evaluación"
 
 msgctxt "field:galeno.patient.evaluation.diagnosis,id:"
 msgid "ID"
@@ -1884,7 +1884,7 @@ msgstr "Evaluación"
 
 msgctxt "field:galeno.patient.evaluation.procedure,evaluation_state:"
 msgid "Evaluation State"
-msgstr ""
+msgstr "Estado de la evaluación"
 
 msgctxt "field:galeno.patient.evaluation.procedure,id:"
 msgid "ID"
@@ -1928,7 +1928,7 @@ msgstr "Evaluación"
 
 msgctxt "field:galeno.patient.evaluation.test,evaluation_state:"
 msgid "Evaluation state"
-msgstr ""
+msgstr "Estado de la evaluación"
 
 msgctxt "field:galeno.patient.evaluation.test,file_id:"
 msgid "File ID"
@@ -2555,7 +2555,7 @@ msgstr "Edad de primera menstruación"
 
 msgctxt "help:galeno.patient,phone:"
 msgid "Phone with zone code, e.g. 072816912"
-msgstr ""
+msgstr "Teléfono con código de zona, ejem: 072816912"
 
 msgctxt "help:galeno.patient,pregnancies:"
 msgid "Number of pregnancies of the patient"
@@ -2563,7 +2563,7 @@ msgstr "Número de embarazos de la paciente"
 
 msgctxt "help:galeno.patient,sexual_security:"
 msgid "Security of sexual practices"
-msgstr ""
+msgstr "Seguridad de las prácticas sexuales"
 
 msgctxt "help:galeno.patient,sleep_time:"
 msgid "Sleep hours per day"
@@ -2854,11 +2854,11 @@ msgid "Occupations"
 msgstr "Ocupaciones"
 
 msgctxt "model:ir.action,name:act_patient_appointment_calendar"
-msgid "Appointments Calendar"
+msgid "Calendar of appointments"
 msgstr "Calendario de citas"
 
 msgctxt "model:ir.action,name:act_patient_appointment_form"
-msgid "Appointments List"
+msgid "List of appointments"
 msgstr "Lista de citas"
 
 msgctxt "model:ir.action,name:act_patient_appointments"
@@ -2873,7 +2873,6 @@ msgctxt "model:ir.action,name:act_patient_evaluation_test_form"
 msgid "Requested tests"
 msgstr "Exámenes solicitados"
 
-#, fuzzy
 msgctxt "model:ir.action,name:act_patient_evaluations"
 msgid "Evaluations"
 msgstr "Evaluaciones"
@@ -2901,6 +2900,10 @@ msgstr "Procedimientos"
 msgctxt "model:ir.action,name:act_professional_form"
 msgid "Professional"
 msgstr "Doctor"
+
+msgctxt "model:ir.action,name:act_report_evaluation"
+msgid "Evaluation Report"
+msgstr ""
 
 msgctxt "model:ir.action,name:act_speciality_form"
 msgid "Specialities"
@@ -2938,6 +2941,34 @@ msgctxt ""
 msgid "Initiated"
 msgstr "Iniciada"
 
+msgctxt "model:ir.model.button,confirm:appointment_accomplished_button"
+msgid "Are you sure?"
+msgstr "Está seguro?"
+
+msgctxt "model:ir.model.button,confirm:appointment_patient_cancel_button"
+msgid "Are you sure?"
+msgstr "Está seguro?"
+
+msgctxt "model:ir.model.button,confirm:appointment_professional_cancel_button"
+msgid "Are you sure?"
+msgstr "Está seguro?"
+
+msgctxt "model:ir.model.button,confirm:evaluation_cancel_button"
+msgid "Are you sure?"
+msgstr "Está seguro?"
+
+msgctxt "model:ir.model.button,confirm:evaluation_finish_button"
+msgid "Are you sure?"
+msgstr "Está seguro?"
+
+msgctxt "model:ir.model.button,confirm:prescription_cancel_button"
+msgid "Are you sure?"
+msgstr "Está seguro?"
+
+msgctxt "model:ir.model.button,confirm:prescription_done_button"
+msgid "Are you sure?"
+msgstr "Está seguro?"
+
 msgctxt "model:ir.model.button,string:appointment_accomplished_button"
 msgid "Accomplished"
 msgstr "Realizado"
@@ -2949,6 +2980,10 @@ msgstr "Cancelado por Paciente"
 msgctxt "model:ir.model.button,string:appointment_professional_cancel_button"
 msgid "Doctor Cancel"
 msgstr "Cancelado por Doctor"
+
+msgctxt "model:ir.model.button,string:appointment_scheduled_button"
+msgid "To Scheduled"
+msgstr "A programada"
 
 msgctxt "model:ir.model.button,string:evaluation_cancel_button"
 msgid "Cancel"
@@ -2970,6 +3005,10 @@ msgctxt "model:ir.model.button,string:prescription_done_button"
 msgid "Done"
 msgstr "Finalizado"
 
+msgctxt "model:ir.model.button,string:prescription_draft_button"
+msgid "Draft"
+msgstr "Borrador"
+
 msgctxt "model:ir.sequence,name:"
 msgid "Patient Appointment"
 msgstr "Cita de paciente"
@@ -2986,6 +3025,10 @@ msgctxt "model:ir.sequence,name:sequence_patient_evaluation_test"
 msgid "Patient Evaluation Test"
 msgstr "Exámen solicitado"
 
+msgctxt "model:ir.sequence,name:sequence_patient_prescription"
+msgid "Patient Prescription"
+msgstr "Prescripción de paciente"
+
 msgctxt "model:ir.sequence.type,name:"
 msgid "Patient Appointment"
 msgstr "Cita de paciente"
@@ -3001,6 +3044,10 @@ msgstr "Evaluación de paciente"
 msgctxt "model:ir.sequence.type,name:sequence_type_patient_evaluation_test"
 msgid "Patient Evaluation Test"
 msgstr "Examen solicidado"
+
+msgctxt "model:ir.sequence.type,name:sequence_type_patient_prescription"
+msgid "Patient Prescription"
+msgstr "Prescripción de paciente"
 
 msgctxt "model:ir.ui.menu,name:menu_contraceptive_method_form"
 msgid "Contraceptives"
@@ -3046,6 +3093,14 @@ msgctxt "model:ir.ui.menu,name:menu_galeno_disease"
 msgid "Diseases"
 msgstr "Enfermedades"
 
+msgctxt "model:ir.ui.menu,name:menu_galeno_report_evaluation"
+msgid "Evaluation Report"
+msgstr ""
+
+msgctxt "model:ir.ui.menu,name:menu_galeno_reporting"
+msgid "Reporting"
+msgstr ""
+
 msgctxt "model:ir.ui.menu,name:menu_medicament_admin"
 msgid "Medicaments"
 msgstr "Medicamentos"
@@ -3071,11 +3126,11 @@ msgid "Appointments"
 msgstr "Citas"
 
 msgctxt "model:ir.ui.menu,name:menu_patient_appointment_calendar"
-msgid "Appointments Calendar"
+msgid "Calendar of appointments"
 msgstr "Calendario de citas"
 
 msgctxt "model:ir.ui.menu,name:menu_patient_appointment_form"
-msgid "Appointments List"
+msgid "List of appointments"
 msgstr "Lista de citas"
 
 msgctxt "model:ir.ui.menu,name:menu_patient_evaluation_form"
@@ -3122,14 +3177,17 @@ msgctxt "model:ir.ui.menu,name:menu_vaccine_form"
 msgid "Vaccines"
 msgstr "Vacunas"
 
-#, fuzzy
 msgctxt "model:res.group,name:group_galeno"
 msgid "Galeno"
 msgstr "Galeno"
 
 msgctxt "model:res.group,name:group_galeno_admin"
 msgid "Galeno Administrator"
-msgstr "Administrador"
+msgstr "Galeno Administrador"
+
+msgctxt "model:res.group,name:group_galeno_assistant"
+msgid "Assistant"
+msgstr ""
 
 msgctxt "selection:galeno.contraceptive.method,gender:"
 msgid "Female"
@@ -3483,17 +3541,14 @@ msgctxt "selection:galeno.patient.evaluation,state:"
 msgid "Initiated"
 msgstr "Iniciada"
 
-#, fuzzy
 msgctxt "selection:galeno.patient.evaluation.diagnosis,evaluation_state:"
 msgid "Canceled"
 msgstr "Cancelada"
 
-#, fuzzy
 msgctxt "selection:galeno.patient.evaluation.diagnosis,evaluation_state:"
 msgid "Finished"
 msgstr "Terminada"
 
-#, fuzzy
 msgctxt "selection:galeno.patient.evaluation.diagnosis,evaluation_state:"
 msgid "Initiated"
 msgstr "Iniciada"
@@ -3518,32 +3573,26 @@ msgctxt "selection:galeno.patient.evaluation.diagnosis,type_:"
 msgid "Presumptive"
 msgstr "Presuntivo"
 
-#, fuzzy
 msgctxt "selection:galeno.patient.evaluation.procedure,evaluation_state:"
 msgid "Canceled"
 msgstr "Cancelada"
 
-#, fuzzy
 msgctxt "selection:galeno.patient.evaluation.procedure,evaluation_state:"
 msgid "Finished"
 msgstr "Terminada"
 
-#, fuzzy
 msgctxt "selection:galeno.patient.evaluation.procedure,evaluation_state:"
 msgid "Initiated"
 msgstr "Iniciada"
 
-#, fuzzy
 msgctxt "selection:galeno.patient.evaluation.test,evaluation_state:"
 msgid "Canceled"
 msgstr "Cancelada"
 
-#, fuzzy
 msgctxt "selection:galeno.patient.evaluation.test,evaluation_state:"
 msgid "Finished"
 msgstr "Terminada"
 
-#, fuzzy
 msgctxt "selection:galeno.patient.evaluation.test,evaluation_state:"
 msgid "Initiated"
 msgstr "Iniciada"
@@ -3638,7 +3687,7 @@ msgstr "Principal"
 
 msgctxt "view:galeno.patient.appointment:"
 msgid "End Hour"
-msgstr ""
+msgstr "Hora fin"
 
 msgctxt "view:galeno.patient.appointment:"
 msgid "Hour"
@@ -3646,7 +3695,7 @@ msgstr "Hora"
 
 msgctxt "view:galeno.patient.appointment:"
 msgid "Start Hour"
-msgstr ""
+msgstr "Hora inicio"
 
 msgctxt "view:galeno.patient.evaluation:"
 msgid "Abdomen"
