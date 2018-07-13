@@ -2903,7 +2903,7 @@ msgstr "Doctor"
 
 msgctxt "model:ir.action,name:act_report_evaluation"
 msgid "Evaluation Report"
-msgstr ""
+msgstr "Reporte evaluaciones"
 
 msgctxt "model:ir.action,name:act_speciality_form"
 msgid "Specialities"
@@ -3095,11 +3095,11 @@ msgstr "Enfermedades"
 
 msgctxt "model:ir.ui.menu,name:menu_galeno_report_evaluation"
 msgid "Evaluation Report"
-msgstr ""
+msgstr "Reporte evaluaciones"
 
 msgctxt "model:ir.ui.menu,name:menu_galeno_reporting"
 msgid "Reporting"
-msgstr ""
+msgstr "Reportes"
 
 msgctxt "model:ir.ui.menu,name:menu_medicament_admin"
 msgid "Medicaments"
