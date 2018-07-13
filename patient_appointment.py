@@ -168,7 +168,7 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         else:
             self.end_date = None
 
-    @fields.depends('company', 'start_date', 'professional')
+    @fields.depends('start_date', 'professional')
     def on_change_with_appointments_of_day(self, name=None):
         if self.start_date:
             start_date = datetime(*(self.start_date.date().timetuple()[:6]))
