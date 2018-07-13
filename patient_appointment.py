@@ -117,10 +117,6 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         return 'scheduled'
 
     @staticmethod
-    def default_start_date():
-        return datetime.now()
-
-    @staticmethod
     def default_professional():
         return Transaction().context.get('professional')
 

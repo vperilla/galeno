@@ -2578,8 +2578,8 @@ msgid "Mother, Father, Uncle, etc."
 msgstr "Madre, Padre, Tío, etc."
 
 msgctxt "help:galeno.patient.background.medicament,quantity:"
-msgid "Ex. 8 pills per day"
-msgstr "Ejem: o píldoras por día"
+msgid "Ex. 3 pills per day"
+msgstr "Ejem: 3 píldoras por día"
 
 msgctxt "help:galeno.patient.disability,legal_reference:"
 msgid "legal document that verifies the authenticity of the condition"
