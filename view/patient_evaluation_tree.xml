@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <tree>
-    <field name="code" icon="color" width="150"/>
+    <field name="code" width="125"/>
     <field name="patient"/>
     <field name="professional" tree_invisible="1"/>
-    <field name="state"/>
+    <field name="state" icon="color" width="150"/>
     <field name="start_date" widget="date" width="100"/>
     <field name="start_date" widget="time" string="Hour" width="100"/>
     <field name="reason" width="150"/>

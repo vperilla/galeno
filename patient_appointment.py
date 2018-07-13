@@ -213,9 +213,12 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         pass
 
     def get_rec_name(self, name):
-        local_date = galeno_tools.format_datetime(
-            self.start_date, self.company.timezone)
-        return "%s - %s" % (local_date, self.patient.rec_name)
+        if self.patient:
+            local_date = galeno_tools.format_datetime(
+                self.start_date, self.company.timezone)
+            return "%s - %s" % (local_date, self.patient.rec_name)
+        else:
+            return self.notes
 
     @classmethod
     def search_rec_name(cls, name, clause):
