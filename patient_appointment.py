@@ -24,7 +24,8 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         })
     professional = fields.Many2One('galeno.professional', 'Professional',
         states={
-            'readonly': ~Eval('state').in_(['scheduled']),
+            'readonly': ~Eval('state').in_(['scheduled']) | (
+                Eval('context', {}).get('readonly')),
         },
         domain=[
             ('id', If(Bool(
@@ -33,16 +34,19 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         ], depends=['state'], required=True, select=True)
     start_date = fields.DateTime('Start Date', required=True,
         states={
-            'readonly': ~Eval('state').in_(['scheduled']),
+            'readonly': ~Eval('state').in_(['scheduled']) | (
+                Eval('context', {}).get('readonly')),
         }, depends=['state'])
     end_date = fields.DateTime('End Date', required=True,
         states={
-            'readonly': ~Eval('state').in_(['scheduled']),
+            'readonly': ~Eval('state').in_(['scheduled']) | (
+                Eval('context', {}).get('readonly')),
         }, depends=['state'])
     patient = fields.Many2One(
         'galeno.patient', 'Patient', ondelete='RESTRICT',
         states={
-            'readonly': ~Eval('state').in_(['scheduled']),
+            'readonly': ~Eval('state').in_(['scheduled']) | (
+                Eval('context', {}).get('readonly')),
         }, depends=['state'], select=True)
     state = fields.Selection(
         [
@@ -54,11 +58,15 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
     color = fields.Function(fields.Char('color'), 'get_color')
     notes = fields.Text('Notes',
         states={
-            'readonly': ~Eval('state').in_(['scheduled']),
+            'readonly': ~Eval('state').in_(['scheduled']) | (
+                Eval('context', {}).get('readonly')),
         }, depends=['state'])
     appointments_of_day = fields.Function(
         fields.Many2Many('galeno.patient.appointment', None, None,
-            'Appointments of day'), 'on_change_with_appointments_of_day')
+            'Appointments of day',
+            context={
+                'readonly': True
+            }), 'on_change_with_appointments_of_day')
 
     @classmethod
     def __setup__(cls):
