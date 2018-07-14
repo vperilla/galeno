@@ -5,6 +5,11 @@
             id="menu_patient_appointment" sequence="100" icon="galeno-folder"/>
 
         <!-- PATIENT APPOINMENT -->
+        <record model="ir.ui.view" id="patient_appointment_simple_view_form">
+            <field name="model">galeno.patient.appointment</field>
+            <field name="type">form</field>
+            <field name="name">patient_appointment_simple_form</field>
+        </record>
         <record model="ir.ui.view" id="patient_appointment_view_form">
             <field name="model">galeno.patient.appointment</field>
             <field name="type">form</field>

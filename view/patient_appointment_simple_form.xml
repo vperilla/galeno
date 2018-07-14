@@ -13,10 +13,6 @@
         <group id="buttons" colspan="4" col="-1">
             <label name="state"/>
             <field name="state"/>
-            <button name="accomplished"/>
-            <button name="patient_cancel"/>
-            <button name="professional_cancel"/>
-            <button name="scheduled"/>
         </group>
         <label name="patient"/>
         <field name="patient"/>
@@ -24,7 +20,5 @@
         <field name="professional"/>
         <separator name="notes" colspan="4"/>
         <field name="notes" colspan="4"/>
-        <field name="appointments_of_day" colspan="4" mode="tree,form"
-            view_ids="galeno.patient_appointment_simple_view_tree,galeno.patient_appointment_simple_view_form"/>
     </group>
 </form>

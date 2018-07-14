@@ -1,4 +1,4 @@
-from pytz import timezone, utc
+from pendulum import instance, from_timestamp
 from datetime import datetime, timedelta
 
 from sql.conditionals import Case
@@ -57,7 +57,7 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             'readonly': ~Eval('state').in_(['scheduled']),
         }, depends=['state'])
     appointments_of_day = fields.Function(
-        fields.One2Many('galeno.patient.appointment', None,
+        fields.Many2Many('galeno.patient.appointment', None, None,
             'Appointments of day'), 'on_change_with_appointments_of_day')
 
     @classmethod
@@ -147,19 +147,12 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         Configuration = pool.get('galeno.configuration')
         config = Configuration(1)
         if self.start_date and self.professional:
-            tz = timezone(self.company.timezone)
-            local_dt = utc.localize(
-                self.start_date, is_dst=None).astimezone(tz)
-            if not local_dt.hour:
-                start_date = datetime(*(self.start_date.date().timetuple()[:6]))
-                next_date = start_date + timedelta(days=1)
-                appointments_of_day = self.__class__.search([
-                    ('start_date', '>=', start_date),
-                    ('end_date', '<=', next_date),
-                    ('professional', '=', self.professional)
-                ], order=[('start_date', 'DESC')], limit=1)
-                if appointments_of_day:
-                    self.start_date = appointments_of_day[0].end_date
+            utc_dt = instance(self.start_date, tz='UTC')
+            local_dt = utc_dt.in_timezone(self.company.timezone)
+            if local_dt.hour == 0 and local_dt.minute == 0:
+                app_of_day = self.on_change_with_appointments_of_day()
+                if app_of_day:
+                    self.start_date = self.__class__(app_of_day.pop()).end_date
                 else:
                     initial_time = config.attention_start
                     self.start_date = self.start_date + timedelta(
@@ -168,10 +161,14 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         else:
             self.end_date = None
 
-    @fields.depends('start_date', 'professional')
+    @fields.depends('company', 'start_date', 'professional')
     def on_change_with_appointments_of_day(self, name=None):
-        if self.start_date:
-            start_date = datetime(*(self.start_date.date().timetuple()[:6]))
+        if self.start_date and self.company:
+            diff = abs(from_timestamp(0, self.company.timezone).offset_hours)
+            utc_dt = instance(self.start_date, tz='UTC')
+            local_dt = utc_dt.in_timezone(self.company.timezone)
+            start_of = local_dt.start_of('day') + timedelta(hours=diff)
+            start_date = datetime.combine(start_of.date(), start_of.time())
             next_date = start_date + timedelta(days=1)
             appointments_of_day = self.__class__.search([
                 ('start_date', '>=', start_date),
