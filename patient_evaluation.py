@@ -8,11 +8,15 @@ from trytond.pyson import Bool, Eval, If
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.tools import reduce_ids, grouped_slice
+from trytond.config import config
 
 from . import galeno_tools
 
+max_size = config.getint('galeno', 'max_attachment_size', default=5)
+
 __all__ = ['PatientEvaluation', 'PatientEvaluationTest',
-    'PatientEvaluationDiagnosis', 'PatientEvaluationProcedure']
+    'PatientEvaluationDiagnosis', 'PatientEvaluationProcedure',
+    'PatientEvaluationImage']
 
 _STATES = [
     ('initial', 'Initiated'),
@@ -473,6 +477,12 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
             'readonly': ~Bool(Eval('patient')) | ~Eval('state').in_(
                 ['initial']),
         })
+    images = fields.One2Many(
+        'galeno.patient.evaluation.image', 'evaluation', 'Images', size=4,
+        states={
+            'readonly': ~Bool(Eval('patient')) | ~Eval('state').in_(
+                ['initial']),
+        })
 
     @classmethod
     def __setup__(cls):
@@ -686,6 +696,14 @@ class PatientEvaluationTest(ModelSQL, ModelView):
     file_id = fields.Char('File ID')
     filename = fields.Char('Filename')
 
+    @classmethod
+    def __setup__(cls):
+        super(PatientEvaluationTest, cls).__setup__()
+        cls._error_messages.update({
+                'invalid_size': ('Max size for results is %(max_size)s MB, '
+                    'your attachment size has %(size)sMB'),
+                })
+
     @staticmethod
     def default_request_date():
         Date = Pool().get('ir.date')
@@ -731,6 +749,21 @@ class PatientEvaluationTest(ModelSQL, ModelView):
                 values['code'] = Sequence.get_id(
                         config.request_test_sequence.id)
         return super(PatientEvaluationTest, cls).create(vlist)
+
+    @classmethod
+    def validate(cls, tests):
+        super(PatientEvaluationTest, cls).validate(tests)
+        cls.check_size(tests)
+
+    @classmethod
+    def check_size(cls, tests):
+        for test in tests:
+            size = len(test.result_data) / (1000 * 1000)
+            if size > max_size:
+                cls.raise_user_error('invalid_size', {
+                    'size': int(size),
+                    'max_size': max_size,
+                    })
 
 
 class PatientEvaluationDiagnosis(ModelSQL, ModelView):
@@ -822,3 +855,41 @@ class PatientEvaluationProcedure(ModelSQL, ModelView):
         if self.evaluation:
             return self.evaluation.state
         return None
+
+
+class PatientEvaluationImage(ModelSQL, ModelView):
+    'Patient Evaluation Image'
+    __name__ = 'galeno.patient.evaluation.image'
+
+    evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
+        ondelete='CASCADE', required=True)
+    evaluation_state = fields.Function(
+        fields.Selection(_STATES, 'Evaluation State'),
+        'on_change_with_evaluation_state')
+    image = fields.Binary('Image', file_id='image_id', filename='filename',
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state', 'image_id', 'filename'])
+    filename = fields.Char('Filename')
+    image_id = fields.Char('File ID')
+    thumbnail = fields.Binary(
+        'Thumbnail', file_id='thumbnail_id', depends=['thumbnail_id'])
+    thumbnail_id = fields.Char('File ID')
+    notes = fields.Text('Notes',
+        states={
+            'readonly': ~Eval('evaluation_state').in_(['initial']),
+        }, depends=['evaluation_state'])
+
+    @fields.depends('evaluation', '_parent_evaluation.state')
+    def on_change_with_evaluation_state(self, name=None):
+        if self.evaluation:
+            return self.evaluation.state
+        return None
+
+    @fields.depends('image', 'thumbnail')
+    def on_change_image(self):
+        if self.image:
+            self.image = galeno_tools.resize_image(self.image, (1280, 1024))
+            self.thumbnail = galeno_tools.resize_image(self.image)
+        else:
+            self.thumbnail = None

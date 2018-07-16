@@ -247,6 +247,11 @@
                     view_ids="galeno.patient_evaluation_test_view_tree_simple,galeno.patient_evaluation_test_view_form" colspan="4"/>
             </group>
         </page>
+        <page id="images" string="Images" icon="galeno-photo">
+            <group id="images">
+                <field name="images" colspan="4"/>
+            </group>
+        </page>
         <page id="evaluation_diagnosis" string="Diagnosis - Procedures"
             icon="galeno-diagnosis">
             <group id="diagnostics" colspan="4" col="4">

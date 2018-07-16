@@ -5,15 +5,21 @@
         <field name="prescription"/>
         <label name="prescription_state"/>
         <field name="prescription_state"/>
-        <newline/>
-        <separator name="medicament" colspan="4"/>
-        <field name="medicament" colspan="4"/>
-        <separator name="active_component" colspan="4"/>
-        <field name="active_component" colspan="4"/>
+        <group id="medicament_quantity" colspan="4" col="6">
+            <label name="medicament"/>
+            <field name="medicament" colspan="5"/>
+            <label name="active_component"/>
+            <field name="active_component" colspan="5"/>
+            <label name="quantity"/>
+            <field name="quantity" colspan="2"/>
+            <label name="administration_route"/>
+            <field name="administration_route" colspan="2"/>
+        </group>
     </group>
     <group id="quantity_fields" colspan="4" col="6">
-        <label name="quantity"/>
-        <field name="quantity"/>
+        <separator id="posology" string="Posology" colspan="6"/>
+        <label name="dose"/>
+        <field name="dose"/>
         <label name="frequency"/>
         <field name="frequency"/>
         <label name="duration"/>

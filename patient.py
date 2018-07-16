@@ -396,7 +396,7 @@ class Patient(ModelSQL, ModelView):
         for patient in patients:
             photo = PatientPhoto.search([('patient', '=', patient.id)])
             if data:
-                thumbnail = galeno_tools.create_thumbnail(data)
+                thumbnail = galeno_tools.resize_image(data)
                 if photo:
                     photo = photo[0]
                     photo.photo = thumbnail
@@ -601,7 +601,7 @@ class Patient(ModelSQL, ModelView):
         if not valid:
             self.raise_user_error('invalid_identifier', {
                 'identifier': self.identifier,
-                'patient': self.name,
+                'patient': self.rec_name,
                 })
 
     def check_phones(self, phones=['phone', 'emergency_phone']):

@@ -2,6 +2,8 @@ from trytond.model import (ModelView, ModelSQL, fields, DeactivableMixin,
     Unique)
 from trytond.transaction import Transaction
 
+from .galeno_mixin import BasicMixin
+
 __all__ = ['Medicament', 'MedicamentDoseUnit', 'MedicamentFrequency']
 
 

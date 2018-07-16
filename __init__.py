@@ -63,6 +63,7 @@ def register():
         patient_evaluation.PatientEvaluationTest,
         patient_evaluation.PatientEvaluationDiagnosis,
         patient_evaluation.PatientEvaluationProcedure,
+        patient_evaluation.PatientEvaluationImage,
         patient_background.Test,
         patient_prescription.PatientPrescription,
         patient_prescription.PatientPrescriptionLine,

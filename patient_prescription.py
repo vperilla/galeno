@@ -154,11 +154,13 @@ class PatientPrescriptionLine(ModelSQL, ModelView):
         states={
             'readonly': ~Eval('prescription_state').in_(['draft']),
         }, depends=['prescription_state'], required=True)
-    active_component = fields.Char('Active Commponent', required=True,
+    active_component = fields.Function(
+        fields.Text('Active Commponent'), 'on_change_with_active_component')
+    quantity = fields.Char('Prescription Quantity',
         states={
             'readonly': ~Eval('prescription_state').in_(['draft']),
-        }, depends=['prescription_state'])
-    quantity = fields.Char('Quantity',
+        }, depends=['prescription_state'], required=True)
+    dose = fields.Char('Dose',
         states={
             'readonly': ~Eval('prescription_state').in_(['draft']),
         }, depends=['prescription_state'], required=True)
@@ -171,16 +173,23 @@ class PatientPrescriptionLine(ModelSQL, ModelView):
         states={
             'readonly': ~Eval('prescription_state').in_(['draft']),
         }, depends=['prescription_state'])
-
-    @fields.depends('medicament')
-    def on_change_medicament(self):
-        if self.medicament:
-            self.active_component = self.medicament.composition
-        else:
-            self.active_component = None
+    administration_route = fields.Function(fields.Char('Administration Route'),
+        'on_change_with_administration_route')
 
     @fields.depends('prescription', '_parent_prescription.state')
     def on_change_with_prescription_state(self, name=None):
         if self.prescription:
             return self.prescription.state
+        return None
+
+    @fields.depends('medicament')
+    def on_change_with_administration_route(self, name=None):
+        if self.medicament and self.medicament.administration_route:
+            return self.medicament.administration_route
+        return None
+
+    @fields.depends('medicament')
+    def on_change_with_active_component(self, name=None):
+        if self.medicament:
+            return self.medicament.composition
         return None

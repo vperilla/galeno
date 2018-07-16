@@ -13,7 +13,7 @@ class Attachment(metaclass=PoolMeta):
     def __setup__(cls):
         super(Attachment, cls).__setup__()
         cls._error_messages.update({
-                'invalid_size': ('Max size for attachments is 5MB, '
+                'invalid_size': ('Max size for attachments is %(max_size)s MB, '
                     'your attachment size has %(size)sMB'),
                 })
 
@@ -29,4 +29,5 @@ class Attachment(metaclass=PoolMeta):
             if size > max_size:
                 cls.raise_user_error('invalid_size', {
                     'size': int(size),
+                    'max_size': max_size,
                     })

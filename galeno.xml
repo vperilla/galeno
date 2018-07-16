@@ -178,6 +178,10 @@
             <field name="name">galeno-report</field>
             <field name="path">icons/report.svg</field>
         </record>
+        <record model="ir.ui.icon" id="photo_icon">
+            <field name="name">galeno-photo</field>
+            <field name="path">icons/photo.svg</field>
+        </record>
 
         <!-- MAIN MENU -->
         <record model="res.group" id="group_galeno_admin">

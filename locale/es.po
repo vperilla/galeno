@@ -2116,7 +2116,7 @@ msgstr "Estado de prescripción"
 
 msgctxt "field:galeno.patient.prescription.line,quantity:"
 msgid "Quantity"
-msgstr "Cantidad"
+msgstr "Cantidad de la prescripción"
 
 msgctxt "field:galeno.patient.prescription.line,rec_name:"
 msgid "Record Name"

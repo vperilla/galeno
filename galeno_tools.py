@@ -102,7 +102,7 @@ def age_in_words(start, end=None, locale='en'):
     return period.in_words(locale)
 
 
-def create_thumbnail(data, size=(250, 250)):
+def resize_image(data, size=(250, 250)):
     image = Image.open(BytesIO(data))
     image_format = image.format
     image_orientation = None

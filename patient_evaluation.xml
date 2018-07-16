@@ -272,5 +272,34 @@
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
         </record>
+
+        <!-- PATIENT EVALUATION IMAGE -->
+        <record model="ir.ui.view" id="patient_evaluation_image_view_form">
+            <field name="model">galeno.patient.evaluation.image</field>
+            <field name="type">form</field>
+            <field name="name">patient_evaluation_image_form</field>
+        </record>
+        <record model="ir.ui.view" id="patient_evaluation_image_view_tree">
+            <field name="model">galeno.patient.evaluation.image</field>
+            <field name="type">tree</field>
+            <field name="name">patient_evaluation_image_tree</field>
+        </record>
+        <record model="ir.model.access" id="access_evaluation_image">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation.image')]"/>
+            <field name="perm_read" eval="False"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_evaluation_image_galeno">
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation.image')]"/>
+            <field name="group" ref="group_galeno"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
     </data>
 </tryton>

@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<form>
+    <group id="evaluation_image_header">
+        <group id="eval_image" colspan="4">
+            <group id="image_left" colspan="2" col="4">
+                <label name="evaluation" colspan="4"/>
+                <field name="evaluation" colspan="4"/>
+                <separator name="image" colspan="4"/>
+                <field name="image" widget="image" colspan="4" width="600" height="600"/>
+            </group>
+            <group id="image_right" colspan="2" col="4">
+                <separator name="notes" colspan="4"/>
+                <field name="notes" colspan="4"/>
+            </group>
+        </group>
+    </group>
+</form>
