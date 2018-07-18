@@ -758,12 +758,13 @@ class PatientEvaluationTest(ModelSQL, ModelView):
     @classmethod
     def check_size(cls, tests):
         for test in tests:
-            size = len(test.result_data) / (1000 * 1000)
-            if size > max_size:
-                cls.raise_user_error('invalid_size', {
-                    'size': int(size),
-                    'max_size': max_size,
-                    })
+            if test.result_data:
+                size = len(test.result_data) / (1000 * 1000)
+                if size > max_size:
+                    cls.raise_user_error('invalid_size', {
+                        'size': int(size),
+                        'max_size': max_size,
+                        })
 
 
 class PatientEvaluationDiagnosis(ModelSQL, ModelView):

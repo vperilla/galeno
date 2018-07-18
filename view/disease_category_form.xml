@@ -1,10 +1,13 @@
 <?xml version="1.0"?>
 <form>
     <group id="main">
-        <label name="name"/>
-        <field name="name"/>
         <label name="parent"/>
         <field name="parent"/>
+        <newline/>
+        <label name="code"/>
+        <field name="code"/>
+        <label name="name"/>
+        <field name="name"/>
         <field name="childs" colspan="4"/>
     </group>
 </form>

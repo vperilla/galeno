@@ -93,6 +93,11 @@ msgctxt "error:galeno.patient.background.medicament:"
 msgid "Medicament must be unique"
 msgstr "Medicamento debe ser único"
 
+msgctxt "error:galeno.patient.evaluation.test:"
+msgid ""
+"Max size for results is %(max_size)s MB, your attachment size has %(size)sMB"
+msgstr ""
+
 msgctxt "error:galeno.patient.vaccine:"
 msgid "Vaccine dose must be unique per patient"
 msgstr "Dósis de vacuna debe ser única por paciente"
@@ -143,8 +148,10 @@ msgid "Code must be unique"
 msgstr "Código debe ser único"
 
 msgctxt "error:ir.attachment:"
-msgid "Max size for attachments is 5MB, your attachment size has %(size)sMB"
-msgstr "El tamaño máximo para los adjuntos es de 5MB."
+msgid ""
+"Max size for attachments is %(max_size)s MB, your attachment size has "
+"%(size)sMB"
+msgstr ""
 
 msgctxt "field:galeno.configuration,appointment_duration:"
 msgid "Appointment Duration"
@@ -1478,6 +1485,10 @@ msgctxt "field:galeno.patient.evaluation,id:"
 msgid "ID"
 msgstr "ID"
 
+msgctxt "field:galeno.patient.evaluation,images:"
+msgid "Images"
+msgstr "Imágenes"
+
 msgctxt "field:galeno.patient.evaluation,malnutrition:"
 msgid "Malnutrition"
 msgstr "Desnutrición"
@@ -1866,6 +1877,67 @@ msgctxt "field:galeno.patient.evaluation.diagnosis,write_uid:"
 msgid "Write User"
 msgstr "Usuario modificación"
 
+#, fuzzy
+msgctxt "field:galeno.patient.evaluation.image,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+#, fuzzy
+msgctxt "field:galeno.patient.evaluation.image,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.evaluation.image,evaluation:"
+msgid "Evaluation"
+msgstr "Evaluación"
+
+msgctxt "field:galeno.patient.evaluation.image,evaluation_state:"
+msgid "Evaluation State"
+msgstr "Estado de la evaluación"
+
+msgctxt "field:galeno.patient.evaluation.image,filename:"
+msgid "Filename"
+msgstr "Nombre de archivo"
+
+#, fuzzy
+msgctxt "field:galeno.patient.evaluation.image,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.patient.evaluation.image,image:"
+msgid "Image"
+msgstr "Imagen"
+
+msgctxt "field:galeno.patient.evaluation.image,image_id:"
+msgid "File ID"
+msgstr "Identificador del fichero"
+
+msgctxt "field:galeno.patient.evaluation.image,notes:"
+msgid "Notes"
+msgstr "Notas"
+
+msgctxt "field:galeno.patient.evaluation.image,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.evaluation.image,thumbnail:"
+msgid "Thumbnail"
+msgstr "Vista previa"
+
+msgctxt "field:galeno.patient.evaluation.image,thumbnail_id:"
+msgid "File ID"
+msgstr "Identificador del fichero"
+
+#, fuzzy
+msgctxt "field:galeno.patient.evaluation.image,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+#, fuzzy
+msgctxt "field:galeno.patient.evaluation.image,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
 msgctxt "field:galeno.patient.evaluation.procedure,create_date:"
 msgid "Create Date"
 msgstr "Fecha de creación"
@@ -2082,6 +2154,10 @@ msgctxt "field:galeno.patient.prescription.line,active_component:"
 msgid "Active Commponent"
 msgstr "Componente activo"
 
+msgctxt "field:galeno.patient.prescription.line,administration_route:"
+msgid "Administration Route"
+msgstr "Ruta de administración"
+
 msgctxt "field:galeno.patient.prescription.line,create_date:"
 msgid "Create Date"
 msgstr "Fecha de creación"
@@ -2089,6 +2165,10 @@ msgstr "Fecha de creación"
 msgctxt "field:galeno.patient.prescription.line,create_uid:"
 msgid "Create User"
 msgstr "Usuario de creación"
+
+msgctxt "field:galeno.patient.prescription.line,dose:"
+msgid "Dose"
+msgstr "Dosis"
 
 msgctxt "field:galeno.patient.prescription.line,duration:"
 msgid "Duration"
@@ -2114,8 +2194,9 @@ msgctxt "field:galeno.patient.prescription.line,prescription_state:"
 msgid "Prescription State"
 msgstr "Estado de prescripción"
 
+#, fuzzy
 msgctxt "field:galeno.patient.prescription.line,quantity:"
-msgid "Quantity"
+msgid "Prescription Quantity"
 msgstr "Cantidad de la prescripción"
 
 msgctxt "field:galeno.patient.prescription.line,rec_name:"
@@ -2577,8 +2658,9 @@ msgctxt "help:galeno.patient.background.family,relationship:"
 msgid "Mother, Father, Uncle, etc."
 msgstr "Madre, Padre, Tío, etc."
 
+#, fuzzy
 msgctxt "help:galeno.patient.background.medicament,quantity:"
-msgid "Ex. 3 pills per day"
+msgid "Ex. 8 pills per day"
 msgstr "Ejem: 3 píldoras por día"
 
 msgctxt "help:galeno.patient.disability,legal_reference:"
@@ -2748,6 +2830,10 @@ msgstr "Evaluación de paciente"
 msgctxt "model:galeno.patient.evaluation.diagnosis,name:"
 msgid "Patient Evaluation Diagnosis"
 msgstr "Diagnístico de evaluación"
+
+msgctxt "model:galeno.patient.evaluation.image,name:"
+msgid "Patient Evaluation Image"
+msgstr "Imagen de evaluación"
 
 msgctxt "model:galeno.patient.evaluation.procedure,name:"
 msgid "Patient Evaluation Procedure"
@@ -3187,7 +3273,7 @@ msgstr "Galeno Administrador"
 
 msgctxt "model:res.group,name:group_galeno_assistant"
 msgid "Assistant"
-msgstr ""
+msgstr "Asistente"
 
 msgctxt "selection:galeno.contraceptive.method,gender:"
 msgid "Female"
@@ -3573,6 +3659,18 @@ msgctxt "selection:galeno.patient.evaluation.diagnosis,type_:"
 msgid "Presumptive"
 msgstr "Presuntivo"
 
+msgctxt "selection:galeno.patient.evaluation.image,evaluation_state:"
+msgid "Canceled"
+msgstr "Cancelada"
+
+msgctxt "selection:galeno.patient.evaluation.image,evaluation_state:"
+msgid "Finished"
+msgstr "Terminada"
+
+msgctxt "selection:galeno.patient.evaluation.image,evaluation_state:"
+msgid "Initiated"
+msgstr "Iniciada"
+
 msgctxt "selection:galeno.patient.evaluation.procedure,evaluation_state:"
 msgid "Canceled"
 msgstr "Cancelada"
@@ -3768,6 +3866,10 @@ msgstr "Examen físico regional"
 msgctxt "view:galeno.patient.evaluation:"
 msgid "Requested tests"
 msgstr "Exámenes solicitados"
+
+msgctxt "view:galeno.patient.evaluation:"
+msgid "Images"
+msgstr "Imágenes"
 
 msgctxt "view:galeno.patient.evaluation:"
 msgid "Skin"
