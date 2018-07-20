@@ -179,26 +179,28 @@
         <page id="evaluation_systems_organs" string="Systems - Organs"
             icon="galeno-system-organ">
             <group id="main_so" colspan="4" col="6">
-                <group id="system_organs_main_1" colspan="6" col="6">
-                </group>
-                <group id="system_organs_main_2" colspan="6" col="6">
+                <group id="system_organs_main_1" colspan="2" col="2">
                     <separator name="so_respiratory" colspan="2"/>
-                    <separator name="so_nervous" colspan="2"/>
-                    <separator name="so_skeletal_muscle" colspan="2"/>
                     <field name="so_respiratory" colspan="2"/>
-                    <field name="so_nervous" colspan="2"/>
-                    <field name="so_skeletal_muscle" colspan="2"/>
                     <separator name="so_cardiovascular" colspan="2"/>
-                    <separator name="so_sense" colspan="2"/>
-                    <separator name="so_geninourinary" colspan="2"/>
                     <field name="so_cardiovascular" colspan="2"/>
-                    <field name="so_sense" colspan="2"/>
-                    <field name="so_geninourinary" colspan="2"/>
                     <separator name="so_digestive" colspan="2"/>
-                    <separator name="so_endocrine" colspan="2"/>
-                    <separator name="so_hemolymphatic" colspan="2"/>
                     <field name="so_digestive" colspan="2"/>
+                </group>
+                <group id="system_organs_main_2" colspan="2" col="2">
+                    <separator name="so_nervous" colspan="2"/>
+                    <field name="so_nervous" colspan="2"/>
+                    <separator name="so_sense" colspan="2"/>
+                    <field name="so_sense" colspan="2"/>
+                    <separator name="so_endocrine" colspan="2"/>
                     <field name="so_endocrine" colspan="2"/>
+                </group>
+                <group id="system_organs_main_3" colspan="2" col="1">
+                    <separator name="so_skeletal_muscle" colspan="2"/>
+                    <field name="so_skeletal_muscle" colspan="2"/>
+                    <separator name="so_geninourinary" colspan="2"/>
+                    <field name="so_geninourinary" colspan="2"/>
+                    <separator name="so_hemolymphatic" colspan="2"/>
                     <field name="so_hemolymphatic" colspan="2"/>
                 </group>
             </group>
