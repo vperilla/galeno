@@ -83,7 +83,8 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
                 'scheduled_past_error': ('You can\'t scheduled on a past '
                     'date.'),
                 'modify_date_appointment': ('You can modify dates only on'
-                    'scheduled appointments. Error: "%(appointment)s"')
+                    'scheduled appointments. Error: "%(appointment)s"'),
+                'without_start': 'There is no start time configuration',
                 })
         cls._transitions |= set((
                 ('scheduled', 'accomplished'),
@@ -162,9 +163,13 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
                 if app_of_day:
                     self.start_date = self.__class__(app_of_day.pop()).end_date
                 else:
-                    initial_time = config.attention_start
-                    self.start_date = self.start_date + timedelta(
-                        hours=initial_time.hour, minutes=initial_time.minute)
+                    if config.attention_start:
+                        initial_time = config.attention_start
+                        self.start_date = (self.start_date +
+                            timedelta(hours=initial_time.hour,
+                            minutes=initial_time.minute))
+                    else:
+                        self.raise_user_error('without_start')
             self.end_date = self.start_date + config.appointment_duration
         else:
             self.end_date = None

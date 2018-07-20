@@ -81,6 +81,10 @@ msgctxt "error:galeno.patient.appointment:"
 msgid "You can't scheduled on a past date."
 msgstr "No puede programar una cita con fecha anterior"
 
+msgctxt "error:galeno.patient.appointment:"
+msgid "There is no start time configuration"
+msgstr "No existe configuración de hora de inicio de atención"
+
 msgctxt "error:galeno.patient.background.disease:"
 msgid "Disease must be unique"
 msgstr "Enfermedad debe ser única"
@@ -111,8 +115,8 @@ msgid "Invalid email \"%(email)s\""
 msgstr "Email inválido \"%(email)s\""
 
 msgctxt "error:galeno.patient:"
-msgid "Invalid identifier \"%(identifier)s\" on Patient \"%(patient)s\"."
-msgstr "Identificador inválido \"%(identifier)s\" en paciente \"%(patient)s\"."
+msgid "Invalid identifier \"%(identifier)s\""
+msgstr "Identificador inválido \"%(identifier)s\""
 
 msgctxt "error:galeno.patient:"
 msgid "Invalid phone \"%(phone)s\""

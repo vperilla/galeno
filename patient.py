@@ -300,8 +300,7 @@ class Patient(ModelSQL, ModelView):
         super(Patient, cls).__setup__()
         t = cls.__table__()
         cls._error_messages.update({
-                'invalid_identifier': ('Invalid identifier "%(identifier)s" '
-                    'on Patient "%(patient)s".'),
+                'invalid_identifier': ('Invalid identifier "%(identifier)s"'),
                 'invalid_phone': ('Invalid phone "%(phone)s"'),
                 'invalid_email': ('Invalid email "%(email)s"'),
                 })
@@ -396,7 +395,7 @@ class Patient(ModelSQL, ModelView):
         for patient in patients:
             photo = PatientPhoto.search([('patient', '=', patient.id)])
             if data:
-                thumbnail = galeno_tools.resize_image(data)
+                thumbnail = galeno_tools.create_thumbnail(data)
                 if photo:
                     photo = photo[0]
                     photo.photo = thumbnail
@@ -430,7 +429,7 @@ class Patient(ModelSQL, ModelView):
             return galeno_tools.IDENTIFIERS.get(self.country.code, [])
         return []
 
-    @fields.depends('identifier_type', 'identifier', 'name')
+    @fields.depends('identifier_type', 'identifier')
     def on_change_with_identifier(self):
         if self.identifier_type and self.identifier:
             compat = galeno_tools.compat_identifier(
@@ -601,7 +600,6 @@ class Patient(ModelSQL, ModelView):
         if not valid:
             self.raise_user_error('invalid_identifier', {
                 'identifier': self.identifier,
-                'patient': self.rec_name,
                 })
 
     def check_phones(self, phones=['phone', 'emergency_phone']):
