@@ -63,8 +63,10 @@
                 <newline/>
                 <label name="address"/>
                 <field name="address" colspan="5"/>
-                <field name="disabilities" colspan="8" mode="form,tree"
-                    view_ids="galeno.patient_disability_view_form,galeno.patient_disability_view_tree"/>
+                <group id="patient_disabilities" colspan="6" col="4">
+                    <field name="disabilities" colspan="4" mode="form,tree"
+                        view_ids="galeno.patient_disability_view_form,galeno.patient_disability_view_tree"/>
+                </group>
             </group>
         </page>
         <page id="patient_backgrounds" string="Backgrounds"
