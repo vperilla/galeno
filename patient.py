@@ -395,7 +395,7 @@ class Patient(ModelSQL, ModelView):
         for patient in patients:
             photo = PatientPhoto.search([('patient', '=', patient.id)])
             if data:
-                thumbnail = galeno_tools.create_thumbnail(data)
+                thumbnail = galeno_tools.resize_image(data)
                 if photo:
                     photo = photo[0]
                     photo.photo = thumbnail
