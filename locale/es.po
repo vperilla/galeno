@@ -70,6 +70,10 @@ msgid "A future appointment can't be accomplished."
 msgstr "Una cita futura no puede ser realizada."
 
 msgctxt "error:galeno.patient.appointment:"
+msgid "There is no start time configuration"
+msgstr "No existe configuración de hora de inicio de atención"
+
+msgctxt "error:galeno.patient.appointment:"
 msgid ""
 "You can modify dates only onscheduled appointments. Error: "
 "\"%(appointment)s\""
@@ -80,10 +84,6 @@ msgstr ""
 msgctxt "error:galeno.patient.appointment:"
 msgid "You can't scheduled on a past date."
 msgstr "No puede programar una cita con fecha anterior"
-
-msgctxt "error:galeno.patient.appointment:"
-msgid "There is no start time configuration"
-msgstr "No existe configuración de hora de inicio de atención"
 
 msgctxt "error:galeno.patient.background.disease:"
 msgid "Disease must be unique"
@@ -2198,7 +2198,6 @@ msgctxt "field:galeno.patient.prescription.line,prescription_state:"
 msgid "Prescription State"
 msgstr "Estado de prescripción"
 
-#, fuzzy
 msgctxt "field:galeno.patient.prescription.line,quantity:"
 msgid "Prescription Quantity"
 msgstr "Cantidad de la prescripción"
@@ -2662,7 +2661,6 @@ msgctxt "help:galeno.patient.background.family,relationship:"
 msgid "Mother, Father, Uncle, etc."
 msgstr "Madre, Padre, Tío, etc."
 
-#, fuzzy
 msgctxt "help:galeno.patient.background.medicament,quantity:"
 msgid "Ex. 8 pills per day"
 msgstr "Ejem: 3 píldoras por día"
@@ -3828,6 +3826,10 @@ msgid "Hour"
 msgstr "Hora"
 
 msgctxt "view:galeno.patient.evaluation:"
+msgid "Images"
+msgstr "Imágenes"
+
+msgctxt "view:galeno.patient.evaluation:"
 msgid "Limbs"
 msgstr "Extremidades"
 
@@ -3870,10 +3872,6 @@ msgstr "Examen físico regional"
 msgctxt "view:galeno.patient.evaluation:"
 msgid "Requested tests"
 msgstr "Exámenes solicitados"
-
-msgctxt "view:galeno.patient.evaluation:"
-msgid "Images"
-msgstr "Imágenes"
 
 msgctxt "view:galeno.patient.evaluation:"
 msgid "Skin"
