@@ -23,6 +23,7 @@ from . import patient_prescription
 from . import configuration
 from . import galeno_reporting
 from . import attachment
+from . import report
 
 __all__ = ['register']
 
@@ -77,4 +78,6 @@ def register():
     Pool.register(
         module='galeno', type_='wizard')
     Pool.register(
+        report.Patient,
+        report.Evaluation,
         module='galeno', type_='report')

@@ -8,6 +8,8 @@
         <field name="name"/>
         <label name="prefix"/>
         <field name="prefix"/>
+        <label name="position"/>
+        <field name="position"/>
         <label name="speciality"/>
         <field name="speciality"/>
         <label name="medical_identifier"/>

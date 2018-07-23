@@ -163,8 +163,8 @@
                 <group id="rpe_abdomen" string="Abdomen" colspan="2" col="2" expandable="1">
                     <label name="rpe_abdomen_viscera"/>
                     <field name="rpe_abdomen_viscera"/>
-                    <label name="rpe_abdomen_adbominal_wall"/>
-                    <field name="rpe_abdomen_adbominal_wall"/>
+                    <label name="rpe_abdomen_abdominal_wall"/>
+                    <field name="rpe_abdomen_abdominal_wall"/>
                 </group>
                 <group id="rpe_skin" string="Skin" colspan="2" col="2" expandable="1">
                     <label name="rpe_skin_scars"/>
@@ -198,8 +198,8 @@
                 <group id="system_organs_main_3" colspan="2" col="1">
                     <separator name="so_skeletal_muscle" colspan="2"/>
                     <field name="so_skeletal_muscle" colspan="2"/>
-                    <separator name="so_geninourinary" colspan="2"/>
-                    <field name="so_geninourinary" colspan="2"/>
+                    <separator name="so_genitourinary" colspan="2"/>
+                    <field name="so_genitourinary" colspan="2"/>
                     <separator name="so_hemolymphatic" colspan="2"/>
                     <field name="so_hemolymphatic" colspan="2"/>
                 </group>
@@ -225,8 +225,8 @@
                 <field name="ms_violent_behavior"/>
                 <label name="ms_orientation"/>
                 <field name="ms_orientation"/>
-                <label name="ms_percetption_reality"/>
-                <field name="ms_percetption_reality"/>
+                <label name="ms_perception_reality"/>
+                <field name="ms_perception_reality"/>
                 <label name="ms_abstraction"/>
                 <field name="ms_abstraction"/>
                 <label name="ms_calc_skill"/>

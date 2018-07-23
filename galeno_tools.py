@@ -8,7 +8,7 @@ import phonenumbers
 from phonenumbers import PhoneNumberFormat
 
 from io import BytesIO
-from PIL import Image
+from PIL import Image, ImageOps
 
 from email_validator import validate_email
 
@@ -102,7 +102,7 @@ def age_in_words(start, end=None, locale='en'):
     return period.in_words(locale)
 
 
-def resize_image(data, size=(250, 250)):
+def resize_image(data, size=(500, 500), fit=None):
     image = Image.open(BytesIO(data))
     image_format = image.format
     image_orientation = None
@@ -120,7 +120,10 @@ def resize_image(data, size=(250, 250)):
         elif image_orientation == 8:
             image = image.rotate(90, expand=1)
     result = BytesIO()
-    image.thumbnail(size, Image.ANTIALIAS)
+    if fit is None:
+        image.thumbnail(size, Image.ANTIALIAS)
+    else:
+        image = ImageOps.fit(image, size, Image.ANTIALIAS)
     image.save(result, image_format)
     return fields.Binary.cast(result.getvalue())
 

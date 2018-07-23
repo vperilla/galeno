@@ -31,6 +31,7 @@ class Patient(ModelSQL, ModelView):
         help="Personal Identifier, Eg:CI/RUC")
     photo = fields.Function(
         fields.Binary('Photo'), 'get_photo', setter='set_photo')
+    photo_size = fields.Function(fields.Char('Photo Size'), 'get_photo_size')
     birthdate = fields.Date('Birthdate', required=True)
     age = fields.Function(fields.TimeDelta('Age'), 'on_change_with_age')
     age_char = fields.Function(fields.Char('Age'), 'on_change_with_age_char')
@@ -57,6 +58,7 @@ class Patient(ModelSQL, ModelView):
         ('male', 'Male'),
         ('female', 'Female')
     ], 'Gender', required=True)
+    gender_translated = gender.translated('gender')
     # SECONDARY INFORMATION
     civil_status = fields.Selection([
         ('single', 'Single'),
@@ -65,11 +67,13 @@ class Patient(ModelSQL, ModelView):
         ('divorced', 'Divorced'),
         ('concubinage', 'Concubinage'),
     ], 'Civil Status', required=True)
+    civil_status_translated = civil_status.translated('civil_status')
     laterality = fields.Selection([
         ('left', 'Left'),
         ('right', 'Right'),
         ('ambidextrous', 'Ambidextrous'),
     ], 'Laterality')
+    laterality_translated = laterality.translated('laterality')
     blood_type = fields.Selection([
         ('a-', 'A -'),
         ('a+', 'A +'),
@@ -89,6 +93,7 @@ class Patient(ModelSQL, ModelView):
         ('university', 'University'),
         ('postgraduate', 'Postgraduate'),
     ], 'Education level', sort=False)
+    education_level_translated = education_level.translated('education_level')
     occupation = fields.Many2One('galeno.occupation', 'Occupation')
     ethnic_group = fields.Many2One('galeno.ethnic.group', 'Ethnic Group')
     disability = fields.Function(fields.Boolean('Disability'),
@@ -116,7 +121,7 @@ class Patient(ModelSQL, ModelView):
             ('carnivorous', 'Carnivorous'),
             ('vegetarian', 'Vegetarian')
         ], 'Diet type', sort=False)
-    diet_type_note = fields.Text('Diet type note')
+    diet_type_translated = diet_type.translated('diet_type')
     meals_number = fields.Integer('Meals per day',
         domain=['OR',
                 ('meals_number', '=', None),
@@ -153,6 +158,8 @@ class Patient(ModelSQL, ModelView):
             ('straight', 'Straight'),
             ('unknown', 'Unknown'),
         ], 'Sexual orientation', sort=False, required=True)
+    sexual_orientation_translated = sexual_orientation.translated(
+        'sexual_orientation')
     sexual_active = fields.Boolean('Sexual active')
     relation_type = fields.Selection(
         [
@@ -165,6 +172,7 @@ class Patient(ModelSQL, ModelView):
             'readonly': ~Bool(Eval('sexual_active')),
             'required': Bool(Eval('sexual_active')),
         }, depends=['sexual_active'], sort=False)
+    relation_type_translated = relation_type.translated('relation_type')
     sexual_security = fields.Selection(
         [
             (None, ''),
@@ -175,6 +183,7 @@ class Patient(ModelSQL, ModelView):
             'readonly': ~Bool(Eval('sexual_active')),
             'required': Bool(Eval('sexual_active')),
         }, help="Security of sexual practices")
+    sexual_security_translated = sexual_security.translated('sexual_security')
     contraceptive_method = fields.Many2One(
         'galeno.contraceptive.method', 'Contraceptive method',
         states={
@@ -381,7 +390,7 @@ class Patient(ModelSQL, ModelView):
         for patient in patients:
             photo = PatientPhoto.search([('patient', '=', patient.id)])
             if photo:
-                photos[patient.id] = photo[0].photo
+                photos[patient.id] = fields.Binary.cast(photo[0].photo)
             else:
                 path = 'galeno/icons/%s_patient.png' % (patient.gender)
                 photos[patient.id] = fields.Binary.cast(
@@ -664,6 +673,7 @@ class PatientDisability(ModelSQL, ModelView):
             ('visual', 'Visual'),
             ('other', 'Other'),
         ], 'Type', sort=False, required=True)
+    type_translated = type_.translated('type_')
     disease = fields.Many2One('galeno.disease', 'Disease')
     legal_reference = fields.Char('Legal reference',
         help='legal document that verifies the authenticity of the condition')

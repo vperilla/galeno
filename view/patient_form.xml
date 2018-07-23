@@ -149,10 +149,9 @@
                     <group id="lifestyle-diet" col="6" colspan="4">
                         <label name="diet_type"/>
                         <field name="diet_type"/>
-                        <label name="diet_type_note"/>
-                        <field name="diet_type_note"/>
                         <label name="meals_number"/>
                         <field name="meals_number"/>
+                        <newline/>
                         <label name="coffe_consumption"/>
                         <field name="coffe_consumption"/>
                         <label name="sugar_consumption"/>

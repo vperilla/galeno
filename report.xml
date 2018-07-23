@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+        <!-- PATIENT -->
+        <record model="ir.action.report" id="patient_report">
+            <field name="name">Patient Detail</field>
+            <field name="model">galeno.patient</field>
+            <field name="report_name">galeno.patient</field>
+            <field name="report">galeno/report_template/patient.fodt</field>
+        </record>
+        <record model='ir.action.keyword' id='patient_report_keyword'>
+            <field name="keyword">form_print</field>
+            <field name="model">galeno.patient,-1</field>
+            <field name="action" ref="patient_report"/>
+        </record>
+        <!-- EVALUATION -->
+        <record model="ir.action.report" id="patient_evaluation_report">
+            <field name="name">Evaluation</field>
+            <field name="model">galeno.patient.evaluation</field>
+            <field name="report_name">galeno.patient.evaluation</field>
+            <field name="report">galeno/report_template/evaluation.fodt</field>
+        </record>
+        <record model='ir.action.keyword' id='patient_evaluation_report_keyword'>
+            <field name="keyword">form_print</field>
+            <field name="model">galeno.patient.evaluation,-1</field>
+            <field name="action" ref="patient_evaluation_report"/>
+        </record>
+    </data>
+</tryton>

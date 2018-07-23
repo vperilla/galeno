@@ -10,6 +10,7 @@ class Professional(DeactivableMixin, ModelSQL, ModelView):
     name = fields.Char('Name', required=True)
     prefix = fields.Char('Prefix', help="Ex: Mr., Mrs, etc")
     speciality = fields.Many2One('galeno.speciality', 'Speciality')
+    position = fields.Char('Position')
     medical_identifier = fields.Char('Medical Identifier')
 
     def get_rec_name(self, name):

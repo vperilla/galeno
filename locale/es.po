@@ -857,10 +857,6 @@ msgctxt "field:galeno.patient,diet_type:"
 msgid "Diet type"
 msgstr "Tipo dieta"
 
-msgctxt "field:galeno.patient,diet_type_note:"
-msgid "Diet type note"
-msgstr "Nota de tipo de dieta"
-
 msgctxt "field:galeno.patient,disabilities:"
 msgid "Disabilities"
 msgstr "Discapacidades"
@@ -1541,7 +1537,7 @@ msgctxt "field:galeno.patient.evaluation,ms_orientation:"
 msgid "Orientation"
 msgstr "Orientación"
 
-msgctxt "field:galeno.patient.evaluation,ms_percetption_reality:"
+msgctxt "field:galeno.patient.evaluation,ms_perception_reality:"
 msgid "Perception reality"
 msgstr "Percepción de la realidad"
 
@@ -1593,7 +1589,7 @@ msgctxt "field:galeno.patient.evaluation,requested_tests:"
 msgid "Tests"
 msgstr "Exámenes"
 
-msgctxt "field:galeno.patient.evaluation,rpe_abdomen_adbominal_wall:"
+msgctxt "field:galeno.patient.evaluation,rpe_abdomen_abdominal_wall:"
 msgid "Abdominal wall"
 msgstr "Pared abdominal"
 
@@ -1757,7 +1753,7 @@ msgctxt "field:galeno.patient.evaluation,so_endocrine:"
 msgid "Endocrine"
 msgstr "Endócrino"
 
-msgctxt "field:galeno.patient.evaluation,so_geninourinary:"
+msgctxt "field:galeno.patient.evaluation,so_genitourinary:"
 msgid "Genitourinary"
 msgstr "Genitourinario"
 
@@ -2200,7 +2196,7 @@ msgstr "Estado de prescripción"
 
 msgctxt "field:galeno.patient.prescription.line,quantity:"
 msgid "Prescription Quantity"
-msgstr "Cantidad de la prescripción"
+msgstr "Cantidad recetada"
 
 msgctxt "field:galeno.patient.prescription.line,rec_name:"
 msgid "Record Name"

@@ -64,7 +64,9 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'], required=True, sort=False)
+    reason_translated = reason.translated('reason')
     state = fields.Selection(_STATES, 'State', readonly=True, required=True)
+    state_translated = state.translated('state')
     color = fields.Function(fields.Char('color'), 'get_color')
     symptoms = fields.Text('Illness symptoms',
         states={
@@ -88,12 +90,15 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
     systolic_pressure = fields.Float('Systolic Pressure',
         domain=[
             If(Bool(Eval('systolic_pressure')),
-               ('systolic_pressure', '>', 0),
-               ())
+               [
+                   ('systolic_pressure', '>', 0),
+                   ('systolic_pressure', '>', Eval('diastolic_pressure'))],
+               [()])
         ],
         states={
             'readonly': ~Eval('state').in_(['initial']),
-        }, depends=['state'])
+            'required': Bool(Eval('diastolic_pressure')),
+        }, depends=['state', 'diastolic_pressure'])
     diastolic_pressure = fields.Float('Diastolic Pressure',
         domain=[
             If(Bool(Eval('diastolic_pressure')),
@@ -102,7 +107,8 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         ],
         states={
             'readonly': ~Eval('state').in_(['initial']),
-        }, depends=['state'])
+            'required': Bool(Eval('systolic_pressure')),
+        }, depends=['state', 'systolic_pressure'])
     temperature = fields.Float('Temperature',
         domain=[
             If(Bool(Eval('temperature')),
@@ -216,7 +222,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
-    so_geninourinary = fields.Text('Genitourinary',
+    so_genitourinary = fields.Text('Genitourinary',
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
@@ -325,7 +331,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
-    rpe_abdomen_adbominal_wall = fields.Boolean('Abdominal wall',
+    rpe_abdomen_abdominal_wall = fields.Boolean('Abdominal wall',
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
@@ -389,6 +395,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
+    ms_eye_translated = ms_eye.translated('ms_eye')
     ms_verbal = fields.Selection(
         [
             (None, None),
@@ -401,6 +408,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
+    ms_verbal_translated = ms_verbal.translated('ms_verbal')
     ms_motor = fields.Selection(
         [
             (None, None),
@@ -414,6 +422,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
+    ms_motor_translated = ms_motor.translated('ms_motor')
     ms_glasgow_score = fields.Function(fields.Integer('Glasgow score',
         help="Glasgow Score: < 9 severe, 9 -12 moderate, > 13 minor"),
         'on_change_with_ms_glasgow_score')
@@ -425,7 +434,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
-    ms_percetption_reality = fields.Boolean('Perception reality',
+    ms_perception_reality = fields.Boolean('Perception reality',
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
@@ -450,6 +459,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
+    ms_mood_translated = ms_mood.translated('ms_mood')
     ms_memory = fields.Boolean('Memory',
         states={
             'readonly': ~Eval('state').in_(['initial']),
@@ -571,13 +581,15 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
     @fields.depends('weight', 'heigth')
     def on_change_with_bmi(self, name=None):
         if self.weight and self.heigth:
-            return Decimal(self.weight) / Decimal(((self.heigth / 100.0) ** 2))
+            bmi = Decimal(self.weight) / Decimal(((self.heigth / 100.0) ** 2))
+            return bmi.quantize(Decimal('0.01'))
         return 0
 
     @fields.depends('hip', 'waist')
     def on_change_with_whr(self, name=None):
         if self.hip and self.waist:
-            return Decimal(self.waist) / Decimal(self.hip)
+            whr = Decimal(self.waist) / Decimal(self.hip)
+            return whr.quantize(Decimal('0.01'))
         return 0
 
     @fields.depends('ms_eye', 'ms_verbal', 'ms_motor')
@@ -668,6 +680,7 @@ class PatientEvaluationTest(ModelSQL, ModelView):
     request_date = fields.Date('Request Date',
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
+            'required': True,
         }, depends=['evaluation_state'])
     reason = fields.Text('Reason',
         states={
@@ -681,6 +694,7 @@ class PatientEvaluationTest(ModelSQL, ModelView):
         states={
             'readonly': ~Eval('with_result') | ~Eval(
                 'evaluation_state').in_(['initial']),
+            'required': Bool(Eval('with_result')),
         }, depends=['with_result', 'evaluation_state'])
     result_notes = fields.Text('Result',
         states={
@@ -788,6 +802,7 @@ class PatientEvaluationDiagnosis(ModelSQL, ModelView):
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
         }, depends=['evaluation_state'])
+    type_translated = type_.translated('type_')
     date = fields.Date('Date',
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
@@ -800,6 +815,7 @@ class PatientEvaluationDiagnosis(ModelSQL, ModelView):
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
         }, depends=['evaluation_state'])
+    severity_translated = severity.translated('severity')
     contagious = fields.Boolean('Contagious',
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
