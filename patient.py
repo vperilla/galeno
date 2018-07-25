@@ -638,6 +638,7 @@ class Patient(ModelSQL, ModelView):
         for values in vlist:
             if values.get('code') is None:
                 values['code'] = Sequence.get_id(config.patient_sequence.id)
+        return super(Patient, cls).create(vlist)
 
 
 class PatientPhoto(ModelSQL):
