@@ -101,6 +101,8 @@ msgctxt "error:galeno.patient.evaluation.test:"
 msgid ""
 "Max size for results is %(max_size)s MB, your attachment size has %(size)sMB"
 msgstr ""
+"Tamaño máximo para los resultados es %(max_size)s MB, su resultado tiene "
+"%(size)sMB"
 
 msgctxt "error:galeno.patient.vaccine:"
 msgid "Vaccine dose must be unique per patient"
@@ -156,6 +158,8 @@ msgid ""
 "Max size for attachments is %(max_size)s MB, your attachment size has "
 "%(size)sMB"
 msgstr ""
+"Tamaño máximo para los adjuntos es %(max_size)s MB, el tamaño de su adjunto "
+"es %(size)sMB"
 
 msgctxt "field:galeno.configuration,appointment_duration:"
 msgid "Appointment Duration"
@@ -769,6 +773,10 @@ msgctxt "field:galeno.patient,alive_children:"
 msgid "Alive children"
 msgstr "Hijos vivos"
 
+msgctxt "field:galeno.patient,allergies:"
+msgid "Allergies"
+msgstr "Alergias"
+
 msgctxt "field:galeno.patient,archive_number:"
 msgid "Archive #"
 msgstr "# Archivo"
@@ -969,6 +977,10 @@ msgctxt "field:galeno.patient,photo:"
 msgid "Photo"
 msgstr "Foto"
 
+msgctxt "field:galeno.patient,photo_size:"
+msgid "Photo Size"
+msgstr ""
+
 msgctxt "field:galeno.patient,pregnancies:"
 msgid "Pregnancies"
 msgstr "Embarazos"
@@ -1134,6 +1146,57 @@ msgid "Write Date"
 msgstr "Fecha modificación"
 
 msgctxt "field:galeno.patient.appointment,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
+msgctxt "field:galeno.patient.appointment.email.log,appointment:"
+msgid "Appointment"
+msgstr ""
+
+#, fuzzy
+msgctxt "field:galeno.patient.appointment.email.log,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+#, fuzzy
+msgctxt "field:galeno.patient.appointment.email.log,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+#, fuzzy
+msgctxt "field:galeno.patient.appointment.email.log,date:"
+msgid "Date"
+msgstr "Fecha"
+
+#, fuzzy
+msgctxt "field:galeno.patient.appointment.email.log,id:"
+msgid "ID"
+msgstr "ID"
+
+#, fuzzy
+msgctxt "field:galeno.patient.appointment.email.log,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.patient.appointment.email.log,recipients:"
+msgid "Recipients"
+msgstr "Destinatarios"
+
+msgctxt "field:galeno.patient.appointment.email.log,recipients_hidden:"
+msgid "Hidden Recipients"
+msgstr "Destinatarios ocultos"
+
+msgctxt "field:galeno.patient.appointment.email.log,recipients_secondary:"
+msgid "Secondary Recipients"
+msgstr "Destinatarios secundarios"
+
+#, fuzzy
+msgctxt "field:galeno.patient.appointment.email.log,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+#, fuzzy
+msgctxt "field:galeno.patient.appointment.email.log,write_uid:"
 msgid "Write User"
 msgstr "Usuario modificación"
 
@@ -2326,6 +2389,10 @@ msgctxt "field:galeno.professional,name:"
 msgid "Name"
 msgstr "Nombre"
 
+msgctxt "field:galeno.professional,position:"
+msgid "Position"
+msgstr ""
+
 msgctxt "field:galeno.professional,prefix:"
 msgid "Prefix"
 msgstr "Prefijo"
@@ -2793,6 +2860,10 @@ msgctxt "model:galeno.patient.appointment,name:"
 msgid "Patient Appointment"
 msgstr "Cita de paciente"
 
+msgctxt "model:galeno.patient.appointment.email.log,name:"
+msgid "Appointment Email Log"
+msgstr ""
+
 msgctxt "model:galeno.patient.background.disease,name:"
 msgid "Galeno Disease Background"
 msgstr "Antecedentes enfermedades"
@@ -3004,6 +3075,18 @@ msgstr "Exámenes"
 msgctxt "model:ir.action,name:act_vaccine_form"
 msgid "Vaccines"
 msgstr "Vacunas"
+
+msgctxt "model:ir.action,name:patient_evaluation_report"
+msgid "Evaluation"
+msgstr "Evaluación"
+
+msgctxt "model:ir.action,name:patient_report"
+msgid "Patient Detail"
+msgstr "Detalle de paciente"
+
+msgctxt "model:ir.action,name:patient_prescription_report"
+msgid "Prescription"
+msgstr "Prescripción"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_patient_evaluation_form_domain_all"
@@ -3272,6 +3355,955 @@ msgstr "Galeno Administrador"
 msgctxt "model:res.group,name:group_galeno_assistant"
 msgid "Assistant"
 msgstr "Asistente"
+
+#, fuzzy
+msgctxt "report:galeno.patient.appointment:"
+msgid "Date:"
+msgstr "Fecha:"
+
+msgctxt "report:galeno.patient.appointment:"
+msgid "Dear:"
+msgstr ""
+
+msgctxt "report:galeno.patient.appointment:"
+msgid "Reminder Notice"
+msgstr ""
+
+msgctxt "report:galeno.patient.appointment:"
+msgid "Thanks"
+msgstr ""
+
+msgctxt "report:galeno.patient.appointment:"
+msgid "You have an scheduled appoitnment on"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "(Se imprimen marcadas con patología)"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "/"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid ":"
+msgstr ""
+
+#, fuzzy
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Abdomen"
+msgstr "Abdomen"
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Abstracción:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Altura (cm):"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Amígdalas"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "BMI:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Cadera (cm):"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Cardiovascular:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Cicatrices"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Cintura (cm):"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Columna"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Comportamiento violento:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Conjuntiva"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Contagiosa"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Corazón"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Cornetes"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Costillas"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Cuello"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Código"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Datos principales"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Deshidratación:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Desnutrición:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Desviación"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Digestivo:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Discernimiento:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Dolor"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Edad paciente"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Endócrino:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Enfermedad"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Enfermedades diagnosticadas"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Estado anímico:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Estado evaluación"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Estado mental"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Evaluación"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Examen"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Examen Físico Regional"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Extremidades"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Extremidades inferiores"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Extremidades superiores"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Exámentes solicitados"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "F"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Fecha"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Fecha evaluación:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Fecha solicitud"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Flexibilidad"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Fuerza"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Genitales"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Genitourinario:"
+msgstr ""
+
+#, fuzzy
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Glasgow score"
+msgstr "Puntage de Glasgow"
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Glándulas mamarias"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Género:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Habilidades de cálculo:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Hemolinfático:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Imagen"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Imágenes"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Labios"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Lengua"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Marcha"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Melanoma"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Memoria:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Motilidad"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Movilidad"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Mucosa"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Músculo esquelético:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Naríz"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Nervioso:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Neurológica"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "No"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Notas"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Notas:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Ojos"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Orienttación:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Orofaringe"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Oído"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Oído externo"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Pabellón"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Paciente"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Pag:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Pared abdominal"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Partición"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Pecho"
+msgstr ""
+
+#, fuzzy
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Pelvis"
+msgstr "Pelvis"
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Percepción de la realidad:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Peso (kg):"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Piel"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Presión"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Procedimiento"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Procedimientos"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Pulmones"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Puntaje"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Pupilas"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "R"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Razón"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Razón:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Reconoce objetos:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Respiratorio:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Respuesta motora"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Respuesta ocular"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Respuesta verbal"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Saturación oxígeno:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Senos paranasales"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Sensibilidad"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Sensibilidad:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Severidad"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Si"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Signos vitales"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Sintomas"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Sistemas y Órganos"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Tatuajes"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Temperatura:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Tipo"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Tiroides"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Tratamiento"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Tímpanos"
+msgstr ""
+
+#, fuzzy
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Vascular"
+msgstr "Vascular"
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Vocabulario:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "Vísceras"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "WHR:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "_________________________________"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "aringe"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "de"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "itmo cardiaco:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "no"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "recuencia respiratoria:"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
+msgid "si"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "(meses)"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "-"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid ":"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "A"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Abstinencia"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Actividades:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Actualmente embarazada:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Antecedentes"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "CI:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Cantidad (semana)"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Cantidad:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Cesárea:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Cirugías:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Ciudad:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Comidas por día"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Consumo"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Consumo azucar:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Consumo café:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Consumo sal:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Contagiosa"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Datos principales"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Datos secundarios"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Descripción"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Dieta:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Dirección:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Discapacidad"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Dosis"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Droga"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Drogas (incluye tabaco y alcohol):"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Duración del ciclo en días:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Edad de menarquía:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Edad:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Email:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Enfermedad"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Enfermedades diagnosticadas"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Enfermedades familiares:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Enfermedades:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Estado civil:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Estilo de vida"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Ex consumidor"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Exámenes:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Fecha"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Fecha Nacimiento:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Fecha última menstruación:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Fertil:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Ficha Médica"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Frecuencia"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Grupo étnico:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Género:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Hijos muertos:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Hijos vivos:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Intersexual"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Medicamento"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Medicamentos prescritos"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Medicamentos:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Menopausia / Andropausia:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Método anticonceptivo:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Nivel de educación:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "No"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Nombre:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Notas"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Notas alimentación:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Notas generales"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Nro carnet"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Nro embarazos:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Ocupación:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Orientación sexual:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Pag:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Parto normal:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "País:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Porcentage"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Procedimiento"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Procedimientos realizados"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Provincia"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Religión:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Reproductiv"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Seguridad sexual:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Severidad"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Sexualidad"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Sexualmente activo:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Si"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Siguiente fecha"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Sueño"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Sueño en el día:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Sueño en el día: si"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Telf emergencia:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Teléfono:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Tiempo (meses)"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Tiempo de sueño en horas:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Tipo de dieta:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Tipo de sangre:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Tipo relación:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Tipo:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Vacuna"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "Vacunas"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "_________________________________"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "bortos:"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "de"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "horas a la semana."
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "i"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "no"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "os"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "s"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
+msgid "si"
+msgstr ""
 
 msgctxt "selection:galeno.contraceptive.method,gender:"
 msgid "Female"
@@ -3881,6 +4913,10 @@ msgctxt "view:galeno.patient.evaluation:"
 msgid "Vital signs"
 msgstr "Signos vitales"
 
+msgctxt "view:galeno.patient.prescription.line:"
+msgid "Posology"
+msgstr "Posología"
+
 msgctxt "view:galeno.patient.prescription:"
 msgid "Hour"
 msgstr "Hora"
@@ -3888,6 +4924,10 @@ msgstr "Hora"
 msgctxt "view:galeno.patient.prescription:"
 msgid "Prescription detail"
 msgstr "Detalle de prescripción"
+
+msgctxt "view:galeno.patient:"
+msgid "Allergies"
+msgstr "Alergias"
 
 msgctxt "view:galeno.patient:"
 msgid "Backgrounds"

@@ -60,6 +60,7 @@ def register():
         patient_background.Family,
         patient_background.Surgery,
         patient_appointment.PatientAppointment,
+        patient_appointment.PatientAppointmentEmailLog,
         patient_evaluation.PatientEvaluation,
         patient_evaluation.PatientEvaluationTest,
         patient_evaluation.PatientEvaluationDiagnosis,
@@ -80,4 +81,6 @@ def register():
     Pool.register(
         report.Patient,
         report.Evaluation,
+        report.Prescription,
+        report.Appointment,
         module='galeno', type_='report')

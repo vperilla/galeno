@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:generator>LibreOffice/6.0.5.2$Linux_X86_64 LibreOffice_project/00m0$Build-2</meta:generator><meta:creation-date>2008-06-07T15:28:22</meta:creation-date><dc:date>2009-01-10T16:03:32</dc:date><meta:editing-cycles>1</meta:editing-cycles><meta:editing-duration>PT0S</meta:editing-duration><meta:document-statistic meta:table-count="21" meta:image-count="0" meta:object-count="0" meta:page-count="7" meta:paragraph-count="230" meta:word-count="489" meta:character-count="5751" meta:non-whitespace-character-count="5495"/><meta:user-defined meta:name="Info 1"/><meta:user-defined meta:name="Info 2"/><meta:user-defined meta:name="Info 3"/><meta:user-defined meta:name="Info 4"/></office:meta>
+ <office:meta><meta:generator>LibreOffice/6.0.5.2$Linux_X86_64 LibreOffice_project/00m0$Build-2</meta:generator><meta:creation-date>2008-06-07T15:28:22</meta:creation-date><dc:date>2009-01-10T16:03:32</dc:date><meta:editing-cycles>1</meta:editing-cycles><meta:editing-duration>PT0S</meta:editing-duration><meta:document-statistic meta:table-count="21" meta:image-count="0" meta:object-count="0" meta:page-count="7" meta:paragraph-count="232" meta:word-count="497" meta:character-count="5799" meta:non-whitespace-character-count="5537"/><meta:user-defined meta:name="Info 1"/><meta:user-defined meta:name="Info 2"/><meta:user-defined meta:name="Info 3"/><meta:user-defined meta:name="Info 4"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">80857</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="long">72683</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="long">44822</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="long">19263</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="long">32016</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="long">13760</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">8624</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">96578</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">10799</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">81142</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">80857</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="long">44820</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">100118</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">72683</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="long">32015</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">86441</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
-     <config:config-item config:name="ZoomFactor" config:type="short">100</config:config-item>
+     <config:config-item config:name="ZoomFactor" config:type="short">140</config:config-item>
      <config:config-item config:name="IsSelectedFrame" config:type="boolean">false</config:config-item>
      <config:config-item config:name="AnchoredTextOverflowLegacy" config:type="boolean">false</config:config-item>
     </config:config-item-map-entry>
@@ -92,7 +92,7 @@
    <config:config-item config:name="UnxForceZeroExtLeading" config:type="boolean">false</config:config-item>
    <config:config-item config:name="TabAtLeftIndentForParagraphsInList" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintRightPages" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">4235012</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">4404382</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MsWordCompTrailingBlanks" config:type="boolean">false</config:config-item>
    <config:config-item config:name="InvertBorderSpacing" config:type="boolean">false</config:config-item>
@@ -462,6 +462,9 @@
    <style:table-cell-properties fo:padding="0.097cm" fo:border-left="none" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
   </style:style>
   <style:style style:name="Tabla4.B8" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border-left="none" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
+  </style:style>
+  <style:style style:name="Tabla4.B9" style:family="table-cell">
    <style:table-cell-properties fo:padding="0.097cm" fo:border-left="none" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
   </style:style>
   <style:style style:name="Tabla5" style:family="table">
@@ -934,470 +937,475 @@
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
   </style:style>
   <style:style style:name="P17" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties officeooo:paragraph-rsid="00409f04"/>
+  </style:style>
+  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:line-height="150%" fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties fo:color="#000080" style:font-name="Cantarell" fo:font-size="10pt" fo:font-weight="normal" officeooo:rsid="0003fe3b" officeooo:paragraph-rsid="003392d8" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P18" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-  </style:style>
   <style:style style:name="P19" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="00375ab3" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P20" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="00375ab3" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P21" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+   <style:text-properties fo:font-size="10pt" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="P22" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+   <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="P23" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="P24" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="P25" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003f82a9" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="P26" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003f82a9" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="P27" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:font-size-complex="10pt"/>
+   <style:text-properties fo:font-size="10pt" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P28" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-size-complex="10pt"/>
+   <style:text-properties fo:font-size="10pt" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="P29" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-size-complex="10pt"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="P30" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003c24d5" officeooo:paragraph-rsid="003c24d5" style:font-size-complex="10pt"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="P31" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003c24d5" officeooo:paragraph-rsid="003c24d5" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="P32" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003c24d5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P33" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003c24d5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P34" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="9pt" officeooo:rsid="003d2803" officeooo:paragraph-rsid="003d2803"/>
   </style:style>
-  <style:style style:name="P34" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-  </style:style>
   <style:style style:name="P35" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:text-underline-style="none"/>
   </style:style>
   <style:style style:name="P36" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="false"/>
+   <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties style:text-underline-style="none"/>
   </style:style>
   <style:style style:name="P37" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:text-properties officeooo:rsid="0013c923" officeooo:paragraph-rsid="0013c923"/>
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="false"/>
+   <style:text-properties style:text-underline-style="none"/>
   </style:style>
   <style:style style:name="P38" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:text-properties officeooo:rsid="0013c923" officeooo:paragraph-rsid="0013c923"/>
+  </style:style>
+  <style:style style:name="P39" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-weight="normal" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P39" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P40" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:text-properties officeooo:paragraph-rsid="00375ab3"/>
   </style:style>
-  <style:style style:name="P40" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P41" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P41" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P42" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:text-properties officeooo:paragraph-rsid="003af174"/>
   </style:style>
-  <style:style style:name="P42" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P43" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:text-properties officeooo:paragraph-rsid="003bfee5"/>
   </style:style>
-  <style:style style:name="P43" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P44" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:text-properties officeooo:paragraph-rsid="003f4e84"/>
   </style:style>
-  <style:style style:name="P44" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P45" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:text-properties officeooo:paragraph-rsid="003f82a9"/>
   </style:style>
-  <style:style style:name="P45" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
+  <style:style style:name="P46" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:text-properties officeooo:paragraph-rsid="00409f04"/>
+  </style:style>
+  <style:style style:name="P47" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto" fo:break-before="auto" fo:break-after="auto"/>
   </style:style>
-  <style:style style:name="P46" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
+  <style:style style:name="P48" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto" fo:keep-with-next="always"/>
   </style:style>
-  <style:style style:name="P47" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
+  <style:style style:name="P49" style:family="paragraph" style:parent-style-name="Text_20_body" style:master-page-name="">
    <style:paragraph-properties style:page-number="auto" fo:keep-with-next="always"/>
    <style:text-properties officeooo:rsid="0013c923" officeooo:paragraph-rsid="0013c923"/>
   </style:style>
-  <style:style style:name="P48" style:family="paragraph" style:parent-style-name="Heading_20_1" style:master-page-name="">
+  <style:style style:name="P50" style:family="paragraph" style:parent-style-name="Heading_20_1" style:master-page-name="">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false" style:page-number="auto" fo:break-before="page"/>
    <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
   </style:style>
-  <style:style style:name="P49" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P51" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Liberation Serif2"/>
   </style:style>
-  <style:style style:name="P50" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P52" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-align="start" style:justify-single-word="false" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Liberation Serif2"/>
   </style:style>
-  <style:style style:name="P51" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P53" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Liberation Serif2" officeooo:paragraph-rsid="002cc9ef"/>
   </style:style>
-  <style:style style:name="P52" style:family="paragraph" style:parent-style-name="Standard">
+  <style:style style:name="P54" style:family="paragraph" style:parent-style-name="Standard">
    <style:paragraph-properties fo:margin-left="0cm" fo:margin-right="0cm" fo:text-indent="0cm" style:auto-text-indent="false"/>
    <style:text-properties style:font-name="Liberation Serif2" officeooo:paragraph-rsid="002df6ba"/>
   </style:style>
-  <style:style style:name="P53" style:family="paragraph" style:parent-style-name="Heading_20_1">
+  <style:style style:name="P55" style:family="paragraph" style:parent-style-name="Heading_20_1">
    <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color"/>
   </style:style>
-  <style:style style:name="P54" style:family="paragraph" style:parent-style-name="Heading_20_2">
+  <style:style style:name="P56" style:family="paragraph" style:parent-style-name="Heading_20_2">
    <style:paragraph-properties fo:text-align="start" style:justify-single-word="false"/>
   </style:style>
-  <style:style style:name="P55" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P57" style:family="paragraph" style:parent-style-name="Text_20_body">
    <loext:graphic-properties draw:fill="none"/>
    <style:paragraph-properties fo:margin-left="1cm" fo:margin-right="0cm" fo:margin-top="0cm" fo:margin-bottom="0.212cm" loext:contextual-spacing="false" fo:text-indent="0cm" style:auto-text-indent="false" fo:background-color="transparent"/>
    <style:text-properties officeooo:rsid="0019f6b5" officeooo:paragraph-rsid="0019f6b5"/>
   </style:style>
-  <style:style style:name="P56" style:family="paragraph" style:parent-style-name="Text_20_body">
+  <style:style style:name="P58" style:family="paragraph" style:parent-style-name="Text_20_body">
    <style:paragraph-properties fo:break-before="column"/>
    <style:text-properties officeooo:rsid="001bf6f1" officeooo:paragraph-rsid="0024fff1"/>
   </style:style>
-  <style:style style:name="P57" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="justify" style:justify-single-word="false"/>
-  </style:style>
-  <style:style style:name="P58" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="justify" style:justify-single-word="false"/>
-   <style:text-properties officeooo:rsid="003392d8" officeooo:paragraph-rsid="003392d8"/>
-  </style:style>
   <style:style style:name="P59" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="justify" style:justify-single-word="false"/>
-   <style:text-properties officeooo:rsid="003392d8" officeooo:paragraph-rsid="00341a91"/>
   </style:style>
   <style:style style:name="P60" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="justify" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="003392d8" officeooo:paragraph-rsid="003392d8" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties officeooo:rsid="003392d8" officeooo:paragraph-rsid="003392d8"/>
   </style:style>
   <style:style style:name="P61" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="justify" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties officeooo:rsid="003392d8" officeooo:paragraph-rsid="00341a91"/>
   </style:style>
   <style:style style:name="P62" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00341a91" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="justify" style:justify-single-word="false"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="003392d8" officeooo:paragraph-rsid="003392d8" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P63" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="justify" style:justify-single-word="false"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P64" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003886d7" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00341a91" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P65" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00391662" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P66" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003bfee5" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003886d7" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P67" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="00375ab3" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00391662" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P68" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="00375ab3" officeooo:paragraph-rsid="003886d7" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003bfee5" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P69" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="00391662" officeooo:paragraph-rsid="00391662" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="00375ab3" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P70" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="003af174" officeooo:paragraph-rsid="003af174" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="00375ab3" officeooo:paragraph-rsid="003886d7" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P71" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="003af174" officeooo:paragraph-rsid="003bfee5" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="00391662" officeooo:paragraph-rsid="00391662" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P72" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="003af174" officeooo:paragraph-rsid="003af174" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P73" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="bold" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="003af174" officeooo:paragraph-rsid="003bfee5" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P74" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P75" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="003886d7" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P76" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-weight="normal" officeooo:rsid="00375ab3" officeooo:paragraph-rsid="003886d7" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-weight="bold" officeooo:rsid="00424c20" officeooo:paragraph-rsid="00424c20" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="P77" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003886d7" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P78" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00391662" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="003886d7" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P79" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties officeooo:paragraph-rsid="00391662"/>
+   <style:text-properties fo:font-weight="normal" officeooo:rsid="00375ab3" officeooo:paragraph-rsid="003886d7" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P80" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties officeooo:paragraph-rsid="003b908e"/>
+   <style:text-properties style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003886d7" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P81" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties officeooo:paragraph-rsid="003bfee5"/>
+   <style:text-properties style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00391662" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P82" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:text-properties officeooo:paragraph-rsid="00391662"/>
   </style:style>
   <style:style style:name="P83" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003af174" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:text-properties officeooo:paragraph-rsid="003b908e"/>
   </style:style>
   <style:style style:name="P84" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003b364c" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:text-properties officeooo:paragraph-rsid="003bfee5"/>
   </style:style>
   <style:style style:name="P85" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P86" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003af174" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P87" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003c24d5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003b364c" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P88" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003f4e84" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P89" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P90" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P91" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P92" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
+  <style:style style:name="P90" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003c24d5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P91" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003f4e84" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P92" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P93" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P94" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="justify" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P95" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003f4e84" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P96" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="003af174" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="P97" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="003b364c" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P98" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P99" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="003c24d5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P100" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P101" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P102" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003c24d5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P103" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P104" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00375ab3" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P105" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="003af174" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="P106" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="P107" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="P108" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="P109" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="P110" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="P111" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" fo:font-weight="normal" officeooo:rsid="003c24d5" officeooo:paragraph-rsid="003c24d5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P112" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00341a91" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P113" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="00375ab3" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P114" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="00391662" officeooo:paragraph-rsid="00391662" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P115" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="003bfee5" officeooo:paragraph-rsid="003bfee5" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P116" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="003f4e84" officeooo:paragraph-rsid="003f4e84" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P117" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="003f82a9" officeooo:paragraph-rsid="003f82a9" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
-  </style:style>
-  <style:style style:name="P118" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="P119" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="P120" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003f4e84" officeooo:paragraph-rsid="003f4e84" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="P121" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003f4e84" officeooo:paragraph-rsid="003f4e84" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="P122" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003f82a9" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="P123" style:family="paragraph" style:parent-style-name="Standard">
-   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" officeooo:rsid="003f82a9" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
-  </style:style>
-  <style:style style:name="P124" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties officeooo:paragraph-rsid="00409f04"/>
-  </style:style>
-  <style:style style:name="P125" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P126" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L2">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P127" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L4">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P128" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L3">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P129" style:family="paragraph" style:parent-style-name="Table_20_Contents">
-   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
-  </style:style>
-  <style:style style:name="P130" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00409f04" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P131" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+  <style:style style:name="P98" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="justify" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P99" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P100" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="003af174" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P101" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="003b364c" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P102" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P103" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="003c24d5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P104" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00391662" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P105" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P106" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P107" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003c24d5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P108" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P109" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00424c20" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P110" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00375ab3" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P111" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00409f04" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P132" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L5">
+  <style:style style:name="P112" style:family="paragraph" style:parent-style-name="Table_20_Contents">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="003af174" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
-  <style:style style:name="P133" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L3">
+  <style:style style:name="P113" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P114" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P115" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P116" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P117" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P118" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" fo:font-weight="normal" officeooo:rsid="003c24d5" officeooo:paragraph-rsid="003c24d5" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P119" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00341a91" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P120" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="00375ab3" officeooo:paragraph-rsid="00375ab3" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P121" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="00391662" officeooo:paragraph-rsid="00391662" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P122" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="003bfee5" officeooo:paragraph-rsid="003bfee5" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P123" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="003f4e84" officeooo:paragraph-rsid="003f4e84" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P124" style:family="paragraph" style:parent-style-name="Text_20_body">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="003f82a9" officeooo:paragraph-rsid="003f82a9" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P125" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003b908e" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P126" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003b908e" officeooo:paragraph-rsid="003bfee5" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P127" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003f4e84" officeooo:paragraph-rsid="003f4e84" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P128" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003f4e84" officeooo:paragraph-rsid="003f4e84" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P129" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003f82a9" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P130" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="justify" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:rsid="003f82a9" officeooo:paragraph-rsid="003f82a9" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P131" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:paragraph-rsid="00409f04"/>
+  </style:style>
+  <style:style style:name="P132" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P133" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L2">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P134" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L4">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P135" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L3">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P136" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L5">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="003af174" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P137" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L3">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties officeooo:paragraph-rsid="00391662"/>
-  </style:style>
-  <style:style style:name="P134" style:family="paragraph" style:parent-style-name="Standard">
-   <style:text-properties officeooo:paragraph-rsid="00409f04"/>
-  </style:style>
-  <style:style style:name="P135" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:text-properties officeooo:paragraph-rsid="003f82a9"/>
-  </style:style>
-  <style:style style:name="P136" style:family="paragraph" style:parent-style-name="Text_20_body">
-   <style:text-properties officeooo:paragraph-rsid="00409f04"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="0029e76e"/>
@@ -1792,7 +1800,7 @@
        <text:p text:style-name="P8"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Tabla12.A1" office:value-type="string">
-       <text:p text:style-name="P33">Pag: <text:page-number text:select-page="current">3</text:page-number><text:s/>de <text:page-count>7</text:page-count></text:p>
+       <text:p text:style-name="P34">Pag: <text:page-number text:select-page="current">7</text:page-number><text:s/>de <text:page-count>7</text:page-count></text:p>
       </table:table-cell>
      </table:table-row>
     </table:table>
@@ -1809,59 +1817,59 @@
     <text:sequence-decl text:display-outline-level="0" text:name="Text"/>
     <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
    </text:sequence-decls>
-   <text:p text:style-name="P45"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;patient in records&quot;&gt;</text:placeholder></text:p>
-   <text:p text:style-name="P48"><text:span text:style-name="T2">Ficha Médica</text:span>: <text:placeholder text:placeholder-type="text">&lt;patient.code&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P47"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;patient in records&quot;&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P50"><text:span text:style-name="T2">Ficha Médica</text:span>: <text:placeholder text:placeholder-type="text">&lt;patient.code&gt;</text:placeholder></text:p>
    <table:table table:name="Tabla1" table:style-name="Tabla1">
     <table:table-column table:style-name="Tabla1.A"/>
     <table:table-column table:style-name="Tabla1.B"/>
     <table:table-column table:style-name="Tabla1.C"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabla1.A1" table:number-columns-spanned="3" office:value-type="string">
-      <text:p text:style-name="P112">Datos principales</text:p>
+      <text:p text:style-name="P119">Datos principales</text:p>
      </table:table-cell>
      <table:covered-table-cell/>
      <table:covered-table-cell/>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla1.A7" table:number-rows-spanned="6" office:value-type="string">
-      <text:p text:style-name="P17"><draw:frame draw:style-name="fr1" draw:name="image: (resize_image(patient.photo), &apos;image/png&apos;, &apos;3cm&apos;, &apos;3cm&apos;)" text:anchor-type="as-char" svg:width="2cm" svg:height="2cm" draw:z-index="0">
+      <text:p text:style-name="P18"><draw:frame draw:style-name="fr1" draw:name="image: (resize_image(patient.photo), &apos;image/png&apos;, &apos;3cm&apos;, &apos;3cm&apos;)" text:anchor-type="as-char" svg:width="2cm" svg:height="2cm" draw:z-index="0">
         <draw:text-box>
          <text:p text:style-name="Frame_20_contents"/>
         </draw:text-box>
        </draw:frame></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla1.B2" table:number-columns-spanned="2" office:value-type="string">
-      <text:p text:style-name="P59"><text:span text:style-name="T5">Nombre: </text:span><text:placeholder text:placeholder-type="text">&lt;patient.fname&gt;</text:placeholder><text:s/><text:placeholder text:placeholder-type="text">&lt;patient.lname&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P61"><text:span text:style-name="T5">Nombre: </text:span><text:placeholder text:placeholder-type="text">&lt;patient.fname&gt;</text:placeholder><text:s/><text:placeholder text:placeholder-type="text">&lt;patient.lname&gt;</text:placeholder></text:p>
      </table:table-cell>
      <table:covered-table-cell/>
     </table:table-row>
     <table:table-row>
      <table:covered-table-cell/>
      <table:table-cell table:style-name="Tabla1.B3" table:number-columns-spanned="2" office:value-type="string">
-      <text:p text:style-name="P59"><text:span text:style-name="T5">Fecha Nacimiento: </text:span><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;patient.birthdate&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P61"><text:span text:style-name="T5">Fecha Nacimiento: </text:span><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;patient.birthdate&gt;</text:placeholder></text:span></text:p>
      </table:table-cell>
      <table:covered-table-cell/>
     </table:table-row>
     <table:table-row>
      <table:covered-table-cell/>
      <table:table-cell table:style-name="Tabla1.B4" table:number-columns-spanned="2" office:value-type="string">
-      <text:p text:style-name="P58"><text:span text:style-name="T5">Edad: </text:span><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;patient.age_char&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P60"><text:span text:style-name="T5">Edad: </text:span><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;patient.age_char&gt;</text:placeholder></text:span></text:p>
      </table:table-cell>
      <table:covered-table-cell/>
     </table:table-row>
     <table:table-row>
      <table:covered-table-cell/>
      <table:table-cell table:style-name="Tabla1.B5" office:value-type="string">
-      <text:p text:style-name="P58"><text:span text:style-name="T5">CI: </text:span><text:placeholder text:placeholder-type="text">&lt;patient.identifier&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P60"><text:span text:style-name="T5">CI: </text:span><text:placeholder text:placeholder-type="text">&lt;patient.identifier&gt;</text:placeholder></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla1.C5" office:value-type="string">
-      <text:p text:style-name="P61">Género:<text:span text:style-name="T3"> </text:span><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;patient.gender_translated&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P63">Género:<text:span text:style-name="T3"> </text:span><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;patient.gender_translated&gt;</text:placeholder></text:span></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:covered-table-cell/>
      <table:table-cell table:style-name="Tabla1.B6" office:value-type="string">
-      <text:p text:style-name="P61">País:<text:span text:style-name="T3"> </text:span><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;patient.country.rec_name&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P63">País:<text:span text:style-name="T3"> </text:span><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;patient.country.rec_name&gt;</text:placeholder></text:span></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla1.C6" office:value-type="string">
       <text:p text:style-name="Standard"><text:span text:style-name="T5">Provincia</text:span>:<text:span text:style-name="T3"> </text:span><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;patient.subdivision.rec_name&gt;</text:placeholder></text:span></text:p>
@@ -1870,7 +1878,7 @@
     <table:table-row>
      <table:covered-table-cell/>
      <table:table-cell table:style-name="Tabla1.B7" office:value-type="string">
-      <text:p text:style-name="P61">Ciudad:<text:span text:style-name="T3"> </text:span><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;patient.city.rec_name&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P63">Ciudad:<text:span text:style-name="T3"> </text:span><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;patient.city.rec_name&gt;</text:placeholder></text:span></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla1.C7" office:value-type="string">
       <text:p text:style-name="Standard"/>
@@ -1882,164 +1890,164 @@
     <table:table-column table:style-name="Tabla2.A" table:number-columns-repeated="3"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabla2.A1" table:number-columns-spanned="3" office:value-type="string">
-      <text:p text:style-name="P112">Datos secundarios</text:p>
+      <text:p text:style-name="P119">Datos secundarios</text:p>
      </table:table-cell>
      <table:covered-table-cell/>
      <table:covered-table-cell/>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla2.A2" office:value-type="string">
-      <text:p text:style-name="P63">Tipo de sangre:</text:p>
-      <text:p text:style-name="P74"><text:placeholder text:placeholder-type="text">&lt;patient.blood_type&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P65">Tipo de sangre:</text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;patient.blood_type&gt;</text:placeholder></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla2.B2" office:value-type="string">
-      <text:p text:style-name="P63">Estado civil:</text:p>
-      <text:p text:style-name="P74"><text:placeholder text:placeholder-type="text">&lt;patient.civil_status_translated&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P65">Estado civil:</text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;patient.civil_status_translated&gt;</text:placeholder></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla2.C2" office:value-type="string">
-      <text:p text:style-name="P63">Nivel de educación: </text:p>
-      <text:p text:style-name="P74"><text:placeholder text:placeholder-type="text">&lt;patient.education_level_translated&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P65">Nivel de educación: </text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;patient.education_level_translated&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla2.A4" office:value-type="string">
-      <text:p text:style-name="P62">Email:</text:p>
-      <text:p text:style-name="P74"><text:placeholder text:placeholder-type="text">&lt;patient.email&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P64">Email:</text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;patient.email&gt;</text:placeholder></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla2.B4" office:value-type="string">
-      <text:p text:style-name="P62">Teléfono:</text:p>
-      <text:p text:style-name="P74"><text:placeholder text:placeholder-type="text">&lt;patient.phone&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P64">Teléfono:</text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;patient.phone&gt;</text:placeholder></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla2.C4" office:value-type="string">
-      <text:p text:style-name="P62">Telf emergencia:</text:p>
-      <text:p text:style-name="P74"><text:placeholder text:placeholder-type="text">&lt;patient.emergency_phone&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P64">Telf emergencia:</text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;patient.emergency_phone&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla2.A4" office:value-type="string">
-      <text:p text:style-name="P62">Ocupación:</text:p>
-      <text:p text:style-name="P74"><text:placeholder text:placeholder-type="text">&lt;patient.occupation.rec_name if patient.occupation else &apos;&apos;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P64">Ocupación:</text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;patient.occupation.rec_name if patient.occupation else &apos;&apos;&gt;</text:placeholder></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla2.B4" office:value-type="string">
-      <text:p text:style-name="P62">Religión:</text:p>
-      <text:p text:style-name="P74"><text:placeholder text:placeholder-type="text">&lt;patient.religion or &apos;&apos;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P64">Religión:</text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;patient.religion or &apos;&apos;&gt;</text:placeholder></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla2.C4" office:value-type="string">
-      <text:p text:style-name="P62">Grupo étnico:</text:p>
-      <text:p text:style-name="P74"><text:placeholder text:placeholder-type="text">&lt;patient.ethnic_group.rec_name if patient.ethnic_group else &apos;&apos;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P64">Grupo étnico:</text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;patient.ethnic_group.rec_name if patient.ethnic_group else &apos;&apos;&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla2.A5" table:number-columns-spanned="3" office:value-type="string">
-      <text:p text:style-name="P63">Dirección: <text:span text:style-name="T4"><text:placeholder text:placeholder-type="text">&lt;patient.address&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P65">Dirección: <text:span text:style-name="T4"><text:placeholder text:placeholder-type="text">&lt;patient.address&gt;</text:placeholder></text:span></text:p>
      </table:table-cell>
      <table:covered-table-cell/>
      <table:covered-table-cell/>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P40"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.disabilities&quot;&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P41"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.disabilities&quot;&gt;</text:placeholder></text:p>
    <table:table table:name="Tabla3" table:style-name="Tabla3">
     <table:table-column table:style-name="Tabla3.A" table:number-columns-repeated="3"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabla3.A1" table:number-columns-spanned="3" office:value-type="string">
-      <text:p text:style-name="P113">Discapacidad</text:p>
+      <text:p text:style-name="P120">Discapacidad</text:p>
      </table:table-cell>
      <table:covered-table-cell/>
      <table:covered-table-cell/>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla3.A2" office:value-type="string">
-      <text:p text:style-name="P63">Tipo:</text:p>
-      <text:p text:style-name="P74"><text:placeholder text:placeholder-type="text">&lt;patient.disabilities[0].type_translated&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P65">Tipo:</text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;patient.disabilities[0].type_translated&gt;</text:placeholder></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla3.B2" office:value-type="string">
-      <text:p text:style-name="P63"><text:span text:style-name="T8">Porcentage</text:span>:</text:p>
-      <text:p text:style-name="P74"><text:placeholder text:placeholder-type="text">&lt;patient.disabilities[0].percentage * 100&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P65"><text:span text:style-name="T8">Porcentage</text:span>:</text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;patient.disabilities[0].percentage * 100&gt;</text:placeholder></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla3.C2" office:value-type="string">
-      <text:p text:style-name="P63"><text:span text:style-name="T8">Nro carnet</text:span>: </text:p>
-      <text:p text:style-name="P74"><text:placeholder text:placeholder-type="text">&lt;patient.disabilities[0].legal_reference&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P65"><text:span text:style-name="T8">Nro carnet</text:span>: </text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;patient.disabilities[0].legal_reference&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla3.A3" table:number-columns-spanned="3" office:value-type="string">
-      <text:p text:style-name="P63"><text:span text:style-name="T8">Enfermedad</text:span>:<text:span text:style-name="T3"> </text:span><text:span text:style-name="T4"><text:placeholder text:placeholder-type="text">&lt;patient.disabilities[0].disease.rec_name&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P65"><text:span text:style-name="T8">Enfermedad</text:span>:<text:span text:style-name="T3"> </text:span><text:span text:style-name="T4"><text:placeholder text:placeholder-type="text">&lt;patient.disabilities[0].disease.rec_name&gt;</text:placeholder></text:span></text:p>
      </table:table-cell>
      <table:covered-table-cell/>
      <table:covered-table-cell/>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla3.A4" table:number-columns-spanned="3" office:value-type="string">
-      <text:p text:style-name="P63"><text:span text:style-name="T8">Descripción</text:span>: <text:span text:style-name="T4"><text:placeholder text:placeholder-type="text">&lt;patient.disabilities[0].description&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P65"><text:span text:style-name="T8">Descripción</text:span>: <text:span text:style-name="T4"><text:placeholder text:placeholder-type="text">&lt;patient.disabilities[0].description&gt;</text:placeholder></text:span></text:p>
      </table:table-cell>
      <table:covered-table-cell/>
      <table:covered-table-cell/>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P40"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-   <text:p text:style-name="P40"/>
+   <text:p text:style-name="P41"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P41"/>
    <table:table table:name="Tabla4" table:style-name="Tabla4">
     <table:table-column table:style-name="Tabla4.A"/>
     <table:table-column table:style-name="Tabla4.B"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabla4.A1" table:number-columns-spanned="2" office:value-type="string">
-      <text:p text:style-name="P113">Antecedentes</text:p>
+      <text:p text:style-name="P120">Antecedentes</text:p>
      </table:table-cell>
      <table:covered-table-cell/>
     </table:table-row>
     <text:soft-page-break/>
     <table:table-row>
      <table:table-cell table:style-name="Tabla4.A2" office:value-type="string">
-      <text:p text:style-name="P64"><text:span text:style-name="T8">Notas generales</text:span>:</text:p>
+      <text:p text:style-name="P66"><text:span text:style-name="T8">Notas generales</text:span>:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla4.B2" office:value-type="string">
-      <text:p text:style-name="P75"><text:placeholder text:placeholder-type="text">&lt;patient.background_notes or &apos;&apos;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;patient.background_notes or &apos;&apos;&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla4.A2" office:value-type="string">
-      <text:p text:style-name="P67">Reproductiv<text:span text:style-name="T22">os</text:span>:</text:p>
+      <text:p text:style-name="P69">Reproductiv<text:span text:style-name="T22">os</text:span>:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla4.B3" office:value-type="string">
-      <text:p text:style-name="P76">Fertil: <text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.fertile is True&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T20">Si</text:span><text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.fertile is False&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T20">No</text:span><text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span><text:span text:style-name="T19"> </text:span><text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.menopause_andropause&quot;&gt;</text:placeholder></text:span></text:p>
-      <text:p text:style-name="P76"><text:span text:style-name="T19">Menopausia / Andropausia: </text:span><text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.menopause_andropause_age&gt;</text:placeholder></text:span></text:p>
-      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.alive_children&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P76"><text:span text:style-name="T20">Hijos vivos: </text:span><text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.alive_children&gt;</text:placeholder></text:span></text:p>
-      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.death_children&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P76"><text:span text:style-name="T20">Hijos muertos: </text:span><text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.death_children&gt;</text:placeholder></text:span></text:p>
-      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.menarche&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P79">Fertil: <text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.fertile is True&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T20">Si</text:span><text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.fertile is False&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T20">No</text:span><text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span><text:span text:style-name="T19"> </text:span><text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.menopause_andropause&quot;&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P79"><text:span text:style-name="T19">Menopausia / Andropausia: </text:span><text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.menopause_andropause_age&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P80"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P80"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.alive_children&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P79"><text:span text:style-name="T20">Hijos vivos: </text:span><text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.alive_children&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P80"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P80"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.death_children&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P79"><text:span text:style-name="T20">Hijos muertos: </text:span><text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.death_children&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P80"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.menarche&quot;&gt;</text:placeholder></text:p>
       <table:table table:name="Tabla5" table:style-name="Tabla5">
        <table:table-column table:style-name="Tabla5.A"/>
        <table:table-column table:style-name="Tabla5.B"/>
        <table:table-row>
         <table:table-cell table:style-name="Tabla5.A1" office:value-type="string">
-         <text:p text:style-name="P26">Edad de menarquía: <text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.menarche&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P27">Edad de menarquía: <text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.menarche&gt;</text:placeholder></text:span></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla5.B1" office:value-type="string">
-         <text:p text:style-name="P26">Duración del ciclo en días: <text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.cycle_duration if patient.cycle_duration else &apos;&apos;&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P27">Duración del ciclo en días: <text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.cycle_duration if patient.cycle_duration else &apos;&apos;&gt;</text:placeholder></text:span></text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla5.A2" office:value-type="string">
-         <text:p text:style-name="P26">Fecha última menstruación:</text:p>
-         <text:p text:style-name="P31"><text:placeholder text:placeholder-type="text">&lt;patient.last_menstruation_date if patient.last_menstruation_date else &apos;&apos;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P27">Fecha última menstruación:</text:p>
+         <text:p text:style-name="P32"><text:placeholder text:placeholder-type="text">&lt;patient.last_menstruation_date if patient.last_menstruation_date else &apos;&apos;&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla5.B2" office:value-type="string">
-         <text:p text:style-name="P95">Actualmente embarazada: </text:p>
-         <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.actually_pregnant&quot;&gt;</text:placeholder></text:p>
-         <text:p text:style-name="P95">Si</text:p>
-         <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-         <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.actually_pregnant is False&quot;&gt;</text:placeholder></text:p>
-         <text:p text:style-name="P95">No</text:p>
-         <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P99">Actualmente embarazada: </text:p>
+         <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.actually_pregnant&quot;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P99">Si</text:p>
+         <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.actually_pregnant is False&quot;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P99">No</text:p>
+         <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
         </table:table-cell>
        </table:table-row>
       </table:table>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.pregnancies&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.pregnancies&quot;&gt;</text:placeholder></text:p>
       <table:table table:name="Tabla6" table:style-name="Tabla6">
        <table:table-column table:style-name="Tabla6.A"/>
        <table:table-column table:style-name="Tabla6.B"/>
@@ -2047,200 +2055,208 @@
        <table:table-column table:style-name="Tabla6.D"/>
        <table:table-row>
         <table:table-cell table:style-name="Tabla6.A1" office:value-type="string">
-         <text:p text:style-name="P26">Nro embarazos: <text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.pregnancies&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P27">Nro embarazos: <text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.pregnancies&gt;</text:placeholder></text:span></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla6.A1" office:value-type="string">
-         <text:p text:style-name="P26">Parto normal: <text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.normal_labor or 0&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P27">Parto normal: <text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.normal_labor or 0&gt;</text:placeholder></text:span></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla6.A1" office:value-type="string">
-         <text:p text:style-name="P26">Cesárea: <text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.caesarean_labor or 0&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P27">Cesárea: <text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.caesarean_labor or 0&gt;</text:placeholder></text:span></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla6.D1" office:value-type="string">
-         <text:p text:style-name="P26"><text:span text:style-name="T21">A</text:span><text:span text:style-name="T9">bortos: </text:span><text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.abortions&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P27"><text:span text:style-name="T21">A</text:span><text:span text:style-name="T9">bortos: </text:span><text:span text:style-name="T21"><text:placeholder text:placeholder-type="text">&lt;patient.abortions&gt;</text:placeholder></text:span></text:p>
         </table:table-cell>
        </table:table-row>
       </table:table>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla4.A2" office:value-type="string">
-      <text:p text:style-name="P69">Enfermedades:</text:p>
+      <text:p text:style-name="P76">Alergias:</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabla4.B4" office:value-type="string">
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_diseases&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list3926486229" text:style-name="L1">
+     <table:table-cell table:style-name="Tabla4.B5" office:value-type="string">
+      <text:p text:style-name="P109"><text:placeholder text:placeholder-type="text">&lt;patient.allergies&gt;</text:placeholder></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabla4.A2" office:value-type="string">
+      <text:p text:style-name="P71">Enfermedades:</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabla4.B5" office:value-type="string">
+      <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_diseases&quot;&gt;</text:placeholder></text:p>
+      <text:list xml:id="list4156755208" text:style-name="L1">
        <text:list-item>
-        <text:p text:style-name="P125"><text:placeholder text:placeholder-type="text">&lt;line.disease.rec_name&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P132"><text:placeholder text:placeholder-type="text">&lt;line.disease.rec_name&gt;</text:placeholder></text:p>
        </text:list-item>
       </text:list>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list3659872412" text:style-name="L2">
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
+      <text:list xml:id="list2304548440" text:style-name="L2">
        <text:list-header>
-        <text:p text:style-name="P126"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P133"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
        </text:list-header>
       </text:list>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla4.A2" office:value-type="string">
-      <text:p text:style-name="P69">Medicamentos:</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabla4.B6" office:value-type="string">
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_medicaments&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list3859566158" text:style-name="L3">
-       <text:list-item>
-        <text:p text:style-name="P133"><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.medicament.rec_name&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/>- </text:span><text:span text:style-name="T24">Cantidad: </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.quantity&gt;</text:placeholder></text:span></text:p>
-       </text:list-item>
-      </text:list>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list2465357948" text:style-name="L4">
-       <text:list-header>
-        <text:p text:style-name="P127"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
-       </text:list-header>
-      </text:list>
-      <text:p text:style-name="P82"><text:soft-page-break/><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row>
-     <table:table-cell table:style-name="Tabla4.A2" office:value-type="string">
-      <text:p text:style-name="P69">Cirugías:</text:p>
-     </table:table-cell>
-     <table:table-cell table:style-name="Tabla4.B6" office:value-type="string">
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_surgeries&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list185920784994238" text:continue-list="list3859566158" text:style-name="L3">
-       <text:list-item>
-        <text:p text:style-name="P133"><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/></text:span></text:p>
-       </text:list-item>
-      </text:list>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row>
-     <table:table-cell table:style-name="Tabla4.A2" office:value-type="string">
-      <text:p text:style-name="P69">Enfermedades familiares:</text:p>
+      <text:p text:style-name="P71">Medicamentos:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla4.B7" office:value-type="string">
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_family&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list185920397653431" text:continue-numbering="true" text:style-name="L3">
+      <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_medicaments&quot;&gt;</text:placeholder></text:p>
+      <text:list xml:id="list3081431210" text:style-name="L3">
        <text:list-item>
-        <text:p text:style-name="P133"><text:span text:style-name="T26"><text:placeholder text:placeholder-type="text">&lt;line.relationship&gt;</text:placeholder></text:span><text:span text:style-name="T26">:</text:span><text:span text:style-name="T25"> </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.disease.code&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/>- </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.disease.name&gt;</text:placeholder></text:span></text:p>
+        <text:p text:style-name="P137"><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.medicament.rec_name&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/>- </text:span><text:span text:style-name="T24">Cantidad: </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.quantity&gt;</text:placeholder></text:span></text:p>
        </text:list-item>
       </text:list>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list185920698757783" text:continue-list="list2465357948" text:style-name="L4">
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
+      <text:list xml:id="list1060527771" text:style-name="L4">
        <text:list-header>
-        <text:p text:style-name="P127"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P134"><text:soft-page-break/><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
        </text:list-header>
       </text:list>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla4.A2" office:value-type="string">
-      <text:p text:style-name="P69">Exámenes:</text:p>
+      <text:p text:style-name="P71">Cirugías:</text:p>
      </table:table-cell>
-     <table:table-cell table:style-name="Tabla4.B8" office:value-type="string">
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_tests&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list185920433536447" text:continue-list="list185920397653431" text:style-name="L3">
+     <table:table-cell table:style-name="Tabla4.B7" office:value-type="string">
+      <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_surgeries&quot;&gt;</text:placeholder></text:p>
+      <text:list xml:id="list736148438001" text:continue-list="list3081431210" text:style-name="L3">
        <text:list-item>
-        <text:p text:style-name="P128"><text:placeholder text:placeholder-type="text">&lt;line.test.rec_name&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P137"><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/></text:span></text:p>
        </text:list-item>
       </text:list>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list185920854755973" text:continue-list="list185920698757783" text:style-name="L4">
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabla4.A2" office:value-type="string">
+      <text:p text:style-name="P71">Enfermedades familiares:</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabla4.B8" office:value-type="string">
+      <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_family&quot;&gt;</text:placeholder></text:p>
+      <text:list xml:id="list735225377958" text:continue-numbering="true" text:style-name="L3">
+       <text:list-item>
+        <text:p text:style-name="P137"><text:span text:style-name="T26"><text:placeholder text:placeholder-type="text">&lt;line.relationship&gt;</text:placeholder></text:span><text:span text:style-name="T26">:</text:span><text:span text:style-name="T25"> </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.disease.code&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/>- </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.disease.name&gt;</text:placeholder></text:span></text:p>
+       </text:list-item>
+      </text:list>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
+      <text:list xml:id="list736363556258" text:continue-list="list1060527771" text:style-name="L4">
        <text:list-header>
-        <text:p text:style-name="P127"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P134"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
        </text:list-header>
       </text:list>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabla4.A2" office:value-type="string">
+      <text:p text:style-name="P71">Exámenes:</text:p>
+     </table:table-cell>
+     <table:table-cell table:style-name="Tabla4.B9" office:value-type="string">
+      <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_tests&quot;&gt;</text:placeholder></text:p>
+      <text:list xml:id="list736272193415" text:continue-list="list735225377958" text:style-name="L3">
+       <text:list-item>
+        <text:p text:style-name="P135"><text:placeholder text:placeholder-type="text">&lt;line.test.rec_name&gt;</text:placeholder></text:p>
+       </text:list-item>
+      </text:list>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
+      <text:list xml:id="list735578702625" text:continue-list="list736363556258" text:style-name="L4">
+       <text:list-header>
+        <text:p text:style-name="P134"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
+       </text:list-header>
+      </text:list>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P39"/>
+   <text:p text:style-name="P40"/>
    <table:table table:name="Tabla7" table:style-name="Tabla7">
     <table:table-column table:style-name="Tabla7.A"/>
     <table:table-column table:style-name="Tabla7.B"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabla7.A1" table:number-columns-spanned="2" office:value-type="string">
-      <text:p text:style-name="P114">Estilo de vida</text:p>
+      <text:p text:style-name="P121">Estilo de vida</text:p>
      </table:table-cell>
      <table:covered-table-cell/>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla7.A2" office:value-type="string">
-      <text:p text:style-name="P65"><text:span text:style-name="T22">Sueño</text:span>:</text:p>
+      <text:p text:style-name="P67"><text:span text:style-name="T22">Sueño</text:span>:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla7.B2" office:value-type="string">
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.sleep_time&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P95">Tiempo de sueño en horas: <text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;patient.sleep_time&gt;</text:placeholder></text:span></text:p>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P83"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.sleep_in_day&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P95">Sueño en el día: si</text:p>
-      <text:p text:style-name="P82"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P83"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P96">Sueño en el día: <text:span text:style-name="T29">no</text:span></text:p>
-      <text:p text:style-name="P83"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P83"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P83"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.sleep_notes&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P96"><text:span text:style-name="T29">Notas</text:span>: <text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;patient.sleep_notes&gt;</text:placeholder></text:span></text:p>
-      <text:p text:style-name="P83"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.sleep_time&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P99">Tiempo de sueño en horas: <text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;patient.sleep_time&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.sleep_in_day&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P99">Sueño en el día: si</text:p>
+      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P100">Sueño en el día: <text:span text:style-name="T29">no</text:span></text:p>
+      <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.sleep_notes&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P100"><text:span text:style-name="T29">Notas</text:span>: <text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;patient.sleep_notes&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla7.A2" office:value-type="string">
-      <text:p text:style-name="P70">Actividades:</text:p>
+      <text:p text:style-name="P72">Actividades:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla7.B3" office:value-type="string">
-      <text:p text:style-name="P105"><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.activities&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.test.rec_name&gt;</text:placeholder></text:span></text:p>
-      <text:list xml:id="list3642466797" text:style-name="L5">
+      <text:p text:style-name="P112"><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.activities&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.test.rec_name&gt;</text:placeholder></text:span></text:p>
+      <text:list xml:id="list3627930791" text:style-name="L5">
        <text:list-item>
-        <text:p text:style-name="P132"><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.activity&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:s/>- </text:span><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.week_hours&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:s/></text:span><text:span text:style-name="T13">horas a la semana.</text:span></text:p>
+        <text:p text:style-name="P136"><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.activity&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:s/>- </text:span><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.week_hours&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:s/></text:span><text:span text:style-name="T13">horas a la semana.</text:span></text:p>
        </text:list-item>
       </text:list>
-      <text:p text:style-name="P83"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla7.A2" office:value-type="string">
-      <text:p text:style-name="P70">Dieta:</text:p>
+      <text:p text:style-name="P72">Dieta:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla7.B5" office:value-type="string">
-      <text:p text:style-name="P97"><text:span text:style-name="T30">Tipo de dieta: </text:span><text:span text:style-name="T30"><text:placeholder text:placeholder-type="text">&lt;patient.diet_type_translated&gt;</text:placeholder></text:span></text:p>
-      <text:p text:style-name="P84"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.meals_number&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P97"><text:span text:style-name="T30">Comidas por día</text:span>: <text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;patient.meals_number&gt;</text:placeholder></text:span></text:p>
-      <text:p text:style-name="P84"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P101"><text:span text:style-name="T30">Tipo de dieta: </text:span><text:span text:style-name="T30"><text:placeholder text:placeholder-type="text">&lt;patient.diet_type_translated&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P87"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.meals_number&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P101"><text:span text:style-name="T30">Comidas por día</text:span>: <text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;patient.meals_number&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P87"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
       <table:table table:name="Tabla8" table:style-name="Tabla8">
        <table:table-column table:style-name="Tabla8.A" table:number-columns-repeated="3"/>
        <table:table-row>
         <table:table-cell table:style-name="Tabla8.A1" office:value-type="string">
-         <text:p text:style-name="P28"><text:soft-page-break/>Consumo café: <text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.coffe_consumption&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T17">si</text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T18">no</text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P29"><text:soft-page-break/>Consumo café: <text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.coffe_consumption&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T17">si</text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T18">no</text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla8.A1" office:value-type="string">
-         <text:p text:style-name="P28">Consumo azucar: <text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.sugar_consumption&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T17">si</text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T18">no</text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P29">Consumo azucar: <text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.sugar_consumption&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T17">si</text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T18">no</text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla8.C1" office:value-type="string">
-         <text:p text:style-name="P28">Consumo sal: <text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.salt_consumption&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T17">s</text:span><text:span text:style-name="T15">i</text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T18">no</text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P29">Consumo sal: <text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.salt_consumption&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T17">s</text:span><text:span text:style-name="T15">i</text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T18">no</text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T16"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
         </table:table-cell>
        </table:table-row>
       </table:table>
-      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.feeding_notes&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P100">Notas alimentación: <text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;patient.feeding_notes&gt;</text:placeholder></text:span></text:p>
-      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P88"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.feeding_notes&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P105">Notas alimentación: <text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;patient.feeding_notes&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P88"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla7.A2" office:value-type="string">
-      <text:p text:style-name="P72">Drogas (incluye tabaco y alcohol):</text:p>
+      <text:p text:style-name="P74">Drogas (incluye tabaco y alcohol):</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla7.B5" office:value-type="string">
-      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.drugs&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P88"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.drugs&quot;&gt;</text:placeholder></text:p>
       <table:table table:name="Tabla9" table:style-name="Tabla9">
        <table:table-column table:style-name="Tabla9.A"/>
        <table:table-column table:style-name="Tabla9.B"/>
@@ -2249,121 +2265,121 @@
        <table:table-column table:style-name="Tabla9.F"/>
        <table:table-row>
         <table:table-cell table:style-name="Tabla9.A1" office:value-type="string">
-         <text:p text:style-name="P22">Droga</text:p>
+         <text:p text:style-name="P23">Droga</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla9.A1" office:value-type="string">
-         <text:p text:style-name="P118">Consumo</text:p>
+         <text:p text:style-name="P125">Consumo</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla9.A1" office:value-type="string">
-         <text:p text:style-name="P118">Tiempo (meses)</text:p>
+         <text:p text:style-name="P125">Tiempo (meses)</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla9.A1" office:value-type="string">
-         <text:p text:style-name="P118">Cantidad (semana)</text:p>
+         <text:p text:style-name="P125">Cantidad (semana)</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla9.A1" office:value-type="string">
-         <text:p text:style-name="P118">Ex consumidor</text:p>
+         <text:p text:style-name="P125">Ex consumidor</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla9.F1" office:value-type="string">
-         <text:p text:style-name="P118">Abstinencia</text:p>
-         <text:p text:style-name="P118">(meses)</text:p>
+         <text:p text:style-name="P125">Abstinencia</text:p>
+         <text:p text:style-name="P125">(meses)</text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla9.A2" table:number-columns-spanned="5" office:value-type="string">
-         <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.drugs&quot;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P88"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.drugs&quot;&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
         <table:table-cell table:style-name="Tabla9.F2" office:value-type="string">
-         <text:p text:style-name="P20"/>
+         <text:p text:style-name="P21"/>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla9.A3" office:value-type="string">
-         <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;line.drug.rec_name&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P88"><text:placeholder text:placeholder-type="text">&lt;line.drug.rec_name&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla9.B3" office:value-type="string">
-         <text:p text:style-name="P24"><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;line.consume&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T14">si</text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T13">no</text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P25"><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;line.consume&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T14">si</text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T13">no</text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla9.C3" office:value-type="string">
-         <text:p text:style-name="P90"><text:placeholder text:placeholder-type="text">&lt;line.consume_time or &apos;&apos;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P93"><text:placeholder text:placeholder-type="text">&lt;line.consume_time or &apos;&apos;&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla9.D3" office:value-type="string">
-         <text:p text:style-name="P90"><text:placeholder text:placeholder-type="text">&lt;line.consume_amount or &apos;&apos;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P93"><text:placeholder text:placeholder-type="text">&lt;line.consume_amount or &apos;&apos;&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla9.E3" office:value-type="string">
-         <text:p text:style-name="P24"><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;line.ex_consume&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T14">si</text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T13">no</text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P25"><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;line.ex_consume&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T14">si</text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T13">no</text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla9.F3" office:value-type="string">
-         <text:p text:style-name="P91"><text:placeholder text:placeholder-type="text">&lt;line.abstinence_time or &apos;&apos;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P94"><text:placeholder text:placeholder-type="text">&lt;line.abstinence_time or &apos;&apos;&gt;</text:placeholder></text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla9.A4" table:number-columns-spanned="5" office:value-type="string">
-         <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P88"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
         <table:table-cell table:style-name="Tabla9.F4" office:value-type="string">
-         <text:p text:style-name="P20"/>
+         <text:p text:style-name="P21"/>
         </table:table-cell>
        </table:table-row>
       </table:table>
-      <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-     </table:table-cell>
-    </table:table-row>
-   </table:table>
-   <text:p text:style-name="P41"/>
-   <table:table table:name="Tabla10" table:style-name="Tabla10">
-    <table:table-column table:style-name="Tabla10.A"/>
-    <table:table-row>
-     <table:table-cell table:style-name="Tabla10.A1" office:value-type="string">
-      <text:p text:style-name="P115">Sexualidad</text:p>
-     </table:table-cell>
-    </table:table-row>
-    <table:table-row>
-     <table:table-cell table:style-name="Tabla10.A2" office:value-type="string">
-      <text:p text:style-name="P111">Orientación sexual: <text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;patient.sexual_orientation_translated&gt;</text:placeholder></text:span></text:p>
-      <text:p text:style-name="P99"><text:span text:style-name="T31">Sexualmente activo: </text:span><text:span text:style-name="T31"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T31"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.sexual_active&quot;&gt;</text:placeholder></text:span>si<text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T28">no</text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
-      <text:p text:style-name="P87"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.sexual_active&quot;&gt;</text:placeholder></text:p>
-      <table:table table:name="Tabla11" table:style-name="Tabla11">
-       <table:table-column table:style-name="Tabla11.A" table:number-columns-repeated="3"/>
-       <table:table-row>
-        <table:table-cell table:style-name="Tabla11.A1" office:value-type="string">
-         <text:p text:style-name="P30">Tipo relación:</text:p>
-         <text:p text:style-name="P32"><text:placeholder text:placeholder-type="text">&lt;patient.relation_type_translated&gt;</text:placeholder></text:p>
-        </table:table-cell>
-        <table:table-cell table:style-name="Tabla11.A1" office:value-type="string">
-         <text:p text:style-name="P30">Seguridad sexual: </text:p>
-         <text:p text:style-name="P32"><text:placeholder text:placeholder-type="text">&lt;patient.sexual_security_translated&gt;</text:placeholder></text:p>
-        </table:table-cell>
-        <table:table-cell table:style-name="Tabla11.C1" office:value-type="string">
-         <text:p text:style-name="P30">Método anticonceptivo:</text:p>
-         <text:p text:style-name="P87"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.contraceptive_method&quot;&gt;</text:placeholder></text:p>
-         <text:p text:style-name="P87"><text:placeholder text:placeholder-type="text">&lt;patient.contraceptive_method.rec_name&gt;</text:placeholder></text:p>
-         <text:p text:style-name="P87"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-        </table:table-cell>
-       </table:table-row>
-      </table:table>
-      <text:p text:style-name="P87"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P87"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.intersex&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P102"><text:span text:style-name="T31">Intersexual</text:span>: <text:span text:style-name="T31">si</text:span></text:p>
-      <text:p text:style-name="P87"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P88"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
    <text:p text:style-name="P42"/>
+   <table:table table:name="Tabla10" table:style-name="Tabla10">
+    <table:table-column table:style-name="Tabla10.A"/>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabla10.A1" office:value-type="string">
+      <text:p text:style-name="P122">Sexualidad</text:p>
+     </table:table-cell>
+    </table:table-row>
+    <table:table-row>
+     <table:table-cell table:style-name="Tabla10.A2" office:value-type="string">
+      <text:p text:style-name="P118">Orientación sexual: <text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;patient.sexual_orientation_translated&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P103"><text:span text:style-name="T31">Sexualmente activo: </text:span><text:span text:style-name="T31"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T31"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.sexual_active&quot;&gt;</text:placeholder></text:span>si<text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T28">no</text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P90"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.sexual_active&quot;&gt;</text:placeholder></text:p>
+      <table:table table:name="Tabla11" table:style-name="Tabla11">
+       <table:table-column table:style-name="Tabla11.A" table:number-columns-repeated="3"/>
+       <table:table-row>
+        <table:table-cell table:style-name="Tabla11.A1" office:value-type="string">
+         <text:p text:style-name="P31">Tipo relación:</text:p>
+         <text:p text:style-name="P33"><text:placeholder text:placeholder-type="text">&lt;patient.relation_type_translated&gt;</text:placeholder></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="Tabla11.A1" office:value-type="string">
+         <text:p text:style-name="P31">Seguridad sexual: </text:p>
+         <text:p text:style-name="P33"><text:placeholder text:placeholder-type="text">&lt;patient.sexual_security_translated&gt;</text:placeholder></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="Tabla11.C1" office:value-type="string">
+         <text:p text:style-name="P31">Método anticonceptivo:</text:p>
+         <text:p text:style-name="P90"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.contraceptive_method&quot;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P90"><text:placeholder text:placeholder-type="text">&lt;patient.contraceptive_method.rec_name&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P90"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+        </table:table-cell>
+       </table:table-row>
+      </table:table>
+      <text:p text:style-name="P90"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P90"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.intersex&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P107"><text:span text:style-name="T31">Intersexual</text:span>: <text:span text:style-name="T31">si</text:span></text:p>
+      <text:p text:style-name="P90"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+     </table:table-cell>
+    </table:table-row>
+   </table:table>
    <text:p text:style-name="P43"/>
+   <text:p text:style-name="P44"/>
    <table:table table:name="Tabla13" table:style-name="Tabla13">
     <table:table-column table:style-name="Tabla13.A"/>
     <text:soft-page-break/>
     <table:table-row>
      <table:table-cell table:style-name="Tabla13.A1" office:value-type="string">
-      <text:p text:style-name="P116">Enfermedades diagnosticadas</text:p>
+      <text:p text:style-name="P123">Enfermedades diagnosticadas</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -2375,21 +2391,21 @@
        <table:table-column table:style-name="Tabla14.D"/>
        <table:table-row>
         <table:table-cell table:style-name="Tabla14.A1" office:value-type="string">
-         <text:p text:style-name="P25">Fecha</text:p>
+         <text:p text:style-name="P26">Fecha</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla14.A1" office:value-type="string">
-         <text:p text:style-name="P121">Enfermedad</text:p>
+         <text:p text:style-name="P128">Enfermedad</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla14.A1" office:value-type="string">
-         <text:p text:style-name="P120">Severidad</text:p>
+         <text:p text:style-name="P127">Severidad</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla14.D1" office:value-type="string">
-         <text:p text:style-name="P122">Contagiosa</text:p>
+         <text:p text:style-name="P129">Contagiosa</text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla14.A2" table:number-columns-spanned="4" office:value-type="string">
-         <text:p text:style-name="P88"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.diseases&quot;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P91"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.diseases&quot;&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
@@ -2397,37 +2413,37 @@
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla14.A3" office:value-type="string">
-         <text:p text:style-name="P129"><text:placeholder text:placeholder-type="text">&lt;line.date or &apos;&apos;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P104"><text:placeholder text:placeholder-type="text">&lt;line.date or &apos;&apos;&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla14.B3" office:value-type="string">
-         <text:p text:style-name="P88"><text:placeholder text:placeholder-type="text">&lt;line.disease.rec_name&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P91"><text:placeholder text:placeholder-type="text">&lt;line.disease.rec_name&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla14.C3" office:value-type="string">
-         <text:p text:style-name="P92"><text:placeholder text:placeholder-type="text">&lt;line.severity_translated&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P95"><text:placeholder text:placeholder-type="text">&lt;line.severity_translated&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla14.D3" office:value-type="string">
-         <text:p text:style-name="P104"><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;line.contagious&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T28">Si</text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T28">No</text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span><text:span text:style-name="T28"> </text:span></text:p>
+         <text:p text:style-name="P110"><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;line.contagious&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T28">Si</text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T28">No</text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span><text:span text:style-name="T28"> </text:span></text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla14.A4" table:number-columns-spanned="4" office:value-type="string">
-         <text:p text:style-name="P88"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P91"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
        </table:table-row>
       </table:table>
-      <text:p text:style-name="P88"/>
+      <text:p text:style-name="P91"/>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P43"/>
+   <text:p text:style-name="P44"/>
    <table:table table:name="Tabla15" table:style-name="Tabla15">
     <table:table-column table:style-name="Tabla15.A"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabla15.A1" office:value-type="string">
-      <text:p text:style-name="P117">Procedimientos realizados</text:p>
+      <text:p text:style-name="P124">Procedimientos realizados</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -2438,51 +2454,51 @@
        <table:table-column table:style-name="Tabla16.C"/>
        <table:table-row>
         <table:table-cell table:style-name="Tabla16.A1" office:value-type="string">
-         <text:p text:style-name="P25">Fecha</text:p>
+         <text:p text:style-name="P26">Fecha</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla16.A1" office:value-type="string">
-         <text:p text:style-name="P123">Procedimiento</text:p>
+         <text:p text:style-name="P130">Procedimiento</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla16.C1" office:value-type="string">
-         <text:p text:style-name="P123">Notas</text:p>
+         <text:p text:style-name="P130">Notas</text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla16.A2" table:number-columns-spanned="3" office:value-type="string">
-         <text:p text:style-name="P89"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.procedures&quot;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P92"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.procedures&quot;&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla16.A3" office:value-type="string">
-         <text:p text:style-name="P129"><text:placeholder text:placeholder-type="text">&lt;line.date or &apos;&apos;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P104"><text:placeholder text:placeholder-type="text">&lt;line.date or &apos;&apos;&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla16.B3" office:value-type="string">
-         <text:p text:style-name="P89"><text:placeholder text:placeholder-type="text">&lt;line.procedure.rec_name&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P92"><text:placeholder text:placeholder-type="text">&lt;line.procedure.rec_name&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla16.C3" office:value-type="string">
-         <text:p text:style-name="P94"><text:placeholder text:placeholder-type="text">&lt;line.notes or &apos;&apos;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P98"><text:placeholder text:placeholder-type="text">&lt;line.notes or &apos;&apos;&gt;</text:placeholder></text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla16.A4" table:number-columns-spanned="3" office:value-type="string">
-         <text:p text:style-name="P89"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P92"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
        </table:table-row>
       </table:table>
-      <text:p text:style-name="P89"/>
+      <text:p text:style-name="P92"/>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P44"/>
+   <text:p text:style-name="P45"/>
    <table:table table:name="Tabla17" table:style-name="Tabla17">
     <table:table-column table:style-name="Tabla17.A"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabla17.A1" office:value-type="string">
-      <text:p text:style-name="P117">Medicamentos prescritos</text:p>
+      <text:p text:style-name="P124">Medicamentos prescritos</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -2494,21 +2510,21 @@
        <table:table-column table:style-name="Tabla18.D"/>
        <table:table-row>
         <table:table-cell table:style-name="Tabla18.A1" office:value-type="string">
-         <text:p text:style-name="P25">Fecha</text:p>
+         <text:p text:style-name="P26">Fecha</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla18.A1" office:value-type="string">
-         <text:p text:style-name="P123">Medicamento</text:p>
+         <text:p text:style-name="P130">Medicamento</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla18.A1" office:value-type="string">
-         <text:p text:style-name="P122">Dosis</text:p>
+         <text:p text:style-name="P129">Dosis</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla18.D1" office:value-type="string">
-         <text:p text:style-name="P123">Frecuencia</text:p>
+         <text:p text:style-name="P130">Frecuencia</text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla18.A2" table:number-columns-spanned="4" office:value-type="string">
-         <text:p text:style-name="P89"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.medicaments&quot;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P92"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.medicaments&quot;&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
@@ -2516,37 +2532,37 @@
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla18.A3" office:value-type="string">
-         <text:p text:style-name="P129"><text:placeholder text:placeholder-type="text">&lt;line.prescription.date&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P104"><text:placeholder text:placeholder-type="text">&lt;line.prescription.date&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla18.B3" office:value-type="string">
-         <text:p text:style-name="P89"><text:placeholder text:placeholder-type="text">&lt;line.medicament.rec_name&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P92"><text:placeholder text:placeholder-type="text">&lt;line.medicament.rec_name&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla18.C3" office:value-type="string">
-         <text:p text:style-name="P93"><text:placeholder text:placeholder-type="text">&lt;line.dose or &apos;&apos;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P96"><text:placeholder text:placeholder-type="text">&lt;line.dose or &apos;&apos;&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla18.D3" office:value-type="string">
-         <text:p text:style-name="P94"><text:placeholder text:placeholder-type="text">&lt;line.frequency.rec_name&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P98"><text:placeholder text:placeholder-type="text">&lt;line.frequency.rec_name&gt;</text:placeholder></text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla18.A4" table:number-columns-spanned="4" office:value-type="string">
-         <text:p text:style-name="P89"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P92"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
        </table:table-row>
       </table:table>
-      <text:p text:style-name="P89"/>
+      <text:p text:style-name="P92"/>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P44"/>
+   <text:p text:style-name="P45"/>
    <table:table table:name="Tabla19" table:style-name="Tabla19">
     <table:table-column table:style-name="Tabla19.A"/>
     <table:table-row>
      <table:table-cell table:style-name="Tabla19.A1" office:value-type="string">
-      <text:p text:style-name="P117">Vacunas</text:p>
+      <text:p text:style-name="P124">Vacunas</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
@@ -2558,21 +2574,21 @@
        <table:table-column table:style-name="Tabla20.D"/>
        <table:table-row>
         <table:table-cell table:style-name="Tabla20.A1" office:value-type="string">
-         <text:p text:style-name="P25">Fecha</text:p>
+         <text:p text:style-name="P26">Fecha</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla20.A1" office:value-type="string">
-         <text:p text:style-name="P123">Vacuna</text:p>
+         <text:p text:style-name="P130">Vacuna</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla20.A1" office:value-type="string">
-         <text:p text:style-name="P122">Dosis</text:p>
+         <text:p text:style-name="P129">Dosis</text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla20.D1" office:value-type="string">
-         <text:p text:style-name="P122">Siguiente fecha</text:p>
+         <text:p text:style-name="P129">Siguiente fecha</text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla20.A2" table:number-columns-spanned="4" office:value-type="string">
-         <text:p text:style-name="P89"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.vaccines&quot;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P92"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.vaccines&quot;&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
@@ -2580,49 +2596,49 @@
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla20.A3" office:value-type="string">
-         <text:p text:style-name="P129"><text:placeholder text:placeholder-type="text">&lt;line.date&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P104"><text:placeholder text:placeholder-type="text">&lt;line.date&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla20.B3" office:value-type="string">
-         <text:p text:style-name="P89"><text:placeholder text:placeholder-type="text">&lt;line.vaccine.rec_name&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P92"><text:placeholder text:placeholder-type="text">&lt;line.vaccine.rec_name&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla20.C3" office:value-type="string">
-         <text:p text:style-name="P93"><text:placeholder text:placeholder-type="text">&lt;line.dose&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P96"><text:placeholder text:placeholder-type="text">&lt;line.dose&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla20.D3" office:value-type="string">
-         <text:p text:style-name="P93"><text:placeholder text:placeholder-type="text">&lt;line.next_date or &apos;&apos;&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P96"><text:placeholder text:placeholder-type="text">&lt;line.next_date or &apos;&apos;&gt;</text:placeholder></text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
         <table:table-cell table:style-name="Tabla20.A4" table:number-columns-spanned="4" office:value-type="string">
-         <text:p text:style-name="P89"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+         <text:p text:style-name="P92"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
         <table:covered-table-cell/>
        </table:table-row>
       </table:table>
-      <text:p text:style-name="P89"/>
+      <text:p text:style-name="P92"/>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P44"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
-   <text:p text:style-name="P136"/>
+   <text:p text:style-name="P45"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+   <text:p text:style-name="P46"/>
    <table:table table:name="Tabla29" table:style-name="Tabla29">
     <table:table-column table:style-name="Tabla29.A"/>
     <text:soft-page-break/>
     <table:table-row>
      <table:table-cell table:style-name="Tabla29.A1" office:value-type="string">
-      <text:p text:style-name="P124">_________________________________</text:p>
+      <text:p text:style-name="P17">_________________________________</text:p>
      </table:table-cell>
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla29.A1" office:value-type="string">
-      <text:p text:style-name="P130"><text:placeholder text:placeholder-type="text">&lt;professional.rec_name if professional else &apos;&apos;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P131"><text:placeholder text:placeholder-type="text">&lt;professional.position if professional else &apos;&apos;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P97"><text:placeholder text:placeholder-type="text">&lt;professional.rec_name if professional else &apos;&apos;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P111"><text:placeholder text:placeholder-type="text">&lt;professional.position if professional else &apos;&apos;&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
    </table:table>
-   <text:p text:style-name="P134"/>
+   <text:p text:style-name="P131"/>
   </office:text>
  </office:body>
 </office:document>

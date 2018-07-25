@@ -25,5 +25,25 @@
             <field name="model">galeno.patient.evaluation,-1</field>
             <field name="action" ref="patient_evaluation_report"/>
         </record>
+        <!-- PRESCRIPTION -->
+        <record model="ir.action.report" id="patient_prescription_report">
+            <field name="name">Prescription</field>
+            <field name="model">galeno.patient.prescription</field>
+            <field name="report_name">galeno.patient.prescription</field>
+            <field name="report">galeno/report_template/prescription.fodt</field>
+        </record>
+        <record model='ir.action.keyword' id='patient_prescription_report_keyword'>
+            <field name="keyword">form_print</field>
+            <field name="model">galeno.patient.prescription,-1</field>
+            <field name="action" ref="patient_prescription_report"/>
+        </record>
+        <!-- APPOINTMENT EMAIL -->
+        <record model="ir.action.report" id="appointment_email">
+            <field name="name">Appointment Email</field>
+            <field name="model">galeno.patient.appointment</field>
+            <field name="report_name">galeno.patient.appointment</field>
+            <field name="report">galeno/report_template/appointment.html</field>
+            <field name="template_extension">html</field>
+        </record>
     </data>
 </tryton>

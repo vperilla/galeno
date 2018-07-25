@@ -31,7 +31,6 @@ class Patient(ModelSQL, ModelView):
         help="Personal Identifier, Eg:CI/RUC")
     photo = fields.Function(
         fields.Binary('Photo'), 'get_photo', setter='set_photo')
-    photo_size = fields.Function(fields.Char('Photo Size'), 'get_photo_size')
     birthdate = fields.Date('Birthdate', required=True)
     age = fields.Function(fields.TimeDelta('Age'), 'on_change_with_age')
     age_char = fields.Function(fields.Char('Age'), 'on_change_with_age_char')
@@ -101,6 +100,7 @@ class Patient(ModelSQL, ModelView):
     disabilities = fields.One2Many(
         'galeno.patient.disability', 'patient', 'Disabilities')
     # DISEASES
+    allergies = fields.Text('Allergies')
     diseases = fields.Function(
         fields.One2Many('galeno.patient.evaluation.diagnosis', None,
             'Diseases'), 'get_diseases')
@@ -639,7 +639,6 @@ class Patient(ModelSQL, ModelView):
         for values in vlist:
             if values.get('code') is None:
                 values['code'] = Sequence.get_id(config.patient_sequence.id)
-        return super(Patient, cls).create(vlist)
 
 
 class PatientPhoto(ModelSQL):

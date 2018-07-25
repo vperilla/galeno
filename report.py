@@ -4,7 +4,8 @@ from trytond.modules.company import CompanyReport
 
 from .galeno_tools import resize_image as resize_img
 
-__all__ = ['GalenoReport', 'Patient', 'Evaluation']
+__all__ = ['GalenoReport', 'Patient', 'Evaluation', 'Prescription',
+    'Appointment']
 
 
 class GalenoReport(CompanyReport):
@@ -87,3 +88,11 @@ class Evaluation(GalenoReport):
             if getattr(record, field):
                 return True
         return False
+
+
+class Prescription(GalenoReport):
+    __name__ = 'galeno.patient.prescription'
+
+
+class Appointment(GalenoReport):
+    __name__ = 'galeno.patient.appointment'

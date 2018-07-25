@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:py="http://genshi.edgewall.org/">
+    <head>
+        <title>Reminder Notice</title>
+    </head>
+    <body>
+        <py:for each="appointment in records">
+        <header style="text-align: center">
+            <h3>${company.rec_name}</h3>
+            <py:if test="company.header">
+            <p py:for="line in company.header.splitlines()">${line}</p>
+            </py:if>
+        </header>
+        <h1 style="text-align: center">Reminder Notice</h1>
+        <p>Date: ${format_date(datetime.date.today(), data.language)}</p>
+        <p>Dear: ${appointment.patient.rec_name}</p>
+        <p>You have an scheduled appoitnment on ${appointment.start_date}</p>
+        <p>Thanks</p>
+        <footer style="text-align: center">
+            <py:if test="company.footer">
+            <p py:for="line in company.footer.splitlines()">${line}</p>
+            </py:if>
+        </footer>
+        </py:for>
+    </body>
+</html>

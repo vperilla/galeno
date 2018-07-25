@@ -1,5 +1,7 @@
 from pendulum import instance, from_timestamp
 from datetime import datetime, timedelta
+from email.header import Header
+from email.utils import formataddr, getaddresses
 
 from sql.conditionals import Case
 
@@ -8,10 +10,13 @@ from trytond.pyson import Eval, If, Bool
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.tools import reduce_ids, grouped_slice
+from trytond.report import get_email
+from trytond.config import config
+from trytond.sendmail import sendmail_transactional, SMTPDataManager
 
 from . import galeno_tools
 
-__all__ = ['PatientAppointment']
+__all__ = ['PatientAppointment', 'PatientAppointmentEmailLog']
 
 
 class PatientAppointment(Workflow, ModelSQL, ModelView):
@@ -283,3 +288,93 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
                             'appointment': appointment.rec_name,
                         })
         super(PatientAppointment, cls).write(*args)
+
+    @classmethod
+    def send_reminder_emails(cls):
+        """Cron method send reminder emails.
+        """
+        now = datetime.now()
+        tomorrow = now + timedelta(days=1)
+        after_tomorrow = tomorrow + timedelta(days=1)
+        appointments = cls.search([
+            ('start_date', '>', tomorrow),
+            ('start_date', '<', after_tomorrow),
+            ('state', '=', 'scheduled'),
+        ])
+        for appointment in appointments:
+            appointment.send_email()
+
+    def send_email(self):
+        import pdb; pdb.set_trace()  # XXX BREAKPOINT
+        pool = Pool()
+        datamanager = SMTPDataManager()
+        Configuration = pool.get('ir.configuration')
+        Lang = pool.get('ir.lang')
+        Template = pool.get('ir.action.report')
+        Log = pool.get('galeno.patient.appointment.email.log')
+
+        from_ = config.get('email', 'from')
+        to = []
+        name = str(Header(self.patient.rec_name))
+        to.append(formataddr((name, self.patient.email)))
+        cc = []
+        bcc = []
+        languages = set()
+        lang, = Lang.search([
+                ('code', '=', Configuration.get_language()),
+                ], limit=1)
+        languages.add(lang)
+
+        Data = pool.get('ir.model.data')
+        template_id = Data.get_id('galeno', 'appointment_email')
+        template = Template(template_id)
+
+        msg = self._email(from_, to, cc, bcc, languages, template)
+        to_addrs = [e for _, e in getaddresses(to + cc + bcc)]
+        if to_addrs:
+            if not pool.test:
+                sendmail_transactional(
+                    from_, to_addrs, msg, datamanager=datamanager)
+            Log.create([self._email_log(msg)])
+
+    def _email(self, from_, to, cc, bcc, languages, template):
+        # TODO order languages to get default as last one for title
+        msg, title = get_email(template, self, languages)
+        msg['From'] = from_
+        msg['To'] = ', '.join(to)
+        msg['Cc'] = ', '.join(cc)
+        msg['Bcc'] = ', '.join(bcc)
+        msg['Subject'] = Header(title, 'utf-8')
+        msg['Auto-Submitted'] = 'auto-generated'
+        return msg
+
+    def _email_log(self, msg):
+        return {
+            'recipients': msg['To'],
+            'recipients_secondary': msg['Cc'],
+            'recipients_hidden': msg['Bcc'],
+            'appointment': self.id,
+            }
+
+
+class PatientAppointmentEmailLog(ModelSQL, ModelView):
+    "Appointment Email Log"
+    __name__ = 'galeno.patient.appointment.email.log'
+    date = fields.Function(fields.DateTime("Date"), 'get_date')
+    recipients = fields.Char("Recipients")
+    recipients_secondary = fields.Char("Secondary Recipients")
+    recipients_hidden = fields.Char("Hidden Recipients")
+    appointment = fields.Many2One(
+        'galeno.patient.appointment', 'Appointment', required=True)
+
+    def get_date(self, name):
+        return self.create_date.replace(microsecond=0)
+
+    @classmethod
+    def search_date(cls, name, clause):
+        return [('create_date',) + tuple(clause[1:])]
+
+    @staticmethod
+    def order_date(tables):
+        table, _ = tables[None]
+        return [table.create_date]

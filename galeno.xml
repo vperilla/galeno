@@ -182,6 +182,10 @@
             <field name="name">galeno-photo</field>
             <field name="path">icons/photo.svg</field>
         </record>
+        <record model="ir.ui.icon" id="allergy_icon">
+            <field name="name">galeno-allergy</field>
+            <field name="path">icons/allergy.svg</field>
+        </record>
 
         <!-- MAIN MENU -->
         <record model="res.group" id="group_galeno_admin">
