@@ -106,11 +106,6 @@
                     <label name="actually_pregnant"/>
                     <field name="actually_pregnant"/>
                 </page>
-                <page id="allergies_backgrounds" string="Allergies"
-                    icon="galeno-allergy">
-                    <separator name="allergies" colspan="4"/>
-                    <field name="allergies" colspan="4"/>
-                </page>
                 <page id="disease_backgrounds" string="Diseases"
                     icon="galeno-disease">
                     <field name="background_diseases" colspan="4"/>

@@ -100,7 +100,6 @@ class Patient(ModelSQL, ModelView):
     disabilities = fields.One2Many(
         'galeno.patient.disability', 'patient', 'Disabilities')
     # DISEASES
-    allergies = fields.Text('Allergies')
     diseases = fields.Function(
         fields.One2Many('galeno.patient.evaluation.diagnosis', None,
             'Diseases'), 'get_diseases')
