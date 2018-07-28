@@ -960,7 +960,7 @@ msgstr "Edad de menopausia / andropausia"
 
 msgctxt "field:galeno.patient,nationality:"
 msgid "Nationality"
-msgstr ""
+msgstr "Nacionalidad"
 
 msgctxt "field:galeno.patient,normal_labor:"
 msgid "Normal labor"
