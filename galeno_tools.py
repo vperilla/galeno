@@ -18,7 +18,7 @@ IDENTIFIERS = {
     'EC': [
         ('ec.ci', 'CI'),
         ('ec.ruc', 'RUC'),
-        ('ec.passport', 'Passport')
+        ('passport', 'Passport')
     ],
 }
 
@@ -28,7 +28,7 @@ def compat_identifier(type_, identifier):
         validator = ci
     elif type_ == 'ec.ruc':
         validator = ruc
-    elif type_ == 'ec.passport':
+    elif type_ == 'passport':
         return identifier
     else:
         pass
@@ -44,7 +44,7 @@ def validate_identifier(type_, identifier):
         validator = ci
     elif type_ == 'ec.ruc':
         validator = ruc
-    elif type_ == 'ec.passport':
+    elif type_ == 'passport':
         return True
     else:
         pass

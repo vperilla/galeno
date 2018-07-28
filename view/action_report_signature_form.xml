@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<form>
+    <label name="sequence"/>
+    <field name="sequence"/>
+    <label name="report"/>
+    <field name="report"/>
+    <newline/>
+    <label name="sign"/>
+    <field name="sign"/>
+    <label name="position"/>
+    <field name="position"/>
+</form>

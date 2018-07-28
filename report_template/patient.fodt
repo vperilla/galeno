@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:generator>LibreOffice/6.0.5.2$Linux_X86_64 LibreOffice_project/00m0$Build-2</meta:generator><meta:creation-date>2008-06-07T15:28:22</meta:creation-date><dc:date>2009-01-10T16:03:32</dc:date><meta:editing-cycles>1</meta:editing-cycles><meta:editing-duration>PT0S</meta:editing-duration><meta:document-statistic meta:table-count="21" meta:image-count="0" meta:object-count="0" meta:page-count="7" meta:paragraph-count="230" meta:word-count="495" meta:character-count="5771" meta:non-whitespace-character-count="5509"/><meta:user-defined meta:name="Info 1"/><meta:user-defined meta:name="Info 2"/><meta:user-defined meta:name="Info 3"/><meta:user-defined meta:name="Info 4"/></office:meta>
+ <office:meta><meta:generator>LibreOffice/6.0.5.2$Linux_X86_64 LibreOffice_project/00m0$Build-2</meta:generator><meta:creation-date>2008-06-07T15:28:22</meta:creation-date><dc:date>2009-01-10T16:03:32</dc:date><meta:editing-cycles>1</meta:editing-cycles><meta:editing-duration>PT0S</meta:editing-duration><meta:document-statistic meta:table-count="22" meta:image-count="0" meta:object-count="0" meta:page-count="7" meta:paragraph-count="239" meta:word-count="509" meta:character-count="5970" meta:non-whitespace-character-count="5703"/><meta:user-defined meta:name="Info 1"/><meta:user-defined meta:name="Info 2"/><meta:user-defined meta:name="Info 3"/><meta:user-defined meta:name="Info 4"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">78027</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="long">50347</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
-   <config:config-item config:name="ViewAreaWidth" config:type="long">32016</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="long">13760</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="long">68956</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="long">29635</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">6604</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">81142</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">3572</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">70956</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">78027</config:config-item>
-     <config:config-item config:name="VisibleRight" config:type="long">32015</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">91786</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">50347</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="long">68954</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">79980</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
-     <config:config-item config:name="ZoomFactor" config:type="short">140</config:config-item>
+     <config:config-item config:name="ZoomFactor" config:type="short">65</config:config-item>
      <config:config-item config:name="IsSelectedFrame" config:type="boolean">false</config:config-item>
      <config:config-item config:name="AnchoredTextOverflowLegacy" config:type="boolean">false</config:config-item>
     </config:config-item-map-entry>
@@ -92,7 +92,7 @@
    <config:config-item config:name="UnxForceZeroExtLeading" config:type="boolean">false</config:config-item>
    <config:config-item config:name="TabAtLeftIndentForParagraphsInList" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintRightPages" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">4434960</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">4518295</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MsWordCompTrailingBlanks" config:type="boolean">false</config:config-item>
    <config:config-item config:name="InvertBorderSpacing" config:type="boolean">false</config:config-item>
@@ -866,12 +866,27 @@
    <style:table-cell-properties fo:padding="0.097cm" fo:border-left="0.05pt solid #000000" fo:border-right="0.05pt solid #000000" fo:border-top="none" fo:border-bottom="0.05pt solid #000000"/>
   </style:style>
   <style:style style:name="Tabla29" style:family="table">
-   <style:table-properties style:width="19.001cm" table:align="margins"/>
+   <style:table-properties style:width="19.001cm" table:align="margins" style:may-break-between-rows="false"/>
   </style:style>
   <style:style style:name="Tabla29.A" style:family="table-column">
    <style:table-column-properties style:column-width="19.001cm" style:rel-column-width="65535*"/>
   </style:style>
+  <style:style style:name="Tabla29.1" style:family="table-row">
+   <style:table-row-properties fo:keep-together="always"/>
+  </style:style>
   <style:style style:name="Tabla29.A1" style:family="table-cell">
+   <style:table-cell-properties fo:padding="0.097cm" fo:border="none"/>
+  </style:style>
+  <style:style style:name="Tabla21" style:family="table">
+   <style:table-properties style:width="18.807cm" table:align="margins"/>
+  </style:style>
+  <style:style style:name="Tabla21.A" style:family="table-column">
+   <style:table-column-properties style:column-width="6.267cm" style:rel-column-width="3590*"/>
+  </style:style>
+  <style:style style:name="Tabla21.B" style:family="table-column">
+   <style:table-column-properties style:column-width="6.269cm" style:rel-column-width="3591*"/>
+  </style:style>
+  <style:style style:name="Tabla21.A1" style:family="table-cell">
    <style:table-cell-properties fo:padding="0.097cm" fo:border="none"/>
   </style:style>
   <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Header">
@@ -1380,29 +1395,56 @@
   <style:style style:name="P131" style:family="paragraph" style:parent-style-name="Standard">
    <style:text-properties officeooo:paragraph-rsid="00409f04"/>
   </style:style>
-  <style:style style:name="P132" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1">
+  <style:style style:name="P132" style:family="paragraph" style:parent-style-name="Standard">
+   <style:text-properties officeooo:paragraph-rsid="00409f04"/>
+  </style:style>
+  <style:style style:name="P133" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P133" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L2">
+  <style:style style:name="P134" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L2">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P134" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L4">
+  <style:style style:name="P135" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L4">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P135" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L3">
+  <style:style style:name="P136" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L3">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P136" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L5">
+  <style:style style:name="P137" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="00341a91" officeooo:paragraph-rsid="0044f197" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
+  </style:style>
+  <style:style style:name="P138" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="00409f04" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P139" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="00341a91" officeooo:paragraph-rsid="0044f197" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="P140" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L5">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="003af174" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
-  <style:style style:name="P137" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L3">
+  <style:style style:name="P141" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="0044f197" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P142" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L3">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties officeooo:paragraph-rsid="00391662"/>
+  </style:style>
+  <style:style style:name="P143" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties officeooo:paragraph-rsid="0044f197"/>
+  </style:style>
+  <style:style style:name="P144" style:family="paragraph" style:parent-style-name="Table_20_Contents">
+   <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-weight="normal" officeooo:rsid="0044f197" officeooo:paragraph-rsid="0044f197" style:font-weight-asian="normal" style:font-weight-complex="normal"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="0029e76e"/>
@@ -1483,18 +1525,21 @@
    <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="003392d8" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="T27" style:family="text">
-   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" officeooo:rsid="00341a91" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="00341a91" style:font-size-asian="10pt" style:font-weight-asian="bold" style:font-size-complex="10pt" style:font-weight-complex="bold"/>
   </style:style>
   <style:style style:name="T28" style:family="text">
-   <style:text-properties officeooo:rsid="00341a91"/>
+   <style:text-properties fo:font-size="10pt" style:text-underline-style="none" officeooo:rsid="00341a91" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="T29" style:family="text">
-   <style:text-properties officeooo:rsid="003af174"/>
+   <style:text-properties officeooo:rsid="00341a91"/>
   </style:style>
   <style:style style:name="T30" style:family="text">
-   <style:text-properties officeooo:rsid="003b364c"/>
+   <style:text-properties officeooo:rsid="003af174"/>
   </style:style>
   <style:style style:name="T31" style:family="text">
+   <style:text-properties officeooo:rsid="003b364c"/>
+  </style:style>
+  <style:style style:name="T32" style:family="text">
    <style:text-properties officeooo:rsid="003c24d5"/>
   </style:style>
   <style:style style:name="fr1" style:family="graphic" style:parent-style-name="Frame">
@@ -1797,7 +1842,7 @@
        <text:p text:style-name="P8"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Tabla12.A1" office:value-type="string">
-       <text:p text:style-name="P34">Pag: <text:page-number text:select-page="current">7</text:page-number><text:s/>de <text:page-count>7</text:page-count></text:p>
+       <text:p text:style-name="P34">Pag: <text:page-number text:select-page="current">3</text:page-number><text:s/>de <text:page-count>7</text:page-count></text:p>
       </table:table-cell>
      </table:table-row>
     </table:table>
@@ -2074,15 +2119,15 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla4.B4" office:value-type="string">
       <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_diseases&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list1817495772" text:style-name="L1">
+      <text:list xml:id="list3889351357" text:style-name="L1">
        <text:list-item>
-        <text:p text:style-name="P132"><text:placeholder text:placeholder-type="text">&lt;line.disease.rec_name&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P133"><text:placeholder text:placeholder-type="text">&lt;line.disease.rec_name&gt;</text:placeholder></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list2711856072" text:style-name="L2">
+      <text:list xml:id="list2143372480" text:style-name="L2">
        <text:list-header>
-        <text:p text:style-name="P133"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P134"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
        </text:list-header>
       </text:list>
       <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
@@ -2095,15 +2140,15 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla4.B6" office:value-type="string">
       <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_medicaments&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list1213888975" text:style-name="L3">
+      <text:list xml:id="list933025299" text:style-name="L3">
        <text:list-item>
-        <text:p text:style-name="P137"><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.medicament.rec_name&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/>- </text:span><text:span text:style-name="T24">Cantidad: </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.quantity&gt;</text:placeholder></text:span></text:p>
+        <text:p text:style-name="P142"><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.medicament.rec_name&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/>- </text:span><text:span text:style-name="T24">Cantidad: </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.quantity&gt;</text:placeholder></text:span></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list2640431234" text:style-name="L4">
+      <text:list xml:id="list3616987515" text:style-name="L4">
        <text:list-header>
-        <text:p text:style-name="P134"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P135"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
        </text:list-header>
       </text:list>
       <text:p text:style-name="P85"><text:soft-page-break/><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
@@ -2116,9 +2161,9 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla4.B6" office:value-type="string">
       <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_surgeries&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list214601602925781" text:continue-list="list1213888975" text:style-name="L3">
+      <text:list xml:id="list211828180831026" text:continue-list="list933025299" text:style-name="L3">
        <text:list-item>
-        <text:p text:style-name="P137"><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/></text:span></text:p>
+        <text:p text:style-name="P142"><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/></text:span></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
@@ -2130,15 +2175,15 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla4.B7" office:value-type="string">
       <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_family&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list214601775736702" text:continue-numbering="true" text:style-name="L3">
+      <text:list xml:id="list211829066267667" text:continue-numbering="true" text:style-name="L3">
        <text:list-item>
-        <text:p text:style-name="P137"><text:span text:style-name="T26"><text:placeholder text:placeholder-type="text">&lt;line.relationship&gt;</text:placeholder></text:span><text:span text:style-name="T26">:</text:span><text:span text:style-name="T25"> </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.disease.code&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/>- </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.disease.name&gt;</text:placeholder></text:span></text:p>
+        <text:p text:style-name="P142"><text:span text:style-name="T26"><text:placeholder text:placeholder-type="text">&lt;line.relationship&gt;</text:placeholder></text:span><text:span text:style-name="T26">:</text:span><text:span text:style-name="T25"> </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.disease.code&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/>- </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.disease.name&gt;</text:placeholder></text:span></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list214602444967849" text:continue-list="list2640431234" text:style-name="L4">
+      <text:list xml:id="list211828551217248" text:continue-list="list3616987515" text:style-name="L4">
        <text:list-header>
-        <text:p text:style-name="P134"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P135"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
        </text:list-header>
       </text:list>
       <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
@@ -2151,15 +2196,15 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla4.B8" office:value-type="string">
       <text:p text:style-name="P81"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_tests&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list214601719652455" text:continue-list="list214601775736702" text:style-name="L3">
+      <text:list xml:id="list211828959159287" text:continue-list="list211829066267667" text:style-name="L3">
        <text:list-item>
-        <text:p text:style-name="P135"><text:placeholder text:placeholder-type="text">&lt;line.test.rec_name&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P136"><text:placeholder text:placeholder-type="text">&lt;line.test.rec_name&gt;</text:placeholder></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list214603351207125" text:continue-list="list214602444967849" text:style-name="L4">
+      <text:list xml:id="list211828017351890" text:continue-list="list211828551217248" text:style-name="L4">
        <text:list-header>
-        <text:p text:style-name="P134"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P135"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
        </text:list-header>
       </text:list>
       <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
@@ -2183,18 +2228,18 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla7.B2" office:value-type="string">
       <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.sleep_time&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P99">Tiempo de sueño en horas: <text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;patient.sleep_time&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P99">Tiempo de sueño en horas: <text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;patient.sleep_time&gt;</text:placeholder></text:span></text:p>
       <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
       <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.sleep_in_day&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P99">Sueño en el día: si</text:p>
       <text:p text:style-name="P85"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
       <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P100">Sueño en el día: <text:span text:style-name="T29">no</text:span></text:p>
+      <text:p text:style-name="P100">Sueño en el día: <text:span text:style-name="T30">no</text:span></text:p>
       <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:p>
       <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:p>
       <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.sleep_notes&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P100"><text:span text:style-name="T29">Notas</text:span>: <text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;patient.sleep_notes&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P100"><text:span text:style-name="T30">Notas</text:span>: <text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;patient.sleep_notes&gt;</text:placeholder></text:span></text:p>
       <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
@@ -2204,9 +2249,9 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla7.B3" office:value-type="string">
       <text:p text:style-name="P112"><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.activities&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.test.rec_name&gt;</text:placeholder></text:span></text:p>
-      <text:list xml:id="list1780115071" text:style-name="L5">
+      <text:list xml:id="list1396340563" text:style-name="L5">
        <text:list-item>
-        <text:p text:style-name="P136"><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.activity&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:s/>- </text:span><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.week_hours&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:s/></text:span><text:span text:style-name="T13">horas a la semana.</text:span></text:p>
+        <text:p text:style-name="P140"><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.activity&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:s/>- </text:span><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.week_hours&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:s/></text:span><text:span text:style-name="T13">horas a la semana.</text:span></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P86"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
@@ -2217,9 +2262,9 @@
       <text:p text:style-name="P72">Dieta:</text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla7.B5" office:value-type="string">
-      <text:p text:style-name="P101"><text:span text:style-name="T30">Tipo de dieta: </text:span><text:span text:style-name="T30"><text:placeholder text:placeholder-type="text">&lt;patient.diet_type_translated&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P101"><text:span text:style-name="T31">Tipo de dieta: </text:span><text:span text:style-name="T31"><text:placeholder text:placeholder-type="text">&lt;patient.diet_type_translated&gt;</text:placeholder></text:span></text:p>
       <text:p text:style-name="P87"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.meals_number&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P101"><text:span text:style-name="T30">Comidas por día</text:span>: <text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;patient.meals_number&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P101"><text:span text:style-name="T31">Comidas por día</text:span>: <text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;patient.meals_number&gt;</text:placeholder></text:span></text:p>
       <text:p text:style-name="P87"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
       <table:table table:name="Tabla8" table:style-name="Tabla8">
        <table:table-column table:style-name="Tabla8.A" table:number-columns-repeated="3"/>
@@ -2236,7 +2281,7 @@
        </table:table-row>
       </table:table>
       <text:p text:style-name="P88"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.feeding_notes&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P105">Notas alimentación: <text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;patient.feeding_notes&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P105">Notas alimentación: <text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;patient.feeding_notes&gt;</text:placeholder></text:span></text:p>
       <text:p text:style-name="P88"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
@@ -2333,7 +2378,7 @@
     <table:table-row>
      <table:table-cell table:style-name="Tabla10.A2" office:value-type="string">
       <text:p text:style-name="P118">Orientación sexual: <text:span text:style-name="T19"><text:placeholder text:placeholder-type="text">&lt;patient.sexual_orientation_translated&gt;</text:placeholder></text:span></text:p>
-      <text:p text:style-name="P103"><text:span text:style-name="T31">Sexualmente activo: </text:span><text:span text:style-name="T31"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T31"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.sexual_active&quot;&gt;</text:placeholder></text:span>si<text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T28">no</text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
+      <text:p text:style-name="P103"><text:span text:style-name="T32">Sexualmente activo: </text:span><text:span text:style-name="T32"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T32"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;patient.sexual_active&quot;&gt;</text:placeholder></text:span>si<text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T29">no</text:span><text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span></text:p>
       <text:p text:style-name="P90"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.sexual_active&quot;&gt;</text:placeholder></text:p>
       <table:table table:name="Tabla11" table:style-name="Tabla11">
        <table:table-column table:style-name="Tabla11.A" table:number-columns-repeated="3"/>
@@ -2356,7 +2401,7 @@
       </table:table>
       <text:p text:style-name="P90"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
       <text:p text:style-name="P90"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;patient.intersex&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P107"><text:span text:style-name="T31">Intersexual</text:span>: <text:span text:style-name="T31">si</text:span></text:p>
+      <text:p text:style-name="P107"><text:span text:style-name="T32">Intersexual</text:span>: <text:span text:style-name="T32">si</text:span></text:p>
       <text:p text:style-name="P90"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
@@ -2411,7 +2456,7 @@
          <text:p text:style-name="P95"><text:placeholder text:placeholder-type="text">&lt;line.severity_translated&gt;</text:placeholder></text:p>
         </table:table-cell>
         <table:table-cell table:style-name="Tabla14.D3" office:value-type="string">
-         <text:p text:style-name="P110"><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;line.contagious&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T28">Si</text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T28">No</text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T28"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span><text:span text:style-name="T28"> </text:span></text:p>
+         <text:p text:style-name="P110"><text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;line.contagious&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T29">Si</text:span><text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:span><text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T29">No</text:span><text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;/otherwise&gt;</text:placeholder></text:span><text:span text:style-name="T29"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:span><text:span text:style-name="T29"> </text:span></text:p>
         </table:table-cell>
        </table:table-row>
        <table:table-row>
@@ -2615,19 +2660,46 @@
    <table:table table:name="Tabla29" table:style-name="Tabla29">
     <table:table-column table:style-name="Tabla29.A"/>
     <text:soft-page-break/>
-    <table:table-row>
+    <table:table-row table:style-name="Tabla29.1">
      <table:table-cell table:style-name="Tabla29.A1" office:value-type="string">
       <text:p text:style-name="P17">_________________________________</text:p>
      </table:table-cell>
     </table:table-row>
-    <table:table-row>
+    <table:table-row table:style-name="Tabla29.1">
      <table:table-cell table:style-name="Tabla29.A1" office:value-type="string">
       <text:p text:style-name="P97"><text:placeholder text:placeholder-type="text">&lt;professional.rec_name if professional else &apos;&apos;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P111"><text:placeholder text:placeholder-type="text">&lt;professional.position if professional else &apos;&apos;&gt;</text:placeholder></text:p>
      </table:table-cell>
     </table:table-row>
+    <table:table-row table:style-name="Tabla29.1">
+     <table:table-cell table:style-name="Tabla29.A1" office:value-type="string">
+      <text:p text:style-name="P141"><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;signatures(action_id)&quot;&gt;</text:placeholder></text:span></text:p>
+      <table:table table:name="Tabla21" table:style-name="Tabla21">
+       <table:table-column table:style-name="Tabla21.A"/>
+       <table:table-column table:style-name="Tabla21.B" table:number-columns-repeated="2"/>
+       <table:table-row>
+        <table:table-cell table:style-name="Tabla21.A1" office:value-type="string">
+         <text:p text:style-name="P141"><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;signature in signatures(action_id)&quot;&gt;</text:placeholder></text:span></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="Tabla21.A1" office:value-type="string">
+         <text:p text:style-name="P144"><text:span text:style-name="T28"/></text:p>
+         <text:p text:style-name="P144"><text:span text:style-name="T28"/></text:p>
+         <text:p text:style-name="P144"><text:span text:style-name="T28">____________________________</text:span></text:p>
+         <text:p text:style-name="P143"><text:span text:style-name="T27"><text:placeholder text:placeholder-type="text">&lt;signature[&apos;sign&apos;]&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P139"><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;signature[&apos;position&apos;]&quot;&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P139"><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;signature[&apos;position&apos;]&gt;</text:placeholder></text:span></text:p>
+         <text:p text:style-name="P139"><text:span text:style-name="T3"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:span></text:p>
+        </table:table-cell>
+        <table:table-cell table:style-name="Tabla21.A1" office:value-type="string">
+         <text:p text:style-name="P141"><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:span></text:p>
+        </table:table-cell>
+       </table:table-row>
+      </table:table>
+      <text:p text:style-name="P137"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+     </table:table-cell>
+    </table:table-row>
    </table:table>
-   <text:p text:style-name="P131"/>
+   <text:p text:style-name="P141"><text:span text:style-name="T10"/></text:p>
   </office:text>
  </office:body>
 </office:document>

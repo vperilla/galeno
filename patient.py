@@ -34,6 +34,16 @@ class Patient(ModelSQL, ModelView):
     birthdate = fields.Date('Birthdate', required=True)
     age = fields.Function(fields.TimeDelta('Age'), 'on_change_with_age')
     age_char = fields.Function(fields.Char('Age'), 'on_change_with_age_char')
+    nationality = fields.Many2One(
+        'country.country', 'Nationality', required=True,
+        states={
+            'readonly': Bool(Eval('identifier_type') != 'passport')
+        },
+        domain=[
+            If((Eval('identifier_type') != 'passport'),
+               ('id', '=', Eval('country')),
+               ())
+        ], depends=['identifier_type', 'country'])
     country = fields.Many2One('country.country', 'Country', required=True,
         states={
             'readonly': True,
@@ -380,6 +390,11 @@ class Patient(ModelSQL, ModelView):
     @staticmethod
     def default_actually_pregnant():
         return False
+
+    @fields.depends('country')
+    def on_change_country(self):
+        if self.country:
+            self.nationality = self.country
 
     @classmethod
     def get_photo(cls, patients, names):

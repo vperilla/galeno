@@ -18,6 +18,8 @@
             <field name="identifier_type"/>
             <label name="identifier"/>
             <field name="identifier"/>
+            <label name="nationality"/>
+            <field name="nationality"/>
             <label name="gender"/>
             <field name="gender"/>
         </group>

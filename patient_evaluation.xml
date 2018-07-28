@@ -67,6 +67,14 @@
             <field name="act_window" ref="act_patient_evaluation_form"/>
         </record>
         <record model="ir.action.act_window.domain"
+            id="act_patient_evaluation_form_domain_all">
+            <field name="name">All</field>
+            <field name="sequence" eval="1"/>
+            <field name="domain"></field>
+            <field name="count" eval="True"/>
+            <field name="act_window" ref="act_patient_evaluation_form"/>
+        </record>
+        <record model="ir.action.act_window.domain"
             id="act_patient_evaluation_form_domain_initial">
             <field name="name">Initiated</field>
             <field name="sequence" eval="10"/>
@@ -87,14 +95,6 @@
             <field name="name">Canceled</field>
             <field name="sequence" eval="10"/>
             <field name="domain" eval="[('state', '=', 'cancel')]" pyson="1"/>
-            <field name="count" eval="True"/>
-            <field name="act_window" ref="act_patient_evaluation_form"/>
-        </record>
-        <record model="ir.action.act_window.domain"
-            id="act_patient_evaluation_form_domain_all">
-            <field name="name">All</field>
-            <field name="sequence" eval="9999"/>
-            <field name="domain"></field>
             <field name="count" eval="True"/>
             <field name="act_window" ref="act_patient_evaluation_form"/>
         </record>

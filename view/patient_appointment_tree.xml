@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <tree>
     <field name="company" tree_invisible="1"/>
+    <field name="type_"/>
     <field name="patient"/>
     <field name="professional"/>
     <field name="start_date" widget="date" width="100"/>

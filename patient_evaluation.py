@@ -53,6 +53,8 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
             ('male', 'Male'),
             ('female', 'Female'),
         ], 'Gender'), 'on_change_with_patient_gender')
+    patient_photo = fields.Function(
+        fields.Binary('Photo'), 'on_change_with_patient_photo')
     patient_age = fields.Function(
         fields.Char('Age'), 'on_change_with_patient_age')
     reason = fields.Selection(
@@ -567,6 +569,12 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
     def on_change_with_patient_gender(self, name=None):
         if self.patient:
             return self.patient.gender
+        return None
+
+    @fields.depends('patient')
+    def on_change_with_patient_photo(self, name=None):
+        if self.patient:
+            return fields.Binary.cast(self.patient.photo)
         return None
 
     @fields.depends('patient', 'start_date')

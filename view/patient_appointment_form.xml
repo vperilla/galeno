@@ -2,6 +2,8 @@
 <form>
     <group id="basic_header">
         <group id="dates" colspan="4">
+            <label name="type_"/>
+            <field name="type_"/>
             <label name="company"/>
             <field name="company"/>
             <newline/>
@@ -22,6 +24,9 @@
         <field name="patient"/>
         <label name="professional"/>
         <field name="professional"/>
+        <newline/>
+        <label name="procedure"/>
+        <field name="procedure" colspan="3"/>
         <separator name="notes" colspan="4"/>
         <field name="notes" colspan="4"/>
         <field name="appointments_of_day" colspan="4" mode="tree,form"

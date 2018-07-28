@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<tree editable="bottom">
+    <field name="report"/>
+    <field name="sequence"/>
+    <field name="sign"/>
+    <field name="position"/>
+</tree>

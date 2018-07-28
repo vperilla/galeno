@@ -15,6 +15,8 @@ class GalenoReport(CompanyReport):
         report_context = super(GalenoReport, cls).get_context(records, data)
         report_context['resize_image'] = cls.resize_image
         report_context['professional'] = cls.professional()
+        report_context['action_id'] = data.get('action_id')
+        report_context['signatures'] = cls.signatures
         return report_context
 
     @classmethod
@@ -27,6 +29,20 @@ class GalenoReport(CompanyReport):
             Professional = Pool().get('galeno.professional')
             return Professional(Transaction().context['professional'])
         return None
+
+    @classmethod
+    def signatures(cls, action_id=None):
+        signatures = []
+        if action_id:
+            pool = Pool()
+            ActionReport = pool.get('ir.action.report')
+            action_report = ActionReport(action_id)
+            for signature in action_report.signatures:
+                signatures.append({
+                    'sign': signature.sign,
+                    'position': signature.position,
+                })
+        return signatures
 
 
 class Patient(GalenoReport):

@@ -14,6 +14,10 @@
             <field name="name">lightcoral</field>
             <field name="path">icons/lightcoral.svg</field>
         </record>
+        <record model="ir.ui.icon" id="skyblue">
+            <field name="name">skyblue</field>
+            <field name="path">icons/skyblue.svg</field>
+        </record>
         <record model="ir.ui.icon" id="galeno_icon">
             <field name="name">galeno-galeno</field>
             <field name="path">icons/galeno.svg</field>

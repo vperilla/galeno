@@ -21,3 +21,19 @@ class Procedure(CoreMixin, ModelSQL, ModelView):
              'Procedure code must be unique'),
         ]
         cls._order.insert(0, ('name', 'ASC'))
+
+    def get_rec_name(self, name):
+        return "%s: %s" % (self.code, self.name)
+
+    @classmethod
+    def search_rec_name(cls, name, clause):
+        _, operator, value = clause
+        if operator.startswith('!') or operator.startswith('not '):
+            bool_op = 'AND'
+        else:
+            bool_op = 'OR'
+        domain = [bool_op,
+            ('code', operator, value),
+            ('name', operator, value),
+            ]
+        return domain

@@ -27,6 +27,15 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         states={
             'invisible': True,
         })
+    type_ = fields.Selection(
+        [
+            ('appointment', 'Appointment'),
+            ('procedure', 'Procedure'),
+        ], 'Type', required=True, sort=False)
+    procedure = fields.Many2One('galeno.procedure', 'Procedure',
+        states={
+            'invisible': (Eval('type_') != 'procedure'),
+        })
     professional = fields.Many2One('galeno.professional', 'Professional',
         states={
             'readonly': ~Eval('state').in_(['scheduled']) | (
@@ -127,6 +136,10 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         return Transaction().context.get('company')
 
     @staticmethod
+    def default_type_():
+        return 'appointment'
+
+    @staticmethod
     def default_state():
         return 'scheduled'
 
@@ -146,7 +159,10 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             query = table.select(
                 table.id,
                 Case(
-                    (table.state == 'scheduled', 'khaki'),
+                    ((table.state == 'scheduled') &
+                     (table.type_ == 'appointment'), 'khaki'),
+                    ((table.state == 'scheduled') &
+                     (table.type_ == 'procedure'), 'skyblue'),
                     (table.state == 'accomplished', 'lightgreen'),
                     else_='lightcoral'),
                 where=red_sql,
@@ -154,6 +170,11 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             cursor.execute(*query)
             result.update(dict(cursor.fetchall()))
         return result
+
+    @fields.depends('type_', 'procedure')
+    def on_change_type_(self):
+        if self.type_ == 'appointment':
+            self.procedure = None
 
     @fields.depends('company', 'start_date', 'end_date', 'professional')
     def on_change_start_date(self):
@@ -305,7 +326,6 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
             appointment.send_email()
 
     def send_email(self):
-        import pdb; pdb.set_trace()  # XXX BREAKPOINT
         pool = Pool()
         datamanager = SMTPDataManager()
         Configuration = pool.get('ir.configuration')

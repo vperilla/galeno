@@ -26,11 +26,15 @@
         <button name="cancel" icon="tryton-cancel"/>
         <button name="initial" icon="tryton-go-previous"/>
     </group>
-    <group id="summary_treatment" colspan="8" col="4">
-        <separator name="symptoms" colspan="4"/>
-        <field name="symptoms" colspan="4"/>
-        <separator name="treatment" colspan="4"/>
-        <field name="treatment" colspan="4"/>
+    <group id="summary_treatment" colspan="8" col="8">
+        <group id="summ_l" colspan="4">
+            <separator name="symptoms" colspan="4"/>
+            <field name="symptoms" colspan="4"/>
+        </group>
+        <group id="summ_r" colspan="4">
+            <separator name="treatment" colspan="4"/>
+            <field name="treatment" colspan="4"/>
+        </group>
     </group>
     <notebook>
         <page id="evaluation_vital_signs" string="Vital signs"

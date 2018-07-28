@@ -261,9 +261,10 @@ msgctxt "field:galeno.configuration.sequence,create_date:"
 msgid "Create Date"
 msgstr "Fecha de creación"
 
+#, fuzzy
 msgctxt "field:galeno.configuration.sequence,create_uid:"
 msgid "Create User"
-msgstr "Calendario de citas"
+msgstr "Usuario de creación"
 
 msgctxt "field:galeno.configuration.sequence,evaluation_sequence:"
 msgid "Evaluation Sequence"
@@ -773,10 +774,6 @@ msgctxt "field:galeno.patient,alive_children:"
 msgid "Alive children"
 msgstr "Hijos vivos"
 
-msgctxt "field:galeno.patient,allergies:"
-msgid "Allergies"
-msgstr "Alergias"
-
 msgctxt "field:galeno.patient,archive_number:"
 msgid "Archive #"
 msgstr "# Archivo"
@@ -961,6 +958,10 @@ msgctxt "field:galeno.patient,menopause_andropause_age:"
 msgid "Menupause / Andropause age"
 msgstr "Edad de menopausia / andropausia"
 
+msgctxt "field:galeno.patient,nationality:"
+msgid "Nationality"
+msgstr ""
+
 msgctxt "field:galeno.patient,normal_labor:"
 msgid "Normal labor"
 msgstr "Parto normal"
@@ -976,10 +977,6 @@ msgstr "Teléfono"
 msgctxt "field:galeno.patient,photo:"
 msgid "Photo"
 msgstr "Foto"
-
-msgctxt "field:galeno.patient,photo_size:"
-msgid "Photo Size"
-msgstr ""
 
 msgctxt "field:galeno.patient,pregnancies:"
 msgid "Pregnancies"
@@ -1125,6 +1122,10 @@ msgctxt "field:galeno.patient.appointment,patient:"
 msgid "Patient"
 msgstr "Paciente"
 
+msgctxt "field:galeno.patient.appointment,procedure:"
+msgid "Procedure"
+msgstr "Procedimiento"
+
 msgctxt "field:galeno.patient.appointment,professional:"
 msgid "Professional"
 msgstr "Doctor"
@@ -1141,6 +1142,10 @@ msgctxt "field:galeno.patient.appointment,state:"
 msgid "State"
 msgstr "Estado"
 
+msgctxt "field:galeno.patient.appointment,type_:"
+msgid "Type"
+msgstr "Tipo"
+
 msgctxt "field:galeno.patient.appointment,write_date:"
 msgid "Write Date"
 msgstr "Fecha modificación"
@@ -1151,7 +1156,7 @@ msgstr "Usuario modificación"
 
 msgctxt "field:galeno.patient.appointment.email.log,appointment:"
 msgid "Appointment"
-msgstr ""
+msgstr "Cita"
 
 #, fuzzy
 msgctxt "field:galeno.patient.appointment.email.log,create_date:"
@@ -1632,6 +1637,11 @@ msgctxt "field:galeno.patient.evaluation,patient_gender:"
 msgid "Gender"
 msgstr "Género"
 
+#, fuzzy
+msgctxt "field:galeno.patient.evaluation,patient_photo:"
+msgid "Photo"
+msgstr "Foto"
+
 msgctxt "field:galeno.patient.evaluation,procedures:"
 msgid "Procedures"
 msgstr "Procedimientos"
@@ -1642,7 +1652,7 @@ msgstr "Doctor"
 
 msgctxt "field:galeno.patient.evaluation,reason:"
 msgid "Reason"
-msgstr "Razón"
+msgstr "Motivo"
 
 msgctxt "field:galeno.patient.evaluation,rec_name:"
 msgid "Record Name"
@@ -2083,7 +2093,7 @@ msgstr "Género del paciente"
 
 msgctxt "field:galeno.patient.evaluation.test,reason:"
 msgid "Reason"
-msgstr "Razón"
+msgstr "Motivo"
 
 msgctxt "field:galeno.patient.evaluation.test,rec_name:"
 msgid "Record Name"
@@ -2602,6 +2612,58 @@ msgctxt "field:galeno.vaccine,write_uid:"
 msgid "Write User"
 msgstr "Usuario modificación"
 
+msgctxt "field:ir.action.report,signatures:"
+msgid "Signatures"
+msgstr ""
+
+#, fuzzy
+msgctxt "field:ir.action.report.signature,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+#, fuzzy
+msgctxt "field:ir.action.report.signature,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+#, fuzzy
+msgctxt "field:ir.action.report.signature,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:ir.action.report.signature,position:"
+msgid "Position"
+msgstr ""
+
+#, fuzzy
+msgctxt "field:ir.action.report.signature,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+#, fuzzy
+msgctxt "field:ir.action.report.signature,report:"
+msgid "Report"
+msgstr "Informe"
+
+#, fuzzy
+msgctxt "field:ir.action.report.signature,sequence:"
+msgid "Sequence"
+msgstr "Secuencia"
+
+msgctxt "field:ir.action.report.signature,sign:"
+msgid "Sign"
+msgstr ""
+
+#, fuzzy
+msgctxt "field:ir.action.report.signature,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+#, fuzzy
+msgctxt "field:ir.action.report.signature,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
 msgctxt "field:res.user,country:"
 msgid "Country"
 msgstr "País"
@@ -2862,7 +2924,7 @@ msgstr "Cita de paciente"
 
 msgctxt "model:galeno.patient.appointment.email.log,name:"
 msgid "Appointment Email Log"
-msgstr ""
+msgstr "Cita Email Log"
 
 msgctxt "model:galeno.patient.background.disease,name:"
 msgid "Galeno Disease Background"
@@ -3009,16 +3071,17 @@ msgid "Occupations"
 msgstr "Ocupaciones"
 
 msgctxt "model:ir.action,name:act_patient_appointment_calendar"
-msgid "Calendar of appointments"
-msgstr "Calendario de citas"
+msgid "Calendar"
+msgstr "Calendario"
 
 msgctxt "model:ir.action,name:act_patient_appointment_form"
-msgid "List of appointments"
-msgstr "Lista de citas"
+msgid "List"
+msgstr "Lista"
 
+#, fuzzy
 msgctxt "model:ir.action,name:act_patient_appointments"
 msgid "Appointments"
-msgstr "Citas"
+msgstr "Agenda"
 
 msgctxt "model:ir.action,name:act_patient_evaluation_form"
 msgid "Evaluations"
@@ -3076,17 +3139,21 @@ msgctxt "model:ir.action,name:act_vaccine_form"
 msgid "Vaccines"
 msgstr "Vacunas"
 
+msgctxt "model:ir.action,name:appointment_email"
+msgid "Appointment Email"
+msgstr "Cita email"
+
 msgctxt "model:ir.action,name:patient_evaluation_report"
 msgid "Evaluation"
 msgstr "Evaluación"
 
-msgctxt "model:ir.action,name:patient_report"
-msgid "Patient Detail"
-msgstr "Detalle de paciente"
-
 msgctxt "model:ir.action,name:patient_prescription_report"
 msgid "Prescription"
 msgstr "Prescripción"
+
+msgctxt "model:ir.action,name:patient_report"
+msgid "Patient Detail"
+msgstr "Detalle de paciente"
 
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_patient_evaluation_form_domain_all"
@@ -3107,6 +3174,14 @@ msgctxt ""
 "model:ir.action.act_window.domain,name:act_patient_evaluation_form_domain_initial"
 msgid "Initiated"
 msgstr "Iniciada"
+
+msgctxt "model:ir.action.report.signature,name:"
+msgid "Report Signature"
+msgstr ""
+
+msgctxt "model:ir.cron,name:cron_send_reminder_emails"
+msgid "Send reminder emails"
+msgstr ""
 
 msgctxt "model:ir.model.button,confirm:appointment_accomplished_button"
 msgid "Are you sure?"
@@ -3289,16 +3364,16 @@ msgid "Occupations"
 msgstr "Ocupaciones"
 
 msgctxt "model:ir.ui.menu,name:menu_patient_appointment"
-msgid "Appointments"
-msgstr "Citas"
+msgid "Diary"
+msgstr "Agenda"
 
 msgctxt "model:ir.ui.menu,name:menu_patient_appointment_calendar"
-msgid "Calendar of appointments"
-msgstr "Calendario de citas"
+msgid "Calendar"
+msgstr "Calendario"
 
 msgctxt "model:ir.ui.menu,name:menu_patient_appointment_form"
-msgid "List of appointments"
-msgstr "Lista de citas"
+msgid "List"
+msgstr "Lista"
 
 msgctxt "model:ir.ui.menu,name:menu_patient_evaluation_form"
 msgid "Evaluations"
@@ -3375,7 +3450,7 @@ msgstr ""
 
 msgctxt "report:galeno.patient.appointment:"
 msgid "You have an scheduled appoitnment on"
-msgstr ""
+msgstr "Usted tiene una cita programada en"
 
 msgctxt "report:galeno.patient.evaluation:"
 msgid "(Se imprimen marcadas con patología)"
@@ -3632,6 +3707,10 @@ msgid "Motilidad"
 msgstr ""
 
 msgctxt "report:galeno.patient.evaluation:"
+msgid "Motivo"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
 msgid "Movilidad"
 msgstr ""
 
@@ -3692,7 +3771,7 @@ msgid "Pabellón"
 msgstr ""
 
 msgctxt "report:galeno.patient.evaluation:"
-msgid "Paciente"
+msgid "Paciente:"
 msgstr ""
 
 msgctxt "report:galeno.patient.evaluation:"
@@ -3758,10 +3837,6 @@ msgstr ""
 
 msgctxt "report:galeno.patient.evaluation:"
 msgid "Razón"
-msgstr ""
-
-msgctxt "report:galeno.patient.evaluation:"
-msgid "Razón:"
 msgstr ""
 
 msgctxt "report:galeno.patient.evaluation:"
@@ -3862,6 +3937,10 @@ msgid "WHR:"
 msgstr ""
 
 msgctxt "report:galeno.patient.evaluation:"
+msgid "____________________________"
+msgstr ""
+
+msgctxt "report:galeno.patient.evaluation:"
 msgid "_________________________________"
 msgstr ""
 
@@ -3887,6 +3966,82 @@ msgstr ""
 
 msgctxt "report:galeno.patient.evaluation:"
 msgid "si"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid ":"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "CMU"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Cantidad recetada"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Comp:"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Dosis"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Duración"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Edad:"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Frecuencia"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Medicamento"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Notas:"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "PRESCRIPCIÓN #:"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Paciente:"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Pag:"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Posología:"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Prescripción:"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Sexo:"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Via:"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "_________________________________"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "de"
 msgstr ""
 
 msgctxt "report:galeno.patient:"
@@ -4270,6 +4425,10 @@ msgid "Vacunas"
 msgstr ""
 
 msgctxt "report:galeno.patient:"
+msgid "____________________________"
+msgstr ""
+
+msgctxt "report:galeno.patient:"
 msgid "_________________________________"
 msgstr ""
 
@@ -4489,6 +4648,14 @@ msgctxt "selection:galeno.patient.appointment,state:"
 msgid "Scheduled"
 msgstr "Programada"
 
+msgctxt "selection:galeno.patient.appointment,type_:"
+msgid "Appointment"
+msgstr "Cita"
+
+msgctxt "selection:galeno.patient.appointment,type_:"
+msgid "Procedure"
+msgstr "Procedimiento"
+
 msgctxt "selection:galeno.patient.disability,type_:"
 msgid "Hearing"
 msgstr "Auditiva"
@@ -4635,7 +4802,7 @@ msgstr "Masculino"
 
 msgctxt "selection:galeno.patient.evaluation,reason:"
 msgid "Disease"
-msgstr "Enfermedad"
+msgstr "Enfermedad - Problema actual"
 
 msgctxt "selection:galeno.patient.evaluation,reason:"
 msgid "Routine Exploration"
@@ -4926,10 +5093,6 @@ msgid "Prescription detail"
 msgstr "Detalle de prescripción"
 
 msgctxt "view:galeno.patient:"
-msgid "Allergies"
-msgstr "Alergias"
-
-msgctxt "view:galeno.patient:"
 msgid "Backgrounds"
 msgstr "Antecedentes"
 
@@ -5016,3 +5179,7 @@ msgstr "Cirugías"
 msgctxt "view:galeno.patient:"
 msgid "Tests"
 msgstr "Exámenes"
+
+msgctxt "view:ir.action.report:"
+msgid "Signatures"
+msgstr ""

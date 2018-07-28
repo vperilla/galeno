@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <tryton>
     <data>
-        <menuitem name="Appointments" parent="menu_galeno"
+        <menuitem name="Diary" parent="menu_galeno"
             id="menu_patient_appointment" sequence="100" icon="galeno-folder"/>
 
         <!-- PATIENT APPOINMENT -->
@@ -31,7 +31,7 @@
             <field name="name">patient_appointment_calendar</field>
         </record>
         <record model="ir.action.act_window" id="act_patient_appointment_form">
-            <field name="name">List of appointments</field>
+            <field name="name">List</field>
             <field name="res_model">galeno.patient.appointment</field>
         </record>
         <record model="ir.action.act_window.view"
@@ -50,7 +50,7 @@
             id="menu_patient_appointment_form" sequence="100" icon="galeno-list"/>
 
         <record model="ir.action.act_window" id="act_patient_appointment_calendar">
-            <field name="name">Calendar of appointments</field>
+            <field name="name">Calendar</field>
             <field name="res_model">galeno.patient.appointment</field>
         </record>
         <record model="ir.action.act_window.view"
