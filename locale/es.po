@@ -1545,7 +1545,6 @@ msgctxt "field:galeno.patient.evaluation,heigth:"
 msgid "Heigth (cm)"
 msgstr "Talla (cm)"
 
-#, fuzzy
 msgctxt "field:galeno.patient.evaluation,hip:"
 msgid "Hip (cm)    "
 msgstr "Cadera (cm)"
