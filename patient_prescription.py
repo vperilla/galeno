@@ -42,8 +42,13 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['draft']),
         }, depends=['state'], select=True)
-    evaluation = fields.Many2One(
-        'galeno.patient.evaluation', 'Evaluation', readonly=True)
+    evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
+        domain=[
+            ('patient', '=', Eval('patient')),
+        ],
+        states={
+            'readonly': ~Eval('state').in_(['draft']),
+        }, depends=['patient', 'state'])
     date = fields.DateTime('Date', required=True,
         states={
             'readonly': ~Eval('state').in_(['draft']),
@@ -112,6 +117,11 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
     @staticmethod
     def default_type_():
         return 'pharma'
+
+    @fields.depends('evaluation', 'patient')
+    def on_change_evaluation(self):
+        if self.evaluation and not self.patient:
+            self.patient = self.evaluation.patient
 
     @classmethod
     @ModelView.button

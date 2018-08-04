@@ -161,7 +161,25 @@
             <field name="button" ref="evaluation_initial_button"/>
             <field name="group" ref="group_galeno"/>
         </record>
-
+        <record model="ir.action.act_window" id="act_evaluation_prescription">
+            <field name="name">Prescription</field>
+            <field name="res_model">galeno.patient.prescription</field>
+            <field name="domain"
+                eval="[('evaluation', '=', Eval('active_id'))]"
+                pyson="1"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_evaluation_prescription_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="patient_prescription_view_form"/>
+            <field name="act_window" ref="act_evaluation_prescription"/>
+        </record>
+        <record model="ir.action.keyword"
+                id="act_open_evaluation_prescription_keyword1">
+            <field name="keyword">form_relate</field>
+            <field name="model">galeno.patient.evaluation,-1</field>
+            <field name="action" ref="act_evaluation_prescription"/>
+        </record>
 
         <!-- PATIENT EVALUATION TEST -->
         <record model="ir.ui.view" id="patient_evaluation_test_view_form">

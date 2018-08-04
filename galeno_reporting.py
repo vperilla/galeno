@@ -16,7 +16,13 @@ class QueryContext(object):
     start_date = fields.Date('Start date')
     end_date = fields.Date('End date')
     professional_ = fields.Many2One('galeno.professional', 'Professional')
+    speciality_ = fields.Many2One('galeno.speciality', 'Speciality')
     patient_ = fields.Many2One('galeno.patient', 'Patient')
+    gender_ = fields.Selection([
+        (None, ''),
+        ('male', 'Male'),
+        ('female', 'Female')
+    ], 'Gender')
 
 
 class ReportEvaluationContext(QueryContext, ModelView):
@@ -47,6 +53,10 @@ class ReportEvaluation(ModelSQL, ModelView):
         pool = Pool()
         Evaluation = pool.get('galeno.patient.evaluation')
         evaluation = Evaluation.__table__()
+        Patient = pool.get('galeno.patient')
+        patient = Patient.__table__()
+        Professional = pool.get('galeno.professional')
+        professional = Professional.__table__()
 
         context = Transaction().context
         where = Literal(True)
@@ -61,7 +71,16 @@ class ReportEvaluation(ModelSQL, ModelView):
             where &= (evaluation.patient == context.get('patient_'))
         if context.get('professional_'):
             where &= (evaluation.professional == context.get('professional_'))
-        query = evaluation.select(
+        if context.get('gender_'):
+            where &= (patient.gender == context.get('gender_'))
+        if context.get('speciality_'):
+            where &= (professional.speciality == context.get('speciality_'))
+
+        query = evaluation.join(patient,
+            condition=patient.id == evaluation.patient
+        ).join(professional,
+            condition=professional.id == evaluation.professional
+        ).select(
             *columns + [
                 Literal(0).as_('create_uid'),
                 CurrentTimestamp().as_('create_date'),

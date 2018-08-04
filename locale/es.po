@@ -2542,6 +2542,14 @@ msgctxt "field:galeno.report.evaluation.context,start_date:"
 msgid "Start date"
 msgstr "Fecha inicio"
 
+msgctxt "field:galeno.report.evaluation.context,speciality_:"
+msgid "Speciality"
+msgstr "Especialidad"
+
+msgctxt "field:galeno.report.evaluation.context,gender_:"
+msgid "Gender"
+msgstr "Género"
+
 msgctxt "field:galeno.speciality,code:"
 msgid "Code"
 msgstr "Código"
@@ -5047,15 +5055,15 @@ msgid "All"
 msgstr "Todo"
 
 msgctxt "selection:galeno.report.evaluation,state:"
-msgid "canceled"
+msgid "Canceled"
 msgstr "Cancelada"
 
 msgctxt "selection:galeno.report.evaluation,state:"
-msgid "finished"
+msgid "Finished"
 msgstr "Finalizada"
 
 msgctxt "selection:galeno.report.evaluation,state:"
-msgid "initiated"
+msgid "Initiated"
 msgstr "Iniciada"
 
 msgctxt "selection:galeno.test,gender:"

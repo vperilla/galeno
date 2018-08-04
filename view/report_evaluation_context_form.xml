@@ -9,5 +9,9 @@
         <field name="professional_"/>
         <label name="patient_"/>
         <field name="patient_"/>
+        <label name="speciality_"/>
+        <field name="speciality_"/>
+        <label name="gender_"/>
+        <field name="gender_"/>
     </group>
 </form>
