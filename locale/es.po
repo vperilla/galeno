@@ -1637,7 +1637,6 @@ msgctxt "field:galeno.patient.evaluation,patient_gender:"
 msgid "Gender"
 msgstr "Género"
 
-#, fuzzy
 msgctxt "field:galeno.patient.evaluation,patient_photo:"
 msgid "Photo"
 msgstr "Foto"
@@ -2191,7 +2190,11 @@ msgctxt "field:galeno.patient.prescription,id:"
 msgid "ID"
 msgstr "ID"
 
-msgctxt "field:galeno.patient.prescription,lines:"
+msgctxt "field:galeno.patient.prescription,pharma_lines:"
+msgid "Prescription"
+msgstr "Prescripción"
+
+msgctxt "field:galeno.patient.prescription,no_pharma_lines:"
 msgid "Prescription"
 msgstr "Prescripción"
 
@@ -2227,63 +2230,63 @@ msgctxt "field:galeno.patient.prescription,write_uid:"
 msgid "Write User"
 msgstr "Usuario modificación"
 
-msgctxt "field:galeno.patient.prescription.line,active_component:"
+msgctxt "field:galeno.patient.prescription.pharma.line,active_component:"
 msgid "Active Commponent"
 msgstr "Componente activo"
 
-msgctxt "field:galeno.patient.prescription.line,administration_route:"
+msgctxt "field:galeno.patient.prescription.pharma.line,administration_route:"
 msgid "Administration Route"
 msgstr "Ruta de administración"
 
-msgctxt "field:galeno.patient.prescription.line,create_date:"
+msgctxt "field:galeno.patient.prescription.pharma.line,create_date:"
 msgid "Create Date"
 msgstr "Fecha de creación"
 
-msgctxt "field:galeno.patient.prescription.line,create_uid:"
+msgctxt "field:galeno.patient.prescription.pharma.line,create_uid:"
 msgid "Create User"
 msgstr "Usuario de creación"
 
-msgctxt "field:galeno.patient.prescription.line,dose:"
+msgctxt "field:galeno.patient.prescription.pharma.line,dose:"
 msgid "Dose"
 msgstr "Dosis"
 
-msgctxt "field:galeno.patient.prescription.line,duration:"
+msgctxt "field:galeno.patient.prescription.pharma.line,duration:"
 msgid "Duration"
 msgstr "Duración"
 
-msgctxt "field:galeno.patient.prescription.line,frequency:"
+msgctxt "field:galeno.patient.prescription.pharma.line,frequency:"
 msgid "Frequency"
 msgstr "Frecuencia"
 
-msgctxt "field:galeno.patient.prescription.line,id:"
+msgctxt "field:galeno.patient.prescription.pharma.line,id:"
 msgid "ID"
 msgstr "ID"
 
-msgctxt "field:galeno.patient.prescription.line,medicament:"
+msgctxt "field:galeno.patient.prescription.pharma.line,medicament:"
 msgid "Medicament"
 msgstr "Medicamento"
 
-msgctxt "field:galeno.patient.prescription.line,prescription:"
+msgctxt "field:galeno.patient.prescription.pharma.line,prescription:"
 msgid "Prescription"
 msgstr "Prescripción"
 
-msgctxt "field:galeno.patient.prescription.line,prescription_state:"
+msgctxt "field:galeno.patient.prescription.pharma.line,prescription_state:"
 msgid "Prescription State"
 msgstr "Estado de prescripción"
 
-msgctxt "field:galeno.patient.prescription.line,quantity:"
+msgctxt "field:galeno.patient.prescription.pharma.line,quantity:"
 msgid "Prescription Quantity"
 msgstr "Cantidad recetada"
 
-msgctxt "field:galeno.patient.prescription.line,rec_name:"
+msgctxt "field:galeno.patient.prescription.pharma.line,rec_name:"
 msgid "Record Name"
 msgstr "Nombre del registro"
 
-msgctxt "field:galeno.patient.prescription.line,write_date:"
+msgctxt "field:galeno.patient.prescription.pharma.line,write_date:"
 msgid "Write Date"
 msgstr "Fecha modificación"
 
-msgctxt "field:galeno.patient.prescription.line,write_uid:"
+msgctxt "field:galeno.patient.prescription.pharma.line,write_uid:"
 msgid "Write User"
 msgstr "Usuario modificación"
 
@@ -2644,12 +2647,10 @@ msgctxt "field:ir.action.report.signature,rec_name:"
 msgid "Record Name"
 msgstr "Nombre del registro"
 
-#, fuzzy
 msgctxt "field:ir.action.report.signature,report:"
 msgid "Report"
 msgstr "Informe"
 
-#, fuzzy
 msgctxt "field:ir.action.report.signature,sequence:"
 msgid "Sequence"
 msgstr "Secuencia"
@@ -2986,7 +2987,7 @@ msgctxt "model:galeno.patient.prescription,name:"
 msgid "Patient Prescription"
 msgstr "Prescripción de paciente"
 
-msgctxt "model:galeno.patient.prescription.line,name:"
+msgctxt "model:galeno.patient.prescription.pharma.line,name:"
 msgid "Patient Prescription Line"
 msgstr "Línea de prescipción"
 
@@ -3082,7 +3083,6 @@ msgctxt "model:ir.action,name:act_patient_appointment_form"
 msgid "List"
 msgstr "Lista"
 
-#, fuzzy
 msgctxt "model:ir.action,name:act_patient_appointments"
 msgid "Appointments"
 msgstr "Agenda"
@@ -3435,7 +3435,6 @@ msgctxt "model:res.group,name:group_galeno_assistant"
 msgid "Assistant"
 msgstr "Asistente"
 
-#, fuzzy
 msgctxt "report:galeno.patient.appointment:"
 msgid "Date:"
 msgstr "Fecha:"
@@ -3657,7 +3656,6 @@ msgctxt "report:galeno.patient.evaluation:"
 msgid "Genitourinario:"
 msgstr ""
 
-#, fuzzy
 msgctxt "report:galeno.patient.evaluation:"
 msgid "Glasgow score"
 msgstr "Puntage de Glasgow"
@@ -3794,7 +3792,6 @@ msgctxt "report:galeno.patient.evaluation:"
 msgid "Pecho"
 msgstr ""
 
-#, fuzzy
 msgctxt "report:galeno.patient.evaluation:"
 msgid "Pelvis"
 msgstr "Pelvis"
@@ -3923,7 +3920,6 @@ msgctxt "report:galeno.patient.evaluation:"
 msgid "Tímpanos"
 msgstr ""
 
-#, fuzzy
 msgctxt "report:galeno.patient.evaluation:"
 msgid "Vascular"
 msgstr "Vascular"
@@ -4908,15 +4904,15 @@ msgctxt "selection:galeno.patient.prescription,state:"
 msgid "Draft"
 msgstr "Borrador"
 
-msgctxt "selection:galeno.patient.prescription.line,prescription_state:"
+msgctxt "selection:galeno.patient.prescription.pharma.line,prescription_state:"
 msgid "Cancel"
 msgstr "Cancelar"
 
-msgctxt "selection:galeno.patient.prescription.line,prescription_state:"
+msgctxt "selection:galeno.patient.prescription.pharma.line,prescription_state:"
 msgid "Done"
 msgstr "Finalizado"
 
-msgctxt "selection:galeno.patient.prescription.line,prescription_state:"
+msgctxt "selection:galeno.patient.prescription.pharma.line,prescription_state:"
 msgid "Draft"
 msgstr "Borrador"
 
@@ -5084,7 +5080,7 @@ msgctxt "view:galeno.patient.evaluation:"
 msgid "Vital signs"
 msgstr "Signos vitales"
 
-msgctxt "view:galeno.patient.prescription.line:"
+msgctxt "view:galeno.patient.prescription.pharma.line:"
 msgid "Posology"
 msgstr "Posología"
 

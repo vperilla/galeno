@@ -11,6 +11,8 @@
         <field name="code"/>
     </group>
     <group id="state_buttons" colspan="4" col="-1">
+        <label name="type_"/>
+        <field name="type_"/>
         <label name="state"/>
         <field name="state"/>
         <button name="done" icon="tryton-ok"/>
@@ -20,7 +22,8 @@
     <notebook>
         <page id="prescription_lines" string="Prescription detail">
             <group id="prescription_lines" colspan="4" col="4">
-                <field name="lines" colspan="4"/>
+                <field name="pharma_lines" colspan="4"/>
+                <field name="no_pharma_lines" colspan="4"/>
             </group>
             <group id="summary_prescription" colspan="4" col="4">
                 <separator name="notes" colspan="4"/>

@@ -5,7 +5,8 @@ from trytond.pyson import Eval, If, Bool
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 
-__all__ = ['PatientPrescription', 'PatientPrescriptionLine']
+__all__ = ['PatientPrescription', 'PatientPrescriptionPharmaLine',
+    'PatientPrescriptionNoPharmaLine']
 
 
 class PatientPrescription(Workflow, ModelSQL, ModelView):
@@ -22,6 +23,14 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
                 Eval('context', {}).get('professional', -1)),
         ], depends=['state'], required=True, select=True)
     code = fields.Char('Code', readonly=True)
+    type_ = fields.Selection(
+        [
+            ('pharma', 'Pharmacological'),
+            ('no_pharma', 'No pharmacological'),
+        ], 'Type', required=True,
+        states={
+            'readonly': ~Eval('state').in_(['draft']),
+        })
     state = fields.Selection(
         [
             ('draft', 'Draft'),
@@ -47,11 +56,19 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['draft']),
         }, depends=['state'])
-    lines = fields.One2Many('galeno.patient.prescription.line',
+    pharma_lines = fields.One2Many('galeno.patient.prescription.pharma.line',
         'prescription', 'Prescription',
         states={
             'readonly': ~Eval('state').in_(['draft']),
-        }, depends=['state'])
+            'invisible': ~(Eval('type_') == 'pharma'),
+        }, depends=['state', 'type_'])
+    no_pharma_lines = fields.One2Many(
+        'galeno.patient.prescription.no.pharma.line',
+        'prescription', 'Prescription',
+        states={
+            'readonly': ~Eval('state').in_(['draft']),
+            'invisible': ~(Eval('type_') == 'no_pharma'),
+        }, depends=['state', 'type_'])
 
     @classmethod
     def __setup__(cls):
@@ -91,6 +108,10 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
     @staticmethod
     def default_professional():
         return Transaction().context.get('professional')
+
+    @staticmethod
+    def default_type_():
+        return 'pharma'
 
     @classmethod
     @ModelView.button
@@ -141,9 +162,9 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
         return super(PatientPrescription, cls).create(vlist)
 
 
-class PatientPrescriptionLine(ModelSQL, ModelView):
-    'Patient Prescription Line'
-    __name__ = 'galeno.patient.prescription.line'
+class PatientPrescriptionPharmaLine(ModelSQL, ModelView):
+    'Patient Prescription Pharma Line'
+    __name__ = 'galeno.patient.prescription.pharma.line'
 
     prescription = fields.Many2One('galeno.patient.prescription',
         'Prescription', required=True, readonly=True)
@@ -196,4 +217,42 @@ class PatientPrescriptionLine(ModelSQL, ModelView):
     def on_change_with_active_component(self, name=None):
         if self.medicament:
             return self.medicament.composition
+        return None
+
+
+class PatientPrescriptionNoPharmaLine(ModelSQL, ModelView):
+    'Patient Prescription No Pharma Line'
+    __name__ = 'galeno.patient.prescription.no.pharma.line'
+
+    prescription = fields.Many2One('galeno.patient.prescription',
+        'Prescription', required=True, readonly=True)
+    prescription_state = fields.Function(
+        fields.Selection([
+            ('draft', 'Draft'),
+            ('done', 'Done'),
+            ('cancel', 'Cancel'),
+        ], 'Prescription State', states={'invisible': True}),
+        'on_change_with_prescription_state')
+    notes = fields.Text('Notes',
+        states={
+            'readonly': ~Eval('prescription_state').in_(['draft']),
+        }, depends=['prescription_state'])
+    dose = fields.Char('Dose',
+        states={
+            'readonly': ~Eval('prescription_state').in_(['draft']),
+        }, depends=['prescription_state'], required=True)
+    frequency = fields.Many2One(
+        'galeno.medicament.frequency', 'Frequency', required=True,
+        states={
+            'readonly': ~Eval('prescription_state').in_(['draft']),
+        }, depends=['prescription_state'])
+    duration = fields.Char('Duration',
+        states={
+            'readonly': ~Eval('prescription_state').in_(['draft']),
+        }, depends=['prescription_state'])
+
+    @fields.depends('prescription', '_parent_prescription.state')
+    def on_change_with_prescription_state(self, name=None):
+        if self.prescription:
+            return self.prescription.state
         return None
