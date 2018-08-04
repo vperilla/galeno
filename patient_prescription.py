@@ -43,6 +43,10 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['draft']),
         }, depends=['state'])
+    warning = fields.Text('Warning',
+        states={
+            'readonly': ~Eval('state').in_(['draft']),
+        }, depends=['state'])
     lines = fields.One2Many('galeno.patient.prescription.line',
         'prescription', 'Prescription',
         states={

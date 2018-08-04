@@ -25,6 +25,8 @@
             <group id="summary_prescription" colspan="4" col="4">
                 <separator name="notes" colspan="4"/>
                 <field name="notes" colspan="4"/>
+                <separator name="warning" colspan="4"/>
+                <field name="warning" colspan="4"/>
             </group>
         </page>
     </notebook>

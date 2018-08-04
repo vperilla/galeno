@@ -51,7 +51,7 @@
                 <label name="breathing_rate"/>
                 <field name="breathing_rate"/>
                 <label name="oxygen_saturation"/>
-                <field name="oxygen_saturation"/>
+                <field name="oxygen_saturation" factor="100"/>
                 <label name="weight"/>
                 <field name="weight"/>
                 <label name="heigth"/>

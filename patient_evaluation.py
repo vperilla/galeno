@@ -89,7 +89,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
     # VITAL SIGNS
-    systolic_pressure = fields.Float('Systolic Pressure',
+    systolic_pressure = fields.Float('Systolic Pressure (mm(hg))',
         domain=[
             If(Bool(Eval('systolic_pressure')),
                [
@@ -101,7 +101,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
             'readonly': ~Eval('state').in_(['initial']),
             'required': Bool(Eval('diastolic_pressure')),
         }, depends=['state', 'diastolic_pressure'])
-    diastolic_pressure = fields.Float('Diastolic Pressure',
+    diastolic_pressure = fields.Float('Diastolic Pressure (mm(hg))',
         domain=[
             If(Bool(Eval('diastolic_pressure')),
                ('diastolic_pressure', '>', 0),
@@ -111,7 +111,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
             'readonly': ~Eval('state').in_(['initial']),
             'required': Bool(Eval('systolic_pressure')),
         }, depends=['state', 'systolic_pressure'])
-    temperature = fields.Float('Temperature',
+    temperature = fields.Float('Temperature (℃)',
         domain=[
             If(Bool(Eval('temperature')),
                ('temperature', '>', 0),
@@ -120,7 +120,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'], help="% Celcius")
-    heart_rate = fields.Float('Heart rate',
+    heart_rate = fields.Float('Heart rate (b/m)',
         domain=[
             If(Bool(Eval('heart_rate')),
                ('heart_rate', '>', 0),
@@ -129,7 +129,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
-    breathing_rate = fields.Float('Breathing rate',
+    breathing_rate = fields.Float('Breathing rate (b/m)',
         domain=[
             If(Bool(Eval('breathing_rate')),
                ('breathing_rate', '>', 0),
@@ -138,16 +138,18 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
-    oxygen_saturation = fields.Float('Oxygen saturation',
+    oxygen_saturation = fields.Float('Oxygen saturation (%)',
         domain=[
             If(Bool(Eval('oxygen_saturation')),
-               ('oxygen_saturation', '>', 0),
-               ())
+               [
+                   ('oxygen_saturation', '>', 0),
+                   ('oxygen_saturation', '<', 1)],
+               [()])
         ],
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'], help="% O2")
-    weight = fields.Float('Weight',
+    weight = fields.Float('Weight (kg)',
         domain=[
             If(Bool(Eval('weight')),
                ('weight', '>', 0),
@@ -156,7 +158,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'], help="Weight in Kg")
-    heigth = fields.Float('Heigth',
+    heigth = fields.Float('Heigth (cm)',
         domain=[
             If(Bool(Eval('heigth')),
                ('heigth', '>', 0),
@@ -167,7 +169,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         }, depends=['state'], help="Heigth in cm")
     bmi = fields.Function(
         fields.Float('BMI', digits=(16, 2)), 'on_change_with_bmi')
-    hip = fields.Float('Hip',
+    hip = fields.Float('Hip (cm)    ',
         domain=[
             If(Bool(Eval('hip')),
                ('hip', '>', 0),
@@ -176,7 +178,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'], help="in cm")
-    waist = fields.Float('Waist',
+    waist = fields.Float('Waist (cm)',
         domain=[
             If(Bool(Eval('waist')),
                ('waist', '>', 0),
