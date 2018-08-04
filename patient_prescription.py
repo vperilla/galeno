@@ -44,7 +44,9 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
         }, depends=['state'], select=True)
     evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
         domain=[
-            ('patient', '=', Eval('patient')),
+            If(Bool(Eval('evaluation')),
+                ('patient', '=', Eval('patient')),
+                ())
         ],
         states={
             'readonly': ~Eval('state').in_(['draft']),
