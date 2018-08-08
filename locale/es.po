@@ -942,9 +942,13 @@ msgctxt "field:galeno.patient,meals_number:"
 msgid "Meals per day"
 msgstr "Comidas por día"
 
-msgctxt "field:galeno.patient,medicaments:"
+msgctxt "field:galeno.patient,pharma_lines:"
 msgid "Medicaments"
 msgstr "Medicamentos"
+
+msgctxt "field:galeno.patient,no_pharma_lines:"
+msgid "No pharmacological prescription"
+msgstr "Prescripción no farmacológica"
 
 msgctxt "field:galeno.patient,menarche:"
 msgid "Menarche age"

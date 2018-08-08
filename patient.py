@@ -117,9 +117,12 @@ class Patient(ModelSQL, ModelView):
         fields.One2Many('galeno.patient.evaluation.procedure', None,
             'Procedures'), 'get_procedures')
     # MEDICIDES - VACCINES
-    medicaments = fields.Function(
-        fields.One2Many('galeno.patient.prescription.line', None,
+    pharma_lines = fields.Function(
+        fields.One2Many('galeno.patient.prescription.pharma.line', None,
             'Medicaments'), 'get_medicaments')
+    no_pharma_lines = fields.Function(
+        fields.One2Many('galeno.patient.prescription.no.pharma.line', None,
+            'No pharmamacological prescription'), 'get_medicaments')
     vaccines = fields.One2Many('galeno.patient.vaccine', 'patient', 'Vaccines')
     # LIFESTYLE
     # Diet
@@ -558,16 +561,20 @@ class Patient(ModelSQL, ModelView):
         return result
 
     @classmethod
-    def get_medicaments(cls, patients, name):
+    def get_medicaments(cls, patients, names):
         pool = Pool()
         patient = cls.__table__()
         Prescription = pool.get('galeno.patient.prescription')
-        PrescriptionLine = pool.get('galeno.patient.prescription.line')
+        PrescriptionLine = pool.get('galeno.patient.prescription.pharma.line')
         prescription = Prescription.__table__()
         prescription_line = PrescriptionLine.__table__()
+        PrescriptionNoPharmaLine = pool.get(
+            'galeno.patient.prescription.no.pharma.line')
+        prescription_no_pharma_line = PrescriptionNoPharmaLine.__table__()
         cursor = Transaction().connection.cursor()
 
-        result = defaultdict(lambda: [])
+        pharma_lines = defaultdict(lambda: [])
+        no_pharma_lines = defaultdict(lambda: [])
         ids = [p.id for p in patients]
         for sub_ids in grouped_slice(ids):
             red_sql = reduce_ids(patient.id, sub_ids)
@@ -581,9 +588,26 @@ class Patient(ModelSQL, ModelView):
                 where=red_sql & (prescription.state == 'done')
             )
             cursor.execute(*query)
-            for patient_id, procedure_id in cursor.fetchall():
-                result[patient_id].append(procedure_id)
-        return result
+            for patient_id, line_id in cursor.fetchall():
+                pharma_lines[patient_id].append(line_id)
+            query = patient.join(prescription,
+                condition=patient.id == prescription.patient
+            ).join(prescription_no_pharma_line,
+                condition=(
+                    prescription.id == prescription_no_pharma_line.prescription)
+            ).select(
+                patient.id,
+                prescription_no_pharma_line.id,
+                where=red_sql & (prescription.state == 'done')
+            )
+            cursor.execute(*query)
+            for patient_id, line_id in cursor.fetchall():
+                no_pharma_lines[patient_id].append(line_id)
+
+        return {
+            'pharma_lines': pharma_lines,
+            'no_pharma_lines': no_pharma_lines,
+        }
 
     @classmethod
     def search_disability(cls, name, clause):

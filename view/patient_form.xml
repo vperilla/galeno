@@ -207,7 +207,8 @@
         <page id="patient_3" string="Medicament - Vaccine" icon="galeno-medicament">
             <separator id="medicaments_separator" colspan="4"
                 string="Medicaments listed below are filled automatically with the information from the evaluations."/>
-            <field name="medicaments" colspan="4"/>
+            <field name="pharma_lines" colspan="4"/>
+            <field name="no_pharma_lines" colspan="4"/>
             <field name="vaccines" colspan="4"/>
         </page>
     </notebook>
