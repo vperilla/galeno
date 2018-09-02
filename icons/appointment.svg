@@ -9,9 +9,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="48px"
-   height="48px"
-   viewBox="0 0 48 48"
+   width="24"
+   height="24"
+   viewBox="0 0 24 24"
    id="svg4198"
    sodipodi:version="0.32"
    inkscape:version="0.92.2 2405546, 2018-03-11"
@@ -65,9 +65,9 @@
      borderopacity="1.0000000"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313709"
-     inkscape:cx="5.3116281"
-     inkscape:cy="19.822731"
+     inkscape:zoom="16.000001"
+     inkscape:cx="17.328453"
+     inkscape:cy="7.5179963"
      inkscape:current-layer="layer1"
      showgrid="false"
      inkscape:grid-bbox="true"
@@ -100,7 +100,7 @@
           </rdf:Bag>
         </dc:subject>
         <cc:license
-           rdf:resource="http://creativecommons.org/licenses/publicdomain/" />
+           rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/" />
         <dc:contributor>
           <cc:Agent>
             <dc:title>Jakub Steiner</dc:title>
@@ -108,7 +108,7 @@
         </dc:contributor>
       </cc:Work>
       <cc:License
-         rdf:about="http://creativecommons.org/licenses/publicdomain/">
+         rdf:about="http://creativecommons.org/publicdomain/zero/1.0/">
         <cc:permits
            rdf:resource="http://creativecommons.org/ns#Reproduction" />
         <cc:permits
@@ -121,9 +121,10 @@
   <g
      id="layer1"
      inkscape:label="Layer 1"
-     inkscape:groupmode="layer">
+     inkscape:groupmode="layer"
+     transform="translate(0,-24)">
     <g
-       transform="matrix(0.9379401,0,0,0.9379401,1.5376737,0.78489558)"
+       transform="matrix(0.48180325,0,0,0.48180325,0.39542104,24.445114)"
        id="g12"
        style="fill:#2780e3;fill-opacity:1">
       <path

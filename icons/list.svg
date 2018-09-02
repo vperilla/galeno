@@ -13,16 +13,15 @@
    id="Capa_1"
    x="0px"
    y="0px"
-   width="512px"
-   height="512px"
-   viewBox="0 0 97.391 97.391"
-   style="enable-background:new 0 0 97.391 97.391;"
+   width="24"
+   height="24"
+   viewBox="0 0 4.5652031 4.5652031"
    xml:space="preserve"
    sodipodi:docname="list.svg"
    inkscape:version="0.92.2 2405546, 2018-03-11"><metadata
    id="metadata41"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
    id="defs39">
 	
 </defs><sodipodi:namedview
@@ -38,61 +37,76 @@
    inkscape:window-height="1347"
    id="namedview37"
    showgrid="false"
-   inkscape:zoom="0.4609375"
-   inkscape:cx="-719.18644"
-   inkscape:cy="133.84072"
+   inkscape:zoom="29.5"
+   inkscape:cx="22.645291"
+   inkscape:cy="11.453252"
    inkscape:window-x="0"
    inkscape:window-y="0"
    inkscape:window-maximized="1"
    inkscape:current-layer="Capa_1" />
 
 <g
-   id="g6">
+   id="g6"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g8">
+   id="g8"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g10">
+   id="g10"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g12">
+   id="g12"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g14">
+   id="g14"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g16">
+   id="g16"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g18">
+   id="g18"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g20">
+   id="g20"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g22">
+   id="g22"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g24">
+   id="g24"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g26">
+   id="g26"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g28">
+   id="g28"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g30">
+   id="g30"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g32">
+   id="g32"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g34">
+   id="g34"
+   transform="translate(0,-92.825797)">
 </g>
 <path
    inkscape:connector-curvature="0"
-   d="m 4.658691,82.055286 a 8.874792,8.874792 0 1 1 8.874786,8.874792 8.874792,8.874792 0 0 1 -8.874786,-8.874792 z m 8.874786,-56.206971 a 8.874792,8.874792 0 1 0 -8.874786,-8.874836 8.874792,8.874792 0 0 0 8.874786,8.874836 z m 0,32.540882 a 8.874792,8.874792 0 1 0 -8.874786,-8.874786 8.874792,8.874792 0 0 0 8.874786,8.874786 z M 43.11614,22.890053 h 44.37393 a 5.9165515,5.9165515 0 0 0 0,-11.833103 H 43.11614 a 5.9165515,5.9165515 0 0 0 0,11.833103 z m 0,32.540883 h 44.37393 a 5.9165281,5.9165281 0 0 0 0,-11.833048 H 43.11614 a 5.9165281,5.9165281 0 0 0 0,11.833048 z m 0,32.540874 h 44.37393 a 5.916529,5.916529 0 0 0 0,-11.833047 H 43.11614 a 5.916529,5.916529 0 0 0 0,11.833047 z"
+   d="M 0.23648895,3.8125906 A 0.41202866,0.41202866 0 1 1 0.6485173,4.2246193 0.41202866,0.41202866 0 0 1 0.23648895,3.8125906 Z M 0.6485173,1.203078 A 0.41202866,0.41202866 0 1 0 0.23648895,0.79104742 0.41202866,0.41202866 0 0 0 0.6485173,1.203078 Z m 0,1.5107706 A 0.41202866,0.41202866 0 1 0 0.23648895,2.3018203 0.41202866,0.41202866 0 0 0 0.6485173,2.7138486 Z M 2.0219471,1.0657351 h 2.0601421 a 0.27468685,0.27468685 0 0 0 0,-0.54937358 H 2.0219471 a 0.27468685,0.27468685 0 0 0 0,0.54937358 z m 0,1.5107708 h 2.0601421 a 0.27468577,0.27468577 0 0 0 0,-0.5493712 H 2.0219471 a 0.27468577,0.27468577 0 0 0 0,0.5493712 z m 0,1.5107703 h 2.0601421 a 0.27468581,0.27468581 0 0 0 0,-0.5493711 H 2.0219471 a 0.27468581,0.27468581 0 0 0 0,0.5493711 z"
    id="path4-3"
-   style="fill:#2780e3;fill-opacity:1;stroke-width:0.98608798" /></svg>
+   style="fill:#2780e3;fill-opacity:1;stroke-width:0.04578096" /></svg>

@@ -92,14 +92,17 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
         cls._buttons.update({
                 'cancel': {
                     'invisible': ~Eval('state').in_(['draft']),
+                    'icon': 'tryton-cancel',
                     'depends': ['state'],
                     },
                 'done': {
                     'invisible': ~Eval('state').in_(['draft']),
+                    'icon': 'tryton-ok',
                     'depends': ['state'],
                     },
                 'draft': {
                     'invisible': Eval('state').in_(['draft']),
+                    'icon': 'tryton-undo',
                     'depends': ['state'],
                     },
                 })

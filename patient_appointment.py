@@ -126,7 +126,7 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
                     },
                 'scheduled': {
                     'invisible': Eval('state').in_(['scheduled']),
-                    'icon': 'tryton-go-previous',
+                    'icon': 'tryton-undo',
                     'depends': ['state'],
                     },
                 })

@@ -17,9 +17,9 @@
     <group id="state_buttons" colspan="4" col="-1">
         <label name="state"/>
         <field name="state"/>
-        <button name="done" icon="tryton-ok"/>
-        <button name="cancel" icon="tryton-cancel"/>
-        <button name="draft" icon="tryton-go-previous"/>
+        <button name="done"/>
+        <button name="cancel"/>
+        <button name="draft"/>
     </group>
     <notebook>
         <page id="prescription_lines" string="Prescription detail">

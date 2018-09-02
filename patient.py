@@ -394,10 +394,18 @@ class Patient(ModelSQL, ModelView):
     def default_actually_pregnant():
         return False
 
-    @fields.depends('country')
+    @fields.depends('country', 'subdivision')
     def on_change_country(self):
         if self.country:
             self.nationality = self.country
+        else:
+            self.subdivision = None
+            self.on_change_subdivision()
+
+    @fields.depends('subdivision', 'city')
+    def on_change_subdivision(self):
+        if not self.subdivision:
+            self.city = None
 
     @classmethod
     def get_photo(cls, patients, names):

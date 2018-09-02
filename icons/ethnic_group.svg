@@ -13,16 +13,15 @@
    id="Capa_1"
    x="0px"
    y="0px"
-   width="512px"
-   height="512px"
-   viewBox="0 0 122.699 122.699"
-   style="enable-background:new 0 0 122.699 122.699;"
+   width="24"
+   height="24"
+   viewBox="0 0 5.7515156 5.7515156"
    xml:space="preserve"
    sodipodi:docname="ethnic_group.svg"
    inkscape:version="0.92.2 2405546, 2018-03-11"><metadata
    id="metadata51"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
    id="defs49">
 	
 	
@@ -43,76 +42,91 @@
    inkscape:window-height="1347"
    id="namedview47"
    showgrid="false"
-   inkscape:zoom="0.65186406"
-   inkscape:cx="-149.00305"
-   inkscape:cy="329.81445"
+   inkscape:zoom="14.75"
+   inkscape:cx="13.165578"
+   inkscape:cy="3.0196419"
    inkscape:window-x="0"
    inkscape:window-y="0"
    inkscape:window-maximized="1"
    inkscape:current-layer="Capa_1" />
-<ellipse
+<circle
    style="fill:#18bc9c"
    id="circle2"
-   cy="12.2"
+   cy="-104.74748"
    cx="19.5"
-   r="12.1" /><ellipse
+   r="0" /><circle
    style="fill:#18bc9c"
    id="circle6"
-   cy="12.2"
+   cy="-104.74748"
    cx="103.3"
-   r="12.1" /><ellipse
+   r="0" /><circle
    style="fill:#18bc9c"
    id="circle12"
-   cy="26"
+   cy="-90.947487"
    cx="61.400002"
-   r="13.9" />
+   r="0" />
 <g
-   id="g16">
+   id="g16"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g18">
+   id="g18"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g20">
+   id="g20"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g22">
+   id="g22"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g24">
+   id="g24"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g26">
+   id="g26"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g28">
+   id="g28"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g30">
+   id="g30"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g32">
+   id="g32"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g34">
+   id="g34"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g36">
+   id="g36"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g38">
+   id="g38"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g40">
+   id="g40"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g42">
+   id="g42"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   id="g44">
+   id="g44"
+   transform="translate(0,-116.94748)">
 </g>
 <g
-   transform="matrix(1.9750876,0,0,1.9750876,-35.609151,-36.472548)"
+   transform="matrix(0.09533364,0,0,0.09533364,-1.8546764,-1.8559326)"
    id="g14"
    style="fill:#2780e3;fill-opacity:1"><path
      inkscape:connector-curvature="0"

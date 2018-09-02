@@ -13,16 +13,15 @@
    id="Capa_1"
    x="0px"
    y="0px"
-   width="512px"
-   height="512px"
-   viewBox="0 0 97.391 97.391"
-   style="enable-background:new 0 0 97.391 97.391;"
+   width="24"
+   height="24"
+   viewBox="0 0 4.5652031 4.5652031"
    xml:space="preserve"
    sodipodi:docname="information.svg"
    inkscape:version="0.92.2 2405546, 2018-03-11"><metadata
    id="metadata41"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
    id="defs39">
 	
 </defs><sodipodi:namedview
@@ -38,62 +37,77 @@
    inkscape:window-height="1347"
    id="namedview37"
    showgrid="false"
-   inkscape:zoom="0.65186406"
-   inkscape:cx="-641.9784"
-   inkscape:cy="53.75189"
+   inkscape:zoom="20.85965"
+   inkscape:cx="27.8006"
+   inkscape:cy="11.977817"
    inkscape:window-x="0"
    inkscape:window-y="0"
    inkscape:window-maximized="1"
    inkscape:current-layer="Capa_1" />
 
 <g
-   id="g6">
+   id="g6"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g8">
+   id="g8"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g10">
+   id="g10"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g12">
+   id="g12"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g14">
+   id="g14"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g16">
+   id="g16"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g18">
+   id="g18"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g20">
+   id="g20"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g22">
+   id="g22"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g24">
+   id="g24"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g26">
+   id="g26"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g28">
+   id="g28"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g30">
+   id="g30"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g32">
+   id="g32"
+   transform="translate(0,-92.825797)">
 </g>
 <g
-   id="g34">
+   id="g34"
+   transform="translate(0,-92.825797)">
 </g>
 <g
    id="g865"
-   transform="matrix(34.692624,0,0,34.692624,385.62196,26.567518)"><path
+   transform="matrix(1.6541236,0,0,1.6541236,18.354441,1.267931)"><path
      style="fill:#2780e3;fill-opacity:1;stroke-width:0.06145703"
      id="path2-3-3"
      d="m -10.416869,-0.38830641 h 1.7914726 v -0.11369551 c 0,-0.0841961 -0.068217,-0.15179887 -0.1517988,-0.15179887 h -1.6396738 c -0.209568,0 -0.37919,0.16962141 -0.37919,0.37918988 V 1.5482046 c 0,0.2095685 0.169622,0.3791899 0.37919,0.3791899 h 1.6396738 c 0.083581,0 0.1517988,-0.067603 0.1517988,-0.1517989 v -1.936511 h -1.7914726 c -0.06269,0 -0.113695,-0.0510093 -0.113695,-0.11369551 0,-0.0626862 0.05101,-0.1136955 0.113695,-0.1136955 z m 0.352149,1.62799671 0.2562757,-0.061457 v -0.078665 h 6.146e-4 c -0.090956,-0.049166 -0.13582,-0.13950749 -0.1567154,-0.22739099 -0.080509,-0.006146 -0.066374,-0.1112372 -0.066374,-0.1112372 0,-0.053468 0.02766,-0.070061 0.049781,-0.074978 0.00123,-0.031958 0.00369,-0.051624 0.00369,-0.051624 0,-0.39885616 0.3423157,-0.34477397 0.3423157,-0.34477397 0,0 0.070676,-0.0116768 0.1481115,0.0141351 0.0928,0.0301139 0.1948188,0.11308097 0.1948188,0.33063887 0,0 0.00246,0.020281 0.00369,0.051624 0.022124,0.00492 0.04978,0.02151 0.04978,0.074978 0,0 0.014135,0.1050915 -0.066374,0.1112372 -0.020895,0.088498 -0.065759,0.17883989 -0.1567155,0.22739099 h 6.146e-4 v 0.078665 l 0.2562758,0.061457 c 0.125987,0.045478 0,0.2599633 0,0.2599633 h -0.4295862 -0.4295856 c -6.14e-4,6.145e-4 -0.126601,-0.2144851 -6.14e-4,-0.2599633 z"

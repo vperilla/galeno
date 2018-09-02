@@ -13,16 +13,15 @@
    id="Capa_1"
    x="0px"
    y="0px"
-   width="512px"
-   height="512px"
-   viewBox="0 0 470.061 470.061"
-   style="enable-background:new 0 0 470.061 470.061;"
+   width="24"
+   height="24"
+   viewBox="0 0 22.034109 22.034109"
    xml:space="preserve"
    sodipodi:docname="drug.svg"
    inkscape:version="0.92.2 2405546, 2018-03-11"><metadata
    id="metadata45"><rdf:RDF><cc:Work
        rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /></cc:Work></rdf:RDF></metadata><defs
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
    id="defs43">
 	
 
@@ -41,62 +40,77 @@
    inkscape:window-height="1347"
    id="namedview41"
    showgrid="false"
-   inkscape:zoom="0.921875"
-   inkscape:cx="-287.37711"
-   inkscape:cy="147.59914"
+   inkscape:zoom="14.75"
+   inkscape:cx="10.196873"
+   inkscape:cy="27.643035"
    inkscape:window-x="0"
    inkscape:window-y="0"
    inkscape:window-maximized="1"
    inkscape:current-layer="Capa_1" />
 
 <g
-   id="g10">
+   id="g10"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g12">
+   id="g12"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g14">
+   id="g14"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g16">
+   id="g16"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g18">
+   id="g18"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g20">
+   id="g20"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g22">
+   id="g22"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g24">
+   id="g24"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g26">
+   id="g26"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g28">
+   id="g28"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g30">
+   id="g30"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g32">
+   id="g32"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g34">
+   id="g34"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g36">
+   id="g36"
+   transform="translate(0,-448.02689)">
 </g>
 <g
-   id="g38">
+   id="g38"
+   transform="translate(0,-448.02689)">
 </g>
 <g
    id="g845"
-   transform="matrix(5.4681192,0,0,5.4681192,2388.7709,-375.54157)"><path
+   transform="matrix(0.25936507,0,0,0.25936507,113.60409,-17.774226)"><path
      style="fill:#2780e3;fill-opacity:1;stroke-width:0.9180879"
      id="path2-3"
      d="m -370.58073,117.42967 h -60.5938 c -1.52127,0 -2.75427,1.23299 -2.75427,2.75426 v 11.01705 c 0,1.52128 1.233,2.75427 2.75427,2.75427 h 60.5938 c 1.52127,0 2.75426,-1.23299 2.75426,-2.75427 v -11.01705 c 0,-1.52127 -1.23299,-2.75426 -2.75426,-2.75426 z m -2.75426,11.01705 h -38.5597 v -5.50853 h 38.5597 z"

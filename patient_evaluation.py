@@ -514,14 +514,17 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         cls._buttons.update({
                 'cancel': {
                     'invisible': ~Eval('state').in_(['initial']),
+                    'icon': 'tryton-cancel',
                     'depends': ['state'],
                     },
                 'finish': {
                     'invisible': ~Eval('state').in_(['initial']),
+                    'icon': 'tryton-ok',
                     'depends': ['state'],
                     },
                 'initial': {
                     'invisible': Eval('state').in_(['initial']),
+                    'icon': 'tryton-undo',
                     'depends': ['state'],
                     },
                 })

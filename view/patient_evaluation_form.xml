@@ -22,9 +22,9 @@
     <group id="state_buttons" colspan="4" col="-1">
         <label name="state"/>
         <field name="state"/>
-        <button name="finish" icon="tryton-ok"/>
-        <button name="cancel" icon="tryton-cancel"/>
-        <button name="initial" icon="tryton-go-previous"/>
+        <button name="finish"/>
+        <button name="cancel"/>
+        <button name="initial"/>
     </group>
     <group id="summary_treatment" colspan="8" col="8">
         <group id="summ_l" colspan="4">
