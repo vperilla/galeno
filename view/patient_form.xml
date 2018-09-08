@@ -110,23 +110,28 @@
                 </page>
                 <page id="disease_backgrounds" string="Diseases"
                     icon="galeno-disease">
-                    <field name="background_diseases" colspan="4"/>
+                    <field name="background_diseases" colspan="4" mode="tree,form"
+                        view_ids="galeno.patient_background_disease_view_tree,galeno.patient_background_disease_view_form"/>
                 </page>
                 <page id="medicament_backgrounds" string="Medicaments"
                     icon="galeno-medicament">
-                    <field name="background_medicaments" colspan="4"/>
+                    <field name="background_medicaments" colspan="4" mode="tree,form"
+                        view_ids="galeno.patient_background_medicament_view_tree,galeno.patient_background_medicament_view_form"/>
                 </page>
                 <page id="surgery_backgrounds" string="Surgeries"
                     icon="galeno-surgery">
-                    <field name="background_surgeries" colspan="4"/>
+                    <field name="background_surgeries" colspan="4" mode="tree,form"
+                        view_ids="galeno.patient_background_surgery_view_tree,galeno.patient_background_surgery_view_form"/>
                 </page>
                 <page id="family_backgrounds" string="Family"
                     icon="galeno-family">
-                    <field name="background_family" colspan="4"/>
+                    <field name="background_family" colspan="4" mode="tree,form"
+                        view_ids="galeno.patient_background_family_view_tree,galeno.patient_background_family_view_form"/>
                 </page>
                 <page id="test_backgrounds" string="Tests"
                     icon="galeno-test">
-                    <field name="background_tests" colspan="4"/>
+                    <field name="background_tests" colspan="4" mode="tree,form"
+                        view_ids="galeno.patient_background_test_view_tree,galeno.patient_background_test_view_form"/>
                 </page>
             </notebook>
         </page>
@@ -144,7 +149,8 @@
                         <field name="sleep_notes" colspan="4"/>
                     </group>
                     <group id="lifestyle-exercise" colspan="2">
-                        <field name="activities" colspan="4"/>
+                        <field name="activities" colspan="4" mode="tree,form"
+                            view_ids="galeno.patient_activity_view_tree,galeno.patient_activity_view_form"/>
                     </group>
                 </page>
                 <page id="lifestyle_diet" string="Diet" icon="galeno-diet">
@@ -166,7 +172,8 @@
                 </page>
                 <page id="lifestyle_drugs" string="Drugs" icon="galeno-drug">
                     <group id="lifestyle-drugs">
-                        <field name="drugs" colspan="4"/>
+                        <field name="drugs" colspan="4" mode="tree,form"
+                            view_ids="galeno.patient_drug_view_tree,galeno.patient_drug_view_form"/>
                     </group>
                 </page>
             </notebook>
@@ -194,22 +201,27 @@
             <group id="group_diseases" colspan="4">
                 <separator id="diseases_separator" colspan="4"
                     string="Diseases listed below are filled automatically with the information from the evaluations."/>
-                <field name="diseases" colspan="4"/>
+                <field name="diseases" colspan="4" mode="tree,form"
+                    view_ids="galeno.patient_evaluation_diagnosis_view_tree,galeno.patient_evaluation_diagnosis_view_form"/>
             </group>
         </page>
         <page id="patient_procedures" string="Procedures" icon="galeno-procedure">
             <group id="group_procedures" colspan="4">
                 <separator id="procedures_separator" colspan="4"
                     string="Procedures listed below are filled automatically with the information from the evaluations."/>
-                <field name="procedures" colspan="4"/>
+                <field name="procedures" colspan="4" mode="tree,form"
+                    view_ids="galeno.patient_evaluation_procedure_view_tree,galeno.patient_evaluation_procedure_view_form"/>
             </group>
         </page>
         <page id="patient_3" string="Medicament - Vaccine" icon="galeno-medicament">
             <separator id="medicaments_separator" colspan="4"
                 string="Medicaments listed below are filled automatically with the information from the evaluations."/>
-            <field name="pharma_lines" colspan="4"/>
-            <field name="no_pharma_lines" colspan="4"/>
-            <field name="vaccines" colspan="4"/>
+            <field name="pharma_lines" colspan="4" mode="tree,form"
+                view_ids="galeno.patient_prescription_pharma_line_view_tree,galeno.patient_prescription_pharma_line_view_form"/>
+            <field name="no_pharma_lines" colspan="4" mode="tree,form"
+                view_ids="galeno.patient_prescription_no_pharma_line_view_tree,galeno.patient_prescription_no_pharma_line_view_form"/>
+            <field name="vaccines" colspan="4" mode="tree,form"
+                view_ids="galeno.patient_vaccine_view_tree,galeno.patient_vaccine_view_form"/>
         </page>
     </notebook>
 </form>
