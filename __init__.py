@@ -76,6 +76,7 @@ def register():
         configuration.Configuration,
         configuration.ConfigurationSequence,
         configuration.ConfigurationDuration,
+        configuration.ConfigurationLogo,
         galeno_reporting.ReportEvaluationContext,
         galeno_reporting.ReportEvaluation,
         attachment.Attachment,

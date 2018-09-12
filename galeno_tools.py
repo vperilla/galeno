@@ -1,5 +1,6 @@
 import pendulum
 import pytz
+from io import BytesIO
 
 import stdnum.ec.ci as ci
 import stdnum.ec.ruc as ruc
@@ -7,7 +8,6 @@ import stdnum.ec.ruc as ruc
 import phonenumbers
 from phonenumbers import PhoneNumberFormat
 
-from io import BytesIO
 from PIL import Image, ImageOps
 
 from email_validator import validate_email

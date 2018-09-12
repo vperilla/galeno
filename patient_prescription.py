@@ -173,7 +173,7 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
         for values in vlist:
             if values.get('code') is None:
                 values['code'] = Sequence.get_id(
-                        config.prescription_sequence.id)
+                        config.get_multivalue('prescription_sequence').id)
         return super(PatientPrescription, cls).create(vlist)
 
 

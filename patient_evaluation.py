@@ -659,7 +659,7 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
         for values in vlist:
             if values.get('code') is None:
                 values['code'] = Sequence.get_id(
-                        config.evaluation_sequence.id)
+                        config.get_multivalue('evaluation_sequence').id)
         return super(PatientEvaluation, cls).create(vlist)
 
 
@@ -774,7 +774,7 @@ class PatientEvaluationTest(ModelSQL, ModelView):
         for values in vlist:
             if values.get('code') is None:
                 values['code'] = Sequence.get_id(
-                        config.request_test_sequence.id)
+                        config.get_multivalue('request_test_sequence').id)
         return super(PatientEvaluationTest, cls).create(vlist)
 
     @classmethod

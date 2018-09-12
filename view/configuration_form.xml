@@ -17,4 +17,7 @@ this repository contains the full copyright notices and license terms. -->
     <field name="attention_end"/>
     <label name="appointment_duration"/>
     <field name="appointment_duration"/>
+    <newline/>
+    <label name="logo"/>
+    <field name="logo"/>
 </form>

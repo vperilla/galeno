@@ -1,8 +1,12 @@
+from io import BytesIO
+
 from trytond.pool import Pool
 from trytond.transaction import Transaction
 from trytond.modules.company import CompanyReport
 
 from .galeno_tools import resize_image as resize_img
+
+from PIL import Image
 
 __all__ = ['GalenoReport', 'Patient', 'Evaluation', 'Prescription',
     'Appointment']
@@ -12,11 +16,22 @@ class GalenoReport(CompanyReport):
 
     @classmethod
     def get_context(cls, records, data):
+        pool = Pool()
+        Configuration = pool.get('galeno.configuration')
+        config = Configuration(1)
         report_context = super(GalenoReport, cls).get_context(records, data)
         report_context['resize_image'] = cls.resize_image
         report_context['professional'] = cls.professional()
         report_context['action_id'] = data.get('action_id')
         report_context['signatures'] = cls.signatures
+        logo = config.get_multivalue('logo')
+        if logo:
+            logo_image = Image.open(BytesIO(logo))
+            report_context['logo_image'] = logo
+            report_context['logo_size'] = tuple(x * 10 for x in logo_image.size)
+        else:
+            report_context['logo_image'] = None
+            report_context['logo_size'] = (0, 0)
         return report_context
 
     @classmethod

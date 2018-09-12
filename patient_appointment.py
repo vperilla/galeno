@@ -189,14 +189,15 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
                 if app_of_day:
                     self.start_date = self.__class__(app_of_day.pop()).end_date
                 else:
-                    if config.attention_start:
-                        initial_time = config.attention_start
+                    if config.get_multivalue('attention_start'):
+                        initial_time = config.get_multivalue('attention_start')
                         self.start_date = (self.start_date +
                             timedelta(hours=initial_time.hour,
                             minutes=initial_time.minute))
                     else:
                         self.raise_user_error('without_start')
-            self.end_date = self.start_date + config.appointment_duration
+            self.end_date = self.start_date + config.get_multivalue(
+                'appointment_duration')
         else:
             self.end_date = None
 

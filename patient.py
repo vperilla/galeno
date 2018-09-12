@@ -684,7 +684,8 @@ class Patient(ModelSQL, ModelView):
         config = Config(1)
         for values in vlist:
             if values.get('code') is None:
-                values['code'] = Sequence.get_id(config.patient_sequence.id)
+                values['code'] = Sequence.get_id(config.get_multivalue(
+                    'patient_sequence').id)
         return super(Patient, cls).create(vlist)
 
 

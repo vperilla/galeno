@@ -6,7 +6,8 @@ from trytond.pool import Pool
 from trytond.modules.company.model import (
     CompanyMultiValueMixin, CompanyValueMixin)
 
-__all__ = ['Configuration', 'ConfigurationSequence', 'ConfigurationDuration']
+__all__ = ['Configuration', 'ConfigurationSequence', 'ConfigurationDuration',
+    'ConfigurationLogo']
 
 
 class Configuration(
@@ -43,6 +44,7 @@ class Configuration(
         fields.Time('Attention End', required=True))
     appointment_duration = fields.MultiValue(
         fields.TimeDelta('Appointment Duration', required=True))
+    logo = fields.MultiValue(fields.Binary('Logo'))
 
     @classmethod
     def multivalue_model(cls, field):
@@ -53,6 +55,8 @@ class Configuration(
         elif field in ['attention_start', 'attention_end',
                 'appointment_duration']:
             return pool.get('galeno.configuration.duration')
+        elif field in ['logo']:
+            return pool.get('galeno.configuration.logo')
         return super(Configuration, cls).multivalue_model(field)
 
     @classmethod
@@ -163,3 +167,10 @@ class ConfigurationDuration(ModelSQL, CompanyValueMixin):
     @staticmethod
     def default_appointment_duration():
         return timedelta(minutes=30)
+
+
+class ConfigurationLogo(ModelSQL, CompanyValueMixin):
+    "Galeno Configuration Logo"
+    __name__ = 'galeno.configuration.logo'
+
+    logo = fields.Binary('Logo')
