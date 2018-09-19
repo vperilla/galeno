@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
- <office:meta><meta:generator>LibreOffice/6.1.0.3$Linux_X86_64 LibreOffice_project/10$Build-3</meta:generator><meta:creation-date>2008-06-07T15:28:22</meta:creation-date><dc:date>2009-01-10T16:03:32</dc:date><meta:editing-cycles>1</meta:editing-cycles><meta:editing-duration>PT0S</meta:editing-duration><meta:document-statistic meta:table-count="31" meta:image-count="0" meta:object-count="0" meta:page-count="13" meta:paragraph-count="370" meta:word-count="771" meta:character-count="7999" meta:non-whitespace-character-count="7581"/><meta:user-defined meta:name="Info 1"/><meta:user-defined meta:name="Info 2"/><meta:user-defined meta:name="Info 3"/><meta:user-defined meta:name="Info 4"/></office:meta>
+ <office:meta><meta:generator>LibreOffice/6.1.1.2$Linux_X86_64 LibreOffice_project/10$Build-2</meta:generator><meta:creation-date>2008-06-07T15:28:22</meta:creation-date><dc:date>2009-01-10T16:03:32</dc:date><meta:editing-cycles>1</meta:editing-cycles><meta:editing-duration>PT0S</meta:editing-duration><meta:document-statistic meta:table-count="31" meta:image-count="0" meta:object-count="0" meta:page-count="12" meta:paragraph-count="370" meta:word-count="771" meta:character-count="7999" meta:non-whitespace-character-count="7581"/><meta:user-defined meta:name="Info 1"/><meta:user-defined meta:name="Info 2"/><meta:user-defined meta:name="Info 3"/><meta:user-defined meta:name="Info 4"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">0</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="long">22580</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="long">32016</config:config-item>
-   <config:config-item config:name="ViewAreaHeight" config:type="long">14402</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="long">13760</config:config-item>
    <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
    <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">7908</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">2060</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">15067</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">28362</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">0</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">22580</config:config-item>
      <config:config-item config:name="VisibleRight" config:type="long">32015</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">14400</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">36338</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
      <config:config-item config:name="ZoomFactor" config:type="short">140</config:config-item>
-     <config:config-item config:name="IsSelectedFrame" config:type="boolean">true</config:config-item>
+     <config:config-item config:name="IsSelectedFrame" config:type="boolean">false</config:config-item>
      <config:config-item config:name="AnchoredTextOverflowLegacy" config:type="boolean">false</config:config-item>
     </config:config-item-map-entry>
    </config:config-item-map-indexed>
@@ -93,7 +93,7 @@
    <config:config-item config:name="UnxForceZeroExtLeading" config:type="boolean">false</config:config-item>
    <config:config-item config:name="TabAtLeftIndentForParagraphsInList" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintRightPages" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">5550314</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">5656268</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MsWordCompTrailingBlanks" config:type="boolean">false</config:config-item>
    <config:config-item config:name="InvertBorderSpacing" config:type="boolean">false</config:config-item>
@@ -286,6 +286,11 @@
     <style:background-image/>
    </style:table-cell-properties>
   </style:style>
+  <style:style style:name="Tabla31.B1" style:family="table-cell">
+   <style:table-cell-properties style:vertical-align="middle" fo:background-color="transparent" fo:padding="0.097cm" fo:border="none" style:writing-mode="page">
+    <style:background-image/>
+   </style:table-cell-properties>
+  </style:style>
   <style:style style:name="Tabla12" style:family="table">
    <style:table-properties style:width="19.001cm" table:align="margins"/>
   </style:style>
@@ -296,6 +301,9 @@
    <style:table-column-properties style:column-width="2.508cm" style:rel-column-width="8652*"/>
   </style:style>
   <style:style style:name="Tabla12.A1" style:family="table-cell">
+   <style:table-cell-properties style:vertical-align="middle" fo:padding="0cm" fo:border="none"/>
+  </style:style>
+  <style:style style:name="Tabla12.B1" style:family="table-cell">
    <style:table-cell-properties fo:padding="0cm" fo:border="none"/>
   </style:style>
   <style:style style:name="Tabla31" style:family="table">
@@ -312,6 +320,11 @@
     <style:background-image/>
    </style:table-cell-properties>
   </style:style>
+  <style:style style:name="Tabla31.B1" style:family="table-cell">
+   <style:table-cell-properties style:vertical-align="middle" fo:background-color="transparent" fo:padding="0.097cm" fo:border="none" style:writing-mode="page">
+    <style:background-image/>
+   </style:table-cell-properties>
+  </style:style>
   <style:style style:name="Tabla12" style:family="table">
    <style:table-properties style:width="19.001cm" table:align="margins"/>
   </style:style>
@@ -322,6 +335,9 @@
    <style:table-column-properties style:column-width="2.508cm" style:rel-column-width="8652*"/>
   </style:style>
   <style:style style:name="Tabla12.A1" style:family="table-cell">
+   <style:table-cell-properties style:vertical-align="middle" fo:padding="0cm" fo:border="none"/>
+  </style:style>
+  <style:style style:name="Tabla12.B1" style:family="table-cell">
    <style:table-cell-properties fo:padding="0cm" fo:border="none"/>
   </style:style>
   <style:style style:name="Tabla1" style:family="table">
@@ -1533,6 +1549,18 @@
    <style:paragraph-properties fo:text-align="justify" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" officeooo:rsid="004ba26d" officeooo:paragraph-rsid="004ba26d" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
+  <style:style style:name="P103" style:family="paragraph" style:parent-style-name="Header">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:color="#000000" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Tinos" fo:font-size="12pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="normal" officeooo:paragraph-rsid="00564ecc" style:font-size-asian="12pt" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-size-complex="12pt" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-overline-style="none" style:text-overline-color="font-color"/>
+  </style:style>
+  <style:style style:name="P104" style:family="paragraph" style:parent-style-name="Header">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties officeooo:paragraph-rsid="0052c5dd"/>
+  </style:style>
+  <style:style style:name="P105" style:family="paragraph" style:parent-style-name="Footer">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties officeooo:paragraph-rsid="0052c5dd"/>
+  </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="003392d8"/>
   </style:style>
@@ -1653,20 +1681,19 @@
      <table:table-column table:style-name="Tabla31.B"/>
      <table:table-row>
       <table:table-cell table:style-name="Tabla31.A1" office:value-type="string">
-       <text:p text:style-name="P8"><draw:frame draw:style-name="fr1" draw:name="image: (logo_image, &apos;image/png&apos;, str(logo_size[0]), str(logo_size[1]))" text:anchor-type="as-char" svg:y="0.261cm" svg:width="2cm" svg:height="2cm" draw:z-index="14">
+       <text:p text:style-name="P8"><draw:frame draw:style-name="fr1" draw:name="image: (logo_image, &apos;image/png&apos;, str(logo_size[0]), str(logo_size[1]))" text:anchor-type="as-char" svg:y="0.261cm" svg:width="2cm" svg:height="2cm" draw:z-index="13">
          <draw:text-box>
           <text:p text:style-name="Frame_20_contents"/>
          </draw:text-box>
         </draw:frame></text:p>
-       <text:p text:style-name="P8"><text:placeholder text:placeholder-type="text">&lt;company.rec_name&gt;</text:placeholder></text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Tabla31.A1" office:value-type="string">
+      <table:table-cell table:style-name="Tabla31.B1" office:value-type="string">
+       <text:p text:style-name="P103"><text:placeholder text:placeholder-type="text">&lt;company.rec_name&gt;</text:placeholder></text:p>
        <text:p text:style-name="P6"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;company.header&quot;&gt;</text:placeholder></text:p>
        <text:p text:style-name="P6"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in company.header.split(&apos;\n&apos;)&quot;&gt;</text:placeholder></text:p>
        <text:p text:style-name="P6"><text:placeholder text:placeholder-type="text">&lt;line&gt;</text:placeholder></text:p>
        <text:p text:style-name="P6"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
        <text:p text:style-name="P11"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
-       <text:p text:style-name="P7"/>
       </table:table-cell>
      </table:table-row>
     </table:table>
@@ -1684,8 +1711,8 @@
        <text:p text:style-name="P10"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
        <text:p text:style-name="P12"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
       </table:table-cell>
-      <table:table-cell table:style-name="Tabla12.A1" office:value-type="string">
-       <text:p text:style-name="P13">Pag: <text:page-number text:select-page="current">13</text:page-number><text:s/>de <text:page-count>13</text:page-count></text:p>
+      <table:table-cell table:style-name="Tabla12.B1" office:value-type="string">
+       <text:p text:style-name="P13">Pag: <text:page-number text:select-page="current">12</text:page-number><text:s/>de <text:page-count>12</text:page-count></text:p>
       </table:table-cell>
      </table:table-row>
     </table:table>
@@ -1718,7 +1745,7 @@
     </table:table-row>
     <table:table-row>
      <table:table-cell table:style-name="Tabla1.A6" table:number-rows-spanned="5" office:value-type="string">
-      <text:p text:style-name="P36"><draw:frame draw:style-name="fr2" draw:name="image: (resize_image(evaluation.patient.photo), &apos;image/png&apos;, &apos;3cm&apos;, &apos;3cm&apos;)" text:anchor-type="as-char" svg:width="2cm" svg:height="2cm" draw:z-index="13">
+      <text:p text:style-name="P36"><draw:frame draw:style-name="fr2" draw:name="image: (resize_image(evaluation.patient.photo), &apos;image/png&apos;, &apos;3cm&apos;, &apos;3cm&apos;)" text:anchor-type="as-char" svg:width="2cm" svg:height="2cm" draw:z-index="12">
         <draw:text-box>
          <text:p text:style-name="Frame_20_contents"/>
         </draw:text-box>
@@ -1942,7 +1969,7 @@
       <text:p text:style-name="P76"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;tongue&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P83">Lengua</text:p>
       <text:p text:style-name="P76"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P76"><text:soft-page-break/><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;pharynx&apos;&quot;&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P76"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;pharynx&apos;&quot;&gt;</text:placeholder><text:soft-page-break/></text:p>
       <text:p text:style-name="P70"><text:span text:style-name="T4">F</text:span><text:span text:style-name="T2">aringe</text:span></text:p>
       <text:p text:style-name="P76"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
       <text:p text:style-name="P76"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;tonsils&apos;&quot;&gt;</text:placeholder></text:p>
@@ -2003,9 +2030,9 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla8.A1" office:value-type="string">
       <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;extern&apos;&quot;&gt;</text:placeholder><text:soft-page-break/></text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;extern&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P86">Oído externo</text:p>
-      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P77"><text:soft-page-break/><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
       <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;pavilion&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P86">Pabellón</text:p>
       <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
@@ -2067,10 +2094,10 @@
       <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;deviation&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P86">Desviación</text:p>
       <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;pain&apos;&quot;&gt;</text:placeholder><text:soft-page-break/></text:p>
+      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;pain&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P86">Dolor</text:p>
       <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P77"><text:soft-page-break/><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla10.C1" office:value-type="string">
       <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
@@ -2128,10 +2155,10 @@
       <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;superior&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P87">Extremidades superiores</text:p>
       <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;inferior&apos;&quot;&gt;</text:placeholder><text:soft-page-break/></text:p>
+      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;inferior&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P87">Extremidades inferiores</text:p>
       <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P78"><text:soft-page-break/><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla13.C1" office:value-type="string">
       <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
@@ -2203,7 +2230,6 @@
     <table:table-column table:style-name="Tabla16.A"/>
     <table:table-column table:style-name="Tabla16.B"/>
     <table:table-column table:style-name="Tabla16.C"/>
-    <text:soft-page-break/>
     <table:table-row>
      <table:table-cell table:style-name="Tabla16.A1" office:value-type="string">
       <text:p text:style-name="P45"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;field in values&quot;&gt;</text:placeholder></text:p>
@@ -2212,7 +2238,7 @@
       <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;choose test=&quot;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;pelvis&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P87">Pelvis</text:p>
-      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P78"><text:soft-page-break/><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
       <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;genitals&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P87">Genitales</text:p>
       <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
@@ -2271,7 +2297,7 @@
       <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;when test=&quot;field == &apos;facer&apos;&quot;&gt;</text:placeholder></text:p>
       <text:p text:style-name="P87">Melanoma</text:p>
       <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/when&gt;</text:placeholder></text:p>
-      <text:p text:style-name="P78"><text:soft-page-break/><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:p>
+      <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:p>
      </table:table-cell>
      <table:table-cell table:style-name="Tabla18.C1" office:value-type="string">
       <text:p text:style-name="P78"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
@@ -2282,10 +2308,9 @@
    <text:p text:style-name="P76"><text:placeholder text:placeholder-type="text">&lt;/choose&gt;</text:placeholder></text:p>
    <text:p text:style-name="P77"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
    <text:p text:style-name="P76"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
-   <text:p text:style-name="P76"/>
+   <text:p text:style-name="P76"><text:soft-page-break/></text:p>
    <table:table table:name="Tabla19" table:style-name="Tabla19">
     <table:table-column table:style-name="Tabla19.A"/>
-    <text:soft-page-break/>
     <table:table-row>
      <table:table-cell table:style-name="Tabla19.A1" office:value-type="string">
       <text:p text:style-name="P20">Sistemas y Órganos</text:p>
