@@ -9,8 +9,6 @@
         <field name="patient"/>
         <label name="code"/>
         <field name="code"/>
-        <label name="type_"/>
-        <field name="type_"/>
         <label name="evaluation"/>
         <field name="evaluation"/>
     </group>
@@ -22,17 +20,17 @@
         <button name="draft"/>
     </group>
     <notebook>
-        <page id="prescription_lines" string="Prescription detail">
-            <group id="prescription_lines" colspan="4" col="4">
-                <field name="pharma_lines" colspan="4"/>
-                <field name="no_pharma_lines" colspan="4"/>
-            </group>
-            <group id="summary_prescription" colspan="4" col="4">
-                <separator name="notes" colspan="4"/>
-                <field name="notes" colspan="4"/>
-                <separator name="warning" colspan="4"/>
-                <field name="warning" colspan="4"/>
-            </group>
+        <page id="pharma_lines" string="Pharmacological">
+            <field name="pharma_lines" colspan="4"/>
+        </page>
+        <page id="no_pharma_lines" string="No Pharmacological">
+            <field name="no_pharma_lines" colspan="4"/>
         </page>
     </notebook>
+    <group id="summary_prescription" colspan="4" col="4">
+        <separator name="notes" colspan="4"/>
+        <field name="notes" colspan="4"/>
+        <separator name="warning" colspan="4"/>
+        <field name="warning" colspan="4"/>
+    </group>
 </form>

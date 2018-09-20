@@ -23,14 +23,6 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
                 Eval('context', {}).get('professional', -1)),
         ], depends=['state'], required=True, select=True)
     code = fields.Char('Code', readonly=True)
-    type_ = fields.Selection(
-        [
-            ('pharma', 'Pharmacological'),
-            ('no_pharma', 'No pharmacological'),
-        ], 'Type', required=True,
-        states={
-            'readonly': ~Eval('state').in_(['draft']),
-        })
     state = fields.Selection(
         [
             ('draft', 'Draft'),
@@ -67,15 +59,13 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
         'prescription', 'Prescription',
         states={
             'readonly': ~Eval('state').in_(['draft']),
-            'invisible': ~(Eval('type_') == 'pharma'),
-        }, depends=['state', 'type_'])
+        }, depends=['state'])
     no_pharma_lines = fields.One2Many(
         'galeno.patient.prescription.no.pharma.line',
         'prescription', 'Prescription',
         states={
             'readonly': ~Eval('state').in_(['draft']),
-            'invisible': ~(Eval('type_') == 'no_pharma'),
-        }, depends=['state', 'type_'])
+        }, depends=['state'])
 
     @classmethod
     def __setup__(cls):
@@ -118,10 +108,6 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
     @staticmethod
     def default_professional():
         return Transaction().context.get('professional')
-
-    @staticmethod
-    def default_type_():
-        return 'pharma'
 
     @fields.depends('evaluation', 'patient')
     def on_change_evaluation(self):

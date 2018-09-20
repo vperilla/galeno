@@ -1,7 +1,6 @@
 <?xml version="1.0"?>
 <tree>
     <field name="code" width="100"/>
-    <field name="type_" width="125"/>
     <field name="patient"/>
     <field name="professional" tree_invisible="1"/>
     <field name="state"/>

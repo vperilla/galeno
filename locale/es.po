@@ -189,6 +189,10 @@ msgctxt "field:galeno.configuration,id:"
 msgid "ID"
 msgstr "ID"
 
+msgctxt "field:galeno.configuration,logo:"
+msgid "Logo"
+msgstr ""
+
 msgctxt "field:galeno.configuration,patient_sequence:"
 msgid "Patient Sequence"
 msgstr "Secuenca Paciente"
@@ -253,6 +257,38 @@ msgctxt "field:galeno.configuration.duration,write_uid:"
 msgid "Write User"
 msgstr "Usuario modificación"
 
+msgctxt "field:galeno.configuration.logo,company:"
+msgid "Company"
+msgstr "Empresa"
+
+msgctxt "field:galeno.configuration.logo,create_date:"
+msgid "Create Date"
+msgstr "Fecha de creación"
+
+msgctxt "field:galeno.configuration.logo,create_uid:"
+msgid "Create User"
+msgstr "Usuario de creación"
+
+msgctxt "field:galeno.configuration.logo,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.configuration.logo,logo:"
+msgid "Logo"
+msgstr ""
+
+msgctxt "field:galeno.configuration.logo,rec_name:"
+msgid "Record Name"
+msgstr "Nombre del registro"
+
+msgctxt "field:galeno.configuration.logo,write_date:"
+msgid "Write Date"
+msgstr "Fecha modificación"
+
+msgctxt "field:galeno.configuration.logo,write_uid:"
+msgid "Write User"
+msgstr "Usuario modificación"
+
 msgctxt "field:galeno.configuration.sequence,company:"
 msgid "Company"
 msgstr "Empresa"
@@ -261,7 +297,6 @@ msgctxt "field:galeno.configuration.sequence,create_date:"
 msgid "Create Date"
 msgstr "Fecha de creación"
 
-#, fuzzy
 msgctxt "field:galeno.configuration.sequence,create_uid:"
 msgid "Create User"
 msgstr "Usuario de creación"
@@ -942,14 +977,6 @@ msgctxt "field:galeno.patient,meals_number:"
 msgid "Meals per day"
 msgstr "Comidas por día"
 
-msgctxt "field:galeno.patient,pharma_lines:"
-msgid "Medicaments"
-msgstr "Medicamentos"
-
-msgctxt "field:galeno.patient,no_pharma_lines:"
-msgid "No pharmacological prescription"
-msgstr "Prescripción no farmacológica"
-
 msgctxt "field:galeno.patient,menarche:"
 msgid "Menarche age"
 msgstr "Edad de menarquía"
@@ -966,6 +993,10 @@ msgctxt "field:galeno.patient,nationality:"
 msgid "Nationality"
 msgstr "Nacionalidad"
 
+msgctxt "field:galeno.patient,no_pharma_lines:"
+msgid "No pharmamacological prescription"
+msgstr "Prescripción no farmacológica"
+
 msgctxt "field:galeno.patient,normal_labor:"
 msgid "Normal labor"
 msgstr "Parto normal"
@@ -973,6 +1004,10 @@ msgstr "Parto normal"
 msgctxt "field:galeno.patient,occupation:"
 msgid "Occupation"
 msgstr "Ocupación"
+
+msgctxt "field:galeno.patient,pharma_lines:"
+msgid "Medicaments"
+msgstr "Medicamentos"
 
 msgctxt "field:galeno.patient,phone:"
 msgid "Phone"
@@ -1172,7 +1207,6 @@ msgctxt "field:galeno.patient.appointment.email.log,create_uid:"
 msgid "Create User"
 msgstr "Usuario de creación"
 
-#, fuzzy
 msgctxt "field:galeno.patient.appointment.email.log,date:"
 msgid "Date"
 msgstr "Fecha"
@@ -2529,6 +2563,10 @@ msgctxt "field:galeno.report.evaluation.context,end_date:"
 msgid "End date"
 msgstr "Fecha fin"
 
+msgctxt "field:galeno.report.evaluation.context,gender_:"
+msgid "Gender"
+msgstr "Género"
+
 #, fuzzy
 msgctxt "field:galeno.report.evaluation.context,id:"
 msgid "ID"
@@ -2542,17 +2580,13 @@ msgctxt "field:galeno.report.evaluation.context,professional_:"
 msgid "Professional"
 msgstr "Doctor"
 
-msgctxt "field:galeno.report.evaluation.context,start_date:"
-msgid "Start date"
-msgstr "Fecha inicio"
-
 msgctxt "field:galeno.report.evaluation.context,speciality_:"
 msgid "Speciality"
 msgstr "Especialidad"
 
-msgctxt "field:galeno.report.evaluation.context,gender_:"
-msgid "Gender"
-msgstr "Género"
+msgctxt "field:galeno.report.evaluation.context,start_date:"
+msgid "Start date"
+msgstr "Fecha inicio"
 
 msgctxt "field:galeno.speciality,code:"
 msgid "Code"
@@ -2689,6 +2723,10 @@ msgstr "Usuario modificación"
 msgctxt "field:ir.action.report,signatures:"
 msgid "Signatures"
 msgstr "Firmas"
+
+msgctxt "field:ir.action.report,translatable:"
+msgid "Translatable"
+msgstr "Traducible"
 
 #, fuzzy
 msgctxt "field:ir.action.report.signature,create_date:"
@@ -2926,6 +2964,10 @@ msgctxt "help:galeno.professional,prefix:"
 msgid "Ex: Mr., Mrs, etc"
 msgstr "Ej. Sr. Sra, etc"
 
+msgctxt "help:ir.action.report,translatable:"
+msgid "Uncheck to disable translations for this report."
+msgstr ""
+
 msgctxt "model:galeno.configuration,name:"
 msgid "Galeno Configuration"
 msgstr "Configuración"
@@ -2933,6 +2975,10 @@ msgstr "Configuración"
 msgctxt "model:galeno.configuration.duration,name:"
 msgid "Galeno Configuration Duration"
 msgstr "Configuración duraciones"
+
+msgctxt "model:galeno.configuration.logo,name:"
+msgid "Galeno Configuration Logo"
+msgstr ""
 
 msgctxt "model:galeno.configuration.sequence,name:"
 msgid "Galeno Configuration Sequence"
@@ -3058,7 +3104,6 @@ msgctxt "model:galeno.patient.prescription.no.pharma.line,name:"
 msgid "Patient Prescription No Pharma Line"
 msgstr "Líneas no farmacológicas"
 
-#, fuzzy
 msgctxt "model:galeno.patient.prescription.pharma.line,name:"
 msgid "Patient Prescription Pharma Line"
 msgstr "Línea de prescipción"
@@ -3126,6 +3171,10 @@ msgstr "Drogas"
 msgctxt "model:ir.action,name:act_ethnic_group_form"
 msgid "Ethnic Groups"
 msgstr "Grupos étnicos"
+
+msgctxt "model:ir.action,name:act_evaluation_prescription"
+msgid "Prescription"
+msgstr "Prescripción"
 
 msgctxt "model:ir.action,name:act_galeno_configuration_form"
 msgid "Configuration"
@@ -3543,7 +3592,6 @@ msgctxt "report:galeno.patient.evaluation:"
 msgid ":"
 msgstr ""
 
-#, fuzzy
 msgctxt "report:galeno.patient.evaluation:"
 msgid "Abdomen"
 msgstr "Abdomen"
@@ -4089,10 +4137,6 @@ msgid "Medicamento"
 msgstr ""
 
 msgctxt "report:galeno.patient.prescription:"
-msgid "Notas"
-msgstr ""
-
-msgctxt "report:galeno.patient.prescription:"
 msgid "Notas:"
 msgstr ""
 
@@ -4110,6 +4154,10 @@ msgstr ""
 
 msgctxt "report:galeno.patient.prescription:"
 msgid "Posología:"
+msgstr ""
+
+msgctxt "report:galeno.patient.prescription:"
+msgid "Prescripción no farmacológica"
 msgstr ""
 
 msgctxt "report:galeno.patient.prescription:"
@@ -5059,16 +5107,30 @@ msgid "All"
 msgstr "Todo"
 
 msgctxt "selection:galeno.report.evaluation,state:"
-msgid "Canceled"
-msgstr "Cancelada"
+msgid "canceled"
+msgstr ""
 
 msgctxt "selection:galeno.report.evaluation,state:"
-msgid "Finished"
-msgstr "Finalizada"
+msgid "finished"
+msgstr ""
 
 msgctxt "selection:galeno.report.evaluation,state:"
-msgid "Initiated"
-msgstr "Iniciada"
+msgid "initiated"
+msgstr ""
+
+msgctxt "selection:galeno.report.evaluation.context,gender_:"
+msgid ""
+msgstr ""
+
+#, fuzzy
+msgctxt "selection:galeno.report.evaluation.context,gender_:"
+msgid "Female"
+msgstr "Femenino"
+
+#, fuzzy
+msgctxt "selection:galeno.report.evaluation.context,gender_:"
+msgid "Male"
+msgstr "Masculino"
 
 msgctxt "selection:galeno.test,gender:"
 msgid "Female"
@@ -5207,8 +5269,12 @@ msgid "Hour"
 msgstr "Hora"
 
 msgctxt "view:galeno.patient.prescription:"
-msgid "Prescription detail"
-msgstr "Detalle de prescripción"
+msgid "No Pharmacological"
+msgstr "No Farmacológica"
+
+msgctxt "view:galeno.patient.prescription:"
+msgid "Pharmacological"
+msgstr "Farmacológica"
 
 msgctxt "view:galeno.patient:"
 msgid "Backgrounds"

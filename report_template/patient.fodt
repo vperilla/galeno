@@ -4,7 +4,7 @@
  <office:meta><meta:generator>LibreOffice/6.1.1.2$Linux_X86_64 LibreOffice_project/10$Build-2</meta:generator><meta:creation-date>2008-06-07T15:28:22</meta:creation-date><dc:date>2009-01-10T16:03:32</dc:date><meta:editing-cycles>1</meta:editing-cycles><meta:editing-duration>PT0S</meta:editing-duration><meta:document-statistic meta:table-count="23" meta:image-count="0" meta:object-count="0" meta:page-count="7" meta:paragraph-count="240" meta:word-count="509" meta:character-count="5971" meta:non-whitespace-character-count="5704"/><meta:user-defined meta:name="Info 1"/><meta:user-defined meta:name="Info 2"/><meta:user-defined meta:name="Info 3"/><meta:user-defined meta:name="Info 4"/></office:meta>
  <office:settings>
   <config:config-item-set config:name="ooo:view-settings">
-   <config:config-item config:name="ViewAreaTop" config:type="long">2</config:config-item>
+   <config:config-item config:name="ViewAreaTop" config:type="long">0</config:config-item>
    <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
    <config:config-item config:name="ViewAreaWidth" config:type="long">34479</config:config-item>
    <config:config-item config:name="ViewAreaHeight" config:type="long">14818</config:config-item>
@@ -13,12 +13,12 @@
    <config:config-item-map-indexed config:name="Views">
     <config:config-item-map-entry>
      <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
-     <config:config-item config:name="ViewLeft" config:type="long">17674</config:config-item>
-     <config:config-item config:name="ViewTop" config:type="long">1637</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">17591</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">2085</config:config-item>
      <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
-     <config:config-item config:name="VisibleTop" config:type="long">2</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">0</config:config-item>
      <config:config-item config:name="VisibleRight" config:type="long">34477</config:config-item>
-     <config:config-item config:name="VisibleBottom" config:type="long">14818</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">14817</config:config-item>
      <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutColumns" config:type="short">0</config:config-item>
      <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
@@ -93,7 +93,7 @@
    <config:config-item config:name="UnxForceZeroExtLeading" config:type="boolean">false</config:config-item>
    <config:config-item config:name="TabAtLeftIndentForParagraphsInList" config:type="boolean">false</config:config-item>
    <config:config-item config:name="PrintRightPages" config:type="boolean">true</config:config-item>
-   <config:config-item config:name="Rsid" config:type="int">4965338</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">5014630</config:config-item>
    <config:config-item config:name="MathBaselineAlignment" config:type="boolean">false</config:config-item>
    <config:config-item config:name="MsWordCompTrailingBlanks" config:type="boolean">false</config:config-item>
    <config:config-item config:name="InvertBorderSpacing" config:type="boolean">false</config:config-item>
@@ -1489,29 +1489,41 @@
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties style:text-underline-style="none" fo:font-weight="bold" officeooo:rsid="003f82a9" officeooo:paragraph-rsid="003f82a9" style:font-weight-asian="bold" style:font-weight-complex="bold"/>
   </style:style>
-  <style:style style:name="P143" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1">
+  <style:style style:name="P143" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:color="#000000" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:font-name="Tinos" fo:font-size="12pt" fo:font-style="normal" fo:text-shadow="none" style:text-underline-style="none" fo:font-weight="bold" officeooo:paragraph-rsid="004b81ac" style:font-size-asian="12pt" style:font-style-asian="normal" style:font-weight-asian="bold" style:font-size-complex="12pt" style:font-style-complex="normal" style:font-weight-complex="bold" style:text-overline-style="none" style:text-overline-color="font-color"/>
+  </style:style>
+  <style:style style:name="P144" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L1">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P144" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L2">
+  <style:style style:name="P145" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L2">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P145" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L4">
+  <style:style style:name="P146" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L4">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P146" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L3">
+  <style:style style:name="P147" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L3">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" style:text-underline-style="none" fo:font-weight="normal" officeooo:rsid="003392d8" officeooo:paragraph-rsid="00391662" style:font-size-asian="10pt" style:font-weight-asian="normal" style:font-size-complex="10pt" style:font-weight-complex="normal"/>
   </style:style>
-  <style:style style:name="P147" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L5">
+  <style:style style:name="P148" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L5">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="003af174" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
-  <style:style style:name="P148" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L3">
+  <style:style style:name="P149" style:family="paragraph" style:parent-style-name="Table_20_Contents" style:list-style-name="L3">
    <style:paragraph-properties fo:margin-top="0cm" fo:margin-bottom="0cm" loext:contextual-spacing="false" fo:text-align="start" style:justify-single-word="false"/>
    <style:text-properties officeooo:paragraph-rsid="00391662"/>
+  </style:style>
+  <style:style style:name="P150" style:family="paragraph" style:parent-style-name="Header">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="004886bb" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
+  </style:style>
+  <style:style style:name="P151" style:family="paragraph" style:parent-style-name="Footer">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+   <style:text-properties fo:font-size="10pt" officeooo:paragraph-rsid="004886bb" style:font-size-asian="10pt" style:font-size-complex="10pt"/>
   </style:style>
   <style:style style:name="T1" style:family="text">
    <style:text-properties officeooo:rsid="0029e76e"/>
@@ -1906,12 +1918,12 @@
         </draw:frame></text:p>
       </table:table-cell>
       <table:table-cell table:style-name="Tabla22.B1" office:value-type="string">
-       <text:p text:style-name="P19"><text:placeholder text:placeholder-type="text">&lt;company.rec_name&gt;</text:placeholder></text:p>
-       <text:p text:style-name="P4"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;company.header&quot;&gt;</text:placeholder></text:p>
-       <text:p text:style-name="P4"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in company.header.split(&apos;\n&apos;)&quot;&gt;</text:placeholder></text:p>
-       <text:p text:style-name="P4"><text:placeholder text:placeholder-type="text">&lt;line&gt;</text:placeholder></text:p>
-       <text:p text:style-name="P4"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
-       <text:p text:style-name="P8"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
+       <text:p text:style-name="P143"><text:placeholder text:placeholder-type="text">&lt;company.rec_name&gt;</text:placeholder></text:p>
+       <text:p text:style-name="P150"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;company.header&quot;&gt;</text:placeholder></text:p>
+       <text:p text:style-name="P150"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in company.header.split(&apos;\n&apos;)&quot;&gt;</text:placeholder></text:p>
+       <text:p text:style-name="P150"><text:placeholder text:placeholder-type="text">&lt;line&gt;</text:placeholder></text:p>
+       <text:p text:style-name="P150"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
+       <text:p text:style-name="P151"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
       </table:table-cell>
      </table:table-row>
     </table:table>
@@ -2208,15 +2220,15 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla4.B4" office:value-type="string">
       <text:p text:style-name="P94"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_diseases&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list772601977" text:style-name="L1">
+      <text:list xml:id="list2779372545" text:style-name="L1">
        <text:list-item>
-        <text:p text:style-name="P143"><text:placeholder text:placeholder-type="text">&lt;line.disease.rec_name&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P144"><text:placeholder text:placeholder-type="text">&lt;line.disease.rec_name&gt;</text:placeholder></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P98"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list560248808" text:style-name="L2">
+      <text:list xml:id="list1802574125" text:style-name="L2">
        <text:list-header>
-        <text:p text:style-name="P144"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P145"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
        </text:list-header>
       </text:list>
       <text:p text:style-name="P98"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
@@ -2229,15 +2241,15 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla4.B6" office:value-type="string">
       <text:p text:style-name="P94"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_medicaments&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list3474763427" text:style-name="L3">
+      <text:list xml:id="list245107396" text:style-name="L3">
        <text:list-item>
-        <text:p text:style-name="P148"><text:soft-page-break/><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.medicament.rec_name&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/>- </text:span><text:span text:style-name="T24">Cantidad: </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.quantity&gt;</text:placeholder></text:span></text:p>
+        <text:p text:style-name="P149"><text:soft-page-break/><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.medicament.rec_name&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/>- </text:span><text:span text:style-name="T24">Cantidad: </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.quantity&gt;</text:placeholder></text:span></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P98"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list2179282465" text:style-name="L4">
+      <text:list xml:id="list894667607" text:style-name="L4">
        <text:list-header>
-        <text:p text:style-name="P145"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P146"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
        </text:list-header>
       </text:list>
       <text:p text:style-name="P98"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
@@ -2250,9 +2262,9 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla4.B6" office:value-type="string">
       <text:p text:style-name="P94"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_surgeries&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list62920000354636" text:continue-list="list3474763427" text:style-name="L3">
+      <text:list xml:id="list223703089871872" text:continue-list="list245107396" text:style-name="L3">
        <text:list-item>
-        <text:p text:style-name="P148"><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/></text:span></text:p>
+        <text:p text:style-name="P149"><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/></text:span></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P98"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
@@ -2264,15 +2276,15 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla4.B7" office:value-type="string">
       <text:p text:style-name="P94"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_family&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list62921240056626" text:continue-numbering="true" text:style-name="L3">
+      <text:list xml:id="list223701749393036" text:continue-numbering="true" text:style-name="L3">
        <text:list-item>
-        <text:p text:style-name="P148"><text:span text:style-name="T26"><text:placeholder text:placeholder-type="text">&lt;line.relationship&gt;</text:placeholder></text:span><text:span text:style-name="T26">:</text:span><text:span text:style-name="T25"> </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.disease.code&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/>- </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.disease.name&gt;</text:placeholder></text:span></text:p>
+        <text:p text:style-name="P149"><text:span text:style-name="T26"><text:placeholder text:placeholder-type="text">&lt;line.relationship&gt;</text:placeholder></text:span><text:span text:style-name="T26">:</text:span><text:span text:style-name="T25"> </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.disease.code&gt;</text:placeholder></text:span><text:span text:style-name="T25"><text:s/>- </text:span><text:span text:style-name="T25"><text:placeholder text:placeholder-type="text">&lt;line.disease.name&gt;</text:placeholder></text:span></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P98"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list62920065722390" text:continue-list="list2179282465" text:style-name="L4">
+      <text:list xml:id="list223703041822131" text:continue-list="list894667607" text:style-name="L4">
        <text:list-header>
-        <text:p text:style-name="P145"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P146"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
        </text:list-header>
       </text:list>
       <text:p text:style-name="P98"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
@@ -2285,15 +2297,15 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla4.B8" office:value-type="string">
       <text:p text:style-name="P94"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.background_tests&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list62921918303156" text:continue-list="list62921240056626" text:style-name="L3">
+      <text:list xml:id="list223703679981297" text:continue-list="list223701749393036" text:style-name="L3">
        <text:list-item>
-        <text:p text:style-name="P146"><text:placeholder text:placeholder-type="text">&lt;line.test.rec_name&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P147"><text:placeholder text:placeholder-type="text">&lt;line.test.rec_name&gt;</text:placeholder></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P98"><text:placeholder text:placeholder-type="text">&lt;if test=&quot;line.notes&quot;&gt;</text:placeholder></text:p>
-      <text:list xml:id="list62920320844893" text:continue-list="list62920065722390" text:style-name="L4">
+      <text:list xml:id="list223701872786397" text:continue-list="list223703041822131" text:style-name="L4">
        <text:list-header>
-        <text:p text:style-name="P145"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
+        <text:p text:style-name="P146"><text:placeholder text:placeholder-type="text">&lt;line.notes&gt;</text:placeholder></text:p>
        </text:list-header>
       </text:list>
       <text:p text:style-name="P98"><text:placeholder text:placeholder-type="text">&lt;/if&gt;</text:placeholder></text:p>
@@ -2338,9 +2350,9 @@
      </table:table-cell>
      <table:table-cell table:style-name="Tabla7.B3" office:value-type="string">
       <text:p text:style-name="P128"><text:span text:style-name="T10"><text:placeholder text:placeholder-type="text">&lt;for each=&quot;line in patient.activities&quot;&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.test.rec_name&gt;</text:placeholder></text:span></text:p>
-      <text:list xml:id="list162032829" text:style-name="L5">
+      <text:list xml:id="list2259288022" text:style-name="L5">
        <text:list-item>
-        <text:p text:style-name="P147"><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.activity&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:s/>- </text:span><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.week_hours&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:s/></text:span><text:span text:style-name="T13">horas a la semana.</text:span></text:p>
+        <text:p text:style-name="P148"><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.activity&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:s/>- </text:span><text:span text:style-name="T12"><text:placeholder text:placeholder-type="text">&lt;line.week_hours&gt;</text:placeholder></text:span><text:span text:style-name="T12"><text:s/></text:span><text:span text:style-name="T13">horas a la semana.</text:span></text:p>
        </text:list-item>
       </text:list>
       <text:p text:style-name="P99"><text:placeholder text:placeholder-type="text">&lt;/for&gt;</text:placeholder></text:p>
