@@ -3,6 +3,7 @@
     <field name="company" tree_invisible="1"/>
     <field name="type_" width="150"/>
     <field name="patient"/>
+    <field name="galeno_group"/>
     <field name="professional"/>
     <field name="start_date" widget="date" width="100"/>
     <field name="start_date" widget="time" string="Hour" width="100"/>

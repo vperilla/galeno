@@ -839,7 +839,7 @@ msgstr "Antecedentes exámenes"
 
 msgctxt "field:galeno.patient,birthdate:"
 msgid "Birthdate"
-msgstr "Fecha nacimiento"
+msgstr "F. nacimiento"
 
 msgctxt "field:galeno.patient,blood_type:"
 msgid "Blood Type"

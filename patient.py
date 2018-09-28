@@ -325,6 +325,20 @@ class Patient(ModelSQL, ModelView):
                 'invalid_phone': ('Invalid phone "%(phone)s"'),
                 'invalid_email': ('Invalid email "%(email)s"'),
                 })
+        cls._buttons.update({
+                'open_appointments': {
+                    'icon': 'galeno-appointment',
+                    },
+                'open_evaluations': {
+                    'icon': 'galeno-evaluation',
+                    },
+                'open_requested_tests': {
+                    'icon': 'galeno-test',
+                    },
+                'open_prescriptions': {
+                    'icon': 'galeno-prescription',
+                    },
+                })
         cls._sql_constraints += [
             ('identifier_uniq', Unique(t, t.company, t.identifier),
              'Identifier must be unique'),
@@ -673,6 +687,26 @@ class Patient(ModelSQL, ModelView):
             self.raise_user_error('invalid_email', {
                 'email': self.email,
                 })
+
+    @classmethod
+    @ModelView.button_action('galeno.act_patient_appointments')
+    def open_appointments(cls, patients):
+        pass
+
+    @classmethod
+    @ModelView.button_action('galeno.act_patient_evaluations')
+    def open_evaluations(cls, patients):
+        pass
+
+    @classmethod
+    @ModelView.button_action('galeno.act_patient_requested_tests')
+    def open_requested_tests(cls, patients):
+        pass
+
+    @classmethod
+    @ModelView.button_action('galeno.act_patient_prescriptions')
+    def open_prescriptions(cls, patients):
+        pass
 
     @classmethod
     def create(cls, vlist):

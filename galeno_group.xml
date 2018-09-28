@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="galeno_group_view_form">
+            <field name="model">galeno.group</field>
+            <field name="type">form</field>
+            <field name="name">galeno_group_form</field>
+        </record>
+        <record model="ir.ui.view" id="galeno_group_view_tree">
+            <field name="model">galeno.group</field>
+            <field name="type">tree</field>
+            <field name="name">galeno_group_tree</field>
+        </record>
+        <record model="ir.action.act_window" id="act_galeno_group_form">
+            <field name="name">Groups</field>
+            <field name="res_model">galeno.group</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_galeno_group_form_view1">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="galeno_group_view_tree"/>
+            <field name="act_window" ref="act_galeno_group_form"/>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_galeno_group_form_view2">
+            <field name="sequence" eval="20"/>
+            <field name="view" ref="galeno_group_view_form"/>
+            <field name="act_window" ref="act_galeno_group_form"/>
+        </record>
+        <menuitem parent="menu_galeno_admin" action="act_galeno_group_form"
+            id="menu_galeno_group_form" sequence="1000" icon="galeno-group"/>
+        <record model="ir.model.access" id="access_galeno_group">
+            <field name="model"
+                search="[('model', '=', 'galeno.group')]"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="False"/>
+            <field name="perm_create" eval="False"/>
+            <field name="perm_delete" eval="False"/>
+        </record>
+        <record model="ir.model.access" id="access_galeno_group_admin">
+            <field name="model"
+                search="[('model', '=', 'galeno.group')]"/>
+            <field name="group" ref="group_galeno_admin"/>
+            <field name="perm_read" eval="True"/>
+            <field name="perm_write" eval="True"/>
+            <field name="perm_create" eval="True"/>
+            <field name="perm_delete" eval="True"/>
+        </record>
+
+    </data>
+</tryton>

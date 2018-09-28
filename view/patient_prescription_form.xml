@@ -3,12 +3,14 @@
     <group id="patient_prescription_header" colspan="4">
         <label name="date"/>
         <field name="date"/>
+        <label name="code"/>
+        <field name="code"/>
+        <label name="galeno_group"/>
+        <field name="galeno_group"/>
         <label name="professional"/>
         <field name="professional"/>
         <label name="patient"/>
         <field name="patient"/>
-        <label name="code"/>
-        <field name="code"/>
         <label name="evaluation"/>
         <field name="evaluation"/>
     </group>

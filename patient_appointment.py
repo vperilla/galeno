@@ -6,7 +6,7 @@ from email.utils import formataddr, getaddresses
 from sql.conditionals import Case
 
 from trytond.model import Workflow, ModelView, ModelSQL, fields
-from trytond.pyson import Eval, If, Bool
+from trytond.pyson import Eval
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.tools import reduce_ids, grouped_slice
@@ -15,18 +15,15 @@ from trytond.config import config
 from trytond.sendmail import sendmail_transactional, SMTPDataManager
 
 from . import galeno_tools
+from .galeno_mixin import GalenoShared
 
 __all__ = ['PatientAppointment', 'PatientAppointmentEmailLog']
 
 
-class PatientAppointment(Workflow, ModelSQL, ModelView):
+class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
     'Patient Appointment'
     __name__ = 'galeno.patient.appointment'
 
-    company = fields.Many2One('company.company', 'Company', required=True,
-        states={
-            'invisible': True,
-        })
     type_ = fields.Selection(
         [
             ('appointment', 'Appointment'),
@@ -36,31 +33,18 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         states={
             'invisible': (Eval('type_') != 'procedure'),
         })
-    professional = fields.Many2One('galeno.professional', 'Professional',
-        states={
-            'readonly': ~Eval('state').in_(['scheduled']) | (
-                Eval('context', {}).get('readonly')),
-        },
-        domain=[
-            ('id', If(Bool(
-                Eval('context', {}).get('professional', None)), '=', '!='),
-                Eval('context', {}).get('professional', -1)),
-        ], depends=['state'], required=True, select=True)
     start_date = fields.DateTime('Start Date', required=True,
         states={
-            'readonly': ~Eval('state').in_(['scheduled']) | (
-                Eval('context', {}).get('readonly')),
+            'readonly': ~Eval('state').in_(['scheduled']),
         }, depends=['state'])
     end_date = fields.DateTime('End Date', required=True,
         states={
-            'readonly': ~Eval('state').in_(['scheduled']) | (
-                Eval('context', {}).get('readonly')),
+            'readonly': ~Eval('state').in_(['scheduled']),
         }, depends=['state'])
     patient = fields.Many2One(
         'galeno.patient', 'Patient', ondelete='RESTRICT',
         states={
-            'readonly': ~Eval('state').in_(['scheduled']) | (
-                Eval('context', {}).get('readonly')),
+            'readonly': ~Eval('state').in_(['scheduled']),
         }, depends=['state'], select=True)
     state = fields.Selection(
         [
@@ -72,8 +56,7 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
     color = fields.Function(fields.Char('color'), 'get_color')
     notes = fields.Text('Notes',
         states={
-            'readonly': ~Eval('state').in_(['scheduled']) | (
-                Eval('context', {}).get('readonly')),
+            'readonly': ~Eval('state').in_(['scheduled']),
         }, depends=['state'])
     appointments_of_day = fields.Function(
         fields.Many2Many('galeno.patient.appointment', None, None,
@@ -132,20 +115,12 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
                 })
 
     @staticmethod
-    def default_company():
-        return Transaction().context.get('company')
-
-    @staticmethod
     def default_type_():
         return 'appointment'
 
     @staticmethod
     def default_state():
         return 'scheduled'
-
-    @staticmethod
-    def default_professional():
-        return Transaction().context.get('professional')
 
     @classmethod
     def get_color(cls, appointments, name):
@@ -181,7 +156,7 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         pool = Pool()
         Configuration = pool.get('galeno.configuration')
         config = Configuration(1)
-        if self.start_date and self.professional:
+        if self.start_date and self.professional and self.company:
             utc_dt = instance(self.start_date, tz='UTC')
             local_dt = utc_dt.in_timezone(self.company.timezone)
             if local_dt.hour == 0 and local_dt.minute == 0:
@@ -251,12 +226,20 @@ class PatientAppointment(Workflow, ModelSQL, ModelView):
         pass
 
     def get_rec_name(self, name):
-        if self.patient:
-            local_date = galeno_tools.format_datetime(
-                self.start_date, self.company.timezone)
-            return "%s - %s" % (local_date, self.patient.rec_name)
+        local_date = galeno_tools.format_datetime(
+            self.start_date, self.company.timezone)
+        if Transaction().context.get('professional'):
+            if self.patient:
+                return "%s - %s" % (local_date, self.patient.rec_name)
+            else:
+                return "%s - %s" % (local_date, self.notes)
         else:
-            return self.notes
+            if self.patient:
+                return "%s - %s -%s" % (local_date, self.professional.rec_name,
+                    self.patient.rec_name)
+            else:
+                return "%s - %s -%s" % (local_date, self.professional.rec_name,
+                    self.notes)
 
     @classmethod
     def search_rec_name(cls, name, clause):

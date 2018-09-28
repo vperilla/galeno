@@ -8,6 +8,7 @@ from . import occupation
 from . import speciality
 from . import professional
 from . import user
+from . import galeno_group
 from . import ethnic_group
 from . import disease
 from . import procedure
@@ -21,6 +22,7 @@ from . import patient_appointment
 from . import patient_evaluation
 from . import patient_test
 from . import patient_prescription
+from . import galeno_mixin
 from . import configuration
 from . import galeno_reporting
 from . import attachment
@@ -38,6 +40,8 @@ def register():
         speciality.Speciality,
         professional.Professional,
         user.User,
+        galeno_group.GalenoGroup,
+        galeno_group.GalenoGroupRelatedUser,
         ethnic_group.EthnicGroup,
         disease.DiseaseCategory,
         disease.DiseaseGroup,
@@ -73,6 +77,7 @@ def register():
         patient_prescription.PatientPrescription,
         patient_prescription.PatientPrescriptionPharmaLine,
         patient_prescription.PatientPrescriptionNoPharmaLine,
+        galeno_mixin.GalenoContext,
         configuration.Configuration,
         configuration.ConfigurationSequence,
         configuration.ConfigurationDuration,

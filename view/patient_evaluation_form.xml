@@ -3,9 +3,10 @@
     <group id="patient_evaluation_header" colspan="4" col="6">
         <label name="code"/>
         <field name="code"/>
+        <label name="galeno_group"/>
+        <field name="galeno_group"/>
         <label name="professional"/>
         <field name="professional"/>
-        <newline/>
         <label name="reason"/>
         <field name="reason"/>
         <label name="start_date"/>

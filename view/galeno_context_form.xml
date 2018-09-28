@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<form>
+    <label name="galeno_group_filter"/>
+    <field name="galeno_group_filter" widget="selection"/>
+    <label name="professional_filter"/>
+    <field name="professional_filter" widget="selection"/>
+</form>

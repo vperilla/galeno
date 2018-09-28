@@ -14,5 +14,6 @@
         <field name="speciality"/>
         <label name="medical_identifier"/>
         <field name="medical_identifier"/>
+        <field name="galeno_groups" colspan="4"/>
     </group>
 </form>

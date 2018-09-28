@@ -30,28 +30,35 @@
             <field name="type">calendar</field>
             <field name="name">patient_appointment_calendar</field>
         </record>
-        <record model="ir.action.act_window" id="act_patient_appointment_form">
+        <record model="ir.action.act_window" id="act_patient_appointment_list">
             <field name="name">List</field>
             <field name="res_model">galeno.patient.appointment</field>
+            <field name="context_model">galeno.context</field>
         </record>
         <record model="ir.action.act_window.view"
-            id="act_patient_appointment_form_view1">
+            id="act_patient_appointment_list_view1">
             <field name="sequence" eval="10"/>
             <field name="view" ref="patient_appointment_view_tree"/>
-            <field name="act_window" ref="act_patient_appointment_form"/>
+            <field name="act_window" ref="act_patient_appointment_list"/>
         </record>
         <record model="ir.action.act_window.view"
-            id="act_patient_appointment_form_view2">
+            id="act_patient_appointment_list_view2">
             <field name="sequence" eval="20"/>
             <field name="view" ref="patient_appointment_view_form"/>
-            <field name="act_window" ref="act_patient_appointment_form"/>
+            <field name="act_window" ref="act_patient_appointment_list"/>
         </record>
-        <menuitem parent="menu_patient_appointment" action="act_patient_appointment_form"
-            id="menu_patient_appointment_form" sequence="100" icon="galeno-list"/>
+        <menuitem parent="menu_patient_appointment" action="act_patient_appointment_list"
+            id="menu_patient_appointment_list" sequence="100" icon="galeno-list"/>
+        <record model="ir.ui.menu-res.group"
+            id="menu_patient_appointment_list_group_galeno">
+            <field name="menu" ref="menu_patient_appointment_list"/>
+            <field name="group" ref="group_galeno"/>
+        </record>
 
         <record model="ir.action.act_window" id="act_patient_appointment_calendar">
             <field name="name">Calendar</field>
             <field name="res_model">galeno.patient.appointment</field>
+            <field name="context_model">galeno.context</field>
         </record>
         <record model="ir.action.act_window.view"
             id="act_patient_appointment_calendar_view1">
@@ -67,6 +74,11 @@
         </record>
         <menuitem parent="menu_patient_appointment" action="act_patient_appointment_calendar"
             id="menu_patient_appointment_calendar" sequence="110" icon="galeno-appointment"/>
+        <record model="ir.ui.menu-res.group"
+            id="menu_patient_appointment_calendar_group_galeno">
+            <field name="menu" ref="menu_patient_appointment_calendar"/>
+            <field name="group" ref="group_galeno"/>
+        </record>
 
         <record model="ir.model.access" id="access_appointment">
             <field name="model"

@@ -186,19 +186,25 @@
             <field name="name">galeno-photo</field>
             <field name="path">icons/photo.svg</field>
         </record>
+        <record model="ir.ui.icon" id="galeno_group_icon">
+            <field name="name">galeno-group</field>
+            <field name="path">icons/galeno-group.svg</field>
+        </record>
 
-        <!-- MAIN MENU -->
+        <!-- GROUPS -->
         <record model="res.group" id="group_galeno_admin">
             <field name="name">Galeno Administrator</field>
         </record>
         <record model="res.group" id="group_galeno">
             <field name="name">Galeno</field>
         </record>
+        <record model="res.group" id="group_galeno_share">
+            <field name="name">Galeno Share</field>
+        </record>
         <record model="res.group" id="group_galeno_assistant">
             <field name="name">Assistant</field>
         </record>
 
-        <!-- GROUPS -->
         <record model="res.user-res.group" id="user_admin_group_galeno">
             <field name="user" ref="res.user_admin"/>
             <field name="group" ref="group_galeno"/>
@@ -207,6 +213,18 @@
             <field name="user" ref="res.user_admin"/>
             <field name="group" ref="group_galeno_admin"/>
         </record>
+        <record model="res.user-res.group" id="user_admin_group_galeno_assistant">
+            <field name="user" ref="res.user_admin"/>
+            <field name="group" ref="group_galeno_assistant"/>
+        </record>
+
+        <record model="ir.ui.view" id="galeno_context_view_form">
+            <field name="model">galeno.context</field>
+            <field name="type">form</field>
+            <field name="name">galeno_context_form</field>
+        </record>
+
+        <!-- MAIN MENU -->
         <menuitem name="Galeno" id="menu_galeno" sequence="4"
             icon="galeno-galeno"/>
         <record model="ir.ui.menu-res.group" id="menu_galeno_group_galeno">

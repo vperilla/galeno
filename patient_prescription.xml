@@ -57,6 +57,7 @@
         <record model="ir.action.act_window" id="act_patient_prescription_form">
             <field name="name">Prescriptions</field>
             <field name="res_model">galeno.patient.prescription</field>
+            <field name="context_model">galeno.context</field>
         </record>
         <record model="ir.action.act_window.view"
             id="act_patient_prescription_form_view1">

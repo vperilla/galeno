@@ -53,6 +53,7 @@
         <record model="ir.action.act_window" id="act_patient_evaluation_form">
             <field name="name">Evaluations</field>
             <field name="res_model">galeno.patient.evaluation</field>
+            <field name="context_model">galeno.context</field>
         </record>
         <record model="ir.action.act_window.view"
             id="act_patient_evaluation_form_view1">
@@ -200,6 +201,7 @@
         <record model="ir.action.act_window" id="act_patient_evaluation_test_form">
             <field name="name">Requested tests</field>
             <field name="res_model">galeno.patient.evaluation.test</field>
+            <field name="context_model">galeno.context</field>
         </record>
         <record model="ir.action.act_window.view"
             id="act_patient_evaluation_test_form_view1">

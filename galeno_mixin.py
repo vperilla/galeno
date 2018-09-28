@@ -1,6 +1,8 @@
-from trytond.model import fields, Unique
+from trytond.model import ModelView, fields, Unique
+from trytond.pyson import Bool, Eval, If, Id
+from trytond.transaction import Transaction
 
-__all__ = ['BasicMixin', 'CoreMixin']
+__all__ = ['BasicMixin', 'CoreMixin', 'GalenoContext', 'GalenoShared']
 
 
 class BasicMixin(object):
@@ -54,3 +56,100 @@ class CoreMixin(object):
                         'record': record.rec_name,
                     })
         super(CoreMixin, cls).write(*args)
+
+
+class GalenoContext(ModelView):
+    'Galeno Context'
+    __name__ = 'galeno.context'
+
+    galeno_group_filter = fields.Many2One('galeno.group', 'Group',
+        domain=[
+            ('id', 'in', Eval('context', {}).get('galeno_groups', [])),
+        ], depends=['state'], required=True)
+    professional_filter = fields.Many2One('galeno.professional', 'Professional',
+        states={
+            'required': ~Id('galeno',
+                'group_galeno_share').in_(
+                Eval('context', {}).get('groups', [])),
+        },
+        domain=[If(Id('galeno',
+                'group_galeno_share').in_(
+                Eval('context', {}).get('groups', [])),
+            [('galeno_groups', 'in', [Eval('galeno_group_filter')])],
+            [('id', If(Bool(
+                Eval('context', {}).get('professional', False)), '=', '!='),
+                Eval('context', {}).get('professional', -1)),
+            ('galeno_groups', 'in', [Eval('galeno_group_filter')])]),
+        ], depends=['galeno_group_filter'])
+
+    @staticmethod
+    def default_professional_filter():
+        if Transaction().context.get('professional'):
+            return Transaction().context['professional']
+
+    @classmethod
+    def default_galeno_group_filter(cls):
+        context = Transaction().context
+        if context.get('galeno_groups'):
+            return context['galeno_groups'][0]
+
+
+class GalenoShared(object):
+    'Galeno Shared Object'
+
+    company = fields.Many2One('company.company', 'Company', required=True,
+        states={
+            'invisible': True,
+        })
+    galeno_group = fields.Many2One('galeno.group', 'Group',
+        states={
+            'readonly': ~Eval('state').in_(['scheduled']),
+        },
+        domain=[
+            ('id', 'in', Eval('context', {}).get('galeno_groups', [])),
+        ], depends=['state'], required=True, select=True)
+    professional = fields.Many2One('galeno.professional', 'Professional',
+        states={
+            'readonly': ~Eval('state').in_(['scheduled']),
+        },
+        domain=[
+            ('id', If(Bool(
+                Eval('context', {}).get('professional', False)), '=', '!='),
+                Eval('context', {}).get('professional', -1)),
+            ('galeno_groups', 'in', [Eval('galeno_group')]),
+        ], depends=['state', 'galeno_group'], required=True, select=True)
+
+    @staticmethod
+    def default_company():
+        return Transaction().context.get('company')
+
+    @staticmethod
+    def default_professional():
+        return Transaction().context.get('professional')
+
+    @classmethod
+    def default_galeno_group(cls):
+        context = Transaction().context
+        if context.get('galeno_groups'):
+            if context.get('galeno_group_filter'):
+                return context['galeno_group_filter']
+            return context['galeno_groups'][0]
+
+    @fields.depends('galeno_group', 'professional')
+    def on_change_galeno_group(self, name=None):
+        if Transaction().context.get('professional') is None:
+            self.professional = None
+
+    @classmethod
+    def search(cls, args, offset=0, limit=None, order=None, count=False,
+            query=False):
+        args = args[:]
+        context = Transaction().context
+        if context.get('galeno_group_filter'):
+            args = ['AND',
+                ('galeno_group', '=', context['galeno_group_filter']), args[:]]
+        if context.get('professional_filter'):
+            args = ['AND',
+                ('professional', '=', context['professional_filter']), args[:]]
+        return super(GalenoShared, cls).search(args, offset=offset,
+            limit=limit, order=order, count=count, query=query)

@@ -72,6 +72,31 @@
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="False"/>
         </record>
+        <record model="ir.model.button" id="patient_open_appointments_button">
+            <field name="name">open_appointments</field>
+            <field name="string">Appointments</field>
+            <field name="model"
+                search="[('model', '=', 'galeno.patient')]"/>
+        </record>
+        <record model="ir.model.button" id="patient_open_evaluations_button">
+            <field name="name">open_evaluations</field>
+            <field name="string">Evaluations</field>
+            <field name="model"
+                search="[('model', '=', 'galeno.patient')]"/>
+        </record>
+        <record model="ir.model.button" id="patient_open_requested_tests_button">
+            <field name="name">open_requested_tests</field>
+            <field name="string">Requested Tests</field>
+            <field name="model"
+                search="[('model', '=', 'galeno.patient')]"/>
+        </record>
+        <record model="ir.model.button" id="patient_open_prescriptions_button">
+            <field name="name">open_prescriptions</field>
+            <field name="string">Prescriptions</field>
+            <field name="model"
+                search="[('model', '=', 'galeno.patient')]"/>
+        </record>
+
         <record model="ir.action.act_window" id="act_patient_evaluations">
             <field name="name">Evaluations</field>
             <field name="res_model">galeno.patient.evaluation</field>

@@ -5,23 +5,16 @@ from trytond.pyson import Eval, If, Bool
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 
+from .galeno_mixin import GalenoShared
+
 __all__ = ['PatientPrescription', 'PatientPrescriptionPharmaLine',
     'PatientPrescriptionNoPharmaLine']
 
 
-class PatientPrescription(Workflow, ModelSQL, ModelView):
+class PatientPrescription(GalenoShared, Workflow, ModelSQL, ModelView):
     'Patient Prescription'
     __name__ = 'galeno.patient.prescription'
 
-    professional = fields.Many2One('galeno.professional', 'Professional',
-        states={
-            'readonly': ~Eval('state').in_(['draft']),
-        },
-        domain=[
-            ('id', If(
-                Bool(Eval('context', {}).get('professional', None)), '=', '!='),
-                Eval('context', {}).get('professional', -1)),
-        ], depends=['state'], required=True, select=True)
     code = fields.Char('Code', readonly=True)
     state = fields.Selection(
         [
@@ -104,10 +97,6 @@ class PatientPrescription(Workflow, ModelSQL, ModelView):
     @staticmethod
     def default_date():
         return datetime.now()
-
-    @staticmethod
-    def default_professional():
-        return Transaction().context.get('professional')
 
     @fields.depends('evaluation', 'patient')
     def on_change_evaluation(self):

@@ -20,10 +20,12 @@
             <button name="professional_cancel"/>
             <button name="scheduled"/>
         </group>
-        <label name="patient"/>
-        <field name="patient"/>
+        <label name="galeno_group"/>
+        <field name="galeno_group"/>
         <label name="professional"/>
         <field name="professional"/>
+        <label name="patient"/>
+        <field name="patient"/>
         <newline/>
         <label name="procedure"/>
         <field name="procedure" colspan="3"/>

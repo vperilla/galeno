@@ -11,6 +11,7 @@ from trytond.tools import reduce_ids, grouped_slice
 from trytond.config import config
 
 from . import galeno_tools
+from .galeno_mixin import GalenoShared
 
 max_size = config.getint('galeno', 'max_attachment_size', default=5)
 
@@ -25,18 +26,10 @@ _STATES = [
 ]
 
 
-class PatientEvaluation(Workflow, ModelSQL, ModelView):
+class PatientEvaluation(GalenoShared, Workflow, ModelSQL, ModelView):
     'Patient Evaluation'
     __name__ = 'galeno.patient.evaluation'
 
-    professional = fields.Many2One('galeno.professional', 'Professional',
-        states={
-            'readonly': ~Eval('state').in_(['initial']),
-        },
-        domain=[
-            ('id', If(Bool(Eval('context', {}).get('professional')), '=', '!='),
-                Eval('context', {}).get('professional', -1)),
-        ], depends=['state'], required=True, select=True)
     code = fields.Char('Code', readonly=True)
     start_date = fields.DateTime('Start Date', required=True,
         states={
@@ -545,10 +538,6 @@ class PatientEvaluation(Workflow, ModelSQL, ModelView):
     def default_ms_mood():
         return 'normal'
 
-    @staticmethod
-    def default_professional():
-        return Transaction().context.get('professional')
-
     @classmethod
     def get_color(cls, evaluations, name):
         cursor = Transaction().connection.cursor()
@@ -792,6 +781,20 @@ class PatientEvaluationTest(ModelSQL, ModelView):
                         'size': int(size),
                         'max_size': max_size,
                         })
+
+    @classmethod
+    def search(cls, args, offset=0, limit=None, order=None, count=False,
+            query=False):
+        args = args[:]
+        context = Transaction().context
+        if context.get('galeno_group_filter'):
+            args = ['AND', ('evaluation.galeno_group', '=',
+                context['galeno_group_filter']), args[:]]
+        if context.get('professional_filter'):
+            args = ['AND', ('evaluation.professional', '=',
+                context['professional_filter']), args[:]]
+        return super(PatientEvaluationTest, cls).search(args, offset=offset,
+            limit=limit, order=order, count=count, query=query)
 
 
 class PatientEvaluationDiagnosis(ModelSQL, ModelView):
