@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<tryton>
+    <data>
+
+        <record model="ir.ui.view" id="evolution_graph_start_view_form">
+            <field name="model">galeno.evolution.graph.start</field>
+            <field name="type">form</field>
+            <field name="name">evolution_graph_form</field>
+        </record>
+        <record model="ir.action.wizard" id="wizard_evolution_graph">
+            <field name="name">Evolution Graph</field>
+            <field name="wiz_name">galeno.evolution.graph</field>
+        </record>
+        <record model="ir.action.keyword" id="act_open_evolution_graph">
+            <field name="keyword">form_action</field>
+            <field name="model">galeno.patient,-1</field>
+            <field name="action" ref="wizard_evolution_graph"/>
+        </record>
+    </data>
+</tryton>

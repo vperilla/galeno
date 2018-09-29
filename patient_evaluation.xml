@@ -181,6 +181,17 @@
             <field name="model">galeno.patient.evaluation,-1</field>
             <field name="action" ref="act_evaluation_prescription"/>
         </record>
+        <record model="ir.model.button" id="evaluation_open_prescription">
+            <field name="name">open_prescription</field>
+            <field name="string">Prescription</field>
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.evaluation')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="evaluation_open_prescription_button_group_galeno">
+            <field name="button" ref="evaluation_open_prescription"/>
+            <field name="group" ref="group_galeno"/>
+        </record>
 
         <!-- PATIENT EVALUATION TEST -->
         <record model="ir.ui.view" id="patient_evaluation_test_view_form">
@@ -320,6 +331,38 @@
             <field name="perm_write" eval="True"/>
             <field name="perm_create" eval="True"/>
             <field name="perm_delete" eval="True"/>
+        </record>
+
+        <record model="ir.ui.view" id="patient_evaluation_view_graph_weight">
+            <field name="model">galeno.patient.evaluation</field>
+            <field name="type">graph</field>
+            <field name="name">weight_graph</field>
+        </record>
+        <record model="ir.action.act_window" id="act_evolution_weight">
+            <field name="name">Weight Evolution</field>
+            <field name="res_model">galeno.patient.evaluation</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_evolution_weight_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="patient_evaluation_view_graph_weight"/>
+            <field name="act_window" ref="act_evolution_weight"/>
+        </record>
+
+        <record model="ir.ui.view" id="patient_evaluation_view_graph_heigth">
+            <field name="model">galeno.patient.evaluation</field>
+            <field name="type">graph</field>
+            <field name="name">heigth_graph</field>
+        </record>
+        <record model="ir.action.act_window" id="act_evolution_heigth">
+            <field name="name">Heigth Evolution</field>
+            <field name="res_model">galeno.patient.evaluation</field>
+        </record>
+        <record model="ir.action.act_window.view"
+            id="act_evolution_heigth_view">
+            <field name="sequence" eval="10"/>
+            <field name="view" ref="patient_evaluation_view_graph_heigth"/>
+            <field name="act_window" ref="act_evolution_heigth"/>
         </record>
     </data>
 </tryton>

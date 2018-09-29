@@ -2,7 +2,8 @@ from trytond.model import ModelView, fields, Unique
 from trytond.pyson import Bool, Eval, If, Id
 from trytond.transaction import Transaction
 
-__all__ = ['BasicMixin', 'CoreMixin', 'GalenoContext', 'GalenoShared']
+__all__ = ['BasicMixin', 'CoreMixin', 'GalenoContext', 'GalenoShared',
+    'EvaluationMixin']
 
 
 class BasicMixin(object):
@@ -110,7 +111,7 @@ class GalenoShared(object):
         ], depends=['state'], required=True, select=True)
     professional = fields.Many2One('galeno.professional', 'Professional',
         states={
-            'readonly': ~Eval('state').in_(['scheduled']),
+            'readonly': ~Eval('state').in_(['scheduled', 'draft', 'initial']),
         },
         domain=[
             ('id', If(Bool(
@@ -123,10 +124,6 @@ class GalenoShared(object):
     def default_company():
         return Transaction().context.get('company')
 
-    @staticmethod
-    def default_professional():
-        return Transaction().context.get('professional')
-
     @classmethod
     def default_galeno_group(cls):
         context = Transaction().context
@@ -135,10 +132,12 @@ class GalenoShared(object):
                 return context['galeno_group_filter']
             return context['galeno_groups'][0]
 
-    @fields.depends('galeno_group', 'professional')
-    def on_change_galeno_group(self, name=None):
-        if Transaction().context.get('professional') is None:
-            self.professional = None
+    @staticmethod
+    def default_professional():
+        if Transaction().context.get('professional'):
+            return Transaction().context.get('professional')
+        if Transaction().context.get('professional_filter'):
+            return Transaction().context.get('professional_filter')
 
     @classmethod
     def search(cls, args, offset=0, limit=None, order=None, count=False,
@@ -153,3 +152,30 @@ class GalenoShared(object):
                 ('professional', '=', context['professional_filter']), args[:]]
         return super(GalenoShared, cls).search(args, offset=offset,
             limit=limit, order=order, count=count, query=query)
+
+
+class EvaluationMixin(object):
+    'Evaluation Mixin'
+    _STATES = [
+        ('initial', 'Initiated'),
+        ('finish', 'Finished'),
+        ('cancel', 'Canceled'),
+    ]
+    evaluation_state = fields.Function(
+        fields.Selection(_STATES, 'Evaluation State'),
+        'on_change_with_evaluation_state')
+    evaluation_professional = fields.Function(
+        fields.Many2One('galeno.professional', 'Evaluation Professional'),
+        'on_change_with_evaluation_professional')
+
+    @fields.depends('evaluation', '_parent_evaluation.state')
+    def on_change_with_evaluation_state(self, name=None):
+        if self.evaluation:
+            return self.evaluation.state
+        return None
+
+    @fields.depends('evaluation', '_parent_evaluation.professional')
+    def on_change_with_evaluation_professional(self, name=None):
+        if self.evaluation and self.evaluation.professional:
+            return self.evaluation.professional.id
+        return None

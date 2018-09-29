@@ -1,7 +1,7 @@
 from collections import defaultdict
 
 from trytond.model import ModelView, ModelSQL, fields, Unique
-from trytond.pyson import Bool, Eval, If
+from trytond.pyson import Bool, Eval, If, Id
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.tools import grouped_slice, reduce_ids, file_open
@@ -58,6 +58,7 @@ class Patient(ModelSQL, ModelView):
             ('parent', '=', Eval('subdivision', -1)),
         ], depends=['subdivision'])
     address = fields.Char('Address', required=True)
+    work_place = fields.Char('Work Place')
     email = fields.Char('e-mail', required=True)
     phone = fields.Char('Phone', required=True,
         help="Phone with zone code, e.g. 072816912")
@@ -93,6 +94,7 @@ class Patient(ModelSQL, ModelView):
         ('o-', 'O -'),
         ('o+', 'O +'),
     ], 'Blood Type', required=True)
+    allergies = fields.Char('Allergies')
     religion = fields.Char('Religion')
     education_level = fields.Selection([
         (None, 'Nothing'),
@@ -233,16 +235,28 @@ class Patient(ModelSQL, ModelView):
         states={
             'invisible': Eval('gender') != 'female',
             'readonly': ~Bool(Eval('menarche')),
+            'required': Bool(Eval('menarche')),
         },
         domain=[
             If((Eval('gender') == 'female') & Bool(Eval('menarche')),
                 ('cycle_duration', '>=', 0),
                ())
         ], depends=['gender', 'menarche'], help="Cycle duration in days")
+    cycle_type = fields.Selection(
+        [
+            ('regular', 'Regular'),
+            ('irregular', 'Irregular')
+        ], 'Cycle Type',
+        states={
+            'invisible': Eval('gender') != 'female',
+            'readonly': ~Bool(Eval('menarche')),
+            'required': Bool(Eval('menarche')),
+        })
     last_menstruation_date = fields.Date('Last menstruation date',
         states={
             'invisible': Eval('gender') != 'female',
             'readonly': ~Bool(Eval('menarche')),
+            'required': Bool(Eval('menarche')),
         }, depends=['gender'])
     pregnancies = fields.Integer('Pregnancies',
         states={
@@ -258,6 +272,7 @@ class Patient(ModelSQL, ModelView):
         states={
             'invisible': ~(Eval('gender') == 'female'),
             'readonly': ~Bool(Eval('pregnancies')),
+            'required': Bool(Eval('pregnancies')),
         },
         domain=[
             If(Eval('gender') == 'female',
@@ -268,6 +283,7 @@ class Patient(ModelSQL, ModelView):
         states={
             'invisible': ~(Eval('gender') == 'female'),
             'readonly': ~Bool(Eval('pregnancies')),
+            'required': Bool(Eval('pregnancies')),
         },
         domain=[
             If(Eval('gender') == 'female',
@@ -288,6 +304,7 @@ class Patient(ModelSQL, ModelView):
         states={
             'invisible': ~(Eval('gender') == 'female'),
             'readonly': ~Bool(Eval('pregnancies')),
+            'required': Bool(Eval('pregnancies')),
         },
         domain=[
             If(Eval('gender') == 'female',
@@ -505,6 +522,25 @@ class Patient(ModelSQL, ModelView):
             self.check_email()
             return mail_address
 
+    @fields.depends('menarche', 'cycle_duration', 'cycle_type',
+        'last_menstruation_date', 'pregnancies', 'normal_labor',
+        'caesarean_labor', 'actually_pregnant')
+    def on_change_menarche(self):
+        if not self.menarche:
+            self.cycle_duration = None
+            self.cycle_type = None
+            self.last_menstruation_date = None
+            self.pregnancies = None
+            self.normal_labor = None
+            self.caesarean_labor = None
+            self.actually_pregnant = None
+
+    @fields.depends('pregnancies', 'normal_labor', 'caesarean_labor')
+    def on_change_pregnancies(self):
+        if not self.pregnancies:
+            self.normal_labor = None
+            self.caesarean_labor = None
+
     @classmethod
     def get_disability(cls, patients, name):
         pool = Pool()
@@ -707,6 +743,36 @@ class Patient(ModelSQL, ModelView):
     @ModelView.button_action('galeno.act_patient_prescriptions')
     def open_prescriptions(cls, patients):
         pass
+
+    @classmethod
+    def view_attributes(cls):
+        group_galeno = Id('galeno', 'group_galeno')
+        return super(Patient, cls).view_attributes() + [
+            ('/form/notebook/page[@id="patient_backgrounds"]', 'states', {
+                    'invisible': ~(group_galeno).in_(
+                        Eval('context', {}).get('groups', [])),
+                    }),
+            ('/form/notebook/page[@id="patient_lifestyle"]', 'states', {
+                    'invisible': ~(group_galeno).in_(
+                        Eval('context', {}).get('groups', [])),
+                    }),
+            ('/form/notebook/page[@id="patient_sexuality"]', 'states', {
+                    'invisible': ~(group_galeno).in_(
+                        Eval('context', {}).get('groups', [])),
+                    }),
+            ('/form/notebook/page[@id="patient_diseases"]', 'states', {
+                    'invisible': ~(group_galeno).in_(
+                        Eval('context', {}).get('groups', [])),
+                    }),
+            ('/form/notebook/page[@id="patient_procedures"]', 'states', {
+                    'invisible': ~(group_galeno).in_(
+                        Eval('context', {}).get('groups', [])),
+                    }),
+            ('/form/notebook/page[@id="patient_3"]', 'states', {
+                    'invisible': ~(group_galeno).in_(
+                        Eval('context', {}).get('groups', [])),
+                    }),
+            ]
 
     @classmethod
     def create(cls, vlist):

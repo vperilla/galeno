@@ -3,10 +3,12 @@ from datetime import datetime, timedelta
 from email.header import Header
 from email.utils import formataddr, getaddresses
 
+from sql import Null
 from sql.conditionals import Case
+from sql.operators import Concat
 
 from trytond.model import Workflow, ModelView, ModelSQL, fields
-from trytond.pyson import Eval
+from trytond.pyson import Bool, Eval
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.tools import reduce_ids, grouped_slice
@@ -23,6 +25,7 @@ __all__ = ['PatientAppointment', 'PatientAppointmentEmailLog']
 class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
     'Patient Appointment'
     __name__ = 'galeno.patient.appointment'
+    _history = True
 
     type_ = fields.Selection(
         [
@@ -54,9 +57,12 @@ class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
             ('professional_cancel', 'Canceled by Doctor'),
         ], 'State', readonly=True, required=True)
     color = fields.Function(fields.Char('color'), 'get_color')
+    calendar_note = fields.Function(fields.Char('Calendar note'),
+        'get_calendar_note')
     notes = fields.Text('Notes',
         states={
             'readonly': ~Eval('state').in_(['scheduled']),
+            'required': ~Bool(Eval('patient')),
         }, depends=['state'])
     appointments_of_day = fields.Function(
         fields.Many2Many('galeno.patient.appointment', None, None,
@@ -94,22 +100,22 @@ class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
         cls._buttons.update({
                 'patient_cancel': {
                     'invisible': ~Eval('state').in_(['scheduled']),
-                    'icon': 'tryton-cancel',
+                    'icon': 'galeno-cancel',
                     'depends': ['state'],
                     },
                 'professional_cancel': {
                     'invisible': ~Eval('state').in_(['scheduled']),
-                    'icon': 'tryton-cancel',
+                    'icon': 'galeno-cancel',
                     'depends': ['state'],
                     },
                 'accomplished': {
                     'invisible': ~Eval('state').in_(['scheduled']),
-                    'icon': 'tryton-ok',
+                    'icon': 'galeno-ok',
                     'depends': ['state'],
                     },
                 'scheduled': {
                     'invisible': Eval('state').in_(['scheduled']),
-                    'icon': 'tryton-undo',
+                    'icon': 'galeno-undo',
                     'depends': ['state'],
                     },
                 })
@@ -156,7 +162,7 @@ class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
         pool = Pool()
         Configuration = pool.get('galeno.configuration')
         config = Configuration(1)
-        if self.start_date and self.professional and self.company:
+        if self.start_date and self.company:
             utc_dt = instance(self.start_date, tz='UTC')
             local_dt = utc_dt.in_timezone(self.company.timezone)
             if local_dt.hour == 0 and local_dt.minute == 0:
@@ -185,14 +191,45 @@ class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
             start_of = local_dt.start_of('day') + timedelta(hours=diff)
             start_date = datetime.combine(start_of.date(), start_of.time())
             next_date = start_date + timedelta(days=1)
-            appointments_of_day = self.__class__.search([
+            domain = [
                 ('start_date', '>=', start_date),
                 ('end_date', '<=', next_date),
-                ('professional', '=', self.professional)
-            ], order=[('start_date', 'ASC')])
+            ]
+            if self.professional:
+                domain += [
+                    ('professional', '=', self.professional)
+                ]
+            appointments_of_day = self.__class__.search(
+                domain, order=[('start_date', 'ASC')])
+
             if appointments_of_day:
                 return [app.id for app in appointments_of_day]
         return []
+
+    @classmethod
+    def get_calendar_note(cls, appointments, name):
+        pool = Pool()
+        cursor = Transaction().connection.cursor()
+        table = cls.__table__()
+        Patient = pool.get('galeno.patient')
+        patient = Patient.__table__()
+        result = {}
+
+        ids = [a.id for a in appointments]
+        for sub_ids in grouped_slice(ids):
+            red_sql = reduce_ids(table.id, sub_ids)
+            query = table.join(patient, type_='LEFT',
+                condition=table.patient == patient.id
+            ).select(
+                table.id,
+                Case((table.patient == Null,
+                     table.notes),
+                    else_=Concat(Concat(patient.fname, ' '), patient.lname)),
+                where=red_sql,
+            )
+            cursor.execute(*query)
+            result.update(dict(cursor.fetchall()))
+        return result
 
     @classmethod
     @ModelView.button

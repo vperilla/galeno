@@ -4,14 +4,14 @@ from decimal import Decimal
 from sql.conditionals import Case
 
 from trytond.model import Workflow, ModelView, ModelSQL, fields
-from trytond.pyson import Bool, Eval, If
+from trytond.pyson import Bool, Eval, If, Id
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.tools import reduce_ids, grouped_slice
 from trytond.config import config
 
 from . import galeno_tools
-from .galeno_mixin import GalenoShared
+from .galeno_mixin import GalenoShared, EvaluationMixin
 
 max_size = config.getint('galeno', 'max_attachment_size', default=5)
 
@@ -29,6 +29,7 @@ _STATES = [
 class PatientEvaluation(GalenoShared, Workflow, ModelSQL, ModelView):
     'Patient Evaluation'
     __name__ = 'galeno.patient.evaluation'
+    _history = True
 
     code = fields.Char('Code', readonly=True)
     start_date = fields.DateTime('Start Date', required=True,
@@ -66,6 +67,14 @@ class PatientEvaluation(GalenoShared, Workflow, ModelSQL, ModelView):
     symptoms = fields.Text('Illness symptoms',
         states={
             'readonly': ~Eval('state').in_(['initial']),
+            'invisible': ~Id('galeno', 'group_galeno').in_(
+                Eval('context', {}).get('groups', [])),
+        }, depends=['state'])
+    consultation_reason = fields.Text('Consultation reason',
+        states={
+            'readonly': ~Eval('state').in_(['initial']),
+            'invisible': ~Id('galeno', 'group_galeno').in_(
+                Eval('context', {}).get('groups', [])),
         }, depends=['state'])
     diagnostics = fields.One2Many(
         'galeno.patient.evaluation.diagnosis', 'evaluation', 'Diagnostics',
@@ -80,6 +89,8 @@ class PatientEvaluation(GalenoShared, Workflow, ModelSQL, ModelView):
     treatment = fields.Text('Treatment',
         states={
             'readonly': ~Eval('state').in_(['initial']),
+            'invisible': ~Id('galeno', 'group_galeno').in_(
+                Eval('context', {}).get('groups', [])),
         }, depends=['state'])
     # VITAL SIGNS
     systolic_pressure = fields.Float('Systolic Pressure (mm(hg))',
@@ -507,19 +518,24 @@ class PatientEvaluation(GalenoShared, Workflow, ModelSQL, ModelView):
         cls._buttons.update({
                 'cancel': {
                     'invisible': ~Eval('state').in_(['initial']),
-                    'icon': 'tryton-cancel',
+                    'icon': 'galeno-cancel',
                     'depends': ['state'],
                     },
                 'finish': {
                     'invisible': ~Eval('state').in_(['initial']),
-                    'icon': 'tryton-ok',
+                    'icon': 'galeno-ok',
                     'depends': ['state'],
                     },
                 'initial': {
-                    'invisible': Eval('state').in_(['initial']),
-                    'icon': 'tryton-undo',
+                    'invisible': Eval('state').in_(['initial']) | ~Id(
+                        'galeno', 'group_galeno_revert').in_(
+                            Eval('context', {}).get('groups', [])),
+                    'icon': 'galeno-undo',
                     'depends': ['state'],
                     },
+                'open_prescription': {
+                    'icon': 'galeno-prescription',
+                    }
                 })
 
     @staticmethod
@@ -638,6 +654,41 @@ class PatientEvaluation(GalenoShared, Workflow, ModelSQL, ModelView):
         cls.save(evaluations)
 
     @classmethod
+    @ModelView.button_action('galeno.act_evaluation_prescription')
+    def open_prescription(cls, evaluations):
+        pass
+
+    @classmethod
+    def view_attributes(cls):
+        group_galeno = Id('galeno', 'group_galeno')
+        return super(PatientEvaluation, cls).view_attributes() + [
+            ('/form/notebook/page[@id="rpe_exam"]', 'states', {
+                    'invisible': ~(group_galeno).in_(
+                        Eval('context', {}).get('groups', [])),
+                    }),
+            ('/form/notebook/page[@id="evaluation_systems_organs"]', 'states', {
+                    'invisible': ~(group_galeno).in_(
+                        Eval('context', {}).get('groups', [])),
+                    }),
+            ('/form/notebook/page[@id="mental_status"]', 'states', {
+                    'invisible': ~(group_galeno).in_(
+                        Eval('context', {}).get('groups', [])),
+                    }),
+            ('/form/notebook/page[@id="tests"]', 'states', {
+                    'invisible': ~(group_galeno).in_(
+                        Eval('context', {}).get('groups', [])),
+                    }),
+            ('/form/notebook/page[@id="images"]', 'states', {
+                    'invisible': ~(group_galeno).in_(
+                        Eval('context', {}).get('groups', [])),
+                    }),
+            ('/form/notebook/page[@id="evaluation_diagnosis"]', 'states', {
+                    'invisible': ~(group_galeno).in_(
+                        Eval('context', {}).get('groups', [])),
+                    }),
+            ]
+
+    @classmethod
     def create(cls, vlist):
         pool = Pool()
         Sequence = pool.get('ir.sequence')
@@ -652,7 +703,7 @@ class PatientEvaluation(GalenoShared, Workflow, ModelSQL, ModelView):
         return super(PatientEvaluation, cls).create(vlist)
 
 
-class PatientEvaluationTest(ModelSQL, ModelView):
+class PatientEvaluationTest(EvaluationMixin, ModelSQL, ModelView):
     'Patient Evaluation Test'
     __name__ = 'galeno.patient.evaluation.test'
     _rec_name = 'code'
@@ -663,9 +714,6 @@ class PatientEvaluationTest(ModelSQL, ModelView):
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
         }, depends=['evaluation_state'])
-    evaluation_state = fields.Function(
-        fields.Selection(_STATES, 'Evaluation state'),
-        'on_change_with_evaluation_state')
     patient_gender = fields.Function(
         fields.Char('Patient gender',
             states={
@@ -731,12 +779,6 @@ class PatientEvaluationTest(ModelSQL, ModelView):
             return self.evaluation.patient.gender
         return None
 
-    @fields.depends('evaluation', '_parent_evaluation.state')
-    def on_change_with_evaluation_state(self, name=None):
-        if self.evaluation:
-            return self.evaluation.state
-        return None
-
     def get_rec_name(self, name):
         return "%s - %s" % (self.code, self.evaluation.patient.rec_name)
 
@@ -797,15 +839,12 @@ class PatientEvaluationTest(ModelSQL, ModelView):
             limit=limit, order=order, count=count, query=query)
 
 
-class PatientEvaluationDiagnosis(ModelSQL, ModelView):
+class PatientEvaluationDiagnosis(EvaluationMixin, ModelSQL, ModelView):
     'Patient Evaluation Diagnosis'
     __name__ = 'galeno.patient.evaluation.diagnosis'
 
     evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
         ondelete='CASCADE', required=True)
-    evaluation_state = fields.Function(
-        fields.Selection(_STATES, 'Evaluation State'),
-        'on_change_with_evaluation_state')
     disease = fields.Many2One('galeno.disease', 'Disease', required=True,
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
@@ -814,7 +853,8 @@ class PatientEvaluationDiagnosis(ModelSQL, ModelView):
         [
             ('presumptive', 'Presumptive'),
             ('definitive', 'Definitive'),
-        ], 'Type', required=True,
+            ('control', 'Control'),
+        ], 'Type', required=True, sort=False,
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
         }, depends=['evaluation_state'])
@@ -854,22 +894,13 @@ class PatientEvaluationDiagnosis(ModelSQL, ModelView):
         Date = Pool().get('ir.date')
         return Date.today()
 
-    @fields.depends('evaluation', '_parent_evaluation.state')
-    def on_change_with_evaluation_state(self, name=None):
-        if self.evaluation:
-            return self.evaluation.state
-        return None
 
-
-class PatientEvaluationProcedure(ModelSQL, ModelView):
+class PatientEvaluationProcedure(EvaluationMixin, ModelSQL, ModelView):
     'Patient Evaluation Procedure'
     __name__ = 'galeno.patient.evaluation.procedure'
 
     evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
         ondelete='CASCADE', required=True)
-    evaluation_state = fields.Function(
-        fields.Selection(_STATES, 'Evaluation State'),
-        'on_change_with_evaluation_state')
     procedure = fields.Many2One('galeno.procedure', 'Procedure', required=True,
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
@@ -883,22 +914,13 @@ class PatientEvaluationProcedure(ModelSQL, ModelView):
             'readonly': ~Eval('evaluation_state').in_(['initial']),
         }, depends=['evaluation_state'])
 
-    @fields.depends('evaluation', '_parent_evaluation.state')
-    def on_change_with_evaluation_state(self, name=None):
-        if self.evaluation:
-            return self.evaluation.state
-        return None
 
-
-class PatientEvaluationImage(ModelSQL, ModelView):
+class PatientEvaluationImage(EvaluationMixin, ModelSQL, ModelView):
     'Patient Evaluation Image'
     __name__ = 'galeno.patient.evaluation.image'
 
     evaluation = fields.Many2One('galeno.patient.evaluation', 'Evaluation',
         ondelete='CASCADE', required=True)
-    evaluation_state = fields.Function(
-        fields.Selection(_STATES, 'Evaluation State'),
-        'on_change_with_evaluation_state')
     image = fields.Binary('Image', file_id='image_id', filename='filename',
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
@@ -912,12 +934,6 @@ class PatientEvaluationImage(ModelSQL, ModelView):
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
         }, depends=['evaluation_state'])
-
-    @fields.depends('evaluation', '_parent_evaluation.state')
-    def on_change_with_evaluation_state(self, name=None):
-        if self.evaluation:
-            return self.evaluation.state
-        return None
 
     @fields.depends('image', 'thumbnail')
     def on_change_image(self):

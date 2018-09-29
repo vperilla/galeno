@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<form>
+    <label name="patient"/>
+    <field name="patient" colspan="3"/>
+    <newline/>
+    <label name="type_"/>
+    <field name="type_"/>
+</form>

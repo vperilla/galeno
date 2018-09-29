@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <tree>
+    <field name="evaluation_professional"/>
     <field name="evaluation"/>
     <field name="evaluation_state" tree_invisible="1"/>
     <field name="disease"/>

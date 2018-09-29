@@ -26,15 +26,16 @@
         <button name="finish"/>
         <button name="cancel"/>
         <button name="initial"/>
+        <button name="open_prescription"/>
     </group>
     <group id="summary_treatment" colspan="8" col="8">
         <group id="summ_l" colspan="4">
-            <separator name="symptoms" colspan="4"/>
-            <field name="symptoms" colspan="4"/>
+            <separator name="consultation_reason" colspan="4"/>
+            <field name="consultation_reason" colspan="4"/>
         </group>
         <group id="summ_r" colspan="4">
-            <separator name="treatment" colspan="4"/>
-            <field name="treatment" colspan="4"/>
+            <separator name="symptoms" colspan="4"/>
+            <field name="symptoms" colspan="4"/>
         </group>
     </group>
     <notebook>
@@ -269,4 +270,7 @@
             </group>
         </page>
     </notebook>
+    <group id="treatment" string="Treatment" colspan="4" col="4" expandable="1">
+        <field name="treatment" colspan="4"/>
+    </group>
 </form>

@@ -190,6 +190,18 @@
             <field name="name">galeno-group</field>
             <field name="path">icons/galeno-group.svg</field>
         </record>
+        <record model="ir.ui.icon" id="galeno_ok_icon">
+            <field name="name">galeno-ok</field>
+            <field name="path">icons/galeno-ok.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="galeno_cancel_icon">
+            <field name="name">galeno-cancel</field>
+            <field name="path">icons/galeno-cancel.svg</field>
+        </record>
+        <record model="ir.ui.icon" id="galeno_undo_icon">
+            <field name="name">galeno-undo</field>
+            <field name="path">icons/galeno-undo.svg</field>
+        </record>
 
         <!-- GROUPS -->
         <record model="res.group" id="group_galeno_admin">
@@ -203,6 +215,9 @@
         </record>
         <record model="res.group" id="group_galeno_assistant">
             <field name="name">Assistant</field>
+        </record>
+        <record model="res.group" id="group_galeno_revert">
+            <field name="name">Galeno Revert</field>
         </record>
 
         <record model="res.user-res.group" id="user_admin_group_galeno">
@@ -230,6 +245,10 @@
         <record model="ir.ui.menu-res.group" id="menu_galeno_group_galeno">
             <field name="menu" ref="menu_galeno"/>
             <field name="group" ref="group_galeno"/>
+        </record>
+        <record model="ir.ui.menu-res.group" id="menu_galeno_group_galeno_assistant">
+            <field name="menu" ref="menu_galeno"/>
+            <field name="group" ref="group_galeno_assistant"/>
         </record>
         <menuitem name="Administration" id="menu_galeno_admin" sequence="4"
             parent="menu_galeno" icon="galeno-admin"/>

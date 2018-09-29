@@ -1,8 +1,7 @@
 from datetime import datetime
 
 from trytond.model import Workflow, ModelView, ModelSQL, fields
-from trytond.pyson import Eval, If, Bool
-from trytond.transaction import Transaction
+from trytond.pyson import Eval, If, Bool, Id
 from trytond.pool import Pool
 
 from .galeno_mixin import GalenoShared
@@ -14,6 +13,7 @@ __all__ = ['PatientPrescription', 'PatientPrescriptionPharmaLine',
 class PatientPrescription(GalenoShared, Workflow, ModelSQL, ModelView):
     'Patient Prescription'
     __name__ = 'galeno.patient.prescription'
+    _history = True
 
     code = fields.Char('Code', readonly=True)
     state = fields.Selection(
@@ -75,17 +75,19 @@ class PatientPrescription(GalenoShared, Workflow, ModelSQL, ModelView):
         cls._buttons.update({
                 'cancel': {
                     'invisible': ~Eval('state').in_(['draft']),
-                    'icon': 'tryton-cancel',
+                    'icon': 'galeno-cancel',
                     'depends': ['state'],
                     },
                 'done': {
                     'invisible': ~Eval('state').in_(['draft']),
-                    'icon': 'tryton-ok',
+                    'icon': 'galeno-ok',
                     'depends': ['state'],
                     },
                 'draft': {
-                    'invisible': Eval('state').in_(['draft']),
-                    'icon': 'tryton-undo',
+                    'invisible': Eval('state').in_(['draft']) | ~Id(
+                        'galeno', 'group_galeno_revert').in_(
+                            Eval('context', {}).get('groups', [])),
+                    'icon': 'galeno-undo',
                     'depends': ['state'],
                     },
                 })

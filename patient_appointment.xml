@@ -54,6 +54,11 @@
             <field name="menu" ref="menu_patient_appointment_list"/>
             <field name="group" ref="group_galeno"/>
         </record>
+        <record model="ir.ui.menu-res.group"
+            id="menu_patient_appointment_list_group_galeno_assistant">
+            <field name="menu" ref="menu_patient_appointment_list"/>
+            <field name="group" ref="group_galeno_assistant"/>
+        </record>
 
         <record model="ir.action.act_window" id="act_patient_appointment_calendar">
             <field name="name">Calendar</field>
@@ -78,6 +83,11 @@
             id="menu_patient_appointment_calendar_group_galeno">
             <field name="menu" ref="menu_patient_appointment_calendar"/>
             <field name="group" ref="group_galeno"/>
+        </record>
+        <record model="ir.ui.menu-res.group"
+            id="menu_patient_appointment_calendar_group_galeno_assistant">
+            <field name="menu" ref="menu_patient_appointment_calendar"/>
+            <field name="group" ref="group_galeno_assistant"/>
         </record>
 
         <record model="ir.model.access" id="access_appointment">
@@ -118,6 +128,12 @@
             <field name="button" ref="appointment_patient_cancel_button"/>
             <field name="group" ref="group_galeno"/>
         </record>
+        <record model="ir.model.button-res.group"
+            id="appointment_patient_cancel_button_group_galeno_assistant">
+            <field name="button" ref="appointment_patient_cancel_button"/>
+            <field name="group" ref="group_galeno_assistant"/>
+        </record>
+
         <record model="ir.model.button" id="appointment_professional_cancel_button">
             <field name="name">professional_cancel</field>
             <field name="string">Doctor Cancel</field>
@@ -130,6 +146,12 @@
             <field name="button" ref="appointment_professional_cancel_button"/>
             <field name="group" ref="group_galeno"/>
         </record>
+        <record model="ir.model.button-res.group"
+            id="appointment_professional_cancel_button_group_galeno_assistant">
+            <field name="button" ref="appointment_professional_cancel_button"/>
+            <field name="group" ref="group_galeno_assistant"/>
+        </record>
+
         <record model="ir.model.button" id="appointment_accomplished_button">
             <field name="name">accomplished</field>
             <field name="string">Accomplished</field>
