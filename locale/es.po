@@ -638,6 +638,19 @@ msgctxt "field:galeno.ethnic.group,write_uid:"
 msgid "Write User"
 msgstr "Usuario modificación"
 
+#, fuzzy
+msgctxt "field:galeno.evolution.graph.start,id:"
+msgid "ID"
+msgstr "ID"
+
+msgctxt "field:galeno.evolution.graph.start,patient:"
+msgid "Patient"
+msgstr "Paciente"
+
+msgctxt "field:galeno.evolution.graph.start,type_:"
+msgid "Type"
+msgstr "Tipo"
+
 msgctxt "field:galeno.group,company:"
 msgid "Company"
 msgstr "Empresa"
@@ -894,10 +907,6 @@ msgctxt "field:galeno.patient,address:"
 msgid "Address"
 msgstr "Dirección"
 
-msgctxt "field:galeno.patient,work_place:"
-msgid "Work Place"
-msgstr "Lugar de Trabajo"
-
 msgctxt "field:galeno.patient,age:"
 msgid "Age"
 msgstr "Edad"
@@ -909,6 +918,10 @@ msgstr "Edad"
 msgctxt "field:galeno.patient,alive_children:"
 msgid "Alive children"
 msgstr "Hijos vivos"
+
+msgctxt "field:galeno.patient,allergies:"
+msgid "Allergies"
+msgstr "Alergias"
 
 msgctxt "field:galeno.patient,archive_number:"
 msgid "Archive #"
@@ -945,10 +958,6 @@ msgstr "F. nacimiento"
 msgctxt "field:galeno.patient,blood_type:"
 msgid "Blood Type"
 msgstr "Tipo de sangre"
-
-msgctxt "field:galeno.patient,allergies:"
-msgid "Allergies"
-msgstr "Alergias"
 
 msgctxt "field:galeno.patient,caesarean_labor:"
 msgid "Caesarean labor"
@@ -1190,6 +1199,10 @@ msgctxt "field:galeno.patient,vaccines:"
 msgid "Vaccines"
 msgstr "Vacunas"
 
+msgctxt "field:galeno.patient,work_place:"
+msgid "Work Place"
+msgstr "Lugar de Trabajo"
+
 msgctxt "field:galeno.patient,write_date:"
 msgid "Write Date"
 msgstr "Fecha modificación"
@@ -1237,6 +1250,10 @@ msgstr "Usuario modificación"
 msgctxt "field:galeno.patient.appointment,appointments_of_day:"
 msgid "Appointments of day"
 msgstr "Citas del día"
+
+msgctxt "field:galeno.patient.appointment,calendar_note:"
+msgid "Calendar note"
+msgstr ""
 
 msgctxt "field:galeno.patient.appointment,color:"
 msgid "color"
@@ -1668,6 +1685,10 @@ msgctxt "field:galeno.patient.evaluation,company:"
 msgid "Company"
 msgstr "Empresa"
 
+msgctxt "field:galeno.patient.evaluation,consultation_reason:"
+msgid "Consultation reason"
+msgstr "Motivo de la consulta"
+
 msgctxt "field:galeno.patient.evaluation,create_date:"
 msgid "Create Date"
 msgstr "Fecha de creación"
@@ -2020,10 +2041,6 @@ msgctxt "field:galeno.patient.evaluation,symptoms:"
 msgid "Illness symptoms"
 msgstr "Síntomas"
 
-msgctxt "field:galeno.patient.evaluation,consultation_reason:"
-msgid "Consultation reason"
-msgstr "Motivo de la consulta"
-
 msgctxt "field:galeno.patient.evaluation,systolic_pressure:"
 msgid "Systolic Pressure (mm(hg))"
 msgstr "Presión sistólica (mm(hg))"
@@ -2033,10 +2050,6 @@ msgid "Temperature (℃)"
 msgstr "Temperatura (℃)"
 
 msgctxt "field:galeno.patient.evaluation,treatment:"
-msgid "Treatment"
-msgstr "Tratamiento"
-
-msgctxt "view:galeno.patient.evaluation:"
 msgid "Treatment"
 msgstr "Tratamiento"
 
@@ -2084,13 +2097,13 @@ msgctxt "field:galeno.patient.evaluation.diagnosis,evaluation:"
 msgid "Evaluation"
 msgstr "Evaluación"
 
-msgctxt "field:galeno.patient.evaluation.diagnosis,evaluation_state:"
-msgid "Evaluation State"
-msgstr "Estado de evaluación"
-
 msgctxt "field:galeno.patient.evaluation.diagnosis,evaluation_professional:"
 msgid "Evaluation Professional"
 msgstr "Doctor"
+
+msgctxt "field:galeno.patient.evaluation.diagnosis,evaluation_state:"
+msgid "Evaluation State"
+msgstr "Estado de evaluación"
 
 msgctxt "field:galeno.patient.evaluation.diagnosis,id:"
 msgid "ID"
@@ -2133,6 +2146,11 @@ msgstr "Usuario de creación"
 msgctxt "field:galeno.patient.evaluation.image,evaluation:"
 msgid "Evaluation"
 msgstr "Evaluación"
+
+#, fuzzy
+msgctxt "field:galeno.patient.evaluation.image,evaluation_professional:"
+msgid "Evaluation Professional"
+msgstr "Doctor"
 
 msgctxt "field:galeno.patient.evaluation.image,evaluation_state:"
 msgid "Evaluation State"
@@ -2197,13 +2215,13 @@ msgctxt "field:galeno.patient.evaluation.procedure,evaluation:"
 msgid "Evaluation"
 msgstr "Evaluación"
 
-msgctxt "field:galeno.patient.evaluation.procedure,evaluation_state:"
-msgid "Evaluation State"
-msgstr "Estado de la evaluación"
-
 msgctxt "field:galeno.patient.evaluation.procedure,evaluation_professional:"
 msgid "Evaluation Professional"
 msgstr "Doctor"
+
+msgctxt "field:galeno.patient.evaluation.procedure,evaluation_state:"
+msgid "Evaluation State"
+msgstr "Estado de la evaluación"
 
 msgctxt "field:galeno.patient.evaluation.procedure,id:"
 msgid "ID"
@@ -2245,13 +2263,14 @@ msgctxt "field:galeno.patient.evaluation.test,evaluation:"
 msgid "Evaluation"
 msgstr "Evaluación"
 
-msgctxt "field:galeno.patient.evaluation.test,evaluation_state:"
-msgid "Evaluation state"
-msgstr "Estado de la evaluación"
-
 msgctxt "field:galeno.patient.evaluation.test,evaluation_professional:"
 msgid "Evaluation Professional"
 msgstr "Doctor"
+
+#, fuzzy
+msgctxt "field:galeno.patient.evaluation.test,evaluation_state:"
+msgid "Evaluation State"
+msgstr "Estado de la evaluación"
 
 msgctxt "field:galeno.patient.evaluation.test,file_id:"
 msgid "File ID"
@@ -3131,7 +3150,7 @@ msgstr "Configuración duraciones"
 
 msgctxt "model:galeno.configuration.logo,name:"
 msgid "Galeno Configuration Logo"
-msgstr ""
+msgstr "Logo"
 
 msgctxt "model:galeno.configuration.sequence,name:"
 msgid "Galeno Configuration Sequence"
@@ -3168,6 +3187,10 @@ msgstr "Drogas"
 msgctxt "model:galeno.ethnic.group,name:"
 msgid "Ethnic Group"
 msgstr "Grupo étnico"
+
+msgctxt "model:galeno.evolution.graph.start,name:"
+msgid "Open Evolution Graph Start"
+msgstr "Gráfico de evolución"
 
 msgctxt "model:galeno.group,name:"
 msgid "Galeno Group"
@@ -3345,6 +3368,14 @@ msgctxt "model:ir.action,name:act_evaluation_prescription"
 msgid "Prescription"
 msgstr "Prescripción"
 
+msgctxt "model:ir.action,name:act_evolution_heigth"
+msgid "Heigth Evolution"
+msgstr "Evolución de talla"
+
+msgctxt "model:ir.action,name:act_evolution_weight"
+msgid "Weight Evolution"
+msgstr "Evolución de peso"
+
 msgctxt "model:ir.action,name:act_galeno_configuration_form"
 msgid "Configuration"
 msgstr "Configuración"
@@ -3453,6 +3484,10 @@ msgctxt "model:ir.action,name:patient_report"
 msgid "Patient Detail"
 msgstr "Detalle de paciente"
 
+msgctxt "model:ir.action,name:wizard_evolution_graph"
+msgid "Evolution Graph"
+msgstr "Gráfico de evolución"
+
 msgctxt ""
 "model:ir.action.act_window.domain,name:act_patient_evaluation_form_domain_all"
 msgid "All"
@@ -3536,6 +3571,11 @@ msgstr "Finalizar"
 msgctxt "model:ir.model.button,string:evaluation_initial_button"
 msgid "Initial"
 msgstr "Inicial"
+
+#, fuzzy
+msgctxt "model:ir.model.button,string:evaluation_open_prescription"
+msgid "Prescription"
+msgstr "Prescripción"
 
 msgctxt "model:ir.model.button,string:patient_open_appointments_button"
 msgid "Appointments"
@@ -3753,9 +3793,13 @@ msgctxt "model:res.group,name:group_galeno_assistant"
 msgid "Assistant"
 msgstr "Asistente"
 
+msgctxt "model:res.group,name:group_galeno_revert"
+msgid "Galeno Revert"
+msgstr ""
+
 msgctxt "model:res.group,name:group_galeno_share"
 msgid "Galeno Share"
-msgstr ""
+msgstr "Galeno Compartición"
 
 msgctxt "selection:galeno.contraceptive.method,gender:"
 msgid "Female"
@@ -3768,6 +3812,14 @@ msgstr "Masculino"
 msgctxt "selection:galeno.contraceptive.method,gender:"
 msgid "Unisex"
 msgstr "Unisex"
+
+msgctxt "selection:galeno.evolution.graph.start,type_:"
+msgid "Heigth"
+msgstr "Talla"
+
+msgctxt "selection:galeno.evolution.graph.start,type_:"
+msgid "Weight"
+msgstr "Peso"
 
 msgctxt "selection:galeno.patient,blood_type:"
 msgid "A +"
@@ -3816,6 +3868,14 @@ msgstr "Soltero(a)"
 msgctxt "selection:galeno.patient,civil_status:"
 msgid "Widowed"
 msgstr "Viudo(a)"
+
+msgctxt "selection:galeno.patient,cycle_type:"
+msgid "Irregular"
+msgstr ""
+
+msgctxt "selection:galeno.patient,cycle_type:"
+msgid "Regular"
+msgstr ""
 
 msgctxt "selection:galeno.patient,diet_type:"
 msgid "Carnivorous"
@@ -4142,6 +4202,10 @@ msgid "Severe"
 msgstr "Severa"
 
 msgctxt "selection:galeno.patient.evaluation.diagnosis,type_:"
+msgid "Control"
+msgstr ""
+
+msgctxt "selection:galeno.patient.evaluation.diagnosis,type_:"
 msgid "Definitive"
 msgstr "Definitivo"
 
@@ -4400,6 +4464,10 @@ msgid "Systems - Organs"
 msgstr "Sistemas - Órganos"
 
 msgctxt "view:galeno.patient.evaluation:"
+msgid "Treatment"
+msgstr "Tratamiento"
+
+msgctxt "view:galeno.patient.evaluation:"
 msgid "Vital signs"
 msgstr "Signos vitales"
 
@@ -4514,3 +4582,12 @@ msgstr "Exámenes"
 msgctxt "view:ir.action.report:"
 msgid "Signatures"
 msgstr "Firmas"
+
+#, fuzzy
+msgctxt "wizard_button:galeno.evolution.graph,start,end:"
+msgid "Cancel"
+msgstr "Cancelar"
+
+msgctxt "wizard_button:galeno.evolution.graph,start,handle:"
+msgid "OK"
+msgstr "Aceptar"
