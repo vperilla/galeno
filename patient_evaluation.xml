@@ -100,7 +100,7 @@
             <field name="act_window" ref="act_patient_evaluation_form"/>
         </record>
         <menuitem parent="menu_galeno" action="act_patient_evaluation_form"
-            id="menu_patient_evaluation_form" sequence="20" icon="galeno-evaluation"/>
+            id="menu_patient_evaluation_form" sequence="30" icon="galeno-evaluation"/>
         <record model="ir.model.access" id="access_evaluation">
             <field name="model"
                 search="[('model', '=', 'galeno.patient.evaluation')]"/>
@@ -227,7 +227,7 @@
             <field name="act_window" ref="act_patient_evaluation_test_form"/>
         </record>
         <menuitem parent="menu_galeno" action="act_patient_evaluation_test_form"
-            id="menu_patient_evaluation_test_form" sequence="30" icon="galeno-test"/>
+            id="menu_patient_evaluation_test_form" sequence="40" icon="galeno-test"/>
         <record model="ir.model.access" id="access_evaluation_test">
             <field name="model"
                 search="[('model', '=', 'galeno.patient.evaluation.test')]"/>

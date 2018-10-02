@@ -2,7 +2,7 @@
 <tryton>
     <data>
         <menuitem name="Diary" parent="menu_galeno"
-            id="menu_patient_appointment" sequence="100" icon="galeno-folder"/>
+            id="menu_patient_appointment" sequence="20" icon="galeno-folder"/>
 
         <!-- PATIENT APPOINMENT -->
         <record model="ir.ui.view" id="patient_appointment_simple_view_form">
