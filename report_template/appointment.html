@@ -14,7 +14,8 @@
         <h1 style="text-align: center">Reminder Notice</h1>
         <p>Date: ${format_date(datetime.date.today(), data.language)}</p>
         <p>Dear: ${appointment.patient.rec_name}</p>
-        <p>You have an scheduled appoitnment on ${appointment.start_date}</p>
+        <p>You have an scheduled appoitnment on ${local_date(appointment.company, appointment.start_date)}</p>
+        <p>with doctor ${appointment.professional.rec_name}.</p>
         <p>Thanks</p>
         <footer style="text-align: center">
             <py:if test="company.footer">

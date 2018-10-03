@@ -19,6 +19,7 @@
             <button name="patient_cancel"/>
             <button name="professional_cancel"/>
             <button name="scheduled"/>
+            <button name="send_emails"/>
         </group>
         <label name="galeno_group"/>
         <field name="galeno_group"/>

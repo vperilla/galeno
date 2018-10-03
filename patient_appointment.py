@@ -8,7 +8,7 @@ from sql.conditionals import Case
 from sql.operators import Concat
 
 from trytond.model import Workflow, ModelView, ModelSQL, fields
-from trytond.pyson import Bool, Eval
+from trytond.pyson import Bool, Eval, Id
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.tools import reduce_ids, grouped_slice
@@ -117,6 +117,11 @@ class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
                     'invisible': Eval('state').in_(['scheduled']),
                     'icon': 'galeno-undo',
                     'depends': ['state'],
+                    },
+                'send_emails': {
+                    'invisible': ~Id('galeno', 'group_galeno_admin').in_(
+                            Eval('context', {}).get('groups', [])),
+                    'icon': 'galeno-ok',
                     },
                 })
 
@@ -343,6 +348,12 @@ class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
             ('start_date', '<', after_tomorrow),
             ('state', '=', 'scheduled'),
         ])
+        for appointment in appointments:
+            appointment.send_email()
+
+    @classmethod
+    @ModelView.button
+    def send_emails(cls, appointments):
         for appointment in appointments:
             appointment.send_email()
 

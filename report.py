@@ -1,4 +1,5 @@
 from io import BytesIO
+from pendulum import instance
 
 from trytond.pool import Pool
 from trytond.transaction import Transaction
@@ -127,3 +128,17 @@ class Prescription(GalenoReport):
 
 class Appointment(GalenoReport):
     __name__ = 'galeno.patient.appointment'
+
+    @classmethod
+    def get_context(cls, records, data):
+        report_context = super(Appointment, cls).get_context(records, data)
+        report_context['local_date'] = cls.local_date
+        return report_context
+
+    @classmethod
+    def local_date(cls, company, date):
+        context = Transaction().context
+        utc_dt = instance(date, tz='UTC')
+        local_dt = utc_dt.in_timezone(company.timezone)
+        return local_dt.format("dddd, MMMM D, YYYY h:mm A",
+            locale=context.get('language', 'en'))

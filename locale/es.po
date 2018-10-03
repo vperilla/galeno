@@ -3136,9 +3136,10 @@ msgctxt "help:galeno.professional,prefix:"
 msgid "Ex: Mr., Mrs, etc"
 msgstr "Ej. Sr. Sra, etc"
 
+#, fuzzy
 msgctxt "help:ir.action.report,translatable:"
 msgid "Uncheck to disable translations for this report."
-msgstr ""
+msgstr "Desmarcar para deshabilitar las traducciones de este informe."
 
 msgctxt "model:galeno.configuration,name:"
 msgid "Galeno Configuration"
@@ -3470,7 +3471,7 @@ msgstr "Vacunas"
 
 msgctxt "model:ir.action,name:appointment_email"
 msgid "Appointment Email"
-msgstr "Cita email"
+msgstr "Recordatorio de cita médica"
 
 msgctxt "model:ir.action,name:patient_evaluation_report"
 msgid "Evaluation"
@@ -3800,6 +3801,30 @@ msgstr ""
 msgctxt "model:res.group,name:group_galeno_share"
 msgid "Galeno Share"
 msgstr "Galeno Compartición"
+
+msgctxt "report:galeno.patient.appointment:"
+msgid "Date:"
+msgstr "Fecha:"
+
+msgctxt "report:galeno.patient.appointment:"
+msgid "Dear:"
+msgstr "Estimado (a):"
+
+msgctxt "report:galeno.patient.appointment:"
+msgid "Reminder Notice"
+msgstr "Recordatorio:"
+
+msgctxt "report:galeno.patient.appointment:"
+msgid "Thanks"
+msgstr "Gracias"
+
+msgctxt "report:galeno.patient.appointment:"
+msgid "You have an scheduled appoitnment on"
+msgstr "Usted tiene una cita agendada con fecha: "
+
+msgctxt "report:galeno.patient.appointment:"
+msgid "with doctor"
+msgstr "con el doctor(a)"
 
 msgctxt "selection:galeno.contraceptive.method,gender:"
 msgid "Female"
@@ -4462,10 +4487,6 @@ msgstr "Piel"
 msgctxt "view:galeno.patient.evaluation:"
 msgid "Systems - Organs"
 msgstr "Sistemas - Órganos"
-
-msgctxt "view:galeno.patient.evaluation:"
-msgid "Treatment"
-msgstr "Tratamiento"
 
 msgctxt "view:galeno.patient.evaluation:"
 msgid "Vital signs"

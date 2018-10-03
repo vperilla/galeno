@@ -45,7 +45,7 @@
             <field name="name">Appointment Email</field>
             <field name="model">galeno.patient.appointment</field>
             <field name="report_name">galeno.patient.appointment</field>
-            <field name="translatable" eval="False"/>
+            <field name="translatable" eval="True"/>
             <field name="report">galeno/report_template/appointment.html</field>
             <field name="template_extension">html</field>
         </record>

@@ -175,6 +175,17 @@
             <field name="button" ref="appointment_scheduled_button"/>
             <field name="group" ref="group_galeno"/>
         </record>
+        <record model="ir.model.button" id="appointment_send_emails_button">
+            <field name="name">send_emails</field>
+            <field name="string">Send Emails</field>
+            <field name="model"
+                search="[('model', '=', 'galeno.patient.appointment')]"/>
+        </record>
+        <record model="ir.model.button-res.group"
+            id="appointment_send_emails_button_group_galeno_admin">
+            <field name="button" ref="appointment_send_emails_button"/>
+            <field name="group" ref="group_galeno_admin"/>
+        </record>
 
         <record model="ir.cron" id="cron_send_reminder_emails">
             <field name="name">Send reminder emails</field>
