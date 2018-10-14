@@ -736,27 +736,21 @@ class PatientEvaluationTest(EvaluationMixin, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('evaluation_state').in_(['initial']),
         }, depends=['evaluation_state'])
-    with_result = fields.Boolean('With result',
-        states={
-            'readonly': ~Eval('evaluation_state').in_(['initial']),
-        }, depends=['evaluation_state'])
+    with_result = fields.Boolean('With result')
     result_date = fields.Date('Result Date',
         states={
-            'readonly': ~Eval('with_result') | ~Eval(
-                'evaluation_state').in_(['initial']),
+            'readonly': ~Eval('with_result'),
             'required': Bool(Eval('with_result')),
-        }, depends=['with_result', 'evaluation_state'])
+        }, depends=['with_result'])
     result_notes = fields.Text('Result',
         states={
-            'readonly': ~Eval('with_result') | ~Eval(
-                'evaluation_state').in_(['initial']),
-        }, depends=['with_result', 'evaluation_state'])
+            'readonly': ~Eval('with_result'),
+        }, depends=['with_result'])
     result_data = fields.Binary('Result data', file_id='file_id',
         filename='filename', help="Load result data, Ex: image",
         states={
-            'readonly': ~Eval('with_result') | ~Eval(
-                'evaluation_state').in_(['initial']),
-        }, depends=['with_result', 'evaluation_state'])
+            'readonly': ~Eval('with_result'),
+        }, depends=['with_result'])
     file_id = fields.Char('File ID')
     filename = fields.Char('Filename')
 
