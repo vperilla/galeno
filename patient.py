@@ -532,19 +532,19 @@ class Patient(ModelSQL, ModelView):
         'caesarean_labor', 'actually_pregnant')
     def on_change_menarche(self):
         if not self.menarche:
-            self.cycle_duration = None
+            self.cycle_duration = 0
             self.cycle_type = None
             self.last_menstruation_date = None
-            self.pregnancies = None
-            self.normal_labor = None
-            self.caesarean_labor = None
-            self.actually_pregnant = None
+            self.pregnancies = 0
+            self.normal_labor = 0
+            self.caesarean_labor = 0
+            self.actually_pregnant = 0
 
     @fields.depends('pregnancies', 'normal_labor', 'caesarean_labor')
     def on_change_pregnancies(self):
         if not self.pregnancies:
-            self.normal_labor = None
-            self.caesarean_labor = None
+            self.normal_labor = 0
+            self.caesarean_labor = 0
 
     @classmethod
     def get_disability(cls, patients, name):
