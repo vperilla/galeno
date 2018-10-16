@@ -66,7 +66,7 @@ class GalenoContext(ModelView):
     galeno_group_filter = fields.Many2One('galeno.group', 'Group',
         domain=[
             ('id', 'in', Eval('context', {}).get('galeno_groups', [])),
-        ], depends=['state'], required=True)
+        ], required=True)
     professional_filter = fields.Many2One('galeno.professional', 'Professional',
         states={
             'required': ~Id('galeno',

@@ -87,7 +87,7 @@
             <field name="background_notes" colspan="4"/>
             <group id="background_groups" colspan="4">
                 <group id="reproductive_backgrounds" string="Reproductive"
-                    col="6" colspan="4" icon="galeno-reproductive" expandable="1">
+                    icon="galeno-reproductive" col="6" colspan="4" expandable="1">
                     <label name="fertile"/>
                     <field name="fertile"/>
                     <label name="menopause_andropause"/>
