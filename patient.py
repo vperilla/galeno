@@ -244,6 +244,7 @@ class Patient(ModelSQL, ModelView):
         ], depends=['gender', 'menarche'], help="Cycle duration in days")
     cycle_type = fields.Selection(
         [
+            (None, 'None'),
             ('regular', 'Regular'),
             ('irregular', 'Irregular')
         ], 'Cycle Type',
@@ -383,6 +384,10 @@ class Patient(ModelSQL, ModelView):
 
     @staticmethod
     def default_sleep_in_day():
+        return False
+
+    @staticmethod
+    def default_menarche():
         return False
 
     @staticmethod
