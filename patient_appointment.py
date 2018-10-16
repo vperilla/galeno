@@ -355,7 +355,8 @@ class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
     @ModelView.button
     def send_emails(cls, appointments):
         for appointment in appointments:
-            appointment.send_email()
+            if appointment.patient:
+                appointment.send_email()
 
     def send_email(self):
         pool = Pool()

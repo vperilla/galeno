@@ -3561,6 +3561,10 @@ msgctxt "model:ir.model.button,string:appointment_scheduled_button"
 msgid "To Scheduled"
 msgstr "A programada"
 
+msgctxt "model:ir.model.button,string:appointment_send_emails_button"
+msgid "Send Emails"
+msgstr "Enviar correo"
+
 msgctxt "model:ir.model.button,string:evaluation_cancel_button"
 msgid "Cancel"
 msgstr "Cancelar"
