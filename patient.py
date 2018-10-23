@@ -252,7 +252,7 @@ class Patient(ModelSQL, ModelView):
             'invisible': Eval('gender') != 'female',
             'readonly': ~Bool(Eval('menarche')),
             'required': Bool(Eval('menarche')),
-        })
+        }, sort=False)
     last_menstruation_date = fields.Date('Last menstruation date',
         states={
             'invisible': Eval('gender') != 'female',
