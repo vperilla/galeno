@@ -3910,6 +3910,10 @@ msgctxt "selection:galeno.patient,cycle_type:"
 msgid "Regular"
 msgstr ""
 
+msgctxt "selection:galeno.patient,cycle_type:"
+msgid "None"
+msgstr "Ninguno"
+
 msgctxt "selection:galeno.patient,diet_type:"
 msgid "Carnivorous"
 msgstr "Carnívoro"
