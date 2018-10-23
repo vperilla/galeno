@@ -74,6 +74,8 @@
                 <field name="malnutrition"/>
                 <label name="dehydration"/>
                 <field name="dehydration"/>
+                <label name="last_menstruation_date"/>
+                <field name="last_menstruation_date"/>
             </group>
         </page>
         <page id="rpe_exam" string="Regional Physical Exam"

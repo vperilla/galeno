@@ -1701,6 +1701,10 @@ msgctxt "field:galeno.patient.evaluation,dehydration:"
 msgid "Dehydration"
 msgstr "Deshidratación"
 
+msgctxt "field:galeno.patient.evaluation,last_menstruation_date:"
+msgid "Last menstruation date"
+msgstr "Fecha última menstruación"
+
 msgctxt "field:galeno.patient.evaluation,diagnostics:"
 msgid "Diagnostics"
 msgstr "Diagnósticos"

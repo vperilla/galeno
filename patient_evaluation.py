@@ -201,6 +201,13 @@ class PatientEvaluation(GalenoShared, Workflow, ModelSQL, ModelView):
         states={
             'readonly': ~Eval('state').in_(['initial']),
         }, depends=['state'])
+    last_menstruation_date = fields.Date('Last menstruation date',
+        states={
+            'invisible': (Eval('patient_gender') == 'male') | ~Id(
+                'galeno', 'group_galeno').in_(
+                    Eval('context', {}).get('groups', [])),
+
+        }, depends=['patient_gender'])
     # SYSTEMS - ORGANS
     so_respiratory = fields.Text('Respiratory',
         states={
@@ -693,6 +700,8 @@ class PatientEvaluation(GalenoShared, Workflow, ModelSQL, ModelView):
         pool = Pool()
         Sequence = pool.get('ir.sequence')
         Config = pool.get('galeno.configuration')
+        Patient = pool.get('galeno.patient')
+        patient_to_save = []
 
         vlist = [x.copy() for x in vlist]
         config = Config(1)
@@ -700,7 +709,36 @@ class PatientEvaluation(GalenoShared, Workflow, ModelSQL, ModelView):
             if values.get('code') is None:
                 values['code'] = Sequence.get_id(
                         config.get_multivalue('evaluation_sequence').id)
+            if values.get('last_menstruation_date'):
+                patient = Patient(values.get('patient'))
+                if (values.get('last_menstruation_date') >
+                        patient.last_menstruation_date) | (
+                        patient.last_menstruation_date is None):
+                    patient.last_menstruation_date = values[
+                        'last_menstruation_date']
+                patient_to_save.append(patient)
+
+        Patient.save(patient_to_save)
         return super(PatientEvaluation, cls).create(vlist)
+
+    @classmethod
+    def write(cls, *args):
+        pool = Pool()
+        Patient = pool.get('galeno.patient')
+        patient_to_save = []
+        actions = iter(args)
+        super(PatientEvaluation, cls).write(*args)
+        for evals, values in zip(actions, actions):
+            values = values.copy()
+            if values.get('last_menstruation_date'):
+                for eva in evals:
+                    if (values['last_menstruation_date'] >
+                            eva.patient.last_menstruation_date) | (
+                            eva.patient.last_menstruation_date is None):
+                        eva.patient.last_menstruation_date = values[
+                            'last_menstruation_date']
+                        patient_to_save.append(eva.patient)
+        Patient.save(patient_to_save)
 
 
 class PatientEvaluationTest(EvaluationMixin, ModelSQL, ModelView):
