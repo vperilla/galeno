@@ -221,7 +221,7 @@ class Patient(ModelSQL, ModelView):
             If(Bool(Eval('menopause_andropause')),
                 ('menopause_andropause_age', '>=', 0),
                ())
-        ], depends=['menopause_andropause'])
+        ], depends=['menopause_andropause', 'menopause_andropause_age'])
     menarche = fields.Integer('Menarche age',
         states={
             'invisible': Eval('gender') != 'female',
@@ -387,7 +387,7 @@ class Patient(ModelSQL, ModelView):
         return False
 
     @staticmethod
-    def default_menarche():
+    def default_menopause_andropause():
         return False
 
     @staticmethod
@@ -454,8 +454,8 @@ class Patient(ModelSQL, ModelView):
                 photos[patient.id] = fields.Binary.cast(photo[0].photo)
             else:
                 path = 'galeno/icons/%s_patient.png' % (patient.gender)
-                photos[patient.id] = fields.Binary.cast(
-                    file_open(path, mode='rb').read())
+                with file_open(path, mode='rb') as f:
+                    photos[patient.id] = fields.Binary.cast(f.read())
         return {'photo': photos}
 
     @classmethod
