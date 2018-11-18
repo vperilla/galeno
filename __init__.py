@@ -25,7 +25,6 @@ from . import patient_prescription
 from . import galeno_mixin
 from . import configuration
 from . import galeno_reporting
-from . import attachment
 from . import wizard
 from . import report
 
@@ -85,7 +84,6 @@ def register():
         configuration.ConfigurationLogo,
         galeno_reporting.ReportEvaluationContext,
         galeno_reporting.ReportEvaluation,
-        attachment.Attachment,
         wizard.EvolutionGraphStart,
         module='galeno', type_='model')
     Pool.register(

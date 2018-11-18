@@ -792,14 +792,6 @@ class PatientEvaluationTest(EvaluationMixin, ModelSQL, ModelView):
     file_id = fields.Char('File ID')
     filename = fields.Char('Filename')
 
-    @classmethod
-    def __setup__(cls):
-        super(PatientEvaluationTest, cls).__setup__()
-        cls._error_messages.update({
-                'invalid_size': ('Max size for results is %(max_size)s MB, '
-                    'your attachment size has %(size)sMB'),
-                })
-
     @staticmethod
     def default_request_date():
         Date = Pool().get('ir.date')
@@ -839,22 +831,6 @@ class PatientEvaluationTest(EvaluationMixin, ModelSQL, ModelView):
                 values['code'] = Sequence.get_id(
                         config.get_multivalue('request_test_sequence').id)
         return super(PatientEvaluationTest, cls).create(vlist)
-
-    @classmethod
-    def validate(cls, tests):
-        super(PatientEvaluationTest, cls).validate(tests)
-        cls.check_size(tests)
-
-    @classmethod
-    def check_size(cls, tests):
-        for test in tests:
-            if test.result_data:
-                size = len(test.result_data) / (1000 * 1000)
-                if size > max_size:
-                    cls.raise_user_error('invalid_size', {
-                        'size': int(size),
-                        'max_size': max_size,
-                        })
 
     @classmethod
     def search(cls, args, offset=0, limit=None, order=None, count=False,
