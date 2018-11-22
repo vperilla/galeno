@@ -73,6 +73,7 @@ class Evaluation(GalenoReport):
         report_context = super(Evaluation, cls).get_context(records, data)
         report_context['rpe'] = cls.rpe
         report_context['ms'] = cls.ms
+        report_context['ms_detail'] = cls.ms_detail
         return report_context
 
     @classmethod
@@ -112,6 +113,13 @@ class Evaluation(GalenoReport):
 
     @classmethod
     def ms(cls, record):
+        if (cls.ms_detail(record) or record.ms_notes or record.ms_mood or
+                record.ms_glasgow_score):
+            return True
+        return False
+
+    @classmethod
+    def ms_detail(cls, record):
         fields = ['ms_violent_behavior',
             'ms_orientation', 'ms_perception_reality',
             'ms_abstraction', 'ms_calc_skill', 'ms_memory', 'ms_discernment',

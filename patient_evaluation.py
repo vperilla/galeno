@@ -463,6 +463,7 @@ class PatientEvaluation(GalenoShared, Workflow, ModelSQL, ModelView):
         }, depends=['state'])
     ms_mood = fields.Selection(
         [
+            (None, ''),
             ('normal', 'Normal'),
             ('sad', 'Sad'),
             ('angry', 'Angry'),
@@ -557,10 +558,6 @@ class PatientEvaluation(GalenoShared, Workflow, ModelSQL, ModelView):
     def default_start_date():
         return datetime.now()
 
-    @staticmethod
-    def default_ms_mood():
-        return 'normal'
-
     @classmethod
     def get_color(cls, evaluations, name):
         cursor = Transaction().connection.cursor()
@@ -619,9 +616,8 @@ class PatientEvaluation(GalenoShared, Workflow, ModelSQL, ModelView):
 
     @fields.depends('ms_eye', 'ms_verbal', 'ms_motor')
     def on_change_with_ms_glasgow_score(self, name=None):
-        if self.ms_eye and self.ms_verbal and self.ms_motor:
-            return int(self.ms_eye) + int(self.ms_verbal) + int(self.ms_motor)
-        return None
+        return (int(self.ms_eye or 0) + int(self.ms_verbal or 0) +
+            int(self.ms_motor or 0))
 
     def get_rec_name(self, name):
         return "%s - %s" % (self.code, self.patient.rec_name)
@@ -946,7 +942,7 @@ class PatientEvaluationImage(EvaluationMixin, ModelSQL, ModelView):
     @fields.depends('image', 'thumbnail')
     def on_change_image(self):
         if self.image:
-            self.image = galeno_tools.resize_image(self.image, (1280, 1024))
+            self.image = galeno_tools.resize_image(self.image, (1920, 1080))
             self.thumbnail = galeno_tools.resize_image(self.image)
         else:
             self.thumbnail = None
