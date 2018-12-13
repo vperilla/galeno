@@ -340,7 +340,6 @@ class Patient(ModelSQL, ModelView):
         t = cls.__table__()
         cls._error_messages.update({
                 'invalid_identifier': ('Invalid identifier "%(identifier)s"'),
-                'invalid_phone': ('Invalid phone "%(phone)s"'),
                 'invalid_email': ('Invalid email "%(email)s"'),
                 })
         cls._buttons.update({
@@ -506,19 +505,6 @@ class Patient(ModelSQL, ModelView):
                 self.identifier_type, self.identifier)
             self.check_identifier()
             return compat
-
-    @fields.depends('phone', 'country')
-    def on_change_with_phone(self):
-        if self.country and self.phone:
-            self.check_phones(['phone'])
-            return galeno_tools.format_phone(self.phone, self.country.code)
-
-    @fields.depends('emergency_phone', 'country')
-    def on_change_with_emergency_phone(self):
-        if self.country and self.emergency_phone:
-            self.check_phones(['emergency_phone'])
-            return galeno_tools.format_phone(
-                self.emergency_phone, self.country.code)
 
     @fields.depends('email')
     def on_change_with_email(self):
@@ -701,7 +687,6 @@ class Patient(ModelSQL, ModelView):
         super(Patient, cls).validate(patients)
         for patient in patients:
             patient.check_identifier()
-            patient.check_phones()
             patient.check_email()
 
     def check_identifier(self):
@@ -711,16 +696,6 @@ class Patient(ModelSQL, ModelView):
             self.raise_user_error('invalid_identifier', {
                 'identifier': self.identifier,
                 })
-
-    def check_phones(self, phones=['phone', 'emergency_phone']):
-        for phone in phones:
-            if getattr(self, phone):
-                valid_phone = galeno_tools.validate_phone(
-                    getattr(self, phone), self.country.code)
-                if not valid_phone:
-                    self.raise_user_error('invalid_phone', {
-                        'phone': getattr(self, phone),
-                        })
 
     def check_email(self):
         valid = galeno_tools.validate_mail_address(self.email)
