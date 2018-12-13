@@ -83,7 +83,7 @@
         </page>
         <page id="patient_backgrounds" string="Backgrounds"
             icon="galeno-backgrounds">
-            <separator name="background_notes" colspan="4"/>
+            <separator name="background_notes" colspan="4" id="separator_background_notes"/>
             <field name="background_notes" colspan="4"/>
             <group id="background_groups" colspan="4">
                 <group id="reproductive_backgrounds" string="Reproductive"
@@ -157,7 +157,7 @@
                         <field name="sleep_time"/>
                         <label name="sleep_in_day"/>
                         <field name="sleep_in_day"/>
-                        <separator name="sleep_notes" colspan="4"/>
+                        <separator name="sleep_notes" colspan="4" id="sep_sleep_notes"/>
                         <field name="sleep_notes" colspan="4"/>
                     </group>
                     <group id="lifestyle-exercise" colspan="2">
@@ -178,7 +178,7 @@
                         <field name="sugar_consumption"/>
                         <label name="salt_consumption"/>
                         <field name="salt_consumption"/>
-                        <separator name="feeding_notes" colspan="6"/>
+                        <separator name="feeding_notes" colspan="6" id="sep_feed_notes"/>
                         <field name="feeding_notes" colspan="6"/>
                     </group>
                 </group>
@@ -206,7 +206,7 @@
                 <label name="contraceptive_method"/>
                 <field name="contraceptive_method"/>
                 <newline/>
-                <separator name="sexual_notes" colspan="6"/>
+                <separator name="sexual_notes" colspan="6" id="sep_sexual_notes"/>
                 <field name="sexual_notes" colspan="6"/>
             </group>
         </page>
