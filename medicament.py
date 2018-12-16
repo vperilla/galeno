@@ -31,6 +31,11 @@ class Medicament(DeactivableMixin, ModelSQL, ModelView):
     def default_company():
         return Transaction().context.get('company')
 
+    def get_rec_name(self, name):
+        if self.laboratory:
+            return f"{self.name} - {self.laboratory}"
+        return self.name
+
     @classmethod
     def search_rec_name(cls, name, clause):
         _, operator, value = clause
