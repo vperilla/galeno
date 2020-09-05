@@ -1,10 +1,12 @@
 from collections import defaultdict
 
+from trytond.i18n import gettext
 from trytond.model import ModelView, ModelSQL, fields, Unique, DeactivableMixin
 from trytond.pyson import Bool, Eval, If, Id
 from trytond.transaction import Transaction
 from trytond.pool import Pool
 from trytond.tools import grouped_slice, reduce_ids, file_open
+from trytond.exceptions import UserError
 
 from . import galeno_tools
 
@@ -338,10 +340,6 @@ class Patient(DeactivableMixin, ModelSQL, ModelView):
     def __setup__(cls):
         super(Patient, cls).__setup__()
         t = cls.__table__()
-        cls._error_messages.update({
-                'invalid_identifier': ('Invalid identifier "%(identifier)s"'),
-                'invalid_email': ('Invalid email "%(email)s"'),
-                })
         cls._buttons.update({
                 'open_appointments': {
                     'icon': 'galeno-appointment',
@@ -693,16 +691,16 @@ class Patient(DeactivableMixin, ModelSQL, ModelView):
         valid = galeno_tools.validate_identifier(
             self.identifier_type, self.identifier)
         if not valid:
-            self.raise_user_error('invalid_identifier', {
-                'identifier': self.identifier,
-                })
+            raise UserError(
+                gettext('galeno.invalid_identifier',
+                identifier=self.identifier))
 
     def check_email(self):
         valid = galeno_tools.validate_mail_address(self.email)
         if not valid:
-            self.raise_user_error('invalid_email', {
-                'email': self.email,
-                })
+            raise UserError(
+                gettext('galeno.invalid_email',
+                email=self.email))
 
     @classmethod
     @ModelView.button_action('galeno.act_patient_appointments')

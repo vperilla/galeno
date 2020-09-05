@@ -1,6 +1,8 @@
+from trytond.i18n import gettext
 from trytond.model import ModelView, fields, Unique
 from trytond.pyson import Bool, Eval, If, Id
 from trytond.transaction import Transaction
+from trytond.exceptions import UserError
 
 __all__ = ['BasicMixin', 'CoreMixin', 'GalenoContext', 'GalenoShared',
     'EvaluationMixin']
@@ -26,14 +28,6 @@ class CoreMixin(object):
 
     core = fields.Boolean('Core')
 
-    @classmethod
-    def __setup__(cls):
-        super(CoreMixin, cls).__setup__()
-        cls._error_messages.update({
-            'unmodified': ('Can not modified "%(record)s" '
-                'because is part  of core.'),
-            })
-
     @staticmethod
     def default_core():
         return False
@@ -42,9 +36,8 @@ class CoreMixin(object):
     def delete(cls, records):
         for record in records:
             if record.core == True:
-                cls.raise_user_error('unmodified', {
-                    'record': record.rec_name,
-                })
+                raise UserError(gettext('galeno.unmodified',
+                    record=record.rec_name))
         super(CoreMixin, cls).delete(records)
 
     @classmethod
@@ -53,9 +46,8 @@ class CoreMixin(object):
         for records, values in zip(actions, actions):
             for record in records:
                 if record.core == True:
-                    cls.raise_user_error('unmodified', {
-                        'record': record.rec_name,
-                    })
+                    raise UserError(gettext('galeno.unmodified',
+                        record=record.rec_name))
         super(CoreMixin, cls).write(*args)
 
 

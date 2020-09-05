@@ -7,6 +7,7 @@ from sql import Null
 from sql.conditionals import Case
 from sql.operators import Concat
 
+from trytond.i18n import gettext
 from trytond.model import Workflow, ModelView, ModelSQL, fields
 from trytond.pyson import Bool, Eval, Id
 from trytond.transaction import Transaction
@@ -15,6 +16,7 @@ from trytond.tools import reduce_ids, grouped_slice
 from trytond.report import get_email
 from trytond.config import config
 from trytond.sendmail import sendmail_transactional, SMTPDataManager
+from trytond.exceptions import UserError
 
 from . import galeno_tools
 from .galeno_mixin import GalenoShared
@@ -78,17 +80,6 @@ class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
             ('start_date', 'DESC'),
             ('id', 'DESC'),
             ]
-        cls._error_messages.update({
-                'appointments_overlap': ('"%(first)s" and "%(second)s" '
-                    'appointments overlap.'),
-                'accomplished_future_error': ('A future appointment can\'t be '
-                    'accomplished.'),
-                'scheduled_past_error': ('You can\'t scheduled on a past '
-                    'date.'),
-                'modify_date_appointment': ('You can modify dates only on'
-                    'scheduled appointments. Error: "%(appointment)s"'),
-                'without_start': 'There is no start time configuration',
-                })
         cls._transitions |= set((
                 ('scheduled', 'accomplished'),
                 ('scheduled', 'patient_cancel'),
@@ -181,7 +172,7 @@ class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
                             timedelta(hours=initial_time.hour,
                             minutes=initial_time.minute))
                     else:
-                        self.raise_user_error('without_start')
+                        raise UserError(gettext('galeno.without_start'))
             self.end_date = self.start_date + config.get_multivalue(
                 'appointment_duration')
         else:
@@ -243,9 +234,8 @@ class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
         for appointment in appointments:
             now = datetime.now()
             if appointment.start_date < now:
-                cls.raise_user_error('scheduled_past_error', {
-                    'appointment': appointment.rec_name,
-                })
+                raise UserError(gettext('galeno.scheduled_past_error',
+                    appointment=appointment.rec_name))
 
     @classmethod
     @ModelView.button
@@ -253,7 +243,7 @@ class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
     def accomplished(cls, appointments):
         for appointment in appointments:
             if appointment.start_date > datetime.now():
-                cls.raise_user_error('accomplished_future_error')
+                raise UserError(gettext('galeno.accomplished_future_error'))
 
     @classmethod
     @ModelView.button
@@ -319,10 +309,9 @@ class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
         appointment_id = cursor.fetchone()
         if appointment_id:
             overlapping_appointment = self.__class__(appointment_id[0])
-            self.raise_user_error('appointments_overlap', {
-                    'first': self.rec_name,
-                    'second': overlapping_appointment.rec_name,
-                    })
+            raise UserError(gettext('galeno.appointments_overlap',
+                    first=self.rec_name,
+                    second=overlapping_appointment.rec_name))
 
     @classmethod
     def write(cls, *args):
@@ -331,9 +320,9 @@ class PatientAppointment(GalenoShared, Workflow, ModelSQL, ModelView):
             if 'start_date' in values or 'end_date' in values:
                 for appointment in appointments:
                     if appointment.state != 'scheduled':
-                        cls.raise_user_error('modify_date_appointment', {
-                            'appointment': appointment.rec_name,
-                        })
+                        raise UserError(gettext(
+                            'galeno.modify_date_appointment',
+                            appointment=appointment.rec_name))
         super(PatientAppointment, cls).write(*args)
 
     @classmethod
