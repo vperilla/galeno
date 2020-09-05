@@ -17,6 +17,10 @@
                 <field name="identifier_type" xexpand="0"/>
                 <field name="identifier"/>
             </group>
+            <group id='aux_data' colspan="2" col="4">
+                <label name="active"/>
+                <field name="active" xexpand="0"/>
+            </group>
         </group>
         <group colspan="2" col="2" id="patient_main_3">
             <label name="gender"/>

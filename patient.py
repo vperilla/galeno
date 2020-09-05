@@ -1,6 +1,6 @@
 from collections import defaultdict
 
-from trytond.model import ModelView, ModelSQL, fields, Unique
+from trytond.model import ModelView, ModelSQL, fields, Unique, DeactivableMixin
 from trytond.pyson import Bool, Eval, If, Id
 from trytond.transaction import Transaction
 from trytond.pool import Pool
@@ -12,7 +12,7 @@ __all__ = ['Patient', 'PatientPhoto', 'PatientDisability', 'PatientVaccine',
     'PatientActivity', 'PatientDrug']
 
 
-class Patient(ModelSQL, ModelView):
+class Patient(DeactivableMixin, ModelSQL, ModelView):
     'Patient'
     __name__ = 'galeno.patient'
     # MAIN INFORMATION

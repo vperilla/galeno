@@ -6,4 +6,5 @@
     <field name="email"/>
     <field name="phone" width="125"/>
     <field name="country" width="125"/>
+    <field name="active" width="125"/>
 </tree>
