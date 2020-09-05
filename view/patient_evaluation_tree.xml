@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <tree>
-    <field name="code" width="125"/>
-    <field name="patient"/>
+    <field name="code"/>
+    <field name="patient" expand="1"/>
     <field name="galeno_group"/>
-    <field name="professional"/>
-    <field name="state" icon="color" width="150"/>
-    <field name="start_date" widget="date" width="100"/>
-    <field name="start_date" widget="time" string="Hour" width="100"/>
-    <field name="reason" width="150"/>
+    <field name="professional" expand="1"/>
+    <field name="state" icon="color"/>
+    <field name="start_date" widget="date"/>
+    <field name="start_date" widget="time" string="Hour"/>
+    <field name="reason"/>
 </tree>

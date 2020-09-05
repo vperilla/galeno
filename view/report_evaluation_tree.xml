@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
 <tree>
-    <field name="state" width="200"/>
-    <field name="number"/>
+    <field name="state"/>
+    <field name="number" expand="1"/>
 </tree>

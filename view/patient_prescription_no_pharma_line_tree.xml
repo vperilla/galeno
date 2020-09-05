@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 <tree>
-    <field name="prescription"/>
-    <field name="notes"/>
-    <field name="dose" width="125"/>
-    <field name="frequency"/>
-    <field name="duration" width="150"/>
+    <field name="prescription" expand="1"/>
+    <field name="notes" expand="2"/>
+    <field name="dose"/>
+    <field name="frequency" expand="1"/>
+    <field name="duration"/>
 </tree>

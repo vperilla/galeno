@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <tree>
-    <field name="evaluation_professional"/>
-    <field name="evaluation"/>
+    <field name="evaluation_professional" expand="1"/>
+    <field name="evaluation" expand="1"/>
     <field name="evaluation_state" tree_invisible="1"/>
-    <field name="disease"/>
-    <field name="type_" width="125"/>
-    <field name="severity" width="125"/>
-    <field name="date" width="100"/>
+    <field name="disease" expand="1"/>
+    <field name="type_"/>
+    <field name="severity"/>
+    <field name="date"/>
     <field name="notes"/>
 </tree>
