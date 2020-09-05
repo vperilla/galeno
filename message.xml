@@ -25,8 +25,5 @@
         <record model="ir.message" id="modify_date_appointment">
             <field name="text">You can modify dates only on scheduled appointments. Error: "%(appointment)s"</field>
         </record>
-        <record model="ir.message" id="">
-            <field name="text"></field>
-        </record>
     </data>
 </tryton>

@@ -27,6 +27,7 @@ from . import configuration
 from . import galeno_reporting
 from . import wizard
 from . import report
+from . import ir
 
 __all__ = ['register']
 
@@ -85,6 +86,7 @@ def register():
         galeno_reporting.ReportEvaluationContext,
         galeno_reporting.ReportEvaluation,
         wizard.EvolutionGraphStart,
+        ir.Cron,
         module='galeno', type_='model')
     Pool.register(
         wizard.EvolutionGraph,

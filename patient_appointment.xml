@@ -188,16 +188,9 @@
         </record>
 
         <record model="ir.cron" id="cron_send_reminder_emails">
-            <field name="name">Send reminder emails</field>
-            <field name="request_user" ref="res.user_admin"/>
-            <field name="user" ref="res.user_trigger"/>
-            <field name="active" eval="True"/>
+            <field name="method">galeno.patient.appointment|send_reminder_emails</field>
             <field name="interval_number" eval="24"/>
             <field name="interval_type">hours</field>
-            <field name="number_calls" eval="-1"/>
-            <field name="repeat_missed" eval="False"/>
-            <field name="model">galeno.patient.appointment</field>
-            <field name="function">send_reminder_emails</field>
         </record>
     </data>
 </tryton>
