@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <tree>
-    <field name="name"/>
-    <field name="code" width="125"/>
-    <field name="category"/>
+    <field name="name" expand="1"/>
+    <field name="code"/>
+    <field name="category" expand="1"/>
 </tree>

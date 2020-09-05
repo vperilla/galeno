@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <tree>
-    <field name="code" width="125"/>
+    <field name="code"/>
     <field name="evaluation"/>
-    <field name="test" width="400"/>
-    <field name="request_date" width="125"/>
+    <field name="test" expand="2"/>
+    <field name="request_date"/>
     <field name="with_result"/>
     <field name="result_date" tree_invisible="1"/>
     <field name="result_notes"/>

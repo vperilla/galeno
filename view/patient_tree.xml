@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <tree>
-    <field name="lname"/>
-    <field name="fname"/>
-    <field name="identifier" width="125"/>
-    <field name="email"/>
-    <field name="phone" width="125"/>
-    <field name="country" width="125"/>
-    <field name="active" width="125"/>
+    <field name="lname" expand="1"/>
+    <field name="fname" expand="1"/>
+    <field name="identifier" expand="1"/>
+    <field name="email" expand="1"/>
+    <field name="phone"/>
+    <field name="country"/>
+    <field name="active"/>
 </tree>

@@ -1,10 +1,10 @@
 <?xml version="1.0"?>
 <tree>
     <field name="prescription"/>
-    <field name="medicament"/>
-    <field name="quantity" width="125"/>
-    <field name="dose" width="125"/>
+    <field name="medicament" expand="1"/>
+    <field name="quantity"/>
+    <field name="dose"/>
     <field name="frequency"/>
-    <field name="administration_route" width="150"/>
-    <field name="duration" width="150"/>
+    <field name="administration_route" expand="1"/>
+    <field name="duration"/>
 </tree>
