@@ -38,7 +38,7 @@
         </group>
     </group>
     <notebook colspan="4">
-        <page id="patient_secundary" string="Secondary Information">
+        <page id="patient_secundary" string="Secondary Information" icon="galeno-information">
             <group id="patient_secondary_1" colspan="4" col="6">
                 <label name="blood_type"/>
                 <field name="blood_type"/>
@@ -84,7 +84,7 @@
                 </group>
             </group>
         </page>
-        <page id="patient_backgrounds" string="Backgrounds">
+        <page id="patient_backgrounds" string="Backgrounds" icon="galeno-backgrounds">
             <separator name="background_notes" colspan="4"/>
             <field name="background_notes" colspan="4"/>
             <group id="background_groups" colspan="4">
@@ -149,7 +149,7 @@
                 </group>
             </group>
         </page>
-        <page id="patient_lifestyle" string="Life style">
+        <page id="patient_lifestyle" string="Life style" icon="galeno-lifestyle">
             <group id="lifestyle_group" colspan="4">
                 <group id="lifestyle_exercise" string="Sleep - Activities"
                     colspan="4" expandable="1">
@@ -193,7 +193,7 @@
                 </group>
             </group>
         </page>
-        <page id="patient_sexuality" string="Sexualily">
+        <page id="patient_sexuality" string="Sexualily" icon="galeno-sexuality">
             <group id="sexuality-1" col="6">
                 <label name="sexual_orientation"/>
                 <field name="sexual_orientation"/>
@@ -212,7 +212,7 @@
                 <field name="sexual_notes" colspan="6"/>
             </group>
         </page>
-        <page id="patient_diseases" string="Diagnosis">
+        <page id="patient_diseases" string="Diagnosis" icon="galeno-disease">
             <group id="group_diseases" colspan="4">
                 <separator id="diseases_separator" colspan="4"
                     string="Diseases listed below are filled automatically with the information from the evaluations."/>
@@ -220,7 +220,7 @@
                     view_ids="galeno.patient_evaluation_diagnosis_view_tree,galeno.patient_evaluation_diagnosis_view_form"/>
             </group>
         </page>
-        <page id="patient_procedures" string="Procedures">
+        <page id="patient_procedures" string="Procedures" icon="galeno-procedure">
             <group id="group_procedures" colspan="4">
                 <separator id="procedures_separator" colspan="4"
                     string="Procedures listed below are filled automatically with the information from the evaluations."/>
@@ -228,7 +228,7 @@
                     view_ids="galeno.patient_evaluation_procedure_view_tree,galeno.patient_evaluation_procedure_view_form"/>
             </group>
         </page>
-        <page id="patient_3" string="Medicament - Vaccine">
+        <page id="patient_3" string="Medicament - Vaccine" icon="galeno-medicament">
             <separator id="medicaments_separator" colspan="4"
                 string="Medicaments listed below are filled automatically with the information from the evaluations."/>
             <field name="pharma_lines" colspan="4" mode="tree,form"
